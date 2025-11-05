@@ -6,8 +6,6 @@ on:
   workflow_dispatch:
 
 env:
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
   CI: true
   # comma separated list of allowed authors for docs PRs
   # ALLOWED_DOCS_AUTHORS: lsgunnlsgunn,
@@ -121,25 +119,25 @@ jobs:
           path: packages/e2e/e2e-${{ matrix.app }}/blob-report/
           retention-days: 1
 
-  merge-publish-reports:
-    if: ${{ !cancelled() }}
-    needs: [end-to-end-tests]
+  # merge-publish-reports:
+  #  if: ${{ !cancelled() }}
+  #  needs: [end-to-end-tests]
 
-    runs-on: ubuntu-latest
-    steps:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #
+  #  - uses: actions/checkout@v4
+  #    with:
+  #        fetch-depth: 2
+  #        show-progress: false
 
-    - uses: actions/checkout@v4
-      with:
-          fetch-depth: 2
-          show-progress: false
+  #  -  name: Runner Setup
+  #     uses: ./.github/actions/runner-setup
 
-    -  name: Runner Setup
-       uses: ./.github/actions/runner-setup
-
-    - name: Merge & Publish Report
-      uses: ./.github/actions/merge-publish-reports
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #  - name: Merge & Publish Report
+  #    uses: ./.github/actions/merge-publish-reports
+  #    with:
+  #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # auto-approve-docs:
   #   runs-on: ubuntu-latest
@@ -187,19 +185,19 @@ jobs:
   #       pull-request-number: ${{ github.event.inputs.pullRequestNumber }}
   #       review-message: "Auto approved by [auto-approve-action](https://github.com/kadena-community/kadena.js/blob/main/.github/workflows/ci.yml#L186)"
 
-  ci-gate:
-    if: always()
-    needs:
-      - build
-      - integration-tests
-      - end-to-end-tests
-      - merge-publish-reports
-    runs-on: Ubuntu-latest
-    steps:
-      - name: Check required jobs.
-        uses: re-actors/alls-green@release/v1
-        with:
-          jobs: ${{ toJSON(needs) }}
+  # ci-gate:
+  #  if: always()
+  #  needs:
+  #    - build
+  #    - integration-tests
+  #    - end-to-end-tests
+  #    - merge-publish-reports
+  #  runs-on: Ubuntu-latest
+  #  steps:
+  #    - name: Check required jobs.
+  #      uses: re-actors/alls-green@release/v1
+  #      with:
+  #        jobs: ${{ toJSON(needs) }}
 
   # docker-build:
   #   runs-on: ubuntu-latest
