@@ -32,7 +32,7 @@ export function useEvmFaucet() {
     chainId: EVMChainId;
   }) => {
     if (!hash || typeof hash !== 'string' || !hash.startsWith('0x')) return '';
-    return `http://chain-${chainId}.evm-testnet-blockscout.chainweb.com/tx/${hash}`;
+    return `http://chain-${chainId}.evm-testnet-blockscout.chainweb-community.org/tx/${hash}`;
   };
 
   // Read the dispensed token amount and contract balance when the component mounts

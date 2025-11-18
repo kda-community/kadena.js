@@ -86,7 +86,7 @@ const ModuleExplorerPage = (
   useToolbar(menuData, router.pathname);
 
   const mainnetModulesQuery = useModulesQuery('mainnet01');
-  const testnetModulesQuery = useModulesQuery('testnet04');
+  //const testnetModulesQuery = useModulesQuery('testnet04');
 
   const setDeepLink = useCallback(
     (module: IncompleteModuleModel) => {
@@ -132,13 +132,14 @@ const ModuleExplorerPage = (
             isLoading: mainnetModulesQuery.isFetching,
             supportsReload: true,
           },
+/*
           {
             title: 'Testnet',
             key: 'testnet04',
             data: testnetModulesQuery.data ?? [],
             isLoading: testnetModulesQuery.isFetching,
             supportsReload: true,
-          },
+          },*/
         ]}
         onReload={(treeItem) => {
           void queryClient.invalidateQueries({

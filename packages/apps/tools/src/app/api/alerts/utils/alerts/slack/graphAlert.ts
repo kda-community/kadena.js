@@ -43,7 +43,7 @@ interface ICompletedBlockHeightsResponse {
 const testnet04Props: INETWORK = {
   key: 'testnet04',
   label: 'Chainweb testnet',
-  chainweb: 'https://ap1.testnet.chainweb.com/chainweb/0.0/testnet04/cut',
+  chainweb: 'https://ap1.testnet.chainweb-community.org/chainweb/0.0/testnet04/cut',
   url: 'https://graph.testnet.kadena.network/graphql',
   graphqlRef:
     'https://graph.testnet.kadena.network/graphql?query=query+graphBlockHeight+%7B%0A++++++++completedBlockHeights%28heightCount%3A+1%29+%7B%0A++++++++++edges+%7B%0A++++++++++++node+%7B%0A++++++++++++++height%0A++++++++++++%7D%0A++++++++++%7D%0A++++++++%7D%0A++++++%7D',
@@ -52,7 +52,7 @@ const testnet04Props: INETWORK = {
 const mainnet01Props: INETWORK = {
   key: 'mainnet01',
   label: 'Chainweb mainnet',
-  chainweb: 'https://api.chainweb.com/chainweb/0.0/mainnet01/cut',
+  chainweb: 'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
   url: 'https://graph.kadena.network/graphql',
   graphqlRef:
     'https://graph.kadena.network/graphql?query=query+graphBlockHeight+%7B%0A++++++++completedBlockHeights%28heightCount%3A+1%29+%7B%0A++++++++++edges+%7B%0A++++++++++++node+%7B%0A++++++++++++++height%0A++++++++++++%7D%0A++++++++++%7D%0A++++++++%7D%0A++++++%7D',
@@ -120,7 +120,7 @@ export const runJobPerEnvironment =
 
       if (Number.isNaN(totalHeightOnChainWeb)) {
         return sendGraphErrorMessages(alert, network, {
-          title: `${network.key} chainweb.com fail`,
+          title: `${network.key} chainweb-community.org fail`,
           msg: `We were unable to retrieve the blockheights from chainweb. \n There seems to be an issue with ChainWeb (${network.chainweb})`,
         });
       }

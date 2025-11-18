@@ -3,9 +3,10 @@ import type {
   ChainwebChainId,
   ChainwebNetworkId,
 } from '@kadena/chainweb-node-client';
-import { describeModule } from '@kadena/client-utils';
+import { describeModule } from '@/services/modules/describe-module';
 import { useMutation } from '@tanstack/react-query';
 import { z } from 'zod';
+import { getInitialNetworks } from '@/utils/network';
 
 export const describeModuleSchema = z.object({
   hash: z.string().optional(),
@@ -23,11 +24,9 @@ const fetchModule = async (
   networkId: ChainwebNetworkId,
   chainId: ChainwebChainId,
 ) => {
-  const describedModule = await describeModule(module, {
-    defaults: { networkId, meta: { chainId } },
-  });
+  const describedModule = await describeModule(module, chainId, networkId, getInitialNetworks());
 
-  const parsed = describeModuleSchema.parse(describedModule);
+  const parsed = describeModuleSchema.parse(describedModule && describedModule.result.status == "success" && describedModule.result?.data);
 
   return {
     ...parsed,
