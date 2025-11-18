@@ -115,7 +115,7 @@ const ExistingAccountFaucetPage: FC = () => {
           components={[
             <Link
               className={linkStyle}
-              href="https://transfer.chainweb.com/"
+              href="https://transfer.chainweb-community.org/"
               target="_blank"
               rel="noreferrer"
               key="chainweb-transfer-link"

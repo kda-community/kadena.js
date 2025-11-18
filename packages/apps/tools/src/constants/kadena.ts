@@ -30,18 +30,18 @@ export const kadenaConstants: KadenaConstants = {
 export const kadenaDefaultNetworks: Record<NetworkIds, NetworkType> = {
   mainnet01: {
     label: 'Mainnet',
-    API: env('KADENA_MAINNET_API', 'api.chainweb.com'),
+    API: env('KADENA_MAINNET_API', ''),
     apiHost: ({ networkId, chainId }) =>
       `https://${kadenaDefaultNetworks.mainnet01.API}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
-    estatsHost: () => env('KADENA_MAINNET_ESTATS', 'estats.chainweb.com'),
+    estatsHost: () => env('KADENA_MAINNET_ESTATS', ''),
   },
   testnet04: {
     label: 'Testnet',
-    API: env('KADENA_TESTNET_API', 'api.testnet.chainweb.com'),
+    API: env('KADENA_TESTNET_API', ''),
     apiHost: ({ networkId, chainId }) =>
       `https://${kadenaDefaultNetworks.testnet04.API}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
     estatsHost: () =>
-      env('KADENA_TESTNET_ESTATS', 'estats.testnet.chainweb.com'),
+      env('KADENA_TESTNET_ESTATS', ''),
   },
 } as const;
 

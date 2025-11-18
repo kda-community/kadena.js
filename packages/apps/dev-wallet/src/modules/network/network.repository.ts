@@ -113,7 +113,7 @@ export const addDefaultNetworks = execInSequence(async () => {
       default: true,
       hosts: [
         {
-          url: 'https://api.chainweb.com',
+          url: 'https://api.chainweb-community.org',
           submit: true,
           read: true,
           confirm: true,

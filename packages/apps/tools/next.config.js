@@ -5,6 +5,7 @@ const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const config = {
+  output:"standalone",
   nextTranslate: { basePath: __dirname },
   eslint: {
     ignoreDuringBuilds: true, // lint is a different task/phase
@@ -12,11 +13,14 @@ const config = {
   reactStrictMode: false,
   transpilePackages: ['@kadena/kode-ui'],
   env: {
+    KADENA_MAINNET_ESTATS: process.env.KADENA_MAINNET_ESTATS,
+    KADENA_TESTNET_ESTATS: process.env.KADENA_TESTNET_ESTATS,
     KADENA_API_TTIL: process.env.KADENA_API_TTIL,
     KADENA_MAINNET_API: process.env.KADENA_MAINNET_API,
     KADENA_MAINNET_NETWORKS: process.env.KADENA_MAINNET_NETWORKS,
     KADENA_TESTNET_API: process.env.KADENA_TESTNET_API,
     KADENA_TESTNET_NETWORKS: process.env.KADENA_TESTNET_NETWORKS,
+    KADENA_EXPLORER: process.env.KADENA_EXPLORER,
     GAS_PRICE: process.env.GAS_PRICE,
     GAS_LIMIT: process.env.GAS_LIMIT,
     WALLET_CONNECT_PROJECT_ID: process.env.WALLET_CONNECT_PROJECT_ID,

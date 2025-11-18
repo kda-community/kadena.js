@@ -175,7 +175,7 @@ const NewAccountFaucetPage: FC = () => {
           components={[
             <a
               className={linkStyle}
-              href="https://transfer.chainweb.com/"
+              href="https://transfer.chainweb-community.org/"
               target="_blank"
               rel="noreferrer"
               key="chainweb-transfer-link"
@@ -378,7 +378,7 @@ const NewAccountFaucetPage: FC = () => {
                 <a
                   className={notificationLinkStyle}
                   target={'_blank'}
-                  href={'https://transfer.chainweb.com/'}
+                  href={'https://transfer.chainweb-community.org/'}
                   rel="noreferrer"
                   key="chainweb-transfer-link"
                 />,

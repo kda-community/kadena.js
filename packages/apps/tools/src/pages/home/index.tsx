@@ -69,7 +69,7 @@ const Home: FC = () => {
             <Link
               className={linkStyle}
               key="chainweb-transfer-link"
-              href="https://transfer.chainweb.com/"
+              href="https://transfer.chainweb-community.org/"
               target="_blank"
               rel="noreferrer"
             >

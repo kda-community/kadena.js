@@ -4,6 +4,7 @@ import type { INetworkData } from '@/utils/network';
 import { getApiHost } from '@/utils/network';
 import type {
   ChainwebChainId,
+  ChainwebNetworkId,
   ILocalCommandResult,
 } from '@kadena/chainweb-node-client';
 import { Pact, createClient } from '@kadena/client';
@@ -14,7 +15,7 @@ const debug = Debug('kadena-transfer:services:describe-module');
 export const describeModule = async (
   moduleName: string,
   chainId: ChainwebChainId,
-  network: NetworkIds,
+  network: ChainwebNetworkId,
   networksData: INetworkData[],
   senderAccount: string = kadenaConstants.DEFAULT_SENDER,
   gasPrice: number = kadenaConstants.GAS_PRICE,
