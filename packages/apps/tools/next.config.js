@@ -1,3 +1,4 @@
+const path = require('path');
 const nextTranslate = require('@webpro/next-translate-plugin');
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 
@@ -6,6 +7,7 @@ const withVanillaExtract = createVanillaExtractPlugin();
 /** @type {import('next').NextConfig} */
 const config = {
   output:"standalone",
+  outputFileTracingRoot: path.join(__dirname, '../../../../'),
   nextTranslate: { basePath: __dirname },
   eslint: {
     ignoreDuringBuilds: true, // lint is a different task/phase
