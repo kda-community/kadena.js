@@ -13,19 +13,20 @@ const menuData: ISidebarToolbarItem[] = [
     icon: <MonoQrCodeScanner style={{ maxWidth: '100%' }} />,
     href: 'faucet',
     items: [
-      /*
+
       {
         title: 'Fund New Account',
         href: Routes.FAUCET_NEW,
-      },*/
+      },
       {
         title: 'Fund Existing Account',
         href: Routes.FAUCET_EXISTING,
       },
+      /*
       {
         title: 'Fund EVM Address',
         href: Routes.FAUCET_EVM,
-      },
+      },*/
     ],
   },
   {
