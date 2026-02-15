@@ -35,11 +35,11 @@ export const kadenaDefaultNetworks: Record<NetworkIds, NetworkType> = {
       `https://${kadenaDefaultNetworks.mainnet01.API}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
     estatsHost: () => env('KADENA_MAINNET_ESTATS', ''),
   },
-  testnet04: {
+  testnet06: {
     label: 'Testnet',
     API: env('KADENA_TESTNET_API', ''),
     apiHost: ({ networkId, chainId }) =>
-      `https://${kadenaDefaultNetworks.testnet04.API}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
+      `https://${kadenaDefaultNetworks.testnet06.API}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
     estatsHost: () =>
       env('KADENA_TESTNET_ESTATS', ''),
   },

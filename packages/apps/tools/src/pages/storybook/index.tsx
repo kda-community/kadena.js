@@ -44,7 +44,7 @@ const Storybook = () => {
     isFetching: isFetchingAccountDetails,
   } = useAccountDetailsQuery({
     account: accountName,
-    networkId: 'testnet04',
+    networkId: 'testnet06',
     chainId,
   });
 

@@ -159,7 +159,7 @@ export const WalletConnectClientContextProvider: FC<
               ],
               chains: [
                 'kadena:mainnet01',
-                'kadena:testnet04',
+                'kadena:testnet06',
                 'kadena:development',
               ],
               events: [],

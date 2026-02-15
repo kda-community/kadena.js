@@ -47,7 +47,7 @@ export const ALERTCODES = {
 export interface INETWORK {
   label: string;
   url: string;
-  key: 'mainnet01' | 'testnet04';
+  key: 'mainnet01' | 'testnet06';
   chainweb?: string;
   graphqlRef?: string;
 }
@@ -61,7 +61,7 @@ export const NETWORKS: INETWORK[] = [
   {
     label: 'TESTNET',
     url: 'https://graph.testnet.kadena.network/graphql',
-    key: 'testnet04',
+    key: 'testnet06',
   },
 ];
 
@@ -131,5 +131,5 @@ export const getMainNet = (): INETWORK => {
 };
 
 export const getTestNet = (): INETWORK => {
-  return NETWORKS.find((network) => network.key === 'testnet04') ?? NETWORKS[1];
+  return NETWORKS.find((network) => network.key === 'testnet06') ?? NETWORKS[1];
 };

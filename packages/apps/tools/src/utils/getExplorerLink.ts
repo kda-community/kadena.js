@@ -5,7 +5,7 @@ export const getExplorerLink = (
   network: string,
   networksData: any[],
 ): string => {
-  if (network === 'testnet04' || network === 'mainnet01') {
+  if (network === 'testnet06' || network === 'mainnet01') {
     return `https://${env("KADENA_EXPLORER", '')}/${network.slice(
       0,
       -2,

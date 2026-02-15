@@ -26,7 +26,7 @@ const useHighestBalanceChainId = () => {
   };
 
   useEffect(() => {
-    if (selectedNetwork !== 'testnet04') {
+    if (selectedNetwork !== 'testnet06') {
       setIsMounted(true);
       return;
     }

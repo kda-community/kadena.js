@@ -7,7 +7,7 @@ import type { ICreatePrincipalInput } from '@kadena/client-utils/built-in';
 import { createPrincipal as createPrincipalUtil } from '@kadena/client-utils/built-in';
 import Debug from 'debug';
 
-const NETWORK_ID: ChainwebNetworkId = 'testnet04';
+const NETWORK_ID: ChainwebNetworkId = 'testnet06';
 
 const debug = Debug('kadena-transfer:services:faucet');
 
@@ -28,7 +28,7 @@ export const createPrincipal = async (
       },
     },
     {
-      host: `https://${kadenaDefaultNetworks.testnet04.API}`,
+      host: `https://${kadenaDefaultNetworks.testnet06.API}`,
       defaults: {
         networkId: NETWORK_ID,
         meta: { chainId },
