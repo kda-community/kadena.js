@@ -1,7 +1,7 @@
-import type { ChainId, IUnsignedCommand } from '@kadena/client';
-import { createClient, createTransaction } from '@kadena/client';
-import { composePactCommand } from '@kadena/client/fp';
-import { hash as hashFunction } from '@kadena/cryptography-utils';
+import type { ChainId, IUnsignedCommand } from '@kda-community/client';
+import { createClient, createTransaction } from '@kda-community/client';
+import { composePactCommand } from '@kda-community/client/fp';
+import { hash as hashFunction } from '@kda-community/cryptography-utils';
 import { dotenv } from '@utils/dotenv';
 import { networkData } from '@utils/network';
 import type { IGasLimitEstimation } from '../../graph/types/graphql-types';

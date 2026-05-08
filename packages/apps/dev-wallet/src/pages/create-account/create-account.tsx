@@ -18,7 +18,7 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import { getErrorMessage } from '@/utils/getErrorMessage';
 import { shorten } from '@/utils/helpers';

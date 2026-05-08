@@ -3,7 +3,7 @@ import {
   transactionRepository,
 } from '@/modules/transaction/transaction.repository';
 
-import { Button, Stack, Text } from '@kadena/kode-ui';
+import { Button, Stack, Text } from '@kda-community/kode-ui';
 
 import { Confirmation } from '@/Components/Confirmation/Confirmation';
 import * as transactionService from '@/modules/transaction/transaction.service';
@@ -11,10 +11,10 @@ import { useWallet } from '@/modules/wallet/wallet.hook';
 import { IStepKeys } from '@/pages/transfer/transfer';
 import { normalizeSigs } from '@/utils/normalizeSigs';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { ICommand, IUnsignedCommand } from '@kadena/client';
-import { MonoClose, MonoSignature } from '@kadena/kode-icons/system';
-import { FocussedLayoutHeaderAside } from '@kadena/kode-ui/patterns';
-import { isSignedCommand } from '@kadena/pactjs';
+import { ICommand, IUnsignedCommand } from '@kda-community/client';
+import { MonoClose, MonoSignature } from '@kda-community/kode-icons/system';
+import { FocussedLayoutHeaderAside } from '@kda-community/kode-ui/patterns';
+import { isSignedCommand } from '@kda-community/pactjs';
 import React, { useCallback, useEffect } from 'react';
 import { TxContainer } from './TxContainer';
 import { statusPassed, steps } from './TxPipeLine/utils';

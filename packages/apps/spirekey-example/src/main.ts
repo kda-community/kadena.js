@@ -1,4 +1,4 @@
-import { Pact, createClient, isSignedTransaction } from '@kadena/client';
+import { Pact, createClient, isSignedTransaction } from '@kda-community/client';
 import { KadenaSpireKey } from './spirekey';
 
 function setupEventListeners({

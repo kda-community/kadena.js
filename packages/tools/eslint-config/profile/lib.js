@@ -14,9 +14,9 @@ module.exports = {
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', '@kadena-dev/eslint-plugin', 'import'],
+  plugins: ['@typescript-eslint', '@kda-community-dev/eslint-plugin', 'import'],
   rules: {
-    '@kadena-dev/no-eslint-disable': 'error',
+    '@kda-community-dev/no-eslint-disable': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
     'prefer-template': 'warn',
     'import/no-unresolved': 'error',

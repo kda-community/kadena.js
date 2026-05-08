@@ -1,6 +1,6 @@
 import { ITransaction } from '@/modules/transaction/transaction.repository';
-import { ChainId } from '@kadena/client';
-import { Stack } from '@kadena/kode-ui';
+import { ChainId } from '@kda-community/client';
+import { Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import { IViewChain } from '../processChainAccounts';
 import { ChainBalance } from './ChainBalance';

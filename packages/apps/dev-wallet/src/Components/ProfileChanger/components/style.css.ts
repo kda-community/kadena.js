@@ -4,7 +4,7 @@ import {
   recipe,
   style,
   token,
-} from '@kadena/kode-ui/styles';
+} from '@kda-community/kode-ui/styles';
 
 export const profileClass = recipe({
   base: {

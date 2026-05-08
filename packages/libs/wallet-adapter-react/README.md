@@ -9,9 +9,9 @@ directly in your components to connect, disconnect, sign transactions, and more.
 ## Installation
 
 ```bash
-npm install @kadena/wallet-adapter-react
+npm install @kda-community/wallet-adapter-react
 # or
-yarn add r@kadena/wallet-adapter-react
+yarn add r@kda-community/wallet-adapter-react
 ```
 
 ## WalletAdapterClient Functions
@@ -68,9 +68,9 @@ information, and subscribe to events.
    import React from 'react';
    import ReactDOM from 'react-dom/client';
    import App from './App';
-   import { KadenaWalletProvider } from '@kadena/wallet-adapter-react';
-   import { eckoAdapter } from '@kadena/wallet-adapter-ecko';
-   import '@kadena/kode-ui/global';
+   import { KadenaWalletProvider } from '@kda-community/wallet-adapter-react';
+   import { eckoAdapter } from '@kda-community/wallet-adapter-ecko';
+   import '@kda-community/kode-ui/global';
 
    // Render the React application, providing the adapters to KadenaWalletProvider.
    ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -86,7 +86,7 @@ information, and subscribe to events.
 
    ```tsx
    import React, { useState, useEffect } from 'react';
-   import { useKadenaWallet } from '@kadena/wallet-adapter-react';
+   import { useKadenaWallet } from '@kda-community/wallet-adapter-react';
 
    const App = () => {
      const { client, currentAdapter } = useKadenaWallet();

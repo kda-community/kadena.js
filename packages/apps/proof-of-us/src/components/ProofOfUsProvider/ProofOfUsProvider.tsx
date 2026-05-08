@@ -4,7 +4,7 @@ import { useTokens } from '@/hooks/tokens';
 import { getSigneeAccount } from '@/utils/getSigneeAccount';
 import { getAllowedSigners, isAlreadySigning } from '@/utils/isAlreadySigning';
 import { store } from '@/utils/socket/store';
-import type { IUnsignedCommand } from '@kadena/client';
+import type { IUnsignedCommand } from '@kda-community/client';
 import type { FC, PropsWithChildren } from 'react';
 import { createContext, useCallback, useEffect, useState } from 'react';
 

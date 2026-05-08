@@ -20,13 +20,13 @@ import {
   Table,
   TableBody,
   TableHeader,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import Trans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 
 import { linkStyle } from '@/pagestyles/faucet/styles.css';
-import { MonoHelp } from '@kadena/kode-icons/system';
+import { MonoHelp } from '@kda-community/kode-icons/system';
 import Link from 'next/link';
 import type { FC } from 'react';
 import React, { useRef } from 'react';
@@ -161,7 +161,7 @@ const Home: FC = () => {
                     },
                     {
                       title: 'Kadena Client',
-                      href: 'https://www.npmjs.com/package/@kadena/client',
+                      href: 'https://www.npmjs.com/package/@kda-community/client',
                     },
                   ]}
                 />

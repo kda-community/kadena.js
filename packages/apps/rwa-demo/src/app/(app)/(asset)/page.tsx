@@ -17,15 +17,15 @@ import { useAccount } from '@/hooks/account';
 import { useAsset } from '@/hooks/asset';
 import { useOrganisation } from '@/hooks/organisation';
 import { useSetCompliance } from '@/hooks/setCompliance';
-import { MonoAdd, MonoEditNote } from '@kadena/kode-icons';
-import { Button, Link, Stack } from '@kadena/kode-ui';
+import { MonoAdd, MonoEditNote } from '@kda-community/kode-icons';
+import { Button, Link, Stack } from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
   SideBarBreadcrumbsItem,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { actionsWrapperClass } from './../styles.css';
 
 const Home = () => {

@@ -1,6 +1,6 @@
-import type { ITransactionDescriptor } from '@kadena/client';
-import { createClient } from '@kadena/client';
-import type { ChainId, ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ITransactionDescriptor } from '@kda-community/client';
+import { createClient } from '@kda-community/client';
+import type { ChainId, ICommand, IUnsignedCommand } from '@kda-community/types';
 
 // you can edit this function if you want to use different network like dev-net or a private net
 export const apiHostGenerator = ({

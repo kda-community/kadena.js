@@ -17,7 +17,7 @@ import {
   base64UrlDecodeArr,
   base64UrlEncodeArr,
   hash,
-} from '@kadena/cryptography-utils';
+} from '@kda-community/cryptography-utils';
 import { addItem, dbDump, getAllItems, putItem } from '../indexeddb';
 import { TableName, tables } from '../migration/createDB';
 

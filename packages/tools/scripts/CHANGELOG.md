@@ -1,4 +1,4 @@
-# @kadena-dev/scripts
+# @kda-community-dev/scripts
 
 ## 0.1.0
 

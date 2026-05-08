@@ -1,5 +1,5 @@
-import type { ICommand } from '@kadena/client';
-import { Pact, createClient } from '@kadena/client';
+import type { ICommand } from '@kda-community/client';
+import { Pact, createClient } from '@kda-community/client';
 import { createRequestToSign } from './util/requestToSign';
 
 const signTransaction = createRequestToSign();

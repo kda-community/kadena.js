@@ -1,10 +1,10 @@
 {
-  "name": "@kadena/snap",
+  "name": "@kda-community/snap",
   "version": "1.0.2",
   "description": "MetaMask snap to manage your Kadena accounts and KDA.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/snap"
   },
   "license": "BSD-3-Clause",
@@ -28,7 +28,7 @@
     "test": "jest --detectOpenHandles"
   },
   "dependencies": {
-    "@kadena/cryptography-utils": "workspace:*",
+    "@kda-community/cryptography-utils": "workspace:*",
     "@metamask/snaps-sdk": "^6.5.1",
     "@metamask/snaps-ui": "^3.1.0",
     "bip39": "^3.1.0",
@@ -39,9 +39,9 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
-    "@kadena-dev/shared-config": "workspace:*",
-    "@kadena/pactjs-generator": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
+    "@kda-community/pactjs-generator": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "@lavamoat/allow-scripts": "^2.0.3",
     "@metamask/auto-changelog": "^3.4.4",
     "@metamask/eslint-config": "^13.0.0",

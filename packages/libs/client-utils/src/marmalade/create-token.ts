@@ -5,8 +5,8 @@ import type {
   IPartialPactCommand,
   PactReference,
   PactReturnType,
-} from '@kadena/client';
-import { Pact, readKeyset } from '@kadena/client';
+} from '@kda-community/client';
+import { Pact, readKeyset } from '@kda-community/client';
 import {
   addData,
   addKeyset,
@@ -14,10 +14,10 @@ import {
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import type { ValidDataTypes } from '@kadena/client/lib/composePactCommand/utils/addData';
-import type { IGeneralCapability } from '@kadena/client/lib/interfaces/type-utilities';
-import type { IPactInt } from '@kadena/types';
+} from '@kda-community/client/fp';
+import type { ValidDataTypes } from '@kda-community/client/lib/composePactCommand/utils/addData';
+import type { IGeneralCapability } from '@kda-community/client/lib/interfaces/type-utilities';
+import type { IPactInt } from '@kda-community/types';
 import { submitClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';
 import type {

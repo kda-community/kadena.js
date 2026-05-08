@@ -1,4 +1,4 @@
-# @kadena/kode-icons
+# @kda-community/kode-icons
 
 ## 0.3.1
 

@@ -10,7 +10,7 @@ import { ScanAttendanceEvent } from '@/features/ScanAttendanceEvent/ScanAttendan
 import { useAccount } from '@/hooks/account';
 import { useGetAttendanceToken } from '@/hooks/data/getAttendanceToken';
 import { useHasMintedAttendaceToken } from '@/hooks/data/hasMintedAttendaceToken';
-import { MonoLogin, MonoLogout } from '@kadena/kode-icons';
+import { MonoLogin, MonoLogout } from '@kda-community/kode-icons';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 

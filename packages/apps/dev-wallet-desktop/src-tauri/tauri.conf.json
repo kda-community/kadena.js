@@ -2,7 +2,7 @@
   "build": {
     "beforeDevCommand": "pnpm --filter dev-wallet dev --port 1420",
     "devPath": "http://localhost:1420",
-    "distDir": "../node_modules/@kadena/dev-wallet/dist",
+    "distDir": "../node_modules/@kda-community/dev-wallet/dist",
     "withGlobalTauri": false
   },
   "package": {

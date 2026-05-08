@@ -6,8 +6,8 @@ import {
   MonoSettingsBackupRestore,
   MonoToggleOff,
   MonoToggleOn,
-} from '@kadena/kode-icons/system';
-import { Button } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import { Button } from '@kda-community/kode-ui';
 import {
   getDirectoryHandle,
   isFileSystemAccessSupported,

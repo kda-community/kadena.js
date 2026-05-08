@@ -1,4 +1,4 @@
-import { MonoArrowOutward } from '@kadena/kode-icons/system';
+import { MonoArrowOutward } from '@kda-community/kode-icons/system';
 import type { FC } from 'react';
 import React from 'react';
 import { useNotifications } from '../NotificationsProvider/NotificationsProvider';

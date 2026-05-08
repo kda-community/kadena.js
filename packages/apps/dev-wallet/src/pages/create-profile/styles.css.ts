@@ -1,4 +1,4 @@
-import { atoms, recipe } from '@kadena/kode-ui/styles';
+import { atoms, recipe } from '@kda-community/kode-ui/styles';
 import { style } from '@vanilla-extract/css';
 
 export const listClass = style([

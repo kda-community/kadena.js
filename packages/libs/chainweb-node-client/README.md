@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/chainweb-node-client
+# @kda-community/chainweb-node-client
 
 Typed JavaScript wrapper with fetch to call chainweb-node API endpoints
 

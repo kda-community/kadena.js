@@ -6,8 +6,8 @@ import type {
   ChainwebChainId,
   ChainwebNetworkId,
   ILocalCommandResult,
-} from '@kadena/chainweb-node-client';
-import { Pact, createClient } from '@kadena/client';
+} from '@kda-community/chainweb-node-client';
+import { Pact, createClient } from '@kda-community/client';
 import Debug from 'debug';
 
 const debug = Debug('kadena-transfer:services:describe-module');

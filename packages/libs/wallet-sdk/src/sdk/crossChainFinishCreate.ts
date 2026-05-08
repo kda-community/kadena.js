@@ -1,5 +1,5 @@
-import type { ChainId, ISigner } from '@kadena/client';
-import { createClient, Pact } from '@kadena/client';
+import type { ChainId, ISigner } from '@kda-community/client';
+import { createClient, Pact } from '@kda-community/client';
 
 /**
  * ICreateCrossChainFinishInput represents a subset of Transfer

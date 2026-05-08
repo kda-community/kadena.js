@@ -1,5 +1,9 @@
-import { ensureSignedCommand } from '@kadena/pactjs';
-import type { ICommand, ISignatureJson, IUnsignedCommand } from '@kadena/types';
+import { ensureSignedCommand } from '@kda-community/pactjs';
+import type {
+  ICommand,
+  ISignatureJson,
+  IUnsignedCommand,
+} from '@kda-community/types';
 import type {
   ICommandResult,
   ILocalCommandResult,

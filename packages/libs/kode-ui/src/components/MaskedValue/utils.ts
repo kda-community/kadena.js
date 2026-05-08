@@ -1,5 +1,5 @@
-// eslint-disable-next-line @kadena-dev/no-eslint-disable
-/* eslint-disable @kadena-dev/typedef-var */
+// eslint-disable-next-line @kda-community-dev/no-eslint-disable
+/* eslint-disable @kda-community-dev/typedef-var */
 
 const defaultOptions = {
   character: '*',

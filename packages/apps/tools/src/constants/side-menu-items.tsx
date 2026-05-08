@@ -2,7 +2,7 @@ import {
   MonoAnimation,
   MonoQrCodeScanner,
   MonoViewInAr,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import React from 'react';
 import type { ISidebarToolbarItem } from '../types/Layout';
 import Routes from './routes';
@@ -13,7 +13,6 @@ const menuData: ISidebarToolbarItem[] = [
     icon: <MonoQrCodeScanner style={{ maxWidth: '100%' }} />,
     href: 'faucet',
     items: [
-
       {
         title: 'Fund New Account',
         href: Routes.FAUCET_NEW,

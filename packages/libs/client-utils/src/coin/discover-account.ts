@@ -1,4 +1,4 @@
-import { execution } from '@kadena/client/fp';
+import { execution } from '@kda-community/client/fp';
 
 import { queryAllChainsClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';

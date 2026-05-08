@@ -4,7 +4,7 @@ import { IDBBackup, parseBackup } from '@/modules/db/backup/backup';
 import { IProfile } from '@/modules/wallet/wallet.repository';
 import { validateStructure } from '@/utils/chainweaver/validateStructure';
 import { browse, readContent } from '@/utils/select-file';
-import { MonoRestore } from '@kadena/kode-icons/system';
+import { MonoRestore } from '@kda-community/kode-icons/system';
 import {
   Button,
   Heading,
@@ -12,7 +12,7 @@ import {
   Stack,
   Text,
   Link as UiLink,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { wrapperClass } from '../errors/styles.css';

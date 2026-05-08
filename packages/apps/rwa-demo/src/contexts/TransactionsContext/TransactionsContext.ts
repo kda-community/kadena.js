@@ -1,4 +1,4 @@
-import type { ICommandResult } from '@kadena/client';
+import type { ICommandResult } from '@kda-community/client';
 import { createContext } from 'react';
 
 export interface ITxType {

@@ -12,14 +12,14 @@ import {
 } from '@/pagestyles/account/account-transactions/results/styles.css';
 import type { ITransaction } from '@/services/accounts/get-transactions';
 import { getTransactions } from '@/services/accounts/get-transactions';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
 import {
   MonoDelete,
   MonoHistory,
   MonoInfo,
   MonoKeyboardArrowRight,
   MonoRefresh,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Box,
   Breadcrumbs,
@@ -37,7 +37,7 @@ import {
   TableHeader,
   Text,
   TrackerCard,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import Debug from 'debug';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';

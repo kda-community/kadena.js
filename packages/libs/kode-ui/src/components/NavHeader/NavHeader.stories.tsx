@@ -2,7 +2,7 @@ import {
   MonoAccountCircle,
   MonoContrast,
   MonoUsb,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 import { atoms } from '../../styles/atoms.css';

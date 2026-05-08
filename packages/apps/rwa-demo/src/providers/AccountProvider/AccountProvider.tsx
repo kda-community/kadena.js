@@ -16,9 +16,9 @@ import {
   getWalletAdapterName,
   mapWalletAdapterAccount,
 } from '@/utils/walletAdapter/wallet-adapter';
-import type { ICommand, IUnsignedCommand } from '@kadena/client';
-import { useNotifications } from '@kadena/kode-ui/patterns';
-import { useKadenaWallet } from '@kadena/wallet-adapter-react';
+import type { ICommand, IUnsignedCommand } from '@kda-community/client';
+import { useNotifications } from '@kda-community/kode-ui/patterns';
+import { useKadenaWallet } from '@kda-community/wallet-adapter-react';
 import { useRouter } from 'next/navigation';
 import type { FC, PropsWithChildren } from 'react';
 import { useCallback, useEffect, useState } from 'react';

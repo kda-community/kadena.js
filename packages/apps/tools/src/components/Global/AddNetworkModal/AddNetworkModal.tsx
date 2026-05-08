@@ -1,8 +1,8 @@
 import type { NetworkId } from '@/constants/kadena';
 import { useWalletConnectClient } from '@/context/connect-wallet-context';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { MonoKeyboardArrowRight } from '@kadena/kode-icons/system';
-import type { IDialogProps } from '@kadena/kode-ui';
+import { MonoKeyboardArrowRight } from '@kda-community/kode-icons/system';
+import type { IDialogProps } from '@kda-community/kode-ui';
 import {
   Button,
   Dialog,
@@ -10,7 +10,7 @@ import {
   DialogHeader,
   Stack,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import useTranslation from 'next-translate/useTranslation';
 import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';

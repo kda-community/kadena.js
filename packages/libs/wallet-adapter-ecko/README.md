@@ -7,23 +7,23 @@ rather than the standard `"kadena_"` prefix.
 ## Installation
 
 ```bash
-npm install @kadena/wallet-adapter-ecko
+npm install @kda-community/wallet-adapter-ecko
 # or
-yarn add @kadena/wallet-adapter-ecko
+yarn add @kda-community/wallet-adapter-ecko
 # or
-pmpm add @kadena/wallet-adapter-ecko
+pmpm add @kda-community/wallet-adapter-ecko
 ```
 
 ## Usage with wallet-adapter-core
 
 Wallet adapters are designed to work easily with `WalletAdapterClient` from
-`@kadena/wallet-adapter-core`. This allows loading in multiple adapters and
+`@kda-community/wallet-adapter-core`. This allows loading in multiple adapters and
 automatically detecting which are available and providing a uniform api to
 interact with the adapters.
 
 ```ts
-import { createEckoAdapter } from '@kadena/wallet-adapter-ecko';
-import { WalletAdapterClient } from '@kadena/wallet-adapter-core';
+import { createEckoAdapter } from '@kda-community/wallet-adapter-ecko';
+import { WalletAdapterClient } from '@kda-community/wallet-adapter-core';
 
 const client = new WalletAdapterClient([createEckoAdapter()]);
 await client.init();
@@ -37,7 +37,7 @@ Ecko wallet provider and, if found, returns an instance of `EckoAdapter`. If
 Ecko is not installed, it returns `null`:
 
 ```ts
-import { createEckoAdapter } from '@kadena/wallet-adapter-ecko';
+import { createEckoAdapter } from '@kda-community/wallet-adapter-ecko';
 
 (async () => {
   const provider = await createEckoAdapter.detect();
@@ -64,7 +64,7 @@ If you need lower-level access, the following are also exported:
   wallet is present. It returns the provider if found, or `null` otherwise.
 
 ```ts
-import { EckoAdapter, detectEckoProvider } from '@kadena/wallet-adapter-ecko';
+import { EckoAdapter, detectEckoProvider } from '@kda-community/wallet-adapter-ecko';
 
 (async () => {
   const provider = await detectEckoProvider({ silent: true });

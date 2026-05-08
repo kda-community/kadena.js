@@ -1,6 +1,10 @@
-import type { PactReturnType } from '@kadena/client';
-import { isSignedTransaction, Pact, signWithChainweaver } from '@kadena/client';
-import type { IPactDecimal } from '@kadena/types';
+import type { PactReturnType } from '@kda-community/client';
+import {
+  isSignedTransaction,
+  Pact,
+  signWithChainweaver,
+} from '@kda-community/client';
+import type { IPactDecimal } from '@kda-community/types';
 import { pollOne, submit } from './util/client';
 import { keyFromAccount } from './util/keyFromAccount';
 

@@ -1,5 +1,5 @@
 import { prismaClient } from '@db/prisma-client';
-import { CHAINS } from '@kadena/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import { COMPLEXITY } from '@services/complexity';
 import { dotenv } from '@utils/dotenv';
 import { normalizeError } from '@utils/errors';

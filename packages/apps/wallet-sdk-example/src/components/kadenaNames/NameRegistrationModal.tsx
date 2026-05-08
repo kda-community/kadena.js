@@ -1,4 +1,4 @@
-import { MonoShortText } from '@kadena/kode-icons/system';
+import { MonoShortText } from '@kda-community/kode-icons/system';
 import {
   Button,
   ContentHeader,
@@ -6,7 +6,7 @@ import {
   DialogContent,
   Divider,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import React from 'react';
 import { NameRegistrationForm } from './NameRegistrationForm';
 

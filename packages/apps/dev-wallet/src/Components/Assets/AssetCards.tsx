@@ -1,6 +1,6 @@
 import { Fungible } from '@/modules/account/account.repository';
-import { MonoMoreHoriz } from '@kadena/kode-icons/system';
-import { Stack } from '@kadena/kode-ui';
+import { MonoMoreHoriz } from '@kda-community/kode-icons/system';
+import { Stack } from '@kda-community/kode-ui';
 import { FC, useMemo, useState } from 'react';
 import { AssetAction } from './AssetAction';
 import { actionsWrapperClass } from './style.css';

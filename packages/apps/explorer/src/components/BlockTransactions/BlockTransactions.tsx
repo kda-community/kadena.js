@@ -2,12 +2,12 @@ import type { BlockTransactionsQuery, Transaction } from '@/__generated__/sdk';
 import { BlockTransactionsDocument } from '@/__generated__/sdk';
 import { useGraphQuery } from '@/hooks/graphquery';
 import { graphqlIdFor } from '@/utils/graphqlIdFor';
-import { Heading, Stack } from '@kadena/kode-ui';
+import { Heading, Stack } from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
   usePagination,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';
 import { FormatLinkWrapper } from '../CompactTable/FormatLinkWrapper';

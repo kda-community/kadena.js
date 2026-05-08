@@ -5,14 +5,14 @@ import { useUser } from '@/hooks/user';
 import { cleanupOrigin } from '@/utils/getOriginKey';
 import { OrganisationStore } from '@/utils/store/organisationStore';
 import { RootAdminStore } from '@/utils/store/rootAdminStore';
-import { MonoDelete } from '@kadena/kode-icons';
-import { Button, Stack, TextField } from '@kadena/kode-ui';
+import { MonoDelete } from '@kda-community/kode-icons';
+import { Button, Stack, TextField } from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useRouter } from 'next/navigation';
 import type { FC } from 'react';
 import { useCallback, useEffect, useReducer, useState } from 'react';

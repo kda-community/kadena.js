@@ -5,7 +5,7 @@ import type { AriaComboBoxProps } from 'react-aria';
 import { useComboBox, useFilter, useHover } from 'react-aria';
 import { useComboBoxState } from 'react-stately';
 
-import { MonoExpandMore } from '@kadena/kode-icons';
+import { MonoExpandMore } from '@kda-community/kode-icons';
 import type { RecipeVariants } from '@vanilla-extract/recipes';
 import classNames from 'classnames';
 import { rotate180Transition } from '../../../styles';

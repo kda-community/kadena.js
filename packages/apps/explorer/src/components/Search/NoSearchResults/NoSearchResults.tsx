@@ -1,4 +1,4 @@
-import { Heading, Text } from '@kadena/kode-ui';
+import { Heading, Text } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React from 'react';
 

@@ -1,8 +1,8 @@
-import { MediaContextProvider } from "@kadena/kode-ui";
-import { SWRConfig } from "swr";
-import { ThemeProvider } from "./theme";
-import { useData } from "../hooks/useData";
-import { chainOptions } from "../utils";
+import { MediaContextProvider } from '@kda-community/kode-ui';
+import { SWRConfig } from 'swr';
+import { useData } from '../hooks/useData';
+import { chainOptions } from '../utils';
+import { ThemeProvider } from './theme';
 
 export const Providers = ({ children }: { children: React.ReactNode }) => {
   useData();
@@ -17,9 +17,7 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
       }}
     >
       <MediaContextProvider>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </MediaContextProvider>
     </SWRConfig>
   );

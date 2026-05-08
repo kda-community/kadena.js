@@ -1,4 +1,4 @@
-import { MonoErrorOutline } from '@kadena/kode-icons/system';
+import { MonoErrorOutline } from '@kda-community/kode-icons/system';
 import classNames from 'classnames';
 import type { ComponentProps, FC, ReactNode } from 'react';
 import React from 'react';

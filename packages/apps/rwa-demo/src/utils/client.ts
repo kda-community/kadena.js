@@ -1,5 +1,5 @@
 import type { INetwork } from '@/contexts/NetworkContext/NetworkContext';
-import { createClient } from '@kadena/client';
+import { createClient } from '@kda-community/client';
 import { env } from './env';
 
 export const getClient = (url?: string) => {

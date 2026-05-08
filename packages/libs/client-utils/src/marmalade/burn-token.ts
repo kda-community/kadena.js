@@ -2,15 +2,15 @@ import type {
   BuiltInPredicate,
   IPactModules,
   PactReturnType,
-} from '@kadena/client';
-import { Pact } from '@kadena/client';
+} from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 import {
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import type { ChainId, IPactDecimal } from '@kadena/types';
+} from '@kda-community/client/fp';
+import type { ChainId, IPactDecimal } from '@kda-community/types';
 import { submitClient } from '../core';
 import type { IClientConfig } from '../core/utils/helpers';
 import type { CommonProps } from './config';

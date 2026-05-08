@@ -1,4 +1,4 @@
-import type { ICap } from '@kadena/types';
+import type { ICap } from '@kda-community/types';
 
 interface ITransferCapability {
   (name: 'coin.GAS'): ICap;

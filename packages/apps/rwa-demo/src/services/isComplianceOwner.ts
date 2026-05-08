@@ -1,6 +1,6 @@
 import type { IAsset } from '@/contexts/AssetContext/AssetContext';
 import { getClient, getNetwork } from '@/utils/client';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 export interface IIsComplianceOwnerProps {
   owner: string;

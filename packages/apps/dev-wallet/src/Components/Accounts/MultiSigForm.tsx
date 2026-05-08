@@ -1,10 +1,10 @@
 import { CreateAccount } from '@/pages/create-account/create-account';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 
 export function MultiSigForm({
   contract,

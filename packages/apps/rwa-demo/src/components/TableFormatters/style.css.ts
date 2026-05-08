@@ -1,5 +1,5 @@
-import { recipe, style } from '@kadena/kode-ui';
-import { atoms, token } from '@kadena/kode-ui/styles';
+import { recipe, style } from '@kda-community/kode-ui';
+import { atoms, token } from '@kda-community/kode-ui/styles';
 import { globalStyle } from '@vanilla-extract/css';
 
 export const formatAmountClass = recipe({

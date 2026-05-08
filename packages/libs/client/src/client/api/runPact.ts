@@ -1,9 +1,9 @@
 import type {
   ClientRequestInit,
   ICommandResult,
-} from '@kadena/chainweb-node-client';
-import { local } from '@kadena/chainweb-node-client';
-import { hash as blackHash } from '@kadena/cryptography-utils';
+} from '@kda-community/chainweb-node-client';
+import { local } from '@kda-community/chainweb-node-client';
+import { hash as blackHash } from '@kda-community/cryptography-utils';
 import { composePactCommand, execution } from '../../composePactCommand';
 
 export function runPact(

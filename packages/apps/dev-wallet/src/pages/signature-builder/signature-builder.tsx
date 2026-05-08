@@ -7,7 +7,7 @@ import {
   ISigningRequest,
   isSignedTransaction,
   IUnsignedCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 
 import { SideBarBreadcrumbs } from '@/Components/SideBarBreadcrumbs/SideBarBreadcrumbs';
 import {
@@ -22,8 +22,8 @@ import {
   signingRequestToPactCommand,
 } from '@/utils/transaction-scheme';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { base64UrlDecodeArr } from '@kadena/cryptography-utils';
-import { MonoDashboardCustomize } from '@kadena/kode-icons/system';
+import { base64UrlDecodeArr } from '@kda-community/cryptography-utils';
+import { MonoDashboardCustomize } from '@kda-community/kode-icons/system';
 import {
   Box,
   Button,
@@ -31,10 +31,10 @@ import {
   Notification,
   Stack,
   Text,
-} from '@kadena/kode-ui';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
-import { PactNumber } from '@kadena/pactjs';
-import { execCodeParser } from '@kadena/pactjs-generator';
+} from '@kda-community/kode-ui';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
+import { PactNumber } from '@kda-community/pactjs';
+import { execCodeParser } from '@kda-community/pactjs-generator';
 import classNames from 'classnames';
 import yaml from 'js-yaml';
 import { useEffect, useMemo, useState } from 'react';

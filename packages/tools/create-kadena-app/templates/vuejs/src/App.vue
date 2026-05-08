@@ -47,7 +47,7 @@ export default {
         </p>
         <p class="note">
           Use the form below to interact with the Kadena blockchain using
-          <code>@kadena/client</code> and edit
+          <code>@kda-community/client</code> and edit
           <code>src/pages/index.tsx</code> to get started.
         </p>
       </div>

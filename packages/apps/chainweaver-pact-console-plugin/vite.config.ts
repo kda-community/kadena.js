@@ -28,9 +28,9 @@ function getMonorepoPackagesFromPackageJson() {
 // This will allow us to remove the commonjsOptions and optimizeDeps.include
 const monorepoPackages = getMonorepoPackagesFromPackageJson();
 const monorepoPathsRegex = monorepoPackages.map(
-  (pkg) => new RegExp(`${pkg.replace('@kadena/', '')}`),
+  (pkg) => new RegExp(`${pkg.replace('@kda-community/', '')}`),
 );
-monorepoPackages.push('@kadena/client/fp');
+monorepoPackages.push('@kda-community/client/fp');
 
 export const config: UserConfig = {
   plugins: [

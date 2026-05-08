@@ -1,8 +1,8 @@
-import { test } from '@kadena-dev/e2e-base/src/fixtures/shared/test.fixture';
+import { test } from '@kda-community-dev/e2e-base/src/fixtures/shared/test.fixture';
 import {
   createAccount,
   generateAccount,
-} from '@kadena-dev/e2e-base/src/helpers/client-utils/accounts.helper';
+} from '@kda-community-dev/e2e-base/src/helpers/client-utils/accounts.helper';
 import { expect } from '@playwright/test';
 
 test.beforeEach(async ({ page, toolsApp }) => {

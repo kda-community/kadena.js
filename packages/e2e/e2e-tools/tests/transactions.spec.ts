@@ -1,10 +1,13 @@
-import { blue, red } from '@kadena-dev/e2e-base/src/constants/colors.constants';
-import { test } from '@kadena-dev/e2e-base/src/fixtures/shared/test.fixture';
+import {
+  blue,
+  red,
+} from '@kda-community-dev/e2e-base/src/constants/colors.constants';
+import { test } from '@kda-community-dev/e2e-base/src/fixtures/shared/test.fixture';
 import {
   createAccount,
   generateAccount,
-} from '@kadena-dev/e2e-base/src/helpers/client-utils/accounts.helper';
-import { initiateCrossChainTransfer } from '@kadena-dev/e2e-base/src/helpers/client-utils/transfer.helper';
+} from '@kda-community-dev/e2e-base/src/helpers/client-utils/accounts.helper';
+import { initiateCrossChainTransfer } from '@kda-community-dev/e2e-base/src/helpers/client-utils/transfer.helper';
 import { expect } from '@playwright/test';
 
 test(`Tracking and Finishing a Cross Chain Transfer`, async ({

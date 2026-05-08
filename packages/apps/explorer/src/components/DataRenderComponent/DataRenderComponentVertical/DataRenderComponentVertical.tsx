@@ -1,7 +1,7 @@
 import { ValueLoader } from '@/components/LoadingSkeleton/ValueLoader/ValueLoader';
 import { Link } from '@/components/Routing/Link';
-import { MonoArrowOutward } from '@kadena/kode-icons/system';
-import { Text } from '@kadena/kode-ui';
+import { MonoArrowOutward } from '@kda-community/kode-icons/system';
+import { Text } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import React, { Fragment } from 'react';
 import { ExpandTruncatedField } from '../ExpandTruncatedField/ExpandTruncatedField';

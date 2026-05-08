@@ -1,4 +1,10 @@
-import { Badge, Select, SelectItem, Stack, TextField } from '@kadena/kode-ui';
+import {
+  Badge,
+  Select,
+  SelectItem,
+  Stack,
+  TextField,
+} from '@kda-community/kode-ui';
 import { Label } from './Label';
 
 export type Seconds = number & { _brand?: 'Seconds' };

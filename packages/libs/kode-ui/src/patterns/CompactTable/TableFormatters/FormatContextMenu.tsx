@@ -1,4 +1,4 @@
-import { MonoMoreVert } from '@kadena/kode-icons/system';
+import { MonoMoreVert } from '@kda-community/kode-icons/system';
 import React from 'react';
 import { Button, ContextMenu, ContextMenuItem } from './../../../components';
 import type { ICompactTableFormatterProps } from './types';

@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/hd-wallet
+# @kda-community/hd-wallet
 
 Key derivation based on Hierarchical Deterministic (HD)/Mnemonic keys and BIP32,
 for Kadena
@@ -18,7 +18,7 @@ Check [ADRs][1] documents for more information
 
 # Getting started
 
-The `@kadena/hd-wallet` library provides tools to generate mnemonics, derive
+The `@kda-community/hd-wallet` library provides tools to generate mnemonics, derive
 seeds, and generate and sign transactions with Kadena keys. This README will
 guide you through installing, using, and understanding the core functionalities
 of the library.
@@ -28,28 +28,28 @@ of the library.
 To install the library, you can use npm or yarn:
 
 ```sh
-npm install @kadena/hd-wallet
+npm install @kda-community/hd-wallet
 ```
 
 or
 
 ```sh
-yarn add @kadena/hd-wallet
+yarn add @kda-community/hd-wallet
 ```
 
 ## Structure
 
 The library is divided into two parts:
 
-1. `@kadena/hd-wallet` - The main library that provides functions to generate
+1. `@kda-community/hd-wallet` - The main library that provides functions to generate
    mnemonics, derive seeds, and sign transactions.
-2. `@kadena/hd-wallet/chainweaver` - The Chainweaver-specific library that
+2. `@kda-community/hd-wallet/chainweaver` - The Chainweaver-specific library that
    provides the **same functions**, but based on the Chainweaver-generated
    derivation algorithm.
 
 ## Usage
 
-Below are some common use cases for the `@kadena/hd-wallet` library.
+Below are some common use cases for the `@kda-community/hd-wallet` library.
 
 ## Key Concepts
 
@@ -82,7 +82,7 @@ sequence of words that encodes the seed for generating keys. You can generate a
 12-word mnemonic phrase using the following function:
 
 ```javascript
-import { kadenaGenMnemonic } from '@kadena/hd-wallet';
+import { kadenaGenMnemonic } from '@kda-community/hd-wallet';
 
 const mnemonic = kadenaGenMnemonic();
 console.log(mnemonic); // Outputs a 12-word mnemonic phrase
@@ -97,7 +97,7 @@ following function:
 > This isn't necessarily the same mnemonic from which the entropy was generated
 
 ```javascript
-import { kadenaEntropyToMnemonic } from '@kadena/hd-wallet';
+import { kadenaEntropyToMnemonic } from '@kda-community/hd-wallet';
 
 const entropy = Uint8Array.from([
   163, 41, 221, 226, 205, 60, 81, 126, 184, 28, 50, 202, 148, 255, 178, 6,
@@ -113,7 +113,7 @@ be used to derive keys. This example shows how to encrypt the seed with a
 password.
 
 ```javascript
-import { kadenaMnemonicToSeed } from '@kadena/hd-wallet';
+import { kadenaMnemonicToSeed } from '@kda-community/hd-wallet';
 
 const mnemonic =
   'permit exclude judge omit shallow satisfy there main skin pony uncle arrive';
@@ -131,7 +131,7 @@ a seed. You can specify an index or range of indices to generate multiple key
 pairs.
 
 ```javascript
-import { kadenaGenKeypairFromSeed } from '@kadena/hd-wallet';
+import { kadenaGenKeypairFromSeed } from '@kda-community/hd-wallet';
 
 const password = 'your_password';
 const [publicKey, privateKey] = await kadenaGenKeypairFromSeed(
@@ -157,7 +157,7 @@ from a seed. Use the `kadenaKeyPairsFromRandom` function to generate a specified
 number of random key pairs:
 
 ```javascript
-import { kadenaKeyPairsFromRandom } from '@kadena/hd-wallet';
+import { kadenaKeyPairsFromRandom } from '@kda-community/hd-wallet';
 
 const keyPairs = kadenaKeyPairsFromRandom(2); // Generates two random key pairs
 console.log(keyPairs); // Outputs an array of random key pairs
@@ -169,7 +169,7 @@ You can retrieve the public key directly from the encrypted seed without the
 need to access the private key. This is useful for read-only operations.
 
 ```javascript
-import { kadenaGetPublic } from '@kadena/hd-wallet';
+import { kadenaGetPublic } from '@kda-community/hd-wallet';
 
 const publicKey = await kadenaGetPublic(password, seed, 0);
 console.log(publicKey); // Outputs the public key for the specified index
@@ -182,7 +182,7 @@ an index. The following example demonstrates signing a transaction with a key
 pair.
 
 ```javascript
-import { kadenaSignWithKeyPair } from '@kadena/hd-wallet';
+import { kadenaSignWithKeyPair } from '@kda-community/hd-wallet';
 
 const signFn = kadenaSignWithKeyPair(password, publicKey, privateKey);
 const signature = await signFn(txHash);
@@ -192,7 +192,7 @@ console.log(signature); // Outputs the transaction signature
 Alternatively, you can sign using a seed and index:
 
 ```javascript
-import { kadenaSignWithSeed } from '@kadena/hd-wallet';
+import { kadenaSignWithSeed } from '@kda-community/hd-wallet';
 
 const signature = await kadenaSignWithSeed(password, seed, 0)(txHash);
 console.log(signature); // Outputs the transaction signature
@@ -205,7 +205,7 @@ After signing a transaction, you may need to verify its signature. The
 public key and message.
 
 ```javascript
-import { kadenaVerify } from '@kadena/hd-wallet';
+import { kadenaVerify } from '@kda-community/hd-wallet';
 
 const isValid = kadenaVerify(txHash, publicKey, signature.sig);
 console.log(isValid); // Outputs true if the signature is valid
@@ -224,7 +224,7 @@ mnemonic phrase, which is similar to modern HD wallets but follows older
 practices.
 
 ```javascript
-import { kadenaGenMnemonic } from '@kadena/hd-wallet/chainweaver';
+import { kadenaGenMnemonic } from '@kda-community/hd-wallet/chainweaver';
 
 const mnemonic = kadenaGenMnemonic();
 console.log(mnemonic); // Outputs a 12-word mnemonic phrase
@@ -236,7 +236,7 @@ To validate a mnemonic, use the `kadenaCheckMnemonic` function to ensure the
 mnemonic is correct before proceeding with key generation.
 
 ```javascript
-import { kadenaCheckMnemonic } from '@kadena/hd-wallet/chainweaver';
+import { kadenaCheckMnemonic } from '@kda-community/hd-wallet/chainweaver';
 
 const isValid = kadenaCheckMnemonic(mnemonic);
 console.log(isValid); // Outputs true if the mnemonic is valid
@@ -248,7 +248,7 @@ The legacy function `kadenaGenKeypair` allows generating a key pair using a seed
 phrase. This method follows the older Chainweaver key derivation process.
 
 ```javascript
-import { kadenaGenKeypair } from '@kadena/hd-wallet/chainweaver';
+import { kadenaGenKeypair } from '@kda-community/hd-wallet/chainweaver';
 
 const [publicKey, privateKey] = await kadenaGenKeypair(seed, password, 0);
 console.log(publicKey, privateKey); // Outputs the key pair generated using Chainweaver's method
@@ -260,7 +260,7 @@ If you need to change the password used to encrypt a seed in the legacy system,
 the `kadenaChangePassword` function handles the re-encryption.
 
 ```javascript
-import { kadenaChangePassword } from '@kadena/hd-wallet/chainweaver';
+import { kadenaChangePassword } from '@kda-community/hd-wallet/chainweaver';
 
 const newSeed = await kadenaChangePassword(oldPassword, newPassword, seed);
 console.log(newSeed); // Outputs the seed encrypted with the new password
@@ -272,7 +272,7 @@ To sign a transaction with a key pair in the legacy Chainweaver wallet, use the
 `kadenaSign` function.
 
 ```javascript
-import { kadenaSign } from '@kadena/hd-wallet/chainweaver';
+import { kadenaSign } from '@kda-community/hd-wallet/chainweaver';
 
 const signature = await kadenaSign(publicKey, privateKey, txHash);
 console.log(signature); // Outputs the transaction signature using the legacy key pair
@@ -285,7 +285,7 @@ To retrieve the public key from the root key, use the
 the legacy Chainweaver’s root key.
 
 ```javascript
-import { kadenaGetPublicFromRootKey } from '@kadena/hd-wallet/chainweaver';
+import { kadenaGetPublicFromRootKey } from '@kda-community/hd-wallet/chainweaver';
 
 const publicKey = await kadenaGetPublicFromRootKey(password, seed, index);
 console.log(publicKey); // Outputs the public key for the specified index using the root key
@@ -297,7 +297,7 @@ If you need to generate a key pair from the root key in the legacy system, use
 the `kadenaMnemonicToRootKeypair` function.
 
 ```javascript
-import { kadenaMnemonicToRootKeypair } from '@kadena/hd-wallet/chainweaver';
+import { kadenaMnemonicToRootKeypair } from '@kda-community/hd-wallet/chainweaver';
 
 const [publicKey, privateKey] = await kadenaMnemonicToRootKeypair(
   mnemonic,
@@ -313,7 +313,7 @@ To sign a transaction using a root key, the `kadenaSignFromRootKey` function can
 be used to derive the signature from the root key.
 
 ```javascript
-import { kadenaSignFromRootKey } from '@kadena/hd-wallet/chainweaver';
+import { kadenaSignFromRootKey } from '@kda-community/hd-wallet/chainweaver';
 
 const signature = await kadenaSignFromRootKey(password, seed, index, txHash);
 console.log(signature); // Outputs the transaction signature using the root key
@@ -324,7 +324,7 @@ console.log(signature); // Outputs the transaction signature using the root key
 Decrypt the encrypted seed or private key using `kadenaDecrypt`:
 
 ```javascript
-import { kadenaDecrypt } from '@kadena/hd-wallet';
+import { kadenaDecrypt } from '@kda-community/hd-wallet';
 
 const decryptedSeed = kadenaDecrypt(password, seed);
 console.log(decryptedSeed); // Outputs the decrypted seed
@@ -368,18 +368,18 @@ Check [ADRs][1] documents for more information
 To install the library, you can use npm or yarn:
 
 ```sh
-npm install @kadena/wallet-sdk
+npm install @kda-community/wallet-sdk
 ```
 
 or
 
 ```sh
-yarn add @kadena/wallet-sdk
+yarn add @kda-community/wallet-sdk
 ```
 
 ## Conclusion
 
-The `@kadena/hd-wallet` library offers a robust set of tools for generating
+The `@kda-community/hd-wallet` library offers a robust set of tools for generating
 mnemonics, deriving seeds, and managing Kadena keys. This README covers the
 basic usage scenarios. For more detailed documentation, please refer to the
 library's source code and additional resources.

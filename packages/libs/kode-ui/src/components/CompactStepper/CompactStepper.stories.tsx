@@ -2,7 +2,7 @@ import {
   MonoArrowBack,
   MonoArrowForward,
   MonoCheck,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 import { withContentWidth } from '../../storyDecorators';

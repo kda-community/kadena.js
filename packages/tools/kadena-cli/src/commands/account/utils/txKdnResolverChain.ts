@@ -1,5 +1,5 @@
-import type { ChainId, IClient, ICommandResult } from '@kadena/client';
-import { Pact, createClient } from '@kadena/client';
+import type { ChainId, IClient, ICommandResult } from '@kda-community/client';
+import { Pact, createClient } from '@kda-community/client';
 import {
   KADENANAMES_NAMESPACE_MAINNET_MODULE,
   KADENANAMES_NAMESPACE_TESTNET_MODULE,

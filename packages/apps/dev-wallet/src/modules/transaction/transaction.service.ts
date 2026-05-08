@@ -1,6 +1,6 @@
 import { normalizeErrorObject } from '@/utils/getErrorMessage';
 import { normalizeSigs } from '@/utils/normalizeSigs';
-import { ILocalCommandResult } from '@kadena/chainweb-node-client';
+import { ILocalCommandResult } from '@kda-community/chainweb-node-client';
 import {
   ChainId,
   createTransaction,
@@ -12,13 +12,13 @@ import {
   isSignedTransaction,
   ITransactionDescriptor,
   IUnsignedCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import {
   composePactCommand,
   continuation,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 import { networkRepository } from '../network/network.repository';
 import { UUID } from '../types';
 import { ITransaction, transactionRepository } from './transaction.repository';

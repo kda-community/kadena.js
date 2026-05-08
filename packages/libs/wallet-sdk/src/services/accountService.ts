@@ -1,5 +1,5 @@
-import { details } from '@kadena/client-utils/coin';
-import type { ChainId } from '@kadena/types';
+import { details } from '@kda-community/client-utils/coin';
+import type { ChainId } from '@kda-community/types';
 import type { ChainwebHostGenerator } from '../sdk/host.js';
 import type {
   IAccountDetails,

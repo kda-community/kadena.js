@@ -1,6 +1,6 @@
-import { MonoCheck, MonoCopyAll } from '@kadena/kode-icons';
-import type { PressEvent } from '@kadena/kode-ui';
-import { Button } from '@kadena/kode-ui';
+import { MonoCheck, MonoCopyAll } from '@kda-community/kode-icons';
+import type { PressEvent } from '@kda-community/kode-ui';
+import { Button } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useState } from 'react';
 

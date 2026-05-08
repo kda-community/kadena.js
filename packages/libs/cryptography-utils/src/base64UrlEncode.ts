@@ -1,4 +1,4 @@
-import type { IBase64Url } from '@kadena/types';
+import type { IBase64Url } from '@kda-community/types';
 import { InvalidCharacterError } from './InvalidCharacterError';
 
 const chars: string =

@@ -1,4 +1,4 @@
-import baseConfig from '@kadena-dev/shared-config/vitest.config';
+import baseConfig from '@kda-community-dev/shared-config/vitest.config';
 import { defineConfig, mergeConfig } from 'vitest/config';
 
 const localConfig = defineConfig({

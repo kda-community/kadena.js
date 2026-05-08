@@ -1,8 +1,14 @@
 import { CardContent } from '@/App/LayoutLandingPage/components/CardContent';
 import { useRequests } from '@/modules/communication/communication.provider';
-import { MonoContacts } from '@kadena/kode-icons/system';
-import { Button, Heading, Notification, Stack, Text } from '@kadena/kode-ui';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+import { MonoContacts } from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Heading,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { wrapperClass } from '../errors/styles.css';

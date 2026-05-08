@@ -1,5 +1,9 @@
 import type { ApolloError } from '@apollo/client';
-import { Notification, NotificationHeading, Stack } from '@kadena/kode-ui';
+import {
+  Notification,
+  NotificationHeading,
+  Stack,
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React from 'react';
 import { wrapperClass } from './style.css';

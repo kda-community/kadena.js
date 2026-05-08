@@ -1,5 +1,5 @@
-import { IUnsignedCommand } from '@kadena/client';
-import { base64UrlEncodeArr } from '@kadena/cryptography-utils';
+import { IUnsignedCommand } from '@kda-community/client';
+import { base64UrlEncodeArr } from '@kda-community/cryptography-utils';
 import { normalizeTx } from './normalizeSigs';
 
 export const getCopyTxString = (tx: IUnsignedCommand) => {

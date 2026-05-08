@@ -6,8 +6,8 @@ import {
   MonoLogoLinkedin,
   MonoLogoX,
   MonoMoreVert,
-} from '@kadena/kode-icons/system';
-import { Button, Heading, Media, Stack, Text } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import { Button, Heading, Media, Stack, Text } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React, { useState } from 'react';
 import { Logo } from '../Logo/Logo';
@@ -125,7 +125,7 @@ export const Footer: FC = () => {
         gap={{ md: 'md' }}
         flexDirection={{ xs: 'column', md: 'row' }}
       >
-        <Text>@Kadena LLC @{year}</Text>
+        <Text>@kda-community LLC @{year}</Text>
         <Stack flex={1} />
         <a
           className={footerLinkClass}

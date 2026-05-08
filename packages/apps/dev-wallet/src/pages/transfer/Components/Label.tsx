@@ -1,4 +1,4 @@
-import { Text } from '@kadena/kode-ui';
+import { Text } from '@kda-community/kode-ui';
 import { labelClass } from './style.css';
 
 export const Label = ({ children }: { children: React.ReactNode }) => (

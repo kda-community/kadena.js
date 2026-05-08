@@ -2,14 +2,14 @@ import { useAddInvestor } from '@/hooks/addInvestor';
 import { useAsset } from '@/hooks/asset';
 import type { IRegisterIdentityProps } from '@/services/registerIdentity';
 import type { IRecord } from '@/utils/filterRemovedRecords';
-import { Button } from '@kadena/kode-ui';
+import { Button } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC, ReactElement } from 'react';
 import { cloneElement, useState } from 'react';
 import { useForm } from 'react-hook-form';

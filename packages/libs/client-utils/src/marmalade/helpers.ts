@@ -1,7 +1,7 @@
-import type { ISigner } from '@kadena/client';
-import { addSigner } from '@kadena/client/fp';
-import type { IGeneralCapability } from '@kadena/client/lib/interfaces/type-utilities';
-import type { ICap } from '@kadena/types';
+import type { ISigner } from '@kda-community/client';
+import { addSigner } from '@kda-community/client/fp';
+import type { IGeneralCapability } from '@kda-community/client/lib/interfaces/type-utilities';
+import type { ICap } from '@kda-community/types';
 import type {
   CommonProps,
   Guard,

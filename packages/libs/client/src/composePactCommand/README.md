@@ -8,7 +8,7 @@ creating exec payload
 <summary>examples</summary>
 
 ```TypeScript
-import Pact from "@kadena/client"
+import Pact from "@kda-community/client"
 
 // importing coin module that you can generate types of that by using "pactjs-cli"
 const { coin } = Pact.modules;

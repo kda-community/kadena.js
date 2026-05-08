@@ -1,4 +1,4 @@
-import type { ICap, PactValue } from '@kadena/types';
+import type { ICap, PactValue } from '@kda-community/types';
 
 /**
  * Helper function for creating a pact capability object.

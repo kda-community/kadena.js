@@ -7,8 +7,8 @@ import { LayoutHeader } from '@/components/Layout/components/LayoutHeader';
 import { Layout } from '@/components/Layout/Layout';
 import { NoSearchResults } from '@/components/Search/NoSearchResults/NoSearchResults';
 import { useEvents } from '@/hooks/events';
-import { TabItem, Tabs } from '@kadena/kode-ui';
-import { CompactTable } from '@kadena/kode-ui/patterns';
+import { TabItem, Tabs } from '@kda-community/kode-ui';
+import { CompactTable } from '@kda-community/kode-ui/patterns';
 import React from 'react';
 
 const Height: React.FC = () => {

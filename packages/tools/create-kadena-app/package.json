@@ -1,21 +1,21 @@
 {
-  "name": "@kadena/create-kadena-app",
+  "name": "@kda-community/create-kadena-app",
   "version": "0.2.1",
-  "description": "CLI tool to create a starter project with @kadena/client integration",
+  "description": "CLI tool to create a starter project with @kda-community/client integration",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/tools/create-kadena-app"
   },
   "license": "ISC",
   "contributors": [
     {
       "name": "Jermaine Jong",
-      "email": "jermaine@kadena.io"
+      "email": "jermaine@kda-community.io"
     },
     {
       "name": "Mohamed Ismail",
-      "email": "mohamed@kadena.io"
+      "email": "mohamed@kda-community.io"
     }
   ],
   "type": "module",
@@ -44,8 +44,8 @@
     "yaml": "~2.1.1"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/cross-spawn": "~6.0.2",
     "@types/debug": "~4.1.12",

@@ -4,14 +4,14 @@ import { useGetAgentRoles } from '@/hooks/getAgentRoles';
 import type { IAddAgentProps } from '@/services/addAgent';
 import { AGENTROLES } from '@/services/addAgent';
 import type { IRecord } from '@/utils/filterRemovedRecords';
-import { Button, CheckboxGroup, Stack, Text } from '@kadena/kode-ui';
+import { Button, CheckboxGroup, Stack, Text } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC, ReactElement } from 'react';
 import { cloneElement, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';

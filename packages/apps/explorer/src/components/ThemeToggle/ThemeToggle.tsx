@@ -1,5 +1,5 @@
 import { EVENT_NAMES, analyticsEvent } from '@/utils/analytics';
-import { Button, ThemeAnimateIcon, useTheme } from '@kadena/kode-ui';
+import { Button, ThemeAnimateIcon, useTheme } from '@kda-community/kode-ui';
 
 import type { FC } from 'react';
 import React, { useCallback, useEffect, useState } from 'react';

@@ -1,5 +1,5 @@
 import { PreviewBanner } from '@/Components/PreviewBanner/PreviewBanner';
-import { Button, ThemeAnimateIcon, useTheme } from '@kadena/kode-ui';
+import { Button, ThemeAnimateIcon, useTheme } from '@kda-community/kode-ui';
 import {
   FocussedLayout,
   FocussedLayoutFooter,
@@ -7,7 +7,7 @@ import {
   FocussedLayoutLogo,
   FocussedLayoutProvider,
   FocussedLayoutTopBanner,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { FC, PropsWithChildren } from 'react';
 import { Outlet } from 'react-router-dom';
 

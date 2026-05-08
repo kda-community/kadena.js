@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena-dev/eslint-plugin
+# @kda-community-dev/eslint-plugin
 
 <picture>
   <source srcset="https://raw.githubusercontent.com/kadena-community/kadena.js/main/common/images/Kadena.JS_logo-white.png" media="(prefers-color-scheme: dark)"/>
@@ -12,7 +12,7 @@
 ## Usage
 
 ```sh
-pnpm add -D @kadena-dev/eslint-plugin
+pnpm add -D @kda-community-dev/eslint-plugin
 ```
 
 Use to the ESLint config `plugins` and specify the issue severity. Example:
@@ -20,10 +20,10 @@ Use to the ESLint config `plugins` and specify the issue severity. Example:
 ```js
 /** @type {import("@types/eslint").Linter.Config} */
 module.exports = {
-  plugins: ['@kadena-dev/eslint-plugin'],
+  plugins: ['@kda-community-dev/eslint-plugin'],
   rules: {
-    '@kadena-dev/no-eslint-disable': 'error',
-    '@kadena-dev/typedef-var': 'warn',
+    '@kda-community-dev/no-eslint-disable': 'error',
+    '@kda-community-dev/typedef-var': 'warn',
   },
 };
 ```

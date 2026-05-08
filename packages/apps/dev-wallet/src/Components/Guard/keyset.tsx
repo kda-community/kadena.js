@@ -1,7 +1,7 @@
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { shorten } from '@/utils/helpers';
-import { BuiltInPredicate } from '@kadena/client';
-import { Badge, Stack, Text } from '@kadena/kode-ui';
+import { BuiltInPredicate } from '@kda-community/client';
+import { Badge, Stack, Text } from '@kda-community/kode-ui';
 import { useMemo } from 'react';
 import { keyClass } from './style.css';
 

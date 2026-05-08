@@ -1,6 +1,6 @@
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { shorten } from '@/utils/helpers';
-import { Badge, Stack, Text } from '@kadena/kode-ui';
+import { Badge, Stack, Text } from '@kda-community/kode-ui';
 import { FC } from 'react';
 
 export const CodeViewAccount: FC<{

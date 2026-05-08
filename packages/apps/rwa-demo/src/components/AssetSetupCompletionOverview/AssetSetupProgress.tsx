@@ -1,5 +1,5 @@
 import type { IAsset } from '@/contexts/AssetContext/AssetContext';
-import { Stack, SuccessCircle, Text } from '@kadena/kode-ui';
+import { Stack, SuccessCircle, Text } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import {

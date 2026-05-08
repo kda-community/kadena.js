@@ -9,7 +9,7 @@ import {
   ITransaction,
   transactionRepository,
 } from '@/modules/transaction/transaction.repository';
-import { ChainId, createTransaction } from '@kadena/client';
+import { ChainId, createTransaction } from '@kda-community/client';
 import {
   createCrossChainCommand,
   discoverAccount,
@@ -17,9 +17,9 @@ import {
   safeTransferCreateCommand,
   transferCommand,
   transferCreateCommand,
-} from '@kadena/client-utils/coin';
-import { composePactCommand } from '@kadena/client/fp';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client-utils/coin';
+import { composePactCommand } from '@kda-community/client/fp';
+import { PactNumber } from '@kda-community/pactjs';
 import { IRetrievedAccount } from '../../modules/account/IRetrievedAccount';
 
 export const getAccount = (

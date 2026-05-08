@@ -6,8 +6,8 @@ import {
   NotificationHeading,
   Stack,
   TextField,
-} from '@kadena/kode-ui';
-import { useNotifications } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { useNotifications } from '@kda-community/kode-ui/patterns';
 import {
   EmailAuthProvider,
   reauthenticateWithCredential,

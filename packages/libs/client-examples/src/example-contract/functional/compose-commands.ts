@@ -1,11 +1,11 @@
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 import {
   addSigner,
   composePactCommand,
   execution,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 
 // you can compose command by using the createPactCommand util
 export function composeCommands() {

@@ -1,4 +1,4 @@
-import { MonoCheck } from '@kadena/kode-icons/system';
+import { MonoCheck } from '@kda-community/kode-icons/system';
 import type { ReactElement } from 'react';
 import React, { useRef } from 'react';
 import type { AriaToggleButtonProps } from 'react-aria';

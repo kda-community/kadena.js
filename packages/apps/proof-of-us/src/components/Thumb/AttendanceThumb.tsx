@@ -1,5 +1,5 @@
 import { getContrast } from '@/utils/getContrast';
-import { MonoDownloading } from '@kadena/kode-icons';
+import { MonoDownloading } from '@kda-community/kode-icons';
 import type { FC } from 'react';
 import {
   attendanceBackgroundClass,

@@ -3,8 +3,8 @@ import { useWallet } from '@/modules/wallet/wallet.hook';
 import { shorten } from '@/utils/helpers';
 import { useAsync } from '@/utils/useAsync';
 
-import { MonoKey } from '@kadena/kode-icons/system';
-import { Heading, Stack, Text } from '@kadena/kode-ui';
+import { MonoKey } from '@kda-community/kode-icons/system';
+import { Heading, Stack, Text } from '@kda-community/kode-ui';
 import { useParams } from 'react-router-dom';
 
 export function Keyset() {

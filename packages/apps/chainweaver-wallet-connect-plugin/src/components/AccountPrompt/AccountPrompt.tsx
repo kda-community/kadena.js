@@ -1,26 +1,28 @@
-import { IAccount } from '../../wallet-communication.ts';
 import {
   Button,
+  Checkbox,
   Dialog,
   Heading,
-  Checkbox,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import React, { useState } from 'react';
+import { IAccount } from '../../wallet-communication.ts';
 import { accountPrompt } from './style.css.ts';
 
 export const AccountPrompt: React.FC<{
-  accounts: IAccount[]
+  accounts: IAccount[];
   onAccountsSelected: (accounts: IAccount[]) => void;
 }> = ({ accounts, onAccountsSelected }) => {
   const [selectedAccounts, setSelectedAccounts] = useState<IAccount[]>([]);
 
   function onCheckboxChange(isSelected: boolean, account: IAccount) {
-    if(isSelected) {
+    if (isSelected) {
       setSelectedAccounts((prev) => [...prev, account]);
     } else {
-      setSelectedAccounts((prev) => prev.filter((acc) => acc.address !== account.address));
+      setSelectedAccounts((prev) =>
+        prev.filter((acc) => acc.address !== account.address),
+      );
     }
   }
 
@@ -37,14 +39,17 @@ export const AccountPrompt: React.FC<{
     >
       <Stack flexDirection={'column'} gap={'md'}>
         <Heading>Select Accounts</Heading>
-        <Text>
-          Select the accounts you want to make available to the dApp
-        </Text>
+        <Text>Select the accounts you want to make available to the dApp</Text>
         {accounts.map((account) => (
           <Stack key={account.address} gap={'sm'}>
-            <Checkbox isSelected={selectedAccounts.includes(account)} onChange={(isSelected) => onCheckboxChange(isSelected, account ) }>
+            <Checkbox
+              isSelected={selectedAccounts.includes(account)}
+              onChange={(isSelected: boolean) =>
+                onCheckboxChange(isSelected, account)
+              }
+            >
               {`${account.alias} - ${account.address}`}
-           </Checkbox>
+            </Checkbox>
           </Stack>
         ))}
 
@@ -52,7 +57,11 @@ export const AccountPrompt: React.FC<{
           <Button variant="transparent" type="reset" onClick={cancel}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={() => onAccountsSelected(selectedAccounts)} isDisabled={selectedAccounts.length === 0}>
+          <Button
+            variant="primary"
+            onClick={() => onAccountsSelected(selectedAccounts)}
+            isDisabled={selectedAccounts.length === 0}
+          >
             Select
           </Button>
         </Stack>

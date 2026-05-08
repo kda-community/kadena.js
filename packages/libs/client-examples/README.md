@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/client-examples
+# @kda-community/client-examples
 
 Test project to verify pactjs-cli and pactjs-generator
 
@@ -15,13 +15,13 @@ Test project to verify pactjs-cli and pactjs-generator
 
 In the following examples, we will interact with the `coin` contract. To have
 better type support, we strongly recommend generating the type definition from
-the contract using `@kadena/pactjs-cli`.
+the contract using `@kda-community/pactjs-cli`.
 
-To install `@kadena/pactjs-cli` as a dev dependency for your project, run the
+To install `@kda-community/pactjs-cli` as a dev dependency for your project, run the
 following command in the terminal:
 
 ```sh
-npm install @kadena/pactjs-cli --save-dev
+npm install @kda-community/pactjs-cli --save-dev
 ```
 
 You can generate type definitions from either a local file or directly from the
@@ -56,7 +56,7 @@ scripts._
 
 ## Transfer KDA
 
-In this example, we will use `@kadena/client` to transfer `1` KDA from `bob` to
+In this example, we will use `@kda-community/client` to transfer `1` KDA from `bob` to
 `alice`.
 
 This example demonstrates how to use `Pact.builder`, `Pact.modules`,
@@ -69,7 +69,7 @@ import {
   isSignedTransaction,
   Pact,
   signWithChainweaver,
-} from '@kadena/client';
+} from '@kda-community/client';
 
 interface IAccount {
   // In KDA, the account name is not the same as the public key. The reason is that the account could be multi-signature, and you can choose a user-friendly name for yourself.
@@ -104,7 +104,7 @@ async function transfer(
         receiver.accountName,
         // As we know JS rounds float numbers, which is not a desirable behavior when you are working with money.
         // So instead, we send the amount as a string in this format.
-        // alternatively you can use PactNumber class from "@kadena/pactjs" that creates the same object
+        // alternatively you can use PactNumber class from "@kda-community/pactjs" that creates the same object
         {
           decimal: amount,
         },

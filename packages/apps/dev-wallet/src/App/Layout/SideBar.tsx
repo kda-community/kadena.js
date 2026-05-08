@@ -12,7 +12,7 @@ import {
   MonoSwapHoriz,
   MonoTableRows,
   MonoWallet,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 
 import { NetworkSelector } from '@/Components/NetworkSelector/NetworkSelector';
 import { LoadedPlugin, pluginManager } from '@/modules/plugins/PluginManager';
@@ -34,12 +34,12 @@ import {
   ThemeAnimateIcon,
   Link as UILink,
   useTheme,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   SideBarItem,
   SideBar as SideBarUI,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { usePatchedNavigate } from '../../utils/usePatchedNavigate';

@@ -1,9 +1,9 @@
 import type {
   ClientRequestInit,
   SPVResponse,
-} from '@kadena/chainweb-node-client';
-import { spv } from '@kadena/chainweb-node-client';
-import type { ChainId } from '@kadena/types';
+} from '@kda-community/chainweb-node-client';
+import { spv } from '@kda-community/chainweb-node-client';
+import type { ChainId } from '@kda-community/types';
 import type { IPollOptions } from '../interfaces/interfaces';
 import { retry } from '../utils/retry';
 

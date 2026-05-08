@@ -11,7 +11,7 @@ import { newBlocks } from '@/graphql/subscriptions/newBlocks.graph';
 import { sendSentry, useGraphQuery } from '@/hooks/graphquery';
 import type { IBlockData, IChainBlock } from '@/services/block';
 import { addBlockData } from '@/services/block';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useToast } from '../Toast/ToastContext/ToastContext';

@@ -1,4 +1,4 @@
-import { parseTemplate } from '@kadena/pactjs-generator';
+import { parseTemplate } from '@kda-community/pactjs-generator';
 import { basename, extname, join } from 'path';
 import { services } from '../../../services/index.js';
 import { log } from '../../../utils/logger.js';

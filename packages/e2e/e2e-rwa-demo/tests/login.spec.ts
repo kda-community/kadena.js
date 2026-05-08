@@ -1,5 +1,5 @@
-import { test } from '@kadena-dev/e2e-base/src/fixtures/shared/test.fixture';
-import type { ILoginDataRWAProps } from '@kadena-dev/e2e-base/src/page-objects/rwa-demo/RWADemoApp.index';
+import { test } from '@kda-community-dev/e2e-base/src/fixtures/shared/test.fixture';
+import type { ILoginDataRWAProps } from '@kda-community-dev/e2e-base/src/page-objects/rwa-demo/RWADemoApp.index';
 import { expect } from '@playwright/test';
 
 let DATA: ILoginDataRWAProps['assetContract'];

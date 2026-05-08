@@ -3,12 +3,12 @@ import type {
   Guard,
   IWalletAccount,
 } from '@/providers/AccountProvider/AccountType';
-import type { ChainId } from '@kadena/client';
-import { CHAINWEAVER_ADAPTER } from '@kadena/wallet-adapter-chainweaver';
-import type { IAccountInfo } from '@kadena/wallet-adapter-core';
-import { ECKO_ADAPTER } from '@kadena/wallet-adapter-ecko';
-import { MAGIC_ADAPTER } from '@kadena/wallet-adapter-magic';
-import { WALLET_CONNECT_ADAPTER } from '@kadena/wallet-adapter-walletconnect';
+import type { ChainId } from '@kda-community/client';
+import { CHAINWEAVER_ADAPTER } from '@kda-community/wallet-adapter-chainweaver';
+import type { IAccountInfo } from '@kda-community/wallet-adapter-core';
+import { ECKO_ADAPTER } from '@kda-community/wallet-adapter-ecko';
+import { MAGIC_ADAPTER } from '@kda-community/wallet-adapter-magic';
+import { WALLET_CONNECT_ADAPTER } from '@kda-community/wallet-adapter-walletconnect';
 
 type WalletName = (typeof WALLETTYPES)[keyof typeof WALLETTYPES];
 

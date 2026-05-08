@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 
 import type { IWalletKeyPair } from '../../../services/wallet/wallet.types.js';
 import type { CommandResult } from '../../../utils/command.util.js';

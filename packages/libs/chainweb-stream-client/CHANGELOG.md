@@ -1,4 +1,4 @@
-# Change Log - @kadena/chainweb-stream-client
+# Change Log - @kda-community/chainweb-stream-client
 
 ## 0.2.3
 

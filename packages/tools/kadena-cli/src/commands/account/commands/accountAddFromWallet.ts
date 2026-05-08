@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import { networkDefaults } from '../../../constants/networks.js';
 import { services } from '../../../services/index.js';
 import type { IWallet } from '../../../services/wallet/wallet.types.js';

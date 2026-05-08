@@ -1,4 +1,4 @@
-import { Divider } from '@kadena/kode-ui';
+import { Divider } from '@kda-community/kode-ui';
 import { Accounts } from '../components/Accounts';
 import { WordPhrase } from '../components/WordPhrase';
 

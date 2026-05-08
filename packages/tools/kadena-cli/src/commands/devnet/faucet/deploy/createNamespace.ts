@@ -1,10 +1,10 @@
-import type { ChainId, ICommandResult } from '@kadena/client';
+import type { ChainId, ICommandResult } from '@kda-community/client';
 import {
   Pact,
   createClient,
   createSignWithKeypair,
   isSignedTransaction,
-} from '@kadena/client';
+} from '@kda-community/client';
 import { ADMIN, ADMINS, DOMAIN, NETWORK_ID } from './constants.js';
 
 export const createNamespace = async ({

@@ -1,6 +1,6 @@
 //@TODO: this modal needs to much nicer. but for now it does the job
 
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import type {
   FC,
   MouseEventHandler,

@@ -3,7 +3,7 @@ import {
   MonoCodeOff,
   MonoContrast,
   MonoUsb,
-} from '@kadena/kode-icons';
+} from '@kda-community/kode-icons';
 import {
   NavHeader,
   NavHeaderButton,
@@ -11,7 +11,7 @@ import {
   NavHeaderLinkList,
   NavHeaderSelect,
   SelectItem,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { useTheme } from 'next-themes';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';

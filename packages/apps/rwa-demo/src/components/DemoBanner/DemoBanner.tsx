@@ -1,4 +1,4 @@
-import { Notification, NotificationHeading } from '@kadena/kode-ui';
+import { Notification, NotificationHeading } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 
 export const DemoBanner: FC = () => {

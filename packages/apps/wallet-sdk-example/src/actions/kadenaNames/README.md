@@ -3,7 +3,7 @@
 This module demonstrates advanced Kadena Names interactions with the Kadena
 blockchain. The functions provided here are **independent of the Wallet SDK**
 and are designed purely for **demonstration purposes**. They showcase how to
-implement more complex functionalities using `@kadena/client` to interact with
+implement more complex functionalities using `@kda-community/client` to interact with
 Kadena's Chainweb.
 
 Below is an overview of the functions and their purpose:
@@ -12,24 +12,24 @@ Below is an overview of the functions and their purpose:
 
 ## Installation
 
-You can install `@kadena/client` using your preferred package manager:
+You can install `@kda-community/client` using your preferred package manager:
 
 ### Using npm
 
 ```bash
-npm install @kadena/client
+npm install @kda-community/client
 ```
 
 ### Using yarn
 
 ```bash
-yarn add @kadena/client
+yarn add @kda-community/client
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm add @kadena/client
+pnpm add @kda-community/client
 ```
 
 ---
@@ -37,10 +37,10 @@ pnpm add @kadena/client
 ### How to Import
 
 To use the Kadena client library, you can import it as shown below (or use other
-imports provided by @kadena/client):
+imports provided by @kda-community/client):
 
 ```bash
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 ```
 
 You can then use Pact.builder to create transactions, interact with modules, and
@@ -135,7 +135,7 @@ execute commands.
 ## Interaction Details
 
 These actions communicate directly with Kadena's Chainweb using the
-`@kadena/client` library. The host configuration is defined in the `hostfile`
+`@kda-community/client` library. The host configuration is defined in the `hostfile`
 module:
 
 - **`getClient`**: Generates or retrieves a cached Kadena client for a given

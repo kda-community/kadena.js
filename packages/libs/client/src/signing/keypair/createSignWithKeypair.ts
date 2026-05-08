@@ -1,5 +1,5 @@
-import { signHash } from '@kadena/cryptography-utils';
-import type { IKeyPair, IUnsignedCommand } from '@kadena/types';
+import { signHash } from '@kda-community/cryptography-utils';
+import type { IKeyPair, IUnsignedCommand } from '@kda-community/types';
 import type { Debugger } from 'debug';
 import _debug from 'debug';
 import type { IPactCommand } from '../../interfaces/IPactCommand';

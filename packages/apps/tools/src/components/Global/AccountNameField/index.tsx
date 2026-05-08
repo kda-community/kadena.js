@@ -1,5 +1,5 @@
-import type { ITextFieldProps } from '@kadena/kode-ui';
-import { Stack, TextField } from '@kadena/kode-ui';
+import type { ITextFieldProps } from '@kda-community/kode-ui';
+import { Stack, TextField } from '@kda-community/kode-ui';
 import useTranslation from 'next-translate/useTranslation';
 import type { ForwardedRef } from 'react';
 import React, { forwardRef } from 'react';

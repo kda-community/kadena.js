@@ -1,4 +1,4 @@
-import { Stack, Text, Tile } from '@kadena/kode-ui';
+import { Stack, Text, Tile } from '@kda-community/kode-ui';
 import { FC, ReactElement } from 'react';
 import { assetBoxClass } from './style.css';
 

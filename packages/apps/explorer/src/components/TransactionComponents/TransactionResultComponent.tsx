@@ -3,7 +3,7 @@ import { DataRenderComponent } from '@/components/DataRenderComponent/DataRender
 import { CONSTANTS } from '@/constants/constants';
 import { getCrosschainTransfer } from '@/utils/getCrosschainTransfer';
 import { objectToDataRenderComponentFields } from '@/utils/objectToDataRenderComponentFields';
-import { Grid, Link, Stack, Text } from '@kadena/kode-ui';
+import { Grid, Link, Stack, Text } from '@kda-community/kode-ui';
 import React, { useEffect } from 'react';
 import { ifNill } from '../../utils/ifNill';
 

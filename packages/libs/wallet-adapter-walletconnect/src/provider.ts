@@ -1,7 +1,7 @@
 import type {
   IBaseWalletAdapterOptions,
   IProvider,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 import type { SessionTypes } from '@walletconnect/types';
 
 /**

@@ -11,7 +11,7 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { unlockPrompt } from './style.css.ts';

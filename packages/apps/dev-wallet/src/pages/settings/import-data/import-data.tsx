@@ -2,9 +2,15 @@ import { SideBarBreadcrumbs } from '@/Components/SideBarBreadcrumbs/SideBarBread
 import { UUID } from '@/modules/types';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { browse, readContent } from '@/utils/select-file';
-import { MonoSettings } from '@kadena/kode-icons/system';
-import { Button, Heading, Notification, Stack, Text } from '@kadena/kode-ui';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+import { MonoSettings } from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Heading,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { ImportAccounts } from './Components/import-accounts';
 import { ImportContacts } from './Components/import-contacts';

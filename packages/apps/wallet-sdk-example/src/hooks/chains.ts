@@ -1,5 +1,5 @@
-import { ChainId } from '@kadena/client';
-import { walletSdk } from '@kadena/wallet-sdk';
+import { ChainId } from '@kda-community/client';
+import { walletSdk } from '@kda-community/wallet-sdk';
 import { useEffect, useState } from 'react';
 
 const defaultChains = 20;

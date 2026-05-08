@@ -1,4 +1,4 @@
-import { test as baseTest } from '@kadena-dev/e2e-base/src/fixtures/shared/test.fixture';
+import { test as baseTest } from '@kda-community-dev/e2e-base/src/fixtures/shared/test.fixture';
 import type { Page } from '@playwright/test';
 
 export const test = baseTest.extend<{

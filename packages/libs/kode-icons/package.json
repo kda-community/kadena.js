@@ -1,16 +1,16 @@
 {
-  "name": "@kadena/kode-icons",
+  "name": "@kda-community/kode-icons",
   "version": "0.3.1",
   "description": "Kadena's React icons library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/kode-icons"
   },
   "license": "ISC",
   "author": "KADENA",
   "contributors": [
-    "Salama Ashoush <salama@kadena.io>"
+    "Salama Ashoush <salama@kda-community.io>"
   ],
   "exports": {
     "./brand": {
@@ -56,7 +56,7 @@
     "build": "unbuild",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "generate:icons": "jiti scripts/generateIcons.ts && pnpm build && pnpm run format:src",
     "lint": "pnpm run /^lint:.*/",
@@ -69,10 +69,10 @@
     "react": "^19.1.1"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-prettier": "^8.1.0",

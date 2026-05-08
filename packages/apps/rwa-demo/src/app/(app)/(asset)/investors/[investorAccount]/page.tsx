@@ -15,15 +15,15 @@ import { useAccount } from '@/hooks/account';
 import { useDistributeTokens } from '@/hooks/distributeTokens';
 import { useGetInvestor } from '@/hooks/getInvestor';
 import { useTogglePartiallyFreezeTokens } from '@/hooks/togglePartiallyFreezeTokens';
-import { MonoAdd } from '@kadena/kode-icons';
-import { Stack } from '@kadena/kode-ui';
+import { MonoAdd } from '@kda-community/kode-icons';
+import { Stack } from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
   SideBarBreadcrumbsItem,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useParams } from 'next/navigation';
 
 const InvestorPage = () => {

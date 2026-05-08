@@ -6,12 +6,12 @@ import type {
   IKeyPair,
   ITransactionDescriptor,
   IUnsignedCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import {
   createClient,
   createSignWithKeypair,
   isSignedTransaction,
-} from '@kadena/client';
+} from '@kda-community/client';
 import { dotenv } from '@utils/dotenv';
 import { logger } from '@utils/logger';
 import { networkData } from '@utils/network';

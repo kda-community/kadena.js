@@ -1,4 +1,4 @@
-import { Box, Stack } from '@kadena/kode-ui';
+import { Box, Stack } from '@kda-community/kode-ui';
 import { QRCode as ORiginalQRCode } from 'react-qrcode-logo';
 
 export function QRCode(options: typeof ORiginalQRCode.defaultProps) {

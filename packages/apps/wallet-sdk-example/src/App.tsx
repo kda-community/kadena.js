@@ -1,7 +1,7 @@
-import { Notification, NotificationHeading } from '@kadena/kode-ui';
-import '@kadena/kode-ui/global';
-import { darkThemeClass } from '@kadena/kode-ui/styles';
-import { walletSdk } from '@kadena/wallet-sdk';
+import { Notification, NotificationHeading } from '@kda-community/kode-ui';
+import '@kda-community/kode-ui/global';
+import { darkThemeClass } from '@kda-community/kode-ui/styles';
+import { walletSdk } from '@kda-community/wallet-sdk';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';

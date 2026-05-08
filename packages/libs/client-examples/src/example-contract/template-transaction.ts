@@ -1,10 +1,10 @@
-import type { ICommand } from '@kadena/client';
+import type { ICommand } from '@kda-community/client';
 import {
   createClient,
   isSignedTransaction,
   Pact,
   signWithChainweaver,
-} from '@kadena/client';
+} from '@kda-community/client';
 
 interface IAccount {
   // In KDA, the account name is not the same as the public key. The reason is that the account could be multi-signature, and you can choose a user-friendly name for yourself.
@@ -39,7 +39,7 @@ async function transfer(
         receiver.accountName,
         // As we know JS rounds float numbers, which is not a desirable behavior when you are working with money.
         // So instead, we send the amount as a string in this format.
-        // alternatively you can use PactNumber class from "@kadena/pactjs" that creates the same object
+        // alternatively you can use PactNumber class from "@kda-community/pactjs" that creates the same object
         {
           decimal: amount,
         },

@@ -8,7 +8,7 @@ import { atoms } from '../../styles/atoms.css';
 import type { ITestProps } from '../../utils/testId';
 import { testProps } from '../../utils/testId';
 
-// eslint-disable-next-line @kadena-dev/typedef-var
+// eslint-disable-next-line @kda-community-dev/typedef-var
 const SPINNER_SIZE = {
   sm: 16,
   md: 24,

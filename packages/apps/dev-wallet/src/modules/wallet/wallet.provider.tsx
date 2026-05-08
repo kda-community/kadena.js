@@ -18,8 +18,8 @@ import {
 } from '@/service-worker/types';
 import { throttle } from '@/utils/helpers';
 import { Session } from '@/utils/session';
-import { IClient, INetworkOptions, createClient } from '@kadena/client';
-import { setGlobalConfig } from '@kadena/client-utils/core';
+import { IClient, INetworkOptions, createClient } from '@kda-community/client';
+import { setGlobalConfig } from '@kda-community/client-utils/core';
 import {
   Fungible,
   IAccount,

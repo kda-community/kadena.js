@@ -1,5 +1,5 @@
-import { ILocalCommandResult } from '@kadena/chainweb-node-client';
-import { ChainId, ICommandResult } from '@kadena/client';
+import { ILocalCommandResult } from '@kda-community/chainweb-node-client';
+import { ChainId, ICommandResult } from '@kda-community/client';
 import { IDBService, dbService } from '../db/db.service';
 import { UUID } from '../types';
 

@@ -1,6 +1,6 @@
-import type { ChainId } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+import type { ChainId } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { describeModule } from '../built-in';
 import { getBalance, transfer } from '../coin';

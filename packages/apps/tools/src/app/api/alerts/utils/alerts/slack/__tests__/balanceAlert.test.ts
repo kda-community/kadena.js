@@ -1,4 +1,4 @@
-import { CHAINS } from '@kadena/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import type { IAccount, IAlert } from '../../../constants';
 import {
   ALERTCODES,

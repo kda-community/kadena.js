@@ -1,4 +1,4 @@
-import { baseConfig } from '@kadena-dev/e2e-base/playwright.config';
+import { baseConfig } from '@kda-community-dev/e2e-base/playwright.config';
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { defineConfig } from '@playwright/test';
 
@@ -9,7 +9,7 @@ const config: PlaywrightTestConfig = {
       ? [['list'], ['blob', { outoutputFile: './blob-report/blob-tools.zip' }]]
       : [['list'], ['html', { open: 'never' }]],
   webServer: {
-    command: `pnpm --filter @kadena/rwa-demo start`,
+    command: `pnpm --filter @kda-community/rwa-demo start`,
     reuseExistingServer: !process.env.CI,
   },
   timeout: 180 * 1000,

@@ -4,8 +4,14 @@ import { useUser } from '@/hooks/user';
 import type { IAddAgentProps } from '@/services/addAgent';
 import type { IRetrievedAccount } from '@/services/discoverAccount';
 import { discoverAccount } from '@/services/discoverAccount';
-import { MonoKey } from '@kadena/kode-icons';
-import { Badge, maskValue, Notification, Stack, Text } from '@kadena/kode-ui';
+import { MonoKey } from '@kda-community/kode-icons';
+import {
+  Badge,
+  maskValue,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import type { UseFormSetError } from 'react-hook-form';

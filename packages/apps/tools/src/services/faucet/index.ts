@@ -2,11 +2,11 @@ import type { NetworkId } from '@/constants/kadena';
 import { env } from '@/utils/env';
 import type { INetworkData } from '@/utils/network';
 import { getApiHost } from '@/utils/network';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
-import type { ITransactionDescriptor } from '@kadena/client';
-import { createClient, isSignedTransaction, Pact } from '@kadena/client';
-import { genKeyPair, sign } from '@kadena/cryptography-utils';
-import { PactNumber } from '@kadena/pactjs';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
+import type { ITransactionDescriptor } from '@kda-community/client';
+import { createClient, isSignedTransaction, Pact } from '@kda-community/client';
+import { genKeyPair, sign } from '@kda-community/cryptography-utils';
+import { PactNumber } from '@kda-community/pactjs';
 import Debug from 'debug';
 
 const FAUCET_ACCOUNT = env(

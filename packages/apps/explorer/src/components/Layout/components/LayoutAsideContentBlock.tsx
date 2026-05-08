@@ -1,5 +1,5 @@
 import { ValueLoader } from '@/components/LoadingSkeleton/ValueLoader/ValueLoader';
-import { Stack, Text } from '@kadena/kode-ui';
+import { Stack, Text } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React from 'react';
 import {

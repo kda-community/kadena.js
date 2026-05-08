@@ -1,6 +1,6 @@
 import { BootContent } from '@/Components/BootContent/BootContent';
 import { sleep } from '@/utils/helpers';
-import { Stack, Text } from '@kadena/kode-ui';
+import { Stack, Text } from '@kda-community/kode-ui';
 import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { addDefaultFungibles } from '../account/account.repository';
 import { addDefaultNetworks } from '../network/network.repository';

@@ -5,8 +5,8 @@ import type {
   ICommand,
   ICommandResult,
   IUnsignedCommand,
-} from '@kadena/client';
-import { isSignedTransaction } from '@kadena/client';
+} from '@kda-community/client';
+import { isSignedTransaction } from '@kda-community/client';
 import path from 'node:path';
 
 import type { CommandResult } from '../../../utils/command.util.js';

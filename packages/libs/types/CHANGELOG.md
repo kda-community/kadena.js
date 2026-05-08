@@ -1,4 +1,4 @@
-# Change Log - @kadena/types
+# Change Log - @kda-community/types
 
 ## 0.7.0
 

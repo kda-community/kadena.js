@@ -1,5 +1,5 @@
 import { useTransactions } from '@/hooks/transactions';
-import { Notification, Stack } from '@kadena/kode-ui';
+import { Notification, Stack } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { ActiveTransaction } from './ActiveTransaction';
 import { activeListClass } from './style.css';

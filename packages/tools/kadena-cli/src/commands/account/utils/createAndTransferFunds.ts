@@ -1,13 +1,13 @@
-import type { ChainId, ITransactionDescriptor } from '@kadena/client';
+import type { ChainId, ITransactionDescriptor } from '@kda-community/client';
 import {
   Pact,
   createClient,
   createSignWithKeypair,
   isSignedTransaction,
   readKeyset,
-} from '@kadena/client';
-import { genKeyPair } from '@kadena/cryptography-utils';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client';
+import { genKeyPair } from '@kda-community/cryptography-utils';
+import { PactNumber } from '@kda-community/pactjs';
 import {
   GAS_STATIONS_MAP,
   MAINNET_FUND_TRANSFER_ERROR_MESSAGE,

@@ -3,14 +3,14 @@ import { useAsset } from '@/hooks/asset';
 import { useDistributeTokens } from '@/hooks/distributeTokens';
 import { useGetInvestorBalance } from '@/hooks/getInvestorBalance';
 import type { IDistributeTokensProps } from '@/services/distributeTokens';
-import { Button, Stack, TextField } from '@kadena/kode-ui';
+import { Button, Stack, TextField } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC, ReactElement } from 'react';
 import { cloneElement, useEffect, useRef, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';

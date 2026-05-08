@@ -1,6 +1,6 @@
-# @kadena/graph
+# @kda-community/graph
 
-@kadena/graph is a GraphQL Server, available for running your own GraphQL endpoint. This project uses chainweb-data as the datasource.
+@kda-community/graph is a GraphQL Server, available for running your own GraphQL endpoint. This project uses chainweb-data as the datasource.
 
 <!-- markdownlint-disable MD033 -->
 <picture>
@@ -9,7 +9,7 @@
 </picture>
 <!-- markdownlint-enable MD033 -->
 
-- [@kadena/graph](#kadenagraph)
+- [@kda-community/graph](#kadenagraph)
   - [Getting started](#getting-started)
     - [Method 1: Using the published npm package](#method-1-using-the-published-npm-package)
     - [Method 2: Building and running from source](#method-2-building-and-running-from-source)
@@ -51,19 +51,19 @@ Prerequisites:
 - [Node.js](https://nodejs.org/en/download/)
 - A running Chainweb node and chainweb-data PostgreSQL database with the migrations in `cwd-extra-migrations` applied. If you don't have this set up, see [Running devnet](#running-devnet).
 
-There are two ways you can run the GraphQL server. You can either use the published npm package `@kadena/graph`, or you can build and run it from the source code in this repository.
+There are two ways you can run the GraphQL server. You can either use the published npm package `@kda-community/graph`, or you can build and run it from the source code in this repository.
 
 ### Method 1: Using the published npm package
 
-If no modification to the source code is needed, you can use the published npm package `@kadena/graph` to run the GraphQL server. A set of environment variables is defined in the `.env.example` file. These can be overwritten by setting your own environment variables in your system.
+If no modification to the source code is needed, you can use the published npm package `@kda-community/graph` to run the GraphQL server. A set of environment variables is defined in the `.env.example` file. These can be overwritten by setting your own environment variables in your system.
 
 ```sh
-npm install -g @kadena/graph
+npm install -g @kda-community/graph
 kadena-graph
 
 # or
 
-npx @kadena/graph
+npx @kda-community/graph
 ```
 
 ### Method 2: Building and running from source
@@ -72,11 +72,11 @@ Prerequisites:
 
 - [pnpm](https://pnpm.io/installation)
 
-First, install dependencies and build up to and including `@kadena/graph`.
+First, install dependencies and build up to and including `@kda-community/graph`.
 
 ```sh
-pnpm install --filter @kadena/graph...
-pnpm turbo build --filter @kadena/graph...
+pnpm install --filter @kda-community/graph...
+pnpm turbo build --filter @kda-community/graph...
 ```
 
 Then, run the project:
@@ -91,7 +91,7 @@ Build and run the project from docker-compose.
 
 Modify the [`.env`](./.env.example) accordingly, and then run the following commands:
 
-This will use the **released package from NPM** @kadena/graph.
+This will use the **released package from NPM** @kda-community/graph.
 
 ```sh
 docker compose build graphql

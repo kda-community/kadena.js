@@ -4,7 +4,7 @@
   "proposedName": "Kadena",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/snap"
   },
   "source": {
@@ -13,7 +13,7 @@
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "images/icon.svg",
-        "packageName": "@kadena/snap",
+        "packageName": "@kda-community/snap",
         "registry": "https://registry.npmjs.org/"
       }
     }

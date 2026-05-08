@@ -1,4 +1,4 @@
-import { Pact, createClient } from '@kadena/client';
+import { Pact, createClient } from '@kda-community/client';
 import { API_HOST, CHAIN_ID, NETWORK_ID } from './consts';
 
 interface ReadMessageParams {

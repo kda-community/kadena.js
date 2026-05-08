@@ -2,7 +2,7 @@ import { IKeySet } from '@/modules/account/account.repository';
 import { panelClass } from '@/pages/home/style.css';
 import { linkClass } from '@/pages/select-profile/select-profile.css';
 import { getAccountName } from '@/utils/helpers';
-import { Box, Heading, Stack, Text } from '@kadena/kode-ui';
+import { Box, Heading, Stack, Text } from '@kda-community/kode-ui';
 import { Link } from 'react-router-dom';
 import { ListItem } from '../ListItem/ListItem';
 import { listClass, noStyleLinkClass } from './style.css';

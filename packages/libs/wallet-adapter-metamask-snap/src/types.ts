@@ -1,4 +1,4 @@
-import type { IKdaMethodMap as StandardKdaMethodMap } from '@kadena/wallet-adapter-core';
+import type { IKdaMethodMap as StandardKdaMethodMap } from '@kda-community/wallet-adapter-core';
 /** Metadata for a single installed Snap */
 /** @public */
 export interface ISnapMetadata {

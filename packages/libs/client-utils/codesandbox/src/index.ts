@@ -1,4 +1,4 @@
-import { getBalance } from '@kadena/client-utils/coin';
+import { getBalance } from '@kda-community/client-utils/coin';
 
 const button = document.getElementById('get');
 const $account = document.getElementById('accountInput');

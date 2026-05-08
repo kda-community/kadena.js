@@ -8,7 +8,7 @@ import {
   Notification,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import { Chain } from '@/Components/Badge/Badge';
 import {

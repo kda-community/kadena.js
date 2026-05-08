@@ -1,4 +1,4 @@
-# @kadena/kode-ui
+# @kda-community/kode-ui
 
 ## 0.21.1
 
@@ -6,7 +6,7 @@
 
 - f59ac43: update to react 19, Next 15 and other dependend packages
 - Updated dependencies \[f59ac43]
-  - @kadena/kode-icons\@0.3.1
+  - @kda-community/kode-icons\@0.3.1
 
 ## 0.21.0
 
@@ -51,7 +51,7 @@
 
 ### Patch Changes
 
-- @kadena/kode-icons\@0.3.0
+- @kda-community/kode-icons\@0.3.0
 
 ## 0.18.0
 
@@ -65,7 +65,7 @@
 
 - 94ce674: add the checkbox group component
 - Updated dependencies \[d533d39]
-  - @kadena/kode-icons\@0.3.0
+  - @kda-community/kode-icons\@0.3.0
 
 ## 0.17.1
 
@@ -107,7 +107,7 @@
 ### Patch Changes
 
 - Updated dependencies \[de4fb13]
-  - @kadena/kode-icons\@0.2.0
+  - @kda-community/kode-icons\@0.2.0
 
 ## 0.14.2
 
@@ -122,7 +122,7 @@
 
 - 27ecc26: Updated the CardPattern component to allow for more flexible
   customization
-  - @kadena/kode-icons\@0.1.0
+  - @kda-community/kode-icons\@0.1.0
 
 ## 0.14.0
 
@@ -143,7 +143,7 @@
 
 - Updated dependencies \[d5de83869]
 - Updated dependencies \[563fb6cad]
-  - @kadena/kode-icons\@0.1.0
+  - @kda-community/kode-icons\@0.1.0
 
 ## 0.12.2
 
@@ -247,7 +247,7 @@
   other form elements. Breaking change: startIcon has been renamed to
   startVisual to be consistent with other components.
 - Updated dependencies \[93bf55b07]
-  - @kadena/kode-icons\@0.0.3
+  - @kda-community/kode-icons\@0.0.3
 
 ## 0.8.4
 

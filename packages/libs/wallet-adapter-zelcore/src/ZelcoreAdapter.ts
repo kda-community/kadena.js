@@ -10,8 +10,8 @@ import type {
   KdaMethod,
   KdaRequestArgs,
   StandardSchemaV1,
-} from '@kadena/wallet-adapter-core';
-import { BaseWalletAdapter } from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
+import { BaseWalletAdapter } from '@kda-community/wallet-adapter-core';
 import * as v from 'valibot';
 import { ERRORS, ZELCORE_ADAPTER } from './constants';
 import { checkVerifiedAccount } from './utils';

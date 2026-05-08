@@ -1,4 +1,4 @@
-import { IPactCommand } from '@kadena/client';
+import { IPactCommand } from '@kda-community/client';
 import {
   ChainweaverKeyPair,
   ExportFromChainweaver,

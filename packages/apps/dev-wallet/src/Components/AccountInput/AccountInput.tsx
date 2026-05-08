@@ -5,8 +5,8 @@ import { Guard } from '@/Components/Guard/Guard';
 import {
   MonoAccountBalanceWallet,
   MonoLoading,
-} from '@kadena/kode-icons/system';
-import { Button, Notification, Stack, TextField } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import { Button, Notification, Stack, TextField } from '@kda-community/kode-ui';
 import { useEffect, useState } from 'react';
 import { KeySetForm } from '../KeySetForm/KeySetForm';
 import { DiscoverdAccounts } from './DiscoverdAccounts';

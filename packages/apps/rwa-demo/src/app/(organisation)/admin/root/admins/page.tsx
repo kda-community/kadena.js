@@ -1,7 +1,7 @@
 'use client';
 import { AdminsList } from '@/components/admin/AdminsList/AdminsList';
 import { SideBarBreadcrumbs } from '@/components/SideBarBreadcrumbs/SideBarBreadcrumbs';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 
 const Home = () => {

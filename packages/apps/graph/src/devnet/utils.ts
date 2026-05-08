@@ -1,4 +1,4 @@
-import type { ChainId, IKeyPair } from '@kadena/types';
+import type { ChainId, IKeyPair } from '@kda-community/types';
 
 export interface IAccount {
   account: string;

@@ -5,9 +5,9 @@ import { OrganisationProvider } from '@/providers/OrganisationProvider/Organisat
 import { TransactionsProvider } from '@/providers/TransactionsProvider/TransactionsProvider';
 import { UserProvider } from '@/providers/UserProvider/UserProvider';
 import { WalletAdapterProvider } from '@/providers/WalletAdapter/WalletAdapter';
-import { MediaContextProvider } from '@kadena/kode-ui';
-import { SideBarLayoutProvider } from '@kadena/kode-ui/patterns';
-import { darkThemeClass } from '@kadena/kode-ui/styles';
+import { MediaContextProvider } from '@kda-community/kode-ui';
+import { SideBarLayoutProvider } from '@kda-community/kode-ui/patterns';
+import { darkThemeClass } from '@kda-community/kode-ui/styles';
 import { ThemeProvider } from 'next-themes';
 import type { FC, PropsWithChildren } from 'react';
 

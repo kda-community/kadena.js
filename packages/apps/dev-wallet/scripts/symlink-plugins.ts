@@ -10,7 +10,7 @@ const { dependencies } = await fs
   .readFile(path.join(process.cwd(), '/package.json'), 'utf-8')
   .then(JSON.parse);
 const plugins = Object.keys(dependencies).filter((dep) =>
-  dep.match(/@kadena\/chainweaver-.*-plugin/),
+  dep.match(/@kda-community\/chainweaver-.*-plugin/),
 );
 
 const directory = (plugin: string) => `public/internal-registry/${plugin}`;

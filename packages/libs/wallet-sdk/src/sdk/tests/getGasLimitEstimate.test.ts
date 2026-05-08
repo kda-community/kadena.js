@@ -1,4 +1,4 @@
-import type { ICommand } from '@kadena/types';
+import type { ICommand } from '@kda-community/types';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';

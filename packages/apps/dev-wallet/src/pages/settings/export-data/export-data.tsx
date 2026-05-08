@@ -10,9 +10,15 @@ import {
   MonoSettings,
   MonoTableRows,
   MonoWallet,
-} from '@kadena/kode-icons/system';
-import { Button, Heading, Notification, Stack, Text } from '@kadena/kode-ui';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Heading,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 import { downloadAsFile } from '../utils/download-file';
 
 const toCSV = (table: string, header: string[], data: string[][]) => {

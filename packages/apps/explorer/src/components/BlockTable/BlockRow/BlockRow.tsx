@@ -2,7 +2,7 @@ import { ChainActivityChart } from '@/components/BlockActivityGraph/BlockActivit
 import { ValueLoader } from '@/components/LoadingSkeleton/ValueLoader/ValueLoader';
 import type { IHeightBlock } from '@/services/block';
 import { formatNumberWithUnit } from '@/services/format';
-import { Grid, Stack, Text } from '@kadena/kode-ui';
+import { Grid, Stack, Text } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import React from 'react';
 import { BlockCell } from '../BlockCell/BlockCell';

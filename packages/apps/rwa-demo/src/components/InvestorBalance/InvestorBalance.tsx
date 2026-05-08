@@ -1,8 +1,8 @@
 import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import { useGetFrozenTokens } from '@/hooks/getFrozenTokens';
 import { useGetInvestorBalance } from '@/hooks/getInvestorBalance';
-import { MonoFilterTiltShift } from '@kadena/kode-icons';
-import { Stack } from '@kadena/kode-ui';
+import { MonoFilterTiltShift } from '@kda-community/kode-icons';
+import { Stack } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React from 'react';
 import { TransactionTypeSpinner } from '../TransactionTypeSpinner/TransactionTypeSpinner';

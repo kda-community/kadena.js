@@ -3,7 +3,7 @@ import {
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { ProfileForm } from './ProfileForm';
 

@@ -1,4 +1,4 @@
-import { IUnsignedCommand } from '@kadena/client';
+import { IUnsignedCommand } from '@kda-community/client';
 
 export const ERROR = Symbol('ERROR');
 

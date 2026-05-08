@@ -1,5 +1,5 @@
-import { createPrincipal } from '@kadena/client-utils/built-in';
-import type { ChainId } from '@kadena/types';
+import { createPrincipal } from '@kda-community/client-utils/built-in';
+import type { ChainId } from '@kda-community/types';
 import type { INetworkCreateOptions } from '../../networks/utils/networkHelpers.js';
 import type { Predicate } from '../types.js';
 

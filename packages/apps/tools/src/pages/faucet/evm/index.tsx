@@ -13,7 +13,7 @@ import {
   containerClass,
 } from '@/pagestyles/faucet/styles.css';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { MonoKeyboardArrowRight } from '@kadena/kode-icons/system';
+import { MonoKeyboardArrowRight } from '@kda-community/kode-icons/system';
 import {
   Breadcrumbs,
   BreadcrumbsItem,
@@ -24,8 +24,8 @@ import {
   NotificationButton,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
-import type { ChainId } from '@kadena/types';
+} from '@kda-community/kode-ui';
+import type { ChainId } from '@kda-community/types';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

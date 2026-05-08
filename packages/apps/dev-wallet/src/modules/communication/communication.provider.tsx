@@ -1,7 +1,7 @@
 import { useGlobalState } from '@/App/providers/globalState';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { IUnsignedCommand } from '@kadena/client';
-import { hash as blakeHash } from '@kadena/cryptography-utils';
+import { IUnsignedCommand } from '@kda-community/client';
+import { hash as blakeHash } from '@kda-community/cryptography-utils';
 import {
   FC,
   PropsWithChildren,

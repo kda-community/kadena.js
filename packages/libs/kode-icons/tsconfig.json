@@ -1,5 +1,5 @@
 {
-  "extends": "@kadena-dev/shared-config/tsconfig-base.json",
+  "extends": "@kda-community-dev/shared-config/tsconfig-base.json",
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": ".",

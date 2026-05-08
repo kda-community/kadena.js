@@ -1,4 +1,4 @@
-import { createClient } from '@kadena/client';
+import { createClient } from '@kda-community/client';
 import type { Mock } from 'vitest';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
@@ -20,7 +20,7 @@ describe('ensureKdaExtension', () => {
 });
 
 describe('kdnResolveNameToAddress', () => {
-  vi.mock('@kadena/client', async (importOriginal) => {
+  vi.mock('@kda-community/client', async (importOriginal) => {
     const actual = (await importOriginal()) as {};
     return {
       ...actual,

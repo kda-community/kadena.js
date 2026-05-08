@@ -4,7 +4,8 @@ import type { Issues, Rule } from '../../types.js';
 // require('@rushstack/eslint-config/patch/modern-module-resolution');
 // So we can only load it as a string. Not worth it to strip this line and eval the rest.
 
-const extendMatch = /extends:\s+\[\s*'@kadena-dev\/eslint-config\/profile\//;
+const extendMatch =
+  /extends:\s+\[\s*'@kda-community-dev\/eslint-config\/profile\//;
 
 const rule: Rule = ({ eslintConfig }) => {
   const issues: Issues = [];

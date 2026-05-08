@@ -45,11 +45,11 @@ like this:
 
 ```json
 {
-  "name": "@kadena/pkg",
+  "name": "@kda-community/pkg",
   "scripts": {
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",

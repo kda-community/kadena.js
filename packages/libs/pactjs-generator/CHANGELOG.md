@@ -1,4 +1,4 @@
-# Change Log - @kadena/pactjs-generator
+# Change Log - @kda-community/pactjs-generator
 
 ## 1.18.3
 
@@ -123,7 +123,7 @@ Fri, 04 Aug 2023 16:10:02 GMT
 
 ### Updates
 
-- Use ICap from @kadena/types instead of ICapabilityItem
+- Use ICap from @kda-community/types instead of ICapabilityItem
 
 ## 0.1.13
 
@@ -223,7 +223,7 @@ Mon, 16 Jan 2023 16:31:08 GMT
 
 ### Updates
 
-- change dependency @kadena-dev/eslint-config and @kadena-dev/heft-rig
+- change dependency @kda-community-dev/eslint-config and @kda-community-dev/heft-rig
 
 ## 0.1.2
 

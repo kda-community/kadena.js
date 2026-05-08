@@ -10,7 +10,7 @@ env:
 
 jobs:
   visual-regression-tests:
-    name: '@kadena/kode-ui'
+    name: '@kda-community/kode-ui'
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
       uses: ./.github/actions/runner-setup
 
     - name: Build
-      run: pnpm run build --filter @kadena/kode-ui...
+      run: pnpm run build --filter @kda-community/kode-ui...
 
     - name: Publish Storybook
       uses: chromaui/action@latest

@@ -1,7 +1,7 @@
 import type {
   ChainwebChainId,
   ICommandResult,
-} from '@kadena/chainweb-node-client';
+} from '@kda-community/chainweb-node-client';
 import {
   faucetGasStation,
   sender00Account,

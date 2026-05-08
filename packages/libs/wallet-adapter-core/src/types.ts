@@ -5,7 +5,7 @@ import type {
   IQuicksignResponse,
   ISigningRequest,
   IUnsignedCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import type { Guard, KeySet } from './guard';
 
 /**
@@ -232,4 +232,9 @@ export type KdaRequestArgs<M extends KdaMethod> = {
   method: M;
 } & { params?: IKdaMethodMap[M]['params'] };
 
-export { ChainId, ICommand, IKeyPair, IUnsignedCommand } from '@kadena/client';
+export {
+  ChainId,
+  ICommand,
+  IKeyPair,
+  IUnsignedCommand,
+} from '@kda-community/client';

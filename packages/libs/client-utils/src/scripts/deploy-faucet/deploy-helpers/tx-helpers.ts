@@ -1,12 +1,12 @@
-import type { ChainId, IPartialPactCommand } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
+import type { ChainId, IPartialPactCommand } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
 import {
   addSigner,
   composePactCommand,
   execution,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 import { dirtyReadClient, submitClient } from '../../../core/client-helpers';
 import {
   CHAINWEB_HOST,

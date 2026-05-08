@@ -15,7 +15,7 @@ import { CardContent } from '@/App/LayoutLandingPage/components/CardContent';
 import { CardFooterContent } from '@/App/LayoutLandingPage/components/CardFooterContent';
 import { PasswordField } from '@/Components/PasswordField/PasswordField';
 import { wrapperClass } from '@/pages/errors/styles.css';
-import { MonoKey, MonoPassword } from '@kadena/kode-icons/system';
+import { MonoKey, MonoPassword } from '@kda-community/kode-icons/system';
 import {
   Button,
   Notification,
@@ -26,8 +26,8 @@ import {
   Text,
   TextField,
   Link as UiLink,
-} from '@kadena/kode-ui';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import { useEffect, useRef, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';

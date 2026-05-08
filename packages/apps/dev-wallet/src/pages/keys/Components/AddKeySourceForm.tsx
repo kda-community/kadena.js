@@ -1,12 +1,12 @@
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { KeySourceType } from '@/modules/wallet/wallet.repository';
-import { Button, Checkbox, Divider, Stack, Text } from '@kadena/kode-ui';
+import { Button, Checkbox, Divider, Stack, Text } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 
 export function AddKeySourceForm({

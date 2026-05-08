@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/explorer
+# @kda-community/explorer
 
 <picture>
   <source srcset="https://raw.githubusercontent.com/kadena-community/kadena.js/main/common/images/Kadena.JS_logo-white.png" media="(prefers-color-scheme: dark)"/>
@@ -27,11 +27,11 @@
 
 ## Running the explorer
 
-First, install dependencies and build up to and including @kadena/explorer:
+First, install dependencies and build up to and including @kda-community/explorer:
 
 ```sh
-pnpm install --filter @kadena/explorer...
-pnpm build --filter @kadena/explorer...
+pnpm install --filter @kda-community/explorer...
+pnpm build --filter @kda-community/explorer...
 ```
 
 Then, run the client:
@@ -50,7 +50,7 @@ pnpm run next:dev
 
 #### Graph
 
-@kadena/explorer relies on @kadena/graph to be running. See the [@kadena/graph
+@kda-community/explorer relies on @kda-community/graph to be running. See the [@kda-community/graph
 README][11] for more information.
 
 There are two ways you can use the GraphQL server. You can either run it locally
@@ -58,7 +58,7 @@ or you can point the explorer to the existing instances of graph.
 
 ##### Method 1: Running your own instance
 
-For this method you can find all the relevant documentation in [@kadena/graph
+For this method you can find all the relevant documentation in [@kda-community/graph
 README][11]. You can also have a look on how to run devnet [here][9]
 
 ##### Method 2: Pointing to an existing instance of graph

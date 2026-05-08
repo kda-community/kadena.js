@@ -1,5 +1,5 @@
-import { IPactCommand, IUnsignedCommand } from '@kadena/client';
-import { hash } from '@kadena/cryptography-utils';
+import { IPactCommand, IUnsignedCommand } from '@kda-community/client';
+import { hash } from '@kda-community/cryptography-utils';
 
 type SigData = Record<string, string>;
 type CommandSigData = Array<{

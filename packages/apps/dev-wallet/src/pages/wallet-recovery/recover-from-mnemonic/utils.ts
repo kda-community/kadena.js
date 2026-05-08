@@ -1,8 +1,11 @@
-import { kadenaGetPublic, kadenaMnemonicToSeed } from '@kadena/hd-wallet';
+import {
+  kadenaGetPublic,
+  kadenaMnemonicToSeed,
+} from '@kda-community/hd-wallet';
 import {
   kadenaGenKeypair as legacyGenKeypair,
   kadenaMnemonicToRootKeypair as LegacyMnemonicToRootKeypair,
-} from '@kadena/hd-wallet/chainweaver';
+} from '@kda-community/hd-wallet/chainweaver';
 
 export const getFirstBip44Key = async (mnemonic: string) => {
   const seed = await kadenaMnemonicToSeed('', mnemonic);

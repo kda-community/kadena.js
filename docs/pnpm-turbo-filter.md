@@ -19,10 +19,10 @@ pnpm --filter <package_selector> <command>
 These commands all do the same, the `--filter` argument is provided to `pnpm`:
 
 ```sh
-pnpm --filter @kadena/client test
-pnpm --filter @kadena/client run test
-pnpm test --filter @kadena/client
-pnpm run --filter @kadena/client test
+pnpm --filter @kda-community/client test
+pnpm --filter @kda-community/client run test
+pnpm test --filter @kda-community/client
+pnpm run --filter @kda-community/client test
 ```
 
 There are also ways to include dependencies, select up to and/or including a
@@ -35,15 +35,15 @@ To use Turborepo, automatically include dependencies of the target package and
 enjoy caching:
 
 ```sh
-pnpm run test --filter @kadena/client
+pnpm run test --filter @kda-community/client
 ```
 
 The `pnpm run test` makes sure the `test` script from the root `package.json`
 are used. You can also execute the `turbo` executable directly to do the same:
 
 ```sh
-pnpm turbo test --filter @kadena/client
-pnpm turbo --filter @kadena/client test
+pnpm turbo test --filter @kda-community/client
+pnpm turbo --filter @kda-community/client test
 ```
 
 The filter syntax is inspired by pnpm's, but it's not the same thing. See the

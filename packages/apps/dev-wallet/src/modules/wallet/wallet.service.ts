@@ -5,12 +5,12 @@ import {
   ICommand,
   IPactCommand,
   IUnsignedCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import {
   kadenaChangePassword,
   kadenaDecrypt,
   kadenaEncrypt,
-} from '@kadena/hd-wallet';
+} from '@kda-community/hd-wallet';
 import { profileTables } from '../db/backup/backup';
 import { dbService } from '../db/db.service';
 import { deleteItem, getOneItem } from '../db/indexeddb';

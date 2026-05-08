@@ -1,5 +1,5 @@
-import { style } from '@kadena/kode-ui';
-import { atoms, token, tokens } from '@kadena/kode-ui/styles';
+import { style } from '@kda-community/kode-ui';
+import { atoms, token, tokens } from '@kda-community/kode-ui/styles';
 import { globalStyle } from '@vanilla-extract/css';
 
 export const profileItemClass = style([

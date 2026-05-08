@@ -6,7 +6,7 @@ import { IProfile, walletRepository } from '@/modules/wallet/wallet.repository';
 import InitialsAvatar from '@/pages/select-profile/initials';
 import { Label } from '@/pages/transaction/components/helpers';
 import { ExportFromChainweaver } from '@/utils/chainweaver/chainweaver';
-import { MonoConstruction } from '@kadena/kode-icons/system';
+import { MonoConstruction } from '@kda-community/kode-icons/system';
 import {
   Button,
   Heading,
@@ -15,8 +15,8 @@ import {
   Text,
   TextField,
   Link as UiLink,
-} from '@kadena/kode-ui';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createProfileFromChainweaverData } from '../import-chainweaver-export/createProfileFromChainweaverData';

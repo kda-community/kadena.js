@@ -1,8 +1,8 @@
 <!-- genericHeader start -->
 
-# @kadena/pactjs-generator
+# @kda-community/pactjs-generator
 
-Generates TypeScript definitions of Pact contracts, for use in @kadena/pactjs
+Generates TypeScript definitions of Pact contracts, for use in @kda-community/pactjs
 
 <picture>
   <source srcset="https://raw.githubusercontent.com/kadena-community/kadena.js/main/common/images/Kadena.JS_logo-white.png" media="(prefers-color-scheme: dark)"/>

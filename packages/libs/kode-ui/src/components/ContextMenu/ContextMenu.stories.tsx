@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { MonoChevronRight, MonoMoreVert } from '@kadena/kode-icons/system';
+import {
+  MonoChevronRight,
+  MonoMoreVert,
+} from '@kda-community/kode-icons/system';
 import { Button } from '../Button';
 import { Stack } from '../Layout';
 import { iconControl } from './../../storyDecorators/iconControl';

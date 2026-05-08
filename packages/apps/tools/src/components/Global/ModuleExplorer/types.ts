@@ -3,7 +3,7 @@ import type {
   IncompleteModuleModel,
   ModuleModel,
 } from '@/hooks/use-module-query';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
 import type {
   ContractCapability,
   ContractFunction,

@@ -1,4 +1,4 @@
-import baseConfig from '@kadena-dev/shared-config/vitest.config';
+import baseConfig from '@kda-community-dev/shared-config/vitest.config';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
 import path from 'path';

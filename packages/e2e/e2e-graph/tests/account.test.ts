@@ -1,9 +1,9 @@
-import { sender00Account } from '@kadena-dev/e2e-base/src/constants/accounts.constants';
+import { sender00Account } from '@kda-community-dev/e2e-base/src/constants/accounts.constants';
 import {
   createAccount,
   generateAccount,
-} from '@kadena-dev/e2e-base/src/helpers/client-utils/accounts.helper';
-import type { IAccount } from '@kadena-dev/e2e-base/src/types/account.types';
+} from '@kda-community-dev/e2e-base/src/helpers/client-utils/accounts.helper';
+import type { IAccount } from '@kda-community-dev/e2e-base/src/types/account.types';
 import { expect, test } from '@playwright/test';
 import { base64Encode } from '../helpers/cryptography.helper';
 import { sendQuery } from '../helpers/request.helper';

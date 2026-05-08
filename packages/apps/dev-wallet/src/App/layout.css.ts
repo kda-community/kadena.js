@@ -1,4 +1,4 @@
-import { atoms, globalStyle } from '@kadena/kode-ui/styles';
+import { atoms, globalStyle } from '@kda-community/kode-ui/styles';
 import { style } from '@vanilla-extract/css';
 
 export const mainColumnStyle = style([

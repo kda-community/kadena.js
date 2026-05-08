@@ -1,5 +1,5 @@
-import { isSignedTransaction } from '@kadena/client';
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import { isSignedTransaction } from '@kda-community/client';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 
 export const inspect =
   <T>(tag: string) =>

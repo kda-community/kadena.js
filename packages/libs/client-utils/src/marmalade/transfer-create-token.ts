@@ -1,13 +1,13 @@
-import type { IPactModules, PactReturnType } from '@kadena/client';
-import { Pact, readKeyset } from '@kadena/client';
+import type { IPactModules, PactReturnType } from '@kda-community/client';
+import { Pact, readKeyset } from '@kda-community/client';
 import {
   addKeyset,
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import type { ChainId, IPactDecimal } from '@kadena/types';
+} from '@kda-community/client/fp';
+import type { ChainId, IPactDecimal } from '@kda-community/types';
 import { submitClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';
 import type { CommonProps } from './config';

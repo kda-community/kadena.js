@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 
 const TRACKING_ID = process.env.NEXT_PUBLIC_TRACKING_ID;
 const TESTNUMBER = Number(process.env.NEXT_PUBLIC_TESTNUMBER);

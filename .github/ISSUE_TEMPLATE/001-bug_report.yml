@@ -44,14 +44,14 @@ body:
     attributes:
       label: What package is the bug report about?
       options:
-        - '@kadena/chainweb-node-client'
-        - '@kadena/chainweb-stream-client'
-        - '@kadena/chainwebjs'
-        - '@kadena/client'
-        - '@kadena/cryptography-utils'
-        - '@kadena/pactjs'
-        - '@kadena/pactjs-generator'
-        - '@kadena/kadena-cli'
+        - '@kda-community/chainweb-node-client'
+        - '@kda-community/chainweb-stream-client'
+        - '@kda-community/chainwebjs'
+        - '@kda-community/client'
+        - '@kda-community/cryptography-utils'
+        - '@kda-community/pactjs'
+        - '@kda-community/pactjs-generator'
+        - '@kda-community/kadena-cli'
         - Other... (please describe in bug report)
     validations:
       required: false

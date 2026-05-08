@@ -1,4 +1,4 @@
-import type { ISigningCap } from '@kadena/types';
+import type { ISigningCap } from '@kda-community/types';
 import type { IPactCommand } from './IPactCommand';
 
 /**

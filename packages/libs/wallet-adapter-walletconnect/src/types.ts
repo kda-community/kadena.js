@@ -1,4 +1,7 @@
-import type { ChainId, IKdaMethodMap } from '@kadena/wallet-adapter-core';
+import type {
+  ChainId,
+  IKdaMethodMap,
+} from '@kda-community/wallet-adapter-core';
 
 export interface IKadenaGetAccountsRequest {
   method: 'kadena_getAccounts_v1';

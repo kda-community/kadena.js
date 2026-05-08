@@ -1,5 +1,5 @@
 import type { IOrganisation } from '@/contexts/OrganisationContext/OrganisationContext';
-import { Stack, TextField } from '@kadena/kode-ui';
+import { Stack, TextField } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import type { Control, FieldErrors } from 'react-hook-form';
 import { Controller } from 'react-hook-form';

@@ -1,5 +1,5 @@
-import { Heading, Stack } from '@kadena/kode-ui';
-import { atoms } from '@kadena/kode-ui/styles';
+import { Heading, Stack } from '@kda-community/kode-ui';
+import { atoms } from '@kda-community/kode-ui/styles';
 import type { FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { headerClass } from './styles.css';

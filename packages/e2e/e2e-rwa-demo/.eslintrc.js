@@ -3,7 +3,7 @@ const { join } = require('path');
 
 module.exports = {
   extends: [
-    '@kadena-dev/eslint-config/profile/lib',
+    '@kda-community-dev/eslint-config/profile/lib',
     'plugin:playwright/recommended',
   ],
   parserOptions: {

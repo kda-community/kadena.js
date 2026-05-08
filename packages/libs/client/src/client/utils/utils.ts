@@ -1,4 +1,4 @@
-import type { ClientRequestInit } from '@kadena/chainweb-node-client';
+import type { ClientRequestInit } from '@kda-community/chainweb-node-client';
 import type {
   INetworkOptions,
   IPollRequestPromise,

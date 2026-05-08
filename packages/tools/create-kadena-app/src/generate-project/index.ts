@@ -88,7 +88,7 @@ const generate =
   (args: IGenerateProjectOptions) => {
     log(
       chalk.blue(
-        `Generating @kadena/client integrated starter project with ${args.template} template`,
+        `Generating @kda-community/client integrated starter project with ${args.template} template`,
       ),
     );
 

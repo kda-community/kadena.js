@@ -6,8 +6,14 @@ import { PasswordKeepPolicy } from '@/service-worker/types';
 import {
   MonoRadioButtonChecked,
   MonoRadioButtonUnchecked,
-} from '@kadena/kode-icons/system';
-import { Button, Heading, Notification, Stack, Text } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Heading,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
 import { useState } from 'react';
 
 export function KeepPasswordPolicy() {

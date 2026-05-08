@@ -1,7 +1,7 @@
 import { useNetwork } from '@/context/networksContext';
 import { EVENT_NAMES, analyticsEvent } from '@/utils/analytics';
-import { MonoMoreVert, MonoSettings } from '@kadena/kode-icons/system';
-import type { IContextMenuProps } from '@kadena/kode-ui';
+import { MonoMoreVert, MonoSettings } from '@kda-community/kode-icons/system';
+import type { IContextMenuProps } from '@kda-community/kode-ui';
 import {
   Button,
   ContextMenu,
@@ -9,7 +9,7 @@ import {
   Media,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React, { useState } from 'react';
 import { ConfigNetwork } from './ConfigNetwork';

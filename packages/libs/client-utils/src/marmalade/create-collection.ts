@@ -4,16 +4,16 @@ import type {
   IPactModules,
   PactReference,
   PactReturnType,
-} from '@kadena/client';
-import { Pact, readKeyset } from '@kadena/client';
+} from '@kda-community/client';
+import { Pact, readKeyset } from '@kda-community/client';
 import {
   addKeyset,
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import type { IPactInt } from '@kadena/types';
+} from '@kda-community/client/fp';
+import type { IPactInt } from '@kda-community/types';
 import { submitClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';
 import type { CommonProps } from './config';

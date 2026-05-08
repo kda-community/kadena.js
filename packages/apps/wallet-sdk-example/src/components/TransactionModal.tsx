@@ -1,4 +1,4 @@
-import { MonoCommit } from '@kadena/kode-icons/system';
+import { MonoCommit } from '@kda-community/kode-icons/system';
 import {
   Button,
   ContentHeader,
@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
   TextareaField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import React from 'react';
 import { TrackedFunction } from '../hooks/functionTracker';
 import SdkFunctionDisplay from './SdkFunctionDisplayer';

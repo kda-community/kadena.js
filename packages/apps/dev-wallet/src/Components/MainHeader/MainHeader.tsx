@@ -1,6 +1,6 @@
 import { useWallet } from '@/modules/wallet/wallet.hook.tsx';
 import { noStyleLinkClass } from '@/pages/home/style.css';
-import { MonoLogout, MonoPublic } from '@kadena/kode-icons';
+import { MonoLogout, MonoPublic } from '@kda-community/kode-icons';
 import {
   KadenaLogo,
   NavHeader,
@@ -13,8 +13,8 @@ import {
   Text,
   ThemeAnimateIcon,
   useTheme,
-} from '@kadena/kode-ui';
-import { atoms } from '@kadena/kode-ui/styles';
+} from '@kda-community/kode-ui';
+import { atoms } from '@kda-community/kode-ui/styles';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { headerStyle, selectNetworkClass } from './style.css';

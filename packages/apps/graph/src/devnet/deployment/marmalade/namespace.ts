@@ -1,7 +1,7 @@
 import type { IAccount } from '@devnet/utils';
 import { sender00 } from '@devnet/utils';
-import type { ChainId, ICommand, IKeyPair } from '@kadena/client';
-import { Pact } from '@kadena/client';
+import type { ChainId, ICommand, IKeyPair } from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 import { logger } from '@utils/logger';
 import { networkData } from '@utils/network';
 import { readFileSync, readdirSync } from 'fs';

@@ -1,6 +1,6 @@
 import type { Guard } from '@/__generated__/sdk';
 import { getClient, getNetwork } from '@/utils/client';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 export const getKeysetService = async (
   account: string,

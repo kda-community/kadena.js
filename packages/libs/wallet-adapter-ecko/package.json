@@ -1,10 +1,10 @@
 {
-  "name": "@kadena/wallet-adapter-ecko",
+  "name": "@kda-community/wallet-adapter-ecko",
   "version": "0.0.6",
   "description": "Kadena Wallet Adapter for Ecko",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/wallet-adapter-ecko"
   },
   "license": "BSD-3-Clause",
@@ -25,10 +25,10 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@kadena/wallet-adapter-core": "workspace:*"
+    "@kda-community/wallet-adapter-core": "workspace:*"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/node": "^20.12.7",

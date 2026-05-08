@@ -6,20 +6,20 @@ import {
 } from '@/modules/account/account.repository';
 import { IRetrievedAccount } from '@/modules/account/IRetrievedAccount';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { MonoAdd, MonoMoreVert } from '@kadena/kode-icons/system';
+import { MonoAdd, MonoMoreVert } from '@kda-community/kode-icons/system';
 import {
   Button,
   ContextMenu,
   ContextMenuItem,
   Notification,
   NotificationHeading,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { AccountItem } from '../AccountItem/AccountItem';
 import { MultiSigForm } from './MultiSigForm';
 import { listClass } from './style.css';

@@ -1,7 +1,7 @@
 ---
 title: Marmalade client-utils
 description:
-  The @kadena/client-utils library provides a TypeScript-based API for interacting
+  The @kda-community/client-utils library provides a TypeScript-based API for interacting
   with marmalade smart contracts on the Kadena network.
 menu: Reference
 label: Marmalade client utilities
@@ -12,9 +12,9 @@ tags: ['TypeScript', 'Kadena', 'Kadena client utils', 'frontend', 'backend', 'ma
 
 # Marmalade client utilities
 
-The `@kadena/client-utils/marmalade` library provides a TypeScript-based API for interacting with marmalade smart contracts on the Kadena network. This library is designed to facilitate the creation, management, and utilization of NFTs, leveraging Marmalade’s advanced features such as enforceable royalties, secure escrow accounts, and flexible token policies.
+The `@kda-community/client-utils/marmalade` library provides a TypeScript-based API for interacting with marmalade smart contracts on the Kadena network. This library is designed to facilitate the creation, management, and utilization of NFTs, leveraging Marmalade’s advanced features such as enforceable royalties, secure escrow accounts, and flexible token policies.
 
-Whether you're building applications for minting, transferring, or auctioning NFTs, `@kadena/client-utils/maramlade` provides the necessary tools to create and send commands to the Kadena network efficiently. This guide will help you get started with installing the library, using its various functions, and integrating it into your projects.
+Whether you're building applications for minting, transferring, or auctioning NFTs, `@kda-community/client-utils/maramlade` provides the necessary tools to create and send commands to the Kadena network efficiently. This guide will help you get started with installing the library, using its various functions, and integrating it into your projects.
 
 See the following sections for more information:
 
@@ -57,13 +57,13 @@ See the following sections for more information:
 You can install the library with the following command:
 
 ```bash
-npm install @kadena/client-utils
+npm install @kda-community/client-utils
 ```
 
 You can import Marmalade functions into TypeScript program with the following statement:
 
 ```typescript
-import { mintToken } from '@kadena/client-utils/marmalade';
+import { mintToken } from '@kda-community/client-utils/marmalade';
 ```
 
 ## CommonProps

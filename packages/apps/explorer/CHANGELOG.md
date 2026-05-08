@@ -1,22 +1,22 @@
-# @kadena/explorer
+# @kda-community/explorer
 
 ## 0.9.9
 
 ### Patch Changes
 
-- @kadena/graph\@2.2.7
+- @kda-community/graph\@2.2.7
 
 ## 0.9.8
 
 ### Patch Changes
 
-- @kadena/graph\@2.2.6
+- @kda-community/graph\@2.2.6
 
 ## 0.9.7
 
 ### Patch Changes
 
-- @kadena/graph\@2.2.5
+- @kda-community/graph\@2.2.5
 
 ## 0.9.6
 
@@ -24,9 +24,9 @@
 
 - f59ac43: update to react 19, Next 15 and other dependend packages
 - Updated dependencies \[f59ac43]
-  - @kadena/kode-icons\@0.3.1
-  - @kadena/kode-ui\@0.21.1
-  - @kadena/graph\@2.2.4
+  - @kda-community/kode-icons\@0.3.1
+  - @kda-community/kode-ui\@0.21.1
+  - @kda-community/graph\@2.2.4
 
 ## 0.9.5
 
@@ -36,8 +36,8 @@
 - Updated dependencies \[3759502]
 - Updated dependencies \[b5df48c]
 - Updated dependencies \[05168d0]
-  - @kadena/kode-ui\@0.21.0
-  - @kadena/graph\@2.2.3
+  - @kda-community/kode-ui\@0.21.0
+  - @kda-community/graph\@2.2.3
 
 ## 0.9.4
 
@@ -45,22 +45,22 @@
 
 - Updated dependencies \[8dd7433]
 - Updated dependencies \[034b2c2]
-  - @kadena/kode-ui\@0.20.2
-  - @kadena/graph\@2.2.2
+  - @kda-community/kode-ui\@0.20.2
+  - @kda-community/graph\@2.2.2
 
 ## 0.9.3
 
 ### Patch Changes
 
 - Updated dependencies \[ea02b15]
-  - @kadena/graph\@2.2.1
+  - @kda-community/graph\@2.2.1
 
 ## 0.9.2
 
 ### Patch Changes
 
 - Updated dependencies \[44b5408]
-  - @kadena/graph\@2.2.0
+  - @kda-community/graph\@2.2.0
 
 ## 0.9.1
 
@@ -74,8 +74,8 @@
 - Updated dependencies \[35cad4d]
 
 - Updated dependencies \[ebc4e5c]
-  - @kadena/graph\@2.1.0
-  - @kadena/kode-ui\@0.20.1
+  - @kda-community/graph\@2.1.0
+  - @kda-community/kode-ui\@0.20.1
 
 ## 0.9.0
 
@@ -94,7 +94,7 @@
 - ee8e99b: Remove AccountName column from Transactions when querying for a
   specific account
 - Updated dependencies \[ee8e99b]
-  - @kadena/graph\@2.0.5
+  - @kda-community/graph\@2.0.5
 
 ## 0.8.13
 
@@ -102,7 +102,7 @@
 
 - Updated dependencies \[629766c]
 - Updated dependencies \[629766c]
-  - @kadena/graph\@2.0.4
+  - @kda-community/graph\@2.0.4
 
 ## 0.8.12
 
@@ -112,22 +112,22 @@
 - Updated dependencies \[f35e30c]
 - Updated dependencies \[4c684a2]
 - Updated dependencies \[dbd9076]
-  - @kadena/kode-ui\@0.20.0
-  - @kadena/graph\@2.0.3
+  - @kda-community/kode-ui\@0.20.0
+  - @kda-community/graph\@2.0.3
 
 ## 0.8.11
 
 ### Patch Changes
 
 - Updated dependencies \[2a073ed]
-  - @kadena/graph\@2.0.2
+  - @kda-community/graph\@2.0.2
 
 ## 0.8.10
 
 ### Patch Changes
 
 - Updated dependencies \[868c732]
-  - @kadena/graph\@2.0.1
+  - @kda-community/graph\@2.0.1
 
 ## 0.8.9
 
@@ -139,9 +139,9 @@
 - Updated dependencies \[8467af0]
 - Updated dependencies \[14e809a]
 - Updated dependencies \[8467af0]
-  - @kadena/graph\@2.0.0
-  - @kadena/kode-ui\@0.19.0
-  - @kadena/kode-icons\@0.3.0
+  - @kda-community/graph\@2.0.0
+  - @kda-community/kode-ui\@0.19.0
+  - @kda-community/kode-icons\@0.3.0
 
 ## 0.8.8
 
@@ -154,28 +154,28 @@
 - Updated dependencies \[de87d1c]
 - Updated dependencies \[94ce674]
 - Updated dependencies \[7d063d6]
-  - @kadena/kode-icons\@0.3.0
-  - @kadena/kode-ui\@0.18.0
+  - @kda-community/kode-icons\@0.3.0
+  - @kda-community/kode-ui\@0.18.0
 
 ## 0.8.7
 
 ### Patch Changes
 
-- @kadena/graph\@1.0.14
+- @kda-community/graph\@1.0.14
 
 ## 0.8.6
 
 ### Patch Changes
 
 - Updated dependencies \[c6d23b8]
-  - @kadena/graph\@1.0.13
+  - @kda-community/graph\@1.0.13
 
 ## 0.8.5
 
 ### Patch Changes
 
 - Updated dependencies \[33fbaae]
-  - @kadena/kode-ui\@0.17.1
+  - @kda-community/kode-ui\@0.17.1
 
 ## 0.8.4
 
@@ -186,8 +186,8 @@
 - Updated dependencies \[767c542]
 - Updated dependencies \[eb82843]
 - Updated dependencies \[0e08d23]
-  - @kadena/kode-ui\@0.17.0
-  - @kadena/graph\@1.0.12
+  - @kda-community/kode-ui\@0.17.0
+  - @kda-community/graph\@1.0.12
 
 ## 0.8.3
 
@@ -195,7 +195,7 @@
 
 - Updated dependencies \[0bcccf1]
 - Updated dependencies \[b751065]
-  - @kadena/kode-ui\@0.16.0
+  - @kda-community/kode-ui\@0.16.0
 
 ## 0.8.2
 
@@ -204,15 +204,15 @@
 - 2d6573b: a fix for adding a network
 - Updated dependencies \[ae3dbc7]
 - Updated dependencies \[7ef4a06]
-  - @kadena/kode-ui\@0.15.0
-  - @kadena/graph\@1.0.11
+  - @kda-community/kode-ui\@0.15.0
+  - @kda-community/graph\@1.0.11
 
 ## 0.8.1
 
 ### Patch Changes
 
 - Updated dependencies \[777a200]
-  - @kadena/graph\@1.0.10
+  - @kda-community/graph\@1.0.10
 
 ## 0.8.0
 
@@ -224,8 +224,8 @@
 ### Patch Changes
 
 - Updated dependencies \[de4fb13]
-  - @kadena/kode-icons\@0.2.0
-  - @kadena/kode-ui\@0.14.3
+  - @kda-community/kode-icons\@0.2.0
+  - @kda-community/kode-ui\@0.14.3
 
 ## 0.7.0
 
@@ -240,7 +240,7 @@
 
 - Updated dependencies \[8121019]
 - Updated dependencies \[a5db08b]
-  - @kadena/kode-ui\@0.14.2
+  - @kda-community/kode-ui\@0.14.2
 
 ## 0.6.0
 
@@ -254,9 +254,9 @@
 - f2eaf1a: several minor IOS styling fixes
 - Updated dependencies \[c5c1605]
 - Updated dependencies \[27ecc26]
-  - @kadena/graph\@1.0.9
-  - @kadena/kode-ui\@0.14.1
-  - @kadena/kode-icons\@0.1.0
+  - @kda-community/graph\@1.0.9
+  - @kda-community/kode-ui\@0.14.1
+  - @kda-community/kode-icons\@0.1.0
 
 ## 0.5.0
 
@@ -296,8 +296,8 @@
 - Updated dependencies \[df12c9a]
 - Updated dependencies \[85d84e7]
 - Updated dependencies \[b089abf]
-  - @kadena/graph\@1.0.8
-  - @kadena/kode-ui\@0.14.0
+  - @kda-community/graph\@1.0.8
+  - @kda-community/kode-ui\@0.14.0
 
 ## 0.4.0
 
@@ -311,9 +311,9 @@
 - c1c84d2: Added minHeight to the layout to prevent flickering across the page
 - 371cf07: update the footer functionality
 - 5d34a15: Minor improvements to the graphql modal
-  - @kadena/graph\@1.0.7
-  - @kadena/kode-icons\@0.1.0
-  - @kadena/kode-ui\@0.13.0
+  - @kda-community/graph\@1.0.7
+  - @kda-community/kode-icons\@0.1.0
+  - @kda-community/kode-ui\@0.13.0
 
 ## 0.3.0
 
@@ -326,8 +326,8 @@
 
 - Updated dependencies \[d5de83869]
 - Updated dependencies \[563fb6cad]
-  - @kadena/kode-icons\@0.1.0
-  - @kadena/kode-ui\@0.13.0
+  - @kda-community/kode-icons\@0.1.0
+  - @kda-community/kode-ui\@0.13.0
 
 ## 0.2.3
 
@@ -345,8 +345,8 @@
 - Updated dependencies \[311d0bf44]
 - Updated dependencies \[0e9c0d049]
 - Updated dependencies \[950444ccf]
-  - @kadena/kode-ui\@0.12.2
-  - @kadena/graph\@1.0.6
+  - @kda-community/kode-ui\@0.12.2
+  - @kda-community/graph\@1.0.6
 
 ## 0.2.2
 
@@ -359,7 +359,7 @@
 - Updated dependencies \[7ee91269f]
 - Updated dependencies \[5b95decb2]
 - Updated dependencies \[6d9900ef8]
-  - @kadena/kode-ui\@0.12.1
+  - @kda-community/kode-ui\@0.12.1
 
 ## 0.2.1
 
@@ -369,8 +369,8 @@
 - Updated dependencies \[1bbf1c6]
 - Updated dependencies \[63bdbcb]
 - Updated dependencies \[15a492c]
-  - @kadena/graph\@1.0.5
-  - @kadena/kode-ui\@0.12.0
+  - @kda-community/graph\@1.0.5
+  - @kda-community/kode-ui\@0.12.0
 
 ## 0.2.0
 
@@ -385,8 +385,8 @@
 - Updated dependencies \[6a969ebdc]
 - Updated dependencies \[b541021f4]
 - Updated dependencies \[e648c32fa]
-  - @kadena/kode-ui\@0.11.0
-  - @kadena/graph\@1.0.4
+  - @kda-community/kode-ui\@0.11.0
+  - @kda-community/graph\@1.0.4
 
 ## 0.1.0
 
@@ -423,8 +423,8 @@
 - Updated dependencies \[07ec9691c]
 - Updated dependencies \[4a5045c52]
 - Updated dependencies \[b0b05ca86]
-  - @kadena/kode-ui\@0.10.0
-  - @kadena/graph\@1.0.3
+  - @kda-community/kode-ui\@0.10.0
+  - @kda-community/graph\@1.0.3
 
 ## 0.0.2
 
@@ -452,6 +452,6 @@
 - Updated dependencies \[5cf752eed]
 - Updated dependencies \[0d18ab81c]
 - Updated dependencies \[37375fa7e]
-  - @kadena/kode-ui\@0.9.0
-  - @kadena/graph\@1.0.2
-  - @kadena/kode-icons\@0.0.3
+  - @kda-community/kode-ui\@0.9.0
+  - @kda-community/graph\@1.0.2
+  - @kda-community/kode-icons\@0.0.3

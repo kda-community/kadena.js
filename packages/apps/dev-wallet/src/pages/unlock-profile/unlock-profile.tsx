@@ -1,15 +1,15 @@
 import { CardContent } from '@/App/LayoutLandingPage/components/CardContent.tsx';
 import { CardFooterContent } from '@/App/LayoutLandingPage/components/CardFooterContent.tsx';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate.tsx';
-import { MonoKey } from '@kadena/kode-icons/system';
+import { MonoKey } from '@kda-community/kode-icons/system';
 import {
   Button,
   Stack,
   Text,
   TextField,
   Link as UiLink,
-} from '@kadena/kode-ui';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, Navigate, useParams } from 'react-router-dom';

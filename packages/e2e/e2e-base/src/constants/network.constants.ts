@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 
 export const ns = 'common';
 export const devnetHost = 'http://localhost:8080';

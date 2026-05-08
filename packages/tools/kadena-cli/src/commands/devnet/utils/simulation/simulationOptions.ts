@@ -2,7 +2,7 @@ import { Option } from 'commander';
 import { z } from 'zod';
 import { createOption } from '../../../../utils/createOption.js';
 
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { simulate as simulationPrompts } from '../../../../prompts/index.js';
 export const simulationOptions = {
   //Simulation

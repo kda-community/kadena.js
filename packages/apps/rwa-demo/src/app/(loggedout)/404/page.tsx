@@ -1,7 +1,13 @@
 'use client';
 import { useUser } from '@/hooks/user';
-import { Button, Card, Stack, Text, Link as UILink } from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
+import {
+  Button,
+  Card,
+  Stack,
+  Text,
+  Link as UILink,
+} from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 import { cardWrapperClass } from '../style.css';
 

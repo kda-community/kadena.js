@@ -1,5 +1,5 @@
 import { env } from '@/utils/env';
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import { createContext } from 'react';
 
 export interface INetwork {

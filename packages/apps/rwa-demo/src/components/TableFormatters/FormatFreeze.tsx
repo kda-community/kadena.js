@@ -1,5 +1,5 @@
-import { Button } from '@kadena/kode-ui';
-import type { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
+import { Button } from '@kda-community/kode-ui';
+import type { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
 import React from 'react';
 import { FreezeInvestor } from '../FreezeInvestor/FreezeInvestor';
 

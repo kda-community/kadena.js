@@ -5,8 +5,8 @@ import {
   createTransaction,
   ICommand,
   IPartialPactCommand,
-} from '@kadena/client';
-import { transferAllCommand } from '@kadena/client-utils/coin';
+} from '@kda-community/client';
+import { transferAllCommand } from '@kda-community/client-utils/coin';
 import { hash } from 'crypto';
 import { useState } from 'react';
 

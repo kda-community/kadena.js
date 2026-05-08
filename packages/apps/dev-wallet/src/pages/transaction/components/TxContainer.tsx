@@ -5,9 +5,9 @@ import {
 } from '@/modules/transaction/transaction.repository';
 import * as transactionService from '@/modules/transaction/transaction.service';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { IUnsignedCommand } from '@kadena/client';
-import { Dialog } from '@kadena/kode-ui';
-import { isSignedCommand } from '@kadena/pactjs';
+import { IUnsignedCommand } from '@kda-community/client';
+import { Dialog } from '@kda-community/kode-ui';
+import { isSignedCommand } from '@kda-community/pactjs';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ExpandedTransaction } from './ExpandedTransaction';
 import { containerClass } from './style.css';

@@ -1,5 +1,5 @@
-import { style } from '@kadena/kode-ui';
-import { tokens } from '@kadena/kode-ui/styles';
+import { style } from '@kda-community/kode-ui';
+import { tokens } from '@kda-community/kode-ui/styles';
 
 export const keyItemClass = style({
   paddingInlineStart: tokens.kda.foundation.spacing.sm,

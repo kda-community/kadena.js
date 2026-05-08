@@ -1,4 +1,4 @@
-import { style, token } from '@kadena/kode-ui/styles';
+import { style, token } from '@kda-community/kode-ui/styles';
 import { globalStyle } from '@vanilla-extract/css';
 
 export const assetActionWrapper = style([

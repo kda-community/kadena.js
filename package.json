@@ -1,5 +1,5 @@
 {
-  "name": "@kadena/js-monorepo",
+  "name": "@kda-community/kadena-js-sdk",
   "version": "1.0.0",
   "private": true,
   "description": "Kadena JS monorepo",
@@ -9,7 +9,7 @@
     "build:e2e": "turbo run build:e2e",
     "format": "pnpm run /^format:.*/",
     "format:labels": "jiti packages/tools/scripts/generate-labels.ts",
-    "format:md": "remark **/CHANGELOG.md *.md docs/*.md -o --use @kadena-dev/markdown",
+    "format:md": "remark **/CHANGELOG.md *.md docs/*.md -o --use @kda-community-dev/markdown",
     "format:pkgs": "jiti packages/tools/scripts/generate-packages-json.ts",
     "format:src": "prettier . \"!packages\" --cache --write",
     "preinstall": "npx --no-install only-allow pnpm",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.8",
-    "@kadena-dev/markdown": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
     "buffer": "^6.0.3",
     "jiti": "^1.21.6",
     "knip": "^2.43.0",

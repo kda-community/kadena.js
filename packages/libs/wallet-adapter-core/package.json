@@ -1,10 +1,10 @@
 {
-  "name": "@kadena/wallet-adapter-core",
+  "name": "@kda-community/wallet-adapter-core",
   "version": "0.1.3",
   "description": "Kadena Wallet Adapter Core",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/wallet-adapter-core"
   },
   "license": "BSD-3-Clause",
@@ -25,14 +25,14 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@kadena/client": "workspace:*",
+    "@kda-community/client": "workspace:*",
     "@standard-schema/spec": "^1.0.0",
     "eventemitter3": "^5.0.1",
     "valibot": "^1.0.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/node": "^20.12.7",

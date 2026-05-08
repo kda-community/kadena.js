@@ -3,7 +3,7 @@ import type {
   ModuleModel,
 } from '@/hooks/use-module-query';
 import { mapToTreeItems, modelsToTreeMap } from '@/utils/modulesexplorer';
-import type { ChainwebNetworkId } from '@kadena/chainweb-node-client';
+import type { ChainwebNetworkId } from '@kda-community/chainweb-node-client';
 import type { IFuseOptions } from 'fuse.js';
 import Fuse from 'fuse.js';
 import React, { useCallback, useDeferredValue, useMemo, useState } from 'react';

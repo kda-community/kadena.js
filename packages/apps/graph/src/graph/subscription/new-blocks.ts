@@ -1,5 +1,5 @@
 import { prismaClient } from '@db/prisma-client';
-import { CHAINS } from '@kadena/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import type { Block } from '@prisma/client';
 import { networkData } from '@utils/network';
 import { nullishOrEmpty } from '@utils/nullish-or-empty';

@@ -1,7 +1,7 @@
 import { ButtonItem } from '@/Components/ButtonItem/ButtonItem';
 import { Keyset } from '@/Components/Keyset/Keyset';
 import { IKeySet } from '@/modules/account/account.repository';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 
 export function KeysetList({
   keysets,

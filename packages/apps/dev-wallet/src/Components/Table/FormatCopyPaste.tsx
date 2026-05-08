@@ -1,6 +1,6 @@
-import { MonoCopyAll } from '@kadena/kode-icons/system';
-import { Button } from '@kadena/kode-ui';
-import { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
+import { MonoCopyAll } from '@kda-community/kode-icons/system';
+import { Button } from '@kda-community/kode-ui';
+import { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 
 type IProps = Exclude<ICompactTableFormatterProps, 'value'> & {

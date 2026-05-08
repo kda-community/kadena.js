@@ -1,5 +1,5 @@
-import { getPactErrorCode } from '@kadena/client';
-import type { ChainId } from '@kadena/types';
+import { getPactErrorCode } from '@kda-community/client';
+import type { ChainId } from '@kda-community/types';
 import type { Table } from 'cli-table3';
 import { CHAIN_ID_ACTION_ERROR_MESSAGE } from '../../../constants/account.js';
 import type { CommandResult } from '../../../utils/command.util.js';

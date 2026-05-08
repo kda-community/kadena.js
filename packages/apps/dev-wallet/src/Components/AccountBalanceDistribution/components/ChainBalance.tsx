@@ -1,8 +1,8 @@
 import { FundOnTestnetButton } from '@/Components/FundOnTestnet/FundOnTestnet';
 import { ITransaction } from '@/modules/transaction/transaction.repository';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { ChainId } from '@kadena/client';
-import { Stack, Text, TextField } from '@kadena/kode-ui';
+import { ChainId } from '@kda-community/client';
+import { Stack, Text, TextField } from '@kda-community/kode-ui';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';

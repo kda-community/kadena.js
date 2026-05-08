@@ -6,11 +6,11 @@ import type {
   ISigningRequestPartial,
   IUnsignedCommand,
   JsonRpcResponse,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 import {
   BaseWalletAdapter,
   isJsonRpcSuccess,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 import { WalletConnectModal } from '@walletconnect/modal';
 import Client from '@walletconnect/sign-client';
 import type { SessionTypes } from '@walletconnect/types';

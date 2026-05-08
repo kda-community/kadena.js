@@ -1,4 +1,4 @@
-import { ChainId, NetworkId } from '@kadena/types';
+import { ChainId, NetworkId } from '@kda-community/types';
 
 // this would normally be your mainnet configuration, but our test contract `free.cka-message-store` has only been deployed on testnet
 export const environment: {

@@ -1,6 +1,6 @@
 import type { IAccountContext } from '@/contexts/AccountContext/AccountContext';
 import { getPrincipalNamespace } from '@/services/getPrincipalNamespace';
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import { renderHook, waitFor } from '@testing-library/react';
 import { useAccount } from '../account';
 import { useGetPrincipalNamespace } from '../getPrincipalNamespace';

@@ -1,4 +1,4 @@
-import type { ICommandPayload } from '@kadena/types';
+import type { ICommandPayload } from '@kda-community/types';
 import type { ISPVRequestBody, SPVResponse } from '../../interfaces/PactAPI';
 
 export const testURL: string = 'https://fake-api-host.local.co';

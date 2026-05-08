@@ -1,4 +1,4 @@
-import type { ICommandPayload } from '@kadena/types';
+import type { ICommandPayload } from '@kda-community/types';
 import { HttpResponse, http } from 'msw';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { server } from '../../../mocks/server.js';

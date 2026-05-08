@@ -1,4 +1,4 @@
-import { getPactErrorCode } from '@kadena/client';
+import { getPactErrorCode } from '@kda-community/client';
 import {
   PrismaClientInitializationError,
   PrismaClientKnownRequestError,

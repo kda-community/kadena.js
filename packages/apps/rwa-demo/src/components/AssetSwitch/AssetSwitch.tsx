@@ -2,7 +2,7 @@ import type { IAsset } from '@/contexts/AssetContext/AssetContext';
 import { useAsset } from '@/hooks/asset';
 import { useUser } from '@/hooks/user';
 import { shortenString } from '@/utils/shortenString';
-import { MonoApps, MonoMoreVert } from '@kadena/kode-icons';
+import { MonoApps, MonoMoreVert } from '@kda-community/kode-icons';
 import {
   Button,
   ButtonGroup,
@@ -10,7 +10,7 @@ import {
   ContextMenuDivider,
   ContextMenuItem,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { assetsSwitchWrapperClass } from './style.css';
 

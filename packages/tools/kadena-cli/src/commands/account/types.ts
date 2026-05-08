@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import type { INetworkCreateOptions } from '../networks/utils/networkHelpers.js';
 
 export type Predicate = 'keys-all' | 'keys-2' | 'keys-any';

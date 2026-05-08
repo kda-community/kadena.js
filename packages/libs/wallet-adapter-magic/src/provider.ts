@@ -2,7 +2,7 @@
  *
  * This module defines the Magic Wallet provider interface and implements a detection
  * mechanism for the Magic Wallet on the window object. The MagicProvider interface extends
- * the core Provider from "@kadena/wallet-adapter-core".
+ * the core Provider from "@kda-community/wallet-adapter-core".
  *
  * The detectMagicProvider function checks for the Magic Wallet provider by looking for its
  * presence on the global window object. It listens for the "kadena#initialized" event and
@@ -10,7 +10,7 @@
  * can be reliably detected and integrated within the application.
  */
 
-import type { IProvider } from '@kadena/wallet-adapter-core';
+import type { IProvider } from '@kda-community/wallet-adapter-core';
 
 /**
  * The Magic provider interface extends the core Provider.

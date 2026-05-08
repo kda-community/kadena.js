@@ -9,9 +9,9 @@ import {
   createRedistributionTxs,
   processRedistribute,
 } from '@/pages/transfer/utils';
-import { ChainId } from '@kadena/client';
-import { Button, Notification, Stack, Text } from '@kadena/kode-ui';
-import { PactNumber } from '@kadena/pactjs';
+import { ChainId } from '@kda-community/client';
+import { Button, Notification, Stack, Text } from '@kda-community/kode-ui';
+import { PactNumber } from '@kda-community/pactjs';
 import type { FC, PropsWithChildren } from 'react';
 import { useMemo, useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';

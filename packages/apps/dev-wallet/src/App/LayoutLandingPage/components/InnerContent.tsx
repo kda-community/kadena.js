@@ -1,5 +1,5 @@
-import { Card, Stack } from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
+import { Card, Stack } from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FC, PropsWithChildren, useEffect, useRef } from 'react';
 import { useCardLayout } from './CardLayoutProvider';

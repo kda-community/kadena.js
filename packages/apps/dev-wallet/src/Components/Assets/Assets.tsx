@@ -1,13 +1,13 @@
 import { useRightAside } from '@/App/Layout/useRightAside';
 import { Fungible, IOwnedAccount } from '@/modules/account/account.repository';
-import { Button, Heading } from '@kadena/kode-ui';
+import { Button, Heading } from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
-} from '@kadena/kode-ui/patterns';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/kode-ui/patterns';
+import { PactNumber } from '@kda-community/pactjs';
 import { useMemo } from 'react';
 import { AddTokenForm } from './AddTokenForm';
 import { AssetCards } from './AssetCards';

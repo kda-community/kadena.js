@@ -4,8 +4,8 @@ import { useNotifications } from '@/hooks/notifications';
 import { useUser } from '@/hooks/user';
 import { OrgAdminStore } from '@/utils/store/orgAdminStore';
 import { RootAdminStore } from '@/utils/store/rootAdminStore';
-import { MonoAdd, MonoDelete } from '@kadena/kode-icons';
-import { Button, TextField } from '@kadena/kode-ui';
+import { MonoAdd, MonoDelete } from '@kda-community/kode-icons';
+import { Button, TextField } from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -18,7 +18,7 @@ import {
   SectionCardContentBlock,
   SectionCardHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';

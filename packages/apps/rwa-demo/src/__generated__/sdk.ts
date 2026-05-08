@@ -274,7 +274,7 @@ export type GraphConfiguration = {
   __typename?: 'GraphConfiguration';
   /** The lowest block-height that is indexed in this endpoint. */
   minimumBlockHeight?: Maybe<Scalars['BigInt']['output']>;
-  /** The version of the @kadena/graph package. */
+  /** The version of the @kda-community/graph package. */
   version: Scalars['String']['output'];
 };
 

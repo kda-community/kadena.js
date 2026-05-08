@@ -1,7 +1,11 @@
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
-import type { ICommand } from '@kadena/client';
-import { Pact, createClient, createSignWithKeypair } from '@kadena/client';
-import { retrieveContractFromChain } from '@kadena/pactjs-cli/src/utils/retrieveContractFromChain';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
+import type { ICommand } from '@kda-community/client';
+import {
+  Pact,
+  createClient,
+  createSignWithKeypair,
+} from '@kda-community/client';
+import { retrieveContractFromChain } from '@kda-community/pactjs-cli/src/utils/retrieveContractFromChain';
 
 import fs from 'fs';
 import path from 'path';

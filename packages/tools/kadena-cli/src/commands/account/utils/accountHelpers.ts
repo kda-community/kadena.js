@@ -6,7 +6,7 @@ import type {
 } from 'zod';
 import { z } from 'zod';
 
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { MAX_FUND_AMOUNT } from '../../../constants/account.js';
 import { MAX_CHAIN_VALUE } from '../../../constants/config.js';
 import { services } from '../../../services/index.js';

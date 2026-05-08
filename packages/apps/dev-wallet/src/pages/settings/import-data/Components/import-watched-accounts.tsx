@@ -22,8 +22,14 @@ import {
   MonoLoading,
   MonoStop,
   MonoWarning,
-} from '@kadena/kode-icons/system';
-import { Button, Heading, Notification, Stack, Text } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Heading,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
 import { useCallback, useEffect, useState } from 'react';
 import { accountClass, needActionClass } from '../style.css';
 

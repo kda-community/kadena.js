@@ -161,20 +161,20 @@
     }
   },
   "kind": "Package",
-  "canonicalReference": "@kadena/wallet-sdk!",
+  "canonicalReference": "@kda-community/wallet-sdk!",
   "docComment": "",
-  "name": "@kadena/wallet-sdk",
+  "name": "@kda-community/wallet-sdk",
   "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
-      "canonicalReference": "@kadena/wallet-sdk!",
+      "canonicalReference": "@kda-community/wallet-sdk!",
       "name": "",
       "preserveMemberOrder": false,
       "members": [
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!ChainwebHostGenerator:type",
+          "canonicalReference": "@kda-community/wallet-sdk!ChainwebHostGenerator:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -200,7 +200,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!GraphqlHostGenerator:type",
+          "canonicalReference": "@kda-community/wallet-sdk!GraphqlHostGenerator:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -226,7 +226,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!IAccountDetails:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!IAccountDetails:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -241,7 +241,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IAccountDetails#accountDetails:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IAccountDetails#accountDetails:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -251,7 +251,7 @@
                 {
                   "kind": "Reference",
                   "text": "IAccountDetailsResult",
-                  "canonicalReference": "@kadena/wallet-sdk!IAccountDetailsResult:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!IAccountDetailsResult:interface"
                 },
                 {
                   "kind": "Content",
@@ -273,7 +273,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IAccountDetails#chainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IAccountDetails#chainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -303,7 +303,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!IAccountDetailsResult:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!IAccountDetailsResult:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -318,7 +318,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IAccountDetailsResult#account:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IAccountDetailsResult#account:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -345,7 +345,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IAccountDetailsResult#balance:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IAccountDetailsResult#balance:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -372,7 +372,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IAccountDetailsResult#guard:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IAccountDetailsResult#guard:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -382,7 +382,7 @@
                 {
                   "kind": "Reference",
                   "text": "IGuard",
-                  "canonicalReference": "@kadena/wallet-sdk!IGuard:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!IGuard:interface"
                 },
                 {
                   "kind": "Content",
@@ -403,7 +403,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!IChain:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!IChain:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -418,7 +418,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IChain#id:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IChain#id:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -428,7 +428,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -449,7 +449,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!ICreateCrossChainTransfer:type",
+          "canonicalReference": "@kda-community/wallet-sdk!ICreateCrossChainTransfer:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -468,7 +468,7 @@
             {
               "kind": "Reference",
               "text": "createCrossChainCommand",
-              "canonicalReference": "@kadena/client-utils!createCrossChainCommand:var"
+              "canonicalReference": "@kda-community/client-utils!createCrossChainCommand:var"
             },
             {
               "kind": "Content",
@@ -489,7 +489,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -504,7 +504,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer#amount:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer#amount:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -531,7 +531,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer#chainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer#chainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -541,7 +541,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -559,7 +559,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer#fungibleName:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer#fungibleName:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -586,7 +586,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer#gasPayer:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer#gasPayer:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -600,7 +600,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -622,7 +622,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer#networkId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer#networkId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -649,7 +649,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer#receiver:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer#receiver:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -676,7 +676,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer#sender:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer#sender:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -690,7 +690,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -715,7 +715,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -730,7 +730,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate#amount:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate#amount:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -757,7 +757,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate#chainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate#chainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -767,7 +767,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -785,7 +785,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate#gasPayer:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate#gasPayer:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -799,7 +799,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -821,7 +821,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate#networkId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate#networkId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -848,7 +848,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate#receiver:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate#receiver:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -862,7 +862,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -884,7 +884,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate#sender:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate#sender:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -898,7 +898,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -923,7 +923,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -938,7 +938,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional#amount:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional#amount:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -965,7 +965,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional#chainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional#chainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -975,7 +975,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -993,7 +993,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional#fungibleName:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional#fungibleName:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1020,7 +1020,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional#gasPayer:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional#gasPayer:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1034,7 +1034,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -1056,7 +1056,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional#networkId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional#networkId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1083,7 +1083,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional#receiver:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional#receiver:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1097,7 +1097,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -1119,7 +1119,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional#sender:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional#sender:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1133,7 +1133,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/client!ISigner:type"
+                  "canonicalReference": "@kda-community/client!ISigner:type"
                 },
                 {
                   "kind": "Content",
@@ -1158,7 +1158,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ICrossChainTransfer:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ICrossChainTransfer:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1168,7 +1168,7 @@
             {
               "kind": "Reference",
               "text": "IBaseTransfer",
-              "canonicalReference": "@kadena/wallet-sdk!~IBaseTransfer:interface"
+              "canonicalReference": "@kda-community/wallet-sdk!~IBaseTransfer:interface"
             },
             {
               "kind": "Content",
@@ -1182,7 +1182,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICrossChainTransfer#continuation:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICrossChainTransfer#continuation:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1209,7 +1209,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICrossChainTransfer#isCrossChainTransfer:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICrossChainTransfer#isCrossChainTransfer:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1236,7 +1236,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ICrossChainTransfer#targetChainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ICrossChainTransfer#targetChainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1246,7 +1246,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -1272,7 +1272,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!IEthvmDevTokenInfo:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!IEthvmDevTokenInfo:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1287,7 +1287,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IEthvmDevTokenInfo#circulatingSupply:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IEthvmDevTokenInfo#circulatingSupply:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1314,7 +1314,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IEthvmDevTokenInfo#currentPrice:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IEthvmDevTokenInfo#currentPrice:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1341,7 +1341,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IEthvmDevTokenInfo#high24h:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IEthvmDevTokenInfo#high24h:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1368,7 +1368,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IEthvmDevTokenInfo#low24h:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IEthvmDevTokenInfo#low24h:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1395,7 +1395,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IEthvmDevTokenInfo#maxSupply:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IEthvmDevTokenInfo#maxSupply:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1422,7 +1422,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IEthvmDevTokenInfo#totalSupply:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IEthvmDevTokenInfo#totalSupply:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1452,7 +1452,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!IGuard:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!IGuard:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1467,7 +1467,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IGuard#keys:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IGuard#keys:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1494,7 +1494,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!IGuard#pred:member",
+              "canonicalReference": "@kda-community/wallet-sdk!IGuard#pred:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1524,7 +1524,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!ILogTransport:type",
+          "canonicalReference": "@kda-community/wallet-sdk!ILogTransport:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1538,7 +1538,7 @@
             {
               "kind": "Reference",
               "text": "ILogObject",
-              "canonicalReference": "@kadena/wallet-sdk!~ILogObject:interface"
+              "canonicalReference": "@kda-community/wallet-sdk!~ILogObject:interface"
             },
             {
               "kind": "Content",
@@ -1559,7 +1559,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!INetworkInfo:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1574,7 +1574,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeApiVersion:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeApiVersion:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1601,7 +1601,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeBlockDelay:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeBlockDelay:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1628,7 +1628,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeChains:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeChains:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1655,7 +1655,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeGenesisHeights:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeGenesisHeights:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1682,7 +1682,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeGraphHistory:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeGraphHistory:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1709,7 +1709,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeHistoricalChains:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeHistoricalChains:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1736,7 +1736,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeLatestBehaviorHeight:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeLatestBehaviorHeight:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1763,7 +1763,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeNumberOfChains:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeNumberOfChains:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1790,7 +1790,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodePackageVersion:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodePackageVersion:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1817,7 +1817,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeServiceDate:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeServiceDate:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1844,7 +1844,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo#nodeVersion:member",
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo#nodeVersion:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1874,7 +1874,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!INodeChainInfo:type",
+          "canonicalReference": "@kda-community/wallet-sdk!INodeChainInfo:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1893,7 +1893,7 @@
             {
               "kind": "Reference",
               "text": "INetworkInfo",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo:interface"
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo:interface"
             },
             {
               "kind": "Content",
@@ -1914,7 +1914,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!INodeNetworkInfo:type",
+          "canonicalReference": "@kda-community/wallet-sdk!INodeNetworkInfo:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1933,7 +1933,7 @@
             {
               "kind": "Reference",
               "text": "INetworkInfo",
-              "canonicalReference": "@kadena/wallet-sdk!INetworkInfo:interface"
+              "canonicalReference": "@kda-community/wallet-sdk!INetworkInfo:interface"
             },
             {
               "kind": "Content",
@@ -1954,7 +1954,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ITransaction:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ITransaction:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -1969,7 +1969,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransaction#chainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransaction#chainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1979,7 +1979,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -1997,7 +1997,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransaction#requestKey:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransaction#requestKey:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2027,7 +2027,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -2042,7 +2042,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor#chainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor#chainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2052,7 +2052,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -2070,7 +2070,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor#networkId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor#networkId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2097,7 +2097,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor#requestKey:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor#requestKey:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2127,7 +2127,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!ITransfer:type",
+          "canonicalReference": "@kda-community/wallet-sdk!ITransfer:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -2137,7 +2137,7 @@
             {
               "kind": "Reference",
               "text": "ISameChainTransfer",
-              "canonicalReference": "@kadena/wallet-sdk!~ISameChainTransfer:interface"
+              "canonicalReference": "@kda-community/wallet-sdk!~ISameChainTransfer:interface"
             },
             {
               "kind": "Content",
@@ -2146,7 +2146,7 @@
             {
               "kind": "Reference",
               "text": "ICrossChainTransfer",
-              "canonicalReference": "@kadena/wallet-sdk!ICrossChainTransfer:interface"
+              "canonicalReference": "@kda-community/wallet-sdk!ICrossChainTransfer:interface"
             },
             {
               "kind": "Content",
@@ -2163,7 +2163,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ITransferOptions:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -2178,7 +2178,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#accountName:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#accountName:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2205,7 +2205,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#after:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#after:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2232,7 +2232,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#before:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#before:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2259,7 +2259,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#chainId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#chainId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2269,7 +2269,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -2287,7 +2287,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#first:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#first:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2314,7 +2314,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#fungibleName:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#fungibleName:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2341,7 +2341,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#last:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#last:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2368,7 +2368,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferOptions#networkId:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions#networkId:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2398,7 +2398,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-sdk!ITransferResponse:interface",
+          "canonicalReference": "@kda-community/wallet-sdk!ITransferResponse:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -2413,7 +2413,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferResponse#pageInfo:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferResponse#pageInfo:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2440,7 +2440,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-sdk!ITransferResponse#transfers:member",
+              "canonicalReference": "@kda-community/wallet-sdk!ITransferResponse#transfers:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -2450,7 +2450,7 @@
                 {
                   "kind": "Reference",
                   "text": "ITransfer",
-                  "canonicalReference": "@kadena/wallet-sdk!ITransfer:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!ITransfer:type"
                 },
                 {
                   "kind": "Content",
@@ -2475,7 +2475,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!LogLevel:type",
+          "canonicalReference": "@kda-community/wallet-sdk!LogLevel:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -2489,7 +2489,7 @@
             {
               "kind": "Reference",
               "text": "LOG_LEVELS",
-              "canonicalReference": "@kadena/wallet-sdk!~LOG_LEVELS:var"
+              "canonicalReference": "@kda-community/wallet-sdk!~LOG_LEVELS:var"
             },
             {
               "kind": "Content",
@@ -2506,7 +2506,7 @@
         },
         {
           "kind": "TypeAlias",
-          "canonicalReference": "@kadena/wallet-sdk!RequestKey:type",
+          "canonicalReference": "@kda-community/wallet-sdk!RequestKey:type",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -2532,7 +2532,7 @@
         },
         {
           "kind": "Class",
-          "canonicalReference": "@kadena/wallet-sdk!WalletSDK:class",
+          "canonicalReference": "@kda-community/wallet-sdk!WalletSDK:class",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -2548,7 +2548,7 @@
           "members": [
             {
               "kind": "Constructor",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK:constructor(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK:constructor(1)",
               "docComment": "/**\n * Constructs a new instance of the `WalletSDK` class\n */\n",
               "excerptTokens": [
                 {
@@ -2562,7 +2562,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainwebHostGenerator",
-                  "canonicalReference": "@kadena/wallet-sdk!ChainwebHostGenerator:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!ChainwebHostGenerator:type"
                 },
                 {
                   "kind": "Content",
@@ -2571,7 +2571,7 @@
                 {
                   "kind": "Reference",
                   "text": "GraphqlHostGenerator",
-                  "canonicalReference": "@kadena/wallet-sdk!GraphqlHostGenerator:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!GraphqlHostGenerator:type"
                 },
                 {
                   "kind": "Content",
@@ -2580,7 +2580,7 @@
                 {
                   "kind": "Reference",
                   "text": "ILogTransport",
-                  "canonicalReference": "@kadena/wallet-sdk!ILogTransport:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!ILogTransport:type"
                 },
                 {
                   "kind": "Content",
@@ -2589,7 +2589,7 @@
                 {
                   "kind": "Reference",
                   "text": "LogLevel",
-                  "canonicalReference": "@kadena/wallet-sdk!LogLevel:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!LogLevel:type"
                 },
                 {
                   "kind": "Content",
@@ -2616,7 +2616,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#createCrossChainTransfer:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#createCrossChainTransfer:member(1)",
               "docComment": "/**\n * create cross-chain transfer\n */\n",
               "excerptTokens": [
                 {
@@ -2626,7 +2626,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICreateCrossChainTransfer",
-                  "canonicalReference": "@kadena/wallet-sdk!ICreateCrossChainTransfer:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!ICreateCrossChainTransfer:type"
                 },
                 {
                   "kind": "Content",
@@ -2639,7 +2639,7 @@
                 {
                   "kind": "Reference",
                   "text": "IUnsignedCommand",
-                  "canonicalReference": "@kadena/types!IUnsignedCommand:interface"
+                  "canonicalReference": "@kda-community/types!IUnsignedCommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -2670,7 +2670,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#createFinishCrossChainTransfer:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#createFinishCrossChainTransfer:member(1)",
               "docComment": "/**\n * create cross-chain transfer finish\n */\n",
               "excerptTokens": [
                 {
@@ -2689,7 +2689,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICreateCrossChainFinishInput",
-                  "canonicalReference": "@kadena/wallet-sdk!~ICreateCrossChainFinishInput:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!~ICreateCrossChainFinishInput:interface"
                 },
                 {
                   "kind": "Content",
@@ -2706,7 +2706,7 @@
                 {
                   "kind": "Reference",
                   "text": "ISigner",
-                  "canonicalReference": "@kadena/types!ISigner:interface"
+                  "canonicalReference": "@kda-community/types!ISigner:interface"
                 },
                 {
                   "kind": "Content",
@@ -2728,7 +2728,7 @@
                 {
                   "kind": "Reference",
                   "text": "IUnsignedCommand",
-                  "canonicalReference": "@kadena/types!IUnsignedCommand:interface"
+                  "canonicalReference": "@kda-community/types!IUnsignedCommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -2771,7 +2771,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#createTransfer:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#createTransfer:member(1)",
               "docComment": "/**\n * create transfer that accepts any kind of account (requires keys/pred)\n */\n",
               "excerptTokens": [
                 {
@@ -2781,7 +2781,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICreateTransfer",
-                  "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer:interface"
                 },
                 {
                   "kind": "Content",
@@ -2799,7 +2799,7 @@
                 {
                   "kind": "Reference",
                   "text": "IUnsignedCommand",
-                  "canonicalReference": "@kadena/types!IUnsignedCommand:interface"
+                  "canonicalReference": "@kda-community/types!IUnsignedCommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -2834,7 +2834,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#createTransferCommand:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#createTransferCommand:member(1)",
               "docComment": "/**\n * create transfer that accepts any kind of account (requires keys/pred)\n */\n",
               "excerptTokens": [
                 {
@@ -2844,7 +2844,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICreateTransfer",
-                  "canonicalReference": "@kadena/wallet-sdk!ICreateTransfer:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ICreateTransfer:interface"
                 },
                 {
                   "kind": "Content",
@@ -2853,7 +2853,7 @@
                 {
                   "kind": "Reference",
                   "text": "IUnsignedCommand",
-                  "canonicalReference": "@kadena/types!IUnsignedCommand:interface"
+                  "canonicalReference": "@kda-community/types!IUnsignedCommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -2884,7 +2884,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#createTransferCreate:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#createTransferCreate:member(1)",
               "docComment": "/**\n * create transfer that accepts any kind of account (requires keys/pred)\n */\n",
               "excerptTokens": [
                 {
@@ -2894,7 +2894,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICreateTransferCreateOptional",
-                  "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreateOptional:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreateOptional:interface"
                 },
                 {
                   "kind": "Content",
@@ -2912,7 +2912,7 @@
                 {
                   "kind": "Reference",
                   "text": "IUnsignedCommand",
-                  "canonicalReference": "@kadena/types!IUnsignedCommand:interface"
+                  "canonicalReference": "@kda-community/types!IUnsignedCommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -2947,7 +2947,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#createTransferCreateCommand:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#createTransferCreateCommand:member(1)",
               "docComment": "/**\n * create transfer that accepts any kind of account (requires keys/pred)\n */\n",
               "excerptTokens": [
                 {
@@ -2957,7 +2957,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICreateTransferCreate",
-                  "canonicalReference": "@kadena/wallet-sdk!ICreateTransferCreate:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ICreateTransferCreate:interface"
                 },
                 {
                   "kind": "Content",
@@ -2966,7 +2966,7 @@
                 {
                   "kind": "Reference",
                   "text": "IUnsignedCommand",
-                  "canonicalReference": "@kadena/types!IUnsignedCommand:interface"
+                  "canonicalReference": "@kda-community/types!IUnsignedCommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -2997,7 +2997,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#exchange:member",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#exchange:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3011,7 +3011,7 @@
                 {
                   "kind": "Reference",
                   "text": "exchange",
-                  "canonicalReference": "@kadena/wallet-sdk!~exchange:var"
+                  "canonicalReference": "@kda-community/wallet-sdk!~exchange:var"
                 },
                 {
                   "kind": "Content",
@@ -3032,7 +3032,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#getAccountDetails:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#getAccountDetails:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3066,7 +3066,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -3088,7 +3088,7 @@
                 {
                   "kind": "Reference",
                   "text": "IAccountDetails",
-                  "canonicalReference": "@kadena/wallet-sdk!IAccountDetails:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!IAccountDetails:interface"
                 },
                 {
                   "kind": "Content",
@@ -3147,7 +3147,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#getChains:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#getChains:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3174,7 +3174,7 @@
                 {
                   "kind": "Reference",
                   "text": "IChain",
-                  "canonicalReference": "@kadena/wallet-sdk!IChain:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!IChain:interface"
                 },
                 {
                   "kind": "Content",
@@ -3209,7 +3209,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#getChainwebUrl:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#getChainwebUrl:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3228,7 +3228,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainwebHostGenerator",
-                  "canonicalReference": "@kadena/wallet-sdk!ChainwebHostGenerator:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!ChainwebHostGenerator:type"
                 },
                 {
                   "kind": "Content",
@@ -3250,7 +3250,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainwebHostGenerator",
-                  "canonicalReference": "@kadena/wallet-sdk!ChainwebHostGenerator:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!ChainwebHostGenerator:type"
                 },
                 {
                   "kind": "Content",
@@ -3285,7 +3285,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#getGasLimitEstimate:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#getGasLimitEstimate:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3295,7 +3295,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICommand",
-                  "canonicalReference": "@kadena/types!ICommand:interface"
+                  "canonicalReference": "@kda-community/types!ICommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -3312,7 +3312,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -3372,7 +3372,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#getGraphqlUrl:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#getGraphqlUrl:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3391,7 +3391,7 @@
                 {
                   "kind": "Reference",
                   "text": "GraphqlHostGenerator",
-                  "canonicalReference": "@kadena/wallet-sdk!GraphqlHostGenerator:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!GraphqlHostGenerator:type"
                 },
                 {
                   "kind": "Content",
@@ -3413,7 +3413,7 @@
                 {
                   "kind": "Reference",
                   "text": "GraphqlHostGenerator",
-                  "canonicalReference": "@kadena/wallet-sdk!GraphqlHostGenerator:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!GraphqlHostGenerator:type"
                 },
                 {
                   "kind": "Content",
@@ -3448,7 +3448,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#getNetworkInfo:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#getNetworkInfo:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3475,7 +3475,7 @@
                 {
                   "kind": "Reference",
                   "text": "INodeNetworkInfo",
-                  "canonicalReference": "@kadena/wallet-sdk!INodeNetworkInfo:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!INodeNetworkInfo:type"
                 },
                 {
                   "kind": "Content",
@@ -3510,7 +3510,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#getTransfers:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#getTransfers:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3520,7 +3520,7 @@
                 {
                   "kind": "Reference",
                   "text": "ITransferOptions",
-                  "canonicalReference": "@kadena/wallet-sdk!ITransferOptions:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ITransferOptions:interface"
                 },
                 {
                   "kind": "Content",
@@ -3538,7 +3538,7 @@
                 {
                   "kind": "Reference",
                   "text": "ITransferResponse",
-                  "canonicalReference": "@kadena/wallet-sdk!ITransferResponse:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ITransferResponse:interface"
                 },
                 {
                   "kind": "Content",
@@ -3573,7 +3573,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#kadenaNames:member",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#kadenaNames:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3583,7 +3583,7 @@
                 {
                   "kind": "Reference",
                   "text": "KadenaNames",
-                  "canonicalReference": "@kadena/wallet-sdk!~KadenaNames:class"
+                  "canonicalReference": "@kda-community/wallet-sdk!~KadenaNames:class"
                 },
                 {
                   "kind": "Content",
@@ -3604,7 +3604,7 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#logger:member",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#logger:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3614,7 +3614,7 @@
                 {
                   "kind": "Reference",
                   "text": "Logger",
-                  "canonicalReference": "@kadena/wallet-sdk!~Logger:class"
+                  "canonicalReference": "@kda-community/wallet-sdk!~Logger:class"
                 },
                 {
                   "kind": "Content",
@@ -3635,7 +3635,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#sendTransaction:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#sendTransaction:member(1)",
               "docComment": "/**\n * send signed transaction\n */\n",
               "excerptTokens": [
                 {
@@ -3645,7 +3645,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICommand",
-                  "canonicalReference": "@kadena/types!ICommand:interface"
+                  "canonicalReference": "@kda-community/types!ICommand:interface"
                 },
                 {
                   "kind": "Content",
@@ -3662,7 +3662,7 @@
                 {
                   "kind": "Reference",
                   "text": "ChainId",
-                  "canonicalReference": "@kadena/types!ChainId:type"
+                  "canonicalReference": "@kda-community/types!ChainId:type"
                 },
                 {
                   "kind": "Content",
@@ -3680,7 +3680,7 @@
                 {
                   "kind": "Reference",
                   "text": "ITransactionDescriptor",
-                  "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor:interface"
                 },
                 {
                   "kind": "Content",
@@ -3731,7 +3731,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#subscribeOnCrossChainComplete:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#subscribeOnCrossChainComplete:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3749,7 +3749,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICrossChainTransfer",
-                  "canonicalReference": "@kadena/wallet-sdk!ICrossChainTransfer:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ICrossChainTransfer:interface"
                 },
                 {
                   "kind": "Content",
@@ -3766,7 +3766,7 @@
                 {
                   "kind": "Reference",
                   "text": "ICrossChainTransfer",
-                  "canonicalReference": "@kadena/wallet-sdk!ICrossChainTransfer:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ICrossChainTransfer:interface"
                 },
                 {
                   "kind": "Content",
@@ -3850,7 +3850,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#subscribePendingTransactions:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#subscribePendingTransactions:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3860,7 +3860,7 @@
                 {
                   "kind": "Reference",
                   "text": "ITransactionDescriptor",
-                  "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor:interface"
                 },
                 {
                   "kind": "Content",
@@ -3877,7 +3877,7 @@
                 {
                   "kind": "Reference",
                   "text": "ITransactionDescriptor",
-                  "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor:interface"
                 },
                 {
                   "kind": "Content",
@@ -3886,7 +3886,7 @@
                 {
                   "kind": "Reference",
                   "text": "ResponseResult",
-                  "canonicalReference": "@kadena/wallet-sdk!~ResponseResult:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!~ResponseResult:type"
                 },
                 {
                   "kind": "Content",
@@ -3962,7 +3962,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK#waitForPendingTransaction:member(1)",
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK#waitForPendingTransaction:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -3972,7 +3972,7 @@
                 {
                   "kind": "Reference",
                   "text": "ITransactionDescriptor",
-                  "canonicalReference": "@kadena/wallet-sdk!ITransactionDescriptor:interface"
+                  "canonicalReference": "@kda-community/wallet-sdk!ITransactionDescriptor:interface"
                 },
                 {
                   "kind": "Content",
@@ -4007,7 +4007,7 @@
                 {
                   "kind": "Reference",
                   "text": "ResponseResult",
-                  "canonicalReference": "@kadena/wallet-sdk!~ResponseResult:type"
+                  "canonicalReference": "@kda-community/wallet-sdk!~ResponseResult:type"
                 },
                 {
                   "kind": "Content",
@@ -4053,7 +4053,7 @@
         },
         {
           "kind": "Variable",
-          "canonicalReference": "@kadena/wallet-sdk!walletSdk:var",
+          "canonicalReference": "@kda-community/wallet-sdk!walletSdk:var",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -4063,7 +4063,7 @@
             {
               "kind": "Reference",
               "text": "WalletSDK",
-              "canonicalReference": "@kadena/wallet-sdk!WalletSDK:class"
+              "canonicalReference": "@kda-community/wallet-sdk!WalletSDK:class"
             }
           ],
           "fileUrlPath": "src/sdk/walletSdk.ts",

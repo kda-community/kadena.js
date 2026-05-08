@@ -1,5 +1,5 @@
-import { PactNumber } from '@kadena/pactjs';
-import type { PactValue } from '@kadena/types';
+import { PactNumber } from '@kda-community/pactjs';
+import type { PactValue } from '@kda-community/types';
 import { Literal } from './pact-helpers';
 
 const isDate = (obj: unknown): obj is Date => {

@@ -9,8 +9,12 @@ import useLedgerPublicKey, {
   derivationModes,
 } from '@/hooks/use-ledger-public-key';
 import { containerStyle } from '@/pagestyles/storybook/styles.css';
-import type { ChainId } from '@kadena/client';
-import { MonoCAccount, MonoKey, MonoUsb } from '@kadena/kode-icons/system';
+import type { ChainId } from '@kda-community/client';
+import {
+  MonoCAccount,
+  MonoKey,
+  MonoUsb,
+} from '@kda-community/kode-icons/system';
 import {
   Breadcrumbs,
   BreadcrumbsItem,
@@ -23,7 +27,7 @@ import {
   SelectItem,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import React, { useState } from 'react';

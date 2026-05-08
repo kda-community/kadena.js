@@ -2,7 +2,7 @@ import {
   MonoContrast,
   MonoDarkMode,
   MonoLightMode,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { FC } from 'react';
 import React from 'react';

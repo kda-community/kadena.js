@@ -1,4 +1,4 @@
-import { Card, Stack } from '@kadena/kode-ui';
+import { Card, Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { cardClass, cardContentWrapperClass } from './styles.css';

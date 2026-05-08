@@ -4,7 +4,7 @@ import { createTokenId } from '@devnet/simulation/marmalade/create-token-id';
 import { mintToken } from '@devnet/simulation/marmalade/mint-token';
 import { transferCreateToken } from '@devnet/simulation/marmalade/transfer-create-token';
 import type { IAccount, IAccountWithTokens } from '@devnet/utils';
-import { PactNumber } from '@kadena/pactjs';
+import { PactNumber } from '@kda-community/pactjs';
 import { logger } from '@utils/logger';
 import type { TokenActionType } from '../file';
 import { appendToFile, createFile } from '../file';

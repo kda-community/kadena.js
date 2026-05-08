@@ -1,4 +1,4 @@
-import { style } from '@kadena/kode-ui';
+import { style } from '@kda-community/kode-ui';
 import { globalStyle } from '@vanilla-extract/css';
 
 export const assetsSwitchWrapperClass = style({

@@ -45,4 +45,4 @@ function splitTemplate(template: string): [string[], string[]] {
   );
 }
 
-// Pact.templates("@kadena/my-tx-lib").template("something", {hole2: ""})
+// Pact.templates("@kda-community/my-tx-lib").template("something", {hole2: ""})

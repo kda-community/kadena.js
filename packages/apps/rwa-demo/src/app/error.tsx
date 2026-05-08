@@ -7,14 +7,14 @@ import {
   Text,
   ThemeAnimateIcon,
   useTheme,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CardContentBlock,
   FocussedLayout,
   FocussedLayoutFooter,
   FocussedLayoutHeaderAside,
   FocussedLayoutProvider,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import * as Sentry from '@sentry/nextjs';
 import React, { useEffect } from 'react';
 import { cardWrapperClass } from './(loggedout)/style.css';

@@ -9,8 +9,8 @@ import { useEditAgent } from '@/hooks/editAgent';
 import { useSetCompliance } from '@/hooks/setCompliance';
 import { useUser } from '@/hooks/user';
 import type { ITransferTokensProps } from '@/services/transferTokens';
-import { MonoAdd } from '@kadena/kode-icons';
-import type { ICompactStepperItemProps } from '@kadena/kode-ui';
+import { MonoAdd } from '@kda-community/kode-icons';
+import type { ICompactStepperItemProps } from '@kda-community/kode-ui';
 import {
   Button,
   Heading,
@@ -20,14 +20,14 @@ import {
   Step,
   Stepper,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
   SideBarHeaderContext,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { useCallback, useEffect, useState } from 'react';

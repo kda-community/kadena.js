@@ -1,4 +1,4 @@
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import { createPortal } from 'react-dom';
 
 const loadingContent = document.getElementById('loading-content');

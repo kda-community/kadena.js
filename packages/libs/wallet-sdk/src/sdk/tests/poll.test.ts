@@ -1,12 +1,12 @@
 import { assert, describe, test } from 'vitest';
 
-import type { ChainId } from '@kadena/client';
-import { addSignatures, isSignedTransaction } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
+import { addSignatures, isSignedTransaction } from '@kda-community/client';
 import {
   kadenaGenKeypairFromSeed,
   kadenaMnemonicToSeed,
   kadenaSignWithSeed,
-} from '@kadena/hd-wallet';
+} from '@kda-community/hd-wallet';
 import { walletSdk } from '../walletSdk.js';
 
 describe('example test', () => {

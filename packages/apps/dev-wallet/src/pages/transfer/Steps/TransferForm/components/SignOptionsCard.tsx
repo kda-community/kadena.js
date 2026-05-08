@@ -6,7 +6,7 @@ import {
   MonoLockOpen,
   MonoRedo,
   MonoSignature,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Button,
   Card,
@@ -14,8 +14,8 @@ import {
   Notification,
   Stack,
   Text,
-} from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
 import { FC } from 'react';
 import { Control, Controller, UseFormSetValue } from 'react-hook-form';
 import { ITransfer } from '../TransferForm';

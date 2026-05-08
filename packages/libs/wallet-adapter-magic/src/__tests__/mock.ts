@@ -1,4 +1,4 @@
-import type { IProvider } from '@kadena/wallet-adapter-core';
+import type { IProvider } from '@kda-community/wallet-adapter-core';
 import { vi } from 'vitest';
 
 export class MockProvider implements IProvider {

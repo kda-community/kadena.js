@@ -1,4 +1,4 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
+/* eslint-disable @kda-community-dev/no-eslint-disable */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
 /*
  * Pact types

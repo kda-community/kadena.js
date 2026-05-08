@@ -1,5 +1,5 @@
-import type { ITextProps } from '@kadena/kode-ui';
-import { Text as UIext } from '@kadena/kode-ui';
+import type { ITextProps } from '@kda-community/kode-ui';
+import { Text as UIext } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import { textClass } from './style.css';

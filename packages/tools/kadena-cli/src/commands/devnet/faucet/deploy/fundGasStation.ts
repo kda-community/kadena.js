@@ -1,6 +1,6 @@
-import type { ChainId } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
-import { transfer } from '@kadena/client-utils/coin';
+import type { ChainId } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
+import { transfer } from '@kda-community/client-utils/coin';
 import {
   DOMAIN,
   GAS_STATION,

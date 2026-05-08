@@ -1,13 +1,13 @@
 import type { IForcedTransferTokensProps } from '@/services/forcedTransferTokens';
 import type { ITransferTokensProps } from '@/services/transferTokens';
-import { MonoWallet } from '@kadena/kode-icons';
+import { MonoWallet } from '@kda-community/kode-icons';
 import {
   Combobox,
   ComboboxItem,
   maskValue,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import type { Control, FieldError } from 'react-hook-form';
 import { Controller } from 'react-hook-form';

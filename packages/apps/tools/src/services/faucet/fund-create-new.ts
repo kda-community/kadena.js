@@ -1,13 +1,13 @@
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
-import type { ITransactionDescriptor } from '@kadena/client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
+import type { ITransactionDescriptor } from '@kda-community/client';
 import {
   createClient,
   isSignedTransaction,
   Pact,
   readKeyset,
-} from '@kadena/client';
-import { genKeyPair, sign } from '@kadena/cryptography-utils';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client';
+import { genKeyPair, sign } from '@kda-community/cryptography-utils';
+import { PactNumber } from '@kda-community/pactjs';
 
 import Debug from 'debug';
 

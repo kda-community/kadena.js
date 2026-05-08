@@ -1,5 +1,5 @@
-import { style } from '@kadena/kode-ui';
-import { atoms, globalStyle, token } from '@kadena/kode-ui/styles';
+import { style } from '@kda-community/kode-ui';
+import { atoms, globalStyle, token } from '@kda-community/kode-ui/styles';
 
 export const actionsWrapperClass = style([
   atoms({

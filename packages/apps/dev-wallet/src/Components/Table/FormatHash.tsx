@@ -1,5 +1,5 @@
 import { shorten } from '@/utils/helpers';
-import { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
+import { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 
 type IProps = Exclude<ICompactTableFormatterProps, 'value'> & {

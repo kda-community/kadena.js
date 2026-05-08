@@ -1,4 +1,4 @@
-import { IPartialPactCommand, ISigningRequest } from '@kadena/client';
+import { IPartialPactCommand, ISigningRequest } from '@kda-community/client';
 import yaml from 'js-yaml';
 
 export type RequestScheme =

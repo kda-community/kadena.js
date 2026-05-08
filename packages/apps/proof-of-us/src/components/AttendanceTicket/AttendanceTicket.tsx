@@ -1,7 +1,7 @@
 import { getAspectRatio } from '@/utils/getAspectRatio';
 import { getContrast } from '@/utils/getContrast';
 import { getIPFSLink } from '@/utils/getIPFSLink';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import type { FC } from 'react';

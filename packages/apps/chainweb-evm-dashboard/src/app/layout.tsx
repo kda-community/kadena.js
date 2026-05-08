@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import { Inter, Kode_Mono } from "next/font/google";
-import { mediaProviderStyles, Version } from '@kadena/kode-ui';
-import "../styles/global.css";
-import { Nav } from "../components/Nav/Header";
-import { Overlay } from "../components/Overlay";
-import { Providers } from "../providers";
+import { mediaProviderStyles, Version } from '@kda-community/kode-ui';
+import { Inter, Kode_Mono } from 'next/font/google';
+import { Nav } from '../components/Nav/Header';
+import { Overlay } from '../components/Overlay';
+import { Providers } from '../providers';
+import '../styles/global.css';
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  variable: '--font-inter',
+  subsets: ['latin'],
 });
 
 const mono = Kode_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
+  variable: '--font-mono',
+  subsets: ['latin'],
 });
 
 export default function RootLayout({
@@ -33,15 +33,8 @@ export default function RootLayout({
         <meta name="description" content="Chainweb EVM Application" />
         <meta content="#020E1B" name="theme-color" />
         <meta content="text/html; charset=UTF-8" name="Content-Type" />
-        <link
-          rel="icon"
-          href="/icon.svg"
-          sizes="128x128"
-        />
-        <link
-          rel="shortcut icon"
-          href="/icon.svg"
-        />
+        <link rel="icon" href="/icon.svg" sizes="128x128" />
+        <link rel="shortcut icon" href="/icon.svg" />
         {/* Android Shortcut icon */}
         <link rel="shortcut icon" href="/icon.svg" />
         {/* Apple touch icon */}
@@ -52,18 +45,14 @@ export default function RootLayout({
           type="text/css"
         />
       </head>
-      <body
-        className={`${inter.variable} ${mono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${mono.variable} antialiased`}>
         <Version
           sha={process.env.NEXT_PUBLIC_COMMIT_SHA}
           SSRTime={process.env.NEXT_PUBLIC_BUILD_TIME}
           repo={`https://github.com/kadena-community/kadena.js/tree/${process.env.NEXT_PUBLIC_COMMIT_SHA || 'main'}/packages/apps/chainweb-evm-dashboard`}
         />
         <Nav />
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
         <Overlay />
       </body>
     </html>

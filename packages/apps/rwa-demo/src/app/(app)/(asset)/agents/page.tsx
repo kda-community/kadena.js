@@ -2,7 +2,7 @@
 
 import { AgentsList } from '@/components/AgentsList/AgentsList';
 import { SideBarBreadcrumbs } from '@/components/SideBarBreadcrumbs/SideBarBreadcrumbs';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 
 const AgentsPage = () => {
   return (

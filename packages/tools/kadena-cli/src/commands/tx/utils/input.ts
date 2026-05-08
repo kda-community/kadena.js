@@ -1,4 +1,4 @@
-import type { IUnsignedCommand } from '@kadena/types';
+import type { IUnsignedCommand } from '@kda-community/types';
 import { IUnsignedCommandSchema } from '../../../prompts/tx.js';
 import { formatZodError } from '../../../utils/globalHelpers.js';
 import { log } from '../../../utils/logger.js';

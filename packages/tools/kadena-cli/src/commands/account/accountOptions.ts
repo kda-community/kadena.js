@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { Option } from 'commander';
 import { z } from 'zod';
 import { CHAIN_ID_RANGE_ERROR_MESSAGE } from '../../constants/account.js';

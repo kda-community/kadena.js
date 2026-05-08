@@ -3,7 +3,7 @@ import {
   divideChains,
   processChainAccounts,
 } from '@/utils/processChainAccounts';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import React, { useMemo } from 'react';
 import type { IChainAccounts } from './components/ChainList';

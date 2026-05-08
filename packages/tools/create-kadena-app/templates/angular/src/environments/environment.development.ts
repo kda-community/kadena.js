@@ -1,4 +1,4 @@
-import { ChainId, NetworkId } from '@kadena/types';
+import { ChainId, NetworkId } from '@kda-community/types';
 
 export const environment: {
   kadenaNetworkId: NetworkId;

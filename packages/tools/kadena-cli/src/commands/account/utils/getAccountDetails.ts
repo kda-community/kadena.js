@@ -1,6 +1,6 @@
-import { getPactErrorCode } from '@kadena/client';
-import { details } from '@kadena/client-utils/coin';
-import type { ChainId } from '@kadena/types';
+import { getPactErrorCode } from '@kda-community/client';
+import { details } from '@kda-community/client-utils/coin';
+import type { ChainId } from '@kda-community/types';
 import type { IAccountDetailsResult } from '../types.js';
 
 export interface IGetAccountDetailsParams {

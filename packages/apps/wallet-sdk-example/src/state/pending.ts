@@ -1,4 +1,4 @@
-import { ChainId, ITransactionDescriptor } from '@kadena/client';
+import { ChainId, ITransactionDescriptor } from '@kda-community/client';
 import { useAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
 import { useCallback } from 'react';

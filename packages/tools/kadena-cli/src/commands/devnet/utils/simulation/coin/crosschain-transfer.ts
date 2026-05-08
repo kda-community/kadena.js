@@ -1,6 +1,6 @@
-import type { ChainId, ICommandResult } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
-import { transferCrossChain } from '@kadena/client-utils/coin';
+import type { ChainId, ICommandResult } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
+import { transferCrossChain } from '@kda-community/client-utils/coin';
 import type { IAccount } from '../../../../../constants/devnets.js';
 import { defaultAccount } from '../../../../../constants/devnets.js';
 import { log } from '../../../../../utils/logger.js';

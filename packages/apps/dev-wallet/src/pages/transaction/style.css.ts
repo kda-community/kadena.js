@@ -1,4 +1,4 @@
-import { vars } from '@kadena/kode-ui/styles';
+import { vars } from '@kda-community/kode-ui/styles';
 import { style } from '@vanilla-extract/css';
 
 export const tabStyle = style({

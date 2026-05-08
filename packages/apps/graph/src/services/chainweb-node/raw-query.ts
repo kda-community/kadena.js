@@ -1,5 +1,5 @@
-import { dirtyReadClient } from '@kadena/client-utils/core';
-import type { ChainId } from '@kadena/types';
+import { dirtyReadClient } from '@kda-community/client-utils/core';
+import type { ChainId } from '@kda-community/types';
 import { dotenv } from '@utils/dotenv';
 import { networkData } from '@utils/network';
 import type { ICommandData } from './utils';

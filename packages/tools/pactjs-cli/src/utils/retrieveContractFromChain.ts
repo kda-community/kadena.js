@@ -1,5 +1,5 @@
-import type { ChainId } from '@kadena/client';
-import { Pact } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 import { fetchModule } from './callLocal';
 import { networkMap } from './networkMap';
 

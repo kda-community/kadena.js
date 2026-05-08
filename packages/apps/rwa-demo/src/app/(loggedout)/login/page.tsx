@@ -1,6 +1,6 @@
 'use client';
-import { Card } from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
+import { Card } from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
 
 import { LoginForm } from '@/components/LoginForm/LoginForm';
 import { cardWrapperClass } from '../style.css';

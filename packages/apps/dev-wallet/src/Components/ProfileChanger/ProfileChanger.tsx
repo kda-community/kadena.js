@@ -2,14 +2,14 @@ import { useWallet } from '@/modules/wallet/wallet.hook';
 import { IProfile } from '@/modules/wallet/wallet.repository';
 import { getWebAuthnPass } from '@/modules/wallet/wallet.service';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { MonoMoreHoriz } from '@kadena/kode-icons/system';
+import { MonoMoreHoriz } from '@kda-community/kode-icons/system';
 import {
   Button,
   ContextMenu,
   ContextMenuDivider,
   ContextMenuItem,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { Profile } from './components/Profile';
 import { profileClass, profileListClass } from './components/style.css';

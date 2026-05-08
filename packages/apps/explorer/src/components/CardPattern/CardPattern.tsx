@@ -1,5 +1,5 @@
-import { Box, Heading, Stack, Text } from '@kadena/kode-ui';
-import { atoms } from '@kadena/kode-ui/styles';
+import { Box, Heading, Stack, Text } from '@kda-community/kode-ui';
+import { atoms } from '@kda-community/kode-ui/styles';
 import React from 'react';
 import { bodyContent, container, paddingContainer } from './CardPattern.css';
 

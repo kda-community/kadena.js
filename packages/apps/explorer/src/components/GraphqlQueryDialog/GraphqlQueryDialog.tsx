@@ -1,7 +1,7 @@
 import { useNetwork } from '@/context/networksContext';
 import { useQueryContext } from '@/context/queryContext';
 import { EVENT_NAMES, analyticsEvent } from '@/utils/analytics';
-import { MonoHub } from '@kadena/kode-icons/system';
+import { MonoHub } from '@kda-community/kode-icons/system';
 import {
   Box,
   Button,
@@ -12,7 +12,7 @@ import {
   Stack,
   Text,
   TextLink,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { DocumentNode } from 'graphql';
 import { print } from 'graphql';
 import React, { useState } from 'react';
@@ -44,12 +44,12 @@ export const GraphQLQueryDialog = (): React.JSX.Element => {
       >
         {() => (
           <DialogContent>
-            <Heading as="h3">What is @kadena/graph</Heading>
+            <Heading as="h3">What is @kda-community/graph</Heading>
             <Box marginBlockEnd="sm" />
 
             <Text>
-              <a href="https://www.npmjs.com/package/@kadena/graph">
-                <code>@kadena/graph</code>
+              <a href="https://www.npmjs.com/package/@kda-community/graph">
+                <code>@kda-community/graph</code>
               </a>{' '}
               is a GraphQL layer built on top of the Kadena blockchain. It
               facilitates efficient querying of blockchain data, including{' '}
@@ -57,8 +57,8 @@ export const GraphQLQueryDialog = (): React.JSX.Element => {
               within blocks, <strong>outcomes</strong> of these transactions,{' '}
               <strong>mempool information</strong> and more. By leveraging a
               PostgreSQL database backend, fed by an ETL process known as
-              chainweb-data, <code>@kadena/graph</code> provides a swift and
-              structured way to access blockchain information.
+              chainweb-data, <code>@kda-community/graph</code> provides a swift
+              and structured way to access blockchain information.
             </Text>
 
             <Text>

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import React, { useEffect } from 'react';
 
-import { Heading, Select, SelectItem, Stack } from '@kadena/kode-ui';
+import { Heading, Select, SelectItem, Stack } from '@kda-community/kode-ui';
 
 import Link from 'next/link';
 
@@ -11,7 +11,7 @@ import type { AccountDetails } from '@/hooks/use-account-details-query';
 import { useAccountDetailsQuery } from '@/hooks/use-account-details-query';
 import type { DerivationMode } from '@/hooks/use-ledger-public-key';
 import { notificationLinkStyle } from '@/pagestyles/transactions/transfer/styles.css';
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import useTranslation from 'next-translate/useTranslation';
 import { useFormContext } from 'react-hook-form';
 import { SenderFields } from './sender-fields';

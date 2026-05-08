@@ -1,4 +1,4 @@
-// eslint-disable-next-line @kadena-dev/no-eslint-disable
+// eslint-disable-next-line @kda-community-dev/no-eslint-disable
 /* eslint-disable @typescript-eslint/naming-convention */
 
 const errorMessages = {

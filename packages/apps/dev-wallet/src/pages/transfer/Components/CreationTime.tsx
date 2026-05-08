@@ -1,5 +1,5 @@
 import { toISOLocalDateTime } from '@/utils/helpers';
-import { Badge, Stack, TextField } from '@kadena/kode-ui';
+import { Badge, Stack, TextField } from '@kda-community/kode-ui';
 import { useEffect, useState } from 'react';
 import { Label } from './Label';
 import { Seconds } from './TTLSelect';

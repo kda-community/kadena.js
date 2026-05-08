@@ -5,10 +5,10 @@ import {
 import type { IAsset } from '@/contexts/AssetContext/AssetContext';
 import { useAsset } from '@/hooks/asset';
 import { getAsset } from '@/utils/getAsset';
-import { MonoFindInPage, MonoWarning } from '@kadena/kode-icons';
-import { Button } from '@kadena/kode-ui';
-import type { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
-import { useNotifications } from '@kadena/kode-ui/patterns';
+import { MonoFindInPage, MonoWarning } from '@kda-community/kode-icons';
+import { Button } from '@kda-community/kode-ui';
+import type { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
+import { useNotifications } from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { TransactionPendingIcon } from '../TransactionPendingIcon/TransactionPendingIcon';
 

@@ -1,5 +1,5 @@
 import type { IAsset } from '@/contexts/AssetContext/AssetContext';
-import type { ICompactStepperItemProps } from '@kadena/kode-ui';
+import type { ICompactStepperItemProps } from '@kda-community/kode-ui';
 import { useCallback, useEffect, useState } from 'react';
 import { useAsset } from './asset';
 

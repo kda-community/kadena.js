@@ -1,6 +1,6 @@
-import type * as ChainWebNodeClient from '@kadena/chainweb-node-client';
-import { local } from '@kadena/chainweb-node-client';
-import type { ChainId } from '@kadena/types';
+import type * as ChainWebNodeClient from '@kda-community/chainweb-node-client';
+import { local } from '@kda-community/chainweb-node-client';
+import type { ChainId } from '@kda-community/types';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 import {
@@ -15,7 +15,7 @@ import {
 import { createClient } from '../client';
 
 // Hack to spy on exported function
-vi.mock('@kadena/chainweb-node-client', async (importOriginal) => {
+vi.mock('@kda-community/chainweb-node-client', async (importOriginal) => {
   const mod: typeof ChainWebNodeClient = await importOriginal();
   const local = vi.fn().mockImplementation(mod.local);
   return { ...mod, local };

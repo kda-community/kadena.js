@@ -4,7 +4,7 @@ import {
   responsiveStyle,
   style,
   token,
-} from '@kadena/kode-ui/styles';
+} from '@kda-community/kode-ui/styles';
 import { globalStyle } from '@vanilla-extract/css';
 
 export const backgroundClass = recipe({

@@ -1,5 +1,5 @@
-import type { IQuicksignResponseOutcomes } from '@kadena/client';
-import { createTransaction } from '@kadena/client';
+import type { IQuicksignResponseOutcomes } from '@kda-community/client';
+import { createTransaction } from '@kda-community/client';
 import type {
   ChainId,
   CommandSigDatas,
@@ -13,8 +13,8 @@ import type {
   KdaMethod,
   KdaRequestArgs,
   StandardSchemaV1,
-} from '@kadena/wallet-adapter-core';
-import { BaseWalletAdapter } from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
+import { BaseWalletAdapter } from '@kda-community/wallet-adapter-core';
 import * as v from 'valibot';
 import { CHAINWEAVER_ADAPTER, ERRORS } from './constants';
 import type { IChainweaverProvider } from './provider';

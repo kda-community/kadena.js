@@ -1,4 +1,4 @@
-import type { IPactDecimal, IPactInt } from '@kadena/types';
+import type { IPactDecimal, IPactInt } from '@kda-community/types';
 import BigNumber from 'bignumber.js';
 
 // Configure BigNumber to prevent exponential notation (Scientific notation) for numbers.

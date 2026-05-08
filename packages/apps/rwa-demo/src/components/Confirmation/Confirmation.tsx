@@ -1,11 +1,11 @@
-import type { PressEvent } from '@kadena/kode-ui';
+import type { PressEvent } from '@kda-community/kode-ui';
 import {
   Button,
   Dialog,
   DialogContent,
   DialogFooter,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import type { FC, PropsWithChildren } from 'react';
 import React, { useState } from 'react';

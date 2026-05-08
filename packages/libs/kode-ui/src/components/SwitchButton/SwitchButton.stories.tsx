@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
-import { MonoAdd, MonoRemove } from '@kadena/kode-icons/system';
+import { MonoAdd, MonoRemove } from '@kda-community/kode-icons/system';
 import { Stack } from '../Layout';
 import type { ISwitchButtonProps } from './SwitchButton';
 import { SwitchButton } from './SwitchButton';

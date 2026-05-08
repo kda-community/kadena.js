@@ -1,4 +1,4 @@
-import { MonoMenu } from '@kadena/kode-icons/system';
+import { MonoMenu } from '@kda-community/kode-icons/system';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren, ReactElement } from 'react';

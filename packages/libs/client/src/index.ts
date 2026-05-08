@@ -19,14 +19,14 @@ export {
   ICommandResult,
   IPollResponse,
   IPreflightResult,
-} from '@kadena/chainweb-node-client';
+} from '@kda-community/chainweb-node-client';
 export {
   ChainId,
   ICap,
   ICommand,
   IKeyPair,
   IUnsignedCommand,
-} from '@kadena/types';
+} from '@kda-community/types';
 
 export * from './utils/getPactErrorCode';
 export * from './utils/parseAsPactValue';

@@ -2,7 +2,7 @@ import type { WALLETTYPES } from '@/constants';
 import type { IAsset } from '@/contexts/AssetContext/AssetContext';
 import type { IAgentHookProps } from '@/hooks/getAgentRoles';
 import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
-import type { ICommand, IUnsignedCommand } from '@kadena/client';
+import type { ICommand, IUnsignedCommand } from '@kda-community/client';
 import type { User } from 'firebase/auth';
 import { createContext } from 'react';
 

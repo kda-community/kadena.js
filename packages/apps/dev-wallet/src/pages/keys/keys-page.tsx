@@ -1,7 +1,7 @@
 import { SideBarBreadcrumbs } from '@/Components/SideBarBreadcrumbs/SideBarBreadcrumbs';
-import { Mono123, MonoKey } from '@kadena/kode-icons/system';
-import { Heading, Stack, TabItem, Tabs, Text } from '@kadena/kode-ui';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+import { Mono123, MonoKey } from '@kda-community/kode-icons/system';
+import { Heading, Stack, TabItem, Tabs, Text } from '@kda-community/kode-ui';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 import { useParams } from 'react-router-dom';
 import { Keys } from './Components/Keys';
 import { KeySets } from './Components/KeySets';

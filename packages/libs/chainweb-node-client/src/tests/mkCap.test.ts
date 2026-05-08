@@ -1,4 +1,4 @@
-import { PactNumber } from '@kadena/pactjs';
+import { PactNumber } from '@kda-community/pactjs';
 import { expect, test } from 'vitest';
 import { mkCap } from '../mkCap';
 

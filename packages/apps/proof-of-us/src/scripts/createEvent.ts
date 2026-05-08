@@ -1,12 +1,12 @@
 import { uploadImageString } from '@/pages/api/uploadimage';
 import { uploadMeta } from '@/pages/api/uploadmeta';
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import {
   Pact,
   createSignWithChainweaver,
   isSignedTransaction,
-} from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 import dotenv from 'dotenv';
 import { getClient } from '../utils/client';
 import { createManifest } from '../utils/createManifest';
@@ -96,7 +96,7 @@ const createEvent = async () => {
     return;
   }
 
-  // @ts-expect-error WebAuthn is not yet added to the @kadena/client types
+  // @ts-expect-error WebAuthn is not yet added to the @kda-community/client types
   const manifest = await createManifest(proofOfUs, [], imageData.url);
   const metadataResult = await uploadMeta(manifest);
 

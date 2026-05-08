@@ -1,4 +1,4 @@
-import { MonoAirlineStops } from '@kadena/kode-icons/system';
+import { MonoAirlineStops } from '@kda-community/kode-icons/system';
 import React from 'react';
 import type { ICompactTableFormatterProps } from './types';
 import { valueToString } from './utils';

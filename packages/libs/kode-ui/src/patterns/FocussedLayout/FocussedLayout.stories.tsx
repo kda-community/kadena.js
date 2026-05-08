@@ -1,4 +1,4 @@
-import { MonoAccountTree } from '@kadena/kode-icons/system';
+import { MonoAccountTree } from '@kda-community/kode-icons/system';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { useNotifications } from '../LayoutUtils';

@@ -3,7 +3,7 @@ import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import { getNetwork } from '@/utils/client';
 import { getAsset } from '@/utils/getAsset';
 import { getPubkeyFromAccount } from '@/utils/getPubKey';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 import { getKeysetService } from './getKeyset';
 
 export const AGENTROLES = {

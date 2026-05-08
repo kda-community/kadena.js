@@ -1,5 +1,5 @@
 import { getColorStyle } from '@/utils/getColor';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import { multipleSigneeClass } from '../ListSignees/style.css';

@@ -1,17 +1,17 @@
 {
-  "name": "@kadena/client",
+  "name": "@kda-community/client",
   "version": "1.18.3",
   "description": "Core library for building Pact expressions to send to the blockchain in js. Makes use of .kadena/pactjs-generated",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/client"
   },
   "license": "BSD-3-Clause",
   "contributors": [
-    "Albert Groothedde <albert@kadena.io>",
-    "Javad Khalilian <javad@kadena.io>",
-    "Ashwin van Dijk <ashwin@kadena.io>"
+    "Albert Groothedde <albert@kda-community.io>",
+    "Javad Khalilian <javad@kda-community.io>",
+    "Ashwin van Dijk <ashwin@kda-community.io>"
   ],
   "exports": {
     ".": "./lib/index.js",
@@ -28,7 +28,7 @@
     "build": "tsc && api-extractor run --verbose",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
@@ -40,19 +40,19 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@kadena/chainweb-node-client": "workspace:*",
-    "@kadena/cryptography-utils": "workspace:*",
-    "@kadena/pactjs": "workspace:*",
+    "@kda-community/chainweb-node-client": "workspace:*",
+    "@kda-community/cryptography-utils": "workspace:*",
+    "@kda-community/pactjs": "workspace:*",
     "@walletconnect/sign-client": "~2.8.1",
     "cross-fetch": "~3.1.5",
     "debug": "4.3.4"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/debug": "~4.1.12",

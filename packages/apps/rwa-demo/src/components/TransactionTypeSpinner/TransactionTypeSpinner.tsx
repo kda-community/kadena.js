@@ -1,6 +1,6 @@
 import type { ITxType } from '@/contexts/TransactionsContext/TransactionsContext';
 import { useTransactions } from '@/hooks/transactions';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import type { FC, ReactElement } from 'react';
 import { useMemo } from 'react';
 import { TransactionPendingIcon } from '../TransactionPendingIcon/TransactionPendingIcon';

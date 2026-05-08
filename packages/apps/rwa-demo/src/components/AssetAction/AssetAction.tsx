@@ -1,5 +1,5 @@
-import type { ITileProps } from '@kadena/kode-ui';
-import { Stack, Text, Tile } from '@kadena/kode-ui';
+import type { ITileProps } from '@kda-community/kode-ui';
+import { Stack, Text, Tile } from '@kda-community/kode-ui';
 import type { FC, ReactElement } from 'react';
 import { assetActionWrapper } from './style.css';
 

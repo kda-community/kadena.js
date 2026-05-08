@@ -1,5 +1,5 @@
 import type { ModuleModel } from '@/hooks/use-module-query';
-import type { ITabNode } from '@kadena/kode-ui';
+import type { ITabNode } from '@kda-community/kode-ui';
 import {
   Badge,
   Box,
@@ -8,7 +8,7 @@ import {
   Tabs,
   Text,
   maskValue,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import useTranslation from 'next-translate/useTranslation';
 import type { FC, Key } from 'react';
 import React, { useCallback, useMemo } from 'react';

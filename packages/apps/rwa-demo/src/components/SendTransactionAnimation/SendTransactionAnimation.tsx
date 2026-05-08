@@ -1,6 +1,6 @@
 import { useTransactions } from '@/hooks/transactions';
-import { MonoWallet } from '@kadena/kode-icons';
-import type { PressEvent } from '@kadena/kode-ui';
+import { MonoWallet } from '@kda-community/kode-icons';
+import type { PressEvent } from '@kda-community/kode-ui';
 import type { FC, ReactElement } from 'react';
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';

@@ -1,4 +1,4 @@
-import { getBalance } from '@kadena/client-utils/coin';
+import { getBalance } from '@kda-community/client-utils/coin';
 
 getBalance('albert', 'testnet04', '1')
   .then((balance) => {

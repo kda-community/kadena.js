@@ -1,4 +1,8 @@
-import { MonoAdd, MonoChevronLeft, MonoMoreVert } from '@kadena/kode-icons';
+import {
+  MonoAdd,
+  MonoChevronLeft,
+  MonoMoreVert,
+} from '@kda-community/kode-icons';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 

@@ -1,6 +1,6 @@
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { Badge, IBreadcrumbsProps, Stack } from '@kadena/kode-ui';
-import { SideBarBreadcrumbs as SideBarBreadcrumbsUI } from '@kadena/kode-ui/patterns';
+import { Badge, IBreadcrumbsProps, Stack } from '@kda-community/kode-ui';
+import { SideBarBreadcrumbs as SideBarBreadcrumbsUI } from '@kda-community/kode-ui/patterns';
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 

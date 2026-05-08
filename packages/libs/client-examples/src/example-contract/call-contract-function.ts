@@ -1,4 +1,4 @@
-import { Pact, createClient } from '@kadena/client';
+import { Pact, createClient } from '@kda-community/client';
 
 const client = createClient();
 

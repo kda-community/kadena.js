@@ -2,8 +2,8 @@ import type { NetworkIds } from '@/constants/kadena';
 import { kadenaConstants } from '@/constants/kadena';
 import type { INetworkData } from '@/utils/network';
 import { getApiHost } from '@/utils/network';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
-import { createClient, Pact } from '@kadena/client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
+import { createClient, Pact } from '@kda-community/client';
 import Debug from 'debug';
 
 const debug = Debug('kadena-transfer:services:list-module');

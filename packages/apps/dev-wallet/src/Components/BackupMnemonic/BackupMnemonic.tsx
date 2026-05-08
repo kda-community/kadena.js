@@ -1,9 +1,9 @@
 import { CardContent } from '@/App/LayoutLandingPage/components/CardContent';
 import { CardFooterContent } from '@/App/LayoutLandingPage/components/CardFooterContent';
 import { wrapperClass } from '@/pages/errors/styles.css';
-import { MonoPassword } from '@kadena/kode-icons/system';
-import { Badge, Button, Stack, Text } from '@kadena/kode-ui';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+import { MonoPassword } from '@kda-community/kode-icons/system';
+import { Badge, Button, Stack, Text } from '@kda-community/kode-ui';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import { useMemo, useState } from 'react';
 import { wordClass } from './style.css';
 

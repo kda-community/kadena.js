@@ -5,23 +5,23 @@ This package provides an adapter for the Magic Wallet extension on Kadena.
 ## Installation
 
 ```bash
-npm install @kadena/wallet-adapter-magic
+npm install @kda-community/wallet-adapter-magic
 # or
-yarn add @kadena/wallet-adapter-magic
+yarn add @kda-community/wallet-adapter-magic
 # or
-pmpm add @kadena/wallet-adapter-magic
+pmpm add @kda-community/wallet-adapter-magic
 ```
 
 ## Usage with wallet-adapter-core
 
 Wallet adapters are designed to work easily with `WalletAdapterClient` from
-`@kadena/wallet-adapter-core`. This allows loading in multiple adapters and
+`@kda-community/wallet-adapter-core`. This allows loading in multiple adapters and
 automatically detecting which are available and providing a uniform api to
 interact with the adapters.
 
 ```ts
-import { magicAdapter } from '@kadena/wallet-adapter-magic';
-import { WalletAdapterClient } from '@kadena/wallet-adapter-core';
+import { magicAdapter } from '@kda-community/wallet-adapter-magic';
+import { WalletAdapterClient } from '@kda-community/wallet-adapter-core';
 
 const client = new WalletAdapterClient([magicAdapter]);
 await client.init();
@@ -35,7 +35,7 @@ wallet provider and, if found, returns an instance of `MagicWalletAdapter`. If
 Magic is not installed, it returns `null`:
 
 ```ts
-import { magicAdapter } from '@kadena/wallet-adapter-magic';
+import { magicAdapter } from '@kda-community/wallet-adapter-magic';
 
 (async () => {
   const provider = await magicAdapter.detect();
@@ -65,7 +65,7 @@ If you need lower-level access, the following are also exported:
 import {
   MagicAdapter,
   detectMagicProvider,
-} from '@kadena/wallet-adapter-magic';
+} from '@kda-community/wallet-adapter-magic';
 
 (async () => {
   const provider = await detectMagicProvider({ silent: true });

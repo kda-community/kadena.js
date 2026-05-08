@@ -4,7 +4,7 @@ import { useNotifications } from '@/hooks/notifications';
 import { useUser } from '@/hooks/user';
 import type { IUserListItem } from '@/utils/store/orgAdminStore';
 import { OrgAdminStore } from '@/utils/store/orgAdminStore';
-import { MonoAdd, MonoDelete, MonoVerified } from '@kadena/kode-icons';
+import { MonoAdd, MonoDelete, MonoVerified } from '@kda-community/kode-icons';
 import {
   Badge,
   Button,
@@ -12,7 +12,7 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -25,7 +25,7 @@ import {
   SectionCardContentBlock,
   SectionCardHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';

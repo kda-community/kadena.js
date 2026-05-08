@@ -1,6 +1,6 @@
-import { createTransaction } from '@kadena/client';
+import { createTransaction } from '@kda-community/client';
 
-import type { PactValue } from '@kadena/types';
+import type { PactValue } from '@kda-community/types';
 import { asyncPipe } from './utils/asyncPipe';
 import type { IClientConfig, IEmit } from './utils/helpers';
 import {

@@ -14,8 +14,14 @@ import {
   MonoShare,
   MonoSignature,
   MonoViewInAr,
-} from '@kadena/kode-icons/system';
-import { Button, Heading, Notification, Stack, Text } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Heading,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
 import { useEffect, useMemo, useState } from 'react';
 import { TxStatusItem } from './components/TxStatusItem';
 import { iconSuccessClass, statusListWrapperClass } from './style.css';
@@ -268,7 +274,7 @@ function TxStatusList({
       <TxStatusItem
         variant={variant}
         status="success"
-        label={`Mined 
+        label={`Mined
       ${
         tx.continuation?.autoContinue && contTx
           ? `in chain ${tx.purpose!.data.source as string}`

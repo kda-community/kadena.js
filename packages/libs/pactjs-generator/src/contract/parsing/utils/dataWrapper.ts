@@ -1,4 +1,4 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
+/* eslint-disable @kda-community-dev/no-eslint-disable */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IWrappedData<
   T extends any = any,

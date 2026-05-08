@@ -39,7 +39,7 @@ describe('dapp add command', () => {
     expect(spawnSync).toHaveBeenCalledWith(
       'npx',
       [
-        '@kadena/create-kadena-app',
+        '@kda-community/create-kadena-app',
         'generate-project',
         '-n',
         'my-first-app',

@@ -1,4 +1,4 @@
-import { CHAINS } from '@kadena/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import type { IAlert } from '../constants';
 import { lowBalanceChains } from '../lowBalanceChains';
 

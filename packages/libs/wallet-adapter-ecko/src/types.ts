@@ -1,4 +1,4 @@
-import type { IKdaMethodMap as StandardKdaMethodMap } from '@kadena/wallet-adapter-core';
+import type { IKdaMethodMap as StandardKdaMethodMap } from '@kda-community/wallet-adapter-core';
 
 /**
  * Represents a quicksign signature as defined in the quicksign API.

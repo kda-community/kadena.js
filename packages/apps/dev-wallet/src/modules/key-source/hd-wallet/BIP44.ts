@@ -4,7 +4,7 @@ import {
   kadenaMnemonicToSeed,
   kadenaSignWithSeed,
   randomBytes,
-} from '@kadena/hd-wallet';
+} from '@kda-community/hd-wallet';
 
 import {
   IKeySource,

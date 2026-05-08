@@ -1,4 +1,4 @@
-import { style } from '@kadena/kode-ui';
+import { style } from '@kda-community/kode-ui';
 import { keyframes } from '@vanilla-extract/css';
 
 const rotate = keyframes({

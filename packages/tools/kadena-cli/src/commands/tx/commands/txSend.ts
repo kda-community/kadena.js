@@ -7,8 +7,8 @@ import type {
   IPollOptions,
   ITransactionDescriptor,
   IUnsignedCommand,
-} from '@kadena/client';
-import { isSignedTransaction } from '@kadena/client';
+} from '@kda-community/client';
+import { isSignedTransaction } from '@kda-community/client';
 import ora from 'ora';
 import { IS_TEST } from '../../../constants/config.js';
 

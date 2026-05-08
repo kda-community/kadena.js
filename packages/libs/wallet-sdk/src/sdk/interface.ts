@@ -1,5 +1,5 @@
-import type { ChainId, ISigner } from '@kadena/client';
-import type { createCrossChainCommand } from '@kadena/client-utils/coin';
+import type { ChainId, ISigner } from '@kda-community/client';
+import type { createCrossChainCommand } from '@kda-community/client-utils/coin';
 
 interface IBaseTransfer {
   senderAccount: string;

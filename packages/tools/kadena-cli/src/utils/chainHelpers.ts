@@ -1,5 +1,5 @@
-import type { ChainId, ICommandResult } from '@kadena/client';
-import { getPactErrorCode, Pact } from '@kadena/client';
+import type { ChainId, ICommandResult } from '@kda-community/client';
+import { getPactErrorCode, Pact } from '@kda-community/client';
 
 import { dirtyRead } from './client.js';
 

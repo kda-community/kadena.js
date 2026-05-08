@@ -1,4 +1,4 @@
-import { Heading, Stack } from '@kadena/kode-ui';
+import { Heading, Stack } from '@kda-community/kode-ui';
 
 export function Ready() {
   return (

@@ -1,6 +1,6 @@
 import { Guard } from '@/Components/Guard/Guard';
 import { IRetrievedAccount } from '@/modules/account/IRetrievedAccount';
-import { MonoAttachMoney, MonoLink } from '@kadena/kode-icons/system';
+import { MonoAttachMoney, MonoLink } from '@kda-community/kode-icons/system';
 import {
   Button,
   Dialog,
@@ -8,7 +8,7 @@ import {
   DialogHeader,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { FC, ReactNode } from 'react';
 import { discoverdAccountClass } from './style.css';
 

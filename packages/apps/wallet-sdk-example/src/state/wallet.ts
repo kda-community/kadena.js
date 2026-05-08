@@ -2,14 +2,14 @@ import {
   isSignedTransaction,
   type ChainId,
   type IUnsignedCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import {
   EncryptedString,
   kadenaGenKeypairFromSeed,
   kadenaGenMnemonic,
   kadenaMnemonicToSeed,
   kadenaSignWithSeed,
-} from '@kadena/hd-wallet';
+} from '@kda-community/hd-wallet';
 import { atom, useAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
 import { useEffect, useMemo } from 'react';

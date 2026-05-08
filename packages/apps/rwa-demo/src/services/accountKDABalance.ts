@@ -1,5 +1,5 @@
 import { getClient, getNetwork } from '@/utils/client';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 export interface IAccountKDABalanceProps {
   accountName: string;

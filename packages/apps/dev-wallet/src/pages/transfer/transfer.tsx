@@ -8,7 +8,7 @@ import {
   Notification,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { useEffect, useState } from 'react';
 
 import { Confirmation } from '@/Components/Confirmation/Confirmation';
@@ -20,12 +20,12 @@ import {
   transactionRepository,
 } from '@/modules/transaction/transaction.repository';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { MonoClose } from '@kadena/kode-icons/system';
+import { MonoClose } from '@kda-community/kode-icons/system';
 import {
   FocussedLayoutHeaderAside,
   FocussedLayoutHeaderContent,
   useNotifications,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useSearchParams } from 'react-router-dom';
 import { TxList } from '../transaction/components/TxList';
 import { statusPassed } from '../transaction/components/TxPipeLine/utils';

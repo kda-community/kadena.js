@@ -1,5 +1,5 @@
 import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
-import type { ISigner } from '@kadena/client';
+import type { ISigner } from '@kda-community/client';
 
 export const setSigner = (account: IWalletAccount): ISigner => {
   if (account.walletType === 'WebAuthn') {

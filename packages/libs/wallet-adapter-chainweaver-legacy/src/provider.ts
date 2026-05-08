@@ -2,11 +2,11 @@
  *
  * This module defines the ChainWeaver Legacy Wallet provider interface and implements a detection
  * mechanism for ChainWeaver Legacy. The ChainweaverProvider interface extends
- * the core Provider from "@kadena/wallet-adapter-core".
+ * the core Provider from "@kda-community/wallet-adapter-core".
  *
  */
 
-import type { IProvider } from '@kadena/wallet-adapter-core';
+import type { IProvider } from '@kda-community/wallet-adapter-core';
 
 export interface IChainweaverLegacyProvider extends IProvider {}
 

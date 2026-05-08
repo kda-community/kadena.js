@@ -1,5 +1,5 @@
 import { useAccount } from '@/hooks/account';
-import { MonoMoreVert, MonoWallet } from '@kadena/kode-icons';
+import { MonoMoreVert, MonoWallet } from '@kda-community/kode-icons';
 import {
   Button,
   ButtonGroup,
@@ -7,7 +7,7 @@ import {
   ContextMenuItem,
   maskValue,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { assetsSwitchWrapperClass } from './style.css';
 

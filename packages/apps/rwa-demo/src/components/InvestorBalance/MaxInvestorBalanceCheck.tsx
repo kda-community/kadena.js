@@ -1,7 +1,7 @@
 import { INFINITE_COMPLIANCE } from '@/constants';
 import { useAsset } from '@/hooks/asset';
-import { MonoWarning } from '@kadena/kode-icons';
-import { token } from '@kadena/kode-ui/styles';
+import { MonoWarning } from '@kda-community/kode-icons';
+import { token } from '@kda-community/kode-ui/styles';
 import type { FC } from 'react';
 
 interface IProps {

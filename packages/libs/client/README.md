@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/client
+# @kda-community/client
 
 Core library for building Pact expressions to send to the blockchain in js.
 Makes use of .kadena/pactjs-generated
@@ -14,41 +14,41 @@ Makes use of .kadena/pactjs-generated
 
 API Reference can be found here [client.api.md][1]
 
-## Package @kadena/client
+## Package @kda-community/client
 
-`@kadena/client` allows JavaScript/TypeScript users to easily interact with the
+`@kda-community/client` allows JavaScript/TypeScript users to easily interact with the
 Kadena Blockchain.
 
-> **Readme for @kadena/client v1.0.0** This is the README for @kadena/client
+> **Readme for @kda-community/client v1.0.0** This is the README for @kda-community/client
 > v1.0.0 that introduces a new API\
 > To read the README for the old API (< 0.6.1) read [client_v0.6.1/packages/libs/client/README.md][2]
 
-> **[Upgrading from @kadena/client 0.x to 1.0.0][3]**
+> **[Upgrading from @kda-community/client 0.x to 1.0.0][3]**
 
 # Getting started
 
 ### Transaction building
 
 Interaction with the Kadena Blockchain works in various ways. In
-`@kadena/client` we expose a [ **builder** pattern ][4] and a [ **functional**
+`@kda-community/client` we expose a [ **builder** pattern ][4] and a [ **functional**
 pattern ][5]. They can both be used with or without the use of type-definitions,
 but it's recommended to use the type definitions that you can [generate with the
-`@kadena/pactjs-cli`][6]
+`@kda-community/pactjs-cli`][6]
 
 ### Signing
 
 There's also information on an [integrated way of signing using Chainweaver][7].
-With `@kadena/client` you can also [send a request to the blockchain][8]. That's
+With `@kda-community/client` you can also [send a request to the blockchain][8]. That's
 covered in this article. We'll also be exploring the concepts and rationale of
-`@kadena/client`.
+`@kda-community/client`.
 
-- [@kadena/client][9]
-  - [Package @kadena/client][10]
+- [@kda-community/client][9]
+  - [Package @kda-community/client][10]
 - [Getting started][11]
   - [Transaction building][12]
   - [Signing][13]
   - [Prerequisites][14]
-  - [Contract-based interaction using @kadena/client][15]
+  - [Contract-based interaction using @kda-community/client][15]
     - [Generate interfaces from the blockchain][6]
       - [Generate interfaces locally][16]
     - [Downloading contracts from the blockchain][17]
@@ -63,7 +63,7 @@ covered in this article. We'll also be exploring the concepts and rationale of
   - [Using the commandBuilder][4]
   - [Using FP approach][5]
   - [Send a request to the blockchain][8]
-  - [Upgrading from @kadena/client 0.x to 1.0.0][3]
+  - [Upgrading from @kda-community/client 0.x to 1.0.0][3]
     - [Sending a transaction 'transfer'][25]
     - [Read from the blockchain 'getBalance'][26]
   - [Further development][27]
@@ -71,23 +71,23 @@ covered in this article. We'll also be exploring the concepts and rationale of
 
 ## Prerequisites
 
-To use `@kadena/client`, Node.js v14 or higher is required. Let's install the
+To use `@kda-community/client`, Node.js v14 or higher is required. Let's install the
 bare minimum you need to get started:
 
 ```sh
 mkdir my-dapp-with-kadena-client
 cd my-dapp-with-kadena-client
 npm init -y
-npm install @kadena/client
-npm install --save-dev @kadena/pactjs-cli typescript ts-node
+npm install @kda-community/client
+npm install --save-dev @kda-community/pactjs-cli typescript ts-node
 npx tsc --init
 ```
 
-## Contract-based interaction using @kadena/client
+## Contract-based interaction using @kda-community/client
 
-We wanted `@kadena/client` to be independent so this is a tool that can be used
+We wanted `@kda-community/client` to be independent so this is a tool that can be used
 with arbitrary contracts. That is also why you have to _generate_ the interfaces
-used by `@kadena/client`. You can use smart contracts from the blockchain or
+used by `@kda-community/client`. You can use smart contracts from the blockchain or
 your own local ones.
 
 For the **template based interaction** we will provide a repository with
@@ -103,7 +103,7 @@ pactjs contract-generate --contract "coin" --api "https://api.chainweb.com/chain
 
 The log shows what has happened. Inside the `node_modules` directory, a new
 package has been created: `.kadena/pactjs-generated`. This package is referenced
-by `@kadena/client` to give you type information.
+by `@kda-community/client` to give you type information.
 
 Now you can use this by [creating a transaction that calls a smart contract
 function][18].
@@ -171,7 +171,7 @@ Now that everything is bootstrapped, we can start building transactions.
 Create a new file and name it `transfer.ts` (or `.js`):
 
 ```ts
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 const unsignedTransaction = Pact.builder
   .execution(
@@ -210,7 +210,7 @@ const unsignedTransaction = Pact.builder
 ## Signing
 
 Signing can be done in various ways. Either manually, by signing the hash of the
-transaction or with a wallet. There's currently two options in `@kadena/client`
+transaction or with a wallet. There's currently two options in `@kda-community/client`
 to sign with a wallet:
 
 1. [WalletConnect (preferred)][22]
@@ -231,7 +231,7 @@ Using the `transaction` we can send a sign request to Chainweaver.
 as it's [exposing port 9467][31].
 
 ```ts
-import { signWithChainweaver } from '@kadena/client';
+import { signWithChainweaver } from '@kda-community/client';
 
 // use the transaction, and sign it with Chainweaver
 const signedTransaction = signWithChainweaver(unsignedTransaction)
@@ -262,7 +262,7 @@ for ZK (Zero Knowledge Proof) or bridging between networks.
 ### Add Verifier To The Transaction
 
 ```ts
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 const transaction = Pact.builder
   .execution(
@@ -290,7 +290,7 @@ templates. In that case, you can use the `commandBuilder` function to build a
 command and submit the transaction yourself:
 
 ```ts
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 const client = createClient(
   'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/8/pact',
@@ -318,7 +318,7 @@ client.submit(unsignedTransaction);
 ## Using FP approach
 
 This library uses a couple of utility functions in order to create pactCommand
-you can import those function from `@kadena/client/fp` if you need more
+you can import those function from `@kda-community/client/fp` if you need more
 flexibility on crating command like composing command or lazy loading.
 
 Here are two examples to demonstrate this:
@@ -328,7 +328,7 @@ Here are two examples to demonstrate this:
 
 ## Send a request to the blockchain
 
-The `@kadena/client` provides a `createClient` function with some utility
+The `@kda-community/client` provides a `createClient` function with some utility
 functions. these helpers call the Pact API under the hood [Pactjs API][36].
 
 - `submit`
@@ -376,7 +376,7 @@ console.log(JSON.stringify(res, null, 2));
 A more elaborate example that includes signing, sending **and polling** can be
 found in [example-contract/transfer.ts][38]
 
-## Upgrading from @kadena/client 0.x to 1.0.0
+## Upgrading from @kda-community/client 0.x to 1.0.0
 
 The highlights of the difference between 0.x and 1.0.0 are:
 
@@ -526,9 +526,9 @@ getBalance(account).catch(console.error);
 
 ## Further development
 
-The `@kadena/client` is still in an early phase. Next steps will include to see
+The `@kda-community/client` is still in an early phase. Next steps will include to see
 what the community thinks of this approach. We'd love to hear your feedback and
-use cases, especially if the current `@kadena/client` and `@kadena/pactjs-cli`
+use cases, especially if the current `@kda-community/client` and `@kda-community/pactjs-cli`
 isn't sufficient.
 
 ## Contact the team

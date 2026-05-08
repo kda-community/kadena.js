@@ -1,6 +1,10 @@
-import type { ChainId, IPactModules, PactReturnType } from '@kadena/client';
-import { Pact, createSignWithKeypair } from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+import type {
+  ChainId,
+  IPactModules,
+  PactReturnType,
+} from '@kda-community/client';
+import { Pact, createSignWithKeypair } from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 
 import {
   addSigner,
@@ -8,9 +12,9 @@ import {
   execution,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 
-import { genKeyPair } from '@kadena/cryptography-utils';
+import { genKeyPair } from '@kda-community/cryptography-utils';
 import { submitClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';
 

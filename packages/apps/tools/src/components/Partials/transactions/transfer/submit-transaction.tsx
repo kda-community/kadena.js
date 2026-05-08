@@ -1,6 +1,6 @@
 import type { FormStatus } from '@/components/Global/FormStatusNotification';
 import { FormStatusNotification } from '@/components/Global/FormStatusNotification';
-import { Button, Stack } from '@kadena/kode-ui';
+import { Button, Stack } from '@kda-community/kode-ui';
 import useTranslation from 'next-translate/useTranslation';
 import type { FC } from 'react';
 import React, { useState } from 'react';
@@ -18,7 +18,7 @@ import {
 } from '@/services/transfer/submit-transaction';
 import type { INetworkData } from '@/utils/network';
 import { getApiHost } from '@/utils/network';
-import type { ChainId, ITransactionDescriptor } from '@kadena/client';
+import type { ChainId, ITransactionDescriptor } from '@kda-community/client';
 
 import {
   infoNotificationColor,
@@ -30,7 +30,7 @@ import { getExplorerLink } from '@/utils/getExplorerLink';
 import {
   MonoContentCopy,
   MonoKeyboardArrowRight,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import { useQueryClient } from '@tanstack/react-query';
 import type { PactCommandObject } from 'hw-app-kda-clone';
 import Trans from 'next-translate/Trans';

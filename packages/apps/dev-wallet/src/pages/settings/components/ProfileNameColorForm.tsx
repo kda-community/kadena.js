@@ -2,15 +2,15 @@ import { config } from '@/config';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { walletRepository } from '@/modules/wallet/wallet.repository';
 import { Label } from '@/pages/transaction/components/helpers';
-import { MonoCheck } from '@kadena/kode-icons/system';
-import { Button, Notification, Stack, TextField } from '@kadena/kode-ui';
+import { MonoCheck } from '@kda-community/kode-icons/system';
+import { Button, Notification, Stack, TextField } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 

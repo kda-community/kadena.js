@@ -1,11 +1,11 @@
-import type { ICommandResult } from '@kadena/chainweb-node-client';
+import type { ICommandResult } from '@kda-community/chainweb-node-client';
 import {
   createTransaction,
   Pact,
   readKeyset,
   signWithChainweaver,
-} from '@kadena/client';
-import { asyncPipe } from '@kadena/client-utils/core';
+} from '@kda-community/client';
+import { asyncPipe } from '@kda-community/client-utils/core';
 import {
   addKeyset,
   addSigner,
@@ -14,9 +14,9 @@ import {
   execution,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
-import { isSignedCommand } from '@kadena/pactjs';
-import type { ChainId } from '@kadena/types';
+} from '@kda-community/client/fp';
+import { isSignedCommand } from '@kda-community/pactjs';
+import type { ChainId } from '@kda-community/types';
 
 import { listen, pollCreateSpv, submitOne } from '../util/client';
 import { inspect } from '../util/fp-helpers';

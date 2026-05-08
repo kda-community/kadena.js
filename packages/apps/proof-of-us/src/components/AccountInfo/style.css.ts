@@ -1,4 +1,4 @@
-import { atoms } from '@kadena/kode-ui/styles';
+import { atoms } from '@kda-community/kode-ui/styles';
 import { globalStyle, style } from '@vanilla-extract/css';
 
 export const dropdownClass = style([

@@ -2,7 +2,7 @@ import type {
   IAccountInfo,
   ICommand,
   IUnsignedCommand,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 import type { SessionTypes } from '@walletconnect/types';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { WalletConnectAdapter } from '../WalletConnectAdapter';

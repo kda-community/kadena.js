@@ -1,4 +1,4 @@
-# Change Log - @kadena/pactjs
+# Change Log - @kda-community/pactjs
 
 ## 0.6.0
 

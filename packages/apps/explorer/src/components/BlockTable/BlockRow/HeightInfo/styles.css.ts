@@ -1,4 +1,4 @@
-import { atoms, responsiveStyle, tokens } from '@kadena/kode-ui/styles';
+import { atoms, responsiveStyle, tokens } from '@kda-community/kode-ui/styles';
 import { style } from '@vanilla-extract/css';
 
 export const blockInfoClass = style([

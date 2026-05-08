@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 import type { CommandResult } from '../../../utils/command.util.js';
 import { assertCommandError } from '../../../utils/command.util.js';
 

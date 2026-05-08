@@ -1,5 +1,5 @@
-import { ChainId, ICommand, IUnsignedCommand } from '@kadena/client';
-import { MonoAccountTree } from '@kadena/kode-icons/system';
+import { ChainId, ICommand, IUnsignedCommand } from '@kda-community/client';
+import { MonoAccountTree } from '@kda-community/kode-icons/system';
 import {
   Button,
   Card,
@@ -10,8 +10,8 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
-import { walletSdk } from '@kadena/wallet-sdk';
+} from '@kda-community/kode-ui';
+import { walletSdk } from '@kda-community/wallet-sdk';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useChains } from '../hooks/chains';

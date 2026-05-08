@@ -2,7 +2,7 @@
 import { env } from '@/utils/env';
 import { getAccountCookieName } from '@/utils/getAccountCookieName';
 import { store } from '@/utils/socket/store';
-import { connect } from '@kadena/spirekey-sdk';
+import { connect } from '@kda-community/spirekey-sdk';
 import { useRouter } from 'next/navigation';
 import type { FC, PropsWithChildren } from 'react';
 import { createContext, useCallback, useEffect, useState } from 'react';

@@ -1,4 +1,4 @@
-import { Card } from '@kadena/kode-ui';
+import { Card } from '@kda-community/kode-ui';
 import { FC, PropsWithChildren } from 'react';
 import { terminalWrapperClass } from './style.css';
 

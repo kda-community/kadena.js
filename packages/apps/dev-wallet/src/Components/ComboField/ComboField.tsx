@@ -1,8 +1,8 @@
 import {
   MonoKeyboardArrowDown,
   MonoKeyboardArrowUp,
-} from '@kadena/kode-icons/system';
-import { Button, Popover, Stack, TextField } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import { Button, Popover, Stack, TextField } from '@kda-community/kode-ui';
 import {
   ReactNode,
   useCallback,

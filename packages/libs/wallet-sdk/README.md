@@ -1,4 +1,4 @@
-# @kadena/wallet-sdk
+# @kda-community/wallet-sdk
 
 # Kadena Wallet SDK Documentation
 
@@ -81,10 +81,10 @@ To install the Kadena Wallet SDK, you can use npm or yarn:
 
 ```bash
 # Using npm
-npm install @kadena/wallet-sdk
+npm install @kda-community/wallet-sdk
 
 # Using yarn
-yarn add @kadena/wallet-sdk
+yarn add @kda-community/wallet-sdk
 ```
 
 ### Basic Usage
@@ -92,7 +92,7 @@ yarn add @kadena/wallet-sdk
 Import the `WalletSDK` class and create an instance:
 
 ```typescript
-import { WalletSDK } from '@kadena/wallet-sdk';
+import { WalletSDK } from '@kda-community/wallet-sdk';
 
 const walletSdk = new WalletSDK();
 ```

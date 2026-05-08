@@ -15,13 +15,13 @@ import {
   MonoAddLink,
   MonoDelete,
   MonoKeyboardArrowDown,
-} from '@kadena/kode-icons';
+} from '@kda-community/kode-icons';
 import {
   Button,
   Notification,
   NotificationFooter,
   NotificationHeading,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -30,7 +30,7 @@ import {
   SectionCardContentBlock,
   SectionCardHeader,
   SideBarBreadcrumbsItem,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 import { AdminBar } from '../AdminBar';
 

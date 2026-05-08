@@ -1,4 +1,4 @@
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 import fetch from 'cross-fetch';
 import type { Debugger } from 'debug';
 import _debug from 'debug';

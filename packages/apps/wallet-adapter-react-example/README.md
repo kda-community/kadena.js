@@ -1,13 +1,13 @@
 # Kadena React Example
 
-This example demonstrates how to integrate multiple Kadena wallet adapters (e.g. **Ecko** and **Zelcore**) into a React application using the **@kadena/wallet-adapter-react** package. The adapters themselves come from **@kadena/wallet-adapter-ecko** and **@kadena/wallet-adapter-zelcore**, respectively.
+This example demonstrates how to integrate multiple Kadena wallet adapters (e.g. **Ecko** and **Zelcore**) into a React application using the **@kda-community/wallet-adapter-react** package. The adapters themselves come from **@kda-community/wallet-adapter-ecko** and **@kda-community/wallet-adapter-zelcore**, respectively.
 
 ## Overview
 
-- **@kadena/wallet-adapter-core**  
+- **@kda-community/wallet-adapter-core**  
   Defines the standardized `Provider` interface, the `BaseWalletAdapter` abstract class (which enforces `"kadena_*"` method naming), and the `WalletAdapterClient` for managing multiple adapters.
 
-- **@kadena/wallet-adapter-react**  
+- **@kda-community/wallet-adapter-react**  
   Supplies a React context (`KadenaWalletProvider`) that instantiates a `WalletAdapterClient` from an array of adapters and tracks one “current adapter” by name. You can access this via the `useKadenaWallet` hook to connect, disconnect, sign transactions, etc.
 
 ## Setup
@@ -41,9 +41,9 @@ In this example, your React app retrieves the `WalletAdapterClient` and the “c
    ```tsx
    import ReactDOM from "react-dom/client";
    import App from "./App";
-   import { KadenaWalletProvider } from "@kadena/wallet-adapter-react";
-   import { EckoWalletAdapter } from "@kadena/wallet-adapter-ecko";
-   import { ZelcoreWalletAdapter } from "@kadena/wallet-adapter-zelcore";
+   import { KadenaWalletProvider } from "@kda-community/wallet-adapter-react";
+   import { EckoWalletAdapter } from "@kda-community/wallet-adapter-ecko";
+   import { ZelcoreWalletAdapter } from "@kda-community/wallet-adapter-zelcore";
 
    ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
      <React.StrictMode>
@@ -63,7 +63,7 @@ In this example, your React app retrieves the `WalletAdapterClient` and the “c
 
    ```tsx
    import React, { useState } from "react";
-   import { useKadenaWallet } from "@kadena/wallet-adapter-react";
+   import { useKadenaWallet } from "@kda-community/wallet-adapter-react";
 
    const App = () => {
      const { client } = useKadenaWallet();

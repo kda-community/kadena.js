@@ -1,6 +1,6 @@
 import { useNetworkInfoQuery } from '@/__generated__/sdk';
 import { NETWORK_POLLING_RATE } from '@/constants';
-import { Notification } from '@kadena/kode-ui';
+import { Notification } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useEffect } from 'react';
 

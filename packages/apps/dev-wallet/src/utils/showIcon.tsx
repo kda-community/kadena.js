@@ -1,5 +1,5 @@
 import { IProfile } from '@/modules/wallet/wallet.repository';
-import { MonoFingerprint, MonoKey } from '@kadena/kode-icons/system';
+import { MonoFingerprint, MonoKey } from '@kda-community/kode-icons/system';
 
 export const showIcon = (type?: IProfile['options']['authMode']) => {
   switch (type) {

@@ -13,7 +13,7 @@ import {
   submitClass,
 } from '@/pagestyles/account/account-transactions/filters/styles.css';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { MonoKeyboardArrowRight } from '@kadena/kode-icons';
+import { MonoKeyboardArrowRight } from '@kda-community/kode-icons';
 import {
   Box,
   Breadcrumbs,
@@ -23,7 +23,7 @@ import {
   Grid,
   GridItem,
   Heading,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import Debug from 'debug';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';

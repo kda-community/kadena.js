@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import type { TransferFieldsFragment } from '../../gql/graphql.js';
 import type { ITransfer } from '../../sdk/interface.js';
 import { parsePactNumber } from '../../utils/pact.util.js';

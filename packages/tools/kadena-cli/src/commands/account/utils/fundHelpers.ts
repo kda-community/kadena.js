@@ -1,7 +1,10 @@
-import type { ICommandResult, ITransactionDescriptor } from '@kadena/client';
-import { createClient } from '@kadena/client';
-import { describeModule } from '@kadena/client-utils';
-import type { ChainId } from '@kadena/types';
+import type {
+  ICommandResult,
+  ITransactionDescriptor,
+} from '@kda-community/client';
+import { createClient } from '@kda-community/client';
+import { describeModule } from '@kda-community/client-utils';
+import type { ChainId } from '@kda-community/types';
 
 import type { CommandResult } from '../../../utils/command.util.js';
 import { notEmpty } from '../../../utils/globalHelpers.js';

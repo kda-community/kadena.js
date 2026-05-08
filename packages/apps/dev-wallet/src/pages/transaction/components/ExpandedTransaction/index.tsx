@@ -1,4 +1,8 @@
-import { ICommand, IPactCommand, IUnsignedCommand } from '@kadena/client';
+import {
+  ICommand,
+  IPactCommand,
+  IUnsignedCommand,
+} from '@kda-community/client';
 import {
   Button,
   Card,
@@ -10,7 +14,7 @@ import {
   Heading,
   Stack,
   Tooltip,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import { Confirmation } from '@/Components/Confirmation/Confirmation';
 import {
@@ -20,17 +24,17 @@ import {
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { copyTransactionAs } from '@/utils/copyTransactionAs';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { base64UrlEncodeArr } from '@kadena/cryptography-utils';
+import { base64UrlEncodeArr } from '@kda-community/cryptography-utils';
 import {
   MonoClose,
   MonoContentCopy,
   MonoMoreVert,
   MonoShare,
   MonoTroubleshoot,
-} from '@kadena/kode-icons/system';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
-import { token } from '@kadena/kode-ui/styles';
-import { execCodeParser } from '@kadena/pactjs-generator';
+} from '@kda-community/kode-icons/system';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
+import { token } from '@kda-community/kode-ui/styles';
+import { execCodeParser } from '@kda-community/pactjs-generator';
 import { useEffect, useMemo, useState } from 'react';
 import { CodeView } from '../code-components/CodeView';
 import { RenderSigner } from '../Signer';

@@ -1,4 +1,4 @@
-import { MonoWallet } from '@kadena/kode-icons';
+import { MonoWallet } from '@kda-community/kode-icons';
 import {
   Button,
   Card,
@@ -10,15 +10,15 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type {
   IAccountInfo,
   IAdapter,
   INetworkInfo,
   IUnsignedCommand,
-} from '@kadena/wallet-adapter-core';
-import { isKeySetGuard } from '@kadena/wallet-adapter-core';
-import { useKadenaWallet } from '@kadena/wallet-adapter-react';
+} from '@kda-community/wallet-adapter-core';
+import { isKeySetGuard } from '@kda-community/wallet-adapter-core';
+import { useKadenaWallet } from '@kda-community/wallet-adapter-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { createTransferCmd } from './transferCmd';
 import { createTransferTx } from './transferTx';

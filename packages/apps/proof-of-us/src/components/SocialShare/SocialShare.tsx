@@ -9,8 +9,8 @@ import {
   MonoLogoLinkedin,
   MonoLogoX,
   MonoThumbUpOffAlt,
-} from '@kadena/kode-icons';
-import { Stack } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons';
+import { Stack } from '@kda-community/kode-ui';
 import type { FC, MouseEvent } from 'react';
 import { useEffect, useState } from 'react';
 import { IconButton } from '../IconButton/IconButton';
@@ -25,7 +25,7 @@ export const SocialShare: FC<IProps> = ({ data, tokenId }) => {
   const label = data.name;
   const text = `${data.name} | Proof Of Us`;
   const title = `${data?.name} | Proof Of Us (Powered by Kadena)`;
-  const twitterTitle = `${data?.name} @kadena_io `;
+  const twitterTitle = `${data?.name} @kda-community_io `;
   const url = `${process.env.NEXT_PUBLIC_URL}/share/${tokenId}`;
 
   const shareDetails = { url, title, text, label };

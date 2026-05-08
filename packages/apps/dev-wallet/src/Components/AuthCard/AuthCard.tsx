@@ -1,4 +1,4 @@
-import { Box } from '@kadena/kode-ui';
+import { Box } from '@kda-community/kode-ui';
 import type { FC, ReactNode } from 'react';
 import { authCard } from './style.css.ts';
 

@@ -2,14 +2,14 @@ import { useAsset } from '@/hooks/asset';
 import { useSetCompliance } from '@/hooks/setCompliance';
 import type { ISetComplianceParametersProps } from '@/services/setComplianceParameters';
 import { setComplianceValue } from '@/utils/setComplianceValue';
-import { Button, Stack, TextField } from '@kadena/kode-ui';
+import { Button, Stack, TextField } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC, ReactElement } from 'react';
 import { cloneElement, useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';

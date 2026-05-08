@@ -1,4 +1,4 @@
-import { getHostUrl, INetworkOptions } from '@kadena/client';
+import { getHostUrl, INetworkOptions } from '@kda-community/client';
 import { INetwork } from './network.repository';
 
 export const fetchNetworkId = async (host: string) => {

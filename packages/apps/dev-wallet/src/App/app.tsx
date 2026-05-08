@@ -2,8 +2,8 @@ import { InDevelopmentProvider } from '@/Components/InDevelopmentProvider/InDeve
 import { MaintenanceProvider } from '@/Components/MaintenanceProvider/MaintenanceProvider';
 import { DatabaseProvider } from '@/modules/db/db.provider';
 import { WalletProvider } from '@/modules/wallet/wallet.provider';
-import { MediaContextProvider, useTheme } from '@kadena/kode-ui';
-import { SideBarLayoutProvider } from '@kadena/kode-ui/patterns';
+import { MediaContextProvider, useTheme } from '@kda-community/kode-ui';
+import { SideBarLayoutProvider } from '@kda-community/kode-ui/patterns';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 import { PromptProvider } from '../Components/PromptProvider/Prompt';

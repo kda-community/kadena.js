@@ -1,4 +1,4 @@
-# Change Log - @kadena/chainwebjs
+# Change Log - @kda-community/chainwebjs
 
 ## 0.1.4
 

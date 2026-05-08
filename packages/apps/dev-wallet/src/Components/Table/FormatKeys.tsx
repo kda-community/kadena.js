@@ -1,4 +1,4 @@
-import { MonoKey, MonoRemoveRedEye } from '@kadena/kode-icons/system';
+import { MonoKey, MonoRemoveRedEye } from '@kda-community/kode-icons/system';
 import {
   Button,
   Dialog,
@@ -7,11 +7,11 @@ import {
   DialogHeaderSubtitle,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   ICompactTableFormatterProps,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { heightDialogClass } from './styles.css';
 

@@ -1,7 +1,7 @@
 import type { INetwork } from '@/constants/network';
 import { sendSentry } from '@/hooks/graphquery';
-import { MonoAutorenew } from '@kadena/kode-icons/system';
-import { Stack } from '@kadena/kode-ui';
+import { MonoAutorenew } from '@kda-community/kode-icons/system';
+import { Stack } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren, ReactElement } from 'react';
 import React, { createContext, useContext, useState } from 'react';

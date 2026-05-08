@@ -1,5 +1,5 @@
 import { EVENT_NAMES, analyticsEvent } from '@/utils/analytics';
-import { Heading, Stack } from '@kadena/kode-ui';
+import { Heading, Stack } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import React from 'react';

@@ -3,7 +3,7 @@ import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import type { ITransferTokensProps } from '@/services/transferTokens';
 import { transferTokens } from '@/services/transferTokens';
-import { maskValue } from '@kadena/kode-ui';
+import { maskValue } from '@kda-community/kode-ui';
 import { useEffect, useState } from 'react';
 import { useAccount } from './account';
 import { useAsset } from './asset';

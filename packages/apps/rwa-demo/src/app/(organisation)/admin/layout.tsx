@@ -7,8 +7,8 @@ import { GasPayableBanner } from '@/components/GasPayableBanner/GasPayableBanner
 import { GraphOnlineBanner } from '@/components/GraphOnlineBanner/GraphOnlineBanner';
 import { TransactionPendingIcon } from '@/components/TransactionPendingIcon/TransactionPendingIcon';
 import { useTransactions } from '@/hooks/transactions';
-import { MonoAccountBalanceWallet } from '@kadena/kode-icons';
-import { Button, Link, Stack } from '@kadena/kode-ui';
+import { MonoAccountBalanceWallet } from '@kda-community/kode-icons';
+import { Button, Link, Stack } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
@@ -17,7 +17,7 @@ import {
   SideBarLayout,
   SideBarTopBanner,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import React, { useEffect, useRef, useState } from 'react';
 
 import { KLogo } from '@/app/(app)/KLogo';

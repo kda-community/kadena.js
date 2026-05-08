@@ -1,5 +1,5 @@
 {
-  "name": "@kadena-dev/markdown",
+  "name": "@kda-community-dev/markdown",
   "version": "1.0.3",
   "private": true,
   "description": "Kadena monorepo Remark plugins",
@@ -36,8 +36,8 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/mdast": "^4.0.1",
     "@types/node": "^20.12.7",

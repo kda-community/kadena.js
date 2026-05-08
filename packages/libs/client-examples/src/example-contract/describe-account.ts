@@ -1,4 +1,4 @@
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 import { dirtyRead } from './util/client';
 
 const account: string =

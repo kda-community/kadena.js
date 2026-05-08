@@ -1,6 +1,6 @@
 import type { AccountQuery } from '@/__generated__/sdk';
 import { useRouter } from '@/hooks/router';
-import { Media, Stack } from '@kadena/kode-ui';
+import { Media, Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import React, { useEffect, useState } from 'react';
 import { QRCode } from 'react-qrcode-logo';

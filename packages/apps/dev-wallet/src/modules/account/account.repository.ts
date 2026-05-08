@@ -1,6 +1,6 @@
 import { IDBService, dbService } from '@/modules/db/db.service';
 import { execInSequence } from '@/utils/helpers';
-import { BuiltInPredicate, ChainId } from '@kadena/client';
+import { BuiltInPredicate, ChainId } from '@kda-community/client';
 import { UUID } from '../types';
 import { Guard, KeysetGuard, KeysetRefGuard } from './guards';
 

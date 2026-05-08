@@ -6,7 +6,7 @@ import {
   retrieveCredential,
 } from '@/utils/webAuthn';
 
-import { base64UrlDecodeArr } from '@kadena/cryptography-utils';
+import { base64UrlDecodeArr } from '@kda-community/cryptography-utils';
 
 import { IKeySource } from '../../wallet/wallet.repository';
 import { IWebAuthn, keySourceRepository } from '../key-source.repository';

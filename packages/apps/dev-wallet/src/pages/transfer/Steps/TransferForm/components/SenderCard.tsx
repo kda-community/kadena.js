@@ -11,10 +11,17 @@ import { Label } from '@/pages/transaction/components/helpers';
 import { AccountSearchBox } from '@/pages/transfer/Components/AccountSearchBox';
 import { formatList } from '@/utils/helpers';
 import { useShow } from '@/utils/useShow';
-import { ChainId } from '@kadena/client';
-import { MonoSwipeRightAlt } from '@kadena/kode-icons/system';
-import { Button, Card, Select, SelectItem, Stack, Text } from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
+import { ChainId } from '@kda-community/client';
+import { MonoSwipeRightAlt } from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Card,
+  Select,
+  SelectItem,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
 import { FC } from 'react';
 import { Control, Controller } from 'react-hook-form';
 import { ITransfer } from '../TransferForm';

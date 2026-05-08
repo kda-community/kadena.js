@@ -1,4 +1,4 @@
-import { Stack, TextField } from '@kadena/kode-ui';
+import { Stack, TextField } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import type { FieldErrors, UseFormRegister } from 'react-hook-form';
 

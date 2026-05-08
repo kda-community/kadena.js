@@ -11,7 +11,7 @@ export default builder.objectType('GraphConfiguration', {
     }),
     version: t.field({
       type: 'String',
-      description: 'The version of the @kadena/graph package.',
+      description: 'The version of the @kda-community/graph package.',
       resolve: () => dotenv.KADENA_GRAPH_VERSION,
     }),
   }),

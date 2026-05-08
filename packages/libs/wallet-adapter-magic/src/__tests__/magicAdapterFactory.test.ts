@@ -1,4 +1,4 @@
-import type { IProvider } from '@kadena/wallet-adapter-core';
+import type { IProvider } from '@kda-community/wallet-adapter-core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { createMagicAdapter } from '../magicAdapterFactory';
 import { MagicAdapter } from '../magicAdapterFactory';

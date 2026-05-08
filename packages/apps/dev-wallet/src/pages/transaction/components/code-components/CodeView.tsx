@@ -1,9 +1,9 @@
 import { ErrorBoundary } from '@/Components/ErrorBoundary/ErrorBoundary';
 import { parseArg } from '@/utils/parsedCodeToPact';
-import { IPactCommand } from '@kadena/client';
-import { Card, Heading, Stack, Text } from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
-import { IParsedCode } from '@kadena/pactjs-generator';
+import { IPactCommand } from '@kda-community/client';
+import { Card, Heading, Stack, Text } from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
+import { IParsedCode } from '@kda-community/pactjs-generator';
 import { breakAllClass } from '../style.css';
 import { CodeViewPart } from './CodeViewPart';
 

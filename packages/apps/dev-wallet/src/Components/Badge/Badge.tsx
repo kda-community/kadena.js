@@ -1,5 +1,5 @@
-import { MonoAutoAwesome, MonoLink } from '@kadena/kode-icons/system';
-import { Stack, Text } from '@kadena/kode-ui';
+import { MonoAutoAwesome, MonoLink } from '@kda-community/kode-icons/system';
+import { Stack, Text } from '@kda-community/kode-ui';
 import { FC, PropsWithChildren } from 'react';
 import { chainClass } from './style.css';
 
@@ -22,7 +22,9 @@ export const Chain: FC<{ chainId: string }> = ({ chainId }) => (
   <Stack>
     <Badge>
       <MonoLink fontSize={16} />
-      <Text size='smallest' variant='code' color='inherit'>{chainId.padStart(2, '0')}</Text>
+      <Text size="smallest" variant="code" color="inherit">
+        {chainId.padStart(2, '0')}
+      </Text>
     </Badge>
   </Stack>
 );

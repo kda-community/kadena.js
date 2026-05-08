@@ -2,9 +2,13 @@ import client from '@/constants/client';
 import type { NetworkId, NetworkIds } from '@/constants/kadena';
 import type { INetworkData } from '@/utils/network';
 import { getApiHost } from '@/utils/network';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
-import type { ChainId, ICommand, ITransactionDescriptor } from '@kadena/client';
-import { createClient } from '@kadena/client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
+import type {
+  ChainId,
+  ICommand,
+  ITransactionDescriptor,
+} from '@kda-community/client';
+import { createClient } from '@kda-community/client';
 import Debug from 'debug';
 
 export interface ISubmitTxResponseBody {

@@ -1,5 +1,5 @@
-import type { BuiltInPredicate, ChainId, ISigner } from '@kadena/client';
-import { createPrincipal as createPrincipalUtil } from '@kadena/client-utils/built-in';
+import type { BuiltInPredicate, ChainId, ISigner } from '@kda-community/client';
+import { createPrincipal as createPrincipalUtil } from '@kda-community/client-utils/built-in';
 
 export function parseAccountNameAndKeys(
   accountName: string | { account: string; publicKeys: ISigner[] },

@@ -1,6 +1,10 @@
 import { useUser } from '@/hooks/user';
 import { shortenString } from '@/utils/shortenString';
-import { MonoAccountBox, MonoLogout, MonoSettings } from '@kadena/kode-icons';
+import {
+  MonoAccountBox,
+  MonoLogout,
+  MonoSettings,
+} from '@kda-community/kode-icons';
 import {
   Button,
   ButtonGroup,
@@ -9,12 +13,12 @@ import {
   Stack,
   ThemeAnimateIcon,
   useTheme,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   SideBarItem,
   SideBarItemsInline,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useRouter } from 'next/navigation';
 import type { FC } from 'react';
 

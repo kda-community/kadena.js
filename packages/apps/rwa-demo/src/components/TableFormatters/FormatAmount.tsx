@@ -1,6 +1,6 @@
-import { MonoArrowDropDown, MonoArrowDropUp } from '@kadena/kode-icons';
-import { Stack } from '@kadena/kode-ui';
-import type { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
+import { MonoArrowDropDown, MonoArrowDropUp } from '@kda-community/kode-icons';
+import { Stack } from '@kda-community/kode-ui';
+import type { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
 import { formatAmountClass } from './style.css';
 
 export interface IActionProps {}

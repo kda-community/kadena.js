@@ -5,14 +5,14 @@ import { ChangePasswordForm } from '@/components/Forms/ChangePasswordForm/Change
 import { Profile } from '@/components/Profile/Profile';
 import { SideBarBreadcrumbs } from '@/components/SideBarBreadcrumbs/SideBarBreadcrumbs';
 import { WalletsList } from '@/components/WalletsList/WalletsList';
-import { Stack, Link as UILink } from '@kadena/kode-ui';
+import { Stack, Link as UILink } from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
   SideBarBreadcrumbsItem,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 

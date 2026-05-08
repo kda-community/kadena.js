@@ -1,4 +1,4 @@
-import { maskValue } from '@kadena/kode-ui';
+import { maskValue } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React from 'react';
 

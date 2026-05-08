@@ -1,4 +1,4 @@
-import { recipe } from '@kadena/kode-ui';
+import { recipe } from '@kda-community/kode-ui';
 import { keyframes } from '@vanilla-extract/css';
 
 const scale = keyframes({

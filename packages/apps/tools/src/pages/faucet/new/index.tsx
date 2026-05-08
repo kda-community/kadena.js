@@ -1,4 +1,4 @@
-import type { ICommandResult } from '@kadena/chainweb-node-client';
+import type { ICommandResult } from '@kda-community/chainweb-node-client';
 import {
   Box,
   Breadcrumbs,
@@ -9,7 +9,7 @@ import {
   Notification,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import {
   hoverTagContainerStyle,
@@ -56,7 +56,7 @@ import { validatePublicKey } from '@/services/utils/utils';
 import { getExplorerLink } from '@/utils/getExplorerLink';
 import { stripAccountPrefix } from '@/utils/string';
 import { zodResolver } from '@hookform/resolvers/zod';
-import type { ITransactionDescriptor } from '@kadena/client';
+import type { ITransactionDescriptor } from '@kda-community/client';
 import {
   MonoAdd,
   MonoContentCopy,
@@ -64,7 +64,7 @@ import {
   MonoInfo,
   MonoKeyboardArrowRight,
   MonoLink,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import Trans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';

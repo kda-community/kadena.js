@@ -1,4 +1,4 @@
-# @kadena/chainweb-evm-dashboard
+# @kda-community/chainweb-evm-dashboard
 
 ## 1.0.0
 

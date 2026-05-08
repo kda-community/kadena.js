@@ -1,10 +1,10 @@
 import { useNetwork } from '@/hooks/networks';
-import type { IBreadcrumbsProps } from '@kadena/kode-ui';
-import { Badge } from '@kadena/kode-ui';
+import type { IBreadcrumbsProps } from '@kda-community/kode-ui';
+import { Badge } from '@kda-community/kode-ui';
 import {
   SideBarBreadcrumbsItem,
   SideBarBreadcrumbs as SideBarBreadcrumbsUI,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 import type { FC } from 'react';
 import React from 'react';

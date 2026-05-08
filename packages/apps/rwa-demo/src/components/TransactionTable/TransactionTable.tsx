@@ -1,7 +1,10 @@
 import { useInvestorTransactions } from '@/hooks/investorTransactions';
 import type { IRecord } from '@/utils/filterRemovedRecords';
 import { loadingData } from '@/utils/loadingData';
-import { CompactTable, CompactTableFormatters } from '@kadena/kode-ui/patterns';
+import {
+  CompactTable,
+  CompactTableFormatters,
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { FormatAmount } from '../TableFormatters/FormatAmount';
 import { FormatDate } from '../TableFormatters/FormatDate';

@@ -1,7 +1,11 @@
-import type { ChainId } from '@kadena/client';
-import { Pact } from '@kadena/client';
-import { dirtyReadClient } from '@kadena/client-utils/core';
-import { composePactCommand, execution, setMeta } from '@kadena/client/fp';
+import type { ChainId } from '@kda-community/client';
+import { Pact } from '@kda-community/client';
+import { dirtyReadClient } from '@kda-community/client-utils/core';
+import {
+  composePactCommand,
+  execution,
+  setMeta,
+} from '@kda-community/client/fp';
 import { dotenv } from '@utils/dotenv';
 import { networkData } from '@utils/network';
 

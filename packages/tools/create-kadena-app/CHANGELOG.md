@@ -1,4 +1,4 @@
-# @kadena/create-kadena-app
+# @kda-community/create-kadena-app
 
 ## 0.2.1
 

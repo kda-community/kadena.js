@@ -1,6 +1,6 @@
-import type { ITransactionDescriptor } from '@kadena/client';
-import { createClient } from '@kadena/client';
-import { describeModule } from '@kadena/client-utils';
+import type { ITransactionDescriptor } from '@kda-community/client';
+import { createClient } from '@kda-community/client';
+import { describeModule } from '@kda-community/client-utils';
 import type { Mock } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import deployDevNetFaucet from '../../../devnet/faucet/deploy/index.js';
@@ -10,7 +10,7 @@ import {
   getTxDetails,
 } from '../fundHelpers.js';
 
-vi.mock('@kadena/client', async (importOriginal) => {
+vi.mock('@kda-community/client', async (importOriginal) => {
   const actual = (await importOriginal()) as {};
   return {
     ...actual,
@@ -102,7 +102,7 @@ describe('getTxDetails', () => {
 });
 
 describe('findMissingModuleDeployments', () => {
-  vi.mock('@kadena/client-utils', async (importOriginal) => {
+  vi.mock('@kda-community/client-utils', async (importOriginal) => {
     const actual = (await importOriginal()) as {};
     return {
       ...actual,

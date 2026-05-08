@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 import type { ITransactionBody } from '../built-in/deploy-contract';

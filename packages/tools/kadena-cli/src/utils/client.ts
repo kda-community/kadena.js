@@ -4,8 +4,8 @@
   needed for fundCommand.ts and probably others
   probaby merge with other config
  */
-import { createClient } from '@kadena/client';
-import type { ChainId } from '@kadena/types';
+import { createClient } from '@kda-community/client';
+import type { ChainId } from '@kda-community/types';
 
 // you can edit this function if you want to use different network like dev-net or a private net
 export const apiHostGenerator = ({

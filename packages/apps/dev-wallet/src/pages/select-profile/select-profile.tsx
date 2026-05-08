@@ -5,7 +5,7 @@ import { CardFooterContent } from '@/App/LayoutLandingPage/components/CardFooter
 import { ChainWeaverLogo } from '@/Components/ChainweaverLogo/ChainweaverLogo';
 import { ProfileListItem } from '@/Components/ProfileListItem/ProfileListItem';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { MonoAdd, MonoMoreVert } from '@kadena/kode-icons';
+import { MonoAdd, MonoMoreVert } from '@kda-community/kode-icons';
 import {
   Box,
   Button,
@@ -16,7 +16,7 @@ import {
   Stack,
   Text,
   Link as UiLink,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { Link } from 'react-router-dom';
 import { wrapperClass } from '../errors/styles.css';
 

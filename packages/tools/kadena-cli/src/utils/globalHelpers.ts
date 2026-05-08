@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { load } from 'js-yaml';
 import path from 'path';
 import sanitize from 'sanitize-filename';

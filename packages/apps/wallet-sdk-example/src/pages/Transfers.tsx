@@ -1,4 +1,4 @@
-import { MonoFormatListBulleted } from '@kadena/kode-icons/system';
+import { MonoFormatListBulleted } from '@kda-community/kode-icons/system';
 import {
   Card,
   Cell,
@@ -11,7 +11,7 @@ import {
   TableBody,
   TableHeader,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import SdkFunctionDisplay from '../components/SdkFunctionDisplayer'; // Demo
 import { TextEllipsis } from '../components/Text';

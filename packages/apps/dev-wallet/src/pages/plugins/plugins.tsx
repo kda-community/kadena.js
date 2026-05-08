@@ -3,15 +3,15 @@ import { SideBarBreadcrumbs } from '@/Components/SideBarBreadcrumbs/SideBarBread
 import { usePlugins } from '@/modules/plugins/plugin.provider';
 import { pluginManager } from '@/modules/plugins/PluginManager';
 import { getInitials } from '@/utils/get-initials';
-import { MonoApps } from '@kadena/kode-icons/system';
-import { Stack, Text } from '@kadena/kode-ui';
+import { MonoApps } from '@kda-community/kode-icons/system';
+import { Stack, Text } from '@kda-community/kode-ui';
 import {
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
   SideBarBreadcrumbsItem,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { noStyleLinkClass } from '../home/style.css';

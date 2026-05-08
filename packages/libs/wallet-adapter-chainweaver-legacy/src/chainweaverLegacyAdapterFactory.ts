@@ -1,7 +1,7 @@
 import type {
   AdapterFactoryCreator,
   IBaseWalletFactoryOptions,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 import { CHAINWEAVER_LEGACY_ADAPTER } from './constants';
 import { detectChainweaverLegacyProvider } from './provider';
 

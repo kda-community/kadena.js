@@ -1,4 +1,4 @@
-import type { INetworkInfo } from '@kadena/wallet-adapter-core';
+import type { INetworkInfo } from '@kda-community/wallet-adapter-core';
 
 export const ERRORS = {
   PROVIDER_NOT_DETECTED: 'Provider not detected',

@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { pollStatus } from './util/client';
 
 export async function pollRequestsAndWaitForEachPromiseExample(): Promise<void> {

@@ -3,14 +3,14 @@ import { useGetFrozenTokens } from '@/hooks/getFrozenTokens';
 import { useGetInvestorBalance } from '@/hooks/getInvestorBalance';
 import { useTogglePartiallyFreezeTokens } from '@/hooks/togglePartiallyFreezeTokens';
 import type { ITogglePartiallyFreezeTokensProps } from '@/services/togglePartiallyFreezeTokens';
-import { Button, TextField } from '@kadena/kode-ui';
+import { Button, TextField } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC, ReactElement } from 'react';
 import { cloneElement, useEffect, useRef, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';

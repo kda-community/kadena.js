@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/bootstrap-lib
+# @kda-community/bootstrap-lib
 
 <picture>
   <source srcset="https://raw.githubusercontent.com/kadena-community/kadena.js/main/common/images/Kadena.JS_logo-white.png" media="(prefers-color-scheme: dark)"/>

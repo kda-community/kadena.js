@@ -6,9 +6,9 @@ import {
 import { isKeysetGuard } from '@/modules/account/guards';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { shorten } from '@/utils/helpers';
-import { BuiltInPredicate } from '@kadena/client';
-import { createPrincipal } from '@kadena/client-utils/built-in';
-import { MonoAdd, MonoDelete, MonoKey } from '@kadena/kode-icons/system';
+import { BuiltInPredicate } from '@kda-community/client';
+import { createPrincipal } from '@kda-community/client-utils/built-in';
+import { MonoAdd, MonoDelete, MonoKey } from '@kda-community/kode-icons/system';
 import {
   Badge,
   Button,
@@ -21,12 +21,12 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { keyColumnClass, keyItemClass } from './style.css';

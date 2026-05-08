@@ -22,7 +22,7 @@ function getMonorepoPackagesFromPackageJson() {
 }
 
 const monorepoPackages = getMonorepoPackagesFromPackageJson();
-monorepoPackages.push('@kadena/client/fp');
+monorepoPackages.push('@kda-community/client/fp');
 
 export default defineConfig({
   plugins: [vanillaExtractPlugin(), react()],

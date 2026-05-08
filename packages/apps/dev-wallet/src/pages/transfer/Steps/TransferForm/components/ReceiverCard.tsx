@@ -12,13 +12,13 @@ import { AccountSearchBox } from '@/pages/transfer/Components/AccountSearchBox';
 import { titleBadgeClass } from '@/pages/transfer/Components/style.css';
 import { formatList } from '@/utils/helpers';
 import { useShow } from '@/utils/useShow';
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 import {
   MonoAdd,
   MonoCopyAll,
   MonoDelete,
   MonoSaveAlt,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Badge,
   Button,
@@ -28,8 +28,8 @@ import {
   SelectItem,
   Stack,
   TextField,
-} from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
 import { FC, Fragment, useCallback, useEffect } from 'react';
 import {
   Control,

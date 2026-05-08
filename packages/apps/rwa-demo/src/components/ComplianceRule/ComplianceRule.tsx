@@ -1,8 +1,8 @@
 import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import { useSetCompliance } from '@/hooks/setCompliance';
 import type { IComplianceRuleTypes } from '@/services/getComplianceRules';
-import { MonoPause, MonoPlayArrow } from '@kadena/kode-icons';
-import { Badge, Stack, SwitchButton, Text } from '@kadena/kode-ui';
+import { MonoPause, MonoPlayArrow } from '@kda-community/kode-icons';
+import { Badge, Stack, SwitchButton, Text } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { Confirmation } from '../Confirmation/Confirmation';
 import { TransactionTypeSpinner } from '../TransactionTypeSpinner/TransactionTypeSpinner';

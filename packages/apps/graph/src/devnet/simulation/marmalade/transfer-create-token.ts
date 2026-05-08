@@ -1,15 +1,15 @@
 import type { IAccount } from '@devnet/utils';
-import type { ICommandResult } from '@kadena/client';
-import { Pact, createSignWithKeypair, readKeyset } from '@kadena/client';
-import { submitClient } from '@kadena/client-utils/core';
+import type { ICommandResult } from '@kda-community/client';
+import { Pact, createSignWithKeypair, readKeyset } from '@kda-community/client';
+import { submitClient } from '@kda-community/client-utils/core';
 import {
   addKeyset,
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import type { IPactDecimal } from '@kadena/types';
+} from '@kda-community/client/fp';
+import type { IPactDecimal } from '@kda-community/types';
 import { dotenv } from '@utils/dotenv';
 import { networkData } from '@utils/network';
 

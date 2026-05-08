@@ -150,7 +150,7 @@ runSystemsCheck()
     ╚██████╔╝██║  ██║██║  ██║██║     ██║  ██║
      ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝`);
       console.info(`
-        @kadena/graph version: ${dotenv.KADENA_GRAPH_VERSION}
+        @kda-community/graph version: ${dotenv.KADENA_GRAPH_VERSION}
         Node Env: ${dotenv.NODE_ENV}`);
       console.info(
         `\nServer is running on http://${dotenv.HOST}:${dotenv.PORT}/graphql\n`,

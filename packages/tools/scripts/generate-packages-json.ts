@@ -2,7 +2,7 @@ import fg from 'fast-glob';
 import fs from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import * as prettier from "prettier";
+import * as prettier from 'prettier';
 
 // Generate `packages.json` in root
 // Usage: `npx tsx packages/tools/scripts/generate-packages-json.ts`
@@ -24,9 +24,15 @@ const main = async () => {
       ...pkg,
     }))
     .sort((a, b) => {
-      if (a.name.startsWith('@kadena/') && !b.name.startsWith('@kadena/'))
+      if (
+        a.name.startsWith('@kda-community/') &&
+        !b.name.startsWith('@kda-community/')
+      )
         return -1;
-      if (b.name.startsWith('@kadena/') && !a.name.startsWith('@kadena/'))
+      if (
+        b.name.startsWith('@kda-community/') &&
+        !a.name.startsWith('@kda-community/')
+      )
         return 1;
       return a.name > b.name ? 1 : -1;
     })

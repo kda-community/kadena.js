@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { z } from 'zod';
 import { chainIdValidation } from '../commands/account/utils/accountHelpers.js';
 import type { ICustomNetworkChoice } from '../commands/networks/utils/networkHelpers.js';

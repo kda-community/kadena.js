@@ -1,5 +1,5 @@
 {
-  "name": "@kadena/dev-wallet-example",
+  "name": "@kda-community/dev-wallet-example",
   "version": "0.2.9",
   "private": true,
   "scripts": {
@@ -9,8 +9,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@kadena/client": "workspace:*",
-    "@kadena/client-utils": "workspace:*",
+    "@kda-community/client": "workspace:*",
+    "@kda-community/client-utils": "workspace:*",
     "next": "~15.4.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"

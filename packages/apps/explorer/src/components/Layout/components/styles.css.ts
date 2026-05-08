@@ -4,7 +4,7 @@ import {
   responsiveStyle,
   token,
   tokens,
-} from '@kadena/kode-ui/styles';
+} from '@kda-community/kode-ui/styles';
 import { globalStyle, style } from '@vanilla-extract/css';
 
 export const searchWrapperVariants = recipe({

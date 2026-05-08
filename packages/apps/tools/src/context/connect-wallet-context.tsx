@@ -4,7 +4,7 @@ import { env } from '@/utils/env';
 import type { INetworkData } from '@/utils/network';
 import { getAllNetworks, getInitialNetworks } from '@/utils/network';
 import { getItem, setItem } from '@/utils/persist';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
 import { WalletConnectModal } from '@walletconnect/modal';
 import Client from '@walletconnect/sign-client';
 import type { PairingTypes, SessionTypes } from '@walletconnect/types';

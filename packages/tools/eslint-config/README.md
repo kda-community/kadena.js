@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena-dev/eslint-config
+# @kda-community-dev/eslint-config
 
 Kadena monorepo eslint-config
 
@@ -14,18 +14,18 @@ Kadena monorepo eslint-config
 ## Usage
 
 ```sh
-pnpm add -D @kadena-dev/eslint-config
+pnpm add -D @kda-community-dev/eslint-config
 ```
 
 Use an ESLint config file like `.eslintrc.js` in the root of your package and
-refer to this `@kadena-dev/eslint-config` package with a profile:
+refer to this `@kda-community-dev/eslint-config` package with a profile:
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
 require('@rushstack/eslint-config/patch/modern-module-resolution');
 
 module.exports = {
-  extends: ['@kadena-dev/eslint-config/profile/lib'],
+  extends: ['@kda-community-dev/eslint-config/profile/lib'],
   parserOptions: { tsconfigRootDir: __dirname },
 };
 ```

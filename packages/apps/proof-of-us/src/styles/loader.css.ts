@@ -1,4 +1,4 @@
-import { token } from '@kadena/kode-ui/styles';
+import { token } from '@kda-community/kode-ui/styles';
 import { keyframes, style } from '@vanilla-extract/css';
 
 const animation = keyframes({

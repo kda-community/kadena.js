@@ -1,9 +1,9 @@
 import { CopyButton } from '@/components/CopyButton/CopyButton';
 import { ValueLoader } from '@/components/LoadingSkeleton/ValueLoader/ValueLoader';
 import { Link } from '@/components/Routing/Link';
-import { MonoArrowOutward } from '@kadena/kode-icons';
-import { Stack, Text } from '@kadena/kode-ui';
-import { atoms } from '@kadena/kode-ui/styles';
+import { MonoArrowOutward } from '@kda-community/kode-icons';
+import { Stack, Text } from '@kda-community/kode-ui';
+import { atoms } from '@kda-community/kode-ui/styles';
 import classNames from 'classnames';
 import React from 'react';
 import {

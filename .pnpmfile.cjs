@@ -1,7 +1,7 @@
 const ALLOWED_DEPENDENCIES = {
-  '@kadena/js-monorepo': [
+  '@kda-community/js-monorepo': [
     '@changesets/cli',
-    '@kadena-dev/markdown',
+    '@kda-community-dev/markdown',
     'buffer',
     'jiti',
     'knip',

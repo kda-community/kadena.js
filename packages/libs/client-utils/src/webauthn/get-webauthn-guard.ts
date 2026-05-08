@@ -1,6 +1,6 @@
-import type { ChainId } from '@kadena/client';
-import { execution } from '@kadena/client/fp';
-import type { NetworkId } from '@kadena/types';
+import type { ChainId } from '@kda-community/client';
+import { execution } from '@kda-community/client/fp';
+import type { NetworkId } from '@kda-community/types';
 import { pipe } from 'ramda';
 import { dirtyReadClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';

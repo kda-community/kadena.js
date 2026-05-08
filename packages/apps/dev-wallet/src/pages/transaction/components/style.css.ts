@@ -1,4 +1,4 @@
-import { tokens, vars } from '@kadena/kode-ui/styles';
+import { tokens, vars } from '@kda-community/kode-ui/styles';
 import { globalStyle, style } from '@vanilla-extract/css';
 
 export const footerClass = style({

@@ -1,6 +1,6 @@
-import type { ChainId } from '@kadena/client';
-import { Pact } from '@kadena/client';
-import { generateDts, pactParser } from '@kadena/pactjs-generator';
+import type { ChainId } from '@kda-community/client';
+import { Pact } from '@kda-community/client';
+import { generateDts, pactParser } from '@kda-community/pactjs-generator';
 import { EOL } from 'os';
 import { dirname, join } from 'path';
 import * as prettier from 'prettier';
@@ -155,10 +155,10 @@ export class PactJSService implements IPactJSService {
           {
             name: TARGET_PACKAGE,
             version,
-            description: 'TypeScript definitions for @kadena/client',
+            description: 'TypeScript definitions for @kda-community/client',
             types: 'index.d.ts',
             keywords: ['pact', 'contract', 'pactjs'],
-            author: `@kadena/pactjs-cli@${version}`,
+            author: `@kda-community/pactjs-cli@${version}`,
           },
           null,
           2,

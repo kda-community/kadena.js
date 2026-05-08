@@ -1,16 +1,16 @@
 {
-  "name": "@kadena/pactjs-cli",
+  "name": "@kda-community/pactjs-cli",
   "version": "1.18.3",
-  "description": "CLI tool accompanying @kadena/pactjs-core and @kadena/pactjs-client to generate TypeScript definitions and Pact client",
+  "description": "CLI tool accompanying @kda-community/pactjs-core and @kda-community/pactjs-client to generate TypeScript definitions and Pact client",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/tools/pactjs-cli"
   },
   "license": "BSD-3-Clause",
   "contributors": [
-    "Albert Groothedde <albert@kadena.io>",
-    "Javad Khalilian <javad@kadena.io>"
+    "Albert Groothedde <albert@kda-community.io>",
+    "Javad Khalilian <javad@kda-community.io>"
   ],
   "types": "dist/pactjs-cli.d.ts",
   "bin": {
@@ -25,7 +25,7 @@
     "build": "tsc && api-extractor run --verbose",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
@@ -35,8 +35,8 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@kadena/client": "workspace:*",
-    "@kadena/pactjs-generator": "workspace:*",
+    "@kda-community/client": "workspace:*",
+    "@kda-community/pactjs-generator": "workspace:*",
     "commander": "^11.0.0",
     "cross-fetch": "~3.1.5",
     "debug": "4.3.4",
@@ -46,10 +46,10 @@
     "zod": "~3.23.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/debug": "~4.1.12",

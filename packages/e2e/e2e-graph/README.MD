@@ -21,17 +21,17 @@ all external dependencies are installed.
 ### Building e2e-base dependencies
 
 In order to run tests, we first need to build the dependencies for the
-@kadena-dev/e2e-base package. You will have most likely done this if you've
+@kda-community-dev/e2e-base package. You will have most likely done this if you've
 recently executed `pnpm turbo build` but just in case you've not done this, the
 quickest way to do this is by executing
-`pnpm turbo build --filter @kadena-dev/e2e-base^...`. This will only build the
+`pnpm turbo build --filter @kda-community-dev/e2e-base^...`. This will only build the
 required dependencies of the e2e-base package.
 
 ### Building SUT with test environment variables
 
 For Graph, no specific variables need to be set
 
-to build the App, execute `pnpm turbo build --filter @kadena/graph`
+to build the App, execute `pnpm turbo build --filter @kda-community/graph`
 
 ### Kadena Sandbox
 
@@ -47,7 +47,7 @@ then execute the tests using the following command:
 `pnpm turbo test:e2e --filter e2e-graph`
 
 Playwright will check if any app is running on port 3000, if there is, we assume
-you've started the app manually using `pnpm --filter @kadena/graph run start`.
+you've started the app manually using `pnpm --filter @kda-community/graph run start`.
 If nothing appears to be running, it will try to start the app for you using the
 same command. Tests will be executed automatically afterwards.
 

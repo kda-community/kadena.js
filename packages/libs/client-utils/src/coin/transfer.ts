@@ -3,14 +3,14 @@ import type {
   IPactModules,
   ISigner,
   PactReturnType,
-} from '@kadena/client';
-import { Pact } from '@kadena/client';
+} from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 import {
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 
 import { submitClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';

@@ -4,7 +4,7 @@ import { useFreeze } from '@/hooks/freeze';
 import { useOrganisation } from '@/hooks/organisation';
 import { useUser } from '@/hooks/user';
 import { RWAStore } from '@/utils/store';
-import { Notification, NotificationHeading } from '@kadena/kode-ui';
+import { Notification, NotificationHeading } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 

@@ -2,8 +2,8 @@ import { ListItem } from '@/Components/ListItem/ListItem';
 import { ITransaction } from '@/modules/transaction/transaction.repository';
 import { statusPassed } from '@/pages/transaction/components/TxPipeLine/utils';
 import { shorten } from '@/utils/helpers';
-import { ChainId } from '@kadena/client';
-import { Heading, Notification, Stack, Text } from '@kadena/kode-ui';
+import { ChainId } from '@kda-community/client';
+import { Heading, Notification, Stack, Text } from '@kda-community/kode-ui';
 import { TrG } from './TransferForm/TransferForm';
 
 export function Result({

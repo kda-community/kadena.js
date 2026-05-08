@@ -7,8 +7,8 @@ import {
   SEARCHOPTIONS,
 } from '@/context/searchContext/utils/utils';
 import { analyticsEvent, EVENT_NAMES } from '@/utils/analytics';
-import { MonoSearch } from '@kadena/kode-icons/system';
-import { Stack } from '@kadena/kode-ui';
+import { MonoSearch } from '@kda-community/kode-icons/system';
+import { Stack } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { Dispatch, SetStateAction } from 'react';
 import React, { useEffect, useRef, useState } from 'react';

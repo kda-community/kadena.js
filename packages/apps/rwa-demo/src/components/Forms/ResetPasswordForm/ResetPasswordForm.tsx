@@ -5,8 +5,8 @@ import {
   Notification,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
-import { useNotifications } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { useNotifications } from '@kda-community/kode-ui/patterns';
 import { useRouter } from 'next/navigation';
 import type { FC } from 'react';
 import { useState } from 'react';

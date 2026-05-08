@@ -6,13 +6,19 @@ import {
 import { useRequests } from '@/modules/communication/communication.provider';
 import { addTransaction } from '@/modules/transaction/transaction.service';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { IPactCommand, IUnsignedCommand } from '@kadena/client';
-import { MonoClose } from '@kadena/kode-icons/system';
-import { Button, Card, Notification, Stack, Text } from '@kadena/kode-ui';
+import { IPactCommand, IUnsignedCommand } from '@kda-community/client';
+import { MonoClose } from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Card,
+  Notification,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
 import {
   CardContentBlock,
   FocussedLayoutHeaderAside,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { TxList } from './components/TxList';

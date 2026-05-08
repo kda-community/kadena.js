@@ -1,5 +1,5 @@
-import type { IPartialPactCommand } from '@kadena/client';
-import { createTransaction } from '@kadena/client';
+import type { IPartialPactCommand } from '@kda-community/client';
+import { createTransaction } from '@kda-community/client';
 
 import { estimateGasPrice } from './estimateGasPrice';
 import { asyncPipe } from './utils/asyncPipe';

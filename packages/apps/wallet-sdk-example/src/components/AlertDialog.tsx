@@ -1,4 +1,4 @@
-import { MonoCrisisAlert } from '@kadena/kode-icons/system';
+import { MonoCrisisAlert } from '@kda-community/kode-icons/system';
 import {
   Button,
   ContentHeader,
@@ -6,7 +6,7 @@ import {
   Divider,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import React, { useEffect } from 'react';
 
 interface AlertDialogProps {

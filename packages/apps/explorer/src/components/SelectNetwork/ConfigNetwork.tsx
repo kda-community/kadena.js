@@ -4,7 +4,7 @@ import { EVENT_NAMES, analyticsEvent } from '@/utils/analytics';
 import { checkNetwork } from '@/utils/checkNetwork';
 import { defaultNamingOfNetwork } from '@/utils/defaultNamingOfNetwork';
 import { isDefaultNetwork } from '@/utils/isDefaultNetwork';
-import { MonoPermScanWifi } from '@kadena/kode-icons/system';
+import { MonoPermScanWifi } from '@kda-community/kode-icons/system';
 import {
   Button,
   Dialog,
@@ -17,8 +17,8 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
-import { token } from '@kadena/kode-ui/styles';
+} from '@kda-community/kode-ui';
+import { token } from '@kda-community/kode-ui/styles';
 import type { ChangeEventHandler, FC, FormEventHandler } from 'react';
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { CardContentBlock, CardFooter } from '../CardPattern/CardPattern';

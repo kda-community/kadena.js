@@ -161,20 +161,20 @@
     }
   },
   "kind": "Package",
-  "canonicalReference": "@kadena/wallet-adapter-react!",
+  "canonicalReference": "@kda-community/wallet-adapter-react!",
   "docComment": "",
-  "name": "@kadena/wallet-adapter-react",
+  "name": "@kda-community/wallet-adapter-react",
   "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
-      "canonicalReference": "@kadena/wallet-adapter-react!",
+      "canonicalReference": "@kda-community/wallet-adapter-react!",
       "name": "",
       "preserveMemberOrder": false,
       "members": [
         {
           "kind": "Function",
-          "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletProvider:function(1)",
+          "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletProvider:function(1)",
           "docComment": "/**\n * KadenaWalletProvider instantiates a WalletAdapterClient with the provided adapters and manages the current adapter name.\n *\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -184,7 +184,7 @@
             {
               "kind": "Reference",
               "text": "adapters",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletProviderProps#adapters"
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletProviderProps#adapters"
             },
             {
               "kind": "Content",
@@ -193,7 +193,7 @@
             {
               "kind": "Reference",
               "text": "KadenaWalletProviderProps",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletProviderProps:interface"
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletProviderProps:interface"
             },
             {
               "kind": "Content",
@@ -234,7 +234,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletProviderProps:interface",
+          "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletProviderProps:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -249,7 +249,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletProviderProps#adapters:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletProviderProps#adapters:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -263,7 +263,7 @@
                 {
                   "kind": "Reference",
                   "text": "Adapter",
-                  "canonicalReference": "@kadena/wallet-adapter-core!Adapter:interface"
+                  "canonicalReference": "@kda-community/wallet-adapter-core!Adapter:interface"
                 },
                 {
                   "kind": "Content",
@@ -272,7 +272,7 @@
                 {
                   "kind": "Reference",
                   "text": "AdapterFactory",
-                  "canonicalReference": "@kadena/wallet-adapter-core!AdapterFactory:type"
+                  "canonicalReference": "@kda-community/wallet-adapter-core!AdapterFactory:type"
                 },
                 {
                   "kind": "Content",
@@ -294,7 +294,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletProviderProps#children:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletProviderProps#children:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -322,7 +322,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletProviderProps#defaultAdapterName:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletProviderProps#defaultAdapterName:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -352,7 +352,7 @@
         },
         {
           "kind": "Interface",
-          "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletState:interface",
+          "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletState:interface",
           "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -367,7 +367,7 @@
           "members": [
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletState#accounts:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletState#accounts:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -377,7 +377,7 @@
                 {
                   "kind": "Reference",
                   "text": "AccountInfo",
-                  "canonicalReference": "@kadena/wallet-adapter-core!AccountInfo:interface"
+                  "canonicalReference": "@kda-community/wallet-adapter-core!AccountInfo:interface"
                 },
                 {
                   "kind": "Content",
@@ -399,7 +399,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletState#activeAccount:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletState#activeAccount:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -409,7 +409,7 @@
                 {
                   "kind": "Reference",
                   "text": "AccountInfo",
-                  "canonicalReference": "@kadena/wallet-adapter-core!AccountInfo:interface"
+                  "canonicalReference": "@kda-community/wallet-adapter-core!AccountInfo:interface"
                 },
                 {
                   "kind": "Content",
@@ -431,7 +431,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletState#activeNetwork:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletState#activeNetwork:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -441,7 +441,7 @@
                 {
                   "kind": "Reference",
                   "text": "NetworkInfo",
-                  "canonicalReference": "@kadena/wallet-adapter-core!NetworkInfo:interface"
+                  "canonicalReference": "@kda-community/wallet-adapter-core!NetworkInfo:interface"
                 },
                 {
                   "kind": "Content",
@@ -463,7 +463,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletState#loading:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletState#loading:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -490,7 +490,7 @@
             },
             {
               "kind": "PropertySignature",
-              "canonicalReference": "@kadena/wallet-adapter-react!KadenaWalletState#networks:member",
+              "canonicalReference": "@kda-community/wallet-adapter-react!KadenaWalletState#networks:member",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -500,7 +500,7 @@
                 {
                   "kind": "Reference",
                   "text": "NetworkInfo",
-                  "canonicalReference": "@kadena/wallet-adapter-core!NetworkInfo:interface"
+                  "canonicalReference": "@kda-community/wallet-adapter-core!NetworkInfo:interface"
                 },
                 {
                   "kind": "Content",
@@ -525,7 +525,7 @@
         },
         {
           "kind": "Function",
-          "canonicalReference": "@kadena/wallet-adapter-react!useKadenaWallet:function(1)",
+          "canonicalReference": "@kda-community/wallet-adapter-react!useKadenaWallet:function(1)",
           "docComment": "/**\n * Hook to access the Kadena Wallet context.\n *\n * @public\n */\n",
           "excerptTokens": [
             {
@@ -535,7 +535,7 @@
             {
               "kind": "Reference",
               "text": "KadenaWalletContextValue",
-              "canonicalReference": "@kadena/wallet-adapter-react!~KadenaWalletContextValue:interface"
+              "canonicalReference": "@kda-community/wallet-adapter-react!~KadenaWalletContextValue:interface"
             },
             {
               "kind": "Content",

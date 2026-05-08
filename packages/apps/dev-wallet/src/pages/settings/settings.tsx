@@ -21,7 +21,7 @@ import {
   MonoToggleOff,
   MonoToggleOn,
   MonoWifiTethering,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Button,
   Heading,
@@ -29,11 +29,11 @@ import {
   Stack,
   Text,
   Link as UiLink,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   SideBarBreadcrumbsItem,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { linkClass } from '../home/style.css';

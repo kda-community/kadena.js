@@ -4,8 +4,8 @@ import {
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client/fp';
+import { PactNumber } from '@kda-community/pactjs';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { principalNamespaceCommand } from '../../built-in/create-principal-namespace';

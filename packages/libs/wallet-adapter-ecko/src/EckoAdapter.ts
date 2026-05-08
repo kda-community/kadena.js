@@ -2,7 +2,7 @@
  * EckoAdapter
  *
  * This module provides a comprehensive adapter implementation for Ecko Wallet,
- * extending the BaseWalletAdapter from '@kadena/wallet-adapter-core'. It serves as a bridge
+ * extending the BaseWalletAdapter from '@kda-community/wallet-adapter-core'. It serves as a bridge
  * between your dApp and the Ecko Wallet browser extension, enabling you to:
  *
  * - Detect the Ecko Wallet provider and initialize connection parameters.
@@ -30,8 +30,8 @@ import type {
   ICommand,
   INetworkInfo,
   ISigningRequestPartial,
-} from '@kadena/wallet-adapter-core';
-import { BaseWalletAdapter } from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
+import { BaseWalletAdapter } from '@kda-community/wallet-adapter-core';
 import { ECKO_ADAPTER, ERRORS } from './constants';
 import type {
   ExtendedMethod,

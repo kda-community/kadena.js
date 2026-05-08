@@ -1,6 +1,6 @@
-import { ICap, parseAsPactValue } from '@kadena/client';
-import { MonoSecurity } from '@kadena/kode-icons/system';
-import { Heading, Stack, Text } from '@kadena/kode-ui';
+import { ICap, parseAsPactValue } from '@kda-community/client';
+import { MonoSecurity } from '@kda-community/kode-icons/system';
+import { Heading, Stack, Text } from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { breakAllClass } from './style.css';
 import { capabilityClass } from './TxPipeLine/style.css';
