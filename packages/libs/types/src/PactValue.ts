@@ -4,7 +4,6 @@
  * the min `number` value (-9007199254740991) are stringified and tagged as
  * indicated by the `pact` serialization of integer values:
  * https://github.com/kadena-io/pact/blob/master/src/Pact/Types/Codec.hs#L64
- * @alpha
  */
 export interface IPactInt {
   int: string;
@@ -16,7 +15,6 @@ export interface IPactInt {
  * or less than the min `number` value (-9007199254740991) are stringified and tagged as
  * indicated by the `pact` serialization of decimal values:
  * https://github.com/kadena-io/pact/blob/master/src/Pact/Types/Codec.hs#L83
- * @alpha
  */
 export interface IPactDecimal {
   decimal: string;
@@ -39,7 +37,6 @@ export interface IPactDecimal {
  * `boolean`
  *
  * TODO: add `UTCTime` literal.
- * @alpha
  */
 export type PactLiteral =
   | string
@@ -61,6 +58,5 @@ export type PactLiteral =
  * TODO: add object map of pact values type.
  * TODO: add guard type of pact values type.
  * TODO: add module reference type type.
- * @alpha
  */
 export type PactValue = PactLiteral | Array<PactValue> | Record<string, any>;

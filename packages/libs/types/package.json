@@ -38,17 +38,16 @@
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
-    "lint:src": "eslint src --ext .js,.ts",
+    "lint:src": "oxlint .",
     "test": ""
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
     "@kadena-dev/lint-package": "workspace:*",
     "@kadena-dev/markdown": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
-    "@rushstack/eslint-config": "~3.6.9",
-    "eslint": "^8.45.0",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "typescript": "5.4.5"
   },
