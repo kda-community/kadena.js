@@ -1,0 +1,16 @@
+{
+  "name": "@kda-community-dev/oxlint-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "base": "./oxlint.base.config.json",
+    "lib": "./oxlint.lib.config.json"
+  },
+  "devDependencies": {
+    "oxlint": "1.63.0"
+  },
+  "peerDependencies": {
+    "oxlint": "1.63.0"
+  }
+}
