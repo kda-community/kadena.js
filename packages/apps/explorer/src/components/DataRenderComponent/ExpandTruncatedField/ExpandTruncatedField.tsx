@@ -1,5 +1,5 @@
 import { CopyButton } from '@/components/CopyButton/CopyButton';
-import { Stack, Text } from '@kadena/kode-ui';
+import { Stack, Text } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import React, { useState } from 'react';

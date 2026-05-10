@@ -3,7 +3,7 @@ import {
   useWalletConnectClient,
 } from '@/context/connect-wallet-context';
 import { getHighestBalanceChainId } from '@/services/chains/get-highest-balance-chain-id';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
 import { useEffect, useState } from 'react';
 
 const useHighestBalanceChainId = () => {

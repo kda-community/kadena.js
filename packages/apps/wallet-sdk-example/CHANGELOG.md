@@ -5,23 +5,23 @@
 ### Patch Changes
 
 - Updated dependencies \[f23cdfd]
-  - @kadena/hd-wallet\@0.6.2
-  - @kadena/client\@1.18.3
-  - @kadena/wallet-sdk\@0.2.6
+  - @kda-community/hd-wallet\@0.6.2
+  - @kda-community/client\@1.18.3
+  - @kda-community/wallet-sdk\@0.2.6
 
 ## 0.0.11
 
 ### Patch Changes
 
-- @kadena/client\@1.18.2
-- @kadena/wallet-sdk\@0.2.5
+- @kda-community/client\@1.18.2
+- @kda-community/wallet-sdk\@0.2.5
 
 ## 0.0.10
 
 ### Patch Changes
 
-- @kadena/client\@1.18.1
-- @kadena/wallet-sdk\@0.2.4
+- @kda-community/client\@1.18.1
+- @kda-community/wallet-sdk\@0.2.4
 
 ## 0.0.9
 
@@ -29,9 +29,9 @@
 
 - f59ac43: update to react 19, Next 15 and other dependend packages
 - Updated dependencies \[f59ac43]
-  - @kadena/kode-icons\@0.3.1
-  - @kadena/kode-ui\@0.21.1
-  - @kadena/wallet-sdk\@0.2.3
+  - @kda-community/kode-icons\@0.3.1
+  - @kda-community/kode-ui\@0.21.1
+  - @kda-community/wallet-sdk\@0.2.3
 
 ## 0.0.8
 
@@ -42,23 +42,23 @@
 - Updated dependencies \[3759502]
 - Updated dependencies \[b5df48c]
 - Updated dependencies \[05168d0]
-  - @kadena/client\@1.18.0
-  - @kadena/kode-ui\@0.21.0
-  - @kadena/wallet-sdk\@0.2.2
+  - @kda-community/client\@1.18.0
+  - @kda-community/kode-ui\@0.21.0
+  - @kda-community/wallet-sdk\@0.2.2
 
 ## 0.0.7
 
 ### Patch Changes
 
 - Updated dependencies \[8dd7433]
-  - @kadena/kode-ui\@0.20.2
+  - @kda-community/kode-ui\@0.20.2
 
 ## 0.0.6
 
 ### Patch Changes
 
-- @kadena/client\@1.17.1
-- @kadena/wallet-sdk\@0.2.1
+- @kda-community/client\@1.17.1
+- @kda-community/wallet-sdk\@0.2.1
 
 ## 0.0.5
 
@@ -66,21 +66,21 @@
 
 - Updated dependencies \[67ee479]
 - Updated dependencies \[4e1530d]
-  - @kadena/client\@1.17.0
-  - @kadena/wallet-sdk\@0.2.0
+  - @kda-community/client\@1.17.0
+  - @kda-community/wallet-sdk\@0.2.0
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies \[ebc4e5c]
-  - @kadena/kode-ui\@0.20.1
+  - @kda-community/kode-ui\@0.20.1
 
 ## 0.0.3
 
 ### Patch Changes
 
-- @kadena/wallet-sdk\@0.1.1
+- @kda-community/wallet-sdk\@0.1.1
 
 ## 0.0.2
 
@@ -94,7 +94,7 @@
 - Updated dependencies \[dbd9076]
 - Updated dependencies \[8615d09]
 - Updated dependencies \[1f46bee]
-  - @kadena/kode-ui\@0.20.0
-  - @kadena/client\@1.16.0
-  - @kadena/wallet-sdk\@0.1.0
-  - @kadena/hd-wallet\@0.6.1
+  - @kda-community/kode-ui\@0.20.0
+  - @kda-community/client\@1.16.0
+  - @kda-community/wallet-sdk\@0.1.0
+  - @kda-community/hd-wallet\@0.6.1

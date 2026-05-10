@@ -1,4 +1,4 @@
-import { MonoArrowOutward } from '@kadena/kode-icons/system';
+import { MonoArrowOutward } from '@kda-community/kode-icons/system';
 import React, { forwardRef } from 'react';
 import {
   dataFieldClass,

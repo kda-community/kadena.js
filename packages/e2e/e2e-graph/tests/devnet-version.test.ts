@@ -3,9 +3,13 @@ import { expect, test } from '@playwright/test';
 import {
   devnetHost,
   networkId,
-} from '@kadena-dev/e2e-base/src/constants/network.constants';
-import { dirtyReadClient } from '@kadena/client-utils/core';
-import { composePactCommand, execution, setMeta } from '@kadena/client/fp';
+} from '@kda-community-dev/e2e-base/src/constants/network.constants';
+import { dirtyReadClient } from '@kda-community/client-utils/core';
+import {
+  composePactCommand,
+  execution,
+  setMeta,
+} from '@kda-community/client/fp';
 
 test.describe('Devnet Version Tests', () => {
   test('devnet is Pact > 5', async () => {

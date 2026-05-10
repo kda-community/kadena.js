@@ -1,4 +1,4 @@
-# @kadena/wallet-adapter-metamask-snap
+# @kda-community/wallet-adapter-metamask-snap
 
 ## 0.2.0
 
@@ -20,23 +20,23 @@
 
 ### Patch Changes
 
-- @kadena/client\@1.18.3
-- @kadena/wallet-adapter-core\@0.1.3
+- @kda-community/client\@1.18.3
+- @kda-community/wallet-adapter-core\@0.1.3
 
 ## 0.1.3
 
 ### Patch Changes
 
-- @kadena/client\@1.18.2
-- @kadena/wallet-adapter-core\@0.1.2
+- @kda-community/client\@1.18.2
+- @kda-community/wallet-adapter-core\@0.1.2
 
 ## 0.1.2
 
 ### Patch Changes
 
 - 24ed24c: Added constant export for adapter name matching
-  - @kadena/client\@1.18.1
-  - @kadena/wallet-adapter-core\@0.1.1
+  - @kda-community/client\@1.18.1
+  - @kda-community/wallet-adapter-core\@0.1.1
 
 ## 0.1.1
 
@@ -56,4 +56,4 @@
 ### Patch Changes
 
 - Updated dependencies \[d45d854]
-  - @kadena/wallet-adapter-core\@0.1.0
+  - @kda-community/wallet-adapter-core\@0.1.0

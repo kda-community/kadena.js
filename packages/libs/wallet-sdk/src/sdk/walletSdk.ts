@@ -1,17 +1,17 @@
 // eslint-disable-next-line @rushstack/no-new-null
-import { createClient, createTransaction } from '@kadena/client';
+import { createClient, createTransaction } from '@kda-community/client';
 import {
   createCrossChainCommand,
   transferCommand,
   transferCreateCommand,
-} from '@kadena/client-utils/coin';
-import { estimateGas } from '@kadena/client-utils/core';
+} from '@kda-community/client-utils/coin';
+import { estimateGas } from '@kda-community/client-utils/core';
 import type {
   ChainId,
   ICommand,
   ISigner,
   IUnsignedCommand,
-} from '@kadena/types';
+} from '@kda-community/types';
 
 import * as accountService from '../services/accountService.js';
 import { pollRequestKeys } from '../services/chainweb/chainweb.js';

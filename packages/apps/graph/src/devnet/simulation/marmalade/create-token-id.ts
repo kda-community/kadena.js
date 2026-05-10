@@ -1,12 +1,12 @@
 import type { IAccount } from '@devnet/utils';
-import { Pact, readKeyset } from '@kadena/client';
-import { dirtyReadClient } from '@kadena/client-utils/core';
+import { Pact, readKeyset } from '@kda-community/client';
+import { dirtyReadClient } from '@kda-community/client-utils/core';
 import {
   addKeyset,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 import { dotenv } from '@utils/dotenv';
 import { networkData } from '@utils/network';
 

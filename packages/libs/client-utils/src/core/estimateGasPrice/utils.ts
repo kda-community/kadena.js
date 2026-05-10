@@ -1,5 +1,5 @@
-import { base64UrlDecode } from '@kadena/cryptography-utils';
-import { PactNumber } from '@kadena/pactjs';
+import { base64UrlDecode } from '@kda-community/cryptography-utils';
+import { PactNumber } from '@kda-community/pactjs';
 
 export const MINIMUM_GAS_PRICE = 1e-8;
 

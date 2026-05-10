@@ -1,4 +1,4 @@
-# @kadena-dev/heft-rig
+# @kda-community-dev/heft-rig
 
 ## 1.0.1
 

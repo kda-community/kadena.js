@@ -1,5 +1,5 @@
 import { useAccount } from '@/hooks/account';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import { Button } from '../Button/Button';
 

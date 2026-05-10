@@ -2,7 +2,7 @@
 import { localStorageProvider } from '@/utils/localStorageProvider';
 import type { NormalizedCacheObject } from '@apollo/client';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import { darkThemeClass } from '@kadena/kode-ui/styles';
+import { darkThemeClass } from '@kda-community/kode-ui/styles';
 import { ThemeProvider } from 'next-themes';
 import type { FC, PropsWithChildren } from 'react';
 import { SWRConfig } from 'swr';

@@ -2,8 +2,8 @@ import type { IOrganisation } from '@/contexts/OrganisationContext/OrganisationC
 import { useNotifications } from '@/hooks/notifications';
 import { OrganisationStore } from '@/utils/store/organisationStore';
 import { RootAdminStore } from '@/utils/store/rootAdminStore';
-import { MonoAdd, MonoFindInPage } from '@kadena/kode-icons';
-import { Button } from '@kadena/kode-ui';
+import { MonoAdd, MonoFindInPage } from '@kda-community/kode-icons';
+import { Button } from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -16,7 +16,7 @@ import {
   SectionCardContentBlock,
   SectionCardHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useRouter } from 'next/navigation';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';

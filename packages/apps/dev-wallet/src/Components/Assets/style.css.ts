@@ -1,4 +1,9 @@
-import { atoms, responsiveStyle, style, token } from '@kadena/kode-ui/styles';
+import {
+  atoms,
+  responsiveStyle,
+  style,
+  token,
+} from '@kda-community/kode-ui/styles';
 import { globalStyle } from '@vanilla-extract/css';
 
 export const assetBoxClass = style([]);

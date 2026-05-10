@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 
 const URL = process.env.NEXT_PUBLIC_URL;
 const WALLET_URL = process.env.NEXT_PUBLIC_WALLET_URL;

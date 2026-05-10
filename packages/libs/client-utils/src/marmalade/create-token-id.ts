@@ -3,10 +3,10 @@ import type {
   IPactModules,
   PactReference,
   PactReturnType,
-} from '@kadena/client';
-import { Pact, readKeyset } from '@kadena/client';
-import { addKeyset, execution } from '@kadena/client/fp';
-import type { IPactInt, NetworkId } from '@kadena/types';
+} from '@kda-community/client';
+import { Pact, readKeyset } from '@kda-community/client';
+import { addKeyset, execution } from '@kda-community/client/fp';
+import type { IPactInt, NetworkId } from '@kda-community/types';
 import { pipe } from 'ramda';
 import { dirtyReadClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';

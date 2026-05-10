@@ -2,9 +2,9 @@ import type { NetworkIds } from '@/constants/kadena';
 import { DefaultValues } from '@/context/connect-wallet-context';
 import type { INetworkData } from '@/utils/network';
 import { getApiHost } from '@/utils/network';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
 
-import { createClient, Pact } from '@kadena/client';
+import { createClient, Pact } from '@kda-community/client';
 
 export interface IModulesResult {
   status?: string;

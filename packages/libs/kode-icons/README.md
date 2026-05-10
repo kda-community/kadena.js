@@ -13,15 +13,15 @@ considerations:
 3. These icons are compiled into a distinct package, which is designed without
    knowledge of the design tokens. This approach ensures that properties such as
    fill and fontSize remain generic, eliminating circular dependencies between
-   the `@kadena/kode-ui` and allowing the icons to be universally compatible
+   the `@kda-community/kode-ui` and allowing the icons to be universally compatible
    with any build-system and react styling solutions.
 4. Icons are grouped in different folders and package entries eg
-   `@kadena/kode-icons/system`.
+   `@kda-community/kode-icons/system`.
 
 ### Install
 
 ```sh
-pnpm install @kadena/kode-icons
+pnpm install @kda-community/kode-icons
 ```
 
 ### Development

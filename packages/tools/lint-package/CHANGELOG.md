@@ -1,4 +1,4 @@
-# @kadena-dev/lint-package
+# @kda-community-dev/lint-package
 
 ## 0.2.0
 

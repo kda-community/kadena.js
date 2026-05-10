@@ -9,7 +9,7 @@ import { TitleHeader } from '@/components/TitleHeader/TitleHeader';
 import { Heading } from '@/components/Typography/Heading';
 import UserLayout from '@/components/UserLayout/UserLayout';
 import { env } from '@/utils/env';
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import { format } from 'date-fns';
 import type { FC } from 'react';
 

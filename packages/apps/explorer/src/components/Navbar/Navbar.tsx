@@ -1,5 +1,5 @@
 import { Link } from '@/components/Routing/Link';
-import { Media, Stack } from '@kadena/kode-ui';
+import { Media, Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { GraphQLQueryDialog } from '../GraphqlQueryDialog/GraphqlQueryDialog';

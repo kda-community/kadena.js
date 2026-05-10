@@ -4,7 +4,7 @@ import { CONSTANTS } from '@/constants/constants';
 import { useQueryContext } from '@/context/queryContext';
 import { networkInfo } from '@/graphql/queries/network-info.graph';
 import { formatStatisticsData } from '@/services/format';
-import { Media, Stack, Text } from '@kadena/kode-ui';
+import { Media, Stack, Text } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React, { useEffect } from 'react';
 import { boxClass, overFlowClass } from './statisticsStack.css';

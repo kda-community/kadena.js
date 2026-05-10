@@ -1,9 +1,9 @@
 {
-  "name": "@kadena-dev/eslint-plugin",
+  "name": "@kda-community-dev/eslint-plugin",
   "version": "0.0.9",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/tools/eslint-plugin"
   },
   "main": "src/index.js",
@@ -22,7 +22,7 @@
     "eslint": "^8.45.0"
   },
   "devDependencies": {
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "prettier": "~3.2.5",
     "typescript": "5.4.5"
   }

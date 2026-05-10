@@ -1,13 +1,17 @@
 import { WalletKitTypes } from '@reown/walletkit';
-import { SessionTypes } from "@walletconnect/types";
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { mainContainerClass } from './style.css';
+import { SessionTypes } from '@walletconnect/types';
 import { buildApprovedNamespaces, getSdkError } from '@walletconnect/utils';
-import { AccountPrompt } from '../AccountPrompt/AccountPrompt';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import {
+  handleGetAccountsV1,
+  handleQuickSignV1,
+  handleSignV1,
+} from '../../handlers';
 import useAccountStore from '../../hooks/useAccountStore';
 import useWalletKit from '../../hooks/useWalletKit';
-import { handleGetAccountsV1, handleSignV1, handleQuickSignV1 } from '../../handlers';
 import { communicate, IAccount, INetwork } from '../../wallet-communication';
+import { AccountPrompt } from '../AccountPrompt/AccountPrompt';
+import { mainContainerClass } from './style.css';
 
 export const WalletConnect: React.FC<{
   sessionId: string;
@@ -15,7 +19,9 @@ export const WalletConnect: React.FC<{
 }> = ({ sessionId, target }) => {
   const [uri, setUri] = useState<string>('');
   const [session, setSession] = useState<SessionTypes.Struct>();
-  const [activeSessions, setActiveSessions] = useState<Array<SessionTypes.Struct>>([]);
+  const [activeSessions, setActiveSessions] = useState<
+    Array<SessionTypes.Struct>
+  >([]);
   const [networks, setNetworks] = useState<INetwork[]>([]);
   const [showAccountPrompt, setShowAccountPrompt] = useState<boolean>(false);
   const [availableAccounts, setAvailableAccounts] = useState<Array<IAccount>>(
@@ -23,14 +29,17 @@ export const WalletConnect: React.FC<{
   );
   const [selectedAccounts, setSelectedAccounts] = useState<Array<IAccount>>([]);
   const [accountStore, setAccountStore, accountStoreRef] = useAccountStore();
-  const [walletKit, walletKitRef] = useWalletKit(onSessionProposal, handleSessionRequest);
+  const [walletKit, walletKitRef] = useWalletKit(
+    onSessionProposal,
+    handleSessionRequest,
+  );
 
   const message = useMemo(
     () =>
       communicate(
         window,
         target,
-        '@kadena/chainweaver-wallet-connect-plugin',
+        '@kda-community/chainweaver-wallet-connect-plugin',
         sessionId,
       ),
     [sessionId, target],
@@ -130,7 +139,9 @@ export const WalletConnect: React.FC<{
     }
   }
 
-  async function handleSessionRequest(sessionRequest: WalletKitTypes.SessionRequest) {
+  async function handleSessionRequest(
+    sessionRequest: WalletKitTypes.SessionRequest,
+  ) {
     const request = sessionRequest.params.request;
     const { id, topic } = sessionRequest;
     const { method } = request;
@@ -142,7 +153,11 @@ export const WalletConnect: React.FC<{
     try {
       switch (method) {
         case 'kadena_getAccounts_v1':
-          await handleGetAccountsV1(sessionRequest, currentWalletKit, accountStoreRef.current);
+          await handleGetAccountsV1(
+            sessionRequest,
+            currentWalletKit,
+            accountStoreRef.current,
+          );
           break;
         case 'kadena_sign_v1':
           await handleSignV1(sessionRequest, currentWalletKit);
@@ -197,7 +212,8 @@ export const WalletConnect: React.FC<{
     });
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { [session.topic]: omittedTopic, ...filteredAccountStore } = accountStore;
+    const { [session.topic]: omittedTopic, ...filteredAccountStore } =
+      accountStore;
     setAccountStore(filteredAccountStore);
     await getActiveSessions();
     setSession(undefined);

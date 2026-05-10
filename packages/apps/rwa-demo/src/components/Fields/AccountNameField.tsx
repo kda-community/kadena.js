@@ -1,7 +1,7 @@
 import { useAsset } from '@/hooks/asset';
 import { useNetwork } from '@/hooks/networks';
 import type { IAddAgentProps } from '@/services/addAgent';
-import { Stack, TextField } from '@kadena/kode-ui';
+import { Stack, TextField } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import type { Control, FieldErrors, UseFormSetError } from 'react-hook-form';

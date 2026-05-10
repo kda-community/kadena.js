@@ -148,8 +148,8 @@ export function generateDts(module: IModule): string {
       .join(EOL.repeat(2)) || '';
 
   const dts = `
-import type { PactReference } from '@kadena/client';
-import type { IPactDecimal, IPactInt, ICap } from '@kadena/types';
+import type { PactReference } from '@kda-community/client';
+import type { IPactDecimal, IPactInt, ICap } from '@kda-community/types';
 
 interface ICommonCapabilities {
   (name: 'coin.GAS'): ICap;
@@ -157,7 +157,7 @@ interface ICommonCapabilities {
   (name: string, ...args: any[]): ICap;
 }
 ${capsInterfaces ? `${EOL}${capsInterfaces}${EOL}` : ''}
-declare module '@kadena/client' {
+declare module '@kda-community/client' {
   interface IPactModules {
     ${asDocComment(module.doc)}
     "${getModuleFullName(module)}": {

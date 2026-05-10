@@ -1,12 +1,12 @@
-import type { ChainId, ISigner } from '@kadena/client';
-import { Pact, readKeyset } from '@kadena/client';
+import type { ChainId, ISigner } from '@kda-community/client';
+import { Pact, readKeyset } from '@kda-community/client';
 import {
   addKeyset,
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 
 import { estimateGas } from '../core';
 import { submitClient } from '../core/client-helpers';

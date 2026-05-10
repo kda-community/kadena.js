@@ -1,6 +1,9 @@
-import { kadenaEncrypt, kadenaKeyPairsFromRandom } from '@kadena/hd-wallet';
-import { kadenaGenKeypair } from '@kadena/hd-wallet/chainweaver';
-import type { IKeyPair as IKeyPairBase } from '@kadena/types';
+import {
+  kadenaEncrypt,
+  kadenaKeyPairsFromRandom,
+} from '@kda-community/hd-wallet';
+import { kadenaGenKeypair } from '@kda-community/hd-wallet/chainweaver';
+import type { IKeyPair as IKeyPairBase } from '@kda-community/types';
 import { randomBytes } from 'node:crypto';
 import { notEmpty } from '../../utils/globalHelpers.js';
 import type { IPlainKey } from '../config/config.types.js';

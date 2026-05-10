@@ -1,14 +1,14 @@
 import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import { useFaucet } from '@/hooks/faucet';
 import { env } from '@/utils/env';
-import { MonoMonetizationOn } from '@kadena/kode-icons';
+import { MonoMonetizationOn } from '@kda-community/kode-icons';
 import {
   Button,
   Notification,
   NotificationFooter,
   NotificationHeading,
-} from '@kadena/kode-ui';
-import { useNotifications } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { useNotifications } from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { TransactionTypeSpinner } from '../TransactionTypeSpinner/TransactionTypeSpinner';
 

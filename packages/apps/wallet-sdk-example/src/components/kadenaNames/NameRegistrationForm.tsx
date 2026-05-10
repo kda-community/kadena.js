@@ -1,4 +1,4 @@
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 import {
   Button,
   Select,
@@ -6,8 +6,8 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
-import { walletSdk } from '@kadena/wallet-sdk';
+} from '@kda-community/kode-ui';
+import { walletSdk } from '@kda-community/wallet-sdk';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
   executeCreateRegisterNameTransaction,

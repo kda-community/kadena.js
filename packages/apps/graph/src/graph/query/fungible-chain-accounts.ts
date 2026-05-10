@@ -1,4 +1,4 @@
-import { CHAINS } from '@kadena/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import { getFungibleChainAccount } from '@services/account-service';
 import { COMPLEXITY } from '@services/complexity';
 import { dotenv } from '@utils/dotenv';

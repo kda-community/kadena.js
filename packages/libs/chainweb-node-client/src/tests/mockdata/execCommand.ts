@@ -1,5 +1,5 @@
 // Test Case 1 - 01-system.yaml code from https://github.com/kadena-io/pact/blob/master/examples/accounts/scripts/01-system.yaml
-import type { ICommand } from '@kadena/types';
+import type { ICommand } from '@kda-community/types';
 import type { ILocalCommandResult } from '../../interfaces/PactAPI';
 
 export const command: ICommand = {

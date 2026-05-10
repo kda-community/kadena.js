@@ -7,7 +7,7 @@ import {
   NumberField,
   Stack,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC, FormEventHandler, MouseEventHandler } from 'react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import type { IErrors, IValues } from './utils/validation';

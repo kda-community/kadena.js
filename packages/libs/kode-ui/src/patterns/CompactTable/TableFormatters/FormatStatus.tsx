@@ -1,4 +1,8 @@
-import { MonoCheck, MonoClear, MonoLoading } from '@kadena/kode-icons/system';
+import {
+  MonoCheck,
+  MonoClear,
+  MonoLoading,
+} from '@kda-community/kode-icons/system';
 import React from 'react';
 import { Stack } from './../../../components';
 import { loaderClass } from './styles.css';

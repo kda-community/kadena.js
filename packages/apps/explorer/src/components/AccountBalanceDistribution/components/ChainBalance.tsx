@@ -1,5 +1,5 @@
 import type { IViewChain } from '@/utils/processChainAccounts';
-import { Stack, Text } from '@kadena/kode-ui';
+import { Stack, Text } from '@kda-community/kode-ui';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';

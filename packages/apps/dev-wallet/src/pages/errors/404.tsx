@@ -1,6 +1,6 @@
 import { CardContent } from '@/App/LayoutLandingPage/components/CardContent';
-import { MonoFindInPage } from '@kadena/kode-icons/system';
-import { Button, Heading, Stack, Text } from '@kadena/kode-ui';
+import { MonoFindInPage } from '@kda-community/kode-icons/system';
+import { Button, Heading, Stack, Text } from '@kda-community/kode-ui';
 import { warningIconColorClass, wrapperClass } from './styles.css';
 
 export const NotFound = () => {

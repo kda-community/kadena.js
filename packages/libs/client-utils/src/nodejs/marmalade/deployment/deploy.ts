@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { readdirSync } from 'fs';
 
 import type { IAccount, IClientConfig } from '../../../core/utils/helpers';

@@ -71,7 +71,7 @@ returned:
 ### Connecting to a Wallet
 
 ```ts
-import { WalletAdapterClient } from '@kadena/wallet-adapter-core';
+import { WalletAdapterClient } from '@kda-community/wallet-adapter-core';
 import { EckoWalletAdapter } from 'wallet-adapter-ecko';
 
 // Create an instance of your wallet adapter
@@ -153,13 +153,13 @@ Kadena wallet adapter that conforms to the Kadena Improvement Proposals (KIPs),
 specifically KIP-15, KIP-17, and KIP-37 through KIP-40. These KIPs define a
 standardized JSON-RPC interface for wallet and decentralized application (dApp)
 communication within the Kadena ecosystem. By following this guide, you’ll learn
-how to build an adapter using the `@kadena/wallet-adapter-core` package,
+how to build an adapter using the `@kda-community/wallet-adapter-core` package,
 implement the required functionality, and integrate it into dApps.
 
 ## Introduction
 
 The Kadena wallet adapter framework provides a standardized way to integrate
-wallets into Kadena-based dApps. The `@kadena/wallet-adapter-core` package
+wallets into Kadena-based dApps. The `@kda-community/wallet-adapter-core` package
 offers a foundation with the `BaseWalletAdapter` class, which you can extend to
 create a custom adapter for your wallet. This guide walks you through the
 process step-by-step, ensuring your adapter supports essential features like
@@ -171,10 +171,10 @@ Kadena’s KIP specifications.
 - **Knowledge**: Familiarity with TypeScript, JSON-RPC, and Kadena’s blockchain
   concepts (e.g., Pact, Chainweb).
 - **Tools**: Node.js, npm or yarn, and a code editor.
-- **Dependencies**: Install `@kadena/wallet-adapter-core`.
+- **Dependencies**: Install `@kda-community/wallet-adapter-core`.
 
 ```bash
-npm install @kadena/wallet-adapter-core
+npm install @kda-community/wallet-adapter-core
 ```
 
 ---
@@ -196,7 +196,7 @@ npm install @kadena/wallet-adapter-core
    Add the core dependencies and development tools:
 
    ```bash
-   npm install @kadena/wallet-adapter-core
+   npm install @kda-community/wallet-adapter-core
    npm install --save-dev typescript vitest
    ```
 
@@ -255,7 +255,7 @@ npm install @kadena/wallet-adapter-core
 
    ```json
    {
-     "name": "@kadena/wallet-adapter-my-wallet",
+     "name": "@kda-community/wallet-adapter-my-wallet",
      "version": "1.0.0",
      "main": "dist/cjs/index.js",
      "module": "dist/esm/index.js",
@@ -269,7 +269,7 @@ npm install @kadena/wallet-adapter-core
        "test": "vitest"
      },
      "dependencies": {
-       "@kadena/wallet-adapter-core": "^0.42.1"
+       "@kda-community/wallet-adapter-core": "^0.42.1"
      },
      "devDependencies": {
        "typescript": "5.4.5",
@@ -298,7 +298,7 @@ type to match your wallet’s API.
    Define the provider interface and detection logic:
 
    ```typescript
-   import { IProvider } from '@kadena/wallet-adapter-core';
+   import { IProvider } from '@kda-community/wallet-adapter-core';
 
    // Extend the base Provider interface with your wallet-specific properties
    export interface MyWalletProvider extends IProvider {
@@ -339,7 +339,7 @@ type to match your wallet’s API.
 import type {
   IBaseWalletFactoryOptions,
   AdapterFactoryCreator,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 
 export const myWalletAdapter = ((options?: IBaseWalletFactoryOptions) => {
   return {
@@ -368,14 +368,14 @@ KIP standards.
    Implement the adapter:
 
    ```typescript
-   import { BaseWalletAdapter } from '@kadena/wallet-adapter-core';
+   import { BaseWalletAdapter } from '@kda-community/wallet-adapter-core';
    import type {
      IAccountInfo,
      INetworkInfo,
      IUnsignedCommand,
      ICommand,
      IBaseWalletAdapterOptions,
-   } from '@kadena/wallet-adapter-core';
+   } from '@kda-community/wallet-adapter-core';
    import { detectMyWalletProvider, MyWalletProvider } from './provider';
 
    export class MyWalletAdapter extends BaseWalletAdapter {
@@ -432,8 +432,8 @@ KIP standards.
 1. **Instantiate the Adapter**
 
    ```typescript
-   import { myWalletAdapter } from '@kadena/wallet-adapter-my-wallet';
-   import { WalletAdapterClient } from '@kadena/wallet-adapter-core';
+   import { myWalletAdapter } from '@kda-community/wallet-adapter-my-wallet';
+   import { WalletAdapterClient } from '@kda-community/wallet-adapter-core';
 
    const client = new WalletAdapterClient([myWalletAdapter]);
 
@@ -459,8 +459,8 @@ KIP standards.
    ```tsx
    import React from 'react';
    import ReactDOM from 'react-dom/client';
-   import { KadenaWalletProvider } from '@kadena/wallet-adapter-react';
-   import { myWalletAdapter } from '@kadena/wallet-adapter-my-wallet';
+   import { KadenaWalletProvider } from '@kda-community/wallet-adapter-react';
+   import { myWalletAdapter } from '@kda-community/wallet-adapter-my-wallet';
    import App from './App';
 
    ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -473,7 +473,7 @@ KIP standards.
 2. **Use the Hook**
 
    ```tsx
-   import { useKadenaWallet } from '@kadena/wallet-adapter-react';
+   import { useKadenaWallet } from '@kda-community/wallet-adapter-react';
 
    const App = () => {
      const { client, adapters } = useKadenaWallet();
@@ -509,6 +509,6 @@ KIP standards.
 
 ## Happy coding
 
-Use the `@kadena/wallet-adapter-core` tools to streamline development, making it
+Use the `@kda-community/wallet-adapter-core` tools to streamline development, making it
 fully compatible with Kadena dApps, and test thoroughly to ensure reliability.
 Happy coding!

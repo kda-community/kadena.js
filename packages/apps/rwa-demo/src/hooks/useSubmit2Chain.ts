@@ -7,7 +7,10 @@ import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import { interpretErrorMessage } from '@/providers/TransactionsProvider/TransactionsProvider';
 import type { IAnalyticsEventType } from '@/utils/analytics';
 import { getClient } from '@/utils/client';
-import type { ITransactionDescriptor, IUnsignedCommand } from '@kadena/client';
+import type {
+  ITransactionDescriptor,
+  IUnsignedCommand,
+} from '@kda-community/client';
 import { useAccount } from './account';
 import { useAsset } from './asset';
 import { useNotifications } from './notifications';

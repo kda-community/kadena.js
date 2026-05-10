@@ -2,7 +2,7 @@
  * MagicAdapter
  *
  * This module provides a comprehensive adapter implementation for Magic Wallet,
- * extending the BaseWalletAdapter from '@kadena/wallet-adapter-core'. It serves as a bridge
+ * extending the BaseWalletAdapter from '@kda-community/wallet-adapter-core'. It serves as a bridge
  * between your dApp and the Magic Wallet browser extension, enabling you to:
  *
  * - Detect the Magic Wallet provider and initialize connection parameters.
@@ -23,8 +23,8 @@
  * - The adapter does not support network switching via `kadena_changeNetwork_v1`.
  */
 
-import type { IQuicksignResponse } from '@kadena/client';
-import { createTransaction } from '@kadena/client';
+import type { IQuicksignResponse } from '@kda-community/client';
+import { createTransaction } from '@kda-community/client';
 import type {
   ChainId,
   CommandSigDatas,
@@ -33,8 +33,8 @@ import type {
   ICommand,
   IKdaMethodMap,
   KdaMethod,
-} from '@kadena/wallet-adapter-core';
-import { BaseWalletAdapter } from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
+import { BaseWalletAdapter } from '@kda-community/wallet-adapter-core';
 import { KadenaExtension } from '@magic-ext/kadena';
 import type { Extension } from 'magic-sdk';
 import { Magic } from 'magic-sdk';

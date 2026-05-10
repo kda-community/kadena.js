@@ -224,7 +224,7 @@ type GraphConfiguration {
   """The lowest block-height that is indexed in this endpoint."""
   minimumBlockHeight: BigInt
 
-  """The version of the @kadena/graph package."""
+  """The version of the @kda-community/graph package."""
   version: String!
 }
 
@@ -414,9 +414,9 @@ type Query {
 
   """
   Retrieve events by qualifiedName (e.g. `coin.TRANSFER`). Default page size is 500.
-  
+
         The parametersFilter is a stringified JSON object that matches the [JSON object property filters](https://www.prisma.io/docs/orm/prisma-client/special-fields-and-types/working-with-json-fields#filter-on-object-property) from Prisma.
-  
+
         An example of such a filter parameter value: `events(parametersFilter: "{\"array_starts_with\": \"k:abcdefg\"}")`
   """
   events(after: String, before: String, blockHash: String, chainId: String, first: Int, last: Int, maxHeight: Int, minHeight: Int, minimumDepth: Int, orderIndex: Int, parametersFilter: String, qualifiedEventName: String!, requestKey: String): QueryEventsConnection!

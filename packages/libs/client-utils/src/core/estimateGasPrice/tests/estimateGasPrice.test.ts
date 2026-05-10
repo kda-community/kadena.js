@@ -1,4 +1,4 @@
-import { base64UrlEncode } from '@kadena/cryptography-utils';
+import { base64UrlEncode } from '@kda-community/cryptography-utils';
 import { describe, expect, it } from 'vitest';
 import {
   calculateGasInformation,

@@ -1,6 +1,6 @@
-import type { ChainId, PactErrorCode } from '@kadena/client';
-import { createSignWithKeypair, getPactErrorCode } from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+import type { ChainId, PactErrorCode } from '@kda-community/client';
+import { createSignWithKeypair, getPactErrorCode } from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 import { describe, expect, it } from 'vitest';
 import {
   burnToken,

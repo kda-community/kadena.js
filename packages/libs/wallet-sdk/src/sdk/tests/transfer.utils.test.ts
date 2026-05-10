@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { describe, expect, test } from 'vitest';
 import { isSameTransfer } from '../../services/graphql/transfer.util.js';
 

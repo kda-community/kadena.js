@@ -4,7 +4,7 @@ import { getNetwork } from '@/utils/client';
 import { env } from '@/utils/env';
 import { getAsset } from '@/utils/getAsset';
 import { getPubkeyFromAccount } from '@/utils/getPubKey';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 import { AGENTROLES } from './addAgent';
 import type { IComplianceRuleTypes } from './getComplianceRules';
 

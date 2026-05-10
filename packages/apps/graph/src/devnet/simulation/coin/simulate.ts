@@ -1,6 +1,6 @@
 import type { IAccount } from '@devnet/utils';
 import { sender00 } from '@devnet/utils';
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import { dotenv } from '@utils/dotenv';
 import { logger } from '@utils/logger';
 import { initializeNetworkConfig, networkData } from '@utils/network';

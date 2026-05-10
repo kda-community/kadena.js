@@ -11,7 +11,10 @@ import {
 import type { ITableProps } from '..';
 import { Stack } from '..';
 
-import { MonoExpandLess, MonoExpandMore } from '@kadena/kode-icons/system';
+import {
+  MonoExpandLess,
+  MonoExpandMore,
+} from '@kda-community/kode-icons/system';
 import { columnHeader, headerBase } from './Table.css';
 
 interface ITableHeaderRowProps<T> {

@@ -1,4 +1,4 @@
-import type { IBase64Url } from '@kadena/types';
+import type { IBase64Url } from '@kda-community/types';
 import { base64UrlEncode } from './base64UrlEncode';
 import { uint8ArrayToStr } from './uint8ArrayToStr';
 

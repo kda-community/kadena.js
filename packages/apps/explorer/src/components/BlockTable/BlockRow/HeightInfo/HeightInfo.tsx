@@ -6,7 +6,7 @@ import type { IBlockData } from '@/services/block';
 import {
   // Heading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React from 'react';
 import { blockInfoClass } from './styles.css';

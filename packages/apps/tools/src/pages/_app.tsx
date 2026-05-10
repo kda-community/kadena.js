@@ -1,12 +1,12 @@
-// load global styles from @kadena/kode-ui
-import '@kadena/kode-ui/global';
+// load global styles from @kda-community/kode-ui
+import '@kda-community/kode-ui/global';
 
 import { Layout } from '@/components/Common';
 import { AppContextProvider, LayoutContextProvider } from '@/context';
 import { WalletConnectClientContextProvider } from '@/context/connect-wallet-context';
 import '@/resources/styles/globals.css';
-import { RouterProvider, Version } from '@kadena/kode-ui';
-import { darkThemeClass } from '@kadena/kode-ui/styles';
+import { RouterProvider, Version } from '@kda-community/kode-ui';
+import { darkThemeClass } from '@kda-community/kode-ui/styles';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
 import { ThemeProvider } from 'next-themes';

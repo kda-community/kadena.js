@@ -1,6 +1,12 @@
-import { MonoArrowDropDown, MonoArrowRight } from '@kadena/kode-icons/system';
-import { Badge, Button, Stack, Text } from '@kadena/kode-ui';
-import { ellipsis, monospaceSmallestRegular } from '@kadena/kode-ui/styles';
+import {
+  MonoArrowDropDown,
+  MonoArrowRight,
+} from '@kda-community/kode-icons/system';
+import { Badge, Button, Stack, Text } from '@kda-community/kode-ui';
+import {
+  ellipsis,
+  monospaceSmallestRegular,
+} from '@kda-community/kode-ui/styles';
 import classNames from 'classnames';
 import React from 'react';
 import type { ICustomAccordionProps } from '../CustomAccordion/CustomAccordion';

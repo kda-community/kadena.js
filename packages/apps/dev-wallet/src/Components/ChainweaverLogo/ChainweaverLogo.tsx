@@ -1,8 +1,8 @@
 import {
   ChainweaverAlphaLogoKdacolorDark,
   ChainweaverAlphaLogoKdacolorLight,
-} from '@kadena/kode-icons/product';
-import { useTheme } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/product';
+import { useTheme } from '@kda-community/kode-ui';
 import { FC } from 'react';
 
 export const ChainWeaverLogo: FC<{ width?: number; height?: number }> = (

@@ -1,7 +1,7 @@
 import { useWalletConnectClient } from '@/context/connect-wallet-context';
 import { prefixApi } from '@/utils/network';
-import { details } from '@kadena/client-utils/coin';
-import type { ChainId } from '@kadena/types';
+import { details } from '@kda-community/client-utils/coin';
+import type { ChainId } from '@kda-community/types';
 import { useQuery } from '@tanstack/react-query';
 import { z } from 'zod';
 

@@ -1,6 +1,6 @@
 // check the change log for more details
 import { IContact } from '@/modules/contact/contact.repository';
-import { BuiltInPredicate } from '@kadena/client';
+import { BuiltInPredicate } from '@kda-community/client';
 import { getAllItems, putItem } from '../indexeddb';
 
 const changeLog = [

@@ -1,5 +1,5 @@
 {
-  "name": "@kadena/spirekey-example",
+  "name": "@kda-community/spirekey-example",
   "version": "0.0.18",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "parcel ./index.html"
   },
   "dependencies": {
-    "@kadena/client": "workspace:^"
+    "@kda-community/client": "workspace:^"
   },
   "devDependencies": {
     "parcel": "^2.12.0",

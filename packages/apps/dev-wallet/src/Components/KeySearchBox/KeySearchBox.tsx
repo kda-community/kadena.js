@@ -2,7 +2,7 @@ import { IKeySet } from '@/modules/account/account.repository';
 import { isKeysetGuard } from '@/modules/account/guards';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { shorten } from '@/utils/helpers';
-import { Badge, Button, Heading, Stack, Text } from '@kadena/kode-ui';
+import { Badge, Button, Heading, Stack, Text } from '@kda-community/kode-ui';
 import { useMemo } from 'react';
 import { ButtonItem } from '../ButtonItem/ButtonItem';
 import { ComboField } from '../ComboField/ComboField';

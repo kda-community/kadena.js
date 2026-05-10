@@ -7,13 +7,19 @@ import {
 } from '@/modules/contact/contact.repository';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { labelBoldClass } from '@/pages/transaction/components/style.css';
-import { Button, Notification, Stack, Text, TextField } from '@kadena/kode-ui';
+import {
+  Button,
+  Notification,
+  Stack,
+  Text,
+  TextField,
+} from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 

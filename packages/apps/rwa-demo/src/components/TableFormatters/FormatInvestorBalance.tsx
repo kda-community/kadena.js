@@ -1,4 +1,4 @@
-import type { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
+import type { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
 import React from 'react';
 import { InvestorBalance } from '../InvestorBalance/InvestorBalance';
 

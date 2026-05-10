@@ -1,11 +1,11 @@
 {
-  "name": "@kadena/client-examples",
+  "name": "@kda-community/client-examples",
   "version": "0.1.18",
   "private": true,
   "description": "Test project to verify pactjs-cli and pactjs-generator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/client-examples"
   },
   "license": "BSD-3-Clause",
@@ -16,7 +16,7 @@
     "build": "pnpm run prebuild && tsc --noEmit",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "gen-marmalade-v2": "pactjs contract-generate --contract marmalade-v2.ledger --chain 8 --api https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact;",
     "lint": "pnpm run /^lint:.*/",
@@ -27,18 +27,18 @@
     "test": ""
   },
   "dependencies": {
-    "@kadena/chainweb-node-client": "workspace:*",
-    "@kadena/client": "workspace:*",
-    "@kadena/client-utils": "workspace:*",
-    "@kadena/pactjs": "workspace:*"
+    "@kda-community/chainweb-node-client": "workspace:*",
+    "@kda-community/client": "workspace:*",
+    "@kda-community/client-utils": "workspace:*",
+    "@kda-community/pactjs": "workspace:*"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
-    "@kadena/pactjs-cli": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
+    "@kda-community/pactjs-cli": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/node": "^20.12.7",
     "eslint": "^8.45.0",

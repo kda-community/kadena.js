@@ -1,5 +1,9 @@
 import { ISetSecurityPhrase, PasswordKeepPolicy } from '@/service-worker/types';
-import { kadenaDecrypt, kadenaEncrypt, randomBytes } from '@kadena/hd-wallet';
+import {
+  kadenaDecrypt,
+  kadenaEncrypt,
+  randomBytes,
+} from '@kda-community/hd-wallet';
 
 export interface SecureContext {
   encryptionKey: Uint8Array;

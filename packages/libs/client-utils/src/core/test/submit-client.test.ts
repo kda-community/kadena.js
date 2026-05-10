@@ -1,13 +1,13 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import type { ILocalCommandResult } from '@kadena/chainweb-node-client';
-import type { IClient, ITransactionDescriptor } from '@kadena/client';
+import type { ILocalCommandResult } from '@kda-community/chainweb-node-client';
+import type { IClient, ITransactionDescriptor } from '@kda-community/client';
 import {
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 import { submitClient } from '../';
 
 describe('submitClient', () => {

@@ -1,5 +1,5 @@
 ---
-'@kadena/graph-proxy': patch
+'@kda-community/graph-proxy': patch
 ---
 
 init of project

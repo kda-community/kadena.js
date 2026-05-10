@@ -1,5 +1,5 @@
-import type { IClient } from '@kadena/client';
-import { createClient } from '@kadena/client';
+import type { IClient } from '@kda-community/client';
+import { createClient } from '@kda-community/client';
 
 const client = (apiHost: string): IClient => {
   return createClient(apiHost);

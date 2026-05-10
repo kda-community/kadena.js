@@ -1,5 +1,5 @@
-import type { IMaskedValueProps, MaskOptions } from '@kadena/kode-ui';
-import { Tag, Text, Tooltip, maskValue } from '@kadena/kode-ui';
+import type { IMaskedValueProps, MaskOptions } from '@kda-community/kode-ui';
+import { Tag, Text, Tooltip, maskValue } from '@kda-community/kode-ui';
 import type { ReactElement } from 'react';
 import React from 'react';
 import { containerClass, iconButtonClass } from './HoverTag.css';

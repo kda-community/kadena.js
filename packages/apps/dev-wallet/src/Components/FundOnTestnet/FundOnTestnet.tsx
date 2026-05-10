@@ -1,9 +1,9 @@
 import { IAccount } from '@/modules/account/account.repository';
 import { ITransaction } from '@/modules/transaction/transaction.repository';
 import { TxContainer } from '@/pages/transaction/components/TxContainer';
-import { ChainId } from '@kadena/client';
-import { MonoAutorenew } from '@kadena/kode-icons/system';
-import { Button, Stack } from '@kadena/kode-ui';
+import { ChainId } from '@kda-community/client';
+import { MonoAutorenew } from '@kda-community/kode-icons/system';
+import { Button, Stack } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import { useState } from 'react';
 

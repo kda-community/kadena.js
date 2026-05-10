@@ -1,5 +1,5 @@
-import type { ICommandResult } from '@kadena/client';
-import { createClient, isSignedTransaction, Pact } from '@kadena/client';
+import type { ICommandResult } from '@kda-community/client';
+import { createClient, isSignedTransaction, Pact } from '@kda-community/client';
 
 interface ITransfer {
   accountFrom: string;

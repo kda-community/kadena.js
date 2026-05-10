@@ -10,8 +10,8 @@ import type {
   IQuicksignResponse,
   IQuicksignResponseOutcomes,
   IUnsignedCommand,
-} from '@kadena/client';
-import { addSignatures } from '@kadena/client';
+} from '@kda-community/client';
+import { addSignatures } from '@kda-community/client';
 import type { ISigningRequestPartial } from '../types';
 import { ERRORS } from './constants';
 

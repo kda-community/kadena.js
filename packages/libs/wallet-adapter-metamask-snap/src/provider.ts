@@ -2,7 +2,7 @@
  *
  * This module defines the MetaMask Snap provider interface and implements a detection
  * mechanism for the Snap on the window object. The SnapProvider interface extends
- * the core Provider from "@kadena/wallet-adapter-core".
+ * the core Provider from "@kda-community/wallet-adapter-core".
  *
  * The detectSnapProvider function checks for the MetaMask Wallet provider by looking for its
  * presence on the global window object and uses a timeout mechanism to avoid waiting
@@ -11,7 +11,7 @@
  * prompts are deferred to the connection flow inside the adapter.
  */
 
-import type { IProvider } from '@kadena/wallet-adapter-core';
+import type { IProvider } from '@kda-community/wallet-adapter-core';
 export const defaultSnapOrigin = `npm:@mindsend/kadena-snap`;
 
 export interface ISnapProvider extends IProvider {

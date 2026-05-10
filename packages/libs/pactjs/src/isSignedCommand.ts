@@ -1,4 +1,4 @@
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 
 /**
  * Determines if a command is signed.

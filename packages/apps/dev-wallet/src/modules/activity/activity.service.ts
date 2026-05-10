@@ -1,4 +1,4 @@
-import { PactNumber } from '@kadena/pactjs';
+import { PactNumber } from '@kda-community/pactjs';
 import { IGuard } from '../account/account.repository';
 import { hasSameGuard } from '../account/account.service';
 import { UUID } from '../types';

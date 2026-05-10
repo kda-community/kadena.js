@@ -3,7 +3,7 @@ import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import type { ITogglePartiallyFreezeTokensProps } from '@/services/togglePartiallyFreezeTokens';
 import { togglePartiallyFreezeTokens } from '@/services/togglePartiallyFreezeTokens';
-import { maskValue } from '@kadena/kode-ui';
+import { maskValue } from '@kda-community/kode-ui';
 import { useEffect, useState } from 'react';
 import { useAccount } from './account';
 import { useAsset } from './asset';

@@ -1,4 +1,4 @@
-import { atoms, responsiveStyle, token } from '@kadena/kode-ui/styles';
+import { atoms, responsiveStyle, token } from '@kda-community/kode-ui/styles';
 import { style } from '@vanilla-extract/css';
 
 // NOTE: Padding is applied via this container instead of margin to the container to avoid margin collapse with the body

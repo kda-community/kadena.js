@@ -1,11 +1,14 @@
-import { discoverAccount, transferAllCommand } from '@kadena/client-utils/coin';
+import {
+  discoverAccount,
+  transferAllCommand,
+} from '@kda-community/client-utils/coin';
 import {
   dirtyReadClient,
   estimateGas,
   WithEmitter,
   withEmitter,
-} from '@kadena/client-utils/core';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client-utils/core';
+import { PactNumber } from '@kda-community/pactjs';
 
 import { keySourceManager } from '../key-source/key-source-manager';
 import {
@@ -21,13 +24,13 @@ import {
   createTransaction,
   type BuiltInPredicate,
   type ChainId,
-} from '@kadena/client';
+} from '@kda-community/client';
 import {
   fundExistingAccountOnTestnetCommand,
   fundNewAccountOnTestnetCommand,
   readHistory,
-} from '@kadena/client-utils/faucet';
-import { genKeyPair } from '@kadena/cryptography-utils';
+} from '@kda-community/client-utils/faucet';
+import { genKeyPair } from '@kda-community/cryptography-utils';
 import { transactionRepository } from '../transaction/transaction.repository';
 import type { IKeyItem, IKeySource } from '../wallet/wallet.repository';
 
@@ -39,7 +42,7 @@ import {
   execution,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 import { INetwork, networkRepository } from '../network/network.repository';
 import { UUID } from '../types';
 import { isKeysetGuard } from './guards';

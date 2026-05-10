@@ -3,7 +3,7 @@ const mocksHook = vi.hoisted(() => {
 });
 
 // Mocks must come before imports
-vi.mock('@kadena/kode-ui/patterns', () => ({
+vi.mock('@kda-community/kode-ui/patterns', () => ({
   useNotifications: () => ({
     addNotification: mocksHook.addNotification,
   }),
@@ -29,7 +29,7 @@ import type {
   IAnalyticsOptionsType,
 } from '@/utils/analytics';
 import { analyticsEvent, EVENT_NAMES } from '@/utils/analytics';
-import { useNotifications as useUINotifications } from '@kadena/kode-ui/patterns';
+import { useNotifications as useUINotifications } from '@kda-community/kode-ui/patterns';
 import { renderHook } from '@testing-library/react';
 import { useNotifications } from '../notifications';
 

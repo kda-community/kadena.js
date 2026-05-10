@@ -1,11 +1,11 @@
 {
-  "name": "@kadena-dev/lint-package",
+  "name": "@kda-community-dev/lint-package",
   "version": "0.2.0",
   "private": true,
   "description": "Linter for monorepo packages",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/tools/lint-package"
   },
   "license": "BSD-3-Clause",
@@ -21,7 +21,7 @@
     "dev": "tsc -w",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "lint": "pnpm run /^lint:.*/",
     "lint:pkg": "node ./lib/index.js",
@@ -34,9 +34,9 @@
     "jsonc-parser": "~3.2.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@npmcli/package-json": "~4.0.0",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/node": "^20.12.7",

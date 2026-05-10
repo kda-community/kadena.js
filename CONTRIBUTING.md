@@ -144,7 +144,7 @@ push their changes. That's why this repository does not auto-install Git hooks.
 
 To publish a new version of updated packages, please make sure you:
 
-- are part of the `@kadena` npm organization
+- are part of the `@kda-community` npm organization
 - have push rights to this repository's `main` branch
 - are on a clean `main` branch
 
@@ -183,7 +183,7 @@ git push --tags
 
 Apps are published manually. To publish a new version of an app, please make a
 PR to the relevant `release/<app-name>` branch, where `<app-name>` is the short
-app name (without `@kadena/`).
+app name (without `@kda-community/`).
 
 ### Regular release
 

@@ -1,7 +1,7 @@
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { IKeySource } from '@/modules/wallet/wallet.repository';
 import { getErrorMessage } from '@/utils/getErrorMessage';
-import { MonoDoNotDisturb } from '@kadena/kode-icons/system';
+import { MonoDoNotDisturb } from '@kda-community/kode-icons/system';
 import {
   Button,
   Heading,
@@ -9,13 +9,13 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 
 export function AddSpecificKey({

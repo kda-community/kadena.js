@@ -1,5 +1,8 @@
-import type { IExecutionPayloadObject, IPactCommand } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
+import type {
+  IExecutionPayloadObject,
+  IPactCommand,
+} from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
 import { describe, expect, it } from 'vitest';
 
 import {

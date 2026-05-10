@@ -21,7 +21,7 @@ To install and run the Kadena Transfer App locally, follow these steps:
 2. Build the app and its dependencies:
 
 ```sh
-pnpm --filter @kadena/tools build
+pnpm --filter @kda-community/tools build
 ```
 
 3. Navigate to the `packages/apps/tools` directory

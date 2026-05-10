@@ -1,8 +1,8 @@
 import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import { useFreeze } from '@/hooks/freeze';
 import { useFreezeInvestor } from '@/hooks/freezeInvestor';
-import { MonoPause, MonoPlayArrow } from '@kadena/kode-icons';
-import type { IButtonProps } from '@kadena/kode-ui';
+import { MonoPause, MonoPlayArrow } from '@kda-community/kode-icons';
+import type { IButtonProps } from '@kda-community/kode-ui';
 import {
   Button,
   Dialog,
@@ -14,7 +14,7 @@ import {
   Stack,
   Text,
   TextareaField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC, ReactElement } from 'react';
 import React, { cloneElement, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';

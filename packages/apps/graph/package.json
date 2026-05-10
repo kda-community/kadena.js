@@ -1,15 +1,15 @@
 {
-  "name": "@kadena/graph",
+  "name": "@kda-community/graph",
   "version": "2.2.7",
   "description": "GraphQL server, available for running your own GraphQL endpoint. This project uses chainweb-data as the datasource.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/apps/graph"
   },
   "license": "BSD-3-Clause",
   "contributors": [
-    "Albert Groothedde <albert@kadena.io>",
+    "Albert Groothedde <albert@kda-community.io>",
     "Maarten van den Hoven <maarten.vandenhoven@deptagency.com>",
     "Nil Amrutlal <nil.amrutlal@deptagency.com>"
   ],
@@ -50,11 +50,11 @@
     "tracing:analyse": "npx ts-node -T src/services/tracing/trace-analyser.ts"
   },
   "dependencies": {
-    "@kadena/chainweb-node-client": "workspace:*",
-    "@kadena/client": "workspace:*",
-    "@kadena/client-utils": "workspace:*",
-    "@kadena/cryptography-utils": "workspace:*",
-    "@kadena/pactjs": "workspace:*",
+    "@kda-community/chainweb-node-client": "workspace:*",
+    "@kda-community/client": "workspace:*",
+    "@kda-community/client-utils": "workspace:*",
+    "@kda-community/cryptography-utils": "workspace:*",
+    "@kda-community/pactjs": "workspace:*",
     "@pothos/core": "~3.41.1",
     "@pothos/plugin-complexity": "^3.13.0",
     "@pothos/plugin-dataloader": "^3.18.1",
@@ -86,11 +86,11 @@
     "zod": "~3.23.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
-    "@kadena/pactjs-cli": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
+    "@kda-community/pactjs-cli": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "@rushstack/eslint-config": "~3.6.9",
     "@types/debug": "~4.1.12",
     "@types/js-yaml": "4.0.9",

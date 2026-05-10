@@ -17,7 +17,7 @@ import { useSearch } from '@/context/searchContext';
 import { transactionRequestKey } from '@/graphql/pages/transaction/transaction-requestkey.graph';
 import { useGraphQuery } from '@/hooks/graphquery';
 import { useRouter } from '@/hooks/router';
-import { Stack, TabItem, Tabs } from '@kadena/kode-ui';
+import { Stack, TabItem, Tabs } from '@kda-community/kode-ui';
 import React, { useEffect, useState } from 'react';
 
 const Transaction: React.FC = () => {

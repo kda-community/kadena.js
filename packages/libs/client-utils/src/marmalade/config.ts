@@ -1,5 +1,5 @@
-import type { BuiltInPredicate } from '@kadena/client';
-import type { IPactDecimal, IPactInt } from '@kadena/types';
+import type { BuiltInPredicate } from '@kda-community/client';
+import type { IPactDecimal, IPactInt } from '@kda-community/types';
 
 /** -----------COMMON----------- */
 

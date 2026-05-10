@@ -1,6 +1,6 @@
 import type { AccountQuery } from '@/__generated__/sdk';
 import type { IViewChain } from '@/utils/processChainAccounts';
-import { Badge, Stack } from '@kadena/kode-ui';
+import { Badge, Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import React, { useMemo } from 'react';
 import { ChainBalance } from './ChainBalance';

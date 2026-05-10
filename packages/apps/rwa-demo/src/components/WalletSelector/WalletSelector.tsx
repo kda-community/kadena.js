@@ -10,7 +10,7 @@ import {
   maskValue,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC, ReactElement } from 'react';
 import { useState } from 'react';
 import { ChainweaverWalletConnect } from '../ChainweaverWalletConnect/ChainweaverWalletConnect';

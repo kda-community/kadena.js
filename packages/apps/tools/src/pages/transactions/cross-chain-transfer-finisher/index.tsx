@@ -45,7 +45,7 @@ import {
   MonoInfo,
   MonoKeyboardArrowRight,
   MonoLink,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Box,
   Breadcrumbs,
@@ -60,7 +60,7 @@ import {
   TextField,
   TextareaField,
   TrackerCard,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import Debug from 'debug';
 import Trans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';

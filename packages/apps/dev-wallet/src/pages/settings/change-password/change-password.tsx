@@ -7,7 +7,10 @@ import { changePassword } from '@/modules/wallet/wallet.service';
 import { wrapperClass } from '@/pages/errors/styles.css';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
 import { createCredential, extractPublicKeyHex } from '@/utils/webAuthn';
-import { MonoFingerprint, MonoPassword } from '@kadena/kode-icons/system';
+import {
+  MonoFingerprint,
+  MonoPassword,
+} from '@kda-community/kode-icons/system';
 import {
   Button,
   Heading,
@@ -18,8 +21,8 @@ import {
   Stack,
   Text,
   Link as UiLink,
-} from '@kadena/kode-ui';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import { useRef, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';

@@ -2,7 +2,7 @@ import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import { getNetwork } from '@/utils/client';
 import { getKeyset } from '@/utils/getPubKey';
 import { setSigner } from '@/utils/setSigner';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 import { getContract } from './pact/modelcontract';
 
 export interface IAddContractProps {

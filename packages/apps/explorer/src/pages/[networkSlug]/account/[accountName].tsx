@@ -25,8 +25,11 @@ import {
   Stack,
   TabItem,
   Tabs,
-} from '@kadena/kode-ui';
-import { CompactTable, CompactTableFormatters } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import {
+  CompactTable,
+  CompactTableFormatters,
+} from '@kda-community/kode-ui/patterns';
 import type { FC, Key } from 'react';
 import React, { useEffect, useMemo, useState } from 'react';
 

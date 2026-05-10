@@ -6,8 +6,12 @@ import {
   IContact,
 } from '@/modules/contact/contact.repository';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { MonoContacts } from '@kadena/kode-icons/system';
-import { Button, Notification, NotificationHeading } from '@kadena/kode-ui';
+import { MonoContacts } from '@kda-community/kode-icons/system';
+import {
+  Button,
+  Notification,
+  NotificationHeading,
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -17,7 +21,7 @@ import {
   SectionCardHeader,
   SideBarBreadcrumbsItem,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { ContactForm } from './Components/ContactForm';
 

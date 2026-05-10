@@ -1,13 +1,17 @@
-import type { ChainId } from '@kadena/client';
-import { createTransaction, Pact, signWithChainweaver } from '@kadena/client';
-import { asyncPipe } from '@kadena/client-utils/core';
+import type { ChainId } from '@kda-community/client';
+import {
+  createTransaction,
+  Pact,
+  signWithChainweaver,
+} from '@kda-community/client';
+import { asyncPipe } from '@kda-community/client-utils/core';
 import {
   addSigner,
   composePactCommand,
   execution,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 
 import { pollStatus, submitOne } from '../util/client';
 import { inspect, safeSign } from '../util/fp-helpers';

@@ -1,5 +1,5 @@
 import { AdminButtonBar } from '@/components/AdminButtonBar/AdminButtonBar';
-import { Link as UILink } from '@kadena/kode-ui';
+import { Link as UILink } from '@kda-community/kode-ui';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 

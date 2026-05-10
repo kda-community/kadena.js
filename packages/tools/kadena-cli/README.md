@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/kadena-cli
+# @kda-community/kadena-cli
 
 Kadena CLI tool to interact with the Kadena blockchain (manage keys,
 transactions, etc.)
@@ -31,13 +31,13 @@ concise manner.
 ## Installation from npm
 
 ```npm
-npm install -g @kadena/kadena-cli
+npm install -g @kda-community/kadena-cli
 ```
 
 ## Installation from pnpm
 
 ```pnpm
-pnpm install -g @kadena/kadena-cli
+pnpm install -g @kda-community/kadena-cli
 ```
 
 Read more at [docs.kadena.io][1]

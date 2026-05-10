@@ -1,4 +1,4 @@
-import { Notification, NotificationHeading } from '@kadena/kode-ui';
+import { Notification, NotificationHeading } from '@kda-community/kode-ui';
 import { useEffect, useState, type FC } from 'react';
 
 const DISMISSED_PREVIEWBANNERKEY = 'DISMISSED_PREVIEWBANNER';

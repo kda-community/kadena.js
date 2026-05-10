@@ -1,6 +1,6 @@
-import type { ChainId } from '@kadena/client';
-import { createTransaction } from '@kadena/client';
-import { createPactCommandFromTemplate } from '@kadena/client-utils/nodejs';
+import type { ChainId } from '@kda-community/client';
+import { createTransaction } from '@kda-community/client';
+import { createPactCommandFromTemplate } from '@kda-community/client-utils/nodejs';
 import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import yaml from 'js-yaml';
 import { join, relative } from 'path';

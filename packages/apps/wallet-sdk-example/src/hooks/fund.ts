@@ -1,4 +1,4 @@
-import { walletSdk } from '@kadena/wallet-sdk';
+import { walletSdk } from '@kda-community/wallet-sdk';
 import { fundDifferentFungibleAccount } from '../domain/fund';
 import { useWalletState } from '../state/wallet';
 

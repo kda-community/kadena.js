@@ -1,4 +1,4 @@
-# @kadena/rwa-demo
+# @kda-community/rwa-demo
 
 ## 2.1.4
 
@@ -6,29 +6,29 @@
 
 - Updated dependencies \[59f3cec]
 - Updated dependencies \[f00545d]
-  - @kadena/pactjs\@0.6.0
-  - @kadena/wallet-adapter-walletconnect\@0.2.0
-  - @kadena/graph\@2.2.7
-  - @kadena/client\@1.18.3
-  - @kadena/client-utils\@0.13.4
-  - @kadena/wallet-adapter-chainweaver\@0.0.6
-  - @kadena/wallet-adapter-core\@0.1.3
-  - @kadena/wallet-adapter-magic\@0.0.7
-  - @kadena/wallet-adapter-ecko\@0.0.6
-  - @kadena/wallet-adapter-react\@0.0.7
+  - @kda-community/pactjs\@0.6.0
+  - @kda-community/wallet-adapter-walletconnect\@0.2.0
+  - @kda-community/graph\@2.2.7
+  - @kda-community/client\@1.18.3
+  - @kda-community/client-utils\@0.13.4
+  - @kda-community/wallet-adapter-chainweaver\@0.0.6
+  - @kda-community/wallet-adapter-core\@0.1.3
+  - @kda-community/wallet-adapter-magic\@0.0.7
+  - @kda-community/wallet-adapter-ecko\@0.0.6
+  - @kda-community/wallet-adapter-react\@0.0.7
 
 ## 2.1.3
 
 ### Patch Changes
 
-- @kadena/graph\@2.2.6
-- @kadena/client\@1.18.2
-- @kadena/client-utils\@0.13.3
-- @kadena/wallet-adapter-chainweaver\@0.0.5
-- @kadena/wallet-adapter-core\@0.1.2
-- @kadena/wallet-adapter-magic\@0.0.6
-- @kadena/wallet-adapter-ecko\@0.0.5
-- @kadena/wallet-adapter-react\@0.0.6
+- @kda-community/graph\@2.2.6
+- @kda-community/client\@1.18.2
+- @kda-community/client-utils\@0.13.3
+- @kda-community/wallet-adapter-chainweaver\@0.0.5
+- @kda-community/wallet-adapter-core\@0.1.2
+- @kda-community/wallet-adapter-magic\@0.0.6
+- @kda-community/wallet-adapter-ecko\@0.0.5
+- @kda-community/wallet-adapter-react\@0.0.6
 
 ## 2.1.2
 
@@ -36,15 +36,15 @@
 
 - Updated dependencies \[c967a57]
 - Updated dependencies \[24ed24c]
-  - @kadena/pactjs\@0.5.0
-  - @kadena/wallet-adapter-chainweaver\@0.0.4
-  - @kadena/wallet-adapter-ecko\@0.0.4
-  - @kadena/graph\@2.2.5
-  - @kadena/client\@1.18.1
-  - @kadena/client-utils\@0.13.2
-  - @kadena/wallet-adapter-core\@0.1.1
-  - @kadena/wallet-adapter-magic\@0.0.5
-  - @kadena/wallet-adapter-react\@0.0.5
+  - @kda-community/pactjs\@0.5.0
+  - @kda-community/wallet-adapter-chainweaver\@0.0.4
+  - @kda-community/wallet-adapter-ecko\@0.0.4
+  - @kda-community/graph\@2.2.5
+  - @kda-community/client\@1.18.1
+  - @kda-community/client-utils\@0.13.2
+  - @kda-community/wallet-adapter-core\@0.1.1
+  - @kda-community/wallet-adapter-magic\@0.0.5
+  - @kda-community/wallet-adapter-react\@0.0.5
 
 ## 2.1.1
 
@@ -53,10 +53,10 @@
 - f59ac43: update to react 19, Next 15 and other dependend packages
 - Updated dependencies \[f59ac43]
 - Updated dependencies \[5c56ae2]
-  - @kadena/kode-icons\@0.3.1
-  - @kadena/kode-ui\@0.21.1
-  - @kadena/client-utils\@0.13.1
-  - @kadena/graph\@2.2.4
+  - @kda-community/kode-icons\@0.3.1
+  - @kda-community/kode-ui\@0.21.1
+  - @kda-community/client-utils\@0.13.1
+  - @kda-community/graph\@2.2.4
 
 ## 0.1.11
 
@@ -68,10 +68,10 @@
 - Updated dependencies \[3759502]
 - Updated dependencies \[b5df48c]
 - Updated dependencies \[05168d0]
-  - @kadena/client-utils\@0.13.0
-  - @kadena/client\@1.18.0
-  - @kadena/kode-ui\@0.21.0
-  - @kadena/graph\@2.2.3
+  - @kda-community/client-utils\@0.13.0
+  - @kda-community/client\@1.18.0
+  - @kda-community/kode-ui\@0.21.0
+  - @kda-community/graph\@2.2.3
 
 ## 0.1.10
 
@@ -80,16 +80,16 @@
 - 8dd7433: Change the KLogo to the text logo
 - Updated dependencies \[8dd7433]
 - Updated dependencies \[034b2c2]
-  - @kadena/kode-ui\@0.20.2
-  - @kadena/graph\@2.2.2
+  - @kda-community/kode-ui\@0.20.2
+  - @kda-community/graph\@2.2.2
 
 ## 0.1.9
 
 ### Patch Changes
 
 - Updated dependencies \[ea02b15]
-  - @kadena/graph\@2.2.1
-  - @kadena/client\@1.17.1
+  - @kda-community/graph\@2.2.1
+  - @kda-community/client\@1.17.1
 
 ## 0.1.8
 
@@ -97,8 +97,8 @@
 
 - Updated dependencies \[67ee479]
 - Updated dependencies \[44b5408]
-  - @kadena/client\@1.17.0
-  - @kadena/graph\@2.2.0
+  - @kda-community/client\@1.17.0
+  - @kda-community/graph\@2.2.0
 
 ## 0.1.7
 
@@ -106,15 +106,15 @@
 
 - Updated dependencies \[35cad4d]
 - Updated dependencies \[ebc4e5c]
-  - @kadena/graph\@2.1.0
-  - @kadena/kode-ui\@0.20.1
+  - @kda-community/graph\@2.1.0
+  - @kda-community/kode-ui\@0.20.1
 
 ## 0.1.6
 
 ### Patch Changes
 
 - Updated dependencies \[ee8e99b]
-  - @kadena/graph\@2.0.5
+  - @kda-community/graph\@2.0.5
 
 ## 0.1.5
 
@@ -122,7 +122,7 @@
 
 - Updated dependencies \[629766c]
 - Updated dependencies \[629766c]
-  - @kadena/graph\@2.0.4
+  - @kda-community/graph\@2.0.4
 
 ## 0.1.4
 
@@ -134,23 +134,23 @@
 - Updated dependencies \[5e9bfd0]
 - Updated dependencies \[dbd9076]
 - Updated dependencies \[1f46bee]
-  - @kadena/kode-ui\@0.20.0
-  - @kadena/client\@1.16.0
-  - @kadena/graph\@2.0.3
+  - @kda-community/kode-ui\@0.20.0
+  - @kda-community/client\@1.16.0
+  - @kda-community/graph\@2.0.3
 
 ## 0.1.3
 
 ### Patch Changes
 
 - Updated dependencies \[2a073ed]
-  - @kadena/graph\@2.0.2
+  - @kda-community/graph\@2.0.2
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies \[868c732]
-  - @kadena/graph\@2.0.1
+  - @kda-community/graph\@2.0.1
 
 ## 0.1.1
 
@@ -163,8 +163,8 @@
 - Updated dependencies \[8467af0]
 - Updated dependencies \[14e809a]
 - Updated dependencies \[8467af0]
-  - @kadena/graph\@2.0.0
-  - @kadena/kode-ui\@0.19.0
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/kode-icons\@0.3.0
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/graph\@2.0.0
+  - @kda-community/kode-ui\@0.19.0
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/kode-icons\@0.3.0
+  - @kda-community/pactjs\@0.4.3

@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import { testNetworkConfigMock } from '../../../../mocks/network.js';
 import type { Predicate } from '../../types.js';
 

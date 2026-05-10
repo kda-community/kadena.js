@@ -44,7 +44,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/kadena-community/kadena.js.git
+   git clone https://github.com/kda-community/kadena.js.git
    cd kadena.js/packages/apps/wallet-sdk-example
    ```
 

@@ -1,9 +1,9 @@
-import { hash as blakeHash } from '@kadena/cryptography-utils';
-import type { IUnsignedCommand } from '@kadena/types';
+import { hash as blakeHash } from '@kda-community/cryptography-utils';
+import type { IUnsignedCommand } from '@kda-community/types';
 import type { IPartialPactCommand } from '../interfaces/IPactCommand';
 
 /**
- * Prepare a transaction object. Creates an object with hash, cmd and sigs ({@link @kadena/types#IUnsignedCommand})
+ * Prepare a transaction object. Creates an object with hash, cmd and sigs ({@link @kda-community/types#IUnsignedCommand})
  * @public
  */
 export const createTransaction: (

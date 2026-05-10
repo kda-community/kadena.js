@@ -2,7 +2,7 @@ import type {
   ChainId,
   IExecutionPayloadObject,
   IPactCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import { readFileSync } from 'fs';
 import yaml from 'js-yaml';
 import { join } from 'path';

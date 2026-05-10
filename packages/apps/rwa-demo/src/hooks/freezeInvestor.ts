@@ -5,7 +5,7 @@ import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import type { ISetAddressFrozenProps } from '@/services/setAddressFrozen';
 import { setAddressFrozen } from '@/services/setAddressFrozen';
 import { RWAStore } from '@/utils/store';
-import { maskValue } from '@kadena/kode-ui';
+import { maskValue } from '@kda-community/kode-ui';
 import { useEffect, useMemo, useState } from 'react';
 import { useAccount } from './account';
 import { useAsset } from './asset';

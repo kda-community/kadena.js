@@ -1,6 +1,6 @@
 import { IDBService, dbService } from '@/modules/db/db.service';
 import { PasswordKeepPolicy } from '@/service-worker/types';
-import { SignerScheme } from '@kadena/client';
+import { SignerScheme } from '@kda-community/client';
 import type { INetwork } from '../network/network.repository';
 import { UUID } from '../types';
 

@@ -1,4 +1,4 @@
-# @kadena-dev/markdown
+# @kda-community-dev/markdown
 
 ## 1.0.3
 

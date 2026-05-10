@@ -1,7 +1,7 @@
 import { IKeySet } from '@/modules/account/account.repository';
 import { shorten } from '@/utils/helpers';
-import { MonoKey } from '@kadena/kode-icons/system';
-import { Stack, Text } from '@kadena/kode-ui';
+import { MonoKey } from '@kda-community/kode-icons/system';
+import { Stack, Text } from '@kda-community/kode-ui';
 
 export function Keyset({
   keySet,

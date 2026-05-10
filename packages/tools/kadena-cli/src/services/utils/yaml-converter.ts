@@ -2,8 +2,8 @@ import type {
   ChainId,
   IExecutionPayloadObject,
   IPactCommand,
-} from '@kadena/client';
-import { asyncPipe } from '@kadena/client-utils';
+} from '@kda-community/client';
+import { asyncPipe } from '@kda-community/client-utils';
 import yaml from 'js-yaml';
 import { join } from 'path';
 import { services } from '../../services/index.js';

@@ -23,15 +23,15 @@ function getMonorepoPackagesFromPackageJson() {
 
 const monorepoPackages = getMonorepoPackagesFromPackageJson();
 
-monorepoPackages.push('@kadena/client-utils');
-monorepoPackages.push('@kadena/cryptography-utils');
-monorepoPackages.push('@kadena/pactjs');
-monorepoPackages.push('@kadena/wallet-sdk');
+monorepoPackages.push('@kda-community/client-utils');
+monorepoPackages.push('@kda-community/cryptography-utils');
+monorepoPackages.push('@kda-community/pactjs');
+monorepoPackages.push('@kda-community/wallet-sdk');
 
 const monorepoPathsRegex = monorepoPackages.map(
-  (pkg) => new RegExp(`${pkg.replace('@kadena/', '')}`),
+  (pkg) => new RegExp(`${pkg.replace('@kda-community/', '')}`),
 );
-monorepoPackages.push('@kadena/client/fp');
+monorepoPackages.push('@kda-community/client/fp');
 
 export const config: UserConfig = {
   plugins: [vanillaExtractPlugin(), react()],

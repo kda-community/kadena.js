@@ -8,14 +8,14 @@ import {
   transactionRepository,
 } from '@/modules/transaction/transaction.repository';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { IPactCommand } from '@kadena/client';
+import { IPactCommand } from '@kda-community/client';
 import {
   MonoMultipleStop,
   MonoSignpost,
   MonoSwapHoriz,
-} from '@kadena/kode-icons/system';
-import { Heading, Stack, TabItem, Tabs, Text } from '@kadena/kode-ui';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-icons/system';
+import { Heading, Stack, TabItem, Tabs, Text } from '@kda-community/kode-ui';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { ActivityTable } from '../account/Components/ActivityTable';
 import { TransactionList } from './transactions';

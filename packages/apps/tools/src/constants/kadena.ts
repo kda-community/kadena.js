@@ -1,5 +1,5 @@
 import { env } from '@/utils/env';
-import type { ChainwebNetworkId } from '@kadena/chainweb-node-client';
+import type { ChainwebNetworkId } from '@kda-community/chainweb-node-client';
 
 export type NetworkIds = Exclude<ChainwebNetworkId, 'development'>;
 export type NetworkId = NetworkIds | string;
@@ -40,8 +40,7 @@ export const kadenaDefaultNetworks: Record<NetworkIds, NetworkType> = {
     API: env('KADENA_TESTNET_API', ''),
     apiHost: ({ networkId, chainId }) =>
       `https://${kadenaDefaultNetworks.testnet06.API}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
-    estatsHost: () =>
-      env('KADENA_TESTNET_ESTATS', ''),
+    estatsHost: () => env('KADENA_TESTNET_ESTATS', ''),
   },
 } as const;
 

@@ -2,9 +2,9 @@ import { Key } from '@/Components/Key/Key';
 import { displayContentsClass } from '@/Components/Sidebar/style.css';
 import { IKeySet, IKeysetGuard } from '@/modules/account/account.repository';
 import { Label } from '@/pages/transaction/components/helpers';
-import { BuiltInPredicate } from '@kadena/client';
-import { createPrincipal } from '@kadena/client-utils/built-in';
-import { MonoDelete } from '@kadena/kode-icons/system';
+import { BuiltInPredicate } from '@kda-community/client';
+import { createPrincipal } from '@kda-community/client-utils/built-in';
+import { MonoDelete } from '@kda-community/kode-icons/system';
 import {
   Button,
   Dialog,
@@ -15,7 +15,7 @@ import {
   SelectItem,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { FC, PropsWithChildren, useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { KeySearchBox } from '../KeySearchBox/KeySearchBox';

@@ -1,6 +1,6 @@
 import { join } from 'path';
 
-import { generateDts, pactParser } from '@kadena/pactjs-generator';
+import { generateDts, pactParser } from '@kda-community/pactjs-generator';
 import { services } from '../../../services/index.js';
 import { createCommand } from '../../../utils/createCommand.js';
 import { notEmpty } from '../../../utils/globalHelpers.js';
@@ -162,7 +162,7 @@ export const typescriptGenerateCommand = createCommand(
         JSON.stringify(
           {
             name: TARGET_PACKAGE,
-            description: 'TypeScript definitions for @kadena/client',
+            description: 'TypeScript definitions for @kda-community/client',
             types: 'index.d.ts',
             keywords: ['pact', 'contract', 'pactjs'],
           },

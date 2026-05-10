@@ -1,5 +1,5 @@
-import type { ChainId, ICommandResult } from '@kadena/client';
-import { createClient } from '@kadena/client';
+import type { ChainId, ICommandResult } from '@kda-community/client';
+import { createClient } from '@kda-community/client';
 import type { Table } from 'cli-table3';
 import type { Command } from 'commander';
 import ora from 'ora';

@@ -1,5 +1,5 @@
 import { Client } from '@elastic/elasticsearch';
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import type { IAlert, INETWORK } from './constants';
 
 const getElasticIndexByEnv = (env: INETWORK): string => {

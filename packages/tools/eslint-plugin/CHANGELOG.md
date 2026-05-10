@@ -1,4 +1,4 @@
-# Change Log - @kadena-dev/eslint-plugin
+# Change Log - @kda-community-dev/eslint-plugin
 
 ## 0.0.9
 

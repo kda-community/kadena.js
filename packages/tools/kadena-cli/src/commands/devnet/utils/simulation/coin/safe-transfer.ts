@@ -1,8 +1,8 @@
-import type { ICommandResult } from '@kadena/client';
-import { Pact, createSignWithKeypair } from '@kadena/client';
-import { submitClient } from '@kadena/client-utils/core';
-import { PactNumber } from '@kadena/pactjs';
-import type { ChainId } from '@kadena/types';
+import type { ICommandResult } from '@kda-community/client';
+import { Pact, createSignWithKeypair } from '@kda-community/client';
+import { submitClient } from '@kda-community/client-utils/core';
+import { PactNumber } from '@kda-community/pactjs';
+import type { ChainId } from '@kda-community/types';
 import type { IAccount } from '../../../../../constants/devnets.js';
 import { log } from '../../../../../utils/logger.js';
 import { stringifyProperty } from '../helper.js';

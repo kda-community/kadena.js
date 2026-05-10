@@ -6,8 +6,8 @@ import type { ElementType } from '@/types/utils';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,
-} from '@kadena/chainweb-node-client';
-import { contractParser } from '@kadena/pactjs-generator';
+} from '@kda-community/chainweb-node-client';
+import { contractParser } from '@kda-community/pactjs-generator';
 import type { FuseResult } from 'fuse.js';
 import type { IModuleExplorerProps } from '.';
 import type { TreeItem } from '../CustomTree/CustomTree';

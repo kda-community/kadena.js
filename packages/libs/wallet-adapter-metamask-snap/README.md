@@ -7,11 +7,11 @@ extends a base adapter but uses the `"kda_"` RPC prefix defined by the Snap
 ## Installation
 
 ```bash
-npm install @kadena/wallet-adapter-metamask-snap
+npm install @kda-community/wallet-adapter-metamask-snap
 # or
-yarn add @kadena/wallet-adapter-metamask-snap
+yarn add @kda-community/wallet-adapter-metamask-snap
 # or
-pnpm add @kadena/wallet-adapter-metamask-snap
+pnpm add @kda-community/wallet-adapter-metamask-snap
 ```
 
 ## Manual Usage: Detection and Connect
@@ -28,7 +28,7 @@ If you need lower-level access, the following are also exported:
 import {
   SnapAdapter,
   detectSnapProvider,
-} from '@kadena/wallet-adapter-metamask-snap';
+} from '@kda-community/wallet-adapter-metamask-snap';
 
 (async () => {
   const provider = await detectSnapProvider({ silent: true });

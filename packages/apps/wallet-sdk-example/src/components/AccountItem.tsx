@@ -1,4 +1,11 @@
-import { Badge, Button, Card, Divider, Stack, Text } from '@kadena/kode-ui';
+import {
+  Badge,
+  Button,
+  Card,
+  Divider,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
 import React, { useEffect, useState } from 'react';
 import { createAndTransferFund } from '../domain/fund';
 import { useFunctionTracker } from '../hooks/functionTracker';

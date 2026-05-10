@@ -1,4 +1,4 @@
-import { generateDts, pactParser } from '@kadena/pactjs-generator';
+import { generateDts, pactParser } from '@kda-community/pactjs-generator';
 import type { Command } from 'commander';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { writeFile } from 'fs/promises';
@@ -231,10 +231,10 @@ export const generate: IGenerate = (program, version) => async (args) => {
         {
           name: TARGET_PACKAGE,
           version: version,
-          description: 'TypeScript definitions for @kadena/client',
+          description: 'TypeScript definitions for @kda-community/client',
           types: 'index.d.ts',
           keywords: ['pact', 'contract', 'pactjs'],
-          author: `@kadena/pactjs-cli@${version}`,
+          author: `@kda-community/pactjs-cli@${version}`,
         },
         null,
         2,

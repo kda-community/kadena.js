@@ -1,5 +1,5 @@
-import { recipe } from '@kadena/kode-ui';
-import { atoms, token } from '@kadena/kode-ui/styles';
+import { recipe } from '@kda-community/kode-ui';
+import { atoms, token } from '@kda-community/kode-ui/styles';
 
 export const wrapperClass = recipe({
   base: [

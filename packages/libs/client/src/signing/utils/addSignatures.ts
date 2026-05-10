@@ -1,13 +1,13 @@
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 import type { Debugger } from 'debug';
 import _debug from 'debug';
 import type { IPactCommand } from '../../interfaces/IPactCommand';
 import { parseTransactionCommand } from './parseTransactionCommand';
 
-const debug: Debugger = _debug('@kadena/client:signing:addSignature');
+const debug: Debugger = _debug('@kda-community/client:signing:addSignature');
 
 /**
- * adds signatures to an {@link @kadena/types#IUnsignedCommand | unsigned command}
+ * adds signatures to an {@link @kda-community/types#IUnsignedCommand | unsigned command}
  *
  * @public
  */

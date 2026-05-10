@@ -1,4 +1,4 @@
-import { MonoAccessAlarm, MonoAdd } from '@kadena/kode-icons/system';
+import { MonoAccessAlarm, MonoAdd } from '@kda-community/kode-icons/system';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Button, Stack, Text } from './../../components';

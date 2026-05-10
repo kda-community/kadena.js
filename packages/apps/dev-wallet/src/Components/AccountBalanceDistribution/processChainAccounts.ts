@@ -1,4 +1,4 @@
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 
 export interface IViewChain {
   chainId: ChainId;

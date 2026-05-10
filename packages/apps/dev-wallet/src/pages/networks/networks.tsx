@@ -8,12 +8,15 @@ import {
   networkRepository,
 } from '@/modules/network/network.repository';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { MonoDelete, MonoWifiTethering } from '@kadena/kode-icons/system';
-import { Button, Heading, Stack, Text } from '@kadena/kode-ui';
+import {
+  MonoDelete,
+  MonoWifiTethering,
+} from '@kda-community/kode-icons/system';
+import { Button, Heading, Stack, Text } from '@kda-community/kode-ui';
 import {
   SideBarBreadcrumbsItem,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { panelClass } from '../home/style.css';
 import {

@@ -6,8 +6,8 @@ import type {
   ChainId,
   ICommand,
   IContinuationPayloadObject,
-} from '@kadena/client';
-import { Pact } from '@kadena/client';
+} from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 import Debug from 'debug';
 
 export interface ITransferResult {
@@ -40,7 +40,6 @@ export async function finishXChainTransfer(
   });
   const { submit } = client(apiHost);
 
-  
   try {
     const continuationTransaction = Pact.builder
       .continuation(continuation)

@@ -1,5 +1,5 @@
 import { WALLETTYPES } from '@/constants';
-import { ContextMenuItem } from '@kadena/kode-ui';
+import { ContextMenuItem } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useState } from 'react';
 import type { IECKOWindow } from './eckotypes';

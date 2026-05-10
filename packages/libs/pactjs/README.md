@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/pactjs
+# @kda-community/pactjs
 
 Collection of utility functions pactjs related
 

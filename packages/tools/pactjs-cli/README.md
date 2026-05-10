@@ -1,8 +1,8 @@
 <!-- genericHeader start -->
 
-# @kadena/pactjs-cli
+# @kda-community/pactjs-cli
 
-CLI tool accompanying @kadena/pactjs-core and @kadena/pactjs-client to generate
+CLI tool accompanying @kda-community/pactjs-core and @kda-community/pactjs-client to generate
 TypeScript definitions and Pact client
 
 <picture>

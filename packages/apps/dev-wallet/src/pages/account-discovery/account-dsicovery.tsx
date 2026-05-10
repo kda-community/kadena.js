@@ -11,7 +11,7 @@ import {
   Stack,
   Text,
   Link as UiLink,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { useState } from 'react';
 
 import { CardContent } from '@/App/LayoutLandingPage/components/CardContent';
@@ -26,9 +26,13 @@ import { keySourceRepository } from '@/modules/key-source/key-source.repository'
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { shorten } from '@/utils/helpers';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { ChainId } from '@kadena/client';
-import { MonoKey, MonoLoading, MonoSearch } from '@kadena/kode-icons/system';
-import { PactNumber } from '@kadena/pactjs';
+import { ChainId } from '@kda-community/client';
+import {
+  MonoKey,
+  MonoLoading,
+  MonoSearch,
+} from '@kda-community/kode-icons/system';
+import { PactNumber } from '@kda-community/pactjs';
 import { Link } from 'react-router-dom';
 import { wrapperClass } from '../errors/styles.css';
 import { Label } from '../transaction/components/helpers';

@@ -1,7 +1,7 @@
 import { IGuard, IOwnedAccount } from '@/modules/account/account.repository';
 import { formatList, shorten } from '@/utils/helpers';
-import { MonoLink } from '@kadena/kode-icons/system';
-import { Stack, Text } from '@kadena/kode-ui';
+import { MonoLink } from '@kda-community/kode-icons/system';
+import { Stack, Text } from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { Guard } from '../../../Components/Guard/Guard';
 import { balanceClass } from './style.css';

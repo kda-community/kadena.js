@@ -2,7 +2,7 @@ import type { TransactionRequestKeyQuery } from '@/__generated__/sdk';
 import { DataRenderComponent } from '@/components/DataRenderComponent/DataRenderComponent';
 import { formatJson } from '@/utils/formatJson';
 import { ifNill } from '@/utils/ifNill';
-import { Text } from '@kadena/kode-ui';
+import { Text } from '@kda-community/kode-ui';
 import React from 'react';
 
 type Transaction = Omit<

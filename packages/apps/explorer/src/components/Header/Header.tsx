@@ -1,4 +1,4 @@
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import React from 'react';

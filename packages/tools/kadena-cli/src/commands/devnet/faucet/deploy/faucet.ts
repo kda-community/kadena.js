@@ -1,11 +1,11 @@
-import type { ICommandResult } from '@kadena/client';
+import type { ICommandResult } from '@kda-community/client';
 import {
   Pact,
   createClient,
   createSignWithKeypair,
   isSignedTransaction,
-} from '@kadena/client';
-import type { ChainId } from '@kadena/types';
+} from '@kda-community/client';
+import type { ChainId } from '@kda-community/types';
 
 import { faucetContract } from '../contract/devnet-faucet.js';
 import { DOMAIN, NETWORK_ID, SENDER_00 } from './constants.js';

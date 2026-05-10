@@ -1,32 +1,32 @@
-# @kadena/wallet-sdk
+# @kda-community/wallet-sdk
 
 ## 0.2.6
 
 ### Patch Changes
 
-- @kadena/client\@1.18.3
-- @kadena/client-utils\@0.13.4
+- @kda-community/client\@1.18.3
+- @kda-community/client-utils\@0.13.4
 
 ## 0.2.5
 
 ### Patch Changes
 
-- @kadena/client\@1.18.2
-- @kadena/client-utils\@0.13.3
+- @kda-community/client\@1.18.2
+- @kda-community/client-utils\@0.13.3
 
 ## 0.2.4
 
 ### Patch Changes
 
-- @kadena/client\@1.18.1
-- @kadena/client-utils\@0.13.2
+- @kda-community/client\@1.18.1
+- @kda-community/client-utils\@0.13.2
 
 ## 0.2.3
 
 ### Patch Changes
 
 - Updated dependencies \[5c56ae2]
-  - @kadena/client-utils\@0.13.1
+  - @kda-community/client-utils\@0.13.1
 
 ## 0.2.2
 
@@ -34,15 +34,15 @@
 
 - Updated dependencies \[b849855]
 - Updated dependencies \[b849855]
-  - @kadena/client-utils\@0.13.0
-  - @kadena/client\@1.18.0
+  - @kda-community/client-utils\@0.13.0
+  - @kda-community/client\@1.18.0
 
 ## 0.2.1
 
 ### Patch Changes
 
-- @kadena/client\@1.17.1
-- @kadena/client-utils\@0.12.2
+- @kda-community/client\@1.17.1
+- @kda-community/client-utils\@0.12.2
 
 ## 0.2.0
 
@@ -53,15 +53,15 @@
 ### Patch Changes
 
 - Updated dependencies \[67ee479]
-  - @kadena/client\@1.17.0
-  - @kadena/client-utils\@0.12.1
+  - @kda-community/client\@1.17.0
+  - @kda-community/client-utils\@0.12.1
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies \[1cba919]
-  - @kadena/client-utils\@0.12.0
+  - @kda-community/client-utils\@0.12.0
 
 ## 0.1.0
 
@@ -77,5 +77,5 @@
 
 - Updated dependencies \[5e9bfd0]
 - Updated dependencies \[1f46bee]
-  - @kadena/client\@1.16.0
-  - @kadena/client-utils\@0.11.1
+  - @kda-community/client\@1.16.0
+  - @kda-community/client-utils\@0.11.1

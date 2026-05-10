@@ -1,5 +1,5 @@
-import { style } from '@kadena/kode-ui';
-import { globalStyle } from '@kadena/kode-ui/styles';
+import { style } from '@kda-community/kode-ui';
+import { globalStyle } from '@kda-community/kode-ui/styles';
 
 export const truncateClass = style({});
 

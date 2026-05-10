@@ -1,6 +1,6 @@
 'use client';
 import { useNotifications } from '@/hooks/notifications';
-import type { ICompactStepperItemProps } from '@kadena/kode-ui';
+import type { ICompactStepperItemProps } from '@kda-community/kode-ui';
 import {
   Button,
   Card,
@@ -8,15 +8,19 @@ import {
   Notification,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CardContentBlock,
   FocussedLayoutHeaderContent,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useSearchParams } from 'next/navigation';
 
 import { SetPasswordForm } from '@/components/SetPasswordForm/SetPasswordForm';
-import { MonoPalette, MonoPassword, MonoVerified } from '@kadena/kode-icons';
+import {
+  MonoPalette,
+  MonoPassword,
+  MonoVerified,
+} from '@kda-community/kode-icons';
 
 import { LoginForm } from '@/components/LoginForm/LoginForm';
 import type { ReactElement } from 'react';

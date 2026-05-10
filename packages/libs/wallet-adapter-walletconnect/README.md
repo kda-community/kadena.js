@@ -32,18 +32,18 @@ requests, and signing transactions using the standard `kadena_*` methods.
 ## Installation
 
 ```bash
-npm install @kadena/wallet-adapter-walletconnect
+npm install @kda-community/wallet-adapter-walletconnect
 # or
-yarn add @kadena/wallet-adapter-walletconnect
+yarn add @kda-community/wallet-adapter-walletconnect
 # or
-pmpm add @kadena/wallet-adapter-walletconnect
+pmpm add @kda-community/wallet-adapter-walletconnect
 ```
 
 ## Usage with wallet adapter React
 
 ```ts
-import { KadenaWalletProvider } from '@kadena/wallet-adapter-react';
-import { createWalletConnectAdapter } from '@kadena/wallet-adapter-walletconnect';
+import { KadenaWalletProvider } from '@kda-community/wallet-adapter-react';
+import { createWalletConnectAdapter } from '@kda-community/wallet-adapter-walletconnect';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
@@ -72,7 +72,7 @@ If you need lower-level access, the following are also exported:
 import {
   WalletConnectAdapter,
   detectWalletConnectProvider,
-} from '@kadena/wallet-adapter-walletconnect';
+} from '@kda-community/wallet-adapter-walletconnect';
 
 (async () => {
   const provider = await detectWalletConnectProvider();

@@ -1,11 +1,11 @@
-import { MonoWarning } from '@kadena/kode-icons/system';
+import { MonoWarning } from '@kda-community/kode-icons/system';
 import {
   Notification,
   NotificationButton,
   NotificationFooter,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';

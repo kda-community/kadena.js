@@ -1,4 +1,9 @@
-import { atoms, responsiveStyle, token, tokens } from '@kadena/kode-ui/styles';
+import {
+  atoms,
+  responsiveStyle,
+  token,
+  tokens,
+} from '@kda-community/kode-ui/styles';
 import { globalStyle, style } from '@vanilla-extract/css';
 
 export const searchBoxClass = style({});

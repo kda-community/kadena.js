@@ -1,7 +1,7 @@
 import { useAsset } from '@/hooks/asset';
 import { getActiveComplianceRules } from '@/services/getComplianceRules';
-import { Button, Stack, TextField } from '@kadena/kode-ui';
-import { useNotifications } from '@kadena/kode-ui/patterns';
+import { Button, Stack, TextField } from '@kda-community/kode-ui';
+import { useNotifications } from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 

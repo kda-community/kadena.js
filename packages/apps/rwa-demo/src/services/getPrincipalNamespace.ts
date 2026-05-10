@@ -1,7 +1,7 @@
 import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import { getClient, getNetwork } from '@/utils/client';
 import { getKeyset } from '@/utils/getPubKey';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 export interface ICreatePrincipalNamespaceProps {
   owner: IWalletAccount;

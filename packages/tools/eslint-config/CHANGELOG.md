@@ -1,4 +1,4 @@
-# Change Log - @kadena-dev/eslint-config
+# Change Log - @kda-community-dev/eslint-config
 
 ## 1.1.0
 
@@ -20,7 +20,7 @@
 
 - 93bf55b07: Package updates
 - Updated dependencies \[93bf55b07]
-  - @kadena-dev/eslint-plugin\@0.0.9
+  - @kda-community-dev/eslint-plugin\@0.0.9
 
 ## 1.0.3
 
@@ -36,7 +36,7 @@
 - fa6b84e22: No auto-globals for vitest specs
 - Updated dependencies \[1907e5ef2]
 - Updated dependencies \[fa6b84e22]
-  - @kadena-dev/eslint-plugin\@0.0.8
+  - @kda-community-dev/eslint-plugin\@0.0.8
 
 ## 1.0.1
 
@@ -47,7 +47,7 @@
 - Updated dependencies \[a664a9535]
 - Updated dependencies \[fec8dfafd]
 - Updated dependencies \[a664a9535]
-  - @kadena-dev/eslint-plugin\@0.0.7
+  - @kda-community-dev/eslint-plugin\@0.0.7
 
 ## 1.0.0
 
@@ -68,7 +68,7 @@
 
 - Updated dependencies \[242b5687]
 - Updated dependencies \[4d525832]
-  - @kadena-dev/eslint-plugin\@0.0.6
+  - @kda-community-dev/eslint-plugin\@0.0.6
 
 This log was last generated on Fri, 04 Aug 2023 16:10:02 GMT and should not be
 manually modified.
@@ -141,7 +141,7 @@ Fri, 03 Mar 2023 11:24:59 GMT
 ### Patches
 
 - Sort aliases from tsconfig like internal packages
-- Updated @kadena-dev/eslint-plugin react config extension to the config
+- Updated @kda-community-dev/eslint-plugin react config extension to the config
   recommended by Next.js
 
 ## 0.0.3
@@ -150,7 +150,7 @@ Mon, 27 Feb 2023 15:39:44 GMT
 
 ### Patches
 
-- fix dependencies on @kadena-dev/eslint-plugin
+- fix dependencies on @kda-community-dev/eslint-plugin
 
 ## 0.0.2
 
@@ -160,7 +160,7 @@ Mon, 27 Feb 2023 14:25:39 GMT
 
 - Move eslint-plugins from devDependencies to dependencies so consuming projects
   do not need to include them
-- Disables @rushstack/typedev-var and adds @kadena-dev/typedev-var to the react
+- Disables @rushstack/typedev-var and adds @kda-community-dev/typedev-var to the react
   config
 - adds rule to disallow file wide eslint-disable
 - add mixin to relax typedef rule for arguments in typed functions

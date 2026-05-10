@@ -43,9 +43,9 @@ jobs:
       matrix:
         package:
           [
-            '@kadena/client',
-            '@kadena/client-utils',
-            '@kadena/create-kadena-app',
+            '@kda-community/client',
+            '@kda-community/client-utils',
+            '@kda-community/create-kadena-app',
           ]
 
     steps:
@@ -165,7 +165,7 @@ jobs:
   #   - name: Install dependencies
   #     if: contains(env.ALLOWED_DOCS_AUTHORS, steps.check_author.outputs.author)
   #     shell: bash
-  #     run: pnpm install --filter @kadena-dev/scripts
+  #     run: pnpm install --filter @kda-community-dev/scripts
 
   #   - name: Run file check script
   #     if: contains(env.ALLOWED_DOCS_AUTHORS, steps.check_author.outputs.author)

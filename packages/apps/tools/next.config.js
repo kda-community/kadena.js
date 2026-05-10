@@ -6,14 +6,14 @@ const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const config = {
-  output:"standalone",
+  output: 'standalone',
   outputFileTracingRoot: path.join(__dirname, '../../../../'),
   nextTranslate: { basePath: __dirname },
   eslint: {
     ignoreDuringBuilds: true, // lint is a different task/phase
   },
   reactStrictMode: false,
-  transpilePackages: ['@kadena/kode-ui'],
+  transpilePackages: ['@kda-community/kode-ui'],
   env: {
     KADENA_MAINNET_ESTATS: process.env.KADENA_MAINNET_ESTATS,
     KADENA_TESTNET_ESTATS: process.env.KADENA_TESTNET_ESTATS,

@@ -26,9 +26,9 @@ function getMonorepoPackagesFromPackageJson() {
 
 const monorepoPackages = getMonorepoPackagesFromPackageJson();
 const monorepoPathsRegex = monorepoPackages.map(
-  (pkg) => new RegExp(`${pkg.replace('@kadena/', '')}`),
+  (pkg) => new RegExp(`${pkg.replace('@kda-community/', '')}`),
 );
-monorepoPackages.push('@kadena/client/fp');
+monorepoPackages.push('@kda-community/client/fp');
 
 export const config: UserConfig = {
   plugins: [
@@ -85,8 +85,11 @@ export const config: UserConfig = {
             'react-router-dom',
             '@vanilla-extract/css',
           ],
-          'kadena-libs': ['@kadena/client', '@kadena/client-utils'],
-          'kadena-ui': ['@kadena/kode-ui', '@kadena/kode-icons'],
+          'kadena-libs': [
+            '@kda-community/client',
+            '@kda-community/client-utils',
+          ],
+          'kadena-ui': ['@kda-community/kode-ui', '@kda-community/kode-icons'],
         },
         entryFileNames: (chunk) => {
           if (chunk.name === 'sw') {

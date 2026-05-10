@@ -2,13 +2,13 @@ import {
   accountRepository,
   IAccount,
 } from '@/modules/account/account.repository';
-import { Button, Stack, TextField } from '@kadena/kode-ui';
+import { Button, Stack, TextField } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 
 export function AliasForm({

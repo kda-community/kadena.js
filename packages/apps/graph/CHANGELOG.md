@@ -1,40 +1,40 @@
-# @kadena/graph
+# @kda-community/graph
 
 ## 2.2.7
 
 ### Patch Changes
 
 - Updated dependencies \[59f3cec]
-  - @kadena/pactjs\@0.6.0
-  - @kadena/chainweb-node-client\@0.9.5
-  - @kadena/client\@1.18.3
-  - @kadena/client-utils\@0.13.4
+  - @kda-community/pactjs\@0.6.0
+  - @kda-community/chainweb-node-client\@0.9.5
+  - @kda-community/client\@1.18.3
+  - @kda-community/client-utils\@0.13.4
 
 ## 2.2.6
 
 ### Patch Changes
 
 - Updated dependencies \[c21ada4]
-  - @kadena/chainweb-node-client\@0.9.4
-  - @kadena/client\@1.18.2
-  - @kadena/client-utils\@0.13.3
+  - @kda-community/chainweb-node-client\@0.9.4
+  - @kda-community/client\@1.18.2
+  - @kda-community/client-utils\@0.13.3
 
 ## 2.2.5
 
 ### Patch Changes
 
 - Updated dependencies \[c967a57]
-  - @kadena/pactjs\@0.5.0
-  - @kadena/chainweb-node-client\@0.9.2
-  - @kadena/client\@1.18.1
-  - @kadena/client-utils\@0.13.2
+  - @kda-community/pactjs\@0.5.0
+  - @kda-community/chainweb-node-client\@0.9.2
+  - @kda-community/client\@1.18.1
+  - @kda-community/client-utils\@0.13.2
 
 ## 2.2.4
 
 ### Patch Changes
 
 - Updated dependencies \[5c56ae2]
-  - @kadena/client-utils\@0.13.1
+  - @kda-community/client-utils\@0.13.1
 
 ## 2.2.3
 
@@ -42,8 +42,8 @@
 
 - Updated dependencies \[b849855]
 - Updated dependencies \[b849855]
-  - @kadena/client-utils\@0.13.0
-  - @kadena/client\@1.18.0
+  - @kda-community/client-utils\@0.13.0
+  - @kda-community/client\@1.18.0
 
 ## 2.2.2
 
@@ -58,9 +58,9 @@
 - ea02b15: Fixed issue where using the subscription for Events would scan the
   whole events table
 - Updated dependencies \[0ebc455]
-  - @kadena/chainweb-node-client\@0.9.1
-  - @kadena/client\@1.17.1
-  - @kadena/client-utils\@0.12.2
+  - @kda-community/chainweb-node-client\@0.9.1
+  - @kda-community/client\@1.17.1
+  - @kda-community/client-utils\@0.12.2
 
 ## 2.2.0
 
@@ -72,9 +72,9 @@
 ### Patch Changes
 
 - Updated dependencies \[67ee479]
-  - @kadena/chainweb-node-client\@0.9.0
-  - @kadena/client\@1.17.0
-  - @kadena/client-utils\@0.12.1
+  - @kda-community/chainweb-node-client\@0.9.0
+  - @kda-community/client\@1.17.0
+  - @kda-community/client-utils\@0.12.1
 
 ## 2.1.0
 
@@ -229,7 +229,7 @@
 - ee8e99b: Improve query for account.transactions. Do not query signers when not
   requested
 - Updated dependencies \[1cba919]
-  - @kadena/client-utils\@0.12.0
+  - @kda-community/client-utils\@0.12.0
 
 ## 2.0.4
 
@@ -253,9 +253,9 @@
 
 - Updated dependencies \[5e9bfd0]
 - Updated dependencies \[1f46bee]
-  - @kadena/chainweb-node-client\@0.8.0
-  - @kadena/client\@1.16.0
-  - @kadena/client-utils\@0.11.1
+  - @kda-community/chainweb-node-client\@0.8.0
+  - @kda-community/client\@1.16.0
+  - @kda-community/client-utils\@0.11.1
 
 ## 2.0.2
 
@@ -284,17 +284,17 @@
 - 8467af0: Adds improvements to run as stand-alone as well as in Docker
 
   - adds postinstall script to install the platform specific Prisma engines
-  - adds a Dockerfile to build from NPM deployed @kadena/graph package
+  - adds a Dockerfile to build from NPM deployed @kda-community/graph package
   - adds a Dockerfile to build from source
 
 ### Patch Changes
 
 - 8467af0: Add postinstall script to install platform specific binaries
-  - @kadena/chainweb-node-client\@0.7.0
-  - @kadena/client\@1.15.0
-  - @kadena/client-utils\@0.11.0
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/chainweb-node-client\@0.7.0
+  - @kda-community/client\@1.15.0
+  - @kda-community/client-utils\@0.11.0
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/pactjs\@0.4.3
 
 ## 1.0.14
 
@@ -303,9 +303,9 @@
 - Updated dependencies \[78e6f88]
 - Updated dependencies \[eccd46e]
 - Updated dependencies \[eac8c84]
-  - @kadena/chainweb-node-client\@0.7.0
-  - @kadena/client\@1.15.0
-  - @kadena/client-utils\@0.11.0
+  - @kda-community/chainweb-node-client\@0.7.0
+  - @kda-community/client\@1.15.0
+  - @kda-community/client-utils\@0.11.0
 
 ## 1.0.13
 
@@ -318,7 +318,7 @@
 ### Patch Changes
 
 - Updated dependencies \[eb82843]
-  - @kadena/client-utils\@0.10.0
+  - @kda-community/client-utils\@0.10.0
 
 ## 1.0.11
 
@@ -326,8 +326,8 @@
 
 - 7ef4a06: Fix issue where missing crosschain transfer would error
 - Updated dependencies \[d07b424]
-  - @kadena/client\@1.14.0
-  - @kadena/client-utils\@0.9.1
+  - @kda-community/client\@1.14.0
+  - @kda-community/client-utils\@0.9.1
 
 ## 1.0.10
 
@@ -341,11 +341,11 @@
 
 - c5c1605: Improve performance by adding indexes for transactions.sender, and
   transfers.to_acct and transfers.from_acct, all with height DESC
-  - @kadena/chainweb-node-client\@0.6.3
-  - @kadena/client\@1.13.0
-  - @kadena/client-utils\@0.9.0
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/chainweb-node-client\@0.6.3
+  - @kda-community/client\@1.13.0
+  - @kda-community/client-utils\@0.9.0
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/pactjs\@0.4.3
 
 ## 1.0.8
 
@@ -366,11 +366,11 @@
 - Updated dependencies \[07c0a26]
 - Updated dependencies \[29168e2]
 - Updated dependencies \[29168e2]
-  - @kadena/client\@1.13.0
-  - @kadena/client-utils\@0.9.0
-  - @kadena/chainweb-node-client\@0.6.3
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/client\@1.13.0
+  - @kda-community/client-utils\@0.9.0
+  - @kda-community/chainweb-node-client\@0.6.3
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/pactjs\@0.4.3
 
 ## 1.0.6
 
@@ -380,8 +380,8 @@
 - 950444ccf: Implement logic to handle difficulty calculations when there are
   orphan blocks
 - Updated dependencies \[6d4e82074]
-  - @kadena/client\@1.12.1
-  - @kadena/client-utils\@0.8.1
+  - @kda-community/client\@1.12.1
+  - @kda-community/client-utils\@0.8.1
 
 ## 1.0.5
 
@@ -389,7 +389,7 @@
 
 - 1bbf1c6: Added minHeight and maxHeight arguments to transactions and events
 - Updated dependencies \[83c3d58]
-  - @kadena/client-utils\@0.8.0
+  - @kda-community/client-utils\@0.8.0
 
 ## 1.0.4
 
@@ -397,8 +397,8 @@
 
 - Updated dependencies \[9c145f196]
 - Updated dependencies \[9c145f196]
-  - @kadena/client\@1.12.0
-  - @kadena/client-utils\@0.7.0
+  - @kda-community/client\@1.12.0
+  - @kda-community/client-utils\@0.7.0
 
 ## 1.0.3
 
@@ -421,10 +421,10 @@
 - Updated dependencies \[aa1aae60c]
 - Updated dependencies \[9c4145cb7]
 - Updated dependencies \[381a766e8]
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/client-utils\@0.6.0
-  - @kadena/client\@1.11.2
-  - @kadena/chainweb-node-client\@0.6.2
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/client-utils\@0.6.0
+  - @kda-community/client\@1.11.2
+  - @kda-community/chainweb-node-client\@0.6.2
 
 ## 1.0.2
 
@@ -440,11 +440,11 @@
 - 51dc20fe0: Added network info endpoint and auxiliary service and data object
 - 37375fa7e: Implement account and chain account by public key queries;
 - Updated dependencies \[93bf55b07]
-  - @kadena/chainweb-node-client\@0.6.1
-  - @kadena/cryptography-utils\@0.4.3
-  - @kadena/client-utils\@0.5.4
-  - @kadena/client\@1.11.1
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/chainweb-node-client\@0.6.1
+  - @kda-community/cryptography-utils\@0.4.3
+  - @kda-community/client-utils\@0.5.4
+  - @kda-community/client\@1.11.1
+  - @kda-community/pactjs\@0.4.3
 
 ## 1.0.1
 
@@ -520,9 +520,9 @@
   objects with relation to transactions
 - 077c7c1e6: Add minimum depth parameter on events query and subscription
 - Updated dependencies \[3bbfeaaa9]
-  - @kadena/chainweb-node-client\@0.6.0
-  - @kadena/client\@1.11.0
-  - @kadena/client-utils\@0.5.3
+  - @kda-community/chainweb-node-client\@0.6.0
+  - @kda-community/client\@1.11.0
+  - @kda-community/client-utils\@0.5.3
 
 ## 0.1.11
 
@@ -539,16 +539,16 @@
 ### Patch Changes
 
 - Updated dependencies \[d67b52906]
-  - @kadena/client\@1.10.1
-  - @kadena/client-utils\@0.5.2
+  - @kda-community/client\@1.10.1
+  - @kda-community/client-utils\@0.5.2
 
 ## 0.1.9
 
 ### Patch Changes
 
 - Updated dependencies \[016b9dbfc]
-  - @kadena/client\@1.10.0
-  - @kadena/client-utils\@0.5.1
+  - @kda-community/client\@1.10.0
+  - @kda-community/client-utils\@0.5.1
 
 ## 0.1.8
 
@@ -580,11 +580,11 @@
 - Updated dependencies \[57a734447]
 - Updated dependencies \[6ddf094d8]
 - Updated dependencies \[6ddf094d8]
-  - @kadena/client\@1.9.0
-  - @kadena/client-utils\@0.5.0
-  - @kadena/chainweb-node-client\@0.5.3
-  - @kadena/cryptography-utils\@0.4.2
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/client\@1.9.0
+  - @kda-community/client-utils\@0.5.0
+  - @kda-community/chainweb-node-client\@0.5.3
+  - @kda-community/cryptography-utils\@0.4.2
+  - @kda-community/pactjs\@0.4.2
 
 ## 0.1.7
 
@@ -605,9 +605,9 @@
 ### Patch Changes
 
 - Updated dependencies \[5b1d8334e]
-  - @kadena/chainweb-node-client\@0.5.3
-  - @kadena/client\@1.8.1
-  - @kadena/client-utils\@0.4.1
+  - @kda-community/chainweb-node-client\@0.5.3
+  - @kda-community/client\@1.8.1
+  - @kda-community/client-utils\@0.4.1
 
 ## 0.1.4
 
@@ -631,7 +631,7 @@
 - e6e252cd9: Implement flood functionality
 - Updated dependencies \[172734c8b]
 - Updated dependencies \[1b4e49d96]
-  - @kadena/client-utils\@0.4.0
+  - @kda-community/client-utils\@0.4.0
 
 ## 0.1.1
 
@@ -645,8 +645,8 @@
 - Updated dependencies \[0540b213b]
 - Updated dependencies \[3fc8ac86d]
 - Updated dependencies \[72f472e58]
-  - @kadena/client-utils\@0.3.0
-  - @kadena/client\@1.8.0
+  - @kda-community/client-utils\@0.3.0
+  - @kda-community/client\@1.8.0
 
 ## 1.0.7
 
@@ -663,11 +663,11 @@
 - Updated dependencies \[70c126a32]
 - Updated dependencies \[15c203ee5]
 - Updated dependencies \[a3bb20737]
-  - @kadena/client\@1.7.0
-  - @kadena/client-utils\@0.2.0
-  - @kadena/chainweb-node-client\@0.5.2
-  - @kadena/cryptography-utils\@0.4.2
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/client\@1.7.0
+  - @kda-community/client-utils\@0.2.0
+  - @kda-community/chainweb-node-client\@0.5.2
+  - @kda-community/cryptography-utils\@0.4.2
+  - @kda-community/pactjs\@0.4.2
 
 ## 1.0.6
 
@@ -686,7 +686,7 @@
 - bccf4333a: Added multi-sig accounts support in simulation
 - 49e5c55ae: Added tracing and trace analyser
 - Updated dependencies \[21a0d1530]
-  - @kadena/client\@1.6.4
+  - @kda-community/client\@1.6.4
 
 ## 1.0.5
 
@@ -700,7 +700,7 @@
 - 0a36ed900: Fix simulate script edge case (when it attempts cross-chain
   transfers to the same chain). Add build step in start:generate script
 - Updated dependencies \[4bd53128d]
-  - @kadena/client\@1.6.3
+  - @kda-community/client\@1.6.3
 
 ## 1.0.4
 
@@ -719,7 +719,7 @@
 - 6e4895050: Added proper error logging for the graph and client
 - 9de5d550c: Added PactData as optional argument to PactQueries
 - Updated dependencies \[445fb2c7d]
-  - @kadena/client\@1.6.1
+  - @kda-community/client\@1.6.1
 
 ## 1.0.2
 
@@ -731,10 +731,10 @@
 - Updated dependencies \[1d7d88081]
 - Updated dependencies \[d15a6231f]
 - Updated dependencies \[fa6b84e22]
-  - @kadena/chainweb-node-client\@0.5.1
-  - @kadena/cryptography-utils\@0.4.1
-  - @kadena/client\@1.6.0
-  - @kadena/pactjs\@0.4.1
+  - @kda-community/chainweb-node-client\@0.5.1
+  - @kda-community/cryptography-utils\@0.4.1
+  - @kda-community/client\@1.6.0
+  - @kda-community/pactjs\@0.4.1
 
 ## 1.0.1
 
@@ -775,7 +775,7 @@
 - Updated dependencies \[f6c52c340]
 - Updated dependencies \[c375cb124]
 - Updated dependencies \[f1259eafa]
-  - @kadena/chainweb-node-client\@0.5.0
-  - @kadena/cryptography-utils\@0.4.0
-  - @kadena/client\@1.5.0
-  - @kadena/pactjs\@0.4.0
+  - @kda-community/chainweb-node-client\@0.5.0
+  - @kda-community/cryptography-utils\@0.4.0
+  - @kda-community/client\@1.5.0
+  - @kda-community/pactjs\@0.4.0

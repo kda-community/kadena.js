@@ -7,15 +7,15 @@ import {
   Heading,
   Notification,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import Trans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 
 import { containerClass } from '@/pagestyles/transactions/styles.css';
 import { notificationLinkStyle } from '@/pagestyles/transactions/transfer/styles.css';
-import { CHAINS } from '@kadena/chainweb-node-client';
-import type { ChainId } from '@kadena/types';
+import { CHAINS } from '@kda-community/chainweb-node-client';
+import type { ChainId } from '@kda-community/types';
 import type { PactCommandObject } from 'hw-app-kda-clone';
 import { useRouter } from 'next/router';
 import React, { useCallback, useState } from 'react';
@@ -24,7 +24,7 @@ import { RightInfoSidebar } from '@/components/Partials/transactions/transfer/ri
 import { SignForm } from '@/components/Partials/transactions/transfer/sign-form';
 import { SubmitTransaction } from '@/components/Partials/transactions/transfer/submit-transaction';
 import useIsLedgerLibSupported from '@/hooks/use-is-ledger-lib-supported';
-import { MonoHelp, MonoWarning } from '@kadena/kode-icons/system';
+import { MonoHelp, MonoWarning } from '@kda-community/kode-icons/system';
 
 const TransferPage = () => {
   const router = useRouter();

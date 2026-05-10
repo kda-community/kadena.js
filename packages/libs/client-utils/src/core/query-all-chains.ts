@@ -2,11 +2,11 @@ import type {
   ChainId,
   ICommandResult,
   IPartialPactCommand,
-} from '@kadena/client';
-import { createTransaction } from '@kadena/client';
-import { composePactCommand, setMeta } from '@kadena/client/fp';
+} from '@kda-community/client';
+import { createTransaction } from '@kda-community/client';
+import { composePactCommand, setMeta } from '@kda-community/client/fp';
 
-import type { PactValue } from '@kadena/types';
+import type { PactValue } from '@kda-community/types';
 import { asyncPipe } from './utils/asyncPipe';
 import type { IClientConfig, IEmit, SuccessfulResponse } from './utils/helpers';
 import { composeWithDefaults, extractResult, getClient } from './utils/helpers';

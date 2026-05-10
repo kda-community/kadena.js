@@ -1,4 +1,8 @@
-import { kadenaDecrypt, kadenaEncrypt, randomBytes } from '@kadena/hd-wallet';
+import {
+  kadenaDecrypt,
+  kadenaEncrypt,
+  randomBytes,
+} from '@kda-community/hd-wallet';
 
 import {
   kadenaChangePassword,
@@ -6,7 +10,7 @@ import {
   kadenaMnemonicToRootKeypair,
   kadenaSign,
   legacyKadenaGenKeypair,
-} from '@kadena/hd-wallet/chainweaver';
+} from '@kda-community/hd-wallet/chainweaver';
 
 import {
   IKeySource,

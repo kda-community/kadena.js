@@ -1,5 +1,5 @@
 import { IGuard } from '@/modules/account/account.repository';
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 
 export interface IRetrievedAccount {
   alias?: string;

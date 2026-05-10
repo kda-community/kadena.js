@@ -1,5 +1,9 @@
-import { Pact, createClient, createSignWithKeypair } from '@kadena/client';
-import type { ChainId, ICommand } from '@kadena/types';
+import {
+  Pact,
+  createClient,
+  createSignWithKeypair,
+} from '@kda-community/client';
+import type { ChainId, ICommand } from '@kda-community/types';
 import {
   sender00Account,
   xChainGasStation,

@@ -1,7 +1,7 @@
 # MVP easy way
 
 1. project
-2. npm i @kadena/pactjs @kadena/pactjs-cli
+2. npm i @kda-community/pactjs @kda-community/pactjs-cli
 3. copy-paste contract to `coin.contract.pact`
 4. npx pactjs generate --file "./coin.contract.pact"
 
@@ -9,7 +9,7 @@
 
 ```ts
 // interface for PactModules
-declare module '@kadena/pactjs' {
+declare module '@kda-community/pactjs' {
   export type Result = {
     addCap(capName: 'coin.GAS', capArgs: {}): IFunctionResponse<string>;
     addCap(
@@ -27,7 +27,7 @@ declare module '@kadena/pactjs' {
 ```
 
 ```ts
-import { Pactjs, sign, send } from '@kadena/client'; // typings available
+import { Pactjs, sign, send } from '@kda-community/client'; // typings available
 
 const transaction = Pactjs.modules.coin
   .transfer('albert', 'randy', 10)
@@ -49,7 +49,7 @@ npx pactjs generate --repository ../myrepo
 
 ```ts
 // interface for templates
-declare module '@kadena/pactjs' {
+declare module '@kda-community/pactjs' {
   export interface ITemplates {
     'github.com:kadena-io': {
       'simple-transfer': (args: {

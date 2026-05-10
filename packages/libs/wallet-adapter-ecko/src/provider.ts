@@ -2,7 +2,7 @@
  *
  * This module defines the Ecko Wallet provider interface and implements a detection
  * mechanism for the Ecko Wallet on the window object. The EckoProvider interface extends
- * the core Provider from "@kadena/wallet-adapter-core".
+ * the core Provider from "@kda-community/wallet-adapter-core".
  *
  * The detectEckoProvider function checks for the Ecko Wallet provider by looking for its
  * presence on the global window object. It listens for the "kadena#initialized" event and
@@ -10,7 +10,7 @@
  * can be reliably detected and integrated within the application.
  */
 
-import type { IProvider } from '@kadena/wallet-adapter-core';
+import type { IProvider } from '@kda-community/wallet-adapter-core';
 
 /**
  * The Ecko provider interface extends the core Provider.

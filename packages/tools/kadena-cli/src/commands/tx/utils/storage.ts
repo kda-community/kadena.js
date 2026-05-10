@@ -1,5 +1,5 @@
-import type { IPactCommand } from '@kadena/client';
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { IPactCommand } from '@kda-community/client';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 import path from 'node:path';
 import { WORKING_DIRECTORY } from '../../../constants/config.js';
 import { services } from '../../../services/index.js';

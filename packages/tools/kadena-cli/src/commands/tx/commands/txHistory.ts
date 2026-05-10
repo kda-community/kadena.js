@@ -1,4 +1,4 @@
-import { createClient } from '@kadena/client';
+import { createClient } from '@kda-community/client';
 import type { Command } from 'commander';
 import path from 'node:path';
 import { TRANSACTIONS_LOG_FILE } from '../../../constants/config.js';

@@ -7,7 +7,7 @@ import {
   DialogHeader,
   Stack,
   TextareaField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import type { ChangeEvent, FC } from 'react';
 import { useEffect, useState } from 'react';

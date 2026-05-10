@@ -20,7 +20,7 @@ projectGenerateCommand(program, packageJson.version, __dirname);
 program
   .name('create-kadena-app')
   .description(
-    'create-kadena-app cli to create a starter project with @kadena/client integration',
+    'create-kadena-app cli to create a starter project with @kda-community/client integration',
   )
   .version(packageJson.version)
   .parse();

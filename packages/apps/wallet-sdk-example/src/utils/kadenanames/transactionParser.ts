@@ -1,4 +1,4 @@
-import { ICommandResult } from '@kadena/client';
+import { ICommandResult } from '@kda-community/client';
 
 export function parseChainResponse<T>(
   response: ICommandResult,

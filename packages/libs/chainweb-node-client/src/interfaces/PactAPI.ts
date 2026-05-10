@@ -7,7 +7,7 @@ import type {
   IUnsignedCommand,
   PactValue,
   SPVProof,
-} from '@kadena/types';
+} from '@kda-community/types';
 
 /**
  * The result of a pact execution when no errors occur.

@@ -1,4 +1,4 @@
-import type { IKeyPair } from '@kadena/types';
+import type { IKeyPair } from '@kda-community/types';
 import type { z } from 'zod';
 import type { IWallet } from '../wallet/wallet.types.js';
 import type { plainKeySchema } from './config.schemas.js';

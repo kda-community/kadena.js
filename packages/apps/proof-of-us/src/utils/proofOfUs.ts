@@ -1,6 +1,6 @@
-import type { IPollResponse, IUnsignedCommand } from '@kadena/client';
-import { Pact } from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+import type { IPollResponse, IUnsignedCommand } from '@kda-community/client';
+import { Pact } from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 import { getClient } from './client';
 import { env } from './env';
 import { getAllowedSigners } from './isAlreadySigning';
@@ -225,8 +225,8 @@ export const createConnectTokenTransaction = async (
     .execution(
       `(${process.env.NEXT_PUBLIC_NAMESPACE}.proof-of-us.create-and-mint-connection-token
       "${manifestUri}"
-      
-      (map (lambda (accountName) (at 'guard (coin.details accountName))) [${guardString}])   
+
+      (map (lambda (accountName) (at 'guard (coin.details accountName))) [${guardString}])
       )`,
     )
     .addData('collection_id', collectionId)

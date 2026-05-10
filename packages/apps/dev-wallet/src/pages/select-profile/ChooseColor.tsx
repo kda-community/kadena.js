@@ -1,4 +1,4 @@
-import { MonoCheck } from '@kadena/kode-icons/system';
+import { MonoCheck } from '@kda-community/kode-icons/system';
 import { imgClass, initialsClass } from './select-profile.css';
 
 export const ChooseColor = ({

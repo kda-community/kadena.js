@@ -1,5 +1,5 @@
-import type { IPactCommand } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
+import type { IPactCommand } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as core from '../../core';
 import * as utils from '../../core/utils/with-emitter';

@@ -9,7 +9,7 @@ const nextConfig = {
     NEXT_PUBLIC_BUILD_TIME: new Date().toUTCString(),
   },
   reactStrictMode: false,
-  transpilePackages: ['@kadena/kode-ui'],
+  transpilePackages: ['@kda-community/kode-ui'],
   webpack: (config) => {
     config.optimization.splitChunks = false;
     config.externals.push({

@@ -1,4 +1,4 @@
-import type { EncryptedString } from '@kadena/hd-wallet';
+import type { EncryptedString } from '@kda-community/hd-wallet';
 import type { z } from 'zod';
 import type { walletSchema } from './wallet.schemas.js';
 

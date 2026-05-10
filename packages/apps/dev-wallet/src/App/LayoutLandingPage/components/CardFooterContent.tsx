@@ -1,5 +1,5 @@
 import { useCardLayout } from '@/App/LayoutLandingPage/components/CardLayoutProvider';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import type { FC, PropsWithChildren } from 'react';
 import React from 'react';
 import { createPortal } from 'react-dom';

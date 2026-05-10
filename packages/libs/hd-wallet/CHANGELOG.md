@@ -1,4 +1,4 @@
-# @kadena/hd-wallet
+# @kda-community/hd-wallet
 
 ## 0.6.2
 
@@ -47,7 +47,7 @@
 - 4b8c2bc0e: Separated test config for Chainweaver to avoid long timeout for all
   newly developed functions.
 - Updated dependencies \[c9fe555df]
-  - @kadena/cryptography-utils\@0.4.4
+  - @kda-community/cryptography-utils\@0.4.4
 
 ## 0.4.0
 
@@ -59,13 +59,13 @@
 
 - 93bf55b07: Package updates
 - Updated dependencies \[93bf55b07]
-  - @kadena/cryptography-utils\@0.4.3
+  - @kda-community/cryptography-utils\@0.4.3
 
 ## 0.3.0
 
 ### Minor Changes
 
-- c756c1425: Removed dependency to @kadena/client and refactor sign functions to
+- c756c1425: Removed dependency to @kda-community/client and refactor sign functions to
   sign hash
 - 8fca466c7: refactor hd-wallet to use web-crypto api for cross platform
   compatibility
@@ -82,8 +82,8 @@
 - Updated dependencies \[c126ca38c]
 - Updated dependencies \[c637a9596]
 - Updated dependencies \[a3bb20737]
-  - @kadena/client\@1.7.0
-  - @kadena/cryptography-utils\@0.4.2
+  - @kda-community/client\@1.7.0
+  - @kda-community/cryptography-utils\@0.4.2
 
 ## 0.1.0
 
@@ -94,4 +94,4 @@
 ### Patch Changes
 
 - Updated dependencies \[21a0d1530]
-  - @kadena/client\@1.6.4
+  - @kda-community/client\@1.6.4

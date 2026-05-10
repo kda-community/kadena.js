@@ -1,4 +1,4 @@
-import { MonoContentCopy } from '@kadena/kode-icons/system';
+import { MonoContentCopy } from '@kda-community/kode-icons/system';
 import React, { useState } from 'react';
 import { HoverTag } from '../HoverTag';
 import type { IHoverTagProps } from '../HoverTag/HoverTag';

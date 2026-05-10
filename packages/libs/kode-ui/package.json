@@ -1,20 +1,20 @@
 {
-  "name": "@kadena/kode-ui",
+  "name": "@kda-community/kode-ui",
   "version": "0.21.1",
   "description": "A react component library built on Kadena's Kode Design System",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/kode-ui"
   },
   "license": "BSD-3-Clause",
   "author": "KADENA",
   "contributors": [
-    "Eileen Guo <eileen@kadena.io>",
-    "Salama Ashoush <salama@kadena.io>",
-    "Sam Ferrero <ferrero@kadena.io>",
-    "Robin Mulder <robin.mulder@kadena.io>",
-    "Steven Straatemans <steven.straatemans@kadena.io>"
+    "Eileen Guo <eileen@kda-community.io>",
+    "Salama Ashoush <salama@kda-community.io>",
+    "Sam Ferrero <ferrero@kda-community.io>",
+    "Robin Mulder <robin.mulder@kda-community.io>",
+    "Steven Straatemans <steven.straatemans@kda-community.io>"
   ],
   "sideEffects": [
     "*.css.*",
@@ -73,7 +73,7 @@
     "dev": "crackle dev --shim=none",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
@@ -93,7 +93,7 @@
   ],
   "dependencies": {
     "@artsy/fresnel": "^7.1.4",
-    "@kadena/kode-icons": "workspace:*",
+    "@kda-community/kode-icons": "workspace:*",
     "@react-aria/accordion": "3.0.0-alpha.25",
     "@react-aria/focus": "^3.16.0",
     "@react-aria/selection": "3.17.3",
@@ -125,10 +125,10 @@
     "@design-sync/cli": "^0.11.3",
     "@design-sync/vanilla-extract-plugin": "^0.7.3",
     "@etchteam/storybook-addon-status": "^5.0.0",
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@react-types/shared": "^3.22.0",
     "@rushstack/eslint-config": "~3.6.9",
     "@storybook/addon-a11y": "^8.4.4",

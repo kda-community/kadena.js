@@ -1,5 +1,5 @@
 import { cardColor, cardHoverColor } from '@/utils/color.ts';
-import { atoms } from '@kadena/kode-ui/styles';
+import { atoms } from '@kda-community/kode-ui/styles';
 import { style } from '@vanilla-extract/css';
 
 export const pageClass = style({

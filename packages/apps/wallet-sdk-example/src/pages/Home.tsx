@@ -5,9 +5,9 @@ import {
   Heading,
   Text,
   TextLink,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
-import { MonoWallet } from '@kadena/kode-icons/system';
+import { MonoWallet } from '@kda-community/kode-icons/system';
 import clsx from 'clsx';
 import DOMPurify from 'dompurify';
 import hljs from 'highlight.js';
@@ -243,7 +243,7 @@ const MarkdownPage: React.FC = () => {
       <Card fullWidth>
         <ContentHeader
           heading="Wallet Example"
-          description="Created with: @kadena/wallet-sdk"
+          description="Created with: @kda-community/wallet-sdk"
           icon={<MonoWallet />}
         />
         <div className="my-4">

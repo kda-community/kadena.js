@@ -4,7 +4,7 @@ import {
   RightAsideContent,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC, ReactElement } from 'react';
 import { cloneElement, useState } from 'react';
 import { AssetStepperForm } from './AssetStepperForm';

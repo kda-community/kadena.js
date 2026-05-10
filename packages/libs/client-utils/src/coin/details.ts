@@ -1,6 +1,10 @@
-import type { ChainId, IPactModules, PactReturnType } from '@kadena/client';
-import { Pact } from '@kadena/client';
-import { execution } from '@kadena/client/fp';
+import type {
+  ChainId,
+  IPactModules,
+  PactReturnType,
+} from '@kda-community/client';
+import { Pact } from '@kda-community/client';
+import { execution } from '@kda-community/client/fp';
 
 import { dirtyReadClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';

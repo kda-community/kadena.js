@@ -1,17 +1,17 @@
-import { sign } from '@kadena/cryptography-utils';
+import { sign } from '@kda-community/cryptography-utils';
+import { ICommandPayload, ISigner } from '@kda-community/types';
 import {
+  InternalError,
+  InvalidRequestError,
+  ParseError,
   ResourceNotFoundError,
   UserRejectedRequestError,
-  ParseError,
-  InvalidRequestError,
-  InternalError,
 } from '@metamask/snaps-sdk';
 import { copyable, divider, heading, panel, text } from '@metamask/snaps-ui';
-import { derive } from './addAccount';
 import { ApiParams, SignTransactionRequestParams } from '../types';
-import { ISigner, ICommandPayload } from '@kadena/types';
-import { makeValidator } from '../utils/validate';
 import { renderTransactionRequest } from '../utils/renderSignatureRequest';
+import { makeValidator } from '../utils/validate';
+import { derive } from './addAccount';
 
 const validateParams = makeValidator({
   id: 'string',
@@ -143,14 +143,12 @@ async function continuationConfirmationDialog(cont: any, meta: any) {
     params: {
       type: 'confirmation',
       content: panel([
-        heading(
-          'Finish cross-chain transaction',
+        heading('Finish cross-chain transaction'),
+        text(
+          `Complete the cross-chain transaction by approving this gas fee payment of up to ${gasFee} KDA`,
         ),
-        text(`Complete the cross-chain transaction by approving this gas fee payment of up to ${gasFee} KDA`),
         divider(),
-        heading(
-          'Transaction Details',
-        ),
+        heading('Transaction Details'),
         text(`From chain ${cont.data.fromChain} to chain ${cont.data.toChain}`),
         divider(),
         text('**Request Key:**'),

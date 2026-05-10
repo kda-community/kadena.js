@@ -4,8 +4,8 @@ import type {
   IAdapter,
   IAdapterFactoryData,
   INetworkInfo,
-} from '@kadena/wallet-adapter-core';
-import { WalletAdapterClient } from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
+import { WalletAdapterClient } from '@kda-community/wallet-adapter-core';
 import type { ReactNode } from 'react';
 import {
   createContext,

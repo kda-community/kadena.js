@@ -1,10 +1,10 @@
 {
-  "name": "@kadena-dev/eslint-config",
+  "name": "@kda-community-dev/eslint-config",
   "version": "1.1.0",
   "description": "Kadena monorepo eslint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/tools/eslint-config"
   },
   "license": "BSD-3-Clause",
@@ -22,7 +22,7 @@
     "test": ""
   },
   "dependencies": {
-    "@kadena-dev/eslint-plugin": "workspace:*",
+    "@kda-community-dev/eslint-plugin": "workspace:*",
     "@rushstack/eslint-config": "~3.6.9",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -37,7 +37,7 @@
     "prettier-eslint": "~12.0.0"
   },
   "devDependencies": {
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "typescript": "5.4.5"
   }
 }

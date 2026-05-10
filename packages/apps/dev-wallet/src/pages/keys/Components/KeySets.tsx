@@ -1,6 +1,10 @@
 import { FormatKeys } from '@/Components/Table/FormatKeys';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { Button, Notification, NotificationHeading } from '@kadena/kode-ui';
+import {
+  Button,
+  Notification,
+  NotificationHeading,
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   SectionCard,
@@ -8,7 +12,7 @@ import {
   SectionCardContentBlock,
   SectionCardHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { CreateKeySetForm } from './CreateKeySetForm';
 
 export function KeySets() {

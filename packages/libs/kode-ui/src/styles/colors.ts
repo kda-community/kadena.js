@@ -9,7 +9,7 @@ export const hexToRgba = (hex: string, opacity: number): string => {
   return `rgba(${$red}, ${$green}, ${$blue}, ${opacity})`;
 };
 
-// eslint-disable-next-line @kadena-dev/typedef-var
+// eslint-disable-next-line @kda-community-dev/typedef-var
 export const colorPalette = {
   $white: '#FFFFFF',
   $black: '#000000',

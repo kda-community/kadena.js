@@ -1,4 +1,4 @@
-import { verifySig } from '@kadena/cryptography-utils';
+import { verifySig } from '@kda-community/cryptography-utils';
 import type { BinaryLike } from '../utils/crypto.js';
 import type { EncryptedString } from '../utils/kadenaEncryption.js';
 import { kadenaDecrypt } from '../utils/kadenaEncryption.js';

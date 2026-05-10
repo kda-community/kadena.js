@@ -1,6 +1,6 @@
 import { CopyButton } from '@/Components/CopyButton/CopyButton';
 import { shorten } from '@/utils/helpers';
-import { Heading, Stack } from '@kadena/kode-ui';
+import { Heading, Stack } from '@kda-community/kode-ui';
 import { codeClass } from '../style.css';
 
 export const JsonView = ({

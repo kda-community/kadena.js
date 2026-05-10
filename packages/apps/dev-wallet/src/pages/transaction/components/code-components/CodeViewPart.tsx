@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from '@kadena/kode-ui';
+import { Heading, Stack, Text } from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { breakAllClass } from '../style.css';
 import { CodeViewAccount } from './CodeViewAccount';

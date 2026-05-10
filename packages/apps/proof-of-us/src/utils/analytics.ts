@@ -1,4 +1,4 @@
-// eslint-disable-next-line @kadena-dev/typedef-var
+// eslint-disable-next-line @kda-community-dev/typedef-var
 export const EVENT_NAMES = {
   'click:asidemenu_deeplink': 'click:asidemenu_deeplink',
   'click:change_theme': 'click:change_theme',

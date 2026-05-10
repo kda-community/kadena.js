@@ -13,7 +13,7 @@ import { block } from '@/graphql/queries/block.graph';
 import { useGraphQuery } from '@/hooks/graphquery';
 import { useRouter } from '@/hooks/router';
 import { truncateValues } from '@/services/format';
-import { CompactTable } from '@kadena/kode-ui/patterns';
+import { CompactTable } from '@kda-community/kode-ui/patterns';
 
 import React, { useEffect, useState } from 'react';
 

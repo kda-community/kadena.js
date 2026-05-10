@@ -1,4 +1,4 @@
-// load global styles from @kadena/kode-ui
+// load global styles from @kda-community/kode-ui
 import { Analytics } from '@/components/Analytics/Analytics';
 import ErrorBoundary from '@/components/ErrorBoundary/ErrorBoundary';
 import { ToastProvider } from '@/components/Toast/ToastContext/ToastContext';
@@ -13,8 +13,8 @@ import {
   RouterProvider,
   useTheme,
   Version,
-} from '@kadena/kode-ui';
-import '@kadena/kode-ui/global';
+} from '@kda-community/kode-ui';
+import '@kda-community/kode-ui/global';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import type { ComponentType } from 'react';

@@ -1,4 +1,4 @@
-import type { ChainId, IKeyPair } from '@kadena/types';
+import type { ChainId, IKeyPair } from '@kda-community/types';
 import type { IDevnetsCreateOptions } from '../commands/devnet/utils/devnetHelpers.js';
 
 export interface IDefaultDevnetOptions {

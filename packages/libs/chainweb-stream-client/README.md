@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/chainweb-stream-client
+# @kda-community/chainweb-stream-client
 
 Chainweb-stream client for browsers and node.js
 
@@ -33,19 +33,19 @@ Alpha version / unstable.
 ### With npm
 
 ```sh
-npm install @kadena/chainweb-stream-client
+npm install @kda-community/chainweb-stream-client
 ```
 
 ### With yarn
 
 ```sh
-yarn add @kadena/chainweb-stream-client
+yarn add @kda-community/chainweb-stream-client
 ```
 
 ## Usage
 
 ```js
-import { ChainwebStreamClient } from '@kadena/chainweb-stream-client';
+import { ChainwebStreamClient } from '@kda-community/chainweb-stream-client';
 
 const client = new ChainwebStreamClient({
   network: 'mainnet01',

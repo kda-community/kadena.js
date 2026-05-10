@@ -2,8 +2,8 @@ import { Link } from '@/components/Routing/Link';
 import type {
   ICompactTableFormatterLinkProps,
   ICompactTableFormatterProps,
-} from '@kadena/kode-ui/patterns';
-import { CompactTableFormatters } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
+import { CompactTableFormatters } from '@kda-community/kode-ui/patterns';
 import React from 'react';
 
 const formatURL = (url: string, value: string): string => {

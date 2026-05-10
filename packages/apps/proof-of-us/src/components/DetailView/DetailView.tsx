@@ -8,8 +8,8 @@ import {
   MonoArrowBack,
   MonoClose,
   MonoQrCodeScanner,
-} from '@kadena/kode-icons';
-import { Stack } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons';
+import { Stack } from '@kda-community/kode-ui';
 import { useRouter } from 'next/navigation';
 import type { ChangeEventHandler, FC } from 'react';
 import { useState } from 'react';

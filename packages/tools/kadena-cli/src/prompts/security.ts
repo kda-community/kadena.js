@@ -3,7 +3,7 @@ import type { IWallet } from '../services/wallet/wallet.types.js';
 import { CommandError } from '../utils/command.util.js';
 import { input, password as passwordInput } from '../utils/prompts.js';
 
-// eslint-disable-next-line @kadena-dev/no-eslint-disable
+// eslint-disable-next-line @kda-community-dev/no-eslint-disable
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const passwordPrompt =
   ({

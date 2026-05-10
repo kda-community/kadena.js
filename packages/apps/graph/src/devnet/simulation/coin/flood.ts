@@ -1,4 +1,4 @@
-import type { ChainId, ICommandResult } from '@kadena/client';
+import type { ChainId, ICommandResult } from '@kda-community/client';
 import { generateAccount } from '../helper';
 import { transfer } from './transfer';
 import { stacker, worker } from './worker-stacker';

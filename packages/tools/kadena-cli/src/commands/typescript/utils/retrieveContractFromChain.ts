@@ -1,5 +1,5 @@
-import { describeModule } from '@kadena/client-utils/built-in';
-import type { ChainId } from '@kadena/types';
+import { describeModule } from '@kda-community/client-utils/built-in';
+import type { ChainId } from '@kda-community/types';
 
 export async function retrieveContractFromChain(
   module: string,

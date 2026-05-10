@@ -1,4 +1,4 @@
-import { ChainId, IPactCommand } from '@kadena/client';
+import { ChainId, IPactCommand } from '@kda-community/client';
 
 export type ChainweaverKeyPair = {
   pair: {

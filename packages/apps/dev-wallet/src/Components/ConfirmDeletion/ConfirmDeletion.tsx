@@ -4,7 +4,7 @@ import {
   DialogContent,
   DialogFooter,
   DialogHeader,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 export const ConfirmDeletion = ({
   onDelete,

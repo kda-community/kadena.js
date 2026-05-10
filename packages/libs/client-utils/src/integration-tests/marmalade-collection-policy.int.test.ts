@@ -1,7 +1,7 @@
-import type { ChainId, PactErrorCode } from '@kadena/client';
-import { createSignWithKeypair, getPactErrorCode } from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
-import type { IPactInt } from '@kadena/types';
+import type { ChainId, PactErrorCode } from '@kda-community/client';
+import { createSignWithKeypair, getPactErrorCode } from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
+import type { IPactInt } from '@kda-community/types';
 import { describe, expect, it } from 'vitest';
 import {
   createCollection,

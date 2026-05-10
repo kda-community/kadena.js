@@ -1,7 +1,7 @@
 import {
   MonoKeyboardArrowLeft,
   MonoKeyboardArrowRight,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import type { FC } from 'react';
 import React from 'react';
 import { Stack } from './../../../components';

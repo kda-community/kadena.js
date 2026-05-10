@@ -1,4 +1,4 @@
-import { kadenaDecrypt } from '@kadena/hd-wallet';
+import { kadenaDecrypt } from '@kda-community/hd-wallet';
 
 type BinaryLike = string | ArrayBuffer | Uint8Array;
 

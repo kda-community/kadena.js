@@ -2,14 +2,14 @@ import { IRetrievedAccount } from '@/modules/account/IRetrievedAccount';
 import { IContact } from '@/modules/contact/contact.repository';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { shorten } from '@/utils/helpers';
-import { MonoAccountBalanceWallet } from '@kadena/kode-icons/system';
-import { Button, Checkbox, Heading, Stack, Text } from '@kadena/kode-ui';
+import { MonoAccountBalanceWallet } from '@kda-community/kode-icons/system';
+import { Button, Checkbox, Heading, Stack, Text } from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { AccountInput } from '../AccountInput/AccountInput';
 import { ListItem } from '../ListItem/ListItem';

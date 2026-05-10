@@ -1,4 +1,11 @@
-import { Card, Divider, Stack, TabItem, Tabs, Text } from '@kadena/kode-ui';
+import {
+  Card,
+  Divider,
+  Stack,
+  TabItem,
+  Tabs,
+  Text,
+} from '@kda-community/kode-ui';
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import jsonHighlight from 'highlight.js/lib/languages/json';

@@ -1,4 +1,4 @@
-# @kadena/kadena-cli
+# @kda-community/kadena-cli
 
 ## 1.4.6
 
@@ -6,32 +6,32 @@
 
 - Updated dependencies \[59f3cec]
 - Updated dependencies \[f23cdfd]
-  - @kadena/pactjs\@0.6.0
-  - @kadena/hd-wallet\@0.6.2
-  - @kadena/client\@1.18.3
-  - @kadena/client-utils\@0.13.4
-  - @kadena/pactjs-cli\@1.18.3
-  - @kadena/pactjs-generator\@1.18.3
+  - @kda-community/pactjs\@0.6.0
+  - @kda-community/hd-wallet\@0.6.2
+  - @kda-community/client\@1.18.3
+  - @kda-community/client-utils\@0.13.4
+  - @kda-community/pactjs-cli\@1.18.3
+  - @kda-community/pactjs-generator\@1.18.3
 
 ## 1.4.5
 
 ### Patch Changes
 
-- @kadena/client\@1.18.2
-- @kadena/client-utils\@0.13.3
-- @kadena/pactjs-cli\@1.18.2
-- @kadena/pactjs-generator\@1.18.2
+- @kda-community/client\@1.18.2
+- @kda-community/client-utils\@0.13.3
+- @kda-community/pactjs-cli\@1.18.2
+- @kda-community/pactjs-generator\@1.18.2
 
 ## 1.4.4
 
 ### Patch Changes
 
 - Updated dependencies \[c967a57]
-  - @kadena/pactjs\@0.5.0
-  - @kadena/client\@1.18.1
-  - @kadena/client-utils\@0.13.2
-  - @kadena/pactjs-cli\@1.18.1
-  - @kadena/pactjs-generator\@1.18.1
+  - @kda-community/pactjs\@0.5.0
+  - @kda-community/client\@1.18.1
+  - @kda-community/client-utils\@0.13.2
+  - @kda-community/pactjs-cli\@1.18.1
+  - @kda-community/pactjs-generator\@1.18.1
 
 ## 1.4.3
 
@@ -39,7 +39,7 @@
 
 - 7ed1b5a: Fixed typo in error message
 - Updated dependencies \[5c56ae2]
-  - @kadena/client-utils\@0.13.1
+  - @kda-community/client-utils\@0.13.1
 
 ## 1.4.2
 
@@ -50,19 +50,19 @@
 - e2d8285: Fixed showing error messages for nested properties in template files
 - Updated dependencies \[b849855]
 - Updated dependencies \[b849855]
-  - @kadena/client-utils\@0.13.0
-  - @kadena/client\@1.18.0
-  - @kadena/pactjs-cli\@1.18.0
-  - @kadena/pactjs-generator\@1.18.0
+  - @kda-community/client-utils\@0.13.0
+  - @kda-community/client\@1.18.0
+  - @kda-community/pactjs-cli\@1.18.0
+  - @kda-community/pactjs-generator\@1.18.0
 
 ## 1.4.1
 
 ### Patch Changes
 
-- @kadena/client\@1.17.1
-- @kadena/client-utils\@0.12.2
-- @kadena/pactjs-cli\@1.17.1
-- @kadena/pactjs-generator\@1.17.1
+- @kda-community/client\@1.17.1
+- @kda-community/client-utils\@0.12.2
+- @kda-community/pactjs-cli\@1.17.1
+- @kda-community/pactjs-generator\@1.17.1
 
 ## 1.4.0
 
@@ -74,17 +74,17 @@
 
 - d99871a: Fixed warning when passing -u in tx sign
 - Updated dependencies \[67ee479]
-  - @kadena/client\@1.17.0
-  - @kadena/client-utils\@0.12.1
-  - @kadena/pactjs-cli\@1.17.0
-  - @kadena/pactjs-generator\@1.17.0
+  - @kda-community/client\@1.17.0
+  - @kda-community/client-utils\@0.12.1
+  - @kda-community/pactjs-cli\@1.17.0
+  - @kda-community/pactjs-generator\@1.17.0
 
 ## 1.3.9
 
 ### Patch Changes
 
 - Updated dependencies \[1cba919]
-  - @kadena/client-utils\@0.12.0
+  - @kda-community/client-utils\@0.12.0
 
 ## 1.3.8
 
@@ -93,31 +93,31 @@
 - Updated dependencies \[5e9bfd0]
 - Updated dependencies \[8615d09]
 - Updated dependencies \[1f46bee]
-  - @kadena/client\@1.16.0
-  - @kadena/hd-wallet\@0.6.1
-  - @kadena/client-utils\@0.11.1
-  - @kadena/pactjs-cli\@1.16.0
-  - @kadena/pactjs-generator\@1.16.0
+  - @kda-community/client\@1.16.0
+  - @kda-community/hd-wallet\@0.6.1
+  - @kda-community/client-utils\@0.11.1
+  - @kda-community/pactjs-cli\@1.16.0
+  - @kda-community/pactjs-generator\@1.16.0
 
 ## 1.3.7
 
 ### Patch Changes
 
 - Updated dependencies \[90a5684]
-  - @kadena/hd-wallet\@0.6.0
+  - @kda-community/hd-wallet\@0.6.0
 
 ## 1.3.6
 
 ### Patch Changes
 
 - ca64e67: Fixed malformed json error in tx send
-  - @kadena/client\@1.15.0
-  - @kadena/client-utils\@0.11.0
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/hd-wallet\@0.5.0
-  - @kadena/pactjs\@0.4.3
-  - @kadena/pactjs-generator\@1.15.0
-  - @kadena/pactjs-cli\@1.15.0
+  - @kda-community/client\@1.15.0
+  - @kda-community/client-utils\@0.11.0
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/hd-wallet\@0.5.0
+  - @kda-community/pactjs\@0.4.3
+  - @kda-community/pactjs-generator\@1.15.0
+  - @kda-community/pactjs-cli\@1.15.0
 
 ## 1.3.5
 
@@ -126,7 +126,7 @@
 - Updated dependencies \[84d9130]
 - Updated dependencies \[b1e488c]
 - Updated dependencies \[84d9130]
-  - @kadena/hd-wallet\@0.5.0
+  - @kda-community/hd-wallet\@0.5.0
 
 ## 1.3.4
 
@@ -134,10 +134,10 @@
 
 - Updated dependencies \[eccd46e]
 - Updated dependencies \[eac8c84]
-  - @kadena/client\@1.15.0
-  - @kadena/client-utils\@0.11.0
-  - @kadena/pactjs-cli\@1.15.0
-  - @kadena/pactjs-generator\@1.15.0
+  - @kda-community/client\@1.15.0
+  - @kda-community/client-utils\@0.11.0
+  - @kda-community/pactjs-cli\@1.15.0
+  - @kda-community/pactjs-generator\@1.15.0
 
 ## 1.3.3
 
@@ -150,17 +150,17 @@
 ### Patch Changes
 
 - Updated dependencies \[eb82843]
-  - @kadena/client-utils\@0.10.0
+  - @kda-community/client-utils\@0.10.0
 
 ## 1.3.1
 
 ### Patch Changes
 
 - Updated dependencies \[d07b424]
-  - @kadena/client\@1.14.0
-  - @kadena/client-utils\@0.9.1
-  - @kadena/pactjs-cli\@1.14.0
-  - @kadena/pactjs-generator\@1.14.0
+  - @kda-community/client\@1.14.0
+  - @kda-community/client-utils\@0.9.1
+  - @kda-community/pactjs-cli\@1.14.0
+  - @kda-community/pactjs-generator\@1.14.0
 
 ## 1.3.0
 
@@ -175,13 +175,13 @@
 - Updated dependencies \[29168e2]
 - Updated dependencies \[07c0a26]
 - Updated dependencies \[29168e2]
-  - @kadena/client\@1.13.0
-  - @kadena/client-utils\@0.9.0
-  - @kadena/pactjs-cli\@1.13.0
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/hd-wallet\@0.4.2
-  - @kadena/pactjs\@0.4.3
-  - @kadena/pactjs-generator\@1.13.0
+  - @kda-community/client\@1.13.0
+  - @kda-community/client-utils\@0.9.0
+  - @kda-community/pactjs-cli\@1.13.0
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/hd-wallet\@0.4.2
+  - @kda-community/pactjs\@0.4.3
+  - @kda-community/pactjs-generator\@1.13.0
 
 ## 1.2.0
 
@@ -193,18 +193,18 @@
 
 - Updated dependencies \[6d4e82074]
 - Updated dependencies \[3949dcccf]
-  - @kadena/client\@1.12.1
-  - @kadena/hd-wallet\@0.4.2
-  - @kadena/client-utils\@0.8.1
-  - @kadena/pactjs-cli\@1.12.1
-  - @kadena/pactjs-generator\@1.12.1
+  - @kda-community/client\@1.12.1
+  - @kda-community/hd-wallet\@0.4.2
+  - @kda-community/client-utils\@0.8.1
+  - @kda-community/pactjs-cli\@1.12.1
+  - @kda-community/pactjs-generator\@1.12.1
 
 ## 1.1.2
 
 ### Patch Changes
 
 - Updated dependencies \[83c3d58]
-  - @kadena/client-utils\@0.8.0
+  - @kda-community/client-utils\@0.8.0
 
 ## 1.1.1
 
@@ -212,10 +212,10 @@
 
 - Updated dependencies \[9c145f196]
 - Updated dependencies \[9c145f196]
-  - @kadena/client\@1.12.0
-  - @kadena/client-utils\@0.7.0
-  - @kadena/pactjs-cli\@1.12.0
-  - @kadena/pactjs-generator\@1.12.0
+  - @kda-community/client\@1.12.0
+  - @kda-community/client-utils\@0.7.0
+  - @kda-community/pactjs-cli\@1.12.0
+  - @kda-community/pactjs-generator\@1.12.0
 
 ## 1.1.0
 
@@ -263,12 +263,12 @@
 - Updated dependencies \[b916ea42b]
 - Updated dependencies \[381a766e8]
 - Updated dependencies \[4b8c2bc0e]
-  - @kadena/hd-wallet\@0.4.1
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/client-utils\@0.6.0
-  - @kadena/pactjs-cli\@1.11.2
-  - @kadena/client\@1.11.2
-  - @kadena/pactjs-generator\@1.11.2
+  - @kda-community/hd-wallet\@0.4.1
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/client-utils\@0.6.0
+  - @kda-community/pactjs-cli\@1.11.2
+  - @kda-community/client\@1.11.2
+  - @kda-community/pactjs-generator\@1.11.2
 
 ## 1.0.0
 
@@ -286,13 +286,13 @@
 - Updated dependencies \[0b3018734]
 - Updated dependencies \[93bf55b07]
 - Updated dependencies \[b3a50b49a]
-  - @kadena/hd-wallet\@0.4.0
-  - @kadena/cryptography-utils\@0.4.3
-  - @kadena/pactjs-generator\@1.11.1
-  - @kadena/client-utils\@0.5.4
-  - @kadena/pactjs-cli\@1.11.1
-  - @kadena/client\@1.11.1
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/hd-wallet\@0.4.0
+  - @kda-community/cryptography-utils\@0.4.3
+  - @kda-community/pactjs-generator\@1.11.1
+  - @kda-community/client-utils\@0.5.4
+  - @kda-community/pactjs-cli\@1.11.1
+  - @kda-community/client\@1.11.1
+  - @kda-community/pactjs\@0.4.3
 
 ## 0.2.0
 
@@ -304,30 +304,30 @@
 ### Patch Changes
 
 - Updated dependencies \[3bbfeaaa9]
-  - @kadena/client\@1.11.0
-  - @kadena/client-utils\@0.5.3
-  - @kadena/pactjs-cli\@1.11.0
-  - @kadena/pactjs-generator\@1.11.0
+  - @kda-community/client\@1.11.0
+  - @kda-community/client-utils\@0.5.3
+  - @kda-community/pactjs-cli\@1.11.0
+  - @kda-community/pactjs-generator\@1.11.0
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies \[d67b52906]
-  - @kadena/pactjs-generator\@1.10.1
-  - @kadena/client\@1.10.1
-  - @kadena/pactjs-cli\@1.10.1
-  - @kadena/client-utils\@0.5.2
+  - @kda-community/pactjs-generator\@1.10.1
+  - @kda-community/client\@1.10.1
+  - @kda-community/pactjs-cli\@1.10.1
+  - @kda-community/client-utils\@0.5.2
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies \[016b9dbfc]
-  - @kadena/client\@1.10.0
-  - @kadena/client-utils\@0.5.1
-  - @kadena/pactjs-cli\@1.10.0
-  - @kadena/pactjs-generator\@1.10.0
+  - @kda-community/client\@1.10.0
+  - @kda-community/client-utils\@0.5.1
+  - @kda-community/pactjs-cli\@1.10.0
+  - @kda-community/pactjs-generator\@1.10.0
 
 ## 0.1.0
 
@@ -346,22 +346,22 @@
 - Updated dependencies \[6ddf094d8]
 - Updated dependencies \[6ddf094d8]
 - Updated dependencies \[be9129381]
-  - @kadena/client\@1.9.0
-  - @kadena/client-utils\@0.5.0
-  - @kadena/pactjs-generator\@1.9.0
-  - @kadena/pactjs-cli\@1.9.0
-  - @kadena/cryptography-utils\@0.4.2
-  - @kadena/hd-wallet\@0.3.0
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/client\@1.9.0
+  - @kda-community/client-utils\@0.5.0
+  - @kda-community/pactjs-generator\@1.9.0
+  - @kda-community/pactjs-cli\@1.9.0
+  - @kda-community/cryptography-utils\@0.4.2
+  - @kda-community/hd-wallet\@0.3.0
+  - @kda-community/pactjs\@0.4.2
 
 ## 0.3.1
 
 ### Patch Changes
 
-- @kadena/client\@1.8.1
-- @kadena/client-utils\@0.4.1
-- @kadena/pactjs-cli\@1.8.1
-- @kadena/pactjs-generator\@1.8.1
+- @kda-community/client\@1.8.1
+- @kda-community/client-utils\@0.4.1
+- @kda-community/pactjs-cli\@1.8.1
+- @kda-community/pactjs-generator\@1.8.1
 
 ## 0.3.0
 
@@ -383,7 +383,7 @@
 - 095aca720: Added kadena devnet simulate command and auxiliary functionalities
 - Updated dependencies \[172734c8b]
 - Updated dependencies \[1b4e49d96]
-  - @kadena/client-utils\@0.4.0
+  - @kda-community/client-utils\@0.4.0
 
 ## 0.1.0
 
@@ -404,8 +404,8 @@
 - Updated dependencies \[0540b213b]
 - Updated dependencies \[3fc8ac86d]
 - Updated dependencies \[72f472e58]
-  - @kadena/hd-wallet\@0.3.0
-  - @kadena/client-utils\@0.3.0
-  - @kadena/pactjs-generator\@1.8.0
-  - @kadena/client\@1.8.0
-  - @kadena/pactjs-cli\@1.8.0
+  - @kda-community/hd-wallet\@0.3.0
+  - @kda-community/client-utils\@0.3.0
+  - @kda-community/pactjs-generator\@1.8.0
+  - @kda-community/client\@1.8.0
+  - @kda-community/pactjs-cli\@1.8.0

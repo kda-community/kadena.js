@@ -1,5 +1,5 @@
-import type { ICommandResult } from '@kadena/client';
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommandResult } from '@kda-community/client';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 import { log } from '../../../utils/logger.js';
 import { createTable } from '../../../utils/table.js';
 import type { INetworkDetails, ISubmitResponse } from './txHelpers.js';

@@ -1,33 +1,33 @@
-# @kadena/client-utils
+# @kda-community/client-utils
 
 ## 0.13.4
 
 ### Patch Changes
 
 - Updated dependencies \[59f3cec]
-  - @kadena/pactjs\@0.6.0
-  - @kadena/chainweb-node-client\@0.9.5
-  - @kadena/client\@1.18.3
-  - @kadena/pactjs-cli\@1.18.3
+  - @kda-community/pactjs\@0.6.0
+  - @kda-community/chainweb-node-client\@0.9.5
+  - @kda-community/client\@1.18.3
+  - @kda-community/pactjs-cli\@1.18.3
 
 ## 0.13.3
 
 ### Patch Changes
 
 - Updated dependencies \[c21ada4]
-  - @kadena/chainweb-node-client\@0.9.4
-  - @kadena/client\@1.18.2
-  - @kadena/pactjs-cli\@1.18.2
+  - @kda-community/chainweb-node-client\@0.9.4
+  - @kda-community/client\@1.18.2
+  - @kda-community/pactjs-cli\@1.18.2
 
 ## 0.13.2
 
 ### Patch Changes
 
 - Updated dependencies \[c967a57]
-  - @kadena/pactjs\@0.5.0
-  - @kadena/chainweb-node-client\@0.9.2
-  - @kadena/client\@1.18.1
-  - @kadena/pactjs-cli\@1.18.1
+  - @kda-community/pactjs\@0.5.0
+  - @kda-community/chainweb-node-client\@0.9.2
+  - @kda-community/client\@1.18.1
+  - @kda-community/pactjs-cli\@1.18.1
 
 ## 0.13.1
 
@@ -44,26 +44,26 @@
 ### Patch Changes
 
 - Updated dependencies \[b849855]
-  - @kadena/client\@1.18.0
-  - @kadena/pactjs-cli\@1.18.0
+  - @kda-community/client\@1.18.0
+  - @kda-community/pactjs-cli\@1.18.0
 
 ## 0.12.2
 
 ### Patch Changes
 
 - Updated dependencies \[0ebc455]
-  - @kadena/chainweb-node-client\@0.9.1
-  - @kadena/client\@1.17.1
-  - @kadena/pactjs-cli\@1.17.1
+  - @kda-community/chainweb-node-client\@0.9.1
+  - @kda-community/client\@1.17.1
+  - @kda-community/pactjs-cli\@1.17.1
 
 ## 0.12.1
 
 ### Patch Changes
 
 - Updated dependencies \[67ee479]
-  - @kadena/chainweb-node-client\@0.9.0
-  - @kadena/client\@1.17.0
-  - @kadena/pactjs-cli\@1.17.0
+  - @kda-community/chainweb-node-client\@0.9.0
+  - @kda-community/client\@1.17.0
+  - @kda-community/pactjs-cli\@1.17.0
 
 ## 0.12.0
 
@@ -77,9 +77,9 @@
 
 - Updated dependencies \[5e9bfd0]
 - Updated dependencies \[1f46bee]
-  - @kadena/chainweb-node-client\@0.8.0
-  - @kadena/client\@1.16.0
-  - @kadena/pactjs-cli\@1.16.0
+  - @kda-community/chainweb-node-client\@0.8.0
+  - @kda-community/client\@1.16.0
+  - @kda-community/pactjs-cli\@1.16.0
 
 ## 0.11.0
 
@@ -91,9 +91,9 @@
 
 - Updated dependencies \[78e6f88]
 - Updated dependencies \[eccd46e]
-  - @kadena/chainweb-node-client\@0.7.0
-  - @kadena/client\@1.15.0
-  - @kadena/pactjs-cli\@1.15.0
+  - @kda-community/chainweb-node-client\@0.7.0
+  - @kda-community/client\@1.15.0
+  - @kda-community/pactjs-cli\@1.15.0
 
 ## 0.10.0
 
@@ -107,8 +107,8 @@
 ### Patch Changes
 
 - Updated dependencies \[d07b424]
-  - @kadena/client\@1.14.0
-  - @kadena/pactjs-cli\@1.14.0
+  - @kda-community/client\@1.14.0
+  - @kda-community/pactjs-cli\@1.14.0
 
 ## 0.9.0
 
@@ -123,20 +123,20 @@
 - Updated dependencies \[29168e2]
 - Updated dependencies \[29168e2]
 - Updated dependencies \[29168e2]
-  - @kadena/client\@1.13.0
-  - @kadena/chainweb-node-client\@0.6.3
-  - @kadena/types\@0.7.0
-  - @kadena/pactjs-cli\@1.13.0
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/client\@1.13.0
+  - @kda-community/chainweb-node-client\@0.6.3
+  - @kda-community/types\@0.7.0
+  - @kda-community/pactjs-cli\@1.13.0
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/pactjs\@0.4.3
 
 ## 0.8.1
 
 ### Patch Changes
 
 - Updated dependencies \[6d4e82074]
-  - @kadena/client\@1.12.1
-  - @kadena/pactjs-cli\@1.12.1
+  - @kda-community/client\@1.12.1
+  - @kda-community/pactjs-cli\@1.12.1
 
 ## 0.8.0
 
@@ -153,8 +153,8 @@
 ### Patch Changes
 
 - Updated dependencies \[9c145f196]
-  - @kadena/client\@1.12.0
-  - @kadena/pactjs-cli\@1.12.0
+  - @kda-community/client\@1.12.0
+  - @kda-community/pactjs-cli\@1.12.0
 
 ## 0.6.0
 
@@ -168,10 +168,10 @@
 - 381a766e8: Added marmalade functions and correspondent integration testing
 - Updated dependencies \[c9fe555df]
 - Updated dependencies \[9c4145cb7]
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/pactjs-cli\@1.11.2
-  - @kadena/client\@1.11.2
-  - @kadena/chainweb-node-client\@0.6.2
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/pactjs-cli\@1.11.2
+  - @kda-community/client\@1.11.2
+  - @kda-community/chainweb-node-client\@0.6.2
 
 ## 0.5.4
 
@@ -179,37 +179,37 @@
 
 - 93bf55b07: Package updates
 - Updated dependencies \[93bf55b07]
-  - @kadena/chainweb-node-client\@0.6.1
-  - @kadena/cryptography-utils\@0.4.3
-  - @kadena/pactjs-cli\@1.11.1
-  - @kadena/client\@1.11.1
-  - @kadena/pactjs\@0.4.3
-  - @kadena/types\@0.6.2
+  - @kda-community/chainweb-node-client\@0.6.1
+  - @kda-community/cryptography-utils\@0.4.3
+  - @kda-community/pactjs-cli\@1.11.1
+  - @kda-community/client\@1.11.1
+  - @kda-community/pactjs\@0.4.3
+  - @kda-community/types\@0.6.2
 
 ## 0.5.3
 
 ### Patch Changes
 
 - Updated dependencies \[3bbfeaaa9]
-  - @kadena/chainweb-node-client\@0.6.0
-  - @kadena/client\@1.11.0
-  - @kadena/pactjs-cli\@1.11.0
+  - @kda-community/chainweb-node-client\@0.6.0
+  - @kda-community/client\@1.11.0
+  - @kda-community/pactjs-cli\@1.11.0
 
 ## 0.5.2
 
 ### Patch Changes
 
 - Updated dependencies \[d67b52906]
-  - @kadena/client\@1.10.1
-  - @kadena/pactjs-cli\@1.10.1
+  - @kda-community/client\@1.10.1
+  - @kda-community/pactjs-cli\@1.10.1
 
 ## 0.5.1
 
 ### Patch Changes
 
 - Updated dependencies \[016b9dbfc]
-  - @kadena/client\@1.10.0
-  - @kadena/pactjs-cli\@1.10.0
+  - @kda-community/client\@1.10.0
+  - @kda-community/pactjs-cli\@1.10.0
 
 ## 0.5.0
 
@@ -223,21 +223,21 @@
 - Updated dependencies \[b53c2600c]
 - Updated dependencies \[6ddf094d8]
 - Updated dependencies \[6ddf094d8]
-  - @kadena/client\@1.9.0
-  - @kadena/types\@0.6.1
-  - @kadena/pactjs-cli\@1.9.0
-  - @kadena/chainweb-node-client\@0.5.3
-  - @kadena/cryptography-utils\@0.4.2
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/client\@1.9.0
+  - @kda-community/types\@0.6.1
+  - @kda-community/pactjs-cli\@1.9.0
+  - @kda-community/chainweb-node-client\@0.5.3
+  - @kda-community/cryptography-utils\@0.4.2
+  - @kda-community/pactjs\@0.4.2
 
 ## 0.4.1
 
 ### Patch Changes
 
 - Updated dependencies \[5b1d8334e]
-  - @kadena/chainweb-node-client\@0.5.3
-  - @kadena/client\@1.8.1
-  - @kadena/pactjs-cli\@1.8.1
+  - @kda-community/chainweb-node-client\@0.5.3
+  - @kda-community/client\@1.8.1
+  - @kda-community/pactjs-cli\@1.8.1
 
 ## 0.4.0
 
@@ -263,8 +263,8 @@
 
 - 64dd84ee0: Changed the return type for getBalance to string.
 - Updated dependencies \[0540b213b]
-  - @kadena/client\@1.8.0
-  - @kadena/pactjs-cli\@1.8.0
+  - @kda-community/client\@1.8.0
+  - @kda-community/pactjs-cli\@1.8.0
 
 ## 0.2.0
 
@@ -289,10 +289,10 @@
 - Updated dependencies \[c637a9596]
 - Updated dependencies \[15c203ee5]
 - Updated dependencies \[a3bb20737]
-  - @kadena/client\@1.7.0
-  - @kadena/types\@0.6.0
-  - @kadena/chainweb-node-client\@0.5.2
-  - @kadena/cryptography-utils\@0.4.2
+  - @kda-community/client\@1.7.0
+  - @kda-community/types\@0.6.0
+  - @kda-community/chainweb-node-client\@0.5.2
+  - @kda-community/cryptography-utils\@0.4.2
 
 ## 0.1.0
 
@@ -305,14 +305,14 @@
 - f37318e9d: Small fixes regarding yaml to kadena client transactions
 - 86e4927d3: Added YAML template to Pact Command converter
 - Updated dependencies \[21a0d1530]
-  - @kadena/client\@1.6.4
+  - @kda-community/client\@1.6.4
 
 ## 0.0.5
 
 ### Patch Changes
 
 - Updated dependencies \[4bd53128d]
-  - @kadena/client\@1.6.3
+  - @kda-community/client\@1.6.3
 
 ## 0.0.4
 
@@ -322,7 +322,7 @@
   from "sign" to "sign-continuation"
 - 445fb2c7d: Fix pred type for keysets
 - Updated dependencies \[445fb2c7d]
-  - @kadena/client\@1.6.1
+  - @kda-community/client\@1.6.1
 
 ## 0.0.3
 
@@ -332,10 +332,10 @@
 - Updated dependencies \[1d7d88081]
 - Updated dependencies \[d15a6231f]
 - Updated dependencies \[fa6b84e22]
-  - @kadena/chainweb-node-client\@0.5.1
-  - @kadena/cryptography-utils\@0.4.1
-  - @kadena/client\@1.6.0
-  - @kadena/types\@0.5.1
+  - @kda-community/chainweb-node-client\@0.5.1
+  - @kda-community/cryptography-utils\@0.4.1
+  - @kda-community/client\@1.6.0
+  - @kda-community/types\@0.5.1
 
 ## 0.0.2
 
@@ -358,7 +358,7 @@
 - Updated dependencies \[f6c52c340]
 - Updated dependencies \[c375cb124]
 - Updated dependencies \[f1259eafa]
-  - @kadena/chainweb-node-client\@0.5.0
-  - @kadena/cryptography-utils\@0.4.0
-  - @kadena/client\@1.5.0
-  - @kadena/types\@0.5.0
+  - @kda-community/chainweb-node-client\@0.5.0
+  - @kda-community/cryptography-utils\@0.4.0
+  - @kda-community/client\@1.5.0
+  - @kda-community/types\@0.5.0

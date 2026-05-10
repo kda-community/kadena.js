@@ -1,5 +1,5 @@
 {
-  "name": "@kadena/graph-proxy",
+  "name": "@kda-community/graph-proxy",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -19,9 +19,9 @@
     "vercel": "^48.4.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "eslint": "^8.45.0",
     "prettier": "~3.2.5",
     "vitest": "^1.6.0"

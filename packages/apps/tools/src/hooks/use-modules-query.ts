@@ -3,9 +3,9 @@ import { kadenaDefaultNetworks } from '@/constants/kadena';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,
-} from '@kadena/chainweb-node-client';
-import { CHAINS } from '@kadena/chainweb-node-client';
-import { listModules } from '@kadena/client-utils';
+} from '@kda-community/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
+import { listModules } from '@kda-community/client-utils';
 import { useQuery } from '@tanstack/react-query';
 import { z } from 'zod';
 

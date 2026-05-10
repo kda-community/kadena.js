@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 import React, { useEffect, useRef, useState } from 'react';
 
-import type { IButtonProps } from '@kadena/kode-ui';
-import { Button, Stack } from '@kadena/kode-ui';
+import type { IButtonProps } from '@kda-community/kode-ui';
+import { Button, Stack } from '@kda-community/kode-ui';
 
 import { NAME_VALIDATION } from '@/components/Global/AccountNameField';
 import { FormStatusNotification } from '@/components/Global/FormStatusNotification';
@@ -16,7 +16,7 @@ import type {
 } from '@/hooks/use-ledger-sign';
 import { useLedgerSign } from '@/hooks/use-ledger-sign';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CHAINS } from '@kadena/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import useTranslation from 'next-translate/useTranslation';
 import { FormProvider, useForm } from 'react-hook-form';
 
@@ -24,8 +24,11 @@ import { useWalletConnectClient } from '@/context/connect-wallet-context';
 
 import type { AccountDetails } from '@/hooks/use-account-details-query';
 import { stripAccountPrefix } from '@/utils/string';
-import { MonoKeyboardArrowRight, MonoRefresh } from '@kadena/kode-icons/system';
-import type { ChainId } from '@kadena/types';
+import {
+  MonoKeyboardArrowRight,
+  MonoRefresh,
+} from '@kda-community/kode-icons/system';
+import type { ChainId } from '@kda-community/types';
 import type { PactCommandObject } from 'hw-app-kda-clone';
 import { z } from 'zod';
 import { SignFormReceiver } from './sign-form-receiver';

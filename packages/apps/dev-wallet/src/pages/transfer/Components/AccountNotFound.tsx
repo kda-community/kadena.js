@@ -1,5 +1,5 @@
 import { shorten } from '@/utils/helpers';
-import { Stack, Text } from '@kadena/kode-ui';
+import { Stack, Text } from '@kda-community/kode-ui';
 import { FC } from 'react';
 
 export const AccountNotFound: FC<{ address: string }> = ({ address }) => {

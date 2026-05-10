@@ -1,7 +1,7 @@
 import { ITransaction } from '@/modules/transaction/transaction.repository';
 
-import { MonoOpenInFull } from '@kadena/kode-icons/system';
-import { Button, Stack } from '@kadena/kode-ui';
+import { MonoOpenInFull } from '@kda-community/kode-icons/system';
+import { Button, Stack } from '@kda-community/kode-ui';
 
 import { TxPipeLine } from './TxPipeLine';
 import { txMinimizedClass } from './style.css';

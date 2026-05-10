@@ -3,16 +3,20 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [
-    ["@kadena/client", "@kadena/pactjs-generator", "@kadena/pactjs-cli"]
+    [
+      "@kda-community/client",
+      "@kda-community/pactjs-generator",
+      "@kda-community/pactjs-cli"
+    ]
   ],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@kadena/bootstrap-lib",
-    "@kadena/tools",
-    "@kadena-dev/e2e-base",
+    "@kda-community/bootstrap-lib",
+    "@kda-community/tools",
+    "@kda-community-dev/e2e-base",
     "e2e-tools",
     "e2e-dev-wallet",
     "e2e-rwa-demo",

@@ -1,4 +1,4 @@
-import type { ICap } from '@kadena/types';
+import type { ICap } from '@kda-community/types';
 
 /**
  * Interface for the {@link https://github.com/kadena-io/KIPs/blob/master/kip-0015.md | `sign v1` API}

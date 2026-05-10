@@ -2,16 +2,16 @@ import type {
   IPactModules,
   IPartialPactCommand,
   PactReturnType,
-} from '@kadena/client';
-import { Pact } from '@kadena/client';
+} from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 import {
   addData,
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import type { ChainId, IPactDecimal, IPactInt } from '@kadena/types';
+} from '@kda-community/client/fp';
+import type { ChainId, IPactDecimal, IPactInt } from '@kda-community/types';
 import { submitClient } from '../core';
 import type { IClientConfig } from '../core/utils/helpers';
 import type {

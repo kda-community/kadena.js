@@ -10,7 +10,7 @@ import { ProfileForm } from '@/components/Profile/ProfileForm';
 import { TransactionPendingIcon } from '@/components/TransactionPendingIcon/TransactionPendingIcon';
 import { useTransactions } from '@/hooks/transactions';
 import { useUser } from '@/hooks/user';
-import { MonoAccountBalanceWallet } from '@kadena/kode-icons';
+import { MonoAccountBalanceWallet } from '@kda-community/kode-icons';
 import {
   Button,
   Dialog,
@@ -18,7 +18,7 @@ import {
   Link,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
@@ -27,7 +27,7 @@ import {
   SideBarLayout,
   SideBarTopBanner,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react';
 import { KLogo } from './KLogo';

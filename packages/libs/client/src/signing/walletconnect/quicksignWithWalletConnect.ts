@@ -1,4 +1,4 @@
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 import type Client from '@walletconnect/sign-client';
 import type { SessionTypes } from '@walletconnect/types';
 import type { IQuicksignResponse } from '../../signing-api/v1/quicksign';

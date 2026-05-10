@@ -37,7 +37,7 @@ export const createDappCommand: (program: Command, version: string) => void =
 
       const cmd = 'npx';
       const cmdArgs = [
-        '@kadena/create-kadena-app',
+        '@kda-community/create-kadena-app',
         'generate-project',
         '-n',
         values[0],

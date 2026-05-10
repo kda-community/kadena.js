@@ -15,7 +15,7 @@ import * as transactionService from '@/modules/transaction/transaction.service';
 import { shorten } from '@/utils/helpers';
 import { useAsync } from '@/utils/useAsync';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 import {
   MonoCopyAll,
   MonoCreate,
@@ -23,7 +23,7 @@ import {
   MonoOpenInNew,
   MonoRemoveRedEye,
   MonoWallet,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Badge,
   Button,
@@ -34,11 +34,11 @@ import {
   Text,
   TextLink,
   Link as UiLink,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   SideBarBreadcrumbsItem,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { getGuardInfo } from '../../Components/Guard/Guard';

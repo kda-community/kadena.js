@@ -1,7 +1,7 @@
 import { ValueLoader } from '@/components/LoadingSkeleton/ValueLoader/ValueLoader';
 import type { IBlockData } from '@/services/block';
 import { EVENT_NAMES, analyticsEvent } from '@/utils/analytics';
-import { Stack, Text } from '@kadena/kode-ui';
+import { Stack, Text } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import React, { useCallback } from 'react';

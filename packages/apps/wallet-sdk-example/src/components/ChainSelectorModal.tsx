@@ -1,5 +1,5 @@
-import { ChainId } from '@kadena/client';
-import { MonoOutgoingMultichainFunds } from '@kadena/kode-icons/system';
+import { ChainId } from '@kda-community/client';
+import { MonoOutgoingMultichainFunds } from '@kda-community/kode-icons/system';
 import {
   Button,
   ContentHeader,
@@ -8,7 +8,7 @@ import {
   Select,
   SelectItem,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import React, { useEffect } from 'react';
 import { useChains } from '../hooks/chains';
 import { useFunctionTracker } from '../hooks/functionTracker';

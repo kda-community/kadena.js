@@ -1,4 +1,9 @@
-import { atoms, responsiveStyle, style, tokens } from '@kadena/kode-ui/styles';
+import {
+  atoms,
+  responsiveStyle,
+  style,
+  tokens,
+} from '@kda-community/kode-ui/styles';
 import { $$pageWidth } from '../Layout/styles.css';
 
 export const footerClass = style([

@@ -39,7 +39,7 @@ function createAsyncPipeType(maxLength: number) {
  * THIS FILE IS GENERATED. DO NOT EDIT.
  * check ../scripts/create-async-pipe-type.ts
  * */
-// eslint-disable-next-line @kadena-dev/no-eslint-disable
+// eslint-disable-next-line @kda-community-dev/no-eslint-disable
 /* eslint-disable max-lines */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Any = any;

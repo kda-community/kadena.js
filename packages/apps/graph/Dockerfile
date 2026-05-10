@@ -1,4 +1,4 @@
-# This dockerfile is using @kadena/graph from NPM
+# This dockerfile is using @kda-community/graph from NPM
 FROM node:20 AS build
 
 ENV PNPM_HOME="/pnpm"
@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get install -y openssl
 
 RUN npm i -g @prisma/engines prisma
-RUN npm i -g @kadena/graph
+RUN npm i -g @kda-community/graph
 
 # empty to satisfy checks
 RUN mkdir /app/cwd-extra-migrations

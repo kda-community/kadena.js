@@ -1,4 +1,4 @@
-import { walletSdk } from '@kadena/wallet-sdk';
+import { walletSdk } from '@kda-community/wallet-sdk';
 import { useEffect, useState } from 'react';
 import { useDebounce } from '../../utils/useDebounce';
 import { useFunctionTracker } from '../functionTracker';

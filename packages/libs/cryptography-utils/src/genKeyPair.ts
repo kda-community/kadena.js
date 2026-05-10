@@ -1,4 +1,4 @@
-import type { IKeyPair } from '@kadena/types';
+import type { IKeyPair } from '@kda-community/types';
 import nacl from 'tweetnacl';
 import { binToHex } from './binToHex';
 

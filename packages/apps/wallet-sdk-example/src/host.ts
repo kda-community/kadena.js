@@ -1,5 +1,5 @@
-import type { ChainId } from '@kadena/client';
-import { createClient } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
+import { createClient } from '@kda-community/client';
 
 export type ChainwebHostGenerator = (options: {
   networkId: string;

@@ -1,7 +1,7 @@
 import { useDeleteInvestor } from '@/hooks/deleteInvestor';
-import { MonoDelete } from '@kadena/kode-icons';
-import { Button } from '@kadena/kode-ui';
-import type { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
+import { MonoDelete } from '@kda-community/kode-icons';
+import { Button } from '@kda-community/kode-ui';
+import type { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
 import React from 'react';
 import { Confirmation } from '../Confirmation/Confirmation';
 

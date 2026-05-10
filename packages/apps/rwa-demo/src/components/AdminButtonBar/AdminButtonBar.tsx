@@ -1,4 +1,4 @@
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 
 export const AdminButtonBar: FC<PropsWithChildren> = ({ children }) => {

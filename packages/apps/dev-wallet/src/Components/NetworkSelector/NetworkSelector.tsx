@@ -6,7 +6,7 @@ import {
   MonoSettings,
   MonoWifiTethering,
   MonoWifiTetheringOff,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Button,
   ButtonGroup,
@@ -14,7 +14,7 @@ import {
   ContextMenuDivider,
   ContextMenuItem,
   IButtonProps,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { truncateClass } from './style.css';
 

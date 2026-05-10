@@ -1,7 +1,7 @@
 import type { NetworkIds } from '@/constants/kadena';
 import type { INetworkData } from '@/utils/network';
 import { getEstatsHost } from '@/utils/network';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
 import Debug from 'debug';
 
 export interface ITransaction {

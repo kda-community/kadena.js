@@ -16,7 +16,7 @@ export function readPackageJson<T>(packageName: string) {
 
 export function getChainweaverPluginsFromPackageJson(deps: PackageJson) {
   return Object.keys(deps.dependencies).filter((dep) =>
-    dep.match(/@kadena\/chainweaver-.*-plugin/),
+    dep.match(/@kda-community\/chainweaver-.*-plugin/),
   );
 }
 

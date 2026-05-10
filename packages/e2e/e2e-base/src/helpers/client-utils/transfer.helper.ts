@@ -1,7 +1,7 @@
-import type { ICommandResult } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
-import { transfer, transferCrossChain } from '@kadena/client-utils/coin';
-import type { ChainId } from '@kadena/types';
+import type { ICommandResult } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
+import { transfer, transferCrossChain } from '@kda-community/client-utils/coin';
+import type { ChainId } from '@kda-community/types';
 import { devnetHost, networkId } from '../../constants/network.constants';
 import type { IAccount } from '../../types/account.types';
 

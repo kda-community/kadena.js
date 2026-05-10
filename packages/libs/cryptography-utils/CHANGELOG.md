@@ -1,4 +1,4 @@
-# Change Log - @kadena/cryptography-utils
+# Change Log - @kda-community/cryptography-utils
 
 ## 0.4.4
 

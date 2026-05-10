@@ -1,7 +1,7 @@
 import { config } from '@/config';
 import { Session } from '@/utils/session';
-import { IUnsignedCommand } from '@kadena/client';
-import { createPrincipal } from '@kadena/client-utils/built-in';
+import { IUnsignedCommand } from '@kda-community/client';
+import { createPrincipal } from '@kda-community/client-utils/built-in';
 import { useCallback, useContext, useMemo } from 'react';
 import {
   accountRepository,

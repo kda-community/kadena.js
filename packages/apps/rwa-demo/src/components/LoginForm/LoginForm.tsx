@@ -1,6 +1,6 @@
 import { useUser } from '@/hooks/user';
-import { Button, Divider, Stack, TextField } from '@kadena/kode-ui';
-import { token } from '@kadena/kode-ui/styles';
+import { Button, Divider, Stack, TextField } from '@kda-community/kode-ui';
+import { token } from '@kda-community/kode-ui/styles';
 import { useRouter } from 'next/navigation';
 
 import type { FC } from 'react';

@@ -1,6 +1,6 @@
 import type { INetwork } from '@/constants/network';
-import { MonoAdd, MonoDelete } from '@kadena/kode-icons/system';
-import { Button, Stack, TextField } from '@kadena/kode-ui';
+import { MonoAdd, MonoDelete } from '@kda-community/kode-icons/system';
+import { Button, Stack, TextField } from '@kda-community/kode-ui';
 import type { ForwardedRef } from 'react';
 import React, { useEffect } from 'react';
 

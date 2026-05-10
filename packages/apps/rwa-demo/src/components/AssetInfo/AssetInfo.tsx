@@ -1,7 +1,11 @@
 import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import { useAsset } from '@/hooks/asset';
-import { MonoPause, MonoPlayArrow, MonoVpnLock } from '@kadena/kode-icons';
-import { Button, Heading, Stack, Text } from '@kadena/kode-ui';
+import {
+  MonoPause,
+  MonoPlayArrow,
+  MonoVpnLock,
+} from '@kda-community/kode-icons';
+import { Button, Heading, Stack, Text } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { TransactionTypeSpinner } from '../TransactionTypeSpinner/TransactionTypeSpinner';
 

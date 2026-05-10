@@ -1,6 +1,6 @@
 // packages/apps/graph/src/graph/types/guard.ts
 
-import { BuiltInPredicate } from '@kadena/client';
+import { BuiltInPredicate } from '@kda-community/client';
 
 export type PvString = string;
 

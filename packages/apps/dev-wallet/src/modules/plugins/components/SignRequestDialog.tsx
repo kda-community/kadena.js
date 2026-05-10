@@ -1,5 +1,5 @@
 import { SignRequest } from '@/pages/transaction/sign-request';
-import { Dialog, DialogContent, DialogHeader } from '@kadena/kode-ui';
+import { Dialog, DialogContent, DialogHeader } from '@kda-community/kode-ui';
 
 import { FocussedPageLayout } from '@/App/FocussedPageLayout/Layout';
 import { useState } from 'react';

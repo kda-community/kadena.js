@@ -2,7 +2,7 @@
 require('@rushstack/eslint-config/patch/modern-module-resolution');
 
 module.exports = {
-  extends: ['@kadena-dev/eslint-config/profile/lib'],
+  extends: ['@kda-community-dev/eslint-config/profile/lib'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@rushstack/typedef-var': 'off',

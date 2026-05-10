@@ -1,5 +1,5 @@
 import type { WALLETTYPES } from '@/constants';
-import type { BuiltInPredicate, ChainId } from '@kadena/client';
+import type { BuiltInPredicate, ChainId } from '@kda-community/client';
 
 export type PvString = string;
 

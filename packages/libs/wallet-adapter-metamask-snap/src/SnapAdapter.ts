@@ -2,7 +2,7 @@
  * SnapAdapter
  *
  * This module provides a comprehensive adapter implementation for the MetaMask Kadena Snap,
- * extending the BaseWalletAdapter from '@kadena/wallet-adapter-core'. It serves as a bridge
+ * extending the BaseWalletAdapter from '@kda-community/wallet-adapter-core'. It serves as a bridge
  * between your dApp and snaK, enabling you to:
  *
  * - Connect to the Snap and fetch account and network information.
@@ -22,8 +22,8 @@ import type {
   IAccountInfo,
   IBaseWalletAdapterOptions,
   INetworkInfo,
-} from '@kadena/wallet-adapter-core';
-import { BaseWalletAdapter } from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
+import { BaseWalletAdapter } from '@kda-community/wallet-adapter-core';
 import { ERRORS, SNAP_ADAPTER } from './constants';
 import { defaultSnapOrigin } from './provider';
 import type {

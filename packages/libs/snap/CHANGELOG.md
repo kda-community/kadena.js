@@ -1,4 +1,4 @@
-# @kadena/snap
+# @kda-community/snap
 
 ## 1.0.2
 

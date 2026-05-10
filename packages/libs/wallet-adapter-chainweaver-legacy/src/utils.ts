@@ -1,5 +1,5 @@
-import { Pact, createClient } from '@kadena/client';
-import type { ChainId } from '@kadena/wallet-adapter-core';
+import { Pact, createClient } from '@kda-community/client';
+import type { ChainId } from '@kda-community/wallet-adapter-core';
 
 interface IChainResponse {
   account: string;

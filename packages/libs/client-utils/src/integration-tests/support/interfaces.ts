@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 
 export interface IAccount {
   account: string;

@@ -1,6 +1,11 @@
-// import { MonoContentCopy } from '@kadena/kode-icons/system';
-import { MonoCheck, MonoContentCopy } from '@kadena/kode-icons/system';
-import { Button, IButtonProps, ITooltipProps, Tooltip } from '@kadena/kode-ui';
+// import { MonoContentCopy } from '@kda-community/kode-icons/system';
+import { MonoCheck, MonoContentCopy } from '@kda-community/kode-icons/system';
+import {
+  Button,
+  IButtonProps,
+  ITooltipProps,
+  Tooltip,
+} from '@kda-community/kode-ui';
 import { FC, useState } from 'react';
 
 interface ICopyButtonProps {

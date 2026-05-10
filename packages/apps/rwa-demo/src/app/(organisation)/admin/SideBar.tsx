@@ -8,14 +8,14 @@ import {
   MonoBeenhere,
   MonoBusiness,
   MonoNetworkCheck,
-} from '@kadena/kode-icons';
+} from '@kda-community/kode-icons';
 import {
   SideBarItem,
   SideBar as SideBarLayout,
   SideBarTree,
   SideBarTreeItem,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { FC } from 'react';

@@ -1,6 +1,6 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
+/* eslint-disable @kda-community-dev/no-eslint-disable */
 /* eslint-disable @typescript-eslint/naming-convention */
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 
 import { crossChain } from './cross-chain';
 import { preflight } from './preflight';
@@ -10,7 +10,7 @@ import type { IAccount } from './utils/helpers';
 import type { WithEmitter } from './utils/with-emitter';
 import { withEmitter } from './utils/with-emitter';
 
-import type { PactValue } from '@kadena/types';
+import type { PactValue } from '@kda-community/types';
 import { queryAllChains } from './query-all-chains';
 
 /**

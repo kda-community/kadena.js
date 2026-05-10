@@ -10,8 +10,8 @@ import { isContinuationResponse, isCrossChainResponse } from '@/utils/pact';
 import type {
   ChainwebChainId,
   ICommandResult,
-} from '@kadena/chainweb-node-client';
-import type { ChainId, IPactEvent, PactValue } from '@kadena/types';
+} from '@kda-community/chainweb-node-client';
+import type { ChainId, IPactEvent, PactValue } from '@kda-community/types';
 import Debug from 'debug';
 import type { Translate } from 'next-translate';
 

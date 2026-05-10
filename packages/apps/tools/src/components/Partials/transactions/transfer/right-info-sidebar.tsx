@@ -10,9 +10,9 @@ import {
 } from './styles.css';
 
 import { useIsMatchingMediaQuery } from '@/hooks/use-is-mobile-media-query';
-import { MonoInfo, MonoLink } from '@kadena/kode-icons/system';
-import { Accordion, AccordionItem } from '@kadena/kode-ui';
-import { breakpoints } from '@kadena/kode-ui/styles';
+import { MonoInfo, MonoLink } from '@kda-community/kode-icons/system';
+import { Accordion, AccordionItem } from '@kda-community/kode-ui';
+import { breakpoints } from '@kda-community/kode-ui/styles';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';

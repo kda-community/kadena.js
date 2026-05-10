@@ -1,4 +1,4 @@
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import React, { useEffect, useState } from 'react';
 import { barClass } from './style.css';
 

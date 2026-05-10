@@ -1,7 +1,7 @@
 import type { IAsset } from '@/contexts/AssetContext/AssetContext';
 import { getClient, getNetwork } from '@/utils/client';
 import { getAsset } from '@/utils/getAsset';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 export const getInvestorCount = async (asset?: IAsset): Promise<number> => {
   const client = getClient();

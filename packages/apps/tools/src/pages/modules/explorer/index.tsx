@@ -11,8 +11,8 @@ import { getQueryValue } from '@/utils/modulesexplorer';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,
-} from '@kadena/chainweb-node-client';
-import { CHAINS } from '@kadena/chainweb-node-client';
+} from '@kda-community/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import { useQueryClient } from '@tanstack/react-query';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

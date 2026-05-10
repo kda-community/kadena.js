@@ -1,8 +1,8 @@
 import { INFINITE_COMPLIANCE } from '@/constants';
 import { useAsset } from '@/hooks/asset';
-import { MonoWarning } from '@kadena/kode-icons';
-import { Stack, Text } from '@kadena/kode-ui';
-import { token } from '@kadena/kode-ui/styles';
+import { MonoWarning } from '@kda-community/kode-icons';
+import { Stack, Text } from '@kda-community/kode-ui';
+import { token } from '@kda-community/kode-ui/styles';
 import type { FC } from 'react';
 
 export const SupplyCountContractDetails: FC = () => {

@@ -1,8 +1,12 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import type { ILocalCommandResult } from '@kadena/chainweb-node-client';
-import type { IClient } from '@kadena/client';
-import { composePactCommand, execution, setMeta } from '@kadena/client/fp';
+import type { ILocalCommandResult } from '@kda-community/chainweb-node-client';
+import type { IClient } from '@kda-community/client';
+import {
+  composePactCommand,
+  execution,
+  setMeta,
+} from '@kda-community/client/fp';
 import { queryAllChainsClient } from '..';
 
 describe('queryAllChainsClient', () => {

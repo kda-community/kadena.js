@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/chainwebjs
+# @kda-community/chainwebjs
 
 Javascript (Typescript) bindings for the Kadena Chainweb API
 
@@ -19,11 +19,11 @@ API][2].
 ### Usage Examples
 
 ```javascript
-const chainweb = require('@kadena/chainwebjs');
+const chainweb = require('@kda-community/chainwebjs');
 ```
 
 ```javascript
-import chainweb from '@kadena/chainwebjs';
+import chainweb from '@kda-community/chainwebjs';
 ```
 
 ### Common parameters:

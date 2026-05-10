@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import type { IBlockChainData } from './utils';
 import { calculateGasInformation, calculateGasPrice } from './utils';
 

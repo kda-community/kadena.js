@@ -1,4 +1,4 @@
-import type { ITreeProps } from '@kadena/kode-ui';
+import type { ITreeProps } from '@kda-community/kode-ui';
 import type { ReactElement } from 'react';
 
 export interface IMenuItem {

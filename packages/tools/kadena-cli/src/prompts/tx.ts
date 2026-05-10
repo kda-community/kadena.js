@@ -2,7 +2,7 @@ import type {
   ICommand,
   ICommandPayload,
   IUnsignedCommand,
-} from '@kadena/types';
+} from '@kda-community/types';
 import { z } from 'zod';
 import {
   getTransactions,

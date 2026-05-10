@@ -1,4 +1,7 @@
-import { MonoAccountBalance, MonoCopyAll } from '@kadena/kode-icons/system';
+import {
+  MonoAccountBalance,
+  MonoCopyAll,
+} from '@kda-community/kode-icons/system';
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 import { withContentWidth } from '../../../storyDecorators';

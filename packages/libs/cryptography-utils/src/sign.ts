@@ -1,4 +1,4 @@
-import type { IKeyPair, SignCommand } from '@kadena/types';
+import type { IKeyPair, SignCommand } from '@kda-community/types';
 import nacl from 'tweetnacl';
 import { base64UrlEncodeArr } from './base64UrlEncodeArr';
 import { binToHex } from './binToHex';

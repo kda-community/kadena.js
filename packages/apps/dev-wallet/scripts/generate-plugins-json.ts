@@ -25,7 +25,7 @@ interface IPluginPackageJson {
 
 const { dependencies } = await $`cat package.json`.json();
 const plugins = Object.keys(dependencies).filter((dep) =>
-  dep.match(/@kadena\/chainweaver-.*-plugin/),
+  dep.match(/@kda-community\/chainweaver-.*-plugin/),
 );
 
 const pluginsJson = await Promise.all(

@@ -14,7 +14,7 @@ const builder: IFunctionResponse = Pact.modules.coin.transfer(
 );
 
 Pact.modules.coin['TRANSFER-mgr'](1203, 1203).generate();
-Pact.templates['@kadena/tx-library'].template('safe-ref-rotate').args({
+Pact.templates['@kda-community/tx-library'].template('safe-ref-rotate').args({
   'to-acct': 'k:20394',
   'from-acct': 'k:20394',
   amount: 1203,

@@ -2,7 +2,7 @@ import type { IAsset } from '@/contexts/AssetContext/AssetContext';
 import type { IWalletAccount } from '@/providers/AccountProvider/AccountType';
 import { getClient, getNetwork } from '@/utils/client';
 import { getAsset } from '@/utils/getAsset';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 export interface IIsInvestorProps {
   account: IWalletAccount;

@@ -1,17 +1,17 @@
-import type { EncryptedString } from '@kadena/hd-wallet';
+import type { EncryptedString } from '@kda-community/hd-wallet';
 import {
   kadenaDecrypt,
   kadenaEncrypt,
   kadenaGenKeypairFromSeed,
   kadenaGenMnemonic,
   kadenaMnemonicToSeed,
-} from '@kadena/hd-wallet';
+} from '@kda-community/hd-wallet';
 import {
   kadenaChangePassword,
   kadenaGenKeypair,
   kadenaGenMnemonic as legacyKadenaGenMnemonic,
   kadenaMnemonicToRootKeypair as legacykadenaMnemonicToRootKeypair,
-} from '@kadena/hd-wallet/chainweaver';
+} from '@kda-community/hd-wallet/chainweaver';
 
 import { toHexStr } from '../../commands/keys/utils/keysHelpers.js';
 import { log } from '../../utils/logger.js';

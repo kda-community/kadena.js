@@ -1,4 +1,4 @@
-import type { ICommand, IUnsignedCommand } from '@kadena/types';
+import type { ICommand, IUnsignedCommand } from '@kda-community/types';
 import { addSignatures } from '../utils/addSignatures';
 import { parseTransactionCommand } from '../utils/parseTransactionCommand';
 import { checkStatus, connect, isConnected, isInstalled } from './eckoCommon';

@@ -3,7 +3,7 @@ import { useNotifications } from '@/hooks/notifications';
 import { interpretErrorMessage } from '@/providers/TransactionsProvider/TransactionsProvider';
 import type { IAddContractProps } from '@/services/createContract';
 import { getClient } from '@/utils/client';
-import type { IUnsignedCommand } from '@kadena/client';
+import type { IUnsignedCommand } from '@kda-community/client';
 import { useEffect, useState } from 'react';
 import { useAccount } from './account';
 import { useOrganisation } from './organisation';

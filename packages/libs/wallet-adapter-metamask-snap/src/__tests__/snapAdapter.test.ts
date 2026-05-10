@@ -3,7 +3,7 @@ import type {
   IJsonRpcSuccess,
   INetworkInfo,
   IProvider,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { ERRORS } from '../constants';
 import { SnapAdapter } from '../SnapAdapter';

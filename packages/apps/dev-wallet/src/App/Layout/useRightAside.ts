@@ -1,4 +1,4 @@
-import { useSideBarLayout } from '@kadena/kode-ui/patterns';
+import { useSideBarLayout } from '@kda-community/kode-ui/patterns';
 import { useCallback, useEffect, useState } from 'react';
 
 export function useRightAside() {

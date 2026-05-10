@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena-dev/lint-package
+# @kda-community-dev/lint-package
 
 Linter for monorepo packages
 
@@ -14,19 +14,19 @@ Linter for monorepo packages
 ## Usage
 
 ```sh
-pnpm add -D @kadena-dev/lint-package
+pnpm add -D @kda-community-dev/lint-package
 ```
 
 ```json
 {
-  "name": "@kadena/package",
+  "name": "@kda-community/package",
   "scripts": {
     "lint": "pnpm run /^lint:.*/",
     "lint:pkg": "lint-package"
   },
   "dependencies": {},
   "devDependencies": {
-    "@kadena-dev/lint-package": "workspace:*"
+    "@kda-community-dev/lint-package": "workspace:*"
   }
 }
 ```

@@ -3,7 +3,7 @@ import { useAsset } from '@/hooks/asset';
 import { useCreateContract } from '@/hooks/createContract';
 import { useGetPrincipalNamespace } from '@/hooks/getPrincipalNamespace';
 import type { IAddContractProps } from '@/services/createContract';
-import { MonoAdd, MonoKeyboardArrowLeft } from '@kadena/kode-icons';
+import { MonoAdd, MonoKeyboardArrowLeft } from '@kda-community/kode-icons';
 import {
   Button,
   Divider,
@@ -11,8 +11,8 @@ import {
   NotificationHeading,
   Stack,
   TextField,
-} from '@kadena/kode-ui';
-import { token } from '@kadena/kode-ui/styles';
+} from '@kda-community/kode-ui';
+import { token } from '@kda-community/kode-ui/styles';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';

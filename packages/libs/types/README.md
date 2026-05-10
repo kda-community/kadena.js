@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena/types
+# @kda-community/types
 
 <picture>
   <source srcset="https://raw.githubusercontent.com/kadena-community/kadena.js/main/common/images/Kadena.JS_logo-white.png" media="(prefers-color-scheme: dark)"/>

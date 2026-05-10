@@ -5,9 +5,9 @@ import {
   isSignedTransaction,
   Pact,
   readKeyset,
-} from '@kadena/client';
-import { kadenaKeyPairsFromRandom } from '@kadena/hd-wallet';
-import { ITransactionDescriptor } from '@kadena/wallet-sdk';
+} from '@kda-community/client';
+import { kadenaKeyPairsFromRandom } from '@kda-community/hd-wallet';
+import { ITransactionDescriptor } from '@kda-community/wallet-sdk';
 
 export const NAMESPACES = {
   DEV_NET: 'n_34d947e2627143159ea73cdf277138fd571f17ac',

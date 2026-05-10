@@ -1,11 +1,11 @@
 import { PreviewBanner } from '@/Components/PreviewBanner/PreviewBanner';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { Badge, Stack } from '@kadena/kode-ui';
+import { Badge, Stack } from '@kda-community/kode-ui';
 import {
   SideBarLayout,
   SideBarTopBanner,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import classNames from 'classnames';
 import { FC, useMemo } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';

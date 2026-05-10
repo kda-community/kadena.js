@@ -1,12 +1,12 @@
 import { updateConsent } from '@/utils/analytics';
-import { MonoCheck, MonoClose, MonoCookie } from '@kadena/kode-icons';
+import { MonoCheck, MonoClose, MonoCookie } from '@kda-community/kode-icons';
 import {
   Notification,
   NotificationButton,
   NotificationFooter,
   NotificationHeading,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React, { useCallback, useEffect, useState } from 'react';
 import { containerClass, notificationWrapperClass } from './styles.css';

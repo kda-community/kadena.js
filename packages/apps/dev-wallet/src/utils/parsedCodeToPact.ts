@@ -1,5 +1,5 @@
-import { PactNumber } from '@kadena/pactjs';
-import { execCodeParser, IParsedCode } from '@kadena/pactjs-generator';
+import { PactNumber } from '@kda-community/pactjs';
+import { execCodeParser, IParsedCode } from '@kda-community/pactjs-generator';
 import { shorten as textShorten } from './helpers';
 
 const shorten = (str: string, length: number): string => {

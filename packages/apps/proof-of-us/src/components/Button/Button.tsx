@@ -1,4 +1,4 @@
-import { Box } from '@kadena/kode-ui';
+import { Box } from '@kda-community/kode-ui';
 import cn from 'classnames';
 import type { ForwardedRef, MouseEventHandler } from 'react';
 import { forwardRef } from 'react';

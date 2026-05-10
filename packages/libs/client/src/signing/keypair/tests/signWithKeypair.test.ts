@@ -1,4 +1,4 @@
-import type { IKeyPair } from '@kadena/types';
+import type { IKeyPair } from '@kda-community/types';
 import { beforeAll, describe, expect, it } from 'vitest';
 import type { ICoin } from '../../../composePactCommand/test/coin-contract';
 import type { ISignFunction } from '../../../index';

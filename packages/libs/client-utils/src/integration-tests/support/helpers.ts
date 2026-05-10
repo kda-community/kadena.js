@@ -1,12 +1,12 @@
-import { createSignWithKeypair, parseAsPactValue } from '@kadena/client';
+import { createSignWithKeypair, parseAsPactValue } from '@kda-community/client';
 import {
   addData,
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
-import type { ChainId, IPactInt } from '@kadena/types';
+} from '@kda-community/client/fp';
+import type { ChainId, IPactInt } from '@kda-community/types';
 import { expect } from 'vitest';
 import { dirtyReadClient, submitClient } from '../../core';
 import type { Any } from '../../core/utils/types';

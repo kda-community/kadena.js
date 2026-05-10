@@ -1,4 +1,4 @@
-import { atoms, globalStyle, token } from '@kadena/kode-ui/styles';
+import { atoms, globalStyle, token } from '@kda-community/kode-ui/styles';
 import { createVar, style } from '@vanilla-extract/css';
 
 const contentWidth = createVar();

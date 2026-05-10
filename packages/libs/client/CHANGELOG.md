@@ -1,27 +1,27 @@
-# Change Log - @kadena/client
+# Change Log - @kda-community/client
 
 ## 1.18.3
 
 ### Patch Changes
 
 - Updated dependencies \[59f3cec]
-  - @kadena/pactjs\@0.6.0
-  - @kadena/chainweb-node-client\@0.9.5
+  - @kda-community/pactjs\@0.6.0
+  - @kda-community/chainweb-node-client\@0.9.5
 
 ## 1.18.2
 
 ### Patch Changes
 
 - Updated dependencies \[c21ada4]
-  - @kadena/chainweb-node-client\@0.9.4
+  - @kda-community/chainweb-node-client\@0.9.4
 
 ## 1.18.1
 
 ### Patch Changes
 
 - Updated dependencies \[c967a57]
-  - @kadena/pactjs\@0.5.0
-  - @kadena/chainweb-node-client\@0.9.2
+  - @kda-community/pactjs\@0.5.0
+  - @kda-community/chainweb-node-client\@0.9.2
 
 ## 1.18.0
 
@@ -34,7 +34,7 @@
 ### Patch Changes
 
 - Updated dependencies \[0ebc455]
-  - @kadena/chainweb-node-client\@0.9.1
+  - @kda-community/chainweb-node-client\@0.9.1
 
 ## 1.17.0
 
@@ -45,7 +45,7 @@
 ### Patch Changes
 
 - Updated dependencies \[67ee479]
-  - @kadena/chainweb-node-client\@0.9.0
+  - @kda-community/chainweb-node-client\@0.9.0
 
 ## 1.16.0
 
@@ -57,7 +57,7 @@
 
 - 1f46bee: Add a default value `null` for the proof
 - Updated dependencies \[5e9bfd0]
-  - @kadena/chainweb-node-client\@0.8.0
+  - @kda-community/chainweb-node-client\@0.8.0
 
 ## 1.15.0
 
@@ -68,7 +68,7 @@
 ### Patch Changes
 
 - Updated dependencies \[78e6f88]
-  - @kadena/chainweb-node-client\@0.7.0
+  - @kda-community/chainweb-node-client\@0.7.0
 
 ## 1.14.0
 
@@ -87,9 +87,9 @@
 ### Patch Changes
 
 - Updated dependencies \[29168e2]
-  - @kadena/chainweb-node-client\@0.6.3
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/chainweb-node-client\@0.6.3
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/pactjs\@0.4.3
 
 ## 1.12.1
 
@@ -118,8 +118,8 @@
 - c9fe555df: Pin sensitive dependencies to specific versions
 - Updated dependencies \[c9fe555df]
 - Updated dependencies \[9c4145cb7]
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/chainweb-node-client\@0.6.2
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/chainweb-node-client\@0.6.2
 
 ## 1.11.1
 
@@ -127,9 +127,9 @@
 
 - 93bf55b07: Package updates
 - Updated dependencies \[93bf55b07]
-  - @kadena/chainweb-node-client\@0.6.1
-  - @kadena/cryptography-utils\@0.4.3
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/chainweb-node-client\@0.6.1
+  - @kda-community/cryptography-utils\@0.4.3
+  - @kda-community/pactjs\@0.4.3
 
 ## 1.11.0
 
@@ -141,7 +141,7 @@
 ### Patch Changes
 
 - Updated dependencies \[3bbfeaaa9]
-  - @kadena/chainweb-node-client\@0.6.0
+  - @kda-community/chainweb-node-client\@0.6.0
 
 ## 1.10.1
 
@@ -153,7 +153,7 @@
 
 ### Minor Changes
 
-- 016b9dbfc: Added support for verifiers in @kadena/client
+- 016b9dbfc: Added support for verifiers in @kda-community/client
 
 ## 1.9.0
 
@@ -165,16 +165,16 @@
 
 - 6ddf094d8: Fix parse objects and arrays to pact values
 - 6ddf094d8: Add Record\<string,any> to PactValue type
-  - @kadena/chainweb-node-client\@0.5.3
-  - @kadena/cryptography-utils\@0.4.2
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/chainweb-node-client\@0.5.3
+  - @kda-community/cryptography-utils\@0.4.2
+  - @kda-community/pactjs\@0.4.2
 
 ## 1.8.1
 
 ### Patch Changes
 
 - Updated dependencies \[5b1d8334e]
-  - @kadena/chainweb-node-client\@0.5.3
+  - @kda-community/chainweb-node-client\@0.5.3
 
 ## 1.8.0
 
@@ -195,9 +195,9 @@
 
 - a3bb20737: let users pass Literal or ()=>string as function inputs to cover
   more advanced usecases.
-  - @kadena/chainweb-node-client\@0.5.2
-  - @kadena/cryptography-utils\@0.4.2
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/chainweb-node-client\@0.5.2
+  - @kda-community/cryptography-utils\@0.4.2
+  - @kda-community/pactjs\@0.4.2
 
 ## 1.6.4
 
@@ -226,9 +226,9 @@
 - Updated dependencies \[1d7d88081]
 - Updated dependencies \[d15a6231f]
 - Updated dependencies \[fa6b84e22]
-  - @kadena/chainweb-node-client\@0.5.1
-  - @kadena/cryptography-utils\@0.4.1
-  - @kadena/pactjs\@0.4.1
+  - @kda-community/chainweb-node-client\@0.5.1
+  - @kda-community/cryptography-utils\@0.4.1
+  - @kda-community/pactjs\@0.4.1
 
 ## 1.5.0
 
@@ -242,7 +242,7 @@
   string before utilizing string methods.
 - fec8dfafd: Upgrade `typescript` and `@types/node` dependencies
 - f6c52c340: Expose two new functions:
-  - `getHostUrl` to use with `@kadena/client-utils` package
+  - `getHostUrl` to use with `@kda-community/client-utils` package
   - `submitOne` to make piping easier. As the piped arguments can be ambiguous
     (array or single transaction)
 - f1259eafa: Migrate packages from Jest to Vitest
@@ -262,9 +262,9 @@
 - Updated dependencies \[7e5bfb25f]
 - Updated dependencies \[a664a9535]
 - Updated dependencies \[c375cb124]
-  - @kadena/chainweb-node-client\@0.5.0
-  - @kadena/cryptography-utils\@0.4.0
-  - @kadena/pactjs\@0.4.0
+  - @kda-community/chainweb-node-client\@0.5.0
+  - @kda-community/cryptography-utils\@0.4.0
+  - @kda-community/pactjs\@0.4.0
 
 ## 1.4.0
 
@@ -289,9 +289,9 @@
 - Updated dependencies \[8adef240]
 - Updated dependencies \[242b5687]
 - Updated dependencies \[664140f3]
-  - @kadena/chainweb-node-client\@0.4.4
-  - @kadena/cryptography-utils\@0.3.8
-  - @kadena/pactjs\@0.3.2
+  - @kda-community/chainweb-node-client\@0.4.4
+  - @kda-community/cryptography-utils\@0.3.8
+  - @kda-community/pactjs\@0.3.2
 
 ## 1.2.0
 
@@ -343,7 +343,7 @@ Mon, 10 Jul 2023 14:20:26 GMT
 
 ### Minor changes
 
-- Implemented new Chain ID type from @kadena/chainweb-node-client
+- Implemented new Chain ID type from @kda-community/chainweb-node-client
 - PactCommand's `pollUntil` now rejects with the result of the request instead
   of the instance of the PactCommand class
 
@@ -351,7 +351,7 @@ Mon, 10 Jul 2023 14:20:26 GMT
 
 - small docs changes
 - Consistent fenced code block shell language
-- Improve accessibility of the `@kadena/client` readme
+- Improve accessibility of the `@kda-community/client` readme
 - Remove unused dependencies + fix some lint config
 
 ## 0.5.0
@@ -464,7 +464,7 @@ Thu, 02 Feb 2023 11:57:26 GMT
 
 ### Updates
 
-- change dependency @kadena-dev/eslint-config and @kadena-dev/heft-rig
+- change dependency @kda-community-dev/eslint-config and @kda-community-dev/heft-rig
 
 ## 0.1.5
 

@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { KEYS_ALL_PRED_ERROR_MESSAGE } from '../../../constants/account.js';
 import { networkDefaults } from '../../../constants/networks.js';
 import { services } from '../../../services/index.js';

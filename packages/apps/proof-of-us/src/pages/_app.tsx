@@ -1,12 +1,12 @@
-// load global styles from @kadena/kode-ui
-import '@kadena/kode-ui/global';
+// load global styles from @kda-community/kode-ui
+import '@kda-community/kode-ui/global';
 
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@/components/Analytics/Analytics';
 import { CookieConsent } from '@/components/CookieConsent/CookieConsent';
 import { Providers } from '@/components/Providers/Providers';
 import { mainWrapperClass } from '@/styles/global.css';
-import { Version } from '@kadena/kode-ui';
+import { Version } from '@kda-community/kode-ui';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';

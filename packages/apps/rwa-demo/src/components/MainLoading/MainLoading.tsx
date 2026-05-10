@@ -1,4 +1,4 @@
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import { TransactionPendingIcon } from '../TransactionPendingIcon/TransactionPendingIcon';
 
 export const MainLoading = () => {

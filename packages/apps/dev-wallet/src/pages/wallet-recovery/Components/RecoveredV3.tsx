@@ -9,7 +9,10 @@ import { useWallet } from '@/modules/wallet/wallet.hook';
 import { IProfile } from '@/modules/wallet/wallet.repository';
 import InitialsAvatar from '@/pages/select-profile/initials';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { MonoConstruction, MonoDoDisturb } from '@kadena/kode-icons/system';
+import {
+  MonoConstruction,
+  MonoDoDisturb,
+} from '@kda-community/kode-icons/system';
 import {
   Button,
   Checkbox,
@@ -17,8 +20,8 @@ import {
   Notification,
   Stack,
   Text,
-} from '@kadena/kode-ui';
-import { CardFooterGroup } from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui';
+import { CardFooterGroup } from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 
 export interface IV3Backup {

@@ -3,7 +3,7 @@ import { useAsset } from '@/hooks/asset';
 import { useEditAgent } from '@/hooks/editAgent';
 import { useRemoveAgent } from '@/hooks/removeAgent';
 import { loadingData } from '@/utils/loadingData';
-import { MonoAdd, MonoDelete } from '@kadena/kode-icons';
+import { MonoAdd, MonoDelete } from '@kda-community/kode-icons';
 import {
   Button,
   Notification,
@@ -11,7 +11,7 @@ import {
   NotificationFooter,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -19,7 +19,7 @@ import {
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { AgentForm } from '../AgentForm/AgentForm';
 import { Confirmation } from '../Confirmation/Confirmation';

@@ -1,6 +1,6 @@
 import { BootContent } from '@/Components/BootContent/BootContent';
 import { Session } from '@/utils/session';
-import { Text } from '@kadena/kode-ui';
+import { Text } from '@kda-community/kode-ui';
 import {
   FC,
   PropsWithChildren,

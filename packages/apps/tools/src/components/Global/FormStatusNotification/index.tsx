@@ -3,13 +3,13 @@ import {
   MonoCheck,
   MonoInfo,
   MonoWarning,
-} from '@kadena/kode-icons/system';
-import type { INotificationProps } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import type { INotificationProps } from '@kda-community/kode-ui';
 import {
   Notification,
   NotificationFooter,
   NotificationHeading,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import useTranslation from 'next-translate/useTranslation';
 import type { FC } from 'react';
 import React, { useCallback, useEffect, useState } from 'react';

@@ -3,21 +3,21 @@ import type {
   IClient,
   ICommandResult,
   IPactCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import {
   addSignatures,
   createClient,
   createSignWithKeypair,
   isSignedTransaction,
-} from '@kadena/client';
-import { kadenaSignWithSeed } from '@kadena/hd-wallet';
-import { kadenaSignFromRootKey as legacyKadenaSignWithSeed } from '@kadena/hd-wallet/chainweaver';
+} from '@kda-community/client';
+import { kadenaSignWithSeed } from '@kda-community/hd-wallet';
+import { kadenaSignFromRootKey as legacyKadenaSignWithSeed } from '@kda-community/hd-wallet/chainweaver';
 import type {
   ICommand,
   ICommandPayload,
   IKeyPair,
   IUnsignedCommand,
-} from '@kadena/types';
+} from '@kda-community/types';
 import { getExistingNetworks } from '../../../utils/helpers.js';
 import { loadNetworkConfig } from '../../networks/utils/networkHelpers.js';
 

@@ -2,8 +2,8 @@ import type { IncompleteModuleModel } from '@/hooks/use-module-query';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,
-} from '@kadena/chainweb-node-client';
-import { CHAINS } from '@kadena/chainweb-node-client';
+} from '@kda-community/chainweb-node-client';
+import { CHAINS } from '@kda-community/chainweb-node-client';
 import type { NextApiRequestCookies } from 'next/dist/server/api-utils';
 import type { ParsedUrlQuery } from 'querystring';
 import { describe, expect, it } from 'vitest';

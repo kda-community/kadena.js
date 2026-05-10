@@ -37,7 +37,7 @@ Releasing a package is as easy as gathering the required approvals for the
 
 Publishing will _only_ be done when there are no changesets left in the
 `.changeset`[2] folder. Consider the following situation. _Person A_ creates a
-PR for `@kadena/client` and adds a valid changeset and merges their PR to main.
+PR for `@kda-community/client` and adds a valid changeset and merges their PR to main.
 This leads to the `[ci] Release` pull request in which the
 
 - `.changeset`[2] folder is emptied
@@ -45,7 +45,7 @@ This leads to the `[ci] Release` pull request in which the
 - Versions are updated in the package(s).json
 
 Before _Person A_ has been able to merge the `[ci] Release` pull request to
-trigger a publish, _Person B_ has merged a new feature for `@Kadena/tools` to
+trigger a publish, _Person B_ has merged a new feature for `@kda-community/tools` to
 main which includes a changeset. The `ci-changelog`[1] will run again on main
 and detect a changeset. This will trigger the workflow to create a new branch
 called `changeset-release/main` and a new PR called `[ci] Release` instead or

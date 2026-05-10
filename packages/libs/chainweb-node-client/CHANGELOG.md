@@ -1,11 +1,11 @@
-# Change Log - @kadena/chainweb-node-client
+# Change Log - @kda-community/chainweb-node-client
 
 ## 0.9.5
 
 ### Patch Changes
 
 - Updated dependencies \[59f3cec]
-  - @kadena/pactjs\@0.6.0
+  - @kda-community/pactjs\@0.6.0
 
 ## 0.9.4
 
@@ -18,7 +18,7 @@
 ### Patch Changes
 
 - Updated dependencies \[c967a57]
-  - @kadena/pactjs\@0.5.0
+  - @kda-community/pactjs\@0.5.0
 
 ## 0.9.1
 
@@ -49,8 +49,8 @@
 ### Patch Changes
 
 - 29168e2: Updated types
-  - @kadena/cryptography-utils\@0.4.4
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/cryptography-utils\@0.4.4
+  - @kda-community/pactjs\@0.4.3
 
 ## 0.6.2
 
@@ -58,7 +58,7 @@
 
 - 9c4145cb7: Remove cross-fetch since we only support node >=18
 - Updated dependencies \[c9fe555df]
-  - @kadena/cryptography-utils\@0.4.4
+  - @kda-community/cryptography-utils\@0.4.4
 
 ## 0.6.1
 
@@ -66,8 +66,8 @@
 
 - 93bf55b07: Package updates
 - Updated dependencies \[93bf55b07]
-  - @kadena/cryptography-utils\@0.4.3
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/cryptography-utils\@0.4.3
+  - @kda-community/pactjs\@0.4.3
 
 ## 0.6.0
 
@@ -89,8 +89,8 @@
 - fa6b84e22: No auto-globals for vitest specs
 - Updated dependencies \[1d7d88081]
 - Updated dependencies \[fa6b84e22]
-  - @kadena/cryptography-utils\@0.4.1
-  - @kadena/pactjs\@0.4.1
+  - @kda-community/cryptography-utils\@0.4.1
+  - @kda-community/pactjs\@0.4.1
 
 ## 0.5.0
 
@@ -115,8 +115,8 @@
 - Updated dependencies \[699e73b51]
 - Updated dependencies \[a664a9535]
 - Updated dependencies \[c375cb124]
-  - @kadena/cryptography-utils\@0.4.0
-  - @kadena/pactjs\@0.4.0
+  - @kda-community/cryptography-utils\@0.4.0
+  - @kda-community/pactjs\@0.4.0
 
 This log was last generated on Mon, 21 Aug 2023 10:31:32 GMT and should not be
 manually modified.

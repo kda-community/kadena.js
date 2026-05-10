@@ -1,6 +1,6 @@
 import { useProofOfUs } from '@/hooks/proofOfUs';
 import { getReturnHostUrl } from '@/utils/getReturnUrl';
-import { sign as signSpireKey } from '@kadena/spirekey-sdk';
+import { sign as signSpireKey } from '@kda-community/spirekey-sdk';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useAccount } from '../account';

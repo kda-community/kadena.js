@@ -1,12 +1,12 @@
 import { env } from '@/utils/env';
-import type { ChainId, IUnsignedCommand } from '@kadena/client';
+import type { ChainId, IUnsignedCommand } from '@kda-community/client';
 import {
   Pact,
   createSignWithKeypair,
   isSignedTransaction,
   readKeyset,
-} from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 import type Transport from '@ledgerhq/hw-transport';
 import TransportWebHID from '@ledgerhq/hw-transport-webhid';
 import type {

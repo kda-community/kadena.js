@@ -4,9 +4,9 @@ import { useAccountChainDetailsQuery } from '@/hooks/use-account-chain-details-q
 import type { useAccountDetailsQuery } from '@/hooks/use-account-details-query';
 import { GasDefaults } from '@/hooks/use-ledger-sign';
 import { chainSelectContainerClass } from '@/pagestyles/transactions/transfer/styles.css';
-import { MonoContentCopy } from '@kadena/kode-icons/system';
-import { Button, NumberField, Stack, Text } from '@kadena/kode-ui';
-import type { ChainId } from '@kadena/types';
+import { MonoContentCopy } from '@kda-community/kode-icons/system';
+import { Button, NumberField, Stack, Text } from '@kda-community/kode-ui';
+import type { ChainId } from '@kda-community/types';
 import useTranslation from 'next-translate/useTranslation';
 import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';

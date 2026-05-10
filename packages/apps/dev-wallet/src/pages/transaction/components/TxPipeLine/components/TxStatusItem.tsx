@@ -3,8 +3,8 @@ import {
   MonoCheck,
   MonoClear,
   MonoPauseCircle,
-} from '@kadena/kode-icons/system';
-import { Stack, Text, Tile } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import { Stack, Text, Tile } from '@kda-community/kode-ui';
 import { FC, PropsWithChildren } from 'react';
 import { minimizedColorClass } from './style.css';
 

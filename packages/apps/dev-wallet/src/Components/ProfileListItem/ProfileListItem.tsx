@@ -3,7 +3,7 @@ import { IProfile } from '@/modules/wallet/wallet.repository';
 import { getWebAuthnPass } from '@/modules/wallet/wallet.service';
 import InitialsAvatar from '@/pages/select-profile/initials';
 import { showIcon } from '@/utils/showIcon';
-import { Stack, Text } from '@kadena/kode-ui';
+import { Stack, Text } from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { iconWrapperClass, profileItemClass } from './styles.css';

@@ -1,5 +1,5 @@
 {
-  "name": "@kadena/kadena-cli",
+  "name": "@kda-community/kadena-cli",
   "version": "1.4.6",
   "description": "Kadena CLI tool to interact with the Kadena blockchain (manage keys, transactions, etc.)",
   "keywords": [
@@ -12,18 +12,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/tools/kadena-cli"
   },
   "license": "BSD-3-Clause",
   "contributors": [
-    "Danillo Felixdaal <danillo@kadena.io>",
-    "Albert Groothedde <albert@kadena.io",
-    "Jesse van Muijden <jesse@kadena.io",
-    "Jermaine Jong <jermaine@kadena.io",
-    "Javad Khalilian <javad@kadena.io>",
-    "Mohamed Ismail <mohamed@kadena.io>",
-    "Bart Huijgen <bart@kadena.io>"
+    "Danillo Felixdaal <danillo@kda-community.io>",
+    "Albert Groothedde <albert@kda-community.io",
+    "Jesse van Muijden <jesse@kda-community.io",
+    "Jermaine Jong <jermaine@kda-community.io",
+    "Javad Khalilian <javad@kda-community.io>",
+    "Mohamed Ismail <mohamed@kda-community.io>",
+    "Bart Huijgen <bart@kda-community.io>"
   ],
   "type": "module",
   "main": "./lib/index.js",
@@ -41,7 +41,7 @@
     "bundle": "rollup -c rollup.config.mjs",
     "dev": "swc --config-file .swcrc ./src -d lib --strip-leading-paths -q && NODE_ENV=development KADENA_LOG=debug node lib/index.js",
     "format": "pnpm run /^format:.*/",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier config src --write",
     "generate:all": "cache-sh -i \"node_modules/.kadena/**\" -- pnpm run \"/^generate:pact:.*/\"",
     "generate:pact:faucet": "pactjs contract-generate --contract user.coin-faucet --api https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact",
@@ -56,13 +56,13 @@
   },
   "dependencies": {
     "@inquirer/prompts": "3.3.0",
-    "@kadena/client": "workspace:^",
-    "@kadena/client-utils": "workspace:*",
-    "@kadena/cryptography-utils": "workspace:*",
-    "@kadena/hd-wallet": "workspace:*",
-    "@kadena/pactjs": "workspace:*",
-    "@kadena/pactjs-cli": "workspace:^",
-    "@kadena/pactjs-generator": "workspace:*",
+    "@kda-community/client": "workspace:^",
+    "@kda-community/client-utils": "workspace:*",
+    "@kda-community/cryptography-utils": "workspace:*",
+    "@kda-community/hd-wallet": "workspace:*",
+    "@kda-community/pactjs": "workspace:*",
+    "@kda-community/pactjs-cli": "workspace:^",
+    "@kda-community/pactjs-generator": "workspace:*",
     "@scure/bip39": "1.2.1",
     "chalk": "^5.2.0",
     "cli-table3": "0.6.4",
@@ -76,10 +76,10 @@
     "zod": "~3.23.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",

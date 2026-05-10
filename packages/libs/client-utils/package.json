@@ -1,16 +1,16 @@
 {
-  "name": "@kadena/client-utils",
+  "name": "@kda-community/client-utils",
   "version": "0.13.4",
-  "description": "Utility functions build as a wrapper around @kadena/client",
+  "description": "Utility functions build as a wrapper around @kda-community/client",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/client-utils"
   },
   "license": "BSD-3-Clause",
   "contributors": [
-    "Javad Khalilian <javad@kadena.io>",
-    "Albert Groothedde <albert@kadena.io>",
+    "Javad Khalilian <javad@kda-community.io>",
+    "Albert Groothedde <albert@kda-community.io>",
     "Nil Amrutlal <nil.amrutlal@deptagency.com>"
   ],
   "exports": {
@@ -110,7 +110,7 @@
     "faucet:transfer": "TASK=transfer ts-node src/scripts/deploy-faucet/deploy-faucet.ts",
     "format": "pnpm run /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "generate-pipe-type": "cache-sh -i \"{src/scripts/create-async-pipe-type.ts,src/interfaces/async-pipe-type.ts}\" \"ts-node src/scripts/create-async-pipe-type.ts 30\"",
     "lint": "pnpm run /^lint:.*/",
@@ -118,7 +118,7 @@
     "lint:pkg": "lint-package",
     "lint:src": "eslint src --ext .js,.ts",
     "pactjs:generate:contract": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --contract coin --contract marmalade-v2.ledger --contract marmalade-v2.collection-policy-v1 --contract marmalade-v2.policy-manager --contract marmalade-sale.conventional-auction --contract marmalade-sale.dutch-auction --contract n_eef68e581f767dd66c4d4c39ed922be944ede505.webauthn-wallet --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact\"",
-    "pactjs:generate:faucet": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --namespace n_d8cbb935f9cd9d2399a5886bb08caed71f9bad49 -f ./src/scripts/deploy-faucet/testnet-faucet.pact\"", 
+    "pactjs:generate:faucet": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --namespace n_d8cbb935f9cd9d2399a5886bb08caed71f9bad49 -f ./src/scripts/deploy-faucet/testnet-faucet.pact\"",
     "test": "vitest run",
     "test:integration": "pnpm run test:integration:setup && vitest run -c ./vitest.integration.config.ts",
     "test:integration:local": "vitest run -c ./vitest.integration.config.ts",
@@ -126,22 +126,22 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@kadena/chainweb-node-client": "workspace:*",
-    "@kadena/client": "workspace:*",
-    "@kadena/cryptography-utils": "workspace:*",
-    "@kadena/pactjs": "workspace:*",
-    "@kadena/pactjs-cli": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community/chainweb-node-client": "workspace:*",
+    "@kda-community/client": "workspace:*",
+    "@kda-community/cryptography-utils": "workspace:*",
+    "@kda-community/pactjs": "workspace:*",
+    "@kda-community/pactjs-cli": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "debug": "4.3.4",
     "dotenv": "~16.4.5",
     "js-yaml": "~4.1.0",
     "ramda": "^0.29.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@rushstack/eslint-config": "~3.6.9",
     "@rushstack/heft": "~0.50.6",

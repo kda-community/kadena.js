@@ -5,7 +5,7 @@ import { keySourceRepository } from '@/modules/key-source/key-source.repository.
 import { WebAuthnService } from '@/modules/key-source/web-authn/webauthn';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { KeySourceType } from '@/modules/wallet/wallet.repository.ts';
-import { MonoAdd, MonoMoreVert } from '@kadena/kode-icons/system';
+import { MonoAdd, MonoMoreVert } from '@kda-community/kode-icons/system';
 import {
   Button,
   ButtonGroup,
@@ -15,7 +15,7 @@ import {
   Notification,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -24,7 +24,7 @@ import {
   SectionCardContentBlock,
   SectionCardHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { Fragment, useState } from 'react';
 import { AddKeySourceForm } from './AddKeySourceForm.tsx';
 import { AddSpecificKey } from './AddSpecificKey.tsx';

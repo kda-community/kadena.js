@@ -9,7 +9,7 @@ import {
   wallets,
 } from '../prompts/index.js';
 
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { isAbsolute, join } from 'node:path';
 
 import {

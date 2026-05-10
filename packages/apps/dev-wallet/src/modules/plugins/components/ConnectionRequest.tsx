@@ -5,7 +5,7 @@ import {
   DialogHeaderSubtitle,
   Stack,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { useState } from 'react';
 import { Plugin } from '../type';
 

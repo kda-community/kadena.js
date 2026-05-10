@@ -1,6 +1,6 @@
-import type { IClient } from '@kadena/client';
-import { Pact, createClient, getPactErrorCode } from '@kadena/client';
-import type { ChainId } from '@kadena/types';
+import type { IClient } from '@kda-community/client';
+import { Pact, createClient, getPactErrorCode } from '@kda-community/client';
+import type { ChainId } from '@kda-community/types';
 import { dotenv } from '@utils/dotenv';
 import { networkData } from '@utils/network';
 import type { IGuard } from '../../graph/types/graphql-types';

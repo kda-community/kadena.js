@@ -1,4 +1,4 @@
-import { createExp } from '@kadena/pactjs';
+import { createExp } from '@kda-community/pactjs';
 import type { ITransactionBuilder } from './createTransactionBuilder/createTransactionBuilder';
 import { createTransactionBuilder } from './createTransactionBuilder/createTransactionBuilder';
 import { unpackLiterals } from './utils/pact-helpers';

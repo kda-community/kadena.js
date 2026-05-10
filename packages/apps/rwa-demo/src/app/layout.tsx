@@ -1,6 +1,6 @@
 'use client';
 import { Analytics } from '@/components/Analytics/Analytics';
-import { mediaProviderStyles, Version } from '@kadena/kode-ui';
+import { mediaProviderStyles, Version } from '@kda-community/kode-ui';
 import React from 'react';
 import { Providers } from './Providers';
 

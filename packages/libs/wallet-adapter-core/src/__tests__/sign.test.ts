@@ -1,11 +1,11 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
+/* eslint-disable @kda-community-dev/no-eslint-disable */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type {
   ICommand,
   IQuicksignResponse,
   IUnsignedCommand,
-} from '@kadena/client';
+} from '@kda-community/client';
 import { describe, expect, it, vi } from 'vitest';
 import { ERRORS } from '../utils/constants';
 import {
@@ -21,9 +21,9 @@ import type {
   ICommandPayload,
   IContPayload,
   IExecPayload,
-} from '@kadena/types';
+} from '@kda-community/types';
 
-vi.mock('@kadena/client', () => ({
+vi.mock('@kda-community/client', () => ({
   addSignatures: (
     transaction: IUnsignedCommand,
     ...signatures: { sig: string; pubKey?: string }[]

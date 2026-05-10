@@ -16,7 +16,7 @@ import { useSearch } from '@/context/searchContext';
 import { block } from '@/graphql/queries/block.graph';
 import { useGraphQuery } from '@/hooks/graphquery';
 import { useRouter } from '@/hooks/router';
-import { Badge, TabItem, Tabs } from '@kadena/kode-ui';
+import { Badge, TabItem, Tabs } from '@kda-community/kode-ui';
 import type { Key } from 'react';
 import React, { useEffect, useState } from 'react';
 

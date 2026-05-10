@@ -4,7 +4,7 @@ import type {
   IJsonRpcSuccess,
   INetworkInfo,
   IProvider,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { EckoAdapter } from '../EckoAdapter';

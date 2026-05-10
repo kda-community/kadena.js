@@ -1,4 +1,4 @@
-import { atoms, responsiveStyle, token } from '@kadena/kode-ui/styles';
+import { atoms, responsiveStyle, token } from '@kda-community/kode-ui/styles';
 import { style } from '@vanilla-extract/css';
 
 export const toastWrapperClass = style([

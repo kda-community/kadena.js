@@ -1,4 +1,4 @@
-import type { EncryptedString } from '@kadena/hd-wallet';
+import type { EncryptedString } from '@kda-community/hd-wallet';
 import type { IWalletKeyPair } from '../../../services/wallet/wallet.types.js';
 
 /**

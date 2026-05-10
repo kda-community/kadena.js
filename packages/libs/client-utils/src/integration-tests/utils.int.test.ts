@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest';
 
 import { transferCreate, transferCreateCommand } from '../coin';
 
-import type { IPactCommand } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
-import { composePactCommand, setNetworkId } from '@kadena/client/fp';
+import type { IPactCommand } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
+import { composePactCommand, setNetworkId } from '@kda-community/client/fp';
 import { estimateGas } from '../core/estimate-gas';
 import { sender00Account, sourceAccount } from './test-data/accounts';
 

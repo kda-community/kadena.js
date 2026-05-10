@@ -4,7 +4,7 @@ import { getNetwork } from '@/utils/client';
 import { getAggregatedAccounts } from '@/utils/getAggregatedAccounts';
 import { getAsset } from '@/utils/getAsset';
 import { getPubkeyFromAccount } from '@/utils/getPubKey';
-import { Pact } from '@kadena/client';
+import { Pact } from '@kda-community/client';
 
 export interface ITransferToken {
   to: string;

@@ -1,5 +1,5 @@
 import { TerminalCard } from '@/Components/TerminalCard/TerminalCard';
-import { TabItem, Tabs } from '@kadena/kode-ui';
+import { TabItem, Tabs } from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { JsonView } from '../../JsonView';
 

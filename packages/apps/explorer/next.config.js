@@ -10,7 +10,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: ['@kadena/kode-ui'],
+  transpilePackages: ['@kda-community/kode-ui'],
   async rewrites() {
     return [];
   },

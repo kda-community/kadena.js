@@ -1,7 +1,7 @@
 import type {
   AdapterFactoryCreator,
   IBaseWalletFactoryOptions,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 import { MAGIC_ADAPTER } from './constants';
 import type { IMagicAdapterOptions } from './MagicAdapter';
 import { detectMagicProvider } from './provider';

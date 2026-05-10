@@ -3,7 +3,7 @@ import {
   addSigner,
   composePactCommand,
   execution,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 import { submitClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';
 

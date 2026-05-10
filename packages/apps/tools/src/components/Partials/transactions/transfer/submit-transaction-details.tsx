@@ -3,16 +3,19 @@ import type {
   ICommand,
   IExecutionPayloadObject,
   IPactCommand,
-} from '@kadena/client';
-import { MonoExpandLess, MonoExpandMore } from '@kadena/kode-icons/system';
+} from '@kda-community/client';
+import {
+  MonoExpandLess,
+  MonoExpandMore,
+} from '@kda-community/kode-icons/system';
 import {
   Heading,
   Stack,
   Text,
   ToggleButton,
   TrackerCard,
-} from '@kadena/kode-ui';
-import type { ICap } from '@kadena/types';
+} from '@kda-community/kode-ui';
+import type { ICap } from '@kda-community/types';
 import useTranslation from 'next-translate/useTranslation';
 import React, { useState } from 'react';
 

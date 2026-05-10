@@ -2,14 +2,14 @@
 
 import { CookieConsent } from '@/components/CookieConsent/CookieConsent';
 import { GasPayableBanner } from '@/components/GasPayableBanner/GasPayableBanner';
-import { Button, ThemeAnimateIcon, useTheme } from '@kadena/kode-ui';
+import { Button, ThemeAnimateIcon, useTheme } from '@kda-community/kode-ui';
 import {
   FocussedLayout,
   FocussedLayoutFooter,
   FocussedLayoutHeaderAside,
   FocussedLayoutProvider,
   FocussedLayoutTopBanner,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import React from 'react';
 
 const RootLayout = ({

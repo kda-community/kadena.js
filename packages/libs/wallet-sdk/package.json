@@ -1,17 +1,17 @@
 {
-  "name": "@kadena/wallet-sdk",
+  "name": "@kda-community/wallet-sdk",
   "version": "0.2.6",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/wallet-sdk"
   },
   "license": "BSD-3-Clause",
   "contributors": [
-    "Albert Groothedde <albert@kadena.io>",
-    "Bart Huijgen <bart@kadena.io>",
-    "Danillo Felixdaal <danillo@kadena.io>"
+    "Albert Groothedde <albert@kda-community.io>",
+    "Bart Huijgen <bart@kda-community.io>",
+    "Danillo Felixdaal <danillo@kda-community.io>"
   ],
   "type": "module",
   "main": "./lib/cjs/index.js",
@@ -25,7 +25,7 @@
     "codegen": "graphql-codegen",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
@@ -36,8 +36,8 @@
     "watch": "graphql-codegen && rm -rf ./dist/ && pnpm rollup -c rollup.config.mjs --watch"
   },
   "dependencies": {
-    "@kadena/client": "workspace:*",
-    "@kadena/client-utils": "workspace:*",
+    "@kda-community/client": "workspace:*",
+    "@kda-community/client-utils": "workspace:*",
     "@urql/core": "^5.0.8",
     "graphql": "~16.8.1",
     "valibot": "^1.0.0"
@@ -46,12 +46,12 @@
     "@graphql-codegen/cli": "5.0.2",
     "@graphql-codegen/client-preset": "^4.4.0",
     "@graphql-typed-document-node/core": "^3.2.0",
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
-    "@kadena/hd-wallet": "workspace:*",
-    "@kadena/types": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
+    "@kda-community/hd-wallet": "workspace:*",
+    "@kda-community/types": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-inject": "^5.0.5",

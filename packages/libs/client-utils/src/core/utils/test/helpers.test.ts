@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 
-import type { ICommandResult } from '@kadena/chainweb-node-client';
+import type { ICommandResult } from '@kda-community/chainweb-node-client';
 import type { SuccessfulResponse } from '../helpers';
 import {
   asyncLock,

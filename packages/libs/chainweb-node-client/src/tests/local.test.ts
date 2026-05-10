@@ -1,10 +1,10 @@
-import { sign } from '@kadena/cryptography-utils';
-import { ensureSignedCommand } from '@kadena/pactjs';
+import { sign } from '@kda-community/cryptography-utils';
+import { ensureSignedCommand } from '@kda-community/pactjs';
 import type {
   ICommand,
   IUnsignedCommand,
   SignatureWithHash,
-} from '@kadena/types';
+} from '@kda-community/types';
 import { HttpResponse, http } from 'msw';
 import { setupServer } from 'msw/node';
 import { afterAll, afterEach, beforeAll, expect, test } from 'vitest';

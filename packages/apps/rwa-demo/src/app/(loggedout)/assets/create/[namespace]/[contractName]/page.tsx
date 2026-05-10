@@ -1,7 +1,7 @@
 'use client';
 import { useAccount } from '@/hooks/account';
 import { useAsset } from '@/hooks/asset';
-import { Heading, Stack, Text } from '@kadena/kode-ui';
+import { Heading, Stack, Text } from '@kda-community/kode-ui';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 

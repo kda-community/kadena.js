@@ -1,7 +1,7 @@
 import type { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import * as Sentry from '@sentry/nextjs';
 
-// eslint-disable-next-line @kadena-dev/typedef-var
+// eslint-disable-next-line @kda-community-dev/typedef-var
 export const EVENT_NAMES = {
   'error:submitChain': 'error:submitChain',
   'error:submit:addinvestor': 'error:submit:addinvestor',

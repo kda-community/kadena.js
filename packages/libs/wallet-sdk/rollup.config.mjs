@@ -20,9 +20,9 @@ export default {
     },
   ],
   // external: [
-  //   '@kadena/client',
-  //   '@kadena/client-utils/coin',
-  //   '@kadena/client-utils/core',
+  //   '@kda-community/client',
+  //   '@kda-community/client-utils/coin',
+  //   '@kda-community/client-utils/core',
   //   'valibot',
   //   '@urql/core',
   // ],

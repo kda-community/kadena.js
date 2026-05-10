@@ -9,13 +9,13 @@ import {
   MonoAttachMoney,
   MonoNetworkCheck,
   MonoSupportAgent,
-} from '@kadena/kode-icons';
-import { Badge } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons';
+import { Badge } from '@kda-community/kode-ui';
 import {
   SideBarItem,
   SideBar as SideBarLayout,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { FC } from 'react';

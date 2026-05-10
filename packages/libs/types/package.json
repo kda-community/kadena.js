@@ -1,11 +1,11 @@
 {
-  "name": "@kadena/types",
+  "name": "@kda-community/types",
   "version": "0.7.0",
   "description": "",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/types"
   },
   "license": "BSD-3-Clause",
@@ -33,7 +33,7 @@
     "build": "tsc && api-extractor run --verbose",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
-    "format:md": "remark README.md -o --use @kadena-dev/markdown",
+    "format:md": "remark README.md -o --use @kda-community-dev/markdown",
     "format:src": "prettier . --cache --write",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
@@ -42,10 +42,10 @@
     "test": ""
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/lint-package": "workspace:*",
-    "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/eslint-config": "workspace:*",
+    "@kda-community-dev/lint-package": "workspace:*",
+    "@kda-community-dev/markdown": "workspace:*",
+    "@kda-community-dev/shared-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@rushstack/eslint-config": "~3.6.9",
     "eslint": "^8.45.0",

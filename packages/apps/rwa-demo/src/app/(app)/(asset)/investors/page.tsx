@@ -2,7 +2,7 @@
 
 import { InvestorList } from '@/components/InvestorList/InvestorList';
 import { SideBarBreadcrumbs } from '@/components/SideBarBreadcrumbs/SideBarBreadcrumbs';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 
 const AgentsPage = () => {
   return (

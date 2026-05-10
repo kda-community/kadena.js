@@ -1,4 +1,4 @@
-import { MonoShortcut } from '@kadena/kode-icons';
+import { MonoShortcut } from '@kda-community/kode-icons';
 import {
   Card,
   ContentHeader,
@@ -7,7 +7,7 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 
 import React from 'react';
 import SdkFunctionDisplay from '../../components/SdkFunctionDisplayer';

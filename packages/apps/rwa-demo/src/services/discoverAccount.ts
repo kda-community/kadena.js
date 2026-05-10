@@ -1,8 +1,8 @@
 import type { INetwork } from '@/contexts/NetworkContext/NetworkContext';
-import type { BuiltInPredicate, ChainId } from '@kadena/client';
-import type { IDiscoveredAccount } from '@kadena/client-utils/coin';
-import { discoverAccount as discoverAccountUtil } from '@kadena/client-utils/coin';
-import { PactNumber } from '@kadena/pactjs';
+import type { BuiltInPredicate, ChainId } from '@kda-community/client';
+import type { IDiscoveredAccount } from '@kda-community/client-utils/coin';
+import { discoverAccount as discoverAccountUtil } from '@kda-community/client-utils/coin';
+import { PactNumber } from '@kda-community/pactjs';
 
 export interface IRetrievedAccount {
   alias?: string;

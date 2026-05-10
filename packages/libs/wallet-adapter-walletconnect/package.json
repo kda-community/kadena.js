@@ -1,10 +1,10 @@
 {
-  "name": "@kadena/wallet-adapter-walletconnect",
+  "name": "@kda-community/wallet-adapter-walletconnect",
   "version": "0.2.0",
   "description": "Kadena Wallet Adapter for WalletConnect",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/libs/wallet-adapter-walletconnect"
   },
   "license": "BSD-3-Clause",
@@ -30,8 +30,8 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@kadena/client": "workspace:*",
-    "@kadena/wallet-adapter-core": "workspace:*",
+    "@kda-community/client": "workspace:*",
+    "@kda-community/wallet-adapter-core": "workspace:*",
     "@walletconnect/modal": "~2.7.0",
     "@walletconnect/sign-client": "~2.8.1",
     "@walletconnect/utils": "^2.18.0"

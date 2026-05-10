@@ -1,6 +1,6 @@
 import { prismaClient } from '@db/prisma-client';
-import { createClient, createTransaction } from '@kadena/client';
-import { composePactCommand } from '@kadena/client/fp';
+import { createClient, createTransaction } from '@kda-community/client';
+import { composePactCommand } from '@kda-community/client/fp';
 import { Prisma } from '@prisma/client';
 import { dotenv } from '@utils/dotenv';
 import { initializeNetworkConfig } from '@utils/network';

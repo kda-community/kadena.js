@@ -7,8 +7,8 @@ import {
   MonoSwapHoriz,
   MonoTableRows,
   MonoTerminal,
-} from '@kadena/kode-icons';
-import { Box, Divider, Heading, Stack, Text } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons';
+import { Box, Divider, Heading, Stack, Text } from '@kda-community/kode-ui';
 import type { FC, PropsWithChildren } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import {

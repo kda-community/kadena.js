@@ -1,8 +1,8 @@
-import type { ChainId, ICommandResult, IKeyPair } from '@kadena/client';
-import { createSignWithKeypair } from '@kadena/client';
-import { createPrincipal } from '@kadena/client-utils/built-in';
-import { transferCreate } from '@kadena/client-utils/coin';
-import { genKeyPair } from '@kadena/cryptography-utils';
+import type { ChainId, ICommandResult, IKeyPair } from '@kda-community/client';
+import { createSignWithKeypair } from '@kda-community/client';
+import { createPrincipal } from '@kda-community/client-utils/built-in';
+import { transferCreate } from '@kda-community/client-utils/coin';
+import { genKeyPair } from '@kda-community/cryptography-utils';
 import { sender00Account } from '../../constants/accounts.constants';
 import { devnetHost, networkId } from '../../constants/network.constants';
 import type { IAccount } from '../../types/account.types';

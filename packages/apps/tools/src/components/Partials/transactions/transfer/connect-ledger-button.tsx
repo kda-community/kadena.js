@@ -1,5 +1,5 @@
-import type { IButtonProps } from '@kadena/kode-ui';
-import { Button } from '@kadena/kode-ui';
+import type { IButtonProps } from '@kda-community/kode-ui';
+import { Button } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import React from 'react';
 

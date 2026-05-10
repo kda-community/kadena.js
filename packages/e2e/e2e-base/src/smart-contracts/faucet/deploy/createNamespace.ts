@@ -1,9 +1,13 @@
 import type {
   ChainwebChainId,
   ICommandResult,
-} from '@kadena/chainweb-node-client';
-import type { ICommand } from '@kadena/client';
-import { Pact, createClient, createSignWithKeypair } from '@kadena/client';
+} from '@kda-community/chainweb-node-client';
+import type { ICommand } from '@kda-community/client';
+import {
+  Pact,
+  createClient,
+  createSignWithKeypair,
+} from '@kda-community/client';
 import { sender00Account } from '../../../constants/accounts.constants';
 import { devnetUrl, networkId } from '../../../constants/network.constants';
 

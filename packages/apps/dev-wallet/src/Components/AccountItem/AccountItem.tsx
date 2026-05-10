@@ -4,8 +4,8 @@ import { useWallet } from '@/modules/wallet/wallet.hook';
 import { IProfile } from '@/modules/wallet/wallet.repository';
 import { noStyleLinkClass } from '@/pages/home/style.css';
 import { showIcon } from '@/utils/showIcon';
-import { MonoCopyAll } from '@kadena/kode-icons/system';
-import { Button, maskValue, Stack, Text, Tile } from '@kadena/kode-ui';
+import { MonoCopyAll } from '@kda-community/kode-icons/system';
+import { Button, maskValue, Stack, Text, Tile } from '@kda-community/kode-ui';
 import { Link } from 'react-router-dom';
 import { subTitleClass } from './style.css';
 
@@ -42,7 +42,7 @@ export function AccountItem({
               {alias ? (
                 <>
                   <Text variant="ui">{alias}</Text>
-                  <Text variant='code' size="small" className={subTitleClass}>
+                  <Text variant="code" size="small" className={subTitleClass}>
                     {maskValue(address)}
                   </Text>
                 </>
@@ -57,7 +57,7 @@ export function AccountItem({
             </Stack>
 
             <Stack alignItems={'flex-start'} gap={'xs'}>
-              <Text variant='code' bold color="emphasize">
+              <Text variant="code" bold color="emphasize">
                 {overallBalance}
               </Text>
               <Text bold className={subTitleClass}>

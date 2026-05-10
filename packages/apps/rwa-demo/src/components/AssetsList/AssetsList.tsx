@@ -1,14 +1,18 @@
 import { useAsset } from '@/hooks/asset';
 import { useCreateContract } from '@/hooks/createContract';
-import { MonoAdd } from '@kadena/kode-icons';
-import { Button, Notification, NotificationHeading } from '@kadena/kode-ui';
+import { MonoAdd } from '@kda-community/kode-icons';
+import {
+  Button,
+  Notification,
+  NotificationHeading,
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   SectionCard,
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { AssetFormScreen } from '../AssetForm/AssetFormScreen';
 import { FormatSelectAsset } from '../TableFormatters/FormatSelectAsset';

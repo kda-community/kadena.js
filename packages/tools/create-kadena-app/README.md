@@ -1,8 +1,8 @@
 <!-- genericHeader start -->
 
-# @kadena/create-kadena-app
+# @kda-community/create-kadena-app
 
-CLI tool to create a starter project with @kadena/client integration
+CLI tool to create a starter project with @kda-community/client integration
 
 <picture>
   <source srcset="https://raw.githubusercontent.com/kadena-community/kadena.js/main/common/images/Kadena.JS_logo-white.png" media="(prefers-color-scheme: dark)"/>
@@ -15,7 +15,7 @@ CLI tool to create a starter project with @kadena/client integration
 
 The create-kadena-app CLI tool enables you to quickly start a new application
 that has Kadena Blockchain integration set up and ready to go. The application
-supports Typescript and makes use of `@kadena/client` and `@kadena/pactjs-cli`.
+supports Typescript and makes use of `@kda-community/client` and `@kda-community/pactjs-cli`.
 
 The application is backed by a [**smart contract**][1] written in Pact that is
 included for convenience and also deployed on the Kadena Blockchain, so you have
@@ -45,7 +45,7 @@ currently available:
 The recommended way of using Create Kadena App is through npx.
 
 ```sh
-npx @kadena/create-kadena-app
+npx @kda-community/create-kadena-app
 ```
 
 Create Kadena app allows you to pass command line arguments to set up a new

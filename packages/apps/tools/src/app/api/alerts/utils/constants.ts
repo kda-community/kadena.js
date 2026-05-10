@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import dotenv from 'dotenv';
 import { balanceCheck } from './alerts/elastic/balanceCheck';
 import { balanceAlert } from './alerts/slack/balanceAlert';

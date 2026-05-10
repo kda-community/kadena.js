@@ -2,7 +2,7 @@
 require('@rushstack/eslint-config/patch/modern-module-resolution');
 
 module.exports = {
-  extends: ['@kadena-dev/eslint-config/profile/react'],
+  extends: ['@kda-community-dev/eslint-config/profile/react'],
   rules: {
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

@@ -1,8 +1,8 @@
 import type {
   ClientRequestInit,
   ICommandResult,
-} from '@kadena/chainweb-node-client';
-import type { ChainId } from '@kadena/types';
+} from '@kda-community/chainweb-node-client';
+import type { ChainId } from '@kda-community/types';
 
 /**
  * @public

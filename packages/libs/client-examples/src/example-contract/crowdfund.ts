@@ -5,8 +5,8 @@ import {
   Pact,
   readKeyset,
   signWithChainweaver,
-} from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+} from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 import { keyFromAccount } from './util/keyFromAccount';
 
 export async function createProject(

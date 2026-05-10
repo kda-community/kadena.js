@@ -15,7 +15,7 @@ import {
   MonoToggleOff,
   MonoToggleOn,
   MonoWarning,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Button,
   Heading,
@@ -23,13 +23,13 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { Controller, useFieldArray, useForm } from 'react-hook-form';

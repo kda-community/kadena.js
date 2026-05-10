@@ -1,7 +1,7 @@
 import { TXTYPES } from '@/contexts/TransactionsContext/TransactionsContext';
 import { useBatchTransferTokens } from '@/hooks/batchTransferTokens';
-import { MonoAdd } from '@kadena/kode-icons';
-import type { ITileProps } from '@kadena/kode-ui';
+import { MonoAdd } from '@kda-community/kode-icons';
+import type { ITileProps } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { AssetAction } from '../AssetAction/AssetAction';
 import { TransactionTypeSpinner } from '../TransactionTypeSpinner/TransactionTypeSpinner';

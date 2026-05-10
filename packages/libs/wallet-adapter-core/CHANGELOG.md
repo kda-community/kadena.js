@@ -1,22 +1,22 @@
-# @kadena/wallet-adapter-core
+# @kda-community/wallet-adapter-core
 
 ## 0.1.3
 
 ### Patch Changes
 
-- @kadena/client\@1.18.3
+- @kda-community/client\@1.18.3
 
 ## 0.1.2
 
 ### Patch Changes
 
-- @kadena/client\@1.18.2
+- @kda-community/client\@1.18.2
 
 ## 0.1.1
 
 ### Patch Changes
 
-- @kadena/client\@1.18.1
+- @kda-community/client\@1.18.1
 
 ## 0.1.0
 
@@ -39,4 +39,4 @@
 
 - 7be1f04: Beta release of wallet adapter
 - Updated dependencies \[b849855]
-  - @kadena/client\@1.18.0
+  - @kda-community/client\@1.18.0

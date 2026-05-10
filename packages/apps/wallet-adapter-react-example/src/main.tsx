@@ -6,20 +6,20 @@
  * `adapter` method of the factory. This means that the adapter code is only loaded
  *
  * Steps to follow if you add more wallets:
- * - Import the respective adapter (e.g., `import { xAdapter } from "@kadena/wallet-adapter-xwallet";`).
+ * - Import the respective adapter (e.g., `import { xAdapter } from "@kda-community/wallet-adapter-xwallet";`).
  * - Include it in the array for `adapters`.
  */
 
-import '@kadena/kode-ui/global';
-import { darkThemeClass } from '@kadena/kode-ui/styles';
-import { createChainweaverAdapter } from '@kadena/wallet-adapter-chainweaver';
-import { createChainweaverLegacyAdapter } from '@kadena/wallet-adapter-chainweaver-legacy';
-import { createEckoAdapter } from '@kadena/wallet-adapter-ecko';
-import { createMagicAdapter } from '@kadena/wallet-adapter-magic';
-import { createSnapAdapter } from '@kadena/wallet-adapter-metamask-snap';
-import { KadenaWalletProvider } from '@kadena/wallet-adapter-react';
-import { createWalletConnectAdapter } from '@kadena/wallet-adapter-walletconnect';
-import { createZelcoreAdapter } from '@kadena/wallet-adapter-zelcore';
+import '@kda-community/kode-ui/global';
+import { darkThemeClass } from '@kda-community/kode-ui/styles';
+import { createChainweaverAdapter } from '@kda-community/wallet-adapter-chainweaver';
+import { createChainweaverLegacyAdapter } from '@kda-community/wallet-adapter-chainweaver-legacy';
+import { createEckoAdapter } from '@kda-community/wallet-adapter-ecko';
+import { createMagicAdapter } from '@kda-community/wallet-adapter-magic';
+import { createSnapAdapter } from '@kda-community/wallet-adapter-metamask-snap';
+import { KadenaWalletProvider } from '@kda-community/wallet-adapter-react';
+import { createWalletConnectAdapter } from '@kda-community/wallet-adapter-walletconnect';
+import { createZelcoreAdapter } from '@kda-community/wallet-adapter-zelcore';
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
 import ReactDOM from 'react-dom/client';

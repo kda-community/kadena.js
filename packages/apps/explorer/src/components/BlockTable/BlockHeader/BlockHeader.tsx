@@ -1,5 +1,5 @@
 import { ValueLoader } from '@/components/LoadingSkeleton/ValueLoader/ValueLoader';
-import { Grid, Media, Stack, Text } from '@kadena/kode-ui';
+import { Grid, Media, Stack, Text } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import React from 'react';
 import {

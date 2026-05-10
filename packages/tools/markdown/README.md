@@ -1,6 +1,6 @@
 <!-- genericHeader start -->
 
-# @kadena-dev/markdown
+# @kda-community-dev/markdown
 
 Kadena monorepo Remark plugins
 

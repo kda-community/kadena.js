@@ -1,4 +1,4 @@
-/// <reference path='@kadena/spirekey-sdk'/>
+/// <reference path='@kda-community/spirekey-sdk'/>
 
 type IAccountCrendentialType = 'WebAuthn' | 'ED25519';
 

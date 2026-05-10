@@ -1,6 +1,6 @@
 import type { NetworkId, NetworkIds } from '@/constants/kadena';
 import { kadenaDefaultNetworks, networksIds } from '@/constants/kadena';
-import type { ChainwebChainId } from '@kadena/chainweb-node-client';
+import type { ChainwebChainId } from '@kda-community/chainweb-node-client';
 
 interface IApiHostData {
   api: string;

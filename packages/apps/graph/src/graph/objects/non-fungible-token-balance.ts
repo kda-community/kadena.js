@@ -1,5 +1,5 @@
 import { getTokenInfo } from '@devnet/simulation/marmalade/get-token-info';
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { normalizeError } from '@utils/errors';
 import { builder } from '../builder';
 import { tokenDetailsLoader } from '../data-loaders/token-details';

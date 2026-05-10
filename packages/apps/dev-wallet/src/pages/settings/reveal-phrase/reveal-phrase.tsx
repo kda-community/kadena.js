@@ -2,9 +2,9 @@ import { BackupMnemonic } from '@/Components/BackupMnemonic/BackupMnemonic';
 import { SideBarBreadcrumbs } from '@/Components/SideBarBreadcrumbs/SideBarBreadcrumbs';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { usePatchedNavigate } from '@/utils/usePatchedNavigate';
-import { MonoSettings } from '@kadena/kode-icons/system';
-import { Notification } from '@kadena/kode-ui';
-import { SideBarBreadcrumbsItem } from '@kadena/kode-ui/patterns';
+import { MonoSettings } from '@kda-community/kode-icons/system';
+import { Notification } from '@kda-community/kode-ui';
+import { SideBarBreadcrumbsItem } from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 
 export function RevealPhrase() {

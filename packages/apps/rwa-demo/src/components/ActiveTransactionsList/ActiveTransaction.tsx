@@ -4,7 +4,7 @@ import {
   maskValue,
   Notification,
   NotificationHeading,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import type { FC } from 'react';
 
 interface IProps {

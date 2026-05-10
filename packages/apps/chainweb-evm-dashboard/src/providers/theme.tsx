@@ -1,5 +1,5 @@
+import { darkThemeClass } from '@kda-community/kode-ui/styles';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
-import { darkThemeClass } from '@kadena/kode-ui/styles';
 import { useTheme } from '../hooks/useTheme';
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
@@ -18,4 +18,4 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       {children}
     </NextThemeProvider>
   );
-}
+};

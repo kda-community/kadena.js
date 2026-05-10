@@ -1,8 +1,8 @@
 'use client';
 import { AssetStepperForm } from '@/components/AssetForm/AssetStepperForm';
 import { useAccount } from '@/hooks/account';
-import { Card, Stack } from '@kadena/kode-ui';
-import { CardContentBlock } from '@kadena/kode-ui/patterns';
+import { Card, Stack } from '@kda-community/kode-ui';
+import { CardContentBlock } from '@kda-community/kode-ui/patterns';
 import { cardWrapperClass } from '../../style.css';
 
 const Home = () => {

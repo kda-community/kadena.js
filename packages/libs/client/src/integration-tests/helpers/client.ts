@@ -1,4 +1,4 @@
-import type { ChainId, NetworkId } from '@kadena/types';
+import type { ChainId, NetworkId } from '@kda-community/types';
 import { createClient } from '../../index';
 
 export const apiHostGenerator = ({

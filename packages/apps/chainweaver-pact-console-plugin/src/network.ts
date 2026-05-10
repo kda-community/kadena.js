@@ -1,4 +1,4 @@
-import { getHostUrl, INetworkOptions } from '@kadena/client';
+import { getHostUrl, INetworkOptions } from '@kda-community/client';
 
 export type UUID = `${string}-${string}-${string}-${string}-${string}`;
 

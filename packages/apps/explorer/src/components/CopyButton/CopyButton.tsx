@@ -1,4 +1,4 @@
-import { MonoCheck, MonoContentCopy } from '@kadena/kode-icons';
+import { MonoCheck, MonoContentCopy } from '@kda-community/kode-icons';
 import type { FC } from 'react';
 import React, { useState } from 'react';
 

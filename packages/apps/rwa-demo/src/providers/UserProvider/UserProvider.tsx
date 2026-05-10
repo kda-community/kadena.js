@@ -5,7 +5,7 @@ import { UserContext } from '@/contexts/UserContext/UserContext';
 import { useOrganisation } from '@/hooks/organisation';
 import { auth } from '@/utils/store/firebase';
 import { UserStore } from '@/utils/store/userStore';
-import { useNotifications } from '@kadena/kode-ui/patterns';
+import { useNotifications } from '@kda-community/kode-ui/patterns';
 import type { IdTokenResult, User } from 'firebase/auth';
 import {
   getAuth,

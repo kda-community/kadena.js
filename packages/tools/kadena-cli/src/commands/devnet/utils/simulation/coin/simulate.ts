@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
 import type { IAccount } from '../../../../../constants/devnets.js';
 import {
   defaultAccount,

@@ -1,5 +1,5 @@
 import { IRetrievedAccount } from '@/modules/account/IRetrievedAccount';
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 import { dbService, IDBService } from '../db/db.service';
 import { UUID } from '../types';
 

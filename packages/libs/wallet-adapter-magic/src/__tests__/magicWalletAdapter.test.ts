@@ -2,7 +2,7 @@ import type {
   IAccountInfo,
   IJsonRpcSuccess,
   IProvider,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { MagicAdapter } from '../MagicAdapter';

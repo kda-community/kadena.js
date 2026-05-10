@@ -1,5 +1,5 @@
 import { isReadyToMint } from '@/utils/isAlreadySigning';
-import { Heading } from '@kadena/kode-ui';
+import { Heading } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import type { FC, PropsWithChildren } from 'react';
 import { useMemo } from 'react';

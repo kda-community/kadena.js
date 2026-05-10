@@ -1,4 +1,4 @@
-import { test } from '@kadena-dev/e2e-base/src/fixtures/shared/test.fixture';
+import { test } from '@kda-community-dev/e2e-base/src/fixtures/shared/test.fixture';
 import { expect } from '@playwright/test';
 
 const proofTitle = 'Super Fancy Title';

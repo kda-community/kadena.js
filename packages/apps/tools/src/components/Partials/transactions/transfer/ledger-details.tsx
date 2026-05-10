@@ -7,8 +7,8 @@ import {
   marginBottomOnError,
   tooltipInfoContainer,
 } from '@/pagestyles/transactions/transfer/styles.css';
-import { MonoInfo, MonoKey } from '@kadena/kode-icons/system';
-import { NumberField, Stack, Tooltip } from '@kadena/kode-ui';
+import { MonoInfo, MonoKey } from '@kda-community/kode-icons/system';
+import { NumberField, Stack, Tooltip } from '@kda-community/kode-ui';
 import classNames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
 import type { FC } from 'react';

@@ -1,4 +1,7 @@
-import { generateTemplates, parseTemplate } from '@kadena/pactjs-generator';
+import {
+  generateTemplates,
+  parseTemplate,
+} from '@kda-community/pactjs-generator';
 import type { Command } from 'commander';
 import debug from 'debug';
 import {

@@ -1,4 +1,4 @@
-import { baseConfig } from '@kadena-dev/e2e-base/playwright.config';
+import { baseConfig } from '@kda-community-dev/e2e-base/playwright.config';
 import type { PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
@@ -9,7 +9,7 @@ const config: PlaywrightTestConfig = {
       : [['list'], ['html', { open: 'never' }]],
   webServer: {
     timeout: 90000,
-    command: `pnpm --filter @kadena/graph start:generate`,
+    command: `pnpm --filter @kda-community/graph start:generate`,
     url: 'http://localhost:4000/graphql',
     reuseExistingServer: process.env.CI === undefined,
     stdout: 'ignore',

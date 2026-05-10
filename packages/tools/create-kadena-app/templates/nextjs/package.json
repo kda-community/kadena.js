@@ -2,10 +2,10 @@
   "name": "nextjs",
   "version": "0.0.0",
   "private": true,
-  "description": "Nextjs starter project with @kadena/client integration",
+  "description": "Nextjs starter project with @kda-community/client integration",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadena-community/kadena.js.git",
+    "url": "https://github.com/kda-community/kadena.js.git",
     "directory": "packages/tools/create-kadena-app/templates/nextjs"
   },
   "license": "ISC",

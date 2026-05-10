@@ -9,7 +9,7 @@ import type { FlattenObject, ObjectPathLeaves } from '../utils/object';
 import { flattenObject } from '../utils/object';
 import { tokens } from './tokens/contract.css';
 
-// eslint-disable-next-line @kadena-dev/typedef-var
+// eslint-disable-next-line @kda-community-dev/typedef-var
 export const breakpoints = {
   xs: '',
   sm: 'screen and (min-width: 40rem)',
@@ -35,7 +35,7 @@ const makeMediaQuery =
           [breakpoints[breakpoint] as string]: styles,
         };
 
-// eslint-disable-next-line @kadena-dev/typedef-var
+// eslint-disable-next-line @kda-community-dev/typedef-var
 const mediaQuery = {
   sm: makeMediaQuery('sm'),
   md: makeMediaQuery('md'),

@@ -10,7 +10,7 @@ import {
   TabItem,
   Tabs,
   Text,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import { ChainSelect } from '@/components/Global/ChainSelect';
@@ -30,8 +30,8 @@ import type { FormData } from './sign-form';
 import { LoadingCard } from '@/components/Global/LoadingCard';
 import { useAccountChainDetailsQuery } from '@/hooks/use-account-chain-details-query';
 import { createPrincipal } from '@/services/faucet/create-principal';
-import { MonoContentCopy, MonoInfo } from '@kadena/kode-icons/system';
-import type { ChainId } from '@kadena/types';
+import { MonoContentCopy, MonoInfo } from '@kda-community/kode-icons/system';
+import type { ChainId } from '@kda-community/types';
 import { useDebounce } from 'react-use';
 import type { SenderType } from './sign-form-sender';
 

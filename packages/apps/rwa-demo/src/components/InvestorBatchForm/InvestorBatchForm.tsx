@@ -1,9 +1,9 @@
 import { useAsset } from '@/hooks/asset';
 import { useBatchAddInvestors } from '@/hooks/batchAddInvestors';
 import type { ICSVAccount } from '@/services/batchRegisterIdentity';
-import { MonoCheckBox } from '@kadena/kode-icons';
-import type { PressEvent } from '@kadena/kode-ui';
-import { Badge, Button, Notification, Stack } from '@kadena/kode-ui';
+import { MonoCheckBox } from '@kda-community/kode-icons';
+import type { PressEvent } from '@kda-community/kode-ui';
+import { Badge, Button, Notification, Stack } from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -12,7 +12,7 @@ import {
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';

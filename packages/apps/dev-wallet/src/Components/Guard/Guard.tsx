@@ -7,8 +7,8 @@ import {
   isPactGuard,
   isUserGuard,
 } from '@/modules/account/guards';
-import { maskValue, Stack, Text } from '@kadena/kode-ui';
-import { ellipsis } from '@kadena/kode-ui/styles';
+import { maskValue, Stack, Text } from '@kda-community/kode-ui';
+import { ellipsis } from '@kda-community/kode-ui/styles';
 import { Keyset } from './keyset';
 
 export function getGuardInfo(guard: IGuard) {

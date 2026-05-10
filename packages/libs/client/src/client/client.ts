@@ -6,9 +6,9 @@ import type {
   IPollResponse,
   LocalRequestBody,
   LocalResponse,
-} from '@kadena/chainweb-node-client';
-import { listen, local, poll, send } from '@kadena/chainweb-node-client';
-import type { ChainId, ICommand, IUnsignedCommand } from '@kadena/types';
+} from '@kda-community/chainweb-node-client';
+import { listen, local, poll, send } from '@kda-community/chainweb-node-client';
+import type { ChainId, ICommand, IUnsignedCommand } from '@kda-community/types';
 import type { IPactCommand } from '../interfaces/IPactCommand';
 import { runPact } from './api/runPact';
 import { getSpv, pollSpv } from './api/spv';

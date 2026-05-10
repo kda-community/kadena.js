@@ -1,9 +1,9 @@
-import type { ChainId } from '@kadena/client';
-import { Pact, createTransaction } from '@kadena/client';
+import type { ChainId } from '@kda-community/client';
+import { Pact, createTransaction } from '@kda-community/client';
 import type {
   IAccountInfo,
   ISigningRequestPartial,
-} from '@kadena/wallet-adapter-core';
+} from '@kda-community/wallet-adapter-core';
 
 export function createExampleTransaction(
   fromAccountName: string,

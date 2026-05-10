@@ -3,8 +3,8 @@ import {
   Pact,
   readKeyset,
   signWithChainweaver,
-} from '@kadena/client';
-import type { IPactDecimal } from '@kadena/types';
+} from '@kda-community/client';
+import type { IPactDecimal } from '@kda-community/types';
 import { listen, preflight, submit } from './util/client';
 
 const NETWORK_ID: string = 'testnet04';

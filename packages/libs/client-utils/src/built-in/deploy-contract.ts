@@ -1,5 +1,5 @@
-import type { ChainId, ISigner } from '@kadena/client';
-import { Pact } from '@kadena/client';
+import type { ChainId, ISigner } from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 
 import { submitClient } from '../core';
 import type { IClientConfig } from '../core/utils/helpers';
@@ -65,7 +65,7 @@ export const createPactCommandFromTransaction = (
  * @param config - The client configuration for the deployment
  * @example
  * ```typescript
- * import { deployContract } from '@kadena/client-utils';
+ * import { deployContract } from '@kda-community/client-utils';
  *
  * const contractCode = `(coin.transfer "sender" "receiver" 100)`
  *

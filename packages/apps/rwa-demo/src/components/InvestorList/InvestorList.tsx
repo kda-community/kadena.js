@@ -9,7 +9,7 @@ import {
   MonoMoreVert,
   MonoPause,
   MonoPlayArrow,
-} from '@kadena/kode-icons';
+} from '@kda-community/kode-icons';
 import {
   Button,
   ButtonGroup,
@@ -20,7 +20,7 @@ import {
   NotificationFooter,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CompactTable,
   CompactTableFormatters,
@@ -28,7 +28,7 @@ import {
   SectionCardBody,
   SectionCardContentBlock,
   SectionCardHeader,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useRouter } from 'next/navigation';
 import type { FC } from 'react';
 import { useRef, useState } from 'react';

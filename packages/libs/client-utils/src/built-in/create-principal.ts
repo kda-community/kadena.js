@@ -1,4 +1,4 @@
-import { addKeyset, execution } from '@kadena/client/fp';
+import { addKeyset, execution } from '@kda-community/client/fp';
 import { pipe } from 'ramda';
 import { dirtyReadClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';

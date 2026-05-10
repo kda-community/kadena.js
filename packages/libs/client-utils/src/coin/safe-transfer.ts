@@ -1,13 +1,13 @@
-import type { ChainId, ISigner } from '@kadena/client';
-import { Pact } from '@kadena/client';
+import type { ChainId, ISigner } from '@kda-community/client';
+import { Pact } from '@kda-community/client';
 import {
   addSigner,
   composePactCommand,
   execution,
   setMeta,
-} from '@kadena/client/fp';
+} from '@kda-community/client/fp';
 
-import { PactNumber } from '@kadena/pactjs';
+import { PactNumber } from '@kda-community/pactjs';
 import { submitClient } from '../core/client-helpers';
 import type { IClientConfig } from '../core/utils/helpers';
 import { transferCommand } from './transfer';

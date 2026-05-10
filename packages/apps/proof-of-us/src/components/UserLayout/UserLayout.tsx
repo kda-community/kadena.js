@@ -1,4 +1,4 @@
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import { motion } from 'framer-motion';
 import type { FC, PropsWithChildren } from 'react';
 

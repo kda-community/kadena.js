@@ -1,5 +1,5 @@
 import { validatePassword } from '@/utils/validatePassword';
-import { Stack, TextField } from '@kadena/kode-ui';
+import { Stack, TextField } from '@kda-community/kode-ui';
 import { FC } from 'react';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 

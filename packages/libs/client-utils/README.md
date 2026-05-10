@@ -1,8 +1,8 @@
 <!-- genericHeader start -->
 
-# @kadena/client-utils
+# @kda-community/client-utils
 
-Utility functions build as a wrapper around @kadena/client
+Utility functions build as a wrapper around @kda-community/client
 
 <picture>
   <source srcset="https://raw.githubusercontent.com/kadena-community/kadena.js/main/common/images/Kadena.JS_logo-white.png" media="(prefers-color-scheme: dark)"/>
@@ -13,10 +13,10 @@ Utility functions build as a wrapper around @kadena/client
 
 ## Kadena client utils
 
-Introducing `@kadena/client-utils`, a library that aims to provide a
+Introducing `@kda-community/client-utils`, a library that aims to provide a
 higher-level API for interacting with smart contracts. The library includes
 helpers for the `coin` module, which can be imported using
-`@kadena/client-utils/coin`. The library also exports utilities under `/core`
+`@kda-community/client-utils/coin`. The library also exports utilities under `/core`
 for smart contract developers to develop APIs, including some functions that can
 be used for any kind of smart contracts.
 
@@ -31,8 +31,8 @@ Find a [minimal interactive example at CodeSandbox][1]
 examples
 
 ```TS
-import { getBalance, transferCrossChain } from "@kadena/client-utils/coin"
-import { signWithChainweaver } from "@kadena/client"
+import { getBalance, transferCrossChain } from "@kda-community/client-utils/coin"
+import { signWithChainweaver } from "@kda-community/client"
 
 const balance = await getBalance(
   accountOne.account,
@@ -79,7 +79,7 @@ gas usage from recent blocks on the Kadena blockchain.
 import {
   estimateGasPrice,
   getBlocksGasInformation,
-} from '@kadena/client-utils';
+} from '@kda-community/client-utils';
 ```
 
 ### `estimateGasPrice`

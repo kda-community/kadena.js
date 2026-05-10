@@ -12,14 +12,14 @@ import {
   createCredential,
   extractPublicKeyHex,
 } from '@/utils/webAuthn';
-import { kadenaGenMnemonic } from '@kadena/hd-wallet';
+import { kadenaGenMnemonic } from '@kda-community/hd-wallet';
 import {
   MonoArrowForward,
   MonoContacts,
   MonoFingerprint,
   MonoPalette,
   MonoPassword,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import {
   Button,
   CompactStepper,
@@ -30,11 +30,11 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   CardFooterGroup,
   FocussedLayoutHeaderContent,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import classNames from 'classnames';
 import React, {
   FC,

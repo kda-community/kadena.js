@@ -1,9 +1,13 @@
-import type { IClient, ICommand, IUnsignedCommand } from '@kadena/client';
+import type {
+  IClient,
+  ICommand,
+  IUnsignedCommand,
+} from '@kda-community/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { log } from '../../../utils/logger.js';
 
-import { isSignedTransaction } from '@kadena/client';
+import { isSignedTransaction } from '@kda-community/client';
 import type { CommandResult } from '../../../utils/command.util.js';
 import { displayTransactionResponse } from '../utils/txDisplayHelper.js';
 import type { INetworkDetails, ISubmitResponse } from '../utils/txHelpers.js';
@@ -14,8 +18,8 @@ vi.mock('../utils/txDisplayHelper', () => ({
   displayTransactionResponse: vi.fn(),
 }));
 
-vi.mock('@kadena/client', async () => {
-  const actual = await vi.importActual('@kadena/client');
+vi.mock('@kda-community/client', async () => {
+  const actual = await vi.importActual('@kda-community/client');
   return {
     ...actual,
     isSignedTransaction: vi.fn(),

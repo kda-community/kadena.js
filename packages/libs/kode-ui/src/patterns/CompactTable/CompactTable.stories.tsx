@@ -1,4 +1,4 @@
-import { MonoDelete } from '@kadena/kode-icons/system';
+import { MonoDelete } from '@kda-community/kode-icons/system';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { onLayer2 } from '../../storyDecorators';

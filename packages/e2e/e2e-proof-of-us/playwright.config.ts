@@ -1,4 +1,4 @@
-import { baseConfig } from '@kadena-dev/e2e-base/playwright.config';
+import { baseConfig } from '@kda-community-dev/e2e-base/playwright.config';
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
 

@@ -26,7 +26,7 @@ The aim for all apps is to have 90% code coverage for statements, branches and
 functions. For each individual application it should be determined which parts
 of the package seem sensible to cover with unit tests. For the vast majority of
 our apps, UI code is explicitly ignored when calculating code coverage since
-these are largely composed of standardized components from the @kadena/kode-ui
+these are largely composed of standardized components from the @kda-community/kode-ui
 package.
 
 The selected tool to use is Vitest, more information about the general Vitest
@@ -110,7 +110,7 @@ instead of through turbo.
 
 The end-to-end tests have been set up as a matrix job. Running tests for a new
 package is easy as updating the package array with the newest addition (you can
-ommit the `@kadena/` prefix). While this pipeline is fairly simple in it's set
+ommit the `@kda-community/` prefix). While this pipeline is fairly simple in it's set
 up here are a few important topics to take note of.
 
 As most apps require specific environment variables in order to work with the
@@ -127,7 +127,7 @@ run results. This can be downloaded and the HTML report can be viewewd.
 ### Vitest
 
 The Vitest setup is fairly straight forward. A base configuration file has been
-created in the `@kadena-dev/shared-config` package. This globally defines most
+created in the `@kda-community-dev/shared-config` package. This globally defines most
 settings such as coverage requirements.
 
 In a specific packackage, projects can decide to differentiate from the baseline
@@ -137,7 +137,7 @@ coverage, this will allow developers to set lower thresholds while gradually
 improving coverage.
 
 ```TS
-import baseConfig from '@kadena-dev/shared-config/vitest.config';
+import baseConfig from '@kda-community-dev/shared-config/vitest.config';
 import { defineConfig, mergeConfig } from 'vitest/config';
 
 const localConfig = defineConfig({

@@ -1,6 +1,10 @@
-import type { ICommandResult } from '@kadena/chainweb-node-client';
-import { isSignedTransaction, Pact, signWithChainweaver } from '@kadena/client';
-import { PactNumber } from '@kadena/pactjs';
+import type { ICommandResult } from '@kda-community/chainweb-node-client';
+import {
+  isSignedTransaction,
+  Pact,
+  signWithChainweaver,
+} from '@kda-community/client';
+import { PactNumber } from '@kda-community/pactjs';
 import { listen, submit } from './util/client';
 import { keyFromAccount } from './util/keyFromAccount';
 

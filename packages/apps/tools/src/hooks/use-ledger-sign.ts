@@ -1,12 +1,12 @@
 import type { NetworkId } from '@/constants/kadena';
 import type { AppKdaLike } from '@/utils/ledger';
 import { getKadenaLedgerApp } from '@/utils/ledger';
-import { isSignedTransaction } from '@kadena/client';
+import { isSignedTransaction } from '@kda-community/client';
 import type {
   createCrossChainCommand,
   transferCommand,
   transferCreateCommand,
-} from '@kadena/client-utils/coin';
+} from '@kda-community/client-utils/coin';
 import type { TransferCrossChainTxParams } from 'hw-app-kda-clone';
 import { useAsyncFn } from 'react-use';
 

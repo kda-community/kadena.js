@@ -1,4 +1,4 @@
-export { IUnsignedCommand } from '@kadena/types';
+export { IUnsignedCommand } from '@kda-community/types';
 export {
   EckoStatus,
   ICommonEckoFunctions,

@@ -4,8 +4,8 @@ import {
 } from '@/modules/account/account.repository';
 import { INetwork } from '@/modules/network/network.repository';
 import { useWallet } from '@/modules/wallet/wallet.hook';
-import { queryAllChainsClient } from '@kadena/client-utils/core';
-import { composePactCommand, execution } from '@kadena/client/fp';
+import { queryAllChainsClient } from '@kda-community/client-utils/core';
+import { composePactCommand, execution } from '@kda-community/client/fp';
 import {
   Button,
   Divider,
@@ -14,14 +14,14 @@ import {
   Stack,
   Text,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import {
   RightAside,
   RightAsideContent,
   RightAsideFooter,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { ButtonItem } from '../ButtonItem/ButtonItem';

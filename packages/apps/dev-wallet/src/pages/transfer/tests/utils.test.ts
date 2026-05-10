@@ -1,4 +1,4 @@
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 import { describe, expect, it } from 'vitest';
 import { getTransfers, processRedistribute } from '../utils';
 

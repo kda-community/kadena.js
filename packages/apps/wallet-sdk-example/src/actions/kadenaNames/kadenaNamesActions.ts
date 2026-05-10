@@ -1,4 +1,4 @@
-import { IUnsignedCommand, Pact } from '@kadena/client';
+import { IUnsignedCommand, Pact } from '@kda-community/client';
 import {
   PRICE_MAP,
   VAULT,

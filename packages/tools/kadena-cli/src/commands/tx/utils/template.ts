@@ -1,4 +1,4 @@
-import { getPartsAndHoles } from '@kadena/client-utils/nodejs';
+import { getPartsAndHoles } from '@kda-community/client-utils/nodejs';
 import yaml from 'js-yaml';
 import z, { ZodError } from 'zod';
 import { CommandError } from '../../../utils/command.util.js';

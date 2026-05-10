@@ -1,13 +1,13 @@
 import { useAccount } from '@/hooks/account';
 import { useUser } from '@/hooks/user';
-import { Badge, maskValue, Stack, Text } from '@kadena/kode-ui';
-import type { ICompactTableFormatterProps } from '@kadena/kode-ui/patterns';
+import { Badge, maskValue, Stack, Text } from '@kda-community/kode-ui';
+import type { ICompactTableFormatterProps } from '@kda-community/kode-ui/patterns';
 import {
   RightAside,
   RightAsideContent,
   RightAsideHeader,
   useSideBarLayout,
-} from '@kadena/kode-ui/patterns';
+} from '@kda-community/kode-ui/patterns';
 import { useEffect, useState } from 'react';
 import { CopyButton } from '../CopyButton/CopyButton';
 import { AliasForm } from '../Forms/AliasForm/AliasForm';

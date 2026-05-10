@@ -1,4 +1,4 @@
-import { ChainId } from '@kadena/client';
+import { ChainId } from '@kda-community/client';
 
 export const execInSequence = <Args extends unknown[], T>(
   fn: (...args: Args) => Promise<T>,

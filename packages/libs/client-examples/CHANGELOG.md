@@ -1,40 +1,40 @@
-# @kadena/client-examples
+# @kda-community/client-examples
 
 ## 0.1.18
 
 ### Patch Changes
 
 - Updated dependencies \[59f3cec]
-  - @kadena/pactjs\@0.6.0
-  - @kadena/chainweb-node-client\@0.9.5
-  - @kadena/client\@1.18.3
-  - @kadena/client-utils\@0.13.4
+  - @kda-community/pactjs\@0.6.0
+  - @kda-community/chainweb-node-client\@0.9.5
+  - @kda-community/client\@1.18.3
+  - @kda-community/client-utils\@0.13.4
 
 ## 0.1.17
 
 ### Patch Changes
 
 - Updated dependencies \[c21ada4]
-  - @kadena/chainweb-node-client\@0.9.4
-  - @kadena/client\@1.18.2
-  - @kadena/client-utils\@0.13.3
+  - @kda-community/chainweb-node-client\@0.9.4
+  - @kda-community/client\@1.18.2
+  - @kda-community/client-utils\@0.13.3
 
 ## 0.1.16
 
 ### Patch Changes
 
 - Updated dependencies \[c967a57]
-  - @kadena/pactjs\@0.5.0
-  - @kadena/chainweb-node-client\@0.9.2
-  - @kadena/client\@1.18.1
-  - @kadena/client-utils\@0.13.2
+  - @kda-community/pactjs\@0.5.0
+  - @kda-community/chainweb-node-client\@0.9.2
+  - @kda-community/client\@1.18.1
+  - @kda-community/client-utils\@0.13.2
 
 ## 0.1.15
 
 ### Patch Changes
 
 - Updated dependencies \[5c56ae2]
-  - @kadena/client-utils\@0.13.1
+  - @kda-community/client-utils\@0.13.1
 
 ## 0.1.14
 
@@ -42,33 +42,33 @@
 
 - Updated dependencies \[b849855]
 - Updated dependencies \[b849855]
-  - @kadena/client-utils\@0.13.0
-  - @kadena/client\@1.18.0
+  - @kda-community/client-utils\@0.13.0
+  - @kda-community/client\@1.18.0
 
 ## 0.1.13
 
 ### Patch Changes
 
 - Updated dependencies \[0ebc455]
-  - @kadena/chainweb-node-client\@0.9.1
-  - @kadena/client\@1.17.1
-  - @kadena/client-utils\@0.12.2
+  - @kda-community/chainweb-node-client\@0.9.1
+  - @kda-community/client\@1.17.1
+  - @kda-community/client-utils\@0.12.2
 
 ## 0.1.12
 
 ### Patch Changes
 
 - Updated dependencies \[67ee479]
-  - @kadena/chainweb-node-client\@0.9.0
-  - @kadena/client\@1.17.0
-  - @kadena/client-utils\@0.12.1
+  - @kda-community/chainweb-node-client\@0.9.0
+  - @kda-community/client\@1.17.0
+  - @kda-community/client-utils\@0.12.1
 
 ## 0.1.11
 
 ### Patch Changes
 
 - Updated dependencies \[1cba919]
-  - @kadena/client-utils\@0.12.0
+  - @kda-community/client-utils\@0.12.0
 
 ## 0.1.10
 
@@ -76,9 +76,9 @@
 
 - Updated dependencies \[5e9bfd0]
 - Updated dependencies \[1f46bee]
-  - @kadena/chainweb-node-client\@0.8.0
-  - @kadena/client\@1.16.0
-  - @kadena/client-utils\@0.11.1
+  - @kda-community/chainweb-node-client\@0.8.0
+  - @kda-community/client\@1.16.0
+  - @kda-community/client-utils\@0.11.1
 
 ## 0.1.9
 
@@ -87,24 +87,24 @@
 - Updated dependencies \[78e6f88]
 - Updated dependencies \[eccd46e]
 - Updated dependencies \[eac8c84]
-  - @kadena/chainweb-node-client\@0.7.0
-  - @kadena/client\@1.15.0
-  - @kadena/client-utils\@0.11.0
+  - @kda-community/chainweb-node-client\@0.7.0
+  - @kda-community/client\@1.15.0
+  - @kda-community/client-utils\@0.11.0
 
 ## 0.1.8
 
 ### Patch Changes
 
 - Updated dependencies \[eb82843]
-  - @kadena/client-utils\@0.10.0
+  - @kda-community/client-utils\@0.10.0
 
 ## 0.1.7
 
 ### Patch Changes
 
 - Updated dependencies \[d07b424]
-  - @kadena/client\@1.14.0
-  - @kadena/client-utils\@0.9.1
+  - @kda-community/client\@1.14.0
+  - @kda-community/client-utils\@0.9.1
 
 ## 0.1.6
 
@@ -114,25 +114,25 @@
 - Updated dependencies \[07c0a26]
 - Updated dependencies \[29168e2]
 - Updated dependencies \[29168e2]
-  - @kadena/client\@1.13.0
-  - @kadena/client-utils\@0.9.0
-  - @kadena/chainweb-node-client\@0.6.3
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/client\@1.13.0
+  - @kda-community/client-utils\@0.9.0
+  - @kda-community/chainweb-node-client\@0.6.3
+  - @kda-community/pactjs\@0.4.3
 
 ## 0.1.5
 
 ### Patch Changes
 
 - Updated dependencies \[6d4e82074]
-  - @kadena/client\@1.12.1
-  - @kadena/client-utils\@0.8.1
+  - @kda-community/client\@1.12.1
+  - @kda-community/client-utils\@0.8.1
 
 ## 0.1.4
 
 ### Patch Changes
 
 - Updated dependencies \[83c3d58]
-  - @kadena/client-utils\@0.8.0
+  - @kda-community/client-utils\@0.8.0
 
 ## 0.1.3
 
@@ -140,8 +140,8 @@
 
 - Updated dependencies \[9c145f196]
 - Updated dependencies \[9c145f196]
-  - @kadena/client\@1.12.0
-  - @kadena/client-utils\@0.7.0
+  - @kda-community/client\@1.12.0
+  - @kda-community/client-utils\@0.7.0
 
 ## 0.1.2
 
@@ -151,9 +151,9 @@
 - Updated dependencies \[aa1aae60c]
 - Updated dependencies \[9c4145cb7]
 - Updated dependencies \[381a766e8]
-  - @kadena/client-utils\@0.6.0
-  - @kadena/client\@1.11.2
-  - @kadena/chainweb-node-client\@0.6.2
+  - @kda-community/client-utils\@0.6.0
+  - @kda-community/client\@1.11.2
+  - @kda-community/chainweb-node-client\@0.6.2
 
 ## 0.1.1
 
@@ -161,10 +161,10 @@
 
 - 93bf55b07: Package updates
 - Updated dependencies \[93bf55b07]
-  - @kadena/chainweb-node-client\@0.6.1
-  - @kadena/client-utils\@0.5.4
-  - @kadena/client\@1.11.1
-  - @kadena/pactjs\@0.4.3
+  - @kda-community/chainweb-node-client\@0.6.1
+  - @kda-community/client-utils\@0.5.4
+  - @kda-community/client\@1.11.1
+  - @kda-community/pactjs\@0.4.3
 
 ## 0.1.0
 
@@ -176,25 +176,25 @@
 ### Patch Changes
 
 - Updated dependencies \[3bbfeaaa9]
-  - @kadena/chainweb-node-client\@0.6.0
-  - @kadena/client\@1.11.0
-  - @kadena/client-utils\@0.5.3
+  - @kda-community/chainweb-node-client\@0.6.0
+  - @kda-community/client\@1.11.0
+  - @kda-community/client-utils\@0.5.3
 
 ## 0.0.16
 
 ### Patch Changes
 
 - Updated dependencies \[d67b52906]
-  - @kadena/client\@1.10.1
-  - @kadena/client-utils\@0.5.2
+  - @kda-community/client\@1.10.1
+  - @kda-community/client-utils\@0.5.2
 
 ## 0.0.15
 
 ### Patch Changes
 
 - Updated dependencies \[016b9dbfc]
-  - @kadena/client\@1.10.0
-  - @kadena/client-utils\@0.5.1
+  - @kda-community/client\@1.10.0
+  - @kda-community/client-utils\@0.5.1
 
 ## 0.0.14
 
@@ -204,19 +204,19 @@
 - Updated dependencies \[57a734447]
 - Updated dependencies \[6ddf094d8]
 - Updated dependencies \[6ddf094d8]
-  - @kadena/client\@1.9.0
-  - @kadena/client-utils\@0.5.0
-  - @kadena/chainweb-node-client\@0.5.3
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/client\@1.9.0
+  - @kda-community/client-utils\@0.5.0
+  - @kda-community/chainweb-node-client\@0.5.3
+  - @kda-community/pactjs\@0.4.2
 
 ## 0.0.13
 
 ### Patch Changes
 
 - Updated dependencies \[5b1d8334e]
-  - @kadena/chainweb-node-client\@0.5.3
-  - @kadena/client\@1.8.1
-  - @kadena/client-utils\@0.4.1
+  - @kda-community/chainweb-node-client\@0.5.3
+  - @kda-community/client\@1.8.1
+  - @kda-community/client-utils\@0.4.1
 
 ## 0.0.12
 
@@ -224,7 +224,7 @@
 
 - Updated dependencies \[172734c8b]
 - Updated dependencies \[1b4e49d96]
-  - @kadena/client-utils\@0.4.0
+  - @kda-community/client-utils\@0.4.0
 
 ## 0.0.11
 
@@ -235,8 +235,8 @@
 - Updated dependencies \[0540b213b]
 - Updated dependencies \[3fc8ac86d]
 - Updated dependencies \[72f472e58]
-  - @kadena/client-utils\@0.3.0
-  - @kadena/client\@1.8.0
+  - @kda-community/client-utils\@0.3.0
+  - @kda-community/client\@1.8.0
 
 ## 0.0.10
 
@@ -253,10 +253,10 @@
 - Updated dependencies \[70c126a32]
 - Updated dependencies \[15c203ee5]
 - Updated dependencies \[a3bb20737]
-  - @kadena/client\@1.7.0
-  - @kadena/client-utils\@0.2.0
-  - @kadena/chainweb-node-client\@0.5.2
-  - @kadena/pactjs\@0.4.2
+  - @kda-community/client\@1.7.0
+  - @kda-community/client-utils\@0.2.0
+  - @kda-community/chainweb-node-client\@0.5.2
+  - @kda-community/pactjs\@0.4.2
 
 ## 0.0.9
 
@@ -266,16 +266,16 @@
 - Updated dependencies \[f37318e9d]
 - Updated dependencies \[86e4927d3]
 - Updated dependencies \[a4ccd823a]
-  - @kadena/client\@1.6.4
-  - @kadena/client-utils\@0.1.0
+  - @kda-community/client\@1.6.4
+  - @kda-community/client-utils\@0.1.0
 
 ## 0.0.8
 
 ### Patch Changes
 
 - Updated dependencies \[4bd53128d]
-  - @kadena/client\@1.6.3
-  - @kadena/client-utils\@0.0.5
+  - @kda-community/client\@1.6.3
+  - @kda-community/client-utils\@0.0.5
 
 ## 0.0.7
 
@@ -283,8 +283,8 @@
 
 - Updated dependencies \[7a0b62119]
 - Updated dependencies \[445fb2c7d]
-  - @kadena/client-utils\@0.0.4
-  - @kadena/client\@1.6.1
+  - @kda-community/client-utils\@0.0.4
+  - @kda-community/client\@1.6.1
 
 ## 0.0.6
 
@@ -294,10 +294,10 @@
 - Updated dependencies \[1d7d88081]
 - Updated dependencies \[d15a6231f]
 - Updated dependencies \[fa6b84e22]
-  - @kadena/chainweb-node-client\@0.5.1
-  - @kadena/client-utils\@0.0.3
-  - @kadena/client\@1.6.0
-  - @kadena/pactjs\@0.4.1
+  - @kda-community/chainweb-node-client\@0.5.1
+  - @kda-community/client-utils\@0.0.3
+  - @kda-community/client\@1.6.0
+  - @kda-community/pactjs\@0.4.1
 
 ## 0.0.5
 
@@ -324,10 +324,10 @@
 - Updated dependencies \[f6c52c340]
 - Updated dependencies \[c375cb124]
 - Updated dependencies \[f1259eafa]
-  - @kadena/chainweb-node-client\@0.5.0
-  - @kadena/client\@1.5.0
-  - @kadena/pactjs\@0.4.0
-  - @kadena/client-utils\@0.0.2
+  - @kda-community/chainweb-node-client\@0.5.0
+  - @kda-community/client\@1.5.0
+  - @kda-community/pactjs\@0.4.0
+  - @kda-community/client-utils\@0.0.2
 
 ## 0.0.4
 
@@ -337,7 +337,7 @@
 - Updated dependencies \[f6ff5749]
 - Updated dependencies \[443c36d4]
 - Updated dependencies \[a058e222]
-  - @kadena/client\@1.4.0
+  - @kda-community/client\@1.4.0
 
 ## 0.0.3
 
@@ -349,13 +349,13 @@
 - Updated dependencies \[0afa85d8]
 - Updated dependencies \[664140f3]
 - Updated dependencies \[17230731]
-  - @kadena/chainweb-node-client\@0.4.4
-  - @kadena/client\@1.3.0
-  - @kadena/pactjs\@0.3.2
+  - @kda-community/chainweb-node-client\@0.4.4
+  - @kda-community/client\@1.3.0
+  - @kda-community/pactjs\@0.3.2
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies \[b8b866145]
-  - @kadena/client\@1.2.0
+  - @kda-community/client\@1.2.0

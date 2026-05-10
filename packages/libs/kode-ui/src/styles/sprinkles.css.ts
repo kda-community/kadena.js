@@ -153,7 +153,7 @@ const responsiveProperties = defineProperties({
 });
 
 /**
- * @deprecated Use 'atoms' from '@kadena/kode-ui/styles'
+ * @deprecated Use 'atoms' from '@kda-community/kode-ui/styles'
  */
 export const sprinkles = createSprinkles(
   systemProperties,
@@ -162,6 +162,6 @@ export const sprinkles = createSprinkles(
 );
 
 /**
- * @deprecated Use 'Atoms' from '@kadena/kode-ui/styles'
+ * @deprecated Use 'Atoms' from '@kda-community/kode-ui/styles'
  */
 export type Sprinkles = Parameters<typeof sprinkles>[0];

@@ -1,9 +1,12 @@
 import { ITransaction } from '@/modules/transaction/transaction.repository';
 import { shorten, toISOLocalDateTime } from '@/utils/helpers';
 import { shortenPactCode } from '@/utils/parsedCodeToPact';
-import { IContinuationPayloadObject, IPactCommand } from '@kadena/client';
-import { Stack, Text } from '@kadena/kode-ui';
-import { CompactTable } from '@kadena/kode-ui/patterns';
+import {
+  IContinuationPayloadObject,
+  IPactCommand,
+} from '@kda-community/client';
+import { Stack, Text } from '@kda-community/kode-ui';
+import { CompactTable } from '@kda-community/kode-ui/patterns';
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { noStyleLinkClass } from '../home/style.css';

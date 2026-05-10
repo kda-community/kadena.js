@@ -1,4 +1,4 @@
-import { MonoShortText } from '@kadena/kode-icons/system';
+import { MonoShortText } from '@kda-community/kode-icons/system';
 import {
   Button,
   Card,
@@ -6,7 +6,7 @@ import {
   Divider,
   Stack,
   TextField,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { useWalletState } from '../state/wallet';
 import { useMnemonicWords } from '../state/words';
 

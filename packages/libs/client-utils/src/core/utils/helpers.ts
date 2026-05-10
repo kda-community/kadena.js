@@ -6,12 +6,16 @@ import type {
   ISignFunction,
   ISigner,
   IUnsignedCommand,
-} from '@kadena/client';
-import { createClient, getHostUrl, isSignedTransaction } from '@kadena/client';
-import type { PactValue } from '@kadena/types';
+} from '@kda-community/client';
+import {
+  createClient,
+  getHostUrl,
+  isSignedTransaction,
+} from '@kda-community/client';
+import type { PactValue } from '@kda-community/types';
 
-import type { IPactResultSuccess } from '@kadena/chainweb-node-client';
-import { composePactCommand } from '@kadena/client/fp';
+import type { IPactResultSuccess } from '@kda-community/chainweb-node-client';
+import { composePactCommand } from '@kda-community/client/fp';
 import { getGlobalConfig } from '../global-config';
 import type { Any } from './types';
 

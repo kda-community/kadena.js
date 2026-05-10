@@ -10,7 +10,7 @@ import { useWalletConnectClient } from '@/context/connect-wallet-context';
 import { useToolbar } from '@/context/layout-context';
 import { fundExistingAccount, pollResult } from '@/services/faucet';
 import { zodResolver } from '@hookform/resolvers/zod';
-import type { ICommandResult } from '@kadena/chainweb-node-client';
+import type { ICommandResult } from '@kda-community/chainweb-node-client';
 import {
   Box,
   Breadcrumbs,
@@ -21,7 +21,7 @@ import {
   Notification,
   NotificationHeading,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import Trans from 'next-translate/Trans';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
@@ -50,12 +50,12 @@ import {
   notificationContainerStyle,
 } from '@/pagestyles/faucet/styles.css';
 import { getExplorerLink } from '@/utils/getExplorerLink';
-import type { ITransactionDescriptor } from '@kadena/client';
+import type { ITransactionDescriptor } from '@kda-community/client';
 import {
   MonoInfo,
   MonoKeyboardArrowRight,
   MonoLink,
-} from '@kadena/kode-icons/system';
+} from '@kda-community/kode-icons/system';
 import Link from 'next/link';
 
 const schema = z.object({

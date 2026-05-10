@@ -1,4 +1,4 @@
-import type { ChainId, ICap, PactValue } from '@kadena/types';
+import type { ChainId, ICap, PactValue } from '@kda-community/types';
 import type { AllPartial } from './type-utilities';
 
 /**
@@ -31,7 +31,7 @@ export interface IContinuationPayloadObject {
 
 /**
  * @beta
- * @deprecated Use {@link @kadena/types#ICap} instead
+ * @deprecated Use {@link @kda-community/types#ICap} instead
  */
 export type ICapabilityItem = ICap;
 
@@ -40,7 +40,7 @@ export type ICapabilityItem = ICap;
  */
 export type SignerScheme = 'ED25519' | 'ETH' | 'WebAuthn';
 
-// TODO: update filed types based on @Kadena/types
+// TODO: update filed types based on @kda-community/types
 /**
  * The non-serialized transaction payload
  * @public

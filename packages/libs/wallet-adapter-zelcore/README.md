@@ -7,11 +7,11 @@ base adapter while preserving the `"kadena_"`‑prefixed methods expected by
 ## Installation
 
 ```bash
-npm install @kadena/wallet-adapter-zelcore
+npm install @kda-community/wallet-adapter-zelcore
 # or
-yarn add @kadena/wallet-adapter-zelcore
+yarn add @kda-community/wallet-adapter-zelcore
 # or
-pmpm add @kadena/wallet-adapter-zelcore
+pmpm add @kda-community/wallet-adapter-zelcore
 ```
 
 ## Factory Usage
@@ -21,7 +21,7 @@ the Zelcore provider and, if found, returns an adapter instance. If the Zelcore
 provider is not available, detection returns `null`:
 
 ```ts
-import { createZelcoreAdapter } from '@kadena/wallet-adapter-zelcore';
+import { createZelcoreAdapter } from '@kda-community/wallet-adapter-zelcore';
 
 (async () => {
   const adapterFactory = createZelcoreAdapter();
@@ -50,7 +50,7 @@ For lower-level access, the following exports are available:
 import {
   ZelcoreAdapter,
   detectZelcoreProvider,
-} from '@kadena/wallet-adapter-zelcore';
+} from '@kda-community/wallet-adapter-zelcore';
 
 (async () => {
   const provider = await detectZelcoreProvider({ silent: true });

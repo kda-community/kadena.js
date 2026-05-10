@@ -1,4 +1,4 @@
-import { Stack } from '@kadena/kode-ui';
+import { Stack } from '@kda-community/kode-ui';
 import { FC, PropsWithChildren } from 'react';
 import { listItemClass } from './style.css';
 

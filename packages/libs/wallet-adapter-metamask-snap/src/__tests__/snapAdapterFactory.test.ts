@@ -1,4 +1,4 @@
-import type { IProvider } from '@kadena/wallet-adapter-core';
+import type { IProvider } from '@kda-community/wallet-adapter-core';
 import { describe, expect, it, vi } from 'vitest';
 import * as providerModule from '../provider';
 import { createSnapAdapter, SnapAdapter } from '../snapAdapterFactory';

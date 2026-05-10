@@ -1,4 +1,4 @@
-import type { ChainId } from '@kadena/types';
+import type { ChainId } from '@kda-community/types';
 import { Pact } from '../../../pact';
 import { NetworkId } from '../../support/enums';
 import { dirtyRead } from '../client';

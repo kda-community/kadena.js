@@ -1,6 +1,6 @@
-import type { ICommandResult } from '@kadena/client';
-import { createClient } from '@kadena/client';
-import type { ChainId } from '@kadena/types';
+import type { ICommandResult } from '@kda-community/client';
+import { createClient } from '@kda-community/client';
+import type { ChainId } from '@kda-community/types';
 import type { Command } from 'commander';
 import { z } from 'zod';
 import { createCommand } from '../../../utils/createCommand.js';

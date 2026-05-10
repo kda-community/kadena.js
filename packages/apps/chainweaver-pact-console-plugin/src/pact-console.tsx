@@ -1,13 +1,16 @@
-import { ChainId } from '@kadena/client';
-import { dirtyReadClient, setGlobalConfig } from '@kadena/client-utils/core';
+import { ChainId } from '@kda-community/client';
+import {
+  dirtyReadClient,
+  setGlobalConfig,
+} from '@kda-community/client-utils/core';
 import {
   composePactCommand,
   execution,
   setMeta,
   setNetworkId,
-} from '@kadena/client/fp';
-import { Stack, Text } from '@kadena/kode-ui';
-import { darkThemeClass } from '@kadena/kode-ui/styles';
+} from '@kda-community/client/fp';
+import { Stack, Text } from '@kda-community/kode-ui';
+import { darkThemeClass } from '@kda-community/kode-ui/styles';
 import classNames from 'classnames';
 import { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { communicate } from './communicate';
@@ -26,7 +29,13 @@ export function PactConsole({
   target: Window;
 }) {
   const message = useMemo(
-    () => communicate(window, target, '@kadena/chainweaver-pact-console-plugin', sessionId),
+    () =>
+      communicate(
+        window,
+        target,
+        '@kda-community/chainweaver-pact-console-plugin',
+        sessionId,
+      ),
     [sessionId, target],
   );
   const [networks, setNetworks] = useState<INetwork[]>([]);

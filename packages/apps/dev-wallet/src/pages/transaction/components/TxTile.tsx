@@ -10,16 +10,16 @@ import {
   MonoShare,
   MonoSignature,
   MonoViewInAr,
-} from '@kadena/kode-icons/system';
-import { Button, Stack, Text } from '@kadena/kode-ui';
+} from '@kda-community/kode-icons/system';
+import { Button, Stack, Text } from '@kda-community/kode-ui';
 
-import { IPactCommand } from '@kadena/client';
+import { IPactCommand } from '@kda-community/client';
 
 import { Confirmation } from '@/Components/Confirmation/Confirmation';
 import { useWallet } from '@/modules/wallet/wallet.hook';
 import { normalizeSigs } from '@/utils/normalizeSigs';
 import { shortenPactCode } from '@/utils/parsedCodeToPact';
-import { base64UrlEncodeArr } from '@kadena/cryptography-utils';
+import { base64UrlEncodeArr } from '@kda-community/cryptography-utils';
 import { useEffect, useMemo, useState } from 'react';
 import { Value } from './helpers';
 import {

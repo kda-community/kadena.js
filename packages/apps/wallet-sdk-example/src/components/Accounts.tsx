@@ -1,4 +1,4 @@
-import { MonoAccountBox } from '@kadena/kode-icons';
+import { MonoAccountBox } from '@kda-community/kode-icons';
 import {
   Button,
   Card,
@@ -7,7 +7,7 @@ import {
   Select,
   SelectItem,
   Stack,
-} from '@kadena/kode-ui';
+} from '@kda-community/kode-ui';
 import { useEffect, useState } from 'react';
 import { useAccountsBalances } from '../hooks/balances';
 import { useChains } from '../hooks/chains';

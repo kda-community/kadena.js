@@ -1,6 +1,6 @@
 import { AccountNameField } from '@/components/Fields/AccountNameField';
 import { useUser } from '@/hooks/user';
-import { Button, Notification, Stack, TextField } from '@kadena/kode-ui';
+import { Button, Notification, Stack, TextField } from '@kda-community/kode-ui';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';

@@ -2,9 +2,9 @@ import { kadenaDefaultNetworks } from '@/constants/kadena';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,
-} from '@kadena/chainweb-node-client';
-import type { ICreatePrincipalInput } from '@kadena/client-utils/built-in';
-import { createPrincipal as createPrincipalUtil } from '@kadena/client-utils/built-in';
+} from '@kda-community/chainweb-node-client';
+import type { ICreatePrincipalInput } from '@kda-community/client-utils/built-in';
+import { createPrincipal as createPrincipalUtil } from '@kda-community/client-utils/built-in';
 import Debug from 'debug';
 
 const NETWORK_ID: ChainwebNetworkId = 'testnet06';

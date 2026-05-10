@@ -1,24 +1,35 @@
-"use client";
+'use client';
 
-import { Box, Card, Grid, GridItem, Heading, Stack, Text } from "@kadena/kode-ui";
-import { storeHandlers, useAppState } from "../../store/selectors";
+import {
+  Box,
+  Card,
+  Grid,
+  GridItem,
+  Heading,
+  Stack,
+  Text,
+} from '@kda-community/kode-ui';
+import { storeHandlers, useAppState } from '../../store/selectors';
 
 import styles from '../page.module.css';
 
-import { Box as StatsBox, LabeledBox } from '../../components/Stats/box';
-import { tokens } from "@kadena/kode-ui/styles";
-import { __n } from "../../utils";
+import { tokens } from '@kda-community/kode-ui/styles';
+import { LabeledBox, Box as StatsBox } from '../../components/Stats/box';
 import {
   AddressesGraph,
   BlocksGraph,
   ChainsGraph,
   ChainStatus,
   DataIndicator,
-  TransactionsGraph
-} from "../../components/Stats/indicators";
-import { Chain } from "../../store/chain/type";
-import { _n, toFixed } from "../../utils/number";
-import { convertColorToBackgroundSubtleColor, createGradient } from "../../utils/color";
+  TransactionsGraph,
+} from '../../components/Stats/indicators';
+import { Chain } from '../../store/chain/type';
+import { __n } from '../../utils';
+import {
+  convertColorToBackgroundSubtleColor,
+  createGradient,
+} from '../../utils/color';
+import { _n, toFixed } from '../../utils/number';
 
 export default function Page() {
   const chainState = useAppState((state) => state.chains);
@@ -34,10 +45,14 @@ export default function Page() {
   const allActiveChainsCount = chainHandlers.getAllActiveChainsCount();
   const totalChainsCount = chainHandlers.getAllChainsCount();
 
-  const chainTransactionPercent = (chain: Chain) => chainHandlers.getChainTransactionsPercentage(chain.id);
-  const chainAddressesPercent = (chain: Chain) => chainHandlers.getChainAddressesPercentage(chain.id);
-  const chainBlocksPercent = (chain: Chain) => chainHandlers.getChainBlocksPercentage(chain.id);
-  const chainAverageBlockTimePercent = (chain: Chain) => chainHandlers.getChainAverageBlockTimePercentage(chain.id);
+  const chainTransactionPercent = (chain: Chain) =>
+    chainHandlers.getChainTransactionsPercentage(chain.id);
+  const chainAddressesPercent = (chain: Chain) =>
+    chainHandlers.getChainAddressesPercentage(chain.id);
+  const chainBlocksPercent = (chain: Chain) =>
+    chainHandlers.getChainBlocksPercentage(chain.id);
+  const chainAverageBlockTimePercent = (chain: Chain) =>
+    chainHandlers.getChainAverageBlockTimePercentage(chain.id);
 
   const graphTitle = chainHandlers.getGraphTitle('newTxns');
 
@@ -57,107 +72,186 @@ export default function Page() {
           >
             <GridItem>
               <Card fullWidth>
-                <div className={styles.overallCardBackground} style={{ background: createGradient({
-                  from: 'transparent',
-                  to: tokens.kda.foundation.color.background.surface.default,
-                  direction: 'to top',
-                }) }} />
-                <div className={styles.overallCard} style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}>
+                <div
+                  className={styles.overallCardBackground}
+                  style={{
+                    background: createGradient({
+                      from: 'transparent',
+                      to: tokens.kda.foundation.color.background.surface
+                        .default,
+                      direction: 'to top',
+                    }),
+                  }}
+                />
+                <div
+                  className={styles.overallCard}
+                  style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}
+                >
                   <Stack
                     alignItems="flex-start"
                     flexDirection="column"
                     gap="xxs"
                   >
-                    <span style={{ color: tokens.kda.foundation.color.text.gray.default }}>
-                      <Text bold size="smallest" color="inherit">Overall Created</Text>
+                    <span
+                      style={{
+                        color: tokens.kda.foundation.color.text.gray.default,
+                      }}
+                    >
+                      <Text bold size="smallest" color="inherit">
+                        Overall Created
+                      </Text>
                     </span>
-                    <Heading className={styles.heading} variant="h6">Transactions</Heading>
-                    <StatsBox>
-                      { __n(allTransactionCount) }
-                    </StatsBox>
+                    <Heading className={styles.heading} variant="h6">
+                      Transactions
+                    </Heading>
+                    <StatsBox>{__n(allTransactionCount)}</StatsBox>
                   </Stack>
-                  <TransactionsGraph chartId="transaction-graph-tooltip" title={graphTitle} className={styles.overallChainsBoxGraph} />
+                  <TransactionsGraph
+                    chartId="transaction-graph-tooltip"
+                    title={graphTitle}
+                    className={styles.overallChainsBoxGraph}
+                  />
                 </div>
               </Card>
             </GridItem>
             <GridItem>
               <Card fullWidth>
-                <div className={styles.overallCardBackground} style={{ background: createGradient({
-                  from: 'transparent',
-                  to: tokens.kda.foundation.color.background.surface.default,
-                  direction: 'to top',
-                }) }} />
-                <div className={styles.overallCard} style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}>
+                <div
+                  className={styles.overallCardBackground}
+                  style={{
+                    background: createGradient({
+                      from: 'transparent',
+                      to: tokens.kda.foundation.color.background.surface
+                        .default,
+                      direction: 'to top',
+                    }),
+                  }}
+                />
+                <div
+                  className={styles.overallCard}
+                  style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}
+                >
                   <Stack
                     alignItems="flex-start"
                     flexDirection="column"
                     gap="xxs"
                   >
-                    <span style={{ color: tokens.kda.foundation.color.text.gray.default }}>
-                      <Text bold size="smallest" color="inherit">Overall New</Text>
+                    <span
+                      style={{
+                        color: tokens.kda.foundation.color.text.gray.default,
+                      }}
+                    >
+                      <Text bold size="smallest" color="inherit">
+                        Overall New
+                      </Text>
                     </span>
-                    <Heading className={styles.heading} variant="h6">Blocks</Heading>
-                    <StatsBox>
-                      { __n(allBlocksCount) }
-                    </StatsBox>
+                    <Heading className={styles.heading} variant="h6">
+                      Blocks
+                    </Heading>
+                    <StatsBox>{__n(allBlocksCount)}</StatsBox>
                   </Stack>
-                  <BlocksGraph options={{ ticks: 20 }} className={styles.overallChainsBoxGraph} />
+                  <BlocksGraph
+                    options={{ ticks: 20 }}
+                    className={styles.overallChainsBoxGraph}
+                  />
                 </div>
               </Card>
             </GridItem>
             <GridItem>
               <Card fullWidth>
-                <div className={styles.overallCardBackground} style={{ background: createGradient({
-                  from: 'transparent',
-                  to: tokens.kda.foundation.color.background.surface.default,
-                  direction: 'to top',
-                }) }} />
-                <div className={styles.overallCard} style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}>
+                <div
+                  className={styles.overallCardBackground}
+                  style={{
+                    background: createGradient({
+                      from: 'transparent',
+                      to: tokens.kda.foundation.color.background.surface
+                        .default,
+                      direction: 'to top',
+                    }),
+                  }}
+                />
+                <div
+                  className={styles.overallCard}
+                  style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}
+                >
                   <Stack
                     alignItems="flex-start"
                     flexDirection="column"
                     gap="xxs"
                   >
-                    <span style={{ color: tokens.kda.foundation.color.text.gray.default }}>
-                      <Text bold size="smallest" color="inherit">Overall Accumulated</Text>
+                    <span
+                      style={{
+                        color: tokens.kda.foundation.color.text.gray.default,
+                      }}
+                    >
+                      <Text bold size="smallest" color="inherit">
+                        Overall Accumulated
+                      </Text>
                     </span>
-                    <Heading className={styles.heading} variant="h6">Addresses</Heading>
-                    <StatsBox>
-                      { __n(allAddressesCount) }
-                    </StatsBox>
+                    <Heading className={styles.heading} variant="h6">
+                      Addresses
+                    </Heading>
+                    <StatsBox>{__n(allAddressesCount)}</StatsBox>
                   </Stack>
-                  <AddressesGraph options={{ ticks: 20 }} className={styles.overallChainsBoxGraph} />
+                  <AddressesGraph
+                    options={{ ticks: 20 }}
+                    className={styles.overallChainsBoxGraph}
+                  />
                 </div>
               </Card>
             </GridItem>
             <GridItem>
               <Card fullWidth>
-                <div className={styles.overallCardBackground} style={{ background: createGradient({
-                  from: 'transparent',
-                  to: tokens.kda.foundation.color.background.surface.default,
-                  direction: 'to top',
-                }) }} />
-                <div className={styles.overallCard} style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}>
+                <div
+                  className={styles.overallCardBackground}
+                  style={{
+                    background: createGradient({
+                      from: 'transparent',
+                      to: tokens.kda.foundation.color.background.surface
+                        .default,
+                      direction: 'to top',
+                    }),
+                  }}
+                />
+                <div
+                  className={styles.overallCard}
+                  style={{ paddingInline: tokens.kda.foundation.spacing.n5 }}
+                >
                   <Stack
                     alignItems="flex-start"
                     flexDirection="column"
                     gap="xxs"
                   >
-                    <span style={{ color: tokens.kda.foundation.color.text.gray.default }}>
-                      <Text bold size="smallest" color="inherit">Active</Text>
+                    <span
+                      style={{
+                        color: tokens.kda.foundation.color.text.gray.default,
+                      }}
+                    >
+                      <Text bold size="smallest" color="inherit">
+                        Active
+                      </Text>
                     </span>
-                    <Heading className={styles.heading} variant="h6">Chains</Heading>
+                    <Heading className={styles.heading} variant="h6">
+                      Chains
+                    </Heading>
                     <StatsBox>
-                      { allActiveChainsCount }/{ totalChainsCount }
+                      {allActiveChainsCount}/{totalChainsCount}
                     </StatsBox>
                   </Stack>
-                  <ChainsGraph className={styles.guageChainsBoxGraph} chainCount={totalChainsCount} activeChainCount={allActiveChainsCount} />
+                  <ChainsGraph
+                    className={styles.guageChainsBoxGraph}
+                    chainCount={totalChainsCount}
+                    activeChainCount={allActiveChainsCount}
+                  />
                 </div>
               </Card>
             </GridItem>
           </Grid>
         </Box>
-        <Box padding="lg" style={{ paddingTop: tokens.kda.foundation.spacing.n0 }}>
+        <Box
+          padding="lg"
+          style={{ paddingTop: tokens.kda.foundation.spacing.n0 }}
+        >
           <Grid
             columns={{
               xs: 1,
@@ -168,14 +262,19 @@ export default function Page() {
             }}
             gap="xl"
           >
-          { chainState.map((chain) => (
+            {chainState.map((chain) => (
               <GridItem key={chain.id}>
-                <Card fullWidth className={[
-                  styles.overallCardStats,
-                  chainUXState?.[chain.id]?.isLoading || chain.metaData.status !== 'online'
-                    ? styles.overallCardStatsLoading
-                    : null
-                  ].filter(Boolean).join(' ')}
+                <Card
+                  fullWidth
+                  className={[
+                    styles.overallCardStats,
+                    chainUXState?.[chain.id]?.isLoading ||
+                    chain.metaData.status !== 'online'
+                      ? styles.overallCardStatsLoading
+                      : null,
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
                 >
                   <div className={styles.chainBoxGraphContainer}>
                     <TransactionsGraph
@@ -186,19 +285,23 @@ export default function Page() {
                       options={{
                         strokeColor: chain.metaData.color,
                         strokeWidth: 2,
-                        fillColor: "none",
+                        fillColor: 'none',
                         margins: {
                           top: 20,
                           right: 20,
                           bottom: 20,
-                          left: 0
+                          left: 0,
                         },
                         background: {
                           isGradient: true,
-                          from: convertColorToBackgroundSubtleColor(chain.metaData.color, undefined, uxHandlers.isDarkMode()),
+                          from: convertColorToBackgroundSubtleColor(
+                            chain.metaData.color,
+                            undefined,
+                            uxHandlers.isDarkMode(),
+                          ),
                           to: 'transparent',
-                          direction: 'to bottom'
-                        }
+                          direction: 'to bottom',
+                        },
                       }}
                     />
                   </div>
@@ -208,38 +311,72 @@ export default function Page() {
                     gap="xxs"
                     width="100%"
                   >
-                    <span style={{ color: tokens.kda.foundation.color.text.gray.default, marginBottom: tokens.kda.foundation.spacing.md }}>
-                      <Text bold size="small">Chain { chain.id } <ChainStatus chain={chain} /></Text>
+                    <span
+                      style={{
+                        color: tokens.kda.foundation.color.text.gray.default,
+                        marginBottom: tokens.kda.foundation.spacing.md,
+                      }}
+                    >
+                      <Text bold size="small">
+                        Chain {chain.id} <ChainStatus chain={chain} />
+                      </Text>
                     </span>
-                    <div className={styles.labeledBoxContainer} style={{ gap: tokens.kda.foundation.spacing.md, width: '100%' }}>
-                      <Grid
-                        columns={2}
-                        gap="md"
-                        width="100%"
-                      >
+                    <div
+                      className={styles.labeledBoxContainer}
+                      style={{
+                        gap: tokens.kda.foundation.spacing.md,
+                        width: '100%',
+                      }}
+                    >
+                      <Grid columns={2} gap="md" width="100%">
                         <GridItem>
                           <LabeledBox label="Transactions">
-                            <DataIndicator value={chainTransactionPercent(chain)} max={100} color={chain.metaData.color} />
-                            { __n(chain.stats?.transactions?.totalTxns.value ?? 0) }{chain.stats?.transactions?.totalTxns.units}
+                            <DataIndicator
+                              value={chainTransactionPercent(chain)}
+                              max={100}
+                              color={chain.metaData.color}
+                            />
+                            {__n(
+                              chain.stats?.transactions?.totalTxns.value ?? 0,
+                            )}
+                            {chain.stats?.transactions?.totalTxns.units}
                           </LabeledBox>
                         </GridItem>
                         <GridItem>
                           <LabeledBox label="Addresses">
-                            <DataIndicator value={chainAddressesPercent(chain)} max={100} color={chain.metaData.color} />
-                            { __n(chain.stats?.addresses?.totalAddresses.value ?? 0) }
+                            <DataIndicator
+                              value={chainAddressesPercent(chain)}
+                              max={100}
+                              color={chain.metaData.color}
+                            />
+                            {__n(
+                              chain.stats?.addresses?.totalAddresses.value ?? 0,
+                            )}
                           </LabeledBox>
                         </GridItem>
                         <GridItem>
                           <LabeledBox label="Blocks">
-                            <DataIndicator value={chainBlocksPercent(chain)} max={100} color={chain.metaData.color} />
-                            { __n(chain.stats?.blocks?.totalBlocks.value ?? 0) }
+                            <DataIndicator
+                              value={chainBlocksPercent(chain)}
+                              max={100}
+                              color={chain.metaData.color}
+                            />
+                            {__n(chain.stats?.blocks?.totalBlocks.value ?? 0)}
                           </LabeledBox>
                         </GridItem>
                         <GridItem>
                           <LabeledBox label="Average Block Time">
-                            <DataIndicator value={chainAverageBlockTimePercent(chain)} max={100} color={chain.metaData.color} />
-                            { toFixed(chain.stats?.blocks?.averageBlockTime?.value || 0, 1) }{ chain.stats?.blocks?.averageBlockTime?.units || '' }
-                        </LabeledBox>
+                            <DataIndicator
+                              value={chainAverageBlockTimePercent(chain)}
+                              max={100}
+                              color={chain.metaData.color}
+                            />
+                            {toFixed(
+                              chain.stats?.blocks?.averageBlockTime?.value || 0,
+                              1,
+                            )}
+                            {chain.stats?.blocks?.averageBlockTime?.units || ''}
+                          </LabeledBox>
                         </GridItem>
                         {/* <GridItem>
                           <LabeledBox label="Network Utilization">
@@ -263,5 +400,5 @@ export default function Page() {
         </Box>
       </section>
     </main>
-  )
+  );
 }

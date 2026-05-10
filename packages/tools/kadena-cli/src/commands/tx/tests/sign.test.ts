@@ -1,9 +1,9 @@
-import { Pact, addSignatures, createClient } from '@kadena/client';
+import { Pact, addSignatures, createClient } from '@kda-community/client';
 import {
   kadenaGenKeypair,
   kadenaMnemonicToRootKeypair,
   kadenaSign as legacyKadenaSign,
-} from '@kadena/hd-wallet/chainweaver';
+} from '@kda-community/hd-wallet/chainweaver';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { mockPrompts, runCommand } from '../../../utils/test.util.js';
