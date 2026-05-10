@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["./oxlint.base.config.json"],
+  "plugins": ["node"],
+  "rules": {
+    "unicorn/prefer-node-protocol": "error"
+  }
+}
