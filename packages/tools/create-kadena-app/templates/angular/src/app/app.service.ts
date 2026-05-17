@@ -13,10 +13,6 @@ export class AppService {
   }
 
   async readMessage(account: string): Promise<string> {
-    try {
-      return await readMessage({ account });
-    } catch (e) {
-      throw e;
-    }
+    return await readMessage({ account });
   }
 }

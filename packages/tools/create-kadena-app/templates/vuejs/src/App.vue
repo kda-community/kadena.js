@@ -22,7 +22,6 @@ export default {
         messageToWrite: this.messageToWrite,
       });
       this.writeInProgress = false;
-      this.messageToWrite;
     },
   },
   components: {

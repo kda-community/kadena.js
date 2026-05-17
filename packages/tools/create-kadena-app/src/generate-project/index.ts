@@ -149,10 +149,8 @@ const generate =
       JSON.stringify(
         {
           ...targetPackageJson,
-          ...{
-            name: args.name,
-            version,
-          },
+          name: args.name,
+          version,
         },
         null,
         2,
