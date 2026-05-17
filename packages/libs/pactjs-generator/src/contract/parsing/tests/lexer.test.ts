@@ -136,7 +136,6 @@ describe('lexer', () => {
       }`, () => {
         // only log last one
         const logger =
-          // eslint-disable-next-line no-constant-condition
           false && index === testsAndExpected.length - 1
             ? console.log
             : () => {};

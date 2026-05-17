@@ -1,6 +1,3 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-disable @rushstack/typedef-var */
 // In this module, we generate new functions by composing other functions. In order to allow TypeScript to automatically infer the types,
 // I had to disable these rules.
 import type { IWrappedData } from './dataWrapper';
@@ -72,7 +69,6 @@ const managed = oneOf(
 // .... (compose-capability CAP)
 const capabilityBody = seq(
   // TODO: fix the issue with typing here
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   maybe($('managed', managed) as IParser<IWrappedData<any, 'managed'>>),
   repeat(
     $('composeCapabilities', seq(id('compose-capability'), id('('), $(atom))),
