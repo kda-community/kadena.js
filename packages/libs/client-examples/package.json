@@ -21,7 +21,7 @@
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
-    "lint:src": "eslint src --ext .js,.ts",
+    "lint:src": "oxlint .",
     "pactjs:generate:contract:coin": "pactjs contract-generate --contract coin --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/pact",
     "test": ""
   },
@@ -32,15 +32,14 @@
     "@kadena/pactjs": "workspace:*"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
     "@kadena-dev/lint-package": "workspace:*",
     "@kadena-dev/markdown": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
     "@kadena/pactjs-cli": "workspace:*",
     "@kadena/types": "workspace:*",
-    "@rushstack/eslint-config": "~3.6.9",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@types/node": "^20.12.7",
-    "eslint": "^8.45.0",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "ts-node": "~10.9.2",
     "typescript": "5.4.5"
