@@ -13,7 +13,6 @@ const SVGS_PATH = join(process.cwd(), 'svgs');
 const ICONS_FILE = join(SVGS_PATH, 'kda-design-system.raw.svg.tokens.json');
 const OUT_DIR = join(process.cwd(), 'src');
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 interface IconToken {
   $type: 'icon';
   $name: string;

@@ -27,7 +27,6 @@ export async function getPrettierConfigs() {
 }
 
 export async function formatCode(content: string, prettierConfig?: Options) {
-  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   if (!prettierConfig) {
     prettierConfig = await getPrettierConfigs();
   }
