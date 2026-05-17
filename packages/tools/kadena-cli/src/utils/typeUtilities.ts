@@ -2,7 +2,6 @@ export type Prettify<T> = {
   [K in keyof T]: T[K];
 } & {};
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Fn = (...args: any[]) => unknown;
 
 export type FlattenObject<T extends object> = {

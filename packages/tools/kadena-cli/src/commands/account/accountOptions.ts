@@ -149,7 +149,6 @@ export const accountOptions = {
     prompt: account.fundAmountPrompt,
     defaultIsOptional: false,
     validation: z.string({
-      /* eslint-disable-next-line @typescript-eslint/naming-convention */
       invalid_type_error: 'Error: -m, --amount must be a positive number',
     }),
     option: new Option('-m, --amount <amount>', 'Amount to fund your account'),
@@ -193,7 +192,6 @@ export const accountOptions = {
     prompt: account.chainIdPrompt,
     defaultIsOptional: false,
     validation: z.string({
-      /* eslint-disable-next-line @typescript-eslint/naming-convention */
       invalid_type_error: 'Error: -c, --chain-id must be a number',
     }),
     option: new Option(

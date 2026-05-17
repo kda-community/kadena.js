@@ -8,7 +8,7 @@ import { createListWalletsCommand } from './commands/walletList.js';
 
 import type { Command } from 'commander';
 
-const SUBCOMMAND_ROOT: 'wallet' = 'wallet';
+const SUBCOMMAND_ROOT = 'wallet' as const;
 
 export function walletsCommandFactory(program: Command, version: string): void {
   const walletsProgram = program

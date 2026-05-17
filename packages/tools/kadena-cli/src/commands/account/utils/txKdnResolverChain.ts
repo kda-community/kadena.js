@@ -49,7 +49,7 @@ export async function kdnResolveNameToAddress(
     }).dirtyRead(transaction);
 
     return parseChainResponse<string>(response, 'address');
-  } catch (error) {
+  } catch {
     return undefined;
   }
 }
@@ -80,7 +80,7 @@ export async function kdnResolveAddressToName(
     }).dirtyRead(transaction);
 
     return parseChainResponse<string>(response, 'name');
-  } catch (error) {
+  } catch {
     return undefined;
   }
 }

@@ -31,8 +31,7 @@ export const createListWalletsCommand: (
         null,
         config.walletNameConfig.reduce(
           (acc, wallet) => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const { seed, ...rest } = wallet;
+            const { ...rest } = wallet;
             acc[wallet.alias] = rest;
             return acc;
           },
@@ -41,8 +40,7 @@ export const createListWalletsCommand: (
       );
     } else {
       await printWalletKeys(config.walletNameConfig);
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { seed, ...rest } = config.walletNameConfig;
+      const { ...rest } = config.walletNameConfig;
       log.output(null, rest);
     }
   },

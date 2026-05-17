@@ -1,6 +1,3 @@
-// eslint-disable-next-line @kadena-dev/no-eslint-disable
-/* eslint-disable @typescript-eslint/naming-convention */
-
 const errorMessages = {
   error: 'Something went wrong.',
   no_kadena_directory:

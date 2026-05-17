@@ -107,7 +107,7 @@ export const networkOptions = {
         if (network === 'none') return null;
 
         return await loadNetworkConfig(network);
-      } catch (e) {
+      } catch {
         throw new Error(
           `No network configuration found for "${network}". Please create a "${network}" network.`,
         );

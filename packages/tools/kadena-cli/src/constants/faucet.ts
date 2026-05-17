@@ -1,4 +1,3 @@
-// eslint-disable-next-line @rushstack/typedef-var
 export const FAUCET_CONSTANTS = {
   faucetOpKP: {
     publicKey:

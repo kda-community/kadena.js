@@ -3,7 +3,7 @@ import { createContractGenerateCommand } from './commands/contractGenerate.js';
 import { createRetrieveContractCommand } from './commands/retrieveContract.js';
 import { createTemplateGenerateCommand } from './commands/templateGenerate.js';
 
-const SUBCOMMAND_ROOT: 'pactjs' = 'pactjs';
+const SUBCOMMAND_ROOT = 'pactjs' as const;
 
 export function pactjsCommandFactory(program: Command, version: string): void {
   const pactjsProgram = program

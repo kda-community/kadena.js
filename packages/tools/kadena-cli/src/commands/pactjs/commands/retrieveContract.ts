@@ -1,6 +1,6 @@
 import type { Command } from 'commander';
 import ora from 'ora';
-import { join } from 'path';
+import { join } from 'node:path';
 import { services } from '../../../services/index.js';
 import { getChainId } from '../../../services/pactjs/utils/chainHelpers.js';
 import { createCommand } from '../../../utils/createCommand.js';

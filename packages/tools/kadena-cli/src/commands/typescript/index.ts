@@ -2,7 +2,7 @@ import { typescriptGenerateCommand } from './commands/typescriptGenerateCommand.
 
 import type { Command } from 'commander';
 
-const SUBCOMMAND_ROOT: 'typescript' = 'typescript';
+const SUBCOMMAND_ROOT = 'typescript' as const;
 
 export function typescriptCommandFactory(
   program: Command,

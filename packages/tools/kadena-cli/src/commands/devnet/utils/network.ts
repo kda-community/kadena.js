@@ -1,4 +1,4 @@
-import http from 'http';
+import http from 'node:http';
 import { log } from '../../../utils/logger.js';
 
 export function networkIsAlive(networkHost: string): Promise<boolean> {

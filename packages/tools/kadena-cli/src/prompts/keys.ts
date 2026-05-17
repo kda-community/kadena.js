@@ -7,7 +7,7 @@ import { isNumeric, isValidFilename } from '../utils/globalHelpers.js';
 import { input, select } from '../utils/prompts.js';
 
 export async function keyAliasPrompt(): Promise<string> {
-  return await input({
+  return input({
     message: `Enter an alias for your key:`,
     validate: function (input) {
       if (!isValidFilename(input)) {
@@ -49,14 +49,14 @@ export async function keyMnemonicPrompt(
 }
 
 export async function keyAmountPrompt(): Promise<string> {
-  return await input({
+  return input({
     message: `Enter the amount of keys you want to generate (alias-{amount} will increment) (default: 1):`,
     default: '1',
   });
 }
 
 export async function keyPairsPrompt(): Promise<string> {
-  return await input({
+  return input({
     message:
       'Enter key pairs as a string (e.g: publicKey=xxx,secretKey=xxx;...):',
     validate: function (input) {
@@ -71,7 +71,7 @@ export async function keyPairsPrompt(): Promise<string> {
 }
 
 export async function walletCreateAccountPrompt(): Promise<string> {
-  return await select({
+  return select({
     message: 'Create an account using the first wallet key?',
     choices: [
       { value: 'true', name: 'Yes' },
@@ -81,7 +81,7 @@ export async function walletCreateAccountPrompt(): Promise<string> {
 }
 
 export async function walletGenerateKeyAmountPrompt(): Promise<string> {
-  return await input({
+  return input({
     message: 'Amount of keys to generate:',
     default: '1',
     validate(input) {
@@ -96,7 +96,7 @@ export async function walletGenerateKeyAmountPrompt(): Promise<string> {
 export async function walletGenerateKeyAliasPrompt(): Promise<
   string | undefined
 > {
-  return await input({
+  return input({
     message: 'Alias for the generated key (optional):',
   });
 }
@@ -105,7 +105,7 @@ export async function walletKeyIndex(args: {
   wallet?: IWallet;
 }): Promise<string> {
   if (!args.wallet) throw Error('walletKeyIndex called without wallet');
-  return await select({
+  return select({
     message: 'Select a key index:',
     choices: args.wallet.keys.map((key, index) => ({
       value: index.toString(),

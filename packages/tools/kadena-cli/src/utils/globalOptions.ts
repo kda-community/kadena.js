@@ -22,7 +22,6 @@ import { services } from '../services/index.js';
 import { createOption } from './createOption.js';
 import { getDefaultNetworkName, passwordPromptTransform } from './helpers.js';
 
-// eslint-disable-next-line @rushstack/typedef-var
 export const globalOptions = {
   // global
   quiet: createOption({
@@ -89,7 +88,7 @@ export const globalOptions = {
     expand: async (network: string) => {
       try {
         return await loadNetworkConfig(network);
-      } catch (e) {
+      } catch {
         throw new Error(
           `\nNo configuration for network "${network}" found. Please configure the network.\n`,
         );
@@ -110,7 +109,7 @@ export const globalOptions = {
       if (network === undefined) return null;
       try {
         return await loadNetworkConfig(network);
-      } catch (e) {
+      } catch {
         throw new Error(
           `\nNo configuration for network "${network}" found. Please configure the network.\n`,
         );
@@ -130,7 +129,7 @@ export const globalOptions = {
     expand: async (network: string) => {
       try {
         return await loadNetworkConfig(network);
-      } catch (e) {
+      } catch {
         throw new Error(
           `No network configuration found for "${network}". Please create a "${network}" network.`,
         );
@@ -142,7 +141,6 @@ export const globalOptions = {
     prompt: networks.chainIdPrompt,
     defaultIsOptional: false,
     validation: z.string({
-      /* eslint-disable-next-line @typescript-eslint/naming-convention */
       invalid_type_error: 'Error: -c, --chain-id must be a number',
     }),
     option: new Option('-c, --chain-id <chainId>', 'Kadena chain id (e.g. 0)'),
@@ -162,7 +160,6 @@ export const globalOptions = {
     prompt: networks.chainIdPrompt,
     defaultIsOptional: true,
     validation: z.string({
-      /* eslint-disable-next-line @typescript-eslint/naming-convention */
       invalid_type_error: 'Error: -c, --chain-id must be a number',
     }),
     option: new Option('-c, --chain-id <chainId>', 'Kadena chain id (e.g. 0)'),

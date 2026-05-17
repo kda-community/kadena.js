@@ -5,7 +5,7 @@ import type {
 } from '@kadena/client';
 import { asyncPipe } from '@kadena/client-utils';
 import yaml from 'js-yaml';
-import { join } from 'path';
+import { join } from 'node:path';
 import { services } from '../../services/index.js';
 
 interface ITplHoleTriple {
@@ -42,7 +42,6 @@ interface ITemplateTransaction {
   meta?: IPublicMeta;
   publicMeta?: IPublicMeta;
   networkId: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: Record<string, any>;
   signers: Array<{ public: string }>;
   nonce: string;
@@ -179,8 +178,7 @@ export const convertTemplateTxToPactCommand = (
     },
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { publicMeta, meta, code, ...kdaToolTxWithoutMeta } = kdaToolTx;
+  const { publicMeta, meta, ...kdaToolTxWithoutMeta } = kdaToolTx;
   const metadata = meta || publicMeta || ({} as IPublicMeta);
 
   return {
@@ -239,7 +237,6 @@ function publicToPubkey(value: { public: string }): {
   pubKey: string;
 } {
   const pubKey = value.public;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   delete (value as any).public;
   return {
     ...value,

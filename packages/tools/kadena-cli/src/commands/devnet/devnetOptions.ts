@@ -17,7 +17,7 @@ export const devnetOptions = {
       await ensureDevnetsConfiguration();
       try {
         return await loadDevnetConfig(devnet);
-      } catch (e) {
+      } catch {
         log.warning(
           `\nNo devnet "${devnet}" found. Please create the devnet.\n`,
         );
@@ -35,7 +35,7 @@ export const devnetOptions = {
     prompt: devnetPrompts.devnetNamePrompt,
     validation: z.string(),
     option: new Option('-n, --name <name>', 'Devnet name (e.g. "devnet")'),
-    expand: async (name: string) => {
+    expand: async () => {
       return { foo: 'bar' };
     },
   }),

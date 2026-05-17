@@ -1,7 +1,7 @@
 import type { IPactCommand, IUnsignedCommand } from '@kadena/client';
 import { createTransaction as kadenaCreateTransaction } from '@kadena/client';
 import { PactNumber } from '@kadena/pactjs';
-import path from 'path';
+import path from 'node:path';
 import {
   createPactCommandFromStringTemplate,
   createPactCommandFromTemplate,
@@ -58,7 +58,6 @@ export const createTransaction = async (
 
 export const createAndWriteTransaction = async (
   variables: Record<string, string>,
-  // eslint-disable-next-line @rushstack/no-new-null
   outFilePath: string | null,
   template: { template: string; path: string; cwd: string } | string,
 ): Promise<

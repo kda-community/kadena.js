@@ -20,7 +20,6 @@ export interface IPlainKeyService {
 }
 
 export class PlainKeyService implements IPlainKeyService {
-  // eslint-disable-next-line @typescript-eslint/naming-convention, @typescript-eslint/parameter-properties
   public constructor(private services: Services) {}
 
   public async storeKeyPairs(

@@ -49,7 +49,6 @@ export async function fetchModule(
         : String(e);
 
     return {
-      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
       error: responseText ? responseText : errorMessage,
     };
   }

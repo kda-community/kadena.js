@@ -12,7 +12,7 @@ import {
 import { getDefaultNetworkName } from '../../../utils/helpers.js';
 
 import yaml from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 import { z } from 'zod';
 import { services } from '../../../services/index.js';
 import {

@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join } from 'node:path';
 import { fileSystemService } from '../../fs/fs.service.js';
 
 export async function shallowFindFile(

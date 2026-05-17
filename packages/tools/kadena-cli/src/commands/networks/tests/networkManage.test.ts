@@ -1,5 +1,5 @@
 import jsYaml from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { CWD_KADENA_DIR } from '../../../constants/config.js';
 import { services } from '../../../services/index.js';

@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join } from 'node:path';
 
 import { generateDts, pactParser } from '@kadena/pactjs-generator';
 import { services } from '../../../services/index.js';

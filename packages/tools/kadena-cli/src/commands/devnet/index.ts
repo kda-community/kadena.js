@@ -9,7 +9,7 @@ import { updateDevnetCommand } from './commands/devnetUpdate.js';
 
 import type { Command } from 'commander';
 
-const SUBCOMMAND_ROOT: 'devnet' = 'devnet';
+const SUBCOMMAND_ROOT = 'devnet' as const;
 
 export function devnetCommandFactory(program: Command, version: string): void {
   const devnetsProgram = program

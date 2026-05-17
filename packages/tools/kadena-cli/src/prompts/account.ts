@@ -83,11 +83,7 @@ export const accountKdnNamePrompt: IPrompt<string> = async () =>
     message: 'Enter an .kda name:',
   });
 
-export const fundAmountPrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) =>
+export const fundAmountPrompt: IPrompt<string> = async (previousQuestions) =>
   await input({
     validate(value: string) {
       const parsedValue = parseFloat(value.trim().replace(',', '.'));
@@ -251,17 +247,11 @@ export const accountSelectPrompt: IPrompt<string> = async (
   return await accountSelectionPrompt(options);
 };
 
-export const accountSelectAllPrompt: IPrompt<string> = async (
-  previousQuestions,
-) => {
+export const accountSelectAllPrompt: IPrompt<string> = async () => {
   return await accountSelectionPrompt(['all']);
 };
 
-export const accountSelectMultiplePrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) => {
+export const accountSelectMultiplePrompt: IPrompt<string> = async () => {
   const allAccountChoices = await getAllAccountChoices();
   const selectedAliases = await checkbox({
     message: 'Select an account (alias - account name):',
@@ -274,8 +264,6 @@ export const accountSelectMultiplePrompt: IPrompt<string> = async (
 
 export const accountDeleteConfirmationPrompt: IPrompt<boolean> = async (
   previousQuestions,
-  args,
-  isOptional,
 ) => {
   const selectedAccounts = previousQuestions.accountAlias as string;
 
@@ -303,7 +291,6 @@ export const accountDeleteConfirmationPrompt: IPrompt<boolean> = async (
 export const chainIdPrompt: IPrompt<string> = async (
   previousQuestions,
   args,
-  isOptional,
 ) => {
   const defaultValue = (args.defaultValue as string) || '0';
   return (await input({
@@ -341,8 +328,8 @@ export const addManualPublicKeysPrompt: IPrompt<string> = async (
         value: '_manual_',
         name: 'Enter public key manually:',
       },
-      ...tableFormatPrompt([
-        ...plainKeys.map((key) => {
+      ...tableFormatPrompt(
+        plainKeys.map((key) => {
           const { alias, publicKey } = key;
           return {
             value: publicKey,
@@ -352,7 +339,7 @@ export const addManualPublicKeysPrompt: IPrompt<string> = async (
             ],
           };
         }),
-      ]),
+      ),
     ],
     pageSize: 10,
     instructions: MULTI_SELECT_INSTRUCTIONS,
@@ -398,8 +385,8 @@ export const publicKeysForAccountAddPrompt: IPrompt<string> = async (
   const selectedKeys = await checkbox({
     message: 'Select public keys to add to account(index - alias - publickey):',
     choices: [
-      ...tableFormatPrompt([
-        ...keysList.map((key) => {
+      ...tableFormatPrompt(
+        keysList.map((key) => {
           const { index, alias, publicKey } = key;
           return {
             value: publicKey,
@@ -410,7 +397,7 @@ export const publicKeysForAccountAddPrompt: IPrompt<string> = async (
             ],
           };
         }),
-      ]),
+      ),
       {
         value: '_generate_',
         name: 'Generate new public key',

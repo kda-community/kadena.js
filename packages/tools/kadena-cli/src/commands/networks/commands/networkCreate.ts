@@ -1,5 +1,5 @@
 import type { Command } from 'commander';
-import path from 'path';
+import path from 'node:path';
 
 import { services } from '../../../services/index.js';
 import { createCommand } from '../../../utils/createCommand.js';

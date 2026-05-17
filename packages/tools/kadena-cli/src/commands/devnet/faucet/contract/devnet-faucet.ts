@@ -44,11 +44,11 @@ export const faucetContract = `
       )
       @doc
       " Provide a capability indicating that declaring module supports \
-      \ gas payment for USER for gas LIMIT and PRICE. Functionality \
-      \ should require capability (coin.FUND_TX), and should validate \
-      \ the spend of (limit * price), possibly updating some database \
-      \ entry. \
-      \ Should compose capability required for 'create-gas-payer-guard'."
+       gas payment for USER for gas LIMIT and PRICE. Functionality \
+       should require capability (coin.FUND_TX), and should validate \
+       the spend of (limit * price), possibly updating some database \
+       entry. \
+       Should compose capability required for 'create-gas-payer-guard'."
       ;  @model
       ;  [ (property (user != ""))
       ;    (property (limit > 0))
@@ -73,11 +73,11 @@ export const faucetContract = `
     (defun create-gas-payer-guard:guard ()
       @doc
       " Provide a guard suitable for controlling a coin account that can \
-      \ pay gas via GAS_PAYER mechanics. Generally this is accomplished \
-      \ by having GAS_PAYER compose an unparameterized, unmanaged capability \
-      \ that is required in this guard. Thus, if coin contract is able to \
-      \ successfully acquire GAS_PAYER, the composed 'anonymous' cap required \
-      \ here will be in scope, and gas buy will succeed."
+       pay gas via GAS_PAYER mechanics. Generally this is accomplished \
+       by having GAS_PAYER compose an unparameterized, unmanaged capability \
+       that is required in this guard. Thus, if coin contract is able to \
+       successfully acquire GAS_PAYER, the composed 'anonymous' cap required \
+       here will be in scope, and gas buy will succeed."
       (create-capability-guard (ALLOW_FUNDING))
     )
 
@@ -87,8 +87,8 @@ export const faucetContract = `
 
     (defschema history
       @doc "Table to record the behavior of addresses. Last transaction time,       \
-      \ total coins earned, and total coins returned are inserted or updated at     \
-      \ transaction. "
+       total coins earned, and total coins returned are inserted or updated at     \
+       transaction. "
       total-coins-earned:decimal
       total-coins-returned:decimal
       last-request-time:time
@@ -137,9 +137,9 @@ export const faucetContract = `
 
     (defun create-and-request-coin:string (address:string address-guard:guard amount:decimal)
       @doc "Transfers AMOUNT of coins up to MAX_COIN_PER_REQUEST from the faucet    \
-      \ account to the requester account at ADDRESS. Inserts or updates the         \
-      \ transaction of the account at ADDRESS in history-table. Limits the number   \
-      \ of coin requests by time, WAIT_TIME_PER_REQUEST "
+       account to the requester account at ADDRESS. Inserts or updates the         \
+       transaction of the account at ADDRESS in history-table. Limits the number   \
+       of coin requests by time, WAIT_TIME_PER_REQUEST "
       @model [(property (<= amount MAX_COIN_PER_REQUEST))]
 
       (enforce (<= amount MAX_COIN_PER_REQUEST)
@@ -154,8 +154,8 @@ export const faucetContract = `
 
     (defun return-coin:string (address:string amount:decimal)
       @doc "Returns the AMOUNT of coin from account at ADDRESS back to the faucet   \
-      \ account after use. Updates the transaction of the account at ADDRESS in     \
-      \ history-table keep track of behavior. "
+       account after use. Updates the transaction of the account at ADDRESS in     \
+       history-table keep track of behavior. "
       @model [(property (> amount 0.0))]
 
       (with-read history-table address

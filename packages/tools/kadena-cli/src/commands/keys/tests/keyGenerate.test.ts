@@ -32,7 +32,6 @@ describe('Key generate', () => {
 
     const filePath = path.join(WORKING_DIRECTORY, 'test.yaml');
     const keyFile = await services.filesystem.readFile(filePath);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const parsed = jsYaml.load(keyFile!) as any;
 
     expect(keyFile).toBeTruthy();

@@ -15,7 +15,7 @@ export const updateDevnetCommand = createCommand(
 
     try {
       updateDevnet(config.version);
-    } catch (e) {
+    } catch {
       log.error(
         'Updating devnet requires Docker. Please install Docker and try again.',
       );

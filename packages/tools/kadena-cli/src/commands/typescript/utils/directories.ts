@@ -1,4 +1,4 @@
-import { dirname, join } from 'path';
+import { dirname, join } from 'node:path';
 import { services } from '../../../services/index.js';
 import { shallowFindFile } from './shallowFindFile.js';
 

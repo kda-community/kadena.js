@@ -1,7 +1,7 @@
 import { generateTemplates } from '@kadena/pactjs-generator';
 import type { Command } from 'commander';
 import ora from 'ora';
-import { join } from 'path';
+import { join } from 'node:path';
 import { services } from '../../../services/index.js';
 import { createCommand } from '../../../utils/createCommand.js';
 import { globalOptions } from '../../../utils/globalOptions.js';

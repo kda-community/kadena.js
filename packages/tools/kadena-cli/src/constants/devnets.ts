@@ -16,7 +16,6 @@ export interface IAccountWithTokens extends IAccount {
 }
 
 /**
- * @const devnetDefaults
  * Provides the default devnet configurations.
  */
 export const devnetDefaults: IDefaultDevnetOptions = {
@@ -47,7 +46,6 @@ export const defaultDevnet: string = 'devnet';
 export const defaultAccount = sender00;
 
 /**
- * @const simulationDefaults
  * Provides the default simulation configurations.
  */
 export const simulationDefaults = {

@@ -5,7 +5,7 @@ import {
 import { getExistingDevnets } from '../../../utils/helpers.js';
 
 import yaml from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 import { services } from '../../../services/index.js';
 import { log } from '../../../utils/logger.js';
 import type {

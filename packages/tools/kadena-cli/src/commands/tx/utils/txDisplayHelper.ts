@@ -78,7 +78,6 @@ export function txDisplayTransaction(
 }
 
 export function displayCustomTransactionInfo(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   info: any,
   indentLevel: number,
 ): void {
@@ -110,11 +109,7 @@ export function displayTransactionCommand(
   printObject(transaction, indentLevel + 2);
 }
 
-function printObject(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  obj: any,
-  indentLevel: number,
-): void {
+function printObject(obj: any, indentLevel: number): void {
   const indentString = ' '.repeat(indentLevel);
 
   if (typeof obj !== 'object' || obj === null) {

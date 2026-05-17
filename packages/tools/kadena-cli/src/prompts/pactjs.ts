@@ -79,7 +79,6 @@ export const filePrompt = async (
 
 export const contractPrompt = async (
   previousQuestions: Record<string, unknown>,
-  args: Record<string, unknown>,
 ): Promise<string> => {
   if (
     Array.isArray(previousQuestions.file) &&

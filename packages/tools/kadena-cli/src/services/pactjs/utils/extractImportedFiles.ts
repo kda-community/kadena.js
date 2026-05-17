@@ -3,7 +3,7 @@ export function extractImportedFiles(indexDts: string): string[] {
     .split(/(\r?\n)|;/)
     .map((line) => line?.replace(/export\s*\*\s*from/, 'import'))
     .map((line) => {
-      const matches = line?.match(/^\s*import\s*[\'\"]\.\/(.*)[\'\"]/);
+      const matches = line?.match(/^\s*import\s*['"]\.\/(.*)['"]/);
       return matches ? matches[1] : '';
     })
     .filter(

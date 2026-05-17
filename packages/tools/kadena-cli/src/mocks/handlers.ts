@@ -10,7 +10,6 @@ interface IPayloadData {
 }
 
 // Define handlers that catch the corresponding requests and returns the mock data.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const handlers: any = [
   http.post(
     'http://localhost:8080/chainweb/0.0/development/chain/1/pact/api/v1/local',

@@ -52,12 +52,10 @@ export const txOptions = {
       let parsed: unknown;
       try {
         parsed = JSON.parse(file) as unknown;
-        // eslint-disable-next-line no-empty
-      } catch (e) {}
+      } catch {}
       try {
         parsed = loadYaml(file) as unknown;
-        // eslint-disable-next-line no-empty
-      } catch (e) {}
+      } catch {}
       const validated = z
         .record(z.union([z.string(), z.number()]))
         .safeParse(parsed);

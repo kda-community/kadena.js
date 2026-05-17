@@ -1,5 +1,5 @@
 declare module 'ttys' {
-  import { Readable, Writable } from 'stream';
+  import { Readable, Writable } from 'node:stream';
 
   /**
    * Represents the standard input stream (stdin).

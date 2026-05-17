@@ -2,7 +2,7 @@ import type { Command } from 'commander';
 
 import { createDappCommand } from './commands/dappCreate.js';
 
-const SUBCOMMAND_ROOT: 'dapp' = 'dapp';
+const SUBCOMMAND_ROOT = 'dapp' as const;
 
 export function dappCommandFactory(program: Command, version: string): void {
   const dappProgram = program

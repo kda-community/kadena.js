@@ -1,4 +1,4 @@
-const environment: 'DEV_NET' = 'DEV_NET';
+const environment = 'DEV_NET' as const;
 
 export interface IAccount {
   publicKey: string;
@@ -33,7 +33,7 @@ export const NAMESPACES = {
 
 export const NAMESPACE = NAMESPACES[environment];
 
-export const NETWORK_ID: 'development' = 'development';
+export const NETWORK_ID = 'development' as const;
 
 export const DOMAIN: string = 'http://localhost:8080';
 
