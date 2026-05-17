@@ -13,11 +13,10 @@ afterAll(() => server.close());
 function setupServerResponse(
   url: string,
   responseType: 'json' | 'networkError' | 'text',
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   responseData?: any,
 ) {
   server.use(
-    http.post(url, (req) => {
+    http.post(url, () => {
       if (responseType === 'json') {
         return HttpResponse.json(responseData, { status: 200 });
       } else if (responseType === 'text') {

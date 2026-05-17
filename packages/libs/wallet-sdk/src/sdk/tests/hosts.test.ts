@@ -53,7 +53,6 @@ describe('Host Generators', () => {
 
   describe('defaultGraphqlHostGenerator', () => {
     let consoleWarnSpy: MockInstance<
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       [message?: any, ...optionalParams: any[]],
       void
     >;

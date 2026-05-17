@@ -43,7 +43,6 @@ async function kdnResolver(
         : identifier.trim();
 
     const transaction = Pact.builder
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .execution((Pact as any).modules[module][method](param))
       .setMeta({ chainId: getChainIdByNetwork(networkId) })
       .setNetworkId(networkId)
@@ -54,7 +53,7 @@ async function kdnResolver(
     }).dirtyRead(transaction);
 
     return parseChainResponse<string>(response, subject);
-  } catch (error) {
+  } catch {
     return undefined;
   }
 }

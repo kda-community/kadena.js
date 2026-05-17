@@ -43,7 +43,6 @@ export class Logger {
   private _log(level: number, message: string, data?: Record<string, unknown>) {
     if (!this._transport) {
       if (!this._noTransportWarned) {
-        // eslint-disable-next-line no-console
         console.warn(
           '[WalletSDK] logTransport not set. Enable it to receive logs.',
         );

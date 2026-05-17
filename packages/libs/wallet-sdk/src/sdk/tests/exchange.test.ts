@@ -15,9 +15,7 @@ const mockSuccessResponse = {
         max_supply: 1000000,
         total_supply: 900000,
         circulating_supply: 850000,
-        // eslint-disable-next-line @typescript-eslint/naming-convention
         low_24h: 1.4,
-        // eslint-disable-next-line @typescript-eslint/naming-convention
         high_24h: 1.6,
       },
       {
@@ -25,9 +23,7 @@ const mockSuccessResponse = {
         max_supply: 21000000,
         total_supply: 18500000,
         circulating_supply: 18000000,
-        // eslint-disable-next-line @typescript-eslint/naming-convention
         low_24h: 2950,
-        // eslint-disable-next-line @typescript-eslint/naming-convention
         high_24h: 3050,
       },
     ],
