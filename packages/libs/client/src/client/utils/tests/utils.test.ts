@@ -261,7 +261,6 @@ describe('client utils', () => {
 
     it('returns a promise that resolves after the sleep time', async () => {
       const start = Date.now();
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       sleep(10).then(() => {
         const end = Date.now();
         expect(end - start).toBe(10);

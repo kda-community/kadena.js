@@ -22,10 +22,8 @@ export interface IPact {
 /**
  * @internal
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getModule = (name: string): any => {
   let code = name;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const pr: any = new Proxy<any>(function () {} as any, {
     get(target, path: string) {
       // dont add depact to the code
@@ -45,7 +43,6 @@ export const getModule = (name: string): any => {
 };
 
 const pactCreator = (): IPact => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return new Proxy<any>(
     {},
     {

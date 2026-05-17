@@ -16,7 +16,6 @@ function startCrossChainTransfer(
   return (
     Pact.builder
       .execution(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (Pact.modules as any).coin.defpact['transfer-crosschain'](
           from.account,
           to.account,
@@ -27,7 +26,6 @@ function startCrossChainTransfer(
           },
         ),
       )
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .addSigner(from.publicKey, (withCapability: any) => [
         withCapability('coin.GAS'),
         withCapability(

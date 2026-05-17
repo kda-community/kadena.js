@@ -6,7 +6,6 @@ import type {
 import type { ExtractPactModule } from '../../interfaces/type-utilities';
 
 export type AddCapabilities<T> = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [K in keyof T]: T[K] extends { capability: any }
     ? T[K]
     : ExtractPactModule<T[K]>;
@@ -47,7 +46,6 @@ export const execution: IExec = (...codes: string[]) => {
   return {
     payload: pld,
     // funs is a trick to make the type inferring work but it's not a real field in the payload
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any;
 };
 

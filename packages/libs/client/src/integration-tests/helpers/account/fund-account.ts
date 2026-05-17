@@ -13,7 +13,6 @@ export async function fundAccount(
 ): Promise<string | undefined> {
   const transaction = Pact.builder
     .execution(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (Pact.modules as any).coin['transfer-create'](
         sender00Account.account,
         receiver,
@@ -21,7 +20,6 @@ export async function fundAccount(
         amount,
       ),
     )
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .addSigner(sender00Account.publicKey, (withCapability: any) => [
       withCapability('coin.GAS'),
       withCapability(

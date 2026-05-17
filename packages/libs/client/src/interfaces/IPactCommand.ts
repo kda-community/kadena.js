@@ -24,7 +24,6 @@ export interface IContinuationPayloadObject {
     rollback: boolean;
     data?: Record<string, unknown>;
     // for none cross-chain tx, proof is null
-    // eslint-disable-next-line @rushstack/no-new-null
     proof?: string | null;
   };
 }
