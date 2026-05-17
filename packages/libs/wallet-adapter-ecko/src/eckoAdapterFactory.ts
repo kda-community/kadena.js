@@ -20,7 +20,6 @@ import { detectEckoProvider } from './provider';
  *
  * @param options - The options object from BaseWalletAdapter
  * @returns A wallet adapter factory for the Ecko wallet
- * @public
  */
 export const createEckoAdapter = ((options?: IBaseWalletFactoryOptions) => {
   return {

@@ -24,7 +24,6 @@ export interface IEckoProvider extends IProvider {
  *
  * @param options - Options for detection (e.g. timeout, silent).
  * @returns A promise resolving to the Ecko provider or null.
- * @public
  */
 export async function detectEckoProvider(options?: {
   silent?: boolean;

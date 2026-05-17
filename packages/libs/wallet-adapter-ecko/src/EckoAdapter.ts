@@ -47,7 +47,6 @@ import type {
 import { safeJsonParse } from './utils/json';
 
 /**
- * @public
  * EckoAdapter is a class that extends BaseWalletAdapter to provide
  * functionality for connecting to the Ecko Wallet.
  */
@@ -217,7 +216,7 @@ export class EckoAdapter extends BaseWalletAdapter {
                 throw new Error(resp.message || ERRORS.COULD_NOT_FETCH_ACCOUNT);
               }
               newAccount = resp as IAccountInfo;
-            } catch (error) {
+            } catch {
               // Use silent mode so that errors don't bubble up.
               newAccount = await this._connect(
                 { networkId: newNetwork.networkId },
