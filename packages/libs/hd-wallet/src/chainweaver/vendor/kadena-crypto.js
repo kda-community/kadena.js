@@ -3844,7 +3844,6 @@ var kadenaCrypto$1 = {exports: {}};
 	  module.exports = RIPEMD160;
 	  
 	  },{"buffer":37,"hash-base":13,"inherits":14}],23:[function(require,module,exports){
-	  /* eslint-disable node/no-deprecated-api */
 	  var buffer = require('buffer');
 	  var Buffer = buffer.Buffer;
 	  
@@ -5317,7 +5316,7 @@ var kadenaCrypto$1 = {exports: {}};
 	  }
 	  
 	  function SlowBuffer (length) {
-	    if (+length != length) { // eslint-disable-line eqeqeq
+	    if (+length != length) {
 	      length = 0;
 	    }
 	    return Buffer.alloc(+length)
@@ -6768,7 +6767,7 @@ var kadenaCrypto$1 = {exports: {}};
 	  }
 	  function numberIsNaN (obj) {
 	    // For IE11 support
-	    return obj !== obj // eslint-disable-line no-self-compare
+	    return obj !== obj
 	  }
 	  
 	  }).call(this,require("buffer").Buffer);
@@ -10478,7 +10477,6 @@ var kadenaCrypto$1 = {exports: {}};
 	  
 	  },{"./lib/_stream_writable.js":52}],62:[function(require,module,exports){
 	  /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
-	  /* eslint-disable node/no-deprecated-api */
 	  var buffer = require('buffer');
 	  var Buffer = buffer.Buffer;
 	  

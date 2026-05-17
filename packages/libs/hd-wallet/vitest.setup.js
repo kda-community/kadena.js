@@ -1,3 +1,3 @@
 if (global.crypto === undefined) {
-  global.crypto = require('crypto');
+  global.crypto = import('node:crypto');
 }
