@@ -32,7 +32,6 @@ describe('submitClient', () => {
       pollOne: vi.fn().mockResolvedValue({
         result: { status: 'success', data: 'test-data' },
       } as ILocalCommandResult),
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any;
     const sign = vi.fn((tx) => ({ ...tx, sigs: [{ sig: 'sig-hash' }] }));
     const submit = submitClient(

@@ -19,7 +19,6 @@ describe('queryAllChainsClient', () => {
       dirtyRead: vi.fn().mockResolvedValue({
         result: { status: 'success', data: 'test-data' },
       } as ILocalCommandResult),
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any;
 
     const queryChains = queryAllChainsClient(
