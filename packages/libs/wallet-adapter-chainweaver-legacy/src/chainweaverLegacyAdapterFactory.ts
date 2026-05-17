@@ -20,7 +20,6 @@ import { detectChainweaverLegacyProvider } from './provider';
  *
  * @param options - The options object from BaseWalletAdapter
  * @returns A wallet adapter factory for the Chainweaver Legacy wallet
- * @public
  */
 export const createChainweaverLegacyAdapter = ((
   options?: IBaseWalletFactoryOptions,
