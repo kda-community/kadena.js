@@ -6,7 +6,6 @@ interface IChainResponse {
   guard: { pred: string; keys: string[] };
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatChainResponse = (data: any): IChainResponse => {
   return { account: data.account, guard: data.guard };
 };
@@ -42,9 +41,11 @@ export const checkVerifiedAccount = async (
           data: formatChainResponse(result.data),
         };
       }
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (e: any) {
-      console.warn(`Error checking account on chain ${chainId}:`, e.message);
+    } catch (e) {
+      console.warn(
+        `Error checking account on chain ${chainId}:`,
+        (e as Error).message,
+      );
     }
   }
 
