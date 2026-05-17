@@ -9,7 +9,6 @@ import type {
 import type { Guard, KeySet } from './guard';
 
 /**
- * @public
  * Represents a Kadena Network (e.g., mainnet01).
  * Conforms to KIP-0039 and KIP-0040.
  */
@@ -20,7 +19,6 @@ export interface INetworkInfo {
 }
 
 /**
- * @public
  * An optional secretKey, ensuring that private keys can be omitted.
  */
 export type OptionalKeyPair = Omit<IKeyPair, 'secretKey'> & {
@@ -28,7 +26,6 @@ export type OptionalKeyPair = Omit<IKeyPair, 'secretKey'> & {
 };
 
 /**
- * @public
  * Represents a Kadena account.
  * Conforms to KIP-0037 and KIP-0038.
  */
@@ -42,31 +39,19 @@ export interface IAccountInfo {
   existsOnChains: string[]; // Array of chain IDs where this account exists.
 }
 
-/**
- * @public
- */
 export interface IProvider {
   request(args: { method: string; [key: string]: any }): Promise<unknown>;
   on(event: string, listener: (...args: any[]) => void): void;
   off(event: string, listener: (...args: any[]) => void): void;
 }
 
-/**
- * @public
- */
 export type KdaConnectOptions = Record<string, any>;
 
-/**
- * @public
- */
 export type ISigningRequestPartial = {
   caps: ISigningRequest['caps'];
   code: string;
 } & Omit<Partial<ISigningRequest>, 'caps' | 'pactCode'>;
 
-/**
- * @public
- */
 export type CommandSigDatas = {
   cmd: string;
   sigs: {
@@ -75,24 +60,15 @@ export type CommandSigDatas = {
   }[];
 }[];
 
-/**
- * @public
- */
 export interface IBaseWalletAdapterOptions {
   provider: IProvider;
   networkId?: string;
 }
 
-/**
- * @public
- */
 export interface IBaseWalletFactoryOptions {
   networkId?: string;
 }
 
-/**
- * @public
- */
 export type AdapterFactoryCreator = <T extends IBaseWalletFactoryOptions>(
   options: T,
 ) => {
@@ -101,21 +77,14 @@ export type AdapterFactoryCreator = <T extends IBaseWalletFactoryOptions>(
   adapter(provider: IProvider): Promise<IAdapter>;
 };
 
-/**
- * @public
- */
 export type AdapterFactory = ReturnType<AdapterFactoryCreator>;
 
-/**
- * @public
- */
 export interface IAdapterFactoryData {
   name: string;
   detected: boolean;
 }
 
 /**
- * @public
  * The standardized Adapter interface.
  * (Wallets/Adapters implement these methods).
  */
@@ -143,18 +112,12 @@ export interface IAdapter {
   onNetworkChange(cb: (newNetwork: INetworkInfo) => void): void;
 }
 
-/**
- * @public
- */
 export interface IJsonRpcSuccess<T> {
   id: number;
   jsonrpc: '2.0';
   result: T;
 }
 
-/**
- * @public
- */
 export interface IJsonRpcError {
   id: number;
   jsonrpc: '2.0';
@@ -165,9 +128,6 @@ export interface IJsonRpcError {
   };
 }
 
-/**
- * @public
- */
 export type JsonRpcResponse<T> = IJsonRpcSuccess<T> | IJsonRpcError;
 
 /**
@@ -175,9 +135,6 @@ export type JsonRpcResponse<T> = IJsonRpcSuccess<T> | IJsonRpcError;
  * Here we define the shape of each method's `params` and `response`.
  */
 
-/**
- * @public
- */
 export interface IKdaMethodMap {
   kadena_connect: {
     params: KdaConnectOptions;
@@ -220,14 +177,8 @@ export interface IKdaMethodMap {
   };
 }
 
-/**
- * @public
- */
 export type KdaMethod = keyof IKdaMethodMap;
 
-/**
- * @public
- */
 export type KdaRequestArgs<M extends KdaMethod> = {
   method: M;
 } & { params?: IKdaMethodMap[M]['params'] };

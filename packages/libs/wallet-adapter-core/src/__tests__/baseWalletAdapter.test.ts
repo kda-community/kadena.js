@@ -7,7 +7,6 @@ import type {
 } from '../types';
 
 declare module '../types' {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   interface IKdaMethodMap {
     test: {
       params: {};
@@ -93,7 +92,6 @@ describe('BaseWalletAdapter', () => {
 
   it('throws if provider returns a non–JSON‑RPC shape', async () => {
     // provider returns something completely bogus
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     mockProvider.request.mockResolvedValueOnce({ foo: 123 } as any);
 
     await expect(

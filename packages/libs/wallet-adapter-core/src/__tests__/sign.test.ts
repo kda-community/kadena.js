@@ -1,5 +1,3 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type {
   ICommand,
