@@ -61,7 +61,6 @@ describe('parsePactNumber', () => {
   });
 
   it('should throw an error when input is undefined', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(() => parsePactNumber(undefined as any)).toThrow(
       'Failed to parse Pact number: "undefined"',
     );
@@ -74,6 +73,7 @@ describe('parsePactNumber', () => {
 
   it('should correctly parse large numbers', () => {
     const largeDecimal = { decimal: '1234567890.123456789' };
+    // oxlint-disable-next-line no-loss-of-precision
     expect(parsePactNumber(largeDecimal)).toBe(1234567890.123456789);
 
     const largeInt = { int: '9876543210' };

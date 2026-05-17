@@ -43,9 +43,7 @@ export async function queryTransferRequestKey(
 export async function pollGraphqlTransfers({
   accountName,
   graphqlUrl,
-  logger,
   requestKeys,
-  signal,
 }: IRollGraphqlTransfers) {
   const result = await Promise.all(
     requestKeys.map(async (requestKey) => {

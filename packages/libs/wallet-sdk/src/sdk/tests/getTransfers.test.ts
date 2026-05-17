@@ -13,7 +13,7 @@ beforeAll(() =>
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 server.use(
-  graphql.query('accountTransfers', ({ operationName, variables, query }) => {
+  graphql.query('accountTransfers', ({ variables }) => {
     if (
       variables.accountName !==
       'k:2017fee3fb15cfe840e5ed34bf101cc7d5579ffdd20dea09e32fd77c1757f946'

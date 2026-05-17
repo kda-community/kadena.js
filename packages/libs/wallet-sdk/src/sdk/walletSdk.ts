@@ -1,4 +1,3 @@
-// eslint-disable-next-line @rushstack/no-new-null
 import { createClient, createTransaction } from '@kadena/client';
 import {
   createCrossChainCommand,
@@ -502,11 +501,7 @@ export class WalletSDK {
       nodeChains: string[];
     };
 
-    const {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      nodeChains = [],
-      ...networkInfo
-    } = json;
+    const { ...networkInfo } = json;
 
     return networkInfo;
   }

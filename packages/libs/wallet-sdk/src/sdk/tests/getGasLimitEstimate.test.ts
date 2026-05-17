@@ -12,12 +12,11 @@ afterAll(() => server.close());
 
 function setupServerResponse(
   url: string,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   responseData: any,
   responseType: 'json' | 'error' = 'json',
 ) {
   server.use(
-    http.post(url, (req) => {
+    http.post(url, () => {
       if (responseType === 'json' && responseData !== undefined) {
         return HttpResponse.json(responseData, { status: 200 });
       }

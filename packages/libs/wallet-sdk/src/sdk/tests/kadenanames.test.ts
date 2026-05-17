@@ -26,13 +26,10 @@ function getResponseData({
 }: {
   gas: number;
   status: 'success' | 'failure';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data?: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   error?: any;
   reqKey?: string;
   logs?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   metaData?: any;
   continuation?: boolean | null;
   txId?: string | null;
@@ -54,11 +51,10 @@ function getResponseData({
 function setupServerResponse(
   url: string,
   responseType: 'json' | 'networkError' | 'text',
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   responseData?: any,
 ) {
   server.use(
-    http.post(url, (req) => {
+    http.post(url, () => {
       if (responseType === 'json') {
         return HttpResponse.json(responseData, { status: 200 });
       } else if (responseType === 'text') {
@@ -105,7 +101,6 @@ describe('parseChainResponse', () => {
         data: 'mockData',
       },
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = parseChainResponse<string>(response as any, 'address');
     expect(result).toBe('mockData');
   });
@@ -119,7 +114,6 @@ describe('parseChainResponse', () => {
         },
       },
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(() => parseChainResponse(response as any, 'address')).toThrow(
       'Failed to retrieve address: {"message":"An error occurred"}',
     );
@@ -127,7 +121,6 @@ describe('parseChainResponse', () => {
 
   it('should throw an unknown error when no status is present', () => {
     const response = {};
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(() => parseChainResponse(response as any, 'address')).toThrow(
       'Failed to retrieve address: Unknown error',
     );
@@ -142,7 +135,6 @@ describe('parseChainResponse', () => {
         data: 'mockData',
       },
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = parseChainResponse<string>(response as any, 'address');
     expect(result).toBe('mockData');
   });
@@ -156,7 +148,6 @@ describe('parseChainResponse', () => {
         },
       },
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(() => parseChainResponse(response as any, 'address')).toThrow(
       'Failed to retrieve address: {"message":"An error occurred"}',
     );
@@ -164,7 +155,6 @@ describe('parseChainResponse', () => {
 
   it('should throw an unknown error when no status is present', () => {
     const response = {};
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(() => parseChainResponse(response as any, 'address')).toThrow(
       'Failed to retrieve address: Unknown error',
     );

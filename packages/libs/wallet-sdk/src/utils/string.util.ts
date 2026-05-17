@@ -4,7 +4,7 @@ export const safeJsonParse = <T>(
   try {
     if (typeof value !== 'string') return null;
     return JSON.parse(value);
-  } catch (error) {
+  } catch {
     return null;
   }
 };

@@ -43,7 +43,7 @@ export const exchange = {
         },
         {} as Record<T, IEthvmDevTokenInfo>,
       );
-    } catch (error) {
+    } catch {
       return Object.fromEntries(
         tokens.map((token) => [token, undefined]),
       ) as Record<T, undefined>;
