@@ -8,7 +8,6 @@ export function useKadenaWalletState(): IKadenaWalletState {
   const wallet = useKadenaWallet();
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     (async () => {
       if (!wallet.currentAdapterName) {
         return;
@@ -37,7 +36,7 @@ export function useKadenaWalletState(): IKadenaWalletState {
           activeNetwork.status === 'fulfilled' ? activeNetwork.value : null,
       });
     })();
-  }, [wallet.currentAdapterName]);
+  }, [wallet, wallet.client, wallet.currentAdapterName]);
 
   useEffect(() => {
     if (
@@ -65,7 +64,7 @@ export function useKadenaWalletState(): IKadenaWalletState {
     return () => {
       activeEventListenerName = false;
     };
-  }, [wallet.currentAdapterName]);
+  }, [wallet, wallet.client, wallet.currentAdapterName]);
 
   return wallet.state;
 }

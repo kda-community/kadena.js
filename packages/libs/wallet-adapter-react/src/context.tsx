@@ -16,9 +16,6 @@ import {
   useState,
 } from 'react';
 
-/**
- * @public
- */
 export interface IKadenaWalletState {
   loading: boolean;
   accounts: IAccountInfo[];
@@ -42,9 +39,6 @@ const KadenaWalletContext = createContext<IKadenaWalletContextValue | null>(
   null,
 );
 
-/**
- * @public
- */
 export interface IKadenaWalletProviderProps {
   children: ReactNode;
   adapters: (IAdapter | AdapterFactory)[];
@@ -54,8 +48,6 @@ export interface IKadenaWalletProviderProps {
 /**
  * KadenaWalletProvider instantiates a WalletAdapterClient with the provided adapters
  * and manages the current adapter name.
- *
- * @public
  */
 export function KadenaWalletProvider({
   children,
@@ -148,8 +140,6 @@ export function KadenaWalletProvider({
 
 /**
  * Hook to access the Kadena Wallet context.
- *
- * @public
  */
 export function useKadenaWallet() {
   const ctx = useContext(KadenaWalletContext);

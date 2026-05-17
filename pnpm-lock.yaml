@@ -3636,15 +3636,12 @@ importers:
         specifier: ^19.1.1
         version: 19.1.1(react@19.1.1)
     devDependencies:
-      '@kadena-dev/eslint-config':
+      '@kda-community-dev/oxlint-config':
         specifier: workspace:*
-        version: link:../../tools/eslint-config
+        version: link:../../../tooling/oxlint-config
       '@microsoft/api-extractor':
         specifier: ^7.43.1
         version: 7.47.0(@types/node@22.9.1)
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@9.36.0(jiti@1.21.6))(typescript@5.4.5)
       '@testing-library/react':
         specifier: ~16.3.0
         version: 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.1.7(@types/react@19.1.9))(@types/react@19.1.9)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -3654,6 +3651,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.1.1
         version: 19.1.7(@types/react@19.1.9)
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       typescript:
         specifier: 5.4.5
         version: 5.4.5
