@@ -25,6 +25,5 @@ export const $: IInspector = (one: string | IParser, second?: IParser) =>
     const parser = second || (one as IParser);
     const result = parser(pointer);
     if (result === FAILED) return FAILED;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return wrapData(result, name) as any;
   });

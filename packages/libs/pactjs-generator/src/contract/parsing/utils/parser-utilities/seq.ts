@@ -50,7 +50,6 @@ export const seq: ISeq = (...parsers) =>
     // We can only have one object in this situation.
     if (results.length === 1 && results[0].name === undefined) {
       // TODO: in this case we need to somehow bypass UnionToIntersection in the typing
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return results[0] as IWrappedData<any, undefined>;
     }
 

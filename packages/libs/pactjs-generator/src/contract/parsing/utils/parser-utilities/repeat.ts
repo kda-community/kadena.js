@@ -73,7 +73,6 @@ export const repeat: IRepeat = (...parsers) => {
       }
 
       return acc;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     }, {} as any);
 
     return wrapData(returnValue);

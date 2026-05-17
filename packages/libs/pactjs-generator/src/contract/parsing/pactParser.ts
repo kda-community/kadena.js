@@ -153,7 +153,6 @@ const isNotDuplicated =
 
 const isTheSameModule = (a: IModuleLike, b: IModuleLike): boolean =>
   a.name === b.name &&
-  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   (a.namespace === b.namespace || (!a.namespace && !b.namespace));
 
 const reduceModules = (acc: Required<IModuleLike>[], module: IModuleLike) => {

@@ -1,7 +1,6 @@
 import type { ExWrappedData } from '../dataWrapper';
 import type { IPointer } from '../getPointer';
 
-// eslint-disable-next-line @rushstack/typedef-var
 export const FAILED = Symbol('FAILED');
 
 export interface IParser<T = unknown, F = typeof FAILED> {

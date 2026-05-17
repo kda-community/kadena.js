@@ -1,5 +1,3 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IWrappedData<
   T extends any = any,
   N extends string | undefined = string | undefined,
