@@ -2310,9 +2310,6 @@ importers:
         specifier: ~3.1.5
         version: 3.1.8(encoding@0.1.13)
     devDependencies:
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
       '@kadena-dev/lint-package':
         specifier: workspace:*
         version: link:../../tools/lint-package
@@ -2325,24 +2322,24 @@ importers:
       '@kadena/types':
         specifier: workspace:*
         version: link:../types
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@microsoft/api-extractor':
         specifier: ^7.43.1
         version: 7.47.0(@types/node@20.14.9)
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@8.57.0)(typescript@5.4.5)
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
       '@vitest/coverage-v8':
         specifier: ^1.6.0
         version: 1.6.0(vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.9)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
       msw:
         specifier: ^2.2.14
         version: 2.3.1(typescript@5.4.5)
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: ~3.2.5
         version: 3.2.5
