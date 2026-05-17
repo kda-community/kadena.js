@@ -115,7 +115,6 @@ const getChainIds = (
       start = end;
       end = temp;
     }
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     return Array.from({ length: end - start + 1 }, (_, i) => start + i);
   }
 };

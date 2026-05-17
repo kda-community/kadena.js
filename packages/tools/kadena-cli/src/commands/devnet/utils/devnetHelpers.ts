@@ -9,7 +9,7 @@ import {
 } from '../../../utils/globalHelpers.js';
 
 import yaml from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 import { services } from '../../../services/index.js';
 
 export interface ICustomDevnetsChoice {

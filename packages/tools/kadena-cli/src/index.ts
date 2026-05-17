@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import crypto from 'crypto';
+import crypto from 'node:crypto';
 import { readStdin } from './utils/stdin.js';
 
 /** mock for navigator which a dependency includes in the rollup bundle */
@@ -23,5 +23,4 @@ async function main(): Promise<void> {
   }
 }
 
-// eslint-disable-next-line no-console
 main().catch((error) => console.error(error));

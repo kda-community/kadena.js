@@ -1,4 +1,4 @@
-import { execSync } from 'child_process';
+import { execSync } from 'node:child_process';
 import { log } from '../../../utils/logger.js';
 import type { IDevnetsCreateOptions } from './devnetHelpers.js';
 
@@ -13,7 +13,6 @@ export const guardDockerInstalled = (): void | never => {
   try {
     execSync('docker -v', { stdio: 'pipe' });
   } catch (error) {
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
     if (error.stderr.includes('command not found')) {
       throw new Error('Please install Docker.');
     }
@@ -24,7 +23,6 @@ export const guardDockerRunning = (): void | never => {
   try {
     execSync('docker ps', { stdio: 'pipe' });
   } catch (error) {
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
     if (error.stderr.includes('Cannot connect to the Docker daemon')) {
       throw new Error('Please make sure the Docker daemon is running.');
     }

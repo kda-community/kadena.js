@@ -1,6 +1,6 @@
-import { spawnSync } from 'child_process';
+import { spawnSync } from 'node:child_process';
 import type { Command } from 'commander';
-import { join } from 'path';
+import { join } from 'node:path';
 
 import { services } from '../../../services/index.js';
 import { CommandError } from '../../../utils/command.util.js';

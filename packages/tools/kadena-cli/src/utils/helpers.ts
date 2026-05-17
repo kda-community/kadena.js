@@ -1,5 +1,5 @@
 import { load } from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 import z from 'zod';
 import type { ICustomDevnetsChoice } from '../commands/devnet/utils/devnetHelpers.js';
 import { writeDevnet } from '../commands/devnet/utils/devnetHelpers.js';
@@ -87,7 +87,6 @@ export async function getExistingDevnets(): Promise<ICustomDevnetsChoice[]> {
 
 export const passwordPromptTransform =
   (
-    flag: string,
     useStdin = true,
   ): ((
     passwordFile: string | { _password: string },
@@ -96,7 +95,7 @@ export const passwordPromptTransform =
   async (passwordFile, args) => {
     // passwordFile will be undefined if `--quiet` flag is used
     const password =
-      useStdin === true && (passwordFile === '-' || passwordFile === undefined)
+      useStdin && (passwordFile === '-' || passwordFile === undefined)
         ? (args.stdin as string | null)
         : typeof passwordFile === 'string'
           ? await services.filesystem.readFile(passwordFile)
@@ -128,9 +127,7 @@ export const passwordPromptTransform =
   };
 
 export const mnemonicPromptTransform =
-  (
-    flag: string,
-  ): ((
+  (): ((
     filepath: string | { _secret: string },
     args: Record<string, unknown>,
   ) => Promise<string>) =>
@@ -187,7 +184,7 @@ export const getDefaultNetworkName = async (): Promise<string | undefined> => {
     if (parse.success) {
       return parse.data.name;
     }
-  } catch (e) {
+  } catch {
     return undefined;
   }
 };

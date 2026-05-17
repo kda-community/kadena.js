@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'node:path';
 import { services } from '../../../../services/index.js';
 
 export interface IFileData {

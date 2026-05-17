@@ -1,24 +1,24 @@
 import { vol } from 'memfs';
 import type { Dirent, Stats } from 'node:fs';
+import { dirname } from 'node:path';
 import type { IFileSystemService } from './fs.service.js';
 
 export const fs: typeof vol.promises = vol.promises;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const memoryFsToJson = (): any => vol.toJSON();
 
 export const memoryFileSystemService: IFileSystemService = {
   readFileSync(path: string): string | null {
     try {
       return vol.readFileSync(path, 'utf8') as string;
-    } catch (e) {
+    } catch {
       return null;
     }
   },
   async readFile(path: string) {
     try {
       return (await fs.readFile(path, 'utf8')) as string;
-    } catch (e) {
+    } catch {
       return null;
     }
   },

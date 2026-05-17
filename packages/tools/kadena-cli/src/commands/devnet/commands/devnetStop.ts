@@ -21,7 +21,7 @@ export const stopDevnetCommand = createCommand(
           `\nThe devnet configuration "${config.name}" has been stopped.\n`,
         ),
       );
-    } catch (e) {
+    } catch {
       log.error(
         'Stopping devnet requires Docker. Please install Docker and try again.',
       );

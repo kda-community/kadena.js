@@ -1,5 +1,5 @@
 import { parseTemplate } from '@kadena/pactjs-generator';
-import { basename, extname, join } from 'path';
+import { basename, extname, join } from 'node:path';
 import { services } from '../../../services/index.js';
 import { log } from '../../../utils/logger.js';
 
@@ -29,7 +29,6 @@ export async function getFilesAndContents(
 ): Promise<ITemplateResult[]> {
   const filesAndContents = await Promise.all(
     filepaths.map(
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       async (filepath, _, filesArr): Promise<ITemplateResult | null> => {
         log.info(`Parsing template(s) from ${filepath}`);
         const name = basename(filepath, extname(filepath));

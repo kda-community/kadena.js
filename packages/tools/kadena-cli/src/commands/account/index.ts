@@ -8,7 +8,7 @@ import { createAccountListCommand } from './commands/accountList.js';
 import { createResolveAddressToNameCommand } from './commands/accountResolveAddressToName.js';
 import { createResolveNameToAddressCommand } from './commands/accountResolveNameToAddress.js';
 
-const SUBCOMMAND_ROOT: 'account' = 'account';
+const SUBCOMMAND_ROOT = 'account' as const;
 
 export function accountCommandFactory(program: Command, version: string): void {
   const accountProgram = program

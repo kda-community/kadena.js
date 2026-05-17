@@ -130,7 +130,7 @@ export async function getAllTransactions(
               return { fileName, signed };
             }
             return null;
-          } catch (_error) {
+          } catch {
             return null;
           }
         }),
@@ -542,7 +542,7 @@ export async function extractRelevantWalletAndKeyPairsFromCommand(
       wallet,
       relevantKeyPairs,
     };
-  } catch (error) {
+  } catch {
     throw new Error('An error occurred while extracting key pairs.');
   }
 }
@@ -692,7 +692,7 @@ export async function logTransactionDetails(command: ICommand): Promise<void> {
     } else {
       log.info(`No transaction details to display for hash: ${hash}`);
     }
-  } catch (error) {
+  } catch {
     log.info(`No transaction details to display`);
   }
 }

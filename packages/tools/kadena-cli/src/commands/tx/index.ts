@@ -9,7 +9,7 @@ import { createTestSignedTransactionCommand } from './commands/txTestSignedTrans
 
 import type { Command } from 'commander';
 
-const SUBCOMMAND_ROOT: 'tx' = 'tx';
+const SUBCOMMAND_ROOT = 'tx' as const;
 
 export function txCommandFactory(program: Command, version: string): void {
   const txProgram = program

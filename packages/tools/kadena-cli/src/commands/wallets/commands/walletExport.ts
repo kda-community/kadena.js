@@ -43,7 +43,7 @@ export const createExportCommand: (program: Command, version: string) => void =
           passwordFile,
         );
         log.output(jsYaml.dump(keypair, { lineWidth: -1 }), keypair);
-      } catch (e) {
+      } catch {
         log.error(
           `Failed to export keypair: Incorrect password. Please verify the password and try again.`,
         );

@@ -7,7 +7,7 @@ import { createConfigShowCommand } from './commands/configShow.js';
  * Represents the root command for the configuration CLI.
  * @type {string}
  */
-const SUBCOMMAND_ROOT: 'config' = 'config';
+const SUBCOMMAND_ROOT = 'config' as const;
 
 /**
  * Factory function to generate a configuration command with subcommands.

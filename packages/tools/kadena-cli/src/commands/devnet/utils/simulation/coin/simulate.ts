@@ -148,7 +148,6 @@ export async function simulateCoin({
 
     const startTime = Date.now();
 
-    // eslint-disable-next-line no-constant-condition
     while (true) {
       // Transfer between accounts
       for (let i = 0; i < accounts.length; i++) {

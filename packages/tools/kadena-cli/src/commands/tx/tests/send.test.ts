@@ -20,14 +20,13 @@ function extractData(jsonString: string): Array<{
     const jsonObject = JSON.parse(jsonString);
     const commands = jsonObject.data.commands;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return commands.map((commandObj: any) => {
       const command = commandObj.command;
       const filePath = commandObj.path;
       const fileName = getFileName(filePath);
       return { command, fileName, filePath };
     });
-  } catch (error) {
+  } catch {
     throw new Error('Invalid JSON string or structure');
   }
 }

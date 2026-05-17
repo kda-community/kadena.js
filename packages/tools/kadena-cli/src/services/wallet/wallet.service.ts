@@ -54,7 +54,6 @@ export interface IWalletService {
 }
 
 export class WalletService implements IWalletService {
-  // eslint-disable-next-line @typescript-eslint/naming-convention, @typescript-eslint/parameter-properties
   public constructor(private services: Services) {}
 
   public async create({

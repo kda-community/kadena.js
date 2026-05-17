@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join } from 'node:path';
 import { services } from '../../../services/index.js';
 
 export const shallowFindFile = async (

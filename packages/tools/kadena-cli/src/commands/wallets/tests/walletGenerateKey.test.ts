@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { WORKING_DIRECTORY } from '../../../constants/config.js';
 import { services } from '../../../services/index.js';

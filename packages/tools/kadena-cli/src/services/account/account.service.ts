@@ -11,7 +11,6 @@ export interface IAccountService {
 }
 
 export class AccountService implements IAccountService {
-  // eslint-disable-next-line @typescript-eslint/parameter-properties, @typescript-eslint/naming-convention
   public constructor(private services: Services) {}
 
   public async get(filepath: string): ReturnType<IAccountService['get']> {

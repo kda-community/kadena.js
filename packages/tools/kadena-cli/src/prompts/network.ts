@@ -18,11 +18,7 @@ import { getExistingNetworks } from '../utils/helpers.js';
 import { input, select } from '../utils/prompts.js';
 import { getInputPrompt } from './generic.js'; // Importing getInputPrompt from another file
 
-export const chainIdPrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) => {
+export const chainIdPrompt: IPrompt<string> = async (args) => {
   const defaultValue = (args.defaultValue as string) || '0';
   return (await input({
     message: `Enter ChainId (0-${MAX_CHAIN_VALUE}):`,
@@ -39,13 +35,9 @@ export const chainIdPrompt: IPrompt<string> = async (
   })) as ChainId;
 };
 
-export const networkNamePrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) => {
+export const networkNamePrompt: IPrompt<string> = async (previousQuestions) => {
   const defaultValue = (previousQuestions.network as string) || undefined;
-  return await input({
+  return input({
     message: 'Enter a network name (e.g. "mainnet"):',
     default: defaultValue,
     validate: function (input) {
@@ -110,7 +102,6 @@ export const networkHostPrompt: IPrompt<string> = async (
 export const networkExplorerUrlPrompt: IPrompt<string> = async (
   previousQuestions,
   args,
-  isOptional,
 ) => {
   const defaultValue = (args.defaultValue ??
     previousQuestions.defaultValue) as string;
@@ -123,7 +114,6 @@ export const networkExplorerUrlPrompt: IPrompt<string> = async (
 export const networkOverwritePrompt: IPrompt<string> = async (
   previousQuestions,
   args,
-  isOptional,
 ) => {
   const networkName =
     args.defaultValue ?? previousQuestions.networkName ?? args.networkName;
@@ -173,7 +163,7 @@ export const networkSelectPrompt: IPrompt<string> = async (
     name: network.name,
   }));
 
-  if (isOptional === true) {
+  if (isOptional) {
     choices.unshift({
       value: 'skip',
       name: 'Network is optional. Continue to next step',
@@ -210,8 +200,6 @@ const getEnsureExistingNetworks = async (): Promise<ICustomNetworkChoice[]> => {
 
 export const networkSelectOnlyPrompt: IPrompt<string> = async (
   previousQuestions,
-  args,
-  isOptional,
 ) => {
   const existingNetworks = await getEnsureExistingNetworks();
 
@@ -256,8 +244,6 @@ export const networkSelectOnlyPrompt: IPrompt<string> = async (
 
 export const networkSelectWithNonePrompt: IPrompt<string> = async (
   previousQuestions,
-  args,
-  isOptional,
 ): Promise<string> => {
   const defaultNetwork = previousQuestions.defaultNetwork;
   const existingNetworks = await getEnsureExistingNetworks();
@@ -285,7 +271,6 @@ export const networkSelectWithNonePrompt: IPrompt<string> = async (
 export const networkDeletePrompt: IPrompt<string> = async (
   previousQuestions,
   args,
-  isOptional,
 ) => {
   const defaultValue = args.defaultValue ?? previousQuestions.network;
   if (previousQuestions.network === undefined) {
@@ -312,7 +297,6 @@ export const networkDeletePrompt: IPrompt<string> = async (
 export const networkDefaultConfirmationPrompt: IPrompt<boolean> = async (
   previousQuestions,
   args,
-  isOptional,
 ) => {
   const defaultValue = args.defaultValue ?? previousQuestions.network;
   if (defaultValue === undefined && previousQuestions.action === 'set') {

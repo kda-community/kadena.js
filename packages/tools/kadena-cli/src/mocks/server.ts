@@ -41,7 +41,6 @@ const createHandler = ({
     ) {
       return new HttpResponse(response, { status });
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return HttpResponse.json(response as any, { status });
   });
 };
@@ -55,7 +54,6 @@ const createDynamicHandler = ({
 }: IDynamicHandlerOptions): RequestHandler => {
   const url = `${network.networkHost}/chainweb/0.0/${network.networkId}/chain/${chainId}/pact/api/v1/${endpoint}`;
   return http[method](url, async ({ request }) => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = (await getResponse(request)) as any[];
     return HttpResponse.json(...response);
   });

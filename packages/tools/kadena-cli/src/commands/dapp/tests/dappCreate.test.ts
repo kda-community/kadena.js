@@ -1,4 +1,4 @@
-import { spawnSync } from 'child_process';
+import { spawnSync } from 'node:child_process';
 import type { MockInstance } from 'vitest';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { services } from '../../../services/index.js';

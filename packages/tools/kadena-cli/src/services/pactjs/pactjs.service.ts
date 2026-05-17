@@ -1,8 +1,8 @@
 import type { ChainId } from '@kadena/client';
 import { Pact } from '@kadena/client';
 import { generateDts, pactParser } from '@kadena/pactjs-generator';
-import { EOL } from 'os';
-import { dirname, join } from 'path';
+import { EOL } from 'node:os';
+import { dirname, join } from 'node:path';
 import * as prettier from 'prettier';
 
 import type { INetworkCreateOptions } from '../../commands/networks/utils/networkHelpers.js';
@@ -31,7 +31,6 @@ export interface IPactJSService {
 }
 
 export class PactJSService implements IPactJSService {
-  // eslint-disable-next-line @typescript-eslint/naming-convention, @typescript-eslint/parameter-properties
   public constructor(private services: Services) {}
 
   public async retrieveContractFromChain(

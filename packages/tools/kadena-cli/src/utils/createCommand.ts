@@ -226,7 +226,6 @@ export const createCommand =
           };
           optionIndex.set(acc[option.key], index);
           return acc;
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
         }, {} as any);
 
         const result = await action(collectOptionsMap, {
@@ -238,7 +237,6 @@ export const createCommand =
               (a, b) =>
                 (optionIndex.get(a[1]) ?? 0) - (optionIndex.get(b[1]) ?? 0),
             );
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             let result = {} as any;
             for (const option of options) {
               result = {

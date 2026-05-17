@@ -1,6 +1,6 @@
 import type { ChainId } from '@kadena/types';
 import { load } from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 import sanitize from 'sanitize-filename';
 import type { ZodError } from 'zod';
 import { MAX_CHAIN_IDS, MAX_CHARACTERS_LENGTH } from '../constants/config.js';
@@ -68,7 +68,6 @@ export function sanitizeFilename(str: string): string {
  * Checks if the input string contains only alphabetic characters.
  *
  * @function
- * @export
  * @param {string} str - The input string to be checked.
  * @returns {boolean} Returns true if the string only contains alphabetic characters (either lower case or upper case), and false if the string contains any non-alphabetic characters.
  *
@@ -97,7 +96,7 @@ export function isValidFilename(str: string): boolean {
   if (str.length === 0) return false;
 
   // Based on https://superuser.com/a/358861
-  const regex = /[\\\/:*?"<>|]/;
+  const regex = /[\\/:*?"<>|]/;
 
   return !regex.test(str);
 }
@@ -160,7 +159,6 @@ export const isNotEmptyObject = <T extends object>(obj?: T | null): obj is T =>
  * ```
  */
 export const formatZodError = (error: ZodError): string => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const messages = error.issues.map((issue) => {
     const path = issue.path.join('.');
     if (path) {
@@ -177,7 +175,7 @@ export const formatZodError = (error: ZodError): string => {
 export const safeJsonParse = <T extends unknown>(value: string): T | null => {
   try {
     return JSON.parse(value);
-  } catch (e) {
+  } catch {
     return null;
   }
 };
@@ -185,7 +183,7 @@ export const safeJsonParse = <T extends unknown>(value: string): T | null => {
 export const safeYamlParse = <T extends unknown>(value: string): T | null => {
   try {
     return load(value) as T;
-  } catch (e) {
+  } catch {
     return null;
   }
 };
@@ -216,7 +214,6 @@ export async function loadUnknownFile(
 export const generateAllChainIds = (): ChainId[] =>
   Array.from(
     { length: MAX_CHAIN_IDS },
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     (_, index) => index.toString() as ChainId,
   );
 

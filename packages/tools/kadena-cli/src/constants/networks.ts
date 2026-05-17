@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join } from 'node:path';
 import type { INetworkCreateOptions } from '../commands/networks/utils/networkHelpers.js';
 
 export interface IDefaultNetworkOptions {
@@ -6,7 +6,6 @@ export interface IDefaultNetworkOptions {
 }
 
 /**
- * @const networkDefaults
  * Provides the default network configurations for the mainnet, testnet, and custom created networks.
  */
 export const networkDefaults: IDefaultNetworkOptions = {

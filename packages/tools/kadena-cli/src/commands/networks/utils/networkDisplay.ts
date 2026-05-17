@@ -15,7 +15,7 @@ import type {
 } from './networkHelpers.js';
 
 import yaml from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 import { services } from '../../../services/index.js';
 import { createTable } from '../../../utils/table.js';
 import { getNetworkDirectory } from './networkPath.js';

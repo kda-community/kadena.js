@@ -48,7 +48,7 @@ const directoryExists = (path?: string): boolean => {
   try {
     const stat = IS_TEST ? vol.statSync.bind(vol) : statSync;
     return stat(path).isDirectory();
-  } catch (e) {
+  } catch {
     return false;
   }
 };
@@ -82,9 +82,7 @@ export interface IConfigService {
 }
 
 export class ConfigService implements IConfigService {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   private directory: string | null = null;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   private services: Services;
 
   public constructor(services: Services, directory?: string) {

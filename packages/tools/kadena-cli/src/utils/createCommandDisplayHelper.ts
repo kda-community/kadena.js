@@ -1,6 +1,6 @@
 import { log } from './logger.js';
 
-export const formatLength: 80 = 80;
+export const formatLength = 80 as const;
 
 export const displaySeparator = (): void => {
   log.info(log.color.green('-'.repeat(formatLength)));

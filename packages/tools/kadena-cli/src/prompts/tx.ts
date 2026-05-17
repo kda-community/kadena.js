@@ -239,8 +239,8 @@ const promptVariableValue = async (
         value: '_manual_',
         name: 'Enter account manually',
       },
-      ...tableFormatPrompt([
-        ...accounts.map((account) => ({
+      ...tableFormatPrompt(
+        accounts.map((account) => ({
           value: account.name,
           name: [
             basename(account.alias, '.yaml'),
@@ -252,7 +252,7 @@ const promptVariableValue = async (
             account.predicate,
           ],
         })),
-      ]),
+      ),
     ];
     if (hasAccount) {
       value = await select({
@@ -391,12 +391,12 @@ const promptVariableValue = async (
         value = await select({
           message: `Select public key from wallet ${wallet.alias}:`,
           choices: [
-            ...tableFormatPrompt([
-              ...wallet.keys.map((key) => ({
+            ...tableFormatPrompt(
+              wallet.keys.map((key) => ({
                 value: key.publicKey,
                 name: [key.index.toString(), key.alias ?? '', key.publicKey],
               })),
-            ]),
+            ),
           ],
         });
       } else if (target === '_plain_') {
@@ -416,8 +416,8 @@ const promptVariableValue = async (
       const accountName = await select({
         message: `Select account alias for template value ${key}:`,
         choices: [
-          ...tableFormatPrompt([
-            ...accounts.map((account) => ({
+          ...tableFormatPrompt(
+            accounts.map((account) => ({
               value: account.name,
               name: [
                 basename(account.alias, '.yaml'),
@@ -429,7 +429,7 @@ const promptVariableValue = async (
                 account.predicate,
               ],
             })),
-          ]),
+          ),
         ],
       });
       const account = accounts.find((x) => x.name === accountName)!;
@@ -438,12 +438,10 @@ const promptVariableValue = async (
       } else {
         value = await select({
           message: `Select public key for template value ${key}:`,
-          choices: [
-            ...account.publicKeys.map((key) => ({
-              value: key,
-              name: `Account key: ${key}`,
-            })),
-          ],
+          choices: account.publicKeys.map((key) => ({
+            value: key,
+            name: `Account key: ${key}`,
+          })),
         });
       }
     }
@@ -533,7 +531,7 @@ export const templateVariables: IPrompt<Record<string, string>> = async (
   return variableValues;
 };
 
-export const outFilePrompt: IPrompt<string | null> = async (args) => {
+export const outFilePrompt: IPrompt<string | null> = async () => {
   const result = await input({
     message: 'Where do you want to save the output:',
   });

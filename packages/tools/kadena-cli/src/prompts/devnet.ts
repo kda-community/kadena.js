@@ -1,5 +1,5 @@
 import { program } from 'commander';
-import path from 'path';
+import path from 'node:path';
 import type { ICustomDevnetsChoice } from '../commands/devnet/utils/devnetHelpers.js';
 import { defaultDevnetsPath } from '../constants/devnets.js';
 import { services } from '../services/index.js';
@@ -7,12 +7,8 @@ import type { IPrompt } from '../utils/createOption.js';
 import { getExistingDevnets } from '../utils/helpers.js';
 import { input, select } from '../utils/prompts.js';
 
-export const devnetOverwritePrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) => {
-  return await select({
+export const devnetOverwritePrompt: IPrompt<string> = async () => {
+  return select({
     message:
       'A devnet configuration with this name already exists. Do you want to update it?',
     choices: [
@@ -52,11 +48,7 @@ export const devnetNamePrompt: IPrompt<string> = async (
   return containerName;
 };
 
-export const devnetPortPrompt: IPrompt<number> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) => {
+export const devnetPortPrompt: IPrompt<number> = async () => {
   const port = await input({
     default: '8080',
     message: 'Enter a port number to forward to the Chainweb node API:',
@@ -71,11 +63,7 @@ export const devnetPortPrompt: IPrompt<number> = async (
   return parseInt(port);
 };
 
-export const devnetUseVolumePrompt: IPrompt<boolean> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) =>
+export const devnetUseVolumePrompt: IPrompt<boolean> = async () =>
   await select({
     message: 'Would you like to create a persistent volume?',
     choices: [
@@ -84,22 +72,14 @@ export const devnetUseVolumePrompt: IPrompt<boolean> = async (
     ],
   });
 
-export const devnetMountPactFolderPrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) =>
+export const devnetMountPactFolderPrompt: IPrompt<string> = async () =>
   await input({
     default: '',
     message:
       'Enter the relative path to a folder containing your Pact files to mount (e.g. ./pact) or leave empty to skip:',
   });
 
-export const devnetVersionPrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) =>
+export const devnetVersionPrompt: IPrompt<string> = async () =>
   await input({
     default: 'latest',
     message:
@@ -107,14 +87,17 @@ export const devnetVersionPrompt: IPrompt<string> = async (
   });
 
 export const devnetSelectPrompt: IPrompt<string> = async (
+  // oxlint-disable-next-line oxc/only-used-in-recursion
   previousQuestions,
+  // oxlint-disable-next-line oxc/only-used-in-recursion
   args,
+  // oxlint-disable-next-line oxc/only-used-in-recursion
   isOptional,
 ) => {
   const existingDevnets: ICustomDevnetsChoice[] = await getExistingDevnets();
 
   if (existingDevnets.length > 0) {
-    return await select({
+    return select({
       message: 'Select a devnet:',
       choices: existingDevnets,
     });
@@ -124,14 +107,10 @@ export const devnetSelectPrompt: IPrompt<string> = async (
   // Create and select a new devnet.
   await program.parseAsync(['', '', 'devnet', 'create']);
 
-  return await devnetSelectPrompt(previousQuestions, args, isOptional);
+  return devnetSelectPrompt(previousQuestions, args, isOptional);
 };
 
-export const devnetDeletePrompt: IPrompt<string> = async (
-  previousQuestions,
-  args,
-  isOptional,
-) =>
+export const devnetDeletePrompt: IPrompt<string> = async () =>
   await select({
     message: 'Are you sure you want to delete this devnet?',
     choices: [
@@ -141,8 +120,11 @@ export const devnetDeletePrompt: IPrompt<string> = async (
   });
 
 export const devnetPrompt: IPrompt<string> = async (
+  // oxlint-disable-next-line oxc/only-used-in-recursion
   previousQuestions,
+  // oxlint-disable-next-line oxc/only-used-in-recursion
   args,
+  // oxlint-disable-next-line oxc/only-used-in-recursion
   isOptional,
 ) => {
   const existingDevnets: ICustomDevnetsChoice[] = await getExistingDevnets();
@@ -166,5 +148,5 @@ export const devnetPrompt: IPrompt<string> = async (
   // Create and select new devnet.
   await program.parseAsync(['', '', 'devnet', 'create']);
 
-  return await devnetPrompt(previousQuestions, args, isOptional);
+  return devnetPrompt(previousQuestions, args, isOptional);
 };
