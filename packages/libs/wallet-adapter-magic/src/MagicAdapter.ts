@@ -51,7 +51,6 @@ type IMagicAdapterOptionsWithProvider = IMagicAdapterOptions &
   IBaseWalletAdapterOptions;
 
 /**
- * @public
  * MagicAdapter is a class that extends BaseWalletAdapter to provide
  * functionality for connecting to the Magic Wallet.
  */

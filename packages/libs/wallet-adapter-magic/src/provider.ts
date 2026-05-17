@@ -22,8 +22,8 @@ export interface IMagicProvider extends IProvider {}
  *
  * @param options - Options for detection (e.g. timeout, silent).
  * @returns A promise resolving to the Magic provider or null.
- * @public
  */
+// oxlint-disable-next-line no-unused-vars
 export async function detectMagicProvider(options?: {}): Promise<IMagicProvider | null> {
   return {
     request: async () => {},

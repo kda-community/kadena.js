@@ -21,7 +21,6 @@ import { detectMagicProvider } from './provider';
  *
  * @param options - The options object from BaseWalletAdapter
  * @returns A wallet adapter factory for the Magic wallet
- * @public
  */
 export const createMagicAdapter = ((
   options: IMagicAdapterOptions & IBaseWalletFactoryOptions,

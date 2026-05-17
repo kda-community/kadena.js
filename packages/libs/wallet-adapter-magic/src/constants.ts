@@ -1,4 +1,3 @@
-/** @public */
 export const MAGIC_ADAPTER = 'Magic';
 
 export const ERRORS = {
