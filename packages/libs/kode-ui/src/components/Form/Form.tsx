@@ -7,7 +7,6 @@ export interface IFormProps extends ComponentPropsWithRef<'form'> {
   validationErrors?: ValidationErrors;
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type, react/function-component-definition
 function BaseForm(props: IFormProps, ref: ForwardedRef<ElementRef<'form'>>) {
   const { children, validationErrors, ...domProps } = props;
   return (

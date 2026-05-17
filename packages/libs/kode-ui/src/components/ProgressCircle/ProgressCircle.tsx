@@ -8,7 +8,6 @@ import { atoms } from '../../styles/atoms.css';
 import type { ITestProps } from '../../utils/testId';
 import { testProps } from '../../utils/testId';
 
-// eslint-disable-next-line @kadena-dev/typedef-var
 const SPINNER_SIZE = {
   sm: 16,
   md: 24,
@@ -22,7 +21,6 @@ export interface IProgressCircleProps extends AriaProgressBarProps, ITestProps {
   color?: 'currentColor' | Atoms['color'];
   className?: string;
 }
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type, react/function-component-definition
 export function ProgressCircle(props: IProgressCircleProps) {
   const { isIndeterminate, value = 0, minValue = 0, maxValue = 100 } = props;
   const v = clamp(value, minValue, maxValue);
