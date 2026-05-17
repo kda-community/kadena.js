@@ -62,7 +62,6 @@ interface IChainwebResponseMetaData {
 /**
  * @alpha
  */
-// eslint-disable-next-line @rushstack/typedef-var
 export const CHAINS = [
   '0',
   '1',
@@ -234,15 +233,11 @@ export interface IPreflightResult {
 // @TODO Add `gas` to OpenApi spec?
 export interface ICommandResult {
   reqKey: IBase64Url;
-  /* eslint-disable-next-line @rushstack/no-new-null*/
   txId: number | null;
   result: IPactResultSuccess | IPactResultError;
   gas: number;
-  /* eslint-disable-next-line @rushstack/no-new-null*/
   logs: string | null;
-  /* eslint-disable-next-line @rushstack/no-new-null*/
   continuation: IPactExec | null;
-  /* eslint-disable-next-line @rushstack/no-new-null*/
   metaData: IChainwebResponseMetaData | null;
   events?: Array<IPactEvent>;
 }
