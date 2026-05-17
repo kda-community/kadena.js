@@ -37,9 +37,7 @@ export interface IAccountTransaction extends ITransactionBase {
   fromAccount: string;
   toAccount: string;
   // ignoring linting rule; this describes the existing chainweb-stream JSON structure
-  // eslint-disable-next-line @rushstack/no-new-null
   crossChainId: number | null;
-  // eslint-disable-next-line @rushstack/no-new-null
   crossChainAccount: number | null;
 }
 

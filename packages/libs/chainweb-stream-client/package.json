@@ -32,7 +32,7 @@
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
-    "lint:src": "eslint src --ext .js,.ts",
+    "lint:src": "oxlint .",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -41,16 +41,15 @@
     "eventsource": "~2.0.2"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
     "@kadena-dev/lint-package": "workspace:*",
     "@kadena-dev/markdown": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
-    "@rushstack/eslint-config": "~3.6.9",
     "@types/eventsource": "1.1.11",
     "@types/node": "^20.12.7",
     "@vitest/coverage-v8": "^1.6.0",
-    "eslint": "^8.45.0",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "typescript": "5.4.5",
     "vitest": "^1.6.0"
