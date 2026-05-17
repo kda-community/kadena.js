@@ -25,8 +25,6 @@ export interface IKadenaGetAccountsResponse {
  * Represents the extended method map specific to Ecko Wallet.
  *
  * Contains custom methods specific to Ecko Wallet, such as a custom checkStatus.
- *
- * @public
  */
 export interface IWalletConnectMethodMap {
   //
@@ -34,14 +32,10 @@ export interface IWalletConnectMethodMap {
 
 /**
  * ExtendedMethodMap combines the standard KdaMethodMap with Ecko-specific methods.
- *
- * @public
  */
 export type ExtendedMethodMap = IKdaMethodMap & IWalletConnectMethodMap;
 
 /**
  * ExtendedMethod represents the keys of the ExtendedMethodMap.
- *
- * @public
  */
 export type ExtendedMethod = keyof ExtendedMethodMap;

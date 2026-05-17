@@ -261,7 +261,6 @@ describe('WalletConnectAdapter', () => {
   describe('getActiveNetwork', () => {
     test('returns hardcoded active network matching defaultNetworkId', async () => {
       // Assuming defaultNetworkId is "mainnet01"
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       expect(adapter.getActiveNetwork()).rejects.toThrow(
         'Failed to fetch network',
       );

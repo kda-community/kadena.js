@@ -16,7 +16,6 @@ export interface IWalletConnectAdapterOptions
   debug?: boolean;
 }
 
-/** @public */
 export interface IWalletConnectProvider extends IProvider {
   connected: boolean;
   accounts: string[];
@@ -28,7 +27,6 @@ export interface IWalletConnectProvider extends IProvider {
  * it will be re-created inside the adapter, and we can safely assume it is always available.
  *
  * @returns A promise resolving to the WalletConnect provider or null.
- * @public
  */
 export async function detectWalletConnectProvider(): Promise<IWalletConnectProvider | null> {
   const provider: IWalletConnectProvider = {
