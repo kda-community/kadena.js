@@ -2539,9 +2539,6 @@ importers:
         specifier: workspace:*
         version: link:../pactjs
     devDependencies:
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
       '@kadena-dev/lint-package':
         specifier: workspace:*
         version: link:../../tools/lint-package
@@ -2557,15 +2554,15 @@ importers:
       '@kadena/types':
         specifier: workspace:*
         version: link:../types
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@8.57.0)(typescript@5.4.5)
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: ~3.2.5
         version: 3.2.5
