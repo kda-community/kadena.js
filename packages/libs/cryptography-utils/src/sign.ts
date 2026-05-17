@@ -7,8 +7,6 @@ import { toTweetNaclSecretKey } from './toTweetNaclSecretKey';
 
 /**
 Perform blake2b256 hashing on a message, and sign using keyPair.
-
- * @alpha
 */
 
 export function sign(

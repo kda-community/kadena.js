@@ -1,5 +1,4 @@
-import { throws } from 'assert';
-import { describe, expect, it } from 'vitest';
+import { assert, describe, expect, it } from 'vitest';
 import { base64UrlEncode } from '../base64UrlEncode';
 import { uint8ArrayToStr } from '../uint8ArrayToStr';
 
@@ -22,7 +21,7 @@ describe('base64UrlEncode', () => {
   it('throws InvalidCharacterError', () => {
     const str = 'this is a special string 🧠';
 
-    throws(() => base64UrlEncode(str));
+    assert.throws(() => base64UrlEncode(str));
     try {
       base64UrlEncode(str);
     } catch (error) {

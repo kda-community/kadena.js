@@ -4,8 +4,6 @@ import { binToHex } from './binToHex';
 
 /**
  * Generate a random ED25519 keypair.
- *
- * @alpha
  */
 export function genKeyPair(): IKeyPair {
   const keyPair = nacl.sign.keyPair();
