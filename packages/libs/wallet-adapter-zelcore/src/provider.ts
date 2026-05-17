@@ -20,7 +20,6 @@ export interface IZelcoreProvider extends IProvider {}
 export async function detectZelcoreProvider(options?: {
   silent?: boolean;
   timeout?: number;
-  // eslint-disable-next-line @rushstack/no-new-null
 }): Promise<IZelcoreProvider | null> {
   const { silent, timeout } = options ?? {};
 
