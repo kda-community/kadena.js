@@ -35,7 +35,6 @@ import type {
 } from './types';
 
 /**
- * @public
  * SnapAdapter is a class that extends BaseWalletAdapter to provide
  * functionality for connecting to Kadena's Metamask snap.
  */
@@ -305,7 +304,7 @@ export class SnapAdapter extends BaseWalletAdapter {
             jsonrpc: '2.0',
             result: { success: true },
           } as ExtendedMethodMap[M]['response'];
-        } catch (e) {
+        } catch {
           return {
             id,
             jsonrpc: '2.0',

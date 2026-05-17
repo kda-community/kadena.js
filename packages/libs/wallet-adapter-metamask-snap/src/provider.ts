@@ -18,7 +18,6 @@ export interface ISnapProvider extends IProvider {
   isMetaMask?: boolean;
 }
 
-/** @public */
 export async function detectSnapProvider(options?: {
   silent?: boolean;
   timeout?: number;

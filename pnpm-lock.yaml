@@ -3605,18 +3605,18 @@ importers:
         specifier: ^22.1.0
         version: 22.1.0(webextension-polyfill@0.10.0)
     devDependencies:
-      '@kadena-dev/eslint-config':
+      '@kda-community-dev/oxlint-config':
         specifier: workspace:*
-        version: link:../../tools/eslint-config
+        version: link:../../../tooling/oxlint-config
       '@microsoft/api-extractor':
         specifier: ^7.43.1
         version: 7.47.0(@types/node@20.16.5)
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@9.36.0(jiti@1.21.6))(typescript@5.4.5)
       '@types/node':
         specifier: ^20.12.7
         version: 20.16.5
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       typescript:
         specifier: 5.4.5
         version: 5.4.5

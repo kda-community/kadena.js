@@ -20,7 +20,6 @@ import { detectSnapProvider } from './provider';
  *
  * @param options - Configuration options for the adapter (e.g. `silent`, `timeout`).
  * @returns A wallet adapter factory for the MetaMask Kadena Snap
- * @public
  */
 
 export const createSnapAdapter = ((options?: IBaseWalletFactoryOptions) => {
