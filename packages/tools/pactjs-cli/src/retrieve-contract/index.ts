@@ -4,30 +4,22 @@ import debug from 'debug';
 import { z } from 'zod';
 import { retrieveContract } from './retrieve-contract';
 
-// eslint-disable-next-line @rushstack/typedef-var
 const Options = z.object({
   module: z.string({
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     invalid_type_error: 'Error: -m, --module must be a string',
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     required_error: 'Error: -m, --module is required',
   }),
   out: z.string({
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     invalid_type_error: 'Error: -o, --out must be a string',
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     required_error: 'Error: -o, --out is required',
   }),
   api: z.string({
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     invalid_type_error: 'Error: --api must be a string',
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     required_error: 'Error: --api is required',
   }),
   network: z.enum(['mainnet', 'testnet']),
   chain: z
     .number({
-      /* eslint-disable-next-line @typescript-eslint/naming-convention */
       invalid_type_error: 'Error: -c, --chain must be a number',
     })
     .min(0)

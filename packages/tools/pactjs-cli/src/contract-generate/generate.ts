@@ -6,7 +6,7 @@ import mkdirp from 'mkdirp';
 import { EOL } from 'os';
 import { dirname, join } from 'path';
 import * as prettier from 'prettier';
-import rimraf from 'rimraf';
+import { sync } from 'rimraf';
 
 import { retrieveContractFromChain } from '../utils/retrieveContractFromChain';
 import type { IContractGenerateOptions } from './';
@@ -25,10 +25,7 @@ const shallowFindFile = (path: string, file: string): string | undefined => {
   return join(path, file);
 };
 
-function verifyTsconfigTypings(
-  tsconfigPath: string | undefined,
-  program: Command,
-): void {
+function verifyTsconfigTypings(tsconfigPath: string | undefined): void {
   if (tsconfigPath === undefined || tsconfigPath.length === 0) {
     console.error('Could not find tsconfig.json, skipping types verification');
   } else {
@@ -149,7 +146,7 @@ export const generate: IGenerate = (program, version) => async (args) => {
 
   if (args.clean === true) {
     console.log(`Cleaning ${targetDirectory}`);
-    rimraf.sync(targetDirectory);
+    sync(targetDirectory);
   }
 
   if (!existsSync(targetDirectory)) {
@@ -187,7 +184,7 @@ export const generate: IGenerate = (program, version) => async (args) => {
     .map((line) => line?.replace(/export\s*\*\s*from/, 'import'))
     // extract imported file names
     .map((line) => {
-      const matches = line?.match(/^\s*import\s*[\'\"]\.\/(.*)[\'\"]/);
+      const matches = line?.match(/^\s*import\s*['"]\.\/(.*)['"]/);
       return matches ? matches[1] : '';
     })
     // remove duplicates
@@ -247,5 +244,5 @@ export const generate: IGenerate = (program, version) => async (args) => {
     'tsconfig.json',
   );
 
-  verifyTsconfigTypings(tsconfigPath, program);
+  verifyTsconfigTypings(tsconfigPath);
 };

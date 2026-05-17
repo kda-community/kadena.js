@@ -3,25 +3,19 @@ import debug from 'debug';
 import { z } from 'zod';
 import { templateGenerate } from './template-generate';
 
-// eslint-disable-next-line @rushstack/typedef-var
 const TemplateGenerateOptions = z.object({
   clean: z
     .boolean({
-      /* eslint-disable-next-line @typescript-eslint/naming-convention */
       invalid_type_error:
         'Error: -c, --clean is optional but can only be a flag',
     })
     .optional(),
   file: z.string({
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     invalid_type_error: 'Error: -f, --file must be a string',
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     required_error: 'Error: -f, --file is required',
   }),
   out: z.string({
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     invalid_type_error: 'Error: -o, --out must be a string',
-    /* eslint-disable-next-line @typescript-eslint/naming-convention */
     required_error: 'Error: -o, --out is required',
   }),
 });

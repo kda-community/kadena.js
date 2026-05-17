@@ -24,7 +24,6 @@ function asList(value: string, prev?: string[]): string[] {
   return [...prev, value];
 }
 
-// eslint-disable-next-line @rushstack/typedef-var
 const Options = z
   .object({
     file: z.string().array().optional(),
