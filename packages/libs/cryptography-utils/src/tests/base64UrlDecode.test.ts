@@ -1,5 +1,4 @@
-import { throws } from 'assert';
-import { describe, expect, it } from 'vitest';
+import { assert, describe, expect, it } from 'vitest';
 import { base64UrlDecode } from '../base64UrlDecode';
 import { uint8ArrayToStr } from '../uint8ArrayToStr';
 
@@ -21,6 +20,6 @@ describe('base64Decode', () => {
 
   it('throws InvalidCharacterError when passing', () => {
     const str = 'zaqnRQ0RYzxTccjtYoBvQsDo5K9mxr4TEF-HIYTi5Joaa';
-    throws(() => base64UrlDecode(str));
+    assert.throws(() => base64UrlDecode(str));
   });
 });

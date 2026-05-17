@@ -6,8 +6,6 @@ import { toTweetNaclSecretKey } from './toTweetNaclSecretKey';
 
 /**
  Sign a hash using key pair
-
- * @alpha
 */
 export function signHash(
   hash: string,

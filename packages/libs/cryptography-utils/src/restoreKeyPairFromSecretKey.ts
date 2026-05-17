@@ -5,8 +5,6 @@ import { hexToBin } from './hexToBin';
 
 /**
  * Generate a deterministic ED25519 keypair from a given Kadena secretKey
- *
- * @alpha
  */
 export function restoreKeyPairFromSecretKey(seed: string): IKeyPair {
   if (seed.length !== 64) {

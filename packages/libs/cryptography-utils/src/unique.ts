@@ -22,7 +22,6 @@ interface ICache {
  *   // ];
  *
  * ```
- * @alpha
  */
 export function unique(array: Array<string>): Array<string> {
   const isUnique: ICache = {};
