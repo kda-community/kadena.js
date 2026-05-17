@@ -1,6 +1,3 @@
-/* eslint-disable max-lines */
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable @rushstack/typedef-var */
 export const bigloadMiddle = {
   limit: 360,
   items: [

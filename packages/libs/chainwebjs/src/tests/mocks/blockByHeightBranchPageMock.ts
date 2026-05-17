@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-// eslint-disable-next-line @rushstack/typedef-var
 export const blockByHeightBranchPageMock = {
   limit: 1,
   items: [

@@ -1,5 +1,3 @@
-/* eslint-disable max-lines */
-/* eslint-disable @rushstack/typedef-var */
 export const tenpl = [
   {
     transactions: [

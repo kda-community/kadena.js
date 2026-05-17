@@ -1,5 +1,3 @@
-/* eslint-disable @rushstack/typedef-var */
-/* eslint-disable @typescript-eslint/naming-convention */
 export const blockStream = [
   {
     txCount: 0,

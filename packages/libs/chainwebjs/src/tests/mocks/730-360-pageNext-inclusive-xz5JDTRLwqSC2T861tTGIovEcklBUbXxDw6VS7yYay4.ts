@@ -1,6 +1,3 @@
-/* eslint-disable @rushstack/typedef-var */
-/* eslint-disable max-lines */
-/* eslint-disable @typescript-eslint/naming-convention */
 export const bigloadStart = {
   limit: 360,
   items: [

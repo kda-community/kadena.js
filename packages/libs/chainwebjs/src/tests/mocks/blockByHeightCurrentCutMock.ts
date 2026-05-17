@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable @rushstack/typedef-var */
 export const blockByHeightCurrentCutMock = {
   hashes: {
     '12': {

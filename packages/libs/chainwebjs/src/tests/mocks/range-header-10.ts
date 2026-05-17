@@ -1,5 +1,3 @@
-/* eslint-disable @rushstack/typedef-var */
-/* eslint-disable @typescript-eslint/naming-convention */
 
 export const rangeheaderhash10 = {
   limit: 10,

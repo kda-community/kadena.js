@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable @rushstack/typedef-var */
 import { rangeheaderhash10 } from './range-header-10';
 
 interface mockBlocks {
