@@ -48,7 +48,6 @@ export interface ITextareaFieldProps extends PickedAriaTextFieldProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type, react/function-component-definition
 export function TextareaFieldBase(
   props: ITextareaFieldProps,
   forwardedRef: ForwardedRef<ElementRef<'textarea'>>,

@@ -64,15 +64,10 @@ export default meta;
 type Story = StoryObj<StoryType>;
 
 const {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   display,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   flex,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   alignItems,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   flexDirection,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   justifyContent,
   ...defaultGridArgs
 } = defaultBoxArgs;

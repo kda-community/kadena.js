@@ -14,7 +14,6 @@ import {
   isNonContiguousSelectionModifier,
 } from '../../utils/aria';
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export interface AccordionItemAria {
   /** Props for the accordion item button. */
   buttonProps: ButtonHTMLAttributes<HTMLElement>;

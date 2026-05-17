@@ -132,7 +132,6 @@ export interface ITableRowGroupProps {
 }
 
 export function TableRowGroup({
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   type: Element,
   children,
   isStriped,

@@ -30,7 +30,6 @@ export const BreadcrumbsItem: FC<IBreadcrumbItemProps> = (props) => {
           ...itemProps,
           ...children.props,
           className: cn(linkClass, children.props.className),
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           ref: mergeRefs(ref, (children as any).ref),
           'data-current': isCurrent,
           'data-disabled': isDisabled,

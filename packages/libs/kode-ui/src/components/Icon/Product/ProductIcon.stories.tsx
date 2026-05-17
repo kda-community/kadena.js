@@ -43,13 +43,11 @@ export const Primary: Story = {
     size: 'md',
   },
   render: ({ icon, size }) => {
-    // eslint-disable-next-line @rushstack/security/no-unsafe-regexp
     const searchRegexp = new RegExp(icon, 'i');
     return (
       <div className={gridContainer}>
         {Object.entries(ProductIcon)
           .filter(([k]) => searchRegexp.test(k))
-          // eslint-disable-next-line @typescript-eslint/naming-convention
           .map(([k, Icon]) => (
             <div key={k} className={gridItem}>
               <Icon size={size} />

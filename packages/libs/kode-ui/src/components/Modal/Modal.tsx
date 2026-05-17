@@ -46,7 +46,6 @@ export const Modal: FC<IModalProps> = ({
           : cloneElement(children, {
               ...children.props,
               ...modalProps,
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               ref: mergeRefs(nodeRef, (children as any).ref),
             })}
       </div>
