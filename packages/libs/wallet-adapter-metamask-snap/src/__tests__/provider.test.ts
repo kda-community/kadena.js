@@ -8,9 +8,7 @@ describe('detectSnapProvider', () => {
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (globalThis as any).window = win;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (globalThis as any).window.kadena;
     vi.useRealTimers();
   });
@@ -22,7 +20,6 @@ describe('detectSnapProvider', () => {
       on: () => {},
       off: () => {},
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (globalThis as any).window.ethereum = fakeProvider;
 
     const result = await detectSnapProvider();
@@ -37,7 +34,6 @@ describe('detectSnapProvider', () => {
       on: () => {},
       off: () => {},
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (globalThis as any).window.ethereum = fakeProvider;
 
     const result = await detectSnapProvider();
