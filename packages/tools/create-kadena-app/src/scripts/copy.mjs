@@ -12,7 +12,7 @@ const copyFolder = async (src, dest) => {
       });
     }
 
-    const results = await copy(src, dest, {
+    await copy(src, dest, {
       dot: true,
     });
     console.log('Copy completed!');

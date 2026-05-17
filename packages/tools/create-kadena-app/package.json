@@ -31,7 +31,7 @@
     "cleanup": "rimraf dist lib",
     "copy": "node ./src/scripts/copy.mjs",
     "format": "prettier config src templates --write",
-    "lint": "eslint ./src --ext .js,.ts --fix",
+    "lint": "oxlint .",
     "start": "ts-node --transpile-only src/index.ts",
     "test": "echo 'No unit tests'",
     "test:integration": "rimraf test-* && cross-env NG_CLI_ANALYTICS=false ./scripts/generate-test.sh"
@@ -44,9 +44,8 @@
     "yaml": "~2.1.1"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
-    "@rushstack/eslint-config": "~3.6.9",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@types/cross-spawn": "~6.0.2",
     "@types/debug": "~4.1.12",
     "@types/heft-jest": "~1.0.6",
@@ -54,7 +53,7 @@
     "@types/node": "^20.12.7",
     "@types/rimraf": "~3.0.2",
     "cross-env": "~7.0.3",
-    "eslint": "^8.45.0",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "recursive-copy": "^2.0.14",
     "rimraf": "~5.0.1",
