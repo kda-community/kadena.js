@@ -1,4 +1,3 @@
-/* eslint-disable @rushstack/typedef-var */
 export const cutPeersMock = {
   limit: 64,
   items: [

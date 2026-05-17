@@ -53,11 +53,8 @@ const data1: IBufferHeader = {
     creationTime: 1671629220030544,
     parent: 'jUYuT5ucNcY9wOf77IhuEw1niP2n3h1G3MdR6H7PXAk',
     adjacents: {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       '5': '_Ab4g11kyl2rnqBqZjvO-CiSmlf_yErs4hos6YULeac',
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       '10': 'XAfmr3TLWnWI2T2yj2osSFpXa5PIVqBY_YSpjw_3plE',
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       '15': 'AXX9ocmKxjayaah6rK7rVIkpsm2AzGbtI1B2jf41vdM',
     },
     target: 's_sYJULAtv3xvS72SXJ4gFsUPWZcIGTMPQAAAAAAAAA',

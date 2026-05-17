@@ -38,7 +38,6 @@ export async function retryFetch(
     if (response.status === 200) {
       return response;
     } else if (
-      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
       (response.status === 404 && retry404) ||
       errorCodes.indexOf(response.status) !== -1
     ) {

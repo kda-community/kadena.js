@@ -156,7 +156,6 @@ describe('chainweb.transaction', () => {
         expect(v.height).toBeLessThanOrEqual(cur - 10);
         if (i > 0) {
           const prev = r[i - 1];
-          // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
           if (prev && prev.height) {
             expect(v.height).toBeGreaterThanOrEqual(prev.height);
           }

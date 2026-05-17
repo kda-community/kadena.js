@@ -82,7 +82,6 @@ export async function headers2blocks(
 
     missing = missing.filter((hdr, i) => {
       const pay = paysMap[hdr.payloadHash];
-      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
       if (pay) {
         result.push({
           header: hdr,
