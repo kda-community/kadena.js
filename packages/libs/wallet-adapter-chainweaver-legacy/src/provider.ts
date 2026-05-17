@@ -15,12 +15,10 @@ export interface IChainweaverLegacyProvider extends IProvider {}
  *
  * @param options - Options for detection (e.g. timeout, silent).
  * @returns A promise resolving to the Chainweaver Legacy provider or null.
- * @public
  */
 export async function detectChainweaverLegacyProvider(options?: {
   silent?: boolean;
   timeout?: number;
-  // eslint-disable-next-line @rushstack/no-new-null
 }): Promise<IChainweaverLegacyProvider | null> {
   const { silent, timeout } = options ?? {};
 

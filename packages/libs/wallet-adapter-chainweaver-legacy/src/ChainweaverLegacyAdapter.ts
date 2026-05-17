@@ -28,7 +28,6 @@ const connectSchema = v.object({
 });
 
 /**
- * @public
  * ChainweaverLegacyAdapter
  *
  * Overrides BaseWalletAdapter to map "kadena_*" calls to local Chainweaver endpoints
