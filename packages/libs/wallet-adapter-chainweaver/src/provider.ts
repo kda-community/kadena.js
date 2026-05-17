@@ -31,7 +31,6 @@ export interface IChainweaverProvider extends IProvider {
 export async function detectChainweaverProvider(options?: {
   appName?: string;
   walletUrl?: string;
-  // eslint-disable-next-line @rushstack/no-new-null
 }): Promise<IChainweaverProvider | null> {
   const walletOrigin = options?.walletUrl ?? 'https://wallet.kadena.io';
   const appName = options?.appName ?? 'dApp';
