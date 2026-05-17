@@ -15,7 +15,6 @@ describe('addSigner', () => {
 
   it('adds capability if presented', () => {
     expect(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       addSigner<any>('bob_public_key', (withCapability) => [
         withCapability('coin.GAS'),
       ])(),

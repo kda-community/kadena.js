@@ -8,7 +8,6 @@ export async function getBalance(
   chainId: ChainId,
 ): Promise<number> {
   const tr = Pact.builder
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .execution((Pact.modules as any).coin['get-balance'](account))
     .setMeta({ chainId: chainId })
     .setNetworkId(NetworkId.fast_development)

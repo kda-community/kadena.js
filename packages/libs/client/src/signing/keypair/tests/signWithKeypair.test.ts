@@ -40,7 +40,6 @@ describe('signWithKeypair', () => {
 
   it('throws when an error is returned', async () => {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       await (createSignWithKeypair as any)(undefined);
     } catch (e) {
       expect(e).toBeTruthy();

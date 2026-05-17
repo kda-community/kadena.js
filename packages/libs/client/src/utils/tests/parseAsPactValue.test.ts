@@ -46,7 +46,6 @@ describe('parseType', () => {
   });
 
   it('parse object', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     expect(parseAsPactValue({ test: { decimal: '2' } } as any)).toEqual(
       '{"test": 2.0}',
     );

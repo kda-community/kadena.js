@@ -130,7 +130,6 @@ export const mergeAllPollRequestPromises = <T extends object | string>(
   });
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const mapRecord = <T extends any, Mapper extends (item: T) => any>(
   object: Record<string, T>,
   mapper: Mapper,
@@ -141,7 +140,6 @@ export const mapRecord = <T extends any, Mapper extends (item: T) => any>(
 
 export const withCounter = <
   A extends unknown[],
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   F extends (counter: number, ...args: [...A]) => any,
 >(
   cb: F,

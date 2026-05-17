@@ -11,7 +11,6 @@ import { patchCommand } from './patchCommand';
 
 interface IAddSigner {
   (first: ISigner | ISigner[]): () => IPartialPactCommand;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <TCommand extends any>(
     first: ISigner | ISigner[],
     capability: (withCapability: ExtractType<TCommand>) => ICap[],
@@ -56,11 +55,9 @@ export const addSigner: IAddSigner = ((
           scheme,
           ...(address !== undefined ? { address } : {}),
           ...(clist !== undefined ? { clist } : {}),
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } as any;
       }),
     });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 }) as any;
 
 export type ExtractType<TCmdReducer> = TCmdReducer extends (cmd: {

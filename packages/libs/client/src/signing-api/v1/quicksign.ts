@@ -28,7 +28,6 @@ export interface IQuicksignSigner {
  * `sig` in {@link https://github.com/kadena-io/KIPs/blob/master/kip-0017.md | quicksign API}
  * @public
  */
-// eslint-disable-next-line @rushstack/no-new-null
 export type IQuicksignSig = string | null;
 
 /**
