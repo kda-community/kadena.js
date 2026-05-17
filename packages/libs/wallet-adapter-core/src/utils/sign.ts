@@ -27,13 +27,9 @@ const isQuicksignResponseOutcomes = (
  * @param transaction - The transaction to parse, either an IUnsignedCommand or ICommand.
  * @returns The parsed transaction as an IPactCommand.
  *
- * @remarks
  * This function extracts the `cmd` field from the provided transaction and parses it using JSON.parse.
  * It assumes that the `cmd` field contains a valid JSON string representing an IPactCommand.
- *
- * @public
  */
-
 export const parseTransactionCommand: (
   transaction: IUnsignedCommand | ICommand,
 ) => IPactCommand = (transaction) => {
@@ -46,11 +42,8 @@ export const parseTransactionCommand: (
  * @param parsedTransaction - The parsed transaction command to evaluate.
  * @returns True if the transaction payload contains the 'exec' property, indicating an execution command.
  *
- * @remarks
  * This function checks if the `payload` property of the parsed transaction has an `exec` key.
  * If true, it narrows the type of the transaction to include IExecutionPayloadObject.
- *
- * @public
  */
 export function isExecCommand(
   parsedTransaction: IPactCommand,
@@ -66,12 +59,9 @@ export function isExecCommand(
  *
  * @throws Will throw an error if the provided transaction is not an execution command.
  *
- * @remarks
  * This function first verifies that the transaction is an execution command using the isExecCommand type guard.
  * If the verification passes, it extracts relevant properties such as code, data, capabilities (caps),
  * nonce, chainId, gasLimit, gasPrice, sender, and ttl, transforming the transaction into a signing request.
- *
- * @public
  */
 export const convertSignRequest = (
   parsedTransaction: IPactCommand,
@@ -114,12 +104,9 @@ export const convertSignRequest = (
  * @param tx - The transaction to check.
  * @returns True if the transaction already conforms to ISigningRequestPartial.
  *
- * @remarks
  * This helper function verifies whether the provided transaction contains the required properties
  * (`code` and `caps`) that define an ISigningRequestPartial. It is used to avoid unnecessary
  * transformations when the transaction is already in the desired format.
- *
- * @public
  */
 function isSigningRequestPartial(
   tx: IUnsignedCommand | ICommand | ISigningRequestPartial,
@@ -137,14 +124,11 @@ function isSigningRequestPartial(
  *
  * @returns An ISigningRequestPartial object ready for signing.
  *
- * @remarks
  * This function first checks if the provided transaction is already in the ISigningRequestPartial format.
  * If so, it returns the transaction immediately, avoiding any redundant transformation. Otherwise,
  * it parses the transaction using `parseTransactionCommand` and transforms it via `signRequest`.
  *
  * It is preferred to use the `quicksign` function for signing when possible.
- *
- * @public
  */
 
 export function prepareSignCmd(
@@ -170,13 +154,10 @@ export function prepareSignCmd(
  *
  * @throws \{Error\} If no transaction is provided or if there is a network mismatch between transactions.
  *
- * @remarks
  * The function ensures that all transactions belong to the same network. It extracts the
  * necessary command data and signatures from each transaction, building a list of commands
  * for quick signing. This is useful when you need to prepare one or more transactions for
  * processing via a quick-sign mechanism.
- *
- * @public
  */
 export const prepareQuickSignCmd = async (
   transactionList: IUnsignedCommand | Array<IUnsignedCommand | ICommand>,
@@ -229,13 +210,10 @@ export const prepareQuickSignCmd = async (
  * @throws Will throw an error if the response is missing, indicates a failure,
  *         if the responses property is not an array, or if any transaction hash does not match.
  *
- * @remarks
  * This function validates the quick sign response by ensuring it has a successful status and that
  * the response contains an array of signed command outcomes. For each successful outcome, it verifies
  * that the outcome hash matches the corresponding transaction hash. The function then uses the
  * `addSignatures` helper to add the received signatures to the respective transaction.
- *
- * @public
  */
 export const finalizeQuickSignTransaction = (
   response: IQuicksignResponse,
