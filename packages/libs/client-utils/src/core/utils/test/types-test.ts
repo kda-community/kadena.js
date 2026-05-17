@@ -2,10 +2,6 @@
  * This file is used to test the type utilities in types.ts. It is not meant to be run.
  */
 
-/* eslint-disable @kadena-dev/no-eslint-disable */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/naming-convention */
 
 import type { Assert, First, IfAny, Prettify, Tail } from '../types';
 

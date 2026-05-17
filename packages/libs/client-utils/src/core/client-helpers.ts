@@ -1,5 +1,3 @@
-/* eslint-disable @kadena-dev/no-eslint-disable */
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { ChainId } from '@kadena/client';
 
 import { crossChain } from './cross-chain';

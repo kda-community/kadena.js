@@ -42,7 +42,6 @@ interface ITemplateTransaction {
   meta?: IPublicMeta;
   publicMeta?: IPublicMeta;
   networkId: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: Record<string, any>;
   signers: Array<{ public: string }>;
   nonce: string;
@@ -161,13 +160,11 @@ export const convertTemplateTxToPactCommand = (
 
   const execPayload: IExecutionPayloadObject = {
     exec: {
-      // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
       data: data ? data : {},
       code: kdaToolTx.code!,
     },
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { publicMeta, meta, code, ...kdaToolTxWithoutMeta } = kdaToolTx;
   const metadata = meta || publicMeta || ({} as IPublicMeta);
 
@@ -227,7 +224,6 @@ function publicToPubkey(value: { public: string }): {
   pubKey: string;
 } {
   const pubKey = value.public;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   delete (value as any).public;
   return {
     ...value,

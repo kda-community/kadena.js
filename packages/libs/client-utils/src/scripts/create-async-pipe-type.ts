@@ -39,9 +39,6 @@ function createAsyncPipeType(maxLength: number) {
  * THIS FILE IS GENERATED. DO NOT EDIT.
  * check ../scripts/create-async-pipe-type.ts
  * */
-// eslint-disable-next-line @kadena-dev/no-eslint-disable
-/* eslint-disable max-lines */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Any = any;
 type Func<I extends Any[], O, EVENTS = never> = ((...args: I) => O) & {_event_type?: EVENTS};
 type PipeFunction<I, O, EVENTS = never> = ((arg: Awaited<I>)=> O) & {_event_type?: EVENTS};
