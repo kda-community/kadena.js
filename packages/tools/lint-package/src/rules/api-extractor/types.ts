@@ -17,7 +17,7 @@ const rule: Rule = ({ dir, file, pkg }) => {
         `API Extractor is enabled, "types" in package.json should be "${types}"`,
       ]);
     }
-  } catch (error) {
+  } catch {
     // Silently failing here, since packages may not use API Extractor
     // console.warn('Missing config/api-extractor.json');
   }
