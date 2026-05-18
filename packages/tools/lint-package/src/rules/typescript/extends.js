@@ -1,6 +1,6 @@
 const tsConfigBasePath =
   './node_modules/@kadena-dev/heft-rig/tsconfig-base.json';
-const rule = ({ dir, file, tsConfig }) => {
+const rule = ({ tsConfig }) => {
   const issues = [];
   if (tsConfig.extends !== tsConfigBasePath) {
     issues.push(['warn', 'Incorrect "extends" value']);

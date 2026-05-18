@@ -1,4 +1,4 @@
-import JSONC from 'jsonc-parser';
+import { parse } from 'jsonc-parser';
 import fs from 'node:fs/promises';
 import { dirname, extname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -12,8 +12,8 @@ async function importModules(dir: string) {
   const moduleFiles = files.filter((file) => extname(file) === '.js');
   const modules: Rules = [];
   for (const file of moduleFiles) {
-    const fullPath = join(dir, file);
-    const module = await import(pathToFileURL(fullPath).href);
+    // oxlint-disable-next-line next/no-assign-module-variable
+    const module = await import(new URL(join(dir, file), 'file://').toString());
     modules.push(module.default);
   }
   return modules;
@@ -23,7 +23,7 @@ export const loadJSON = async <T>(filePath: string): Promise<T> =>
   JSON.parse(await fs.readFile(filePath, 'utf-8'));
 
 export const loadJSONC = async <T>(filePath: string): Promise<T> =>
-  JSONC.parse(await fs.readFile(filePath, 'utf-8'));
+  parse(await fs.readFile(filePath, 'utf-8'));
 
 export const loadContents = async (filePath: string) =>
   await fs.readFile(filePath, 'utf-8');
