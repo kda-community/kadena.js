@@ -2024,12 +2024,6 @@ importers:
       '@kadena-dev/e2e-base':
         specifier: workspace:*
         version: link:../e2e-base
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
-      '@kadena-dev/eslint-plugin':
-        specifier: workspace:*
-        version: link:../../tools/eslint-plugin
       '@kadena-dev/lint-package':
         specifier: workspace:*
         version: link:../../tools/lint-package
@@ -2042,21 +2036,15 @@ importers:
       '@kadena/types':
         specifier: workspace:*
         version: link:../../libs/types
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@8.57.0)(typescript@5.8.3)
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
-      eslint-import-resolver-typescript:
-        specifier: 3.5.5
-        version: 3.5.5(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.8.3))(eslint-plugin-import@2.32.0)(eslint@8.57.0)
-      eslint-plugin-playwright:
-        specifier: 1.6.2
-        version: 1.6.2(eslint-plugin-jest@26.9.0(eslint@8.57.0)(typescript@5.8.3))(eslint@8.57.0)
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: ~3.2.5
         version: 3.2.5
@@ -2102,7 +2090,7 @@ importers:
         version: 8.57.0
       eslint-import-resolver-typescript:
         specifier: 3.5.5
-        version: 3.5.5(eslint-plugin-import@2.32.0)(eslint@8.57.0)
+        version: 3.5.5(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.8.3))(eslint-plugin-import@2.32.0)(eslint@8.57.0)
       eslint-plugin-playwright:
         specifier: 1.6.2
         version: 1.6.2(eslint-plugin-jest@26.9.0(eslint@8.57.0)(typescript@5.8.3))(eslint@8.57.0)
