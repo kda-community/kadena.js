@@ -5,7 +5,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "oxlint .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -29,13 +29,13 @@
     "zod": "~3.23.0"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@rushstack/eslint-config": "~3.6.9",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "~16.3.0",
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.1",
     "@vitejs/plugin-react": "^4.3.1",
+    "oxlint": "1.63.0",
     "typescript": "5.4.5",
     "vite": "^5.4.8",
     "vitest": "^1.6.0"
