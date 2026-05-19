@@ -31,7 +31,6 @@ export default builder.node(
       }),
     },
     isTypeOf(source) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return (source as any).__typename === FungibleChainAccountName;
     },
     async loadOne({ chainId, fungibleName, accountName }) {

@@ -27,7 +27,6 @@ export default builder.node(
       parse: (id) => id,
     },
     isTypeOf(source) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return (source as any).__typename === NonFungibleAccountName;
     },
     async loadOne(accountName) {

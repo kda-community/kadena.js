@@ -50,7 +50,6 @@ interface ITransferQueryConditions {
   take: number;
   skip: number;
   cursor?: {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     blockHash_chainId_orderIndex_moduleHash_requestKey?: {
       blockHash: string;
       chainId: number | bigint;
@@ -499,7 +498,6 @@ export default builder.node(
       }),
     },
     isTypeOf(source) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return (source as any).__typename === FungibleAccountName;
     },
 

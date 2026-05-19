@@ -1,6 +1,5 @@
 import { nullishOrEmpty } from './nullish-or-empty';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function validateObjectProperties<T extends Record<string, any>>(
   obj: T,
   typeName: string,
