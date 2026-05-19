@@ -62,14 +62,12 @@ export async function createAndTransferFund({
     const [keyPair] = kadenaKeyPairsFromRandom(1);
     const transaction = Pact.builder
       .execution(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (Pact as any).modules[FAUCET_CONTRACT]['create-and-request-coin'](
           accountName,
           readKeyset(KEYSET_NAME),
           toPactDecimal(amount),
         ),
       )
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .addSigner(keyPair.publicKey, (withCapability: any) => [
         withCapability(
           `${FAUCET_CONTRACT}.GAS_PAYER`,

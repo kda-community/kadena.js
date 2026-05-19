@@ -93,7 +93,6 @@ const MarkdownPage: React.FC = () => {
               return undefined;
             }
 
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const element = domNode as any;
 
             if (element.name === 'hr') {
@@ -130,7 +129,6 @@ const MarkdownPage: React.FC = () => {
               element.name === 'pre' &&
               element.children[0]?.name === 'code'
             ) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               const codeElement = element.children[0] as any;
               const className = codeElement.attribs.class || '';
               const language =
@@ -178,7 +176,6 @@ const MarkdownPage: React.FC = () => {
               const childrenContent = parse(
                 domToString(element.children),
                 options,
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
               ) as any;
 
               return (
@@ -206,7 +203,6 @@ const MarkdownPage: React.FC = () => {
     };
 
     processMarkdown();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -228,7 +224,7 @@ const MarkdownPage: React.FC = () => {
             .map(([key, value]) => ` ${key}="${value}"`)
             .join('');
           const childrenHtml = child.children
-            ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            ?
               domToString(child.children as any)
             : '';
           return `<${child.name}${attrs}>${childrenHtml}</${child.name}>`;

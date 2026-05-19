@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const transformPactDate = (val: any): Date | null => {
   if (!val) return null;
 
