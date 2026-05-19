@@ -685,6 +685,9 @@ importers:
         specifier: ^19.1.1
         version: 19.1.1(react@19.1.1)
     devDependencies:
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
@@ -694,12 +697,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.1.1
         version: 19.1.7(@types/react@19.1.9)
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
-      eslint-config-next:
-        specifier: 13.4.5
-        version: 13.4.5(eslint@8.57.0)(typescript@5.4.5)
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       postcss:
         specifier: ^8
         version: 8.4.31
