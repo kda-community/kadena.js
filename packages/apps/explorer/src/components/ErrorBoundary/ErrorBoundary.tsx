@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
 import { NetworkContextProvider } from '@/context/networksContext';
 import type { NextRouter } from 'next/router';
 import { withRouter } from 'next/router';

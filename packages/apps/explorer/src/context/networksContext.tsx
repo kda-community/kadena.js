@@ -25,7 +25,6 @@ import React, {
 } from 'react';
 
 // next/apollo-link bug: https://github.com/dotansimha/graphql-yoga/issues/2194
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { YogaLink } = require('@graphql-yoga/apollo-link');
 
 const cache = new InMemoryCache({
@@ -170,7 +169,6 @@ const NetworkContextProvider = (props: {
   useEffect(() => {
     if (!activeNetwork || !activeNetwork.graphUrl) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     checkIfNetworkAvailable(activeNetwork.graphUrl, activeNetwork.headers);
   }, [activeNetwork]);
 

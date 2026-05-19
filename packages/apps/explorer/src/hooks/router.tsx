@@ -25,7 +25,6 @@ export const useRouter = () => {
       const networkId = router.query.networkId;
       const network = innerNetworks.find((n) => n.networkId === networkId);
       if (network) {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         router.replace(
           createHref(
             network,
@@ -35,7 +34,6 @@ export const useRouter = () => {
         );
         return;
       } else {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         router.replace(
           createHref(
             innerNetworks.find((x) => x.networkId === 'mainnet')!,
@@ -80,7 +78,6 @@ export const useRouter = () => {
         Cookies.remove(selectedNetworkKey);
       }
 
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.replace(
         createHref(
           networks.find((x) => x.networkId === 'mainnet')!,

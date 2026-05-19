@@ -31,7 +31,6 @@ export const removeNetworkFromPath = (href: string, networks: INetwork[]) => {
     .filter((v) => v);
 
   if (networks.find((v) => v.slug === arr[0])) {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [first, ...restArr] = arr;
     return `/${restArr.join('/')}${searchParams}`;
   }

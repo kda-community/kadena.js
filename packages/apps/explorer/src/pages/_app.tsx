@@ -20,7 +20,6 @@ import Head from 'next/head';
 import type { ComponentType } from 'react';
 import React from 'react';
 
-// eslint-disable-next-line @typescript-eslint/naming-convention, react/function-component-definition
 export default function App({
   Component,
   pageProps,
