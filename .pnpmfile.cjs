@@ -23,14 +23,7 @@ const ALLOWED_DEPENDENCIES = {
  *  }
  * }
  */
-const RESOLUTIONS = {
-  '@rushstack/eslint-config': {
-    '@typescript-eslint/eslint-plugin': '6.21.0',
-    '@typescript-eslint/utils': '6.21.0',
-    '@typescript-eslint/parser': '6.21.0',
-    '@typescript-eslint/typescript-estree': '6.21.0',
-  },
-};
+const RESOLUTIONS = {};
 
 function readPackage(pkg, context) {
   // if it's in one of the two constants
