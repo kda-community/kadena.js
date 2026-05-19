@@ -10,7 +10,6 @@ import { AccountProvider } from '../AccountProvider/AccountProvider';
 import { TokenProvider } from '../TokenProvider/TokenProvider';
 
 // next/apollo-link bug: https://github.com/dotansimha/graphql-yoga/issues/2194
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { YogaLink } = require('@graphql-yoga/apollo-link');
 
 const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({

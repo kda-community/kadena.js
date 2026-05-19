@@ -55,7 +55,6 @@ export const TokenProvider: FC<PropsWithChildren> = ({ children }) => {
   const storageListener = useCallback(
     (event: StorageEvent) => {
       if (event.key === 'mintingTokens') {
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         setMintingTokens(getMintingTokensFromLocalStorage());
       }
     },
@@ -63,7 +62,6 @@ export const TokenProvider: FC<PropsWithChildren> = ({ children }) => {
   );
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     setMintingTokens(getMintingTokensFromLocalStorage());
     window.addEventListener('storage', storageListener);
     return () => {

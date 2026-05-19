@@ -127,7 +127,6 @@ export const ProofOfUsProvider: FC<IProps> = ({ children, proofOfUsId }) => {
   const pingSignee = async () => {
     const signee = signees?.find((s) => s.accountName === account?.accountName);
     if (!signee) return;
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     await updateSigneePing(signee);
   };
 

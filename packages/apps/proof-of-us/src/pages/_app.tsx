@@ -1,7 +1,6 @@
 // load global styles from @kadena/kode-ui
 import '@kadena/kode-ui/global';
 
-// eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@/components/Analytics/Analytics';
 import { CookieConsent } from '@/components/CookieConsent/CookieConsent';
 import { Providers } from '@/components/Providers/Providers';
@@ -14,7 +13,6 @@ import type { FC } from 'react';
 import React from 'react';
 
 export const MyApp = ({
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   Component,
   pageProps,
   router,
