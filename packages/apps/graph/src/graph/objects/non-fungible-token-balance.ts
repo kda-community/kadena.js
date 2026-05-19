@@ -21,7 +21,6 @@ export default builder.node(
       }),
     },
     isTypeOf(source) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return (source as any).__typename === NonFungibleTokenBalanceName;
     },
     async loadOne({ tokenId, accountName, chainId }) {

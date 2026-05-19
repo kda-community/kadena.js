@@ -57,7 +57,6 @@ new Command()
       const result = [];
 
       // Calculate statistics for each query
-      // eslint-disable-next-line guard-for-in
       for (const query in queryStats) {
         const durations = queryStats[query].sort((a, b) => a - b);
         const count = durations.length;

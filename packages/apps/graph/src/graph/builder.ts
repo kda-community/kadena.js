@@ -65,7 +65,6 @@ interface IDefaultTypesExtension {
 
 export interface IContext {
   req: IncomingMessage;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extensions: any;
 }
 
@@ -184,6 +183,5 @@ const SCALARS = [
 
 // add the custom scalars
 SCALARS.forEach(([name, resolver]) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   builder.scalarType(name, resolver as ScalarTypeResolver<any, any>);
 });

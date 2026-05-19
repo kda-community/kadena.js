@@ -4,10 +4,8 @@ import { networkData } from '@utils/network';
 import { request } from 'https';
 
 export class MempoolError extends Error {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public mempoolError: any;
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public constructor(message: string, mempoolError?: any) {
     super(message);
     this.mempoolError = mempoolError;
@@ -64,7 +62,6 @@ export async function mempoolGetPending(): Promise<unknown> {
 export async function mempoolLookup(
   hash: string,
   chainId?: string,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): Promise<any> {
   let chainsToCheck = networkData.chainIds;
 
@@ -154,7 +151,6 @@ export async function getMempoolTransactionSigners(
     const mempoolTx = JSON.parse(mempoolData[0].contents);
     mempoolTx.cmd = JSON.parse(mempoolTx.cmd);
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     mempoolTx.cmd.signers = mempoolTx.cmd.signers.map((signer: any) => ({
       publicKey: signer.pubKey,
       scheme: signer.scheme,

@@ -60,7 +60,6 @@ export async function getNonFungibleAccountDetails(
     }
 
     const result =
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (commandResult.result as unknown as any).data as unknown as any;
 
     if (typeof result.balance === 'object') {

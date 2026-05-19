@@ -19,7 +19,6 @@ export default builder.prismaNode(Prisma.ModelName.Signer, {
       type: ['TransactionCapability'],
       resolve: (parent) => {
         return (
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (parent.capabilities as Array<{ args: any[]; name: string }>).map(
             ({ name, args }) => ({
               name,

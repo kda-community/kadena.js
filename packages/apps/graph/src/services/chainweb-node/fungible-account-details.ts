@@ -31,7 +31,6 @@ export async function getFungibleAccountDetails(
       chainId as ChainId,
       dotenv.NETWORK_HOST,
       fungibleName,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     )) as any;
 
     if (typeof result.balance === 'object') {

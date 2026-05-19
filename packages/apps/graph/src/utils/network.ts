@@ -38,7 +38,6 @@ export async function initializeNetworkConfig(
     );
   }
 
-  // eslint-disable-next-line require-atomic-updates
   networkData = {
     networkId: data.nodeVersion,
     apiVersion: data.nodeApiVersion,

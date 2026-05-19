@@ -259,7 +259,6 @@ export async function getCodeFiles({
           join(localConfigData.templatePath, file),
           'utf8',
         );
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const yamlContent = yaml.load(fileContent) as any;
 
         if (!yamlContent?.codeFile) {
@@ -332,7 +331,6 @@ export async function updateTemplateFilesWithCodeFile(
           join(templateDirectory, templateFile),
           'utf8',
         );
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const yamlContent = yaml.load(templateFileContent) as any;
 
         if (!yamlContent?.codeFile) {

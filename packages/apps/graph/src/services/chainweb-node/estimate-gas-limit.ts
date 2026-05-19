@@ -48,22 +48,16 @@ type StringifiedCommandInput = IBaseInput & {
 
 type FullCommandInput = IBaseInput & {
   type: 'full-command';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   meta: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   signers: any[];
   networkId?: string;
 };
 
 type PartialCommandInput = IBaseInput & {
   type: 'partial-command';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   meta?: any;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   signers?: any[];
   chainId?: ChainId;
   networkId?: string;
@@ -71,7 +65,6 @@ type PartialCommandInput = IBaseInput & {
 
 type PayloadInput = IBaseInput & {
   type: 'payload';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload: any;
   chainId: ChainId;
   networkId?: string;

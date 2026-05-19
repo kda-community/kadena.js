@@ -4,7 +4,6 @@ import { handleStreamOrSingleExecutionResult } from 'graphql-yoga';
 
 export const complexityPlugin = (schema: GraphQLSchema) => ({
   onExecute: () => ({
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onExecuteDone(options: any) {
       handleStreamOrSingleExecutionResult(
         options,

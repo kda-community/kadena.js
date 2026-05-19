@@ -72,7 +72,6 @@ export const getTokenInfo = async (
     },
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const tokenInfo = await dirtyReadClient<any>(config)(command).execute();
 
   if (!tokenInfo) {
