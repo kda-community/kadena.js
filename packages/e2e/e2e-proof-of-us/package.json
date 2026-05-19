@@ -10,7 +10,7 @@
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
-    "lint:src": "eslint . --ext .js,.ts",
+    "lint:src": "oxlint .",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test  --ui"
   },
@@ -19,17 +19,13 @@
   },
   "devDependencies": {
     "@kadena-dev/e2e-base": "workspace:*",
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/eslint-plugin": "workspace:*",
     "@kadena-dev/lint-package": "workspace:*",
     "@kadena-dev/markdown": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
     "@kadena/types": "workspace:*",
-    "@rushstack/eslint-config": "~3.6.9",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@types/node": "^20.12.7",
-    "eslint": "^8.45.0",
-    "eslint-import-resolver-typescript": "3.5.5",
-    "eslint-plugin-playwright": "1.6.2",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5"
   }
 }
