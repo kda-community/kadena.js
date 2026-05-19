@@ -75,7 +75,6 @@ export const useTransfers = () => {
       { signal: controller.signal },
     );
     return () => controller.abort();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refetch, transfersResponse, wallet.account?.name]);
 
   useEffect(() => {
@@ -98,7 +97,6 @@ export const useTransfers = () => {
       { signal: controller.signal },
     );
     return () => controller.abort();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pendingTransfers, refetch, removePendingTransfer]);
 
   return {

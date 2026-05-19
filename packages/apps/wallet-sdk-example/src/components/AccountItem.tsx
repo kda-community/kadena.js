@@ -58,7 +58,6 @@ export const AccountItem: React.FC<AccountItemProps> = ({
       fungible: wallet.selectedFungible,
       chainIds: [wallet.selectedChain],
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     account.name,
     wallet.selectedNetwork,

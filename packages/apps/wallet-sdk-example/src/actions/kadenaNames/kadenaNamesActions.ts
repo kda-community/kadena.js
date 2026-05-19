@@ -34,7 +34,6 @@ export const fetchSaleState = async (
 
   try {
     const transaction = Pact.builder
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .execution((Pact as any).modules[module]['get-sale-state'](name))
       .setMeta({
         chainId,
@@ -72,7 +71,6 @@ export const fetchNameInfo = async (
 
   try {
     const transaction = Pact.builder
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .execution((Pact as any).modules[module]['get-name-info'](formattedName))
       .setMeta({
         chainId,
@@ -143,7 +141,6 @@ export const fetchPriceByPeriod = async (
 
   try {
     const transaction = Pact.builder
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .execution((Pact as any).modules[module]['get-price']({ int: days }))
       .setMeta({
         chainId,
@@ -179,7 +176,6 @@ export const createRegisterNameTransaction = (
 
   const transaction = Pact.builder
     .execution(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (Pact as any).modules[module].register(
         owner,
         address,
@@ -188,7 +184,6 @@ export const createRegisterNameTransaction = (
         '',
       ),
     )
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .addSigner(account, (withCapability: any) => [
       withCapability('coin.GAS'),
       withCapability('coin.TRANSFER', owner, VAULT, price),

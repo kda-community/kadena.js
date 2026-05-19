@@ -56,7 +56,6 @@ export const useAddressToName = (refreshKey = 0, selectedNetwork: string) => {
     return () => {
       isCurrent = false;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedAddress, refreshKey, selectedNetwork]);
 
   return {
@@ -122,7 +121,6 @@ export const useNameToAddress = (refreshKey = 0, selectedNetwork: string) => {
     return () => {
       isCurrent = false;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedName, refreshKey, selectedNetwork]);
 
   return {

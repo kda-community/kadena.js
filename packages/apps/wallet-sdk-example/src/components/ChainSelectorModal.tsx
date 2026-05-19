@@ -33,7 +33,6 @@ export const ChainSelectionModal: React.FC<ChainSelectionModalProps> = ({
   const trackGetChains = useFunctionTracker('walletSdk.getChains');
   useEffect(() => {
     trackGetChains.setArgs(wallet.selectedNetwork);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wallet.selectedNetwork]);
   /* -- End demo ---------------*/
 

@@ -99,7 +99,6 @@ export const Transfer = () => {
       });
     }
     trackGasEstimate.setArgs(null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     wallet.account,
     amount,
