@@ -2029,12 +2029,6 @@ importers:
       '@kadena-dev/e2e-base':
         specifier: workspace:*
         version: link:../e2e-base
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
-      '@kadena-dev/eslint-plugin':
-        specifier: workspace:*
-        version: link:../../tools/eslint-plugin
       '@kadena-dev/lint-package':
         specifier: workspace:*
         version: link:../../tools/lint-package
@@ -2047,30 +2041,27 @@ importers:
       '@kadena/types':
         specifier: workspace:*
         version: link:../../libs/types
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@playwright/test':
         specifier: ^1.45.3
         version: 1.46.1
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@8.57.0)(typescript@5.8.3)
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
       directory-tree:
         specifier: 3.5.1
         version: 3.5.1
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
-      eslint-import-resolver-typescript:
-        specifier: 3.5.5
-        version: 3.5.5(eslint-plugin-import@2.32.0)(eslint@8.57.0)
       eslint-plugin-playwright:
         specifier: 1.6.2
-        version: 1.6.2(eslint-plugin-jest@26.9.0(eslint@8.57.0)(typescript@5.8.3))(eslint@8.57.0)
+        version: 1.6.2(eslint-plugin-jest@26.9.0(eslint@9.36.0(jiti@1.21.6))(typescript@5.8.3))(eslint@9.36.0(jiti@1.21.6))
       graphql-ws:
         specifier: ^5.16.0
         version: 5.16.0(graphql@16.8.2)
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       parse-md:
         specifier: 2.0.5
         version: 2.0.5
