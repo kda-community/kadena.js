@@ -155,14 +155,11 @@ function mapParameters(
       <Grid>
         {(JSON.parse(parameters) as unknown[]).map((param) => {
           if (typeof param === 'object') {
-            // eslint-disable-next-line react/jsx-key
             return <Text variant="code">{JSON.stringify(param)}</Text>;
           }
           if (typeof param === 'string') {
-            // eslint-disable-next-line react/jsx-key
             return <Text variant="code">{param}</Text>;
           }
-          // eslint-disable-next-line react/jsx-key
           return <Text variant="code">{JSON.stringify(param)}</Text>;
         })}
       </Grid>

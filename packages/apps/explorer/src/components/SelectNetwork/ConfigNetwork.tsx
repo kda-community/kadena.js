@@ -170,7 +170,6 @@ export const ConfigNetwork: FC<IProps> = ({ handleOpen }) => {
   useLayoutEffect(() => {
     if (network.isNew) return;
     setGraphUrl(network?.graphUrl);
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     validateNetwork(network?.graphUrl, network?.headers);
   }, [network.slug]);
 
@@ -232,7 +231,6 @@ export const ConfigNetwork: FC<IProps> = ({ handleOpen }) => {
                   onChange={handleChangeGraphUrl}
                   onBlur={(e) => {
                     e.preventDefault();
-                    // eslint-disable-next-line @typescript-eslint/no-floating-promises
                     validateNetwork('');
                   }}
                   isRequired

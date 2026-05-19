@@ -94,30 +94,25 @@ const SearchContextProvider = (props: {
     setOldSearchOption(searchOption);
 
     if (searchOption === SEARCHOPTIONS.ACCOUNT) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.push(`/account/${searchQuery}`);
       return;
     }
 
     if (searchOption === SEARCHOPTIONS.EVENT) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.push(`/event/${searchQuery}`);
       return;
     }
 
     if (searchOption === SEARCHOPTIONS.REQUESTKEY) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.push(`/transaction/${searchQuery}`);
       return;
     }
 
     if (searchOption === SEARCHOPTIONS.BLOCKHEIGHT) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.push(`/height/${searchQuery}`);
       return;
     }
     if (searchOption === SEARCHOPTIONS.BLOCKHASH) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.push(`/block/${searchQuery}`);
       return;
     }

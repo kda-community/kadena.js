@@ -52,7 +52,6 @@ export const EventFilter: FC<IProps> = ({ onSubmit }) => {
 
     const route = router.asPath.split('?');
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     router.push(`${route[0]}?${queryString}`);
   };
 
@@ -96,7 +95,6 @@ export const EventFilter: FC<IProps> = ({ onSubmit }) => {
       setValues({});
 
       const route = router.asPath.split('?');
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.push(`${route[0]}`);
     },
     [router.asPath],

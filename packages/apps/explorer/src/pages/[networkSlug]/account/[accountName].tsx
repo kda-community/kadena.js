@@ -95,7 +95,6 @@ const Account: FC = () => {
   const handleSelectedTab = (tab: Key): void => {
     setSelectedTab(tab as string);
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     router.replace(`#${tab}`);
   };
 

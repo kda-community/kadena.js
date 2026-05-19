@@ -13,7 +13,6 @@ export const Analytics: FC = () => {
     if (!TRACKING_ID) return;
 
     gtag('config', TRACKING_ID, {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       send_page_view: false, //manually send page views to have full control
     });
     gtag('event', 'page_view', {

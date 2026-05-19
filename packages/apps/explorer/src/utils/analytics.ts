@@ -1,6 +1,5 @@
 import { COOKIE_CONSENT_KEY } from '@/components/CookieConsent/CookieConsent';
 
-// eslint-disable-next-line @kadena-dev/typedef-var
 export const EVENT_NAMES = {
   'click:search': 'click:search',
   'click:validate_network': 'click:validate_network',
