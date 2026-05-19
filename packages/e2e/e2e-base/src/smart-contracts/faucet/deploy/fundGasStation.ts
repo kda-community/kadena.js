@@ -11,7 +11,6 @@ import { transferFunds } from '../../../helpers/client-utils/transfer.helper';
 
 export const fundGasStation = async ({
   chainId,
-  upgrade,
 }: {
   chainId: ChainwebChainId;
   upgrade: boolean;

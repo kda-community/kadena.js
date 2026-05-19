@@ -20,16 +20,16 @@ export const test = baseTest.extend<{
   docsApp: async ({ page }, use) => {
     await use(new DocsAppIndex(page));
   },
-  proofOfusApp: async ({}, use) => {
+  proofOfusApp: async (_, use) => {
     await use(new ProofOfUsAppIndex());
   },
-  spirekeyApp: async ({}, use) => {
+  spirekeyApp: async (_, use) => {
     await use(new SpireKeyIndex());
   },
-  chainweaverApp: async ({}, use) => {
+  chainweaverApp: async (_, use) => {
     await use(new ChainweaverAppIndex());
   },
-  RWADemoApp: async ({}, use) => {
+  RWADemoApp: async (_, use) => {
     await use(new RWADemoAppIndex());
   },
 });

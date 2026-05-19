@@ -1927,16 +1927,7 @@ importers:
       '@kadena/pactjs-cli':
         specifier: workspace:*
         version: link:../../tools/pactjs-cli
-      eslint-import-resolver-typescript:
-        specifier: 3.5.5
-        version: 3.5.5(eslint-plugin-import@2.32.0)(eslint@8.57.0)
     devDependencies:
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
-      '@kadena-dev/eslint-plugin':
-        specifier: workspace:*
-        version: link:../../tools/eslint-plugin
       '@kadena-dev/lint-package':
         specifier: workspace:*
         version: link:../../tools/lint-package
@@ -1946,12 +1937,12 @@ importers:
       '@kadena/types':
         specifier: workspace:*
         version: link:../../libs/types
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@playwright/test':
         specifier: ^1.45.3
         version: 1.46.1
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@8.57.0)(typescript@5.8.3)
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
@@ -1961,12 +1952,12 @@ importers:
       dotenv:
         specifier: ~16.4.5
         version: 16.4.5
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
       eslint-plugin-playwright:
-        specifier: 1.6.2
-        version: 1.6.2(eslint-plugin-jest@26.9.0(eslint@8.57.0)(typescript@5.8.3))(eslint@8.57.0)
+        specifier: 2.10.3
+        version: 2.10.3(eslint@9.36.0(jiti@1.21.6))
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: ~3.2.5
         version: 3.2.5
@@ -4358,9 +4349,6 @@ importers:
       '@npmcli/package-json':
         specifier: ~4.0.0
         version: 4.0.1
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@9.36.0(jiti@1.21.6))(typescript@5.4.5)
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
@@ -16103,6 +16091,12 @@ packages:
       eslint-plugin-jest:
         optional: true
 
+  eslint-plugin-playwright@2.10.3:
+    resolution: {integrity: sha512-68WQsrFlE3NRu0KcM/J1GaiejxGVprU0EU2Er8arMALZcTZnsLub9/LsOT0XO7IDfk8iT5lgz6anIQVpfTHz2A==}
+    engines: {node: '>=16.9.0'}
+    peerDependencies:
+      eslint: '>=8.40.0'
+
   eslint-plugin-prettier@4.2.5:
     resolution: {integrity: sha512-9Ni+xgemM2IWLq6aXEpP2+V/V30GeA/46Ar629vcMqVPodFFWC9skHu/D1phvuqtS8bJCFnNf01/qcmqYEwNfg==}
     engines: {node: '>=12.0.0'}
@@ -16985,6 +16979,10 @@ packages:
 
   globals@15.13.0:
     resolution: {integrity: sha512-49TewVEz0UxZjr1WYYsWpPrhyC/B/pA8Bq0fUmet2n+eR7yn0IvNzNaoBwnK6mdkzcN+se7Ez9zUgULTz2QH4g==}
+    engines: {node: '>=18'}
+
+  globals@17.6.0:
+    resolution: {integrity: sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -32702,15 +32700,13 @@ snapshots:
     transitivePeerDependencies:
       - '@parcel/core'
 
-  '@parcel/cache@2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)':
+  '@parcel/cache@2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))':
     dependencies:
       '@parcel/core': 2.12.0(@swc/helpers@0.5.15)
       '@parcel/fs': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
       '@parcel/logger': 2.12.0
       '@parcel/utils': 2.12.0
       lmdb: 2.8.5
-    transitivePeerDependencies:
-      - '@swc/helpers'
 
   '@parcel/codeframe@2.12.0':
     dependencies:
@@ -32770,7 +32766,7 @@ snapshots:
   '@parcel/core@2.12.0(@swc/helpers@0.5.15)':
     dependencies:
       '@mischnic/json-sourcemap': 0.1.1
-      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
+      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))
       '@parcel/diagnostic': 2.12.0
       '@parcel/events': 2.12.0
       '@parcel/fs': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
@@ -33199,7 +33195,7 @@ snapshots:
 
   '@parcel/types@2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)':
     dependencies:
-      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
+      '@parcel/cache': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))
       '@parcel/diagnostic': 2.12.0
       '@parcel/fs': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
       '@parcel/package-manager': 2.12.0(@parcel/core@2.12.0(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)
@@ -42183,6 +42179,11 @@ snapshots:
     optionalDependencies:
       eslint-plugin-jest: 26.9.0(eslint@8.57.0)(typescript@5.8.3)
 
+  eslint-plugin-playwright@2.10.3(eslint@9.36.0(jiti@1.21.6)):
+    dependencies:
+      eslint: 9.36.0(jiti@1.21.6)
+      globals: 17.6.0
+
   eslint-plugin-prettier@4.2.5(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.2.5):
     dependencies:
       eslint: 8.57.1
@@ -43400,6 +43401,8 @@ snapshots:
   globals@14.0.0: {}
 
   globals@15.13.0: {}
+
+  globals@17.6.0: {}
 
   globalthis@1.0.4:
     dependencies:

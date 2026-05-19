@@ -1,6 +1,6 @@
 import type { Page } from '@playwright/test';
 
-import * as fs from 'fs';
+import { mkdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
 
 export interface ILoginDataProps {
   db: {
@@ -19,25 +19,25 @@ export class setupDatabase {
     name: string,
   ): Promise<ILoginDataProps | undefined> {
     const walletImportData = await JSON.parse(
-      fs.readFileSync(`${process.cwd()}/_generated/${name}.json`, 'utf8'),
+      readFileSync(`${process.cwd()}/_generated/${name}.json`, 'utf8'),
     );
 
     return walletImportData;
   }
   public async removeSetupProps(name: string): Promise<void> {
     try {
-      await fs.unlinkSync(`${process.cwd()}/_generated/${name}.json`);
-    } catch (e) {}
+      unlinkSync(`${process.cwd()}/_generated/${name}.json`);
+    } catch {}
   }
 
   public async setSetupProps(
     name: string,
     accountData: ILoginDataProps,
   ): Promise<void> {
-    fs.mkdirSync(`${process.cwd()}/_generated/`, {
+    mkdirSync(`${process.cwd()}/_generated/`, {
       recursive: true,
     });
-    fs.writeFileSync(
+    writeFileSync(
       `${process.cwd()}/_generated/${name}.json`,
       JSON.stringify(accountData, null, 2),
       { encoding: 'utf8' },

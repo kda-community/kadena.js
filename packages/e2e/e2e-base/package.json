@@ -11,7 +11,7 @@
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
-    "lint:src": "eslint src --ext .js,.ts",
+    "lint:src": "oxlint .",
     "test:e2e": "playwright test",
     "test:e2e:docs": "playwright test -c playwright.docs.config.ts",
     "test:e2e:graph": "playwright test -c playwright.graph.config.ts",
@@ -23,22 +23,19 @@
     "@kadena/client-utils": "workspace:*",
     "@kadena/cryptography-utils": "workspace:*",
     "@kadena/pactjs": "workspace:*",
-    "@kadena/pactjs-cli": "workspace:*",
-    "eslint-import-resolver-typescript": "3.5.5"
+    "@kadena/pactjs-cli": "workspace:*"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
-    "@kadena-dev/eslint-plugin": "workspace:*",
     "@kadena-dev/lint-package": "workspace:*",
     "@kadena-dev/markdown": "workspace:*",
     "@kadena/types": "workspace:*",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@playwright/test": "^1.45.3",
-    "@rushstack/eslint-config": "~3.6.9",
     "@types/node": "^20.12.7",
     "directory-tree": "3.5.1",
     "dotenv": "~16.4.5",
-    "eslint": "^8.45.0",
-    "eslint-plugin-playwright": "1.6.2",
+    "eslint-plugin-playwright": "2.10.3",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5"
   }
 }

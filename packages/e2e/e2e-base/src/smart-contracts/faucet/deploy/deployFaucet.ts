@@ -5,8 +5,8 @@ import type {
 import type { ICommand } from '@kadena/client';
 import { Pact, createClient, createSignWithKeypair } from '@kadena/client';
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import { sender00Account } from '../../../constants/accounts.constants';
 import { devnetUrl, networkId } from '../../../constants/network.constants';
 
