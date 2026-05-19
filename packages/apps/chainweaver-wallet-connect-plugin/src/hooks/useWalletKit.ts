@@ -35,7 +35,6 @@ const useWalletKit = (sessionProposalHandler: (args: WalletKitTypes.SessionPropo
     if (!walletKitRef.current) {
       initializeWalletKit();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return [walletKit, walletKitRef];
