@@ -196,7 +196,6 @@ export const WalletConnect: React.FC<{
       reason: getSdkError('USER_DISCONNECTED'),
     });
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { [session.topic]: omittedTopic, ...filteredAccountStore } = accountStore;
     setAccountStore(filteredAccountStore);
     await getActiveSessions();
