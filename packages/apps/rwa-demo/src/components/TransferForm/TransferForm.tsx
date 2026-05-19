@@ -111,7 +111,6 @@ export const TransferForm: FC<IProps> = ({
 
     setInvestorToAccount(value);
     if (!account || !asset) return;
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     const res = await isFrozen({ investorAccount: value, account }, asset);
     setSelectedAccountIsFrozen(res as boolean | undefined);
 

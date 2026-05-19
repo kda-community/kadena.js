@@ -85,7 +85,6 @@ export const useGetInvestors = (asset?: IAsset) => {
 
   useEffect(() => {
     if (removedLoading || addedLoading) return;
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     initInnerData();
   }, [
     removedLoading,
@@ -127,7 +126,6 @@ export const useGetInvestors = (asset?: IAsset) => {
   }, [addedSubscriptionData?.events, removedSubscriptionData?.events]);
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     addSubscriptionData();
   }, [addSubscriptionData]);
 

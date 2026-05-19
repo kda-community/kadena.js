@@ -259,7 +259,6 @@ export const AccountProvider: FC<PropsWithChildren> = ({ children }) => {
         return;
       }
 
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       Promise.allSettled([
         setAssetRolesForAccount(account.address, asset),
         checkIsOwner(account, asset),
@@ -282,7 +281,6 @@ export const AccountProvider: FC<PropsWithChildren> = ({ children }) => {
   );
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     initProps();
   }, []);
 

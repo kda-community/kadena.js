@@ -83,7 +83,6 @@ export const AssetProvider: FC<PropsWithChildren> = ({ children }) => {
         unlistenAsset();
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [organisation?.id, assetStore, userToken?.token]);
 
   const getAsset = async (
@@ -212,7 +211,6 @@ export const AssetProvider: FC<PropsWithChildren> = ({ children }) => {
           a.contractName === asset.contractName,
       )
     ) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       assetStore?.addAsset(asset);
     }
 
@@ -238,7 +236,6 @@ export const AssetProvider: FC<PropsWithChildren> = ({ children }) => {
     ) as [number, IComplianceRule] | undefined;
 
     if (!returnValue?.length) return INFINITE_COMPLIANCE;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_, rule] = returnValue;
     if (!asset || !rule || !rule.isActive) return INFINITE_COMPLIANCE;
     return rule.value;

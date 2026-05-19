@@ -52,7 +52,6 @@ export const DiscoveredAccount: FC<IProps> = ({
       setAccount(res);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     loadAccount();
   }, [accountAddress, activeNetwork.networkId]);
 

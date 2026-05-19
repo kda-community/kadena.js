@@ -13,7 +13,6 @@ export const LoginForm: FC = () => {
 
   useEffect(() => {
     if (userToken) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       router.push('/');
     }
   }, [userToken]);

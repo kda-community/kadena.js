@@ -45,7 +45,6 @@ export const useGetFrozenTokens = ({
   useEffect(() => {
     if (!asset) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init(asset);
   }, [account?.address, investorAccount, asset?.uuid]);
 
@@ -55,7 +54,6 @@ export const useGetFrozenTokens = ({
         subscriptionUnFreezeData?.events?.length) &&
       asset
     ) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       init(asset);
     }
   }, [asset?.uuid, subscriptionData, subscriptionUnFreezeData]);

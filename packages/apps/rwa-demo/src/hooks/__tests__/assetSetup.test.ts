@@ -374,7 +374,6 @@ describe('useAssetSetup', () => {
     it('should handle undefined compliance object', () => {
       const assetWithoutCompliance = {
         ...mockAsset,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         compliance: undefined as any,
       };
 

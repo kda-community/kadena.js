@@ -13,7 +13,6 @@ export const PauseAssetAction: FC<{
   'data-testid'?: string;
 }> = ({ 'data-testid': dataTestId }) => {
   const { paused } = useAsset();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setLoading] = useState(false);
   const { isAllowed } = useTogglePause();
   const { getTransactions } = useTransactions();

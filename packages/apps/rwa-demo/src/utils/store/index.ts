@@ -34,7 +34,6 @@ export const RWAStore = (organisation: IOrganisation) => {
     const assetFolder = getAssetFolder(asset);
     if (!assetFolder) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { listener, ...newData } = data;
 
     await set(

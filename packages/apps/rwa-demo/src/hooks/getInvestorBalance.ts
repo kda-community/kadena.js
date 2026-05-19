@@ -46,7 +46,6 @@ export const useGetInvestorBalance = ({
       setIsPending(false);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init(asset);
   }, [investorAccount, asset?.uuid, isMounted]);
 

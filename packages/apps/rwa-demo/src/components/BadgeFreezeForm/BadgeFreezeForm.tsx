@@ -57,7 +57,6 @@ export const BadgeFreezeForm: FC<IProps> = ({
 
   useEffect(() => {
     if (type === 'unfreeze') {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       handleSubmit(onSubmit)();
     }
     if (type === 'freeze') {

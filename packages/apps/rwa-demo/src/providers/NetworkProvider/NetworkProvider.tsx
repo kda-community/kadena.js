@@ -19,7 +19,6 @@ import { createClient } from 'graphql-ws';
 import type { FC, PropsWithChildren } from 'react';
 import { useEffect, useState } from 'react';
 // next/apollo-link bug: https://github.com/dotansimha/graphql-yoga/issues/2194
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { YogaLink } = require('@graphql-yoga/apollo-link');
 
 const cache = new InMemoryCache({
@@ -67,7 +66,6 @@ const getApolloClient = (network: INetwork) => {
 };
 
 export const NetworkProvider: FC<PropsWithChildren> = ({ children }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeNetwork, _] = useState<INetwork>(
     defaultNetworkContext.activeNetwork,
   );
@@ -99,7 +97,6 @@ export const NetworkProvider: FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     if (!activeNetwork || !activeNetwork.graphUrl) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     checkIfNetworkAvailable(activeNetwork.graphUrl);
   }, [activeNetwork]);
 

@@ -21,7 +21,6 @@ export const FormatAgentRoles = () => {
       if (!value || !asset) return;
 
       setAssetRolesForAccount(`${value}`, asset);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value, asset]);
 
     const renderValue = (value: string) => {

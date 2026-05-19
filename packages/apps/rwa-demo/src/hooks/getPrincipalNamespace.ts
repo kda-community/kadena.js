@@ -13,7 +13,6 @@ export const useGetPrincipalNamespace = () => {
       setInnerData(data);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     initInnerData();
   }, [account?.address]);
 

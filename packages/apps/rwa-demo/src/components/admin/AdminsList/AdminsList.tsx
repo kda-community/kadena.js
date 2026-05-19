@@ -102,7 +102,6 @@ export const AdminsList: FC<{ organisationId?: IOrganisation['id'] }> = ({
   };
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     const unlisten = adminstore.listenToAdmins(handleSetAdmins);
 
     return unlisten;

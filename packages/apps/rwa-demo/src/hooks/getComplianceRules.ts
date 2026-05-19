@@ -31,7 +31,6 @@ export const useGetComplianceRules = ({ asset }: { asset?: IAsset }) => {
         setData(res);
       }
     };
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init(asset);
   }, [asset?.uuid, isMounted]);
 
