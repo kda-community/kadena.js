@@ -439,15 +439,12 @@ importers:
         specifier: ^5.0.8
         version: 5.0.8(@types/react@19.1.9)(immer@10.1.1)(react@19.1.1)(use-sync-external-store@1.2.2(react@19.1.1))
     devDependencies:
-      '@eslint/eslintrc':
-        specifier: ^3
-        version: 3.3.1
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
       '@kadena-dev/shared-config':
         specifier: workspace:*
         version: link:../../tools/shared-config
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@types/d3':
         specifier: ^7.4.3
         version: 7.4.3
@@ -466,12 +463,9 @@ importers:
       '@vanilla-extract/webpack-plugin':
         specifier: 2.3.7
         version: 2.3.7(@types/node@20.16.5)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)(webpack@5.94.0)
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
-      eslint-config-next:
-        specifier: 13.4.5
-        version: 13.4.5(eslint@8.57.0)(typescript@5.4.5)
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       tsx:
         specifier: ^4.16.2
         version: 4.16.2
