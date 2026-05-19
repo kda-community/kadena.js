@@ -8,7 +8,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "oxlint ."
   },
   "dependencies": {
     "@kadena/kode-icons": "workspace:*",
@@ -30,17 +30,15 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@kadena-dev/eslint-config": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@types/d3": "^7.4.3",
     "@types/node": "^20.12.7",
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.1",
     "@vanilla-extract/vite-plugin": "4.0.17",
     "@vanilla-extract/webpack-plugin": "2.3.7",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "13.4.5",
+    "oxlint": "1.63.0",
     "tsx": "^4.16.2",
     "typescript": "5.4.5"
   }
