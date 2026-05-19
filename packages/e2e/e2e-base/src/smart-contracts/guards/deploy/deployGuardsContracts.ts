@@ -3,8 +3,8 @@ import type { ICommand } from '@kadena/client';
 import { Pact, createClient, createSignWithKeypair } from '@kadena/client';
 import { retrieveContractFromChain } from '@kadena/pactjs-cli/src/utils/retrieveContractFromChain';
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import { sender00Account } from '../../../constants/accounts.constants';
 import {
   devnetUrl,
@@ -14,7 +14,6 @@ import {
 
 export const deployGaurdsContract = async ({
   chainId,
-  upgrade,
   namespace = 'util',
 }: {
   chainId: ChainwebChainId;
@@ -29,7 +28,7 @@ export const deployGaurdsContract = async ({
     'mainnet',
   );
 
-  const contract = "(namespace 'util)".concat(rawContract);
+  const contract = `(namespace '${namespace}')`.concat(rawContract);
   const transaction = Pact.builder
     .execution(contract)
     .addKeyset('util-ns-admin', 'keys-any', sender00Account.keys[0].publicKey)
@@ -55,8 +54,6 @@ export const deployGaurdsContract = async ({
 
 export const deployGuards1Contract = async ({
   chainId,
-  upgrade,
-  namespace = 'util',
 }: {
   chainId: ChainwebChainId;
   upgrade: boolean;

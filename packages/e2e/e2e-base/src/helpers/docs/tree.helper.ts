@@ -1,6 +1,6 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect } from '@playwright/test';
-import * as fs from 'fs';
+import * as fs from 'node:fs';
 import path from 'node:path';
 
 export default class TreeHelper {

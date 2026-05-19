@@ -1,7 +1,7 @@
 import type { Locator, Page } from '@playwright/test';
 import { expect } from '@playwright/test';
 import dotenv from 'dotenv';
-import path from 'path';
+import path from 'node:path';
 import { WebAuthNHelper } from '../../helpers/chainweaver/webauthn.helper';
 import type { ILoginDataProps } from './setupDatabase';
 import { setupDatabase } from './setupDatabase';
@@ -82,7 +82,7 @@ export class ChainweaverAppIndex extends setupDatabase {
 
     try {
       accountData = await this.importBackup(actor, typeName);
-    } catch (e) {
+    } catch {
       const data = await this.createProfileWithPassword(actor);
 
       await this.goToSettings(actor);
