@@ -188,7 +188,6 @@ export function ImportAccounts({
     if (!importedAccounts) return;
     const accounts: Omit<IOwnedAccount, 'keysetId'>[] = importedAccounts
       .map((acc) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { discoveredResult, verify, ...account } = acc;
         if (account.guard && isKeysetGuard(account.guard)) {
           return { uuid: crypto.randomUUID(), ...account };

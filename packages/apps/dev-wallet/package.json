@@ -14,7 +14,7 @@
     "dev:chainweaver": "concurrently \"chokidar './src/**' --command './node_modules/.bin/vite build' --initial\" \"pnpm run preview --port 1337\"",
     "generate-coin-type": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --contract \\\"coin\\\" --api \\\"https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/14/pact\\\"\"",
     "generate:plugins": "rimraf public/internal-registry/* && ./scripts/symlink-plugins.ts && ./scripts/generate-plugins-json.ts",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives",
+    "lint": "oxlint .",
     "preview": "vite preview",
     "test": "vitest run",
     "verify": "tsc --noEmit"
@@ -59,10 +59,10 @@
     "zx": "^8.1.5"
   },
   "devDependencies": {
-    "@kadena-dev/eslint-config": "workspace:*",
     "@kadena-dev/lint-package": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
     "@kadena/pactjs-cli": "workspace:*",
+    "@kda-community-dev/oxlint-config": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@types/elliptic": "^6.4.18",
     "@types/js-yaml": "4.0.9",
@@ -74,9 +74,7 @@
     "cache-sh": "^1.2.1",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^8.2.2",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
+    "oxlint": "1.63.0",
     "rimraf": "~5.0.1",
     "tsx": "^4.16.2",
     "typescript": "5.4.5",

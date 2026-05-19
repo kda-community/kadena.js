@@ -42,12 +42,10 @@ export const createDatabaseConnection = async () => {
   return db;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const injectDb = <R extends (...args: any[]) => Promise<any>>(
   fn: (db: IDBDatabase) => R,
   onCall: (...args: Parameters<R>) => void = () => {},
 ) =>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (async (...args: any): Promise<any> => {
     return createDatabaseConnection().then(async (db) => {
       const result = await fn(db)(...args);
@@ -57,7 +55,6 @@ export const injectDb = <R extends (...args: any[]) => Promise<any>>(
     });
   }) as R;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Listener = (type: EventTypes, storeName: string, ...data: any[]) => void;
 
 export interface ISubscribe {
@@ -155,7 +152,6 @@ export const createDbService = () => {
 
   const notify =
     (event: EventTypes) =>
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (storeName: string | any, ...rest: any[]) => {
       listeners.forEach((cb) => cb(event, storeName, ...rest));
       broadcast(event, storeName, rest);

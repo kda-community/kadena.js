@@ -29,7 +29,6 @@ describe('convertFromChainweaver', () => {
   });
 
   it('throws when BIPStorage_RootKey is not found', () => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { BIPStorage_Data, ...modifiedExport } = exampleExport;
     expect(() => {
       validateStructure(modifiedExport);
@@ -37,7 +36,6 @@ describe('convertFromChainweaver', () => {
   });
 
   it('throws when any of the StoreFrontend_Data tuples are missing', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (exampleExport.StoreFrontend_Data as any)[0][0];
 
     expect(() => {

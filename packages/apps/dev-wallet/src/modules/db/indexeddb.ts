@@ -238,7 +238,6 @@ const isExist =
 export const updateItem =
   (db: IDBDatabase, transaction?: IDBTransaction) =>
   <T>(storeName: ExtendedTableName, value: T, key?: string) => {
-    // eslint-disable-next-line no-async-promise-executor
     return new Promise<void>(async (resolve, reject) => {
       const tx = transaction ?? db.transaction(storeName, 'readwrite');
       const store = tx.objectStore(storeName);
@@ -263,7 +262,6 @@ export const updateItem =
 export const putItem =
   (db: IDBDatabase, transaction?: IDBTransaction) =>
   <T>(storeName: ExtendedTableName, value: T, key?: string) => {
-    // eslint-disable-next-line no-async-promise-executor
     return new Promise<void>(async (resolve, reject) => {
       const tx = transaction ?? db.transaction(storeName, 'readwrite');
       const store = tx.objectStore(storeName);

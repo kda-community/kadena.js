@@ -100,7 +100,6 @@ export function NetworkForm({
   async function create(updNetwork: INewNetwork) {
     setError(undefined);
     const hosts = updNetwork.hosts.map(
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       ({ isHealthy, nodeVersion, ...host }) => host,
     );
     try {
