@@ -68,7 +68,6 @@
     "@kadena/pactjs-cli": "workspace:*",
     "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
-    "@rushstack/heft": "~0.50.6",
     "@testing-library/react": "~16.3.0",
     "@testing-library/user-event": "~14.5.1",
     "@total-typescript/ts-reset": "^0.5.1",
