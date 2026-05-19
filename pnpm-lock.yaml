@@ -205,7 +205,7 @@ importers:
         version: 4.3.2(typescript@5.4.5)(vite@5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/chainweaver-wallet-connect-plugin:
     dependencies:
@@ -383,7 +383,7 @@ importers:
         version: 4.3.2(typescript@5.4.5)(vite@5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/chainweb-evm-dashboard:
     dependencies:
@@ -655,7 +655,7 @@ importers:
         version: 4.3.2(typescript@5.4.5)(vite@5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/dev-wallet-desktop:
     dependencies:
@@ -1736,7 +1736,7 @@ importers:
         version: 5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/wallet-sdk-example:
     dependencies:
@@ -3500,7 +3500,7 @@ importers:
         version: 5.4.5
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/libs/wallet-adapter-walletconnect:
     dependencies:
@@ -4251,24 +4251,21 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
     devDependencies:
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
       '@kadena-dev/shared-config':
         specifier: workspace:*
         version: link:../shared-config
-      '@rushstack/eslint-config':
-        specifier: ~3.6.9
-        version: 3.6.10(eslint@8.57.0)(typescript@5.4.5)
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@types/mdast':
         specifier: ^4.0.1
         version: 4.0.4
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.9
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: ~3.2.5
         version: 3.2.5
@@ -4402,7 +4399,7 @@ importers:
         version: 4.3.2(typescript@5.8.3)(vite@6.2.5(@types/node@22.9.1)(jiti@1.21.6)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   tooling/oxlint-config:
     devDependencies:
@@ -38445,7 +38442,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.1.1
       sirv: 2.0.4
-      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   '@vitest/utils@0.34.6':
     dependencies:
@@ -54298,7 +54295,7 @@ snapshots:
       - supports-color
       - terser
 
-  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1):
+  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
