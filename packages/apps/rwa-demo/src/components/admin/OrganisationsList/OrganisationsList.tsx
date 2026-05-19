@@ -61,7 +61,6 @@ export const OrganisationsList: FC = () => {
       setIsLoading(false);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init();
   }, []);
 

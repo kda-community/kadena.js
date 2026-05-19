@@ -84,7 +84,6 @@ export const useGetAgents = (asset?: IAsset) => {
 
   useEffect(() => {
     if (removedLoading || addedLoading) return;
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     initInnerData();
   }, [
     removedLoading,
@@ -138,7 +137,6 @@ export const useGetAgents = (asset?: IAsset) => {
   };
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     addSubscriptionData();
   }, [subscriptionAddData?.events, subscriptionRemoveData?.events]);
 

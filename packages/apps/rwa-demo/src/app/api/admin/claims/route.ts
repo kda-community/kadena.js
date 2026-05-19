@@ -38,7 +38,6 @@ const removeClaims = async (
   organisationId?: IOrganisation['id'] | null,
 ) => {
   if (!organisationId) {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { rootAdmin, ...updatedClaims } = user?.customClaims || {};
     await adminAuth()?.setCustomUserClaims(user.uid, updatedClaims);
     await getDB().ref(`/organisationRoles/root/${user.uid}`).remove();

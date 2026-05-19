@@ -32,7 +32,6 @@ const Home = ({ params }: IPageProps) => {
       setOrganisation(data);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init(organisationId);
   }, [organisationId]);
 

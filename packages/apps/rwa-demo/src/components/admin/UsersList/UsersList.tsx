@@ -86,7 +86,6 @@ export const UsersList: FC<{ organisationId?: IOrganisation['id'] }> = ({
   };
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     loadData();
   }, [adminstore, organisationId, userToken]);
 

@@ -43,7 +43,6 @@ export const AssetSetupProgress: FC<IProps> = ({
       setPlay(true);
 
       setTimeout(() => {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         completeAssetSetup();
       }, 2000);
     }, 500);

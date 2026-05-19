@@ -73,7 +73,6 @@ export const AssetSwitch: FC<{ showLabel?: boolean }> = ({
               <ContextMenuItem
                 label="Add a new asset"
                 onClick={() => {
-                  // eslint-disable-next-line @typescript-eslint/no-floating-promises
                   window.location.href = '/admin/assets';
                 }}
               />

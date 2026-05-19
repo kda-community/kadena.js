@@ -46,7 +46,6 @@ export const useFreeze = ({
 
     if (!account?.address || !investorAccount || !asset) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init(account, investorAccount, asset);
   }, [account?.address, investorAccount, asset?.uuid, isMounted]);
 

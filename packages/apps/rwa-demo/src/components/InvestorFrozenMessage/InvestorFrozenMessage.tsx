@@ -37,7 +37,6 @@ export const InvestorFrozenMessage: FC<IProps> = ({ investorAccount }) => {
       setMessage(result);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init();
   }, [frozen, isInvestor, account, user]);
 

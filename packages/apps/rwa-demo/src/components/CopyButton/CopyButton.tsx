@@ -14,7 +14,6 @@ export const CopyButton: FC<IProps> = ({ value }) => {
   const handlePress = (e: PressEvent) => {
     setIsPressed(true);
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     navigator.clipboard.writeText(value);
 
     setTimeout(() => {

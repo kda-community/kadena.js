@@ -28,7 +28,6 @@ export const OrganisationProvider: FC<PropsWithChildren> = ({ children }) => {
       setOrganisation(data);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init();
   }, []);
 

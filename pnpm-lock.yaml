@@ -205,7 +205,7 @@ importers:
         version: 4.3.2(typescript@5.4.5)(vite@5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/chainweaver-wallet-connect-plugin:
     dependencies:
@@ -383,7 +383,7 @@ importers:
         version: 4.3.2(typescript@5.4.5)(vite@5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/chainweb-evm-dashboard:
     dependencies:
@@ -655,7 +655,7 @@ importers:
         version: 4.3.2(typescript@5.4.5)(vite@5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/dev-wallet-desktop:
     dependencies:
@@ -1359,9 +1359,6 @@ importers:
       '@graphql-codegen/typescript-react-apollo':
         specifier: ~4.3.0
         version: 4.3.0(encoding@0.1.13)(graphql-tag@2.12.6(graphql@16.8.2))(graphql@16.8.2)
-      '@kadena-dev/eslint-config':
-        specifier: workspace:*
-        version: link:../../tools/eslint-config
       '@kadena-dev/lint-package':
         specifier: workspace:*
         version: link:../../tools/lint-package
@@ -1374,6 +1371,9 @@ importers:
       '@kadena/pactjs-generator':
         specifier: workspace:*
         version: link:../../libs/pactjs-generator
+      '@kda-community-dev/oxlint-config':
+        specifier: workspace:*
+        version: link:../../../tooling/oxlint-config
       '@sentry/types':
         specifier: ^9.29.0
         version: 9.44.0
@@ -1407,18 +1407,15 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^1.6.0
         version: 1.6.0(vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.16.5)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
-      eslint:
-        specifier: ^8.45.0
-        version: 8.57.0
-      eslint-config-next:
-        specifier: 13.4.5
-        version: 13.4.5(eslint@8.57.0)(typescript@5.4.5)
       happy-dom:
         specifier: ^12.9.1
         version: 12.10.3
       next-router-mock:
         specifier: ^0.9.10
         version: 0.9.13(next@15.4.6(@opentelemetry/api@1.9.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.71.1))(react@19.1.1)
+      oxlint:
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: ~3.2.5
         version: 3.2.5
@@ -1748,7 +1745,7 @@ importers:
         version: 5.4.9(@types/node@22.9.1)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/apps/wallet-sdk-example:
     dependencies:
@@ -3593,7 +3590,7 @@ importers:
         version: 5.4.5
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   packages/libs/wallet-adapter-walletconnect:
     dependencies:
@@ -4495,7 +4492,7 @@ importers:
         version: 4.3.2(typescript@5.8.3)(vite@6.2.5(@types/node@22.9.1)(jiti@1.21.6)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   tooling/oxlint-config:
     devDependencies:
@@ -38040,7 +38037,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.1.1
       sirv: 2.0.4
-      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
+      vitest: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1)
 
   '@vitest/utils@0.34.6':
     dependencies:
@@ -45545,7 +45542,7 @@ snapshots:
       strip-json-comments: 3.1.1
     optionalDependencies:
       '@types/node': 20.16.5
-      ts-node: 10.9.2(@swc/core@1.3.78(@swc/helpers@0.5.15))(@types/node@20.16.5)(typescript@5.4.5)
+      ts-node: 10.9.2(@swc/core@1.9.2)(@types/node@20.16.5)(typescript@5.4.5)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -54056,7 +54053,7 @@ snapshots:
       - supports-color
       - terser
 
-  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0)(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1):
+  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@22.9.1)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.25.1)(sass@1.71.1)(terser@5.31.1):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0

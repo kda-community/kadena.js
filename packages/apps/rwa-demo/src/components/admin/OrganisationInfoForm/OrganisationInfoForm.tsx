@@ -88,7 +88,6 @@ export const OrganisationInfoForm: FC<IProps> = ({ organisationId }) => {
     if (reload === false) return;
 
     console.log('reload');
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init(organisationId);
   }, [organisationId, reload]);
 
@@ -96,7 +95,6 @@ export const OrganisationInfoForm: FC<IProps> = ({ organisationId }) => {
     setIsLoading(true);
     if (!orgStore) return;
     // remove the newDomain field from the data object
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { newDomain, ...cleanedData } = data;
     const newOrganisation = {
       ...organisation,

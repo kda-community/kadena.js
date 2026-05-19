@@ -56,7 +56,6 @@ export const useGetAgentRoles = (): IAgentHookProps & {
       return;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     initInnerData(agent, asset);
   }, [agent, asset?.uuid]);
 
@@ -72,7 +71,6 @@ export const useGetAgentRoles = (): IAgentHookProps & {
         if (!event) return;
         const params = JSON.parse(event.parameters ?? '[]');
         if (params[0] === agent && !!agent) {
-          // eslint-disable-next-line @typescript-eslint/no-floating-promises
           initInnerData(agent, asset);
         }
       });

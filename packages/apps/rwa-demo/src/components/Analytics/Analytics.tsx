@@ -12,7 +12,6 @@ export const Analytics: FC = () => {
     if (!env.TRACKING_ID) return;
 
     gtag('config', env.TRACKING_ID, {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
       send_page_view: false, //manually send page views to have full control
     });
   }, []);

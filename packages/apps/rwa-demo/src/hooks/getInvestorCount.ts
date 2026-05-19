@@ -24,7 +24,6 @@ export const useGetInvestorCount = (asset?: IAsset) => {
       setInnerData(data);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     initInnerData(asset);
   }, [asset?.uuid, subscriptionData?.events?.length, isMounted]);
 

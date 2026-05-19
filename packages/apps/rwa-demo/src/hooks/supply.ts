@@ -38,7 +38,6 @@ export const useSupply = (asset?: IAsset) => {
       setIsLoading(false);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init(asset);
   }, [account?.address, asset?.uuid, isLoading, isMounted]);
 

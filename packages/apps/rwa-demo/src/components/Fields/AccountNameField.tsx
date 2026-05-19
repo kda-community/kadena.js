@@ -44,7 +44,6 @@ export const AccountNameField: FC<IProps> = ({
     setDiscoveredAccounts(undefined);
     if ((!value && !accountName) || !activeNetwork) return;
     const checkValue = value ? value : accountName ?? '';
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     debounced(checkValue, activeNetwork);
   }, [value, accountName, activeNetwork]);
 
