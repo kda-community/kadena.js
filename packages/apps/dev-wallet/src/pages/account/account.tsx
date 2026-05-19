@@ -224,7 +224,6 @@ export function AccountPage() {
           variant="outlined"
           endVisual={<MonoCopyAll />}
           onClick={() => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { principal, ...guard } = account.guard;
             if (account.address.startsWith('w:') && isKeysetGuard(guard)) {
               navigator.clipboard.writeText(

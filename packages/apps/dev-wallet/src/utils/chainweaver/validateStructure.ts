@@ -4,9 +4,7 @@ export const validateStructure = (
   exportData: Partial<ExportFromChainweaver>,
 ) => {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const data = exportData.StoreFrontend_Data as any;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const keys = data.map((d: any) => d[0][0]);
     const expectedKeys = [
       'StoreFrontend_Wallet_Keys', // confirmed
@@ -31,7 +29,6 @@ export const validateStructure = (
     ];
 
     checks.forEach(([accessor, expected]) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let actual: any;
       try {
         actual = accessor();
@@ -40,7 +37,6 @@ export const validateStructure = (
       }
 
       if (actual !== expected) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         if (!checks.some(([__accessor, expected]) => actual === expected)) {
           throw new Error(`Expected ${expected}, got ${actual}`);
         }

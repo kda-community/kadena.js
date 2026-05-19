@@ -58,7 +58,6 @@ export const formatChainIds = (chainIds: ChainId[]) => {
   return formatList(chains);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const throttle = <T extends (...args: any[]) => any>(
   fn: T,
   delay: number,

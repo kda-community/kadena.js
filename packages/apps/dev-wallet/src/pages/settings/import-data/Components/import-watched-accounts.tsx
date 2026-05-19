@@ -180,7 +180,6 @@ export function ImportWatchedAccounts({
     if (!importedAccounts) return;
     const accounts: IWatchedAccount[] = importedAccounts
       .map((acc) => {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { discoveredResult, verify, ...account } = acc;
         return account;
       })

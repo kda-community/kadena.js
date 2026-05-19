@@ -43,7 +43,6 @@ export function Keys() {
     setAsideTarget(key);
     setIsRightAsideExpanded(true);
   };
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setError] = useState<string | null>(null);
   const { createHDWallet } = useHDWallet();
   async function createWebAuthn() {
