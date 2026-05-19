@@ -3,7 +3,7 @@ import { test as baseTest } from '@kadena-dev/e2e-base/src/fixtures/shared/test.
 export const test = baseTest.extend<{ removeDevelopWarning: void }>({
   removeDevelopWarning: [
     async ({ initiator }, use) => {
-      await initiator.addInitScript((params) => {
+      await initiator.addInitScript(() => {
         window.localStorage.setItem('isInDevelopmentMessageShown', 'true');
       });
 
