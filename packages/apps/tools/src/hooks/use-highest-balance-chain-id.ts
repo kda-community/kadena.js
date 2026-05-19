@@ -32,9 +32,7 @@ const useHighestBalanceChainId = () => {
     }
 
     setIsMounted(false);
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     init();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedNetwork]);
 
   return { chainID, onChainSelectChange: setChainId, isMounted };

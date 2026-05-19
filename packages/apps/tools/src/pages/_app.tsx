@@ -24,7 +24,6 @@ export interface IPageProps {
 }
 
 const App: FC<AppProps<IPageProps>> = ({
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   Component,
   pageProps,
 }: AppProps<IPageProps>) => {

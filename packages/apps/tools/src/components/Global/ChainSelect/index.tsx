@@ -9,7 +9,6 @@ import React, { useCallback, useState } from 'react';
 
 export type OnChainSelectChange = (value: ChainwebChainId) => void;
 
-// eslint-disable-next-line @kadena-dev/typedef-var
 const ELEMENT_ID = 'select-chain-id';
 
 interface ChainSelectProps
@@ -32,7 +31,6 @@ const ChainSelect: FC<ChainSelectProps> = ({
   chainCountStart = 0,
   ...rest
 }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [chains, _] = useState(
     Array.from({ length: chainCount }, (_, i) => i + chainCountStart),
   );

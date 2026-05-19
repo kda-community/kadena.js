@@ -94,7 +94,6 @@ const CheckTransactions: FC = () => {
           setLoadingState(false);
         });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.isReady]);
 
   async function getAndSetTransactions(
