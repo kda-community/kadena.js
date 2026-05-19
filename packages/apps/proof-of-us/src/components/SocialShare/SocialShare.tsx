@@ -70,7 +70,6 @@ export const SocialShare: FC<IProps> = ({ data, tokenId }) => {
           console.log('Hooray! Your content was shared to the world'),
         );
     } catch (error) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/restrict-template-expressions
       console.log(`Oops! I couldn't share to the world because: ${error}`);
     }
   };
