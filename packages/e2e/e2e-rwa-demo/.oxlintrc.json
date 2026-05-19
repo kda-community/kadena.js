@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "./node_modules/@kda-community-dev/oxlint-config/oxlint.lib.config.json"
+  ],
+  "jsPlugins": [
+    "eslint-plugin-playwright"
+  ]
+}
