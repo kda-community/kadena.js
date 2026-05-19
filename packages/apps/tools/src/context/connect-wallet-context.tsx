@@ -140,7 +140,6 @@ export const WalletConnectClientContextProvider: FC<
   );
 
   const connect = useCallback(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async (pairing: any) => {
       if (typeof client === 'undefined') {
         throw new Error('WalletConnect is not initialized');
@@ -266,7 +265,6 @@ export const WalletConnectClientContextProvider: FC<
         await subscribeToEvents(_client);
         await checkPersistedState(_client);
       }
-      // eslint-disable-next-line no-useless-catch
     } catch (err) {
       throw err;
     } finally {

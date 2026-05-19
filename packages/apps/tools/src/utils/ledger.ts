@@ -22,7 +22,6 @@ let transport: Transport | null = null;
 
 export const getTransport = async () => {
   if (!transport) {
-    // eslint-disable-next-line require-atomic-updates
     transport = await TransportWebHID.create();
 
     transport.on('disconnect', () => {
@@ -88,7 +87,6 @@ class KadenaLedgerAppLike implements IKadenaLedgerAppLike {
     return await this.signTxInternal(params, 2);
   }
 
-  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   async signTxInternal(
     params: TransferCrossChainTxParams,
     txType: 0 | 1 | 2,

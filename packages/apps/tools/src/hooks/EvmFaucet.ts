@@ -93,9 +93,7 @@ export function useEvmFaucet() {
   };
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     getAmounts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [innerChainId]);
 
   // Function to dispense tokens

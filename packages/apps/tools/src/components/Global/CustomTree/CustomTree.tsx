@@ -19,7 +19,6 @@ import {
 } from './CustomTree.css';
 import CustomTreeNode from './CustomTreeNode';
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 export type TreeItem<T> = {
   title: string;
   key: React.Key;
@@ -55,7 +54,6 @@ function CustomTree<T>({
       className={classNames(containerStyle, className)}
     >
       {(item) => {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
         const toggleHandler = useCallback(() => {
           item.toggleExpandCollapse();
 
@@ -63,7 +61,6 @@ function CustomTree<T>({
           onExpandCollapse(item.data, !item.isExpanded);
         }, [item]);
 
-        // eslint-disable-next-line react-hooks/rules-of-hooks
         const onReloadCallback = useCallback(() => {
           onReload(item.data);
         }, [item]);
