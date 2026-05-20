@@ -1,0 +1,3 @@
+{
+  "extends": "@kda-community-dev/typescript-config/node"
+}
