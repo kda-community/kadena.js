@@ -23,14 +23,22 @@
       "name": "Randy"
     }
   ],
-  "main": "lib/index.js",
-  "types": "dist/types.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc && api-extractor run --verbose",
+    "build": "vite build",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
@@ -46,12 +54,16 @@
     "@kadena-dev/markdown": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "oxlint": "1.63.0",
     "prettier": "~3.2.5",
-    "typescript": "5.4.5"
+    "typescript": "5.4.5",
+    "vite": "8.0.10"
   },
   "publishConfig": {
     "provenance": true
-  }
+  },
+  "main": "./dist/index.cjs"
 }
