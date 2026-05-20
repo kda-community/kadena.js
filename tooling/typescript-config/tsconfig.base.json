@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2020",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "skipLibCheck": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@kda-community-dev/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./base": "./tsconfig.base.json",
+    "./node": "./tsconfig.node.json",
+    "./lib": "./tsconfig.lib.json"
+  },
+  "peerDependencies": {
+    "typescript": "5.4.5"
+  }
+}
