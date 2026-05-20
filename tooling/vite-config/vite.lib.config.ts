@@ -17,6 +17,11 @@ export function defineLibConfig(): UserConfig {
         bundleTypes: true,
       }),
     ],
+    resolve: {
+      alias: {
+        'node:buffer': 'buffer',
+      },
+    },
     build: {
       lib: {
         entry: './src/index.ts',
