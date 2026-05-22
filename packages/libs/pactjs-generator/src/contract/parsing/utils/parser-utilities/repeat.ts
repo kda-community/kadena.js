@@ -9,12 +9,12 @@ import { oneOf } from './oneOf';
 import type { IParser, RuleReturnType } from './rule';
 import { FAILED, rule } from './rule';
 
-type MakeArr<Type> = {
+type MakeArr<Type> = Type extends any ? {
   [Property in keyof Type]: Type[Property][];
-};
+} : never;
 
 interface IRepeat {
-  <T extends Array<IParser>>(
+  <T extends Array<IParser<any, any>>>(
     ...parsers: T
   ): IParser<
     IWrappedData<

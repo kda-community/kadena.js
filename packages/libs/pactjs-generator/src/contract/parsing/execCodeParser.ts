@@ -54,7 +54,7 @@ export interface IParsedCode {
 export function execCodeParser(code: string): undefined | IParsedCode[] {
   const pointer = getPointer(code);
   const result = functionCallParser(pointer);
-  const data = unwrapData(result);
+  const data: any = unwrapData(result);
   if (data === FAILED) {
     return undefined;
   }

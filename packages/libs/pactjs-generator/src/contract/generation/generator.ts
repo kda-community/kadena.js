@@ -1,4 +1,4 @@
-import { EOL } from 'os';
+import { EOL } from 'node:os';
 import type { IFunction, IModule, IType } from '../parsing/pactParser';
 import { getModuleFullName, trim } from '../parsing/utils/utils';
 

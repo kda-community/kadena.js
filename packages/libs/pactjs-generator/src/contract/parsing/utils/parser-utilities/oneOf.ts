@@ -2,7 +2,7 @@ import type { IParser } from './rule';
 import { FAILED, rule } from './rule';
 
 interface IOneOf {
-  <T extends Array<IParser>>(...parsers: T): T[number];
+  <T extends Array<IParser<any, any>>>(...parsers: T): T[number];
 }
 
 export const oneOf: IOneOf = (...parsers) =>

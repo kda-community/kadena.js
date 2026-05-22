@@ -3199,6 +3199,12 @@ importers:
       '@kda-community-dev/oxlint-config':
         specifier: workspace:*
         version: link:../../../tooling/oxlint-config
+      '@kda-community-dev/typescript-config':
+        specifier: workspace:*
+        version: link:../../../tooling/typescript-config
+      '@kda-community-dev/vite-config':
+        specifier: workspace:*
+        version: link:../../../tooling/vite-config
       '@microsoft/api-extractor':
         specifier: ^7.43.1
         version: 7.47.0(@types/node@20.14.9)
@@ -3232,6 +3238,9 @@ importers:
       typescript:
         specifier: 5.4.5
         version: 5.4.5
+      vite:
+        specifier: 8.0.10
+        version: 8.0.10(@types/node@20.14.9)(esbuild@0.28.0)(jiti@1.21.6)(less@4.2.0)(sass@1.71.1)(terser@5.31.1)(tsx@4.16.2)(yaml@2.4.5)
       vitest:
         specifier: ^1.6.0
         version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@20.14.9)(@vitest/ui@1.6.0)(happy-dom@12.10.3)(jsdom@26.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(less@4.2.0)(lightningcss@1.32.0)(sass@1.71.1)(terser@5.31.1)

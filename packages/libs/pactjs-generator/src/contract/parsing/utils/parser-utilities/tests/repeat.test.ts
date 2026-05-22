@@ -51,7 +51,7 @@ describe('repeat parser', () => {
     const pointer = getPointer(
       'name: alice title: developer name:bob title: manager',
     );
-    const result = repeat(
+    const result: any = repeat(
       seq(id('name'), id(':'), $('name', atom)),
       seq(id('title'), id(':'), $('title', atom)),
     )(pointer);

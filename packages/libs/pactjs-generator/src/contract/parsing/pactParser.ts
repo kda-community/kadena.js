@@ -187,7 +187,7 @@ export function contractParser(
 ): [IModule[], IPointer] {
   const pointer = getPointer(contract);
   const result = parser(pointer);
-  const tree = unwrapData(result);
+  const tree: any = unwrapData(result);
   const { modules, namespaces, usedModules } = tree;
 
   const extModules =

@@ -9,14 +9,14 @@ describe('pactGrammar', () => {
     it('should match the input if it is :type ', () => {
       const pointer = getPointer(':boolean');
       const result = typeRule(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data).toEqual('boolean');
     });
 
     it('should match the input if it is :object{mod.schema-one} ', () => {
       const pointer = getPointer(':object{mod.schema-one}');
       const result = typeRule(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
 
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
@@ -34,7 +34,7 @@ describe('pactGrammar', () => {
     it('should extract the name of the function', () => {
       const pointer = getPointer('(defun test () @doc "test doc")');
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -45,7 +45,7 @@ describe('pactGrammar', () => {
     it('should extract the return type of the function', () => {
       const pointer = getPointer('(defun test:boolean () @doc "test doc")');
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -58,7 +58,7 @@ describe('pactGrammar', () => {
         '(defun test (a:integer b:boolean) @doc "test doc")',
       );
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -74,7 +74,7 @@ describe('pactGrammar', () => {
         '(defun test (a:integer b:boolean) @doc "test doc")',
       );
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -87,7 +87,7 @@ describe('pactGrammar', () => {
         '(defun test (a:integer b:boolean) @doc "test doc" (require-capability (CAP1)) (require-capability (CAP2)))',
       );
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -100,7 +100,7 @@ describe('pactGrammar', () => {
         '(defun test (a:integer b:boolean) @doc "test doc" (with-capability (CAP1)) (with-capability (CAP2)))',
       );
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -113,7 +113,7 @@ describe('pactGrammar', () => {
         '(defun test (a:integer b:boolean) @doc "test doc" (require-capability (CAP1)) (emit-event (EVENT_CAP)))',
       );
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -126,7 +126,7 @@ describe('pactGrammar', () => {
         '(defun test (a:integer b:boolean) @doc "test doc" (namespace1.mod1.func1 1) (mod2.func2 "test"))',
       );
       const result = defun(pointer);
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       if (data === FAILED) {
         expect(data).not.toEqual(FAILED);
         return;
@@ -153,7 +153,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.name).toEqual('test');
     });
 
@@ -166,7 +166,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.parameters).toEqual([
         { name: 'a', type: 'integer' },
         { name: 'b', type: 'boolean' },
@@ -180,7 +180,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.doc).toEqual('test doc');
     });
 
@@ -193,7 +193,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.composeCapabilities).toEqual(['CAP1', 'CAP2']);
     });
 
@@ -206,7 +206,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.managed).toEqual({ property: 'prop', manager: 'manager_fn' });
     });
 
@@ -217,7 +217,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.managed).toBe(true);
     });
   });
@@ -230,7 +230,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.kind).toEqual('module');
     });
 
@@ -241,7 +241,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.name).toEqual('test');
     });
 
@@ -252,7 +252,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.governance).toEqual('GOVERNANCE');
     });
 
@@ -263,7 +263,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.doc).toEqual('test doc');
     });
 
@@ -276,7 +276,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.functions?.map(({ name, doc }) => ({ name, doc }))).toEqual([
         {
           name: 'test',
@@ -298,7 +298,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(
         data.capabilities?.map(({ name, doc }) => ({ name, doc })),
       ).toEqual([
@@ -320,7 +320,7 @@ describe('pactGrammar', () => {
         expect(result).not.toEqual(FAILED);
         return;
       }
-      const data = unwrapData(result);
+      const data: any = unwrapData(result);
       expect(data.kind).toEqual('interface');
     });
   });
