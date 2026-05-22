@@ -1,21 +1,7 @@
 {
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "module": "ESNext",
-    "outDir": "dist",
-    "rootDir": "src",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "target": "ES2020",
-    "lib": ["ES2020", "DOM"],
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "declaration": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "extends": "@kda-community-dev/typescript-config/lib",
+  "include": [
+    "src/**/*",
+    "vite.config.ts"
+  ]
 }
