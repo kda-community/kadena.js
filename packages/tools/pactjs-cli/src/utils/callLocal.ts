@@ -6,7 +6,14 @@ export async function fetchModule(
   body: string,
 ): Promise<
   | {
-      error: string;
+      error:
+        | {
+            callStack: any;
+            type: string;
+            message: string;
+            info: string;
+          } // should be IPactResultError["error"]
+        | string;
       code?: undefined;
     }
   | {
