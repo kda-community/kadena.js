@@ -23,14 +23,11 @@
       "name": "Randy"
     }
   ],
-  "main": "lib/index.js",
-  "types": "dist/pactjs.d.ts",
   "files": [
-    "dist",
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc && api-extractor run --verbose",
+    "build": "vite build",
     "build:local": "tsc && api-extractor run --local --verbose",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
@@ -58,9 +55,25 @@
     "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "typescript": "5.4.5",
-    "vitest": "^1.6.0"
+    "vitest": "^1.6.0",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
+    "vite": "8.0.10"
   },
   "publishConfig": {
     "provenance": true
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
   }
 }
