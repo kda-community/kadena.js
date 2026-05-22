@@ -183,4 +183,9 @@ export type KdaRequestArgs<M extends KdaMethod> = {
   method: M;
 } & { params?: IKdaMethodMap[M]['params'] };
 
-export { ChainId, ICommand, IKeyPair, IUnsignedCommand } from '@kadena/client';
+export type {
+  ChainId,
+  ICommand,
+  IKeyPair,
+  IUnsignedCommand,
+} from '@kadena/client';

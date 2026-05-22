@@ -73,7 +73,8 @@ export abstract class BaseWalletAdapter implements IAdapter {
   ): Promise<IAccountInfo | null> {
     let parsedParams = params as Record<string, any>;
     if (params !== undefined && this.connectSchema !== undefined) {
-      const output = await this.connectSchema?.['~standard'].validate(params);
+      const output: any =
+        await this.connectSchema?.['~standard'].validate(params);
       if (output.issues) {
         throw new SchemaError(output.issues);
       }

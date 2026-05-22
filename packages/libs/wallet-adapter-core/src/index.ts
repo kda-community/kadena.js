@@ -1,4 +1,4 @@
-export { StandardSchemaV1 } from '@standard-schema/spec';
+export type { StandardSchemaV1 } from '@standard-schema/spec';
 export * from './BaseWalletAdapter';
 export * from './guard';
 export * from './types';

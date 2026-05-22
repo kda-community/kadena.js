@@ -1,4 +1,3 @@
-
 import type {
   ICommand,
   IQuicksignResponse,
@@ -127,7 +126,6 @@ describe('sign utilities', () => {
 
   describe('prepareQuickSignCmd', () => {
     it('throws if called with no transaction', async () => {
-      // @ts-expect-error: testing error branch
       await expect(prepareQuickSignCmd(undefined)).rejects.toThrow(
         ERRORS.NO_TRANSACTIONS_TO_SIGN,
       );
