@@ -2,6 +2,7 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 import * as fs from 'node:fs';
 
 const config: CodegenConfig = {
+  // @todo: update uri to community edition one
   schema: 'https://graph.testnet.kadena.network/graphql',
   documents: ['src/**/*.ts'],
   ignoreNoDocuments: true,
@@ -18,24 +19,23 @@ const config: CodegenConfig = {
     },
   },
   hooks: {
-    afterAllFileWrite(...files) {
-      for (let i = 0; i < files.length; i++) {
-        const filePath = files[i];
-        const content = fs.readFileSync(filePath, 'utf-8');
+    afterAllFileWrite(...files: string[]) {
+      for (const filePath of files) {
+        const content: string = fs.readFileSync(filePath, 'utf-8');
         const replaced = content
-          .replaceAll(
+          .replace(
             "import * as types from './graphql';",
             "import * as types from './graphql.js';",
           )
-          .replaceAll(
+          .replace(
             "import type { Incremental } from './graphql';",
             "import type { Incremental } from './graphql.js';",
           )
-          .replaceAll(
+          .replace(
             'export * from "./fragment-masking";',
             'export * from "./fragment-masking.js";',
           )
-          .replaceAll('export * from "./gql";', 'export * from "./gql.js";');
+          .replace('export * from "./gql";', 'export * from "./gql.js";');
         fs.writeFileSync(filePath, replaced);
       }
     },

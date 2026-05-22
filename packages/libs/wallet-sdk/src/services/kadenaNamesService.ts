@@ -1,14 +1,11 @@
 import type { ChainId, IClient, ICommandResult } from '@kadena/client';
 import { Pact, createClient } from '@kadena/client';
-import {
-  KADENANAMES_NAMESPACE_MAINNET_MODULE,
-  KADENANAMES_NAMESPACE_TESTNET_MODULE,
-} from '../constants/kdn.js';
+import { KADENANAMES_NAMESPACE_MAINNET_MODULE } from '../constants/kdn.js';
 
 /*
   Kadenanames running on chain:
     mainnet: 15
-    testnet: 1
+    testnet: not supported
 */
 
 export const getChainIdByNetwork = (networkId: string): ChainId => {
@@ -32,10 +29,11 @@ async function kdnResolver(
   networkHost: string,
   subject: 'address' | 'name',
 ): Promise<string | undefined> {
+  if (networkId.includes('testnet')) {
+    throw new Error('Kadenanames is not supported on testnet');
+  }
   try {
-    const module = networkId.includes('testnet')
-      ? KADENANAMES_NAMESPACE_TESTNET_MODULE
-      : KADENANAMES_NAMESPACE_MAINNET_MODULE;
+    const module: string = KADENANAMES_NAMESPACE_MAINNET_MODULE;
     const method = subject === 'address' ? 'get-address' : 'get-name';
     const param =
       subject === 'address'

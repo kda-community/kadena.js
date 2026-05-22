@@ -1,4 +1,5 @@
 import { createClient, fetchExchange } from '@urql/core';
+import { PageInfo } from '../../gql/graphql';
 import type {
   ITransferOptions,
   ITransferResponse,
@@ -28,7 +29,7 @@ async function fetchChainTransfers(
     // TODO: throw error instead?
     return {
       transfers: [],
-      pageInfo: { hasNextPage: false, hasPreviousPage: false },
+      pageInfo: { hasNextPage: false, hasPreviousPage: false } as PageInfo,
       lastBlockHeight: BigInt(0),
     };
   }
@@ -40,7 +41,7 @@ async function fetchChainTransfers(
   return {
     transfers: nodes,
     pageInfo: result.data.transfers.pageInfo,
-    lastBlockHeight: (result.data.lastBlockHeight ?? null) as bigint | null,
+    lastBlockHeight: result.data.lastBlockHeight ?? null,
   };
 }
 
@@ -55,9 +56,10 @@ export async function getChainTransfers(
     lastBlockHeight,
   } = await fetchChainTransfers(graphqlUrl, options);
   console.log('nodes>>', nodes);
+
   const transfers = parseGqlTransfers(
     nodes,
-    lastBlockHeight ?? BigInt(0),
+    lastBlockHeight != null ? BigInt(lastBlockHeight) : BigInt(0),
     options.fungibleName,
   );
   return {
