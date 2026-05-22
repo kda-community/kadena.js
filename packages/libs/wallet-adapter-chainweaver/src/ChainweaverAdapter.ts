@@ -71,7 +71,6 @@ interface IChainWeaverAdapterOptions extends IBaseWalletAdapterOptions {
 export class ChainweaverAdapter extends BaseWalletAdapter {
   public name: string = CHAINWEAVER_ADAPTER;
   public nonce: number = 0;
-  public provider!: IChainweaverProvider;
   public connectSchema: StandardSchemaV1 = connectSchema;
   public appName: string = 'dApp';
 
