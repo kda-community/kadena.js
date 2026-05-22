@@ -40,7 +40,6 @@ const defaultNetworkId = 'mainnet01';
 export class WalletConnectAdapter extends BaseWalletAdapter {
   public name: string = WALLET_CONNECT_ADAPTER;
   protected declare provider: IWalletConnectProvider;
-  protected networkId: string;
   private client?: Client;
   private modal: WalletConnectModal;
   private options: IWalletConnectAdapterOptions;
