@@ -17,12 +17,12 @@
  ********************************************************************************/
 import type Transport from '@ledgerhq/hw-transport';
 import blake2b from 'blake2b';
-import {
-  Common,
+import type {
   GetPublicKeyResult,
   GetVersionResult,
   SignTransactionResult,
 } from './hw-app-alamgu.js';
+import { Common } from './hw-app-alamgu.js';
 
 export { blake2b, GetPublicKeyResult, GetVersionResult, SignTransactionResult };
 

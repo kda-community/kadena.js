@@ -14,14 +14,11 @@
     "Steven Straatemans <steven.straatemans@kadena.io>"
   ],
   "type": "module",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.cjs.json && tsc && cp ./package.cjs.json ./lib/cjs/package.json",
+    "build": "vite build",
     "format": "echo 'no formatting' # pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
@@ -61,6 +58,21 @@
     "rollup-plugin-polyfill-node": "^0.13.0",
     "ts-node": "~10.9.2",
     "typescript": "5.4.5",
-    "vitest": "^1.6.0"
+    "vitest": "^1.6.0",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
+    "vite": "8.0.10"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
   }
 }
