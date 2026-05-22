@@ -74,10 +74,15 @@ export interface IPactCommand {
  * The the Partial type of {@link IPactCommand}
  * @public
  */
-export interface IPartialPactCommand extends AllPartial<IPactCommand> {
+export interface IPartialPactCommand {
   payload?:
     | { exec: Partial<IExecutionPayloadObject['exec']> }
     | { cont: Partial<IContinuationPayloadObject['cont']> };
+  meta?: Partial<IPactCommand['meta']>;
+  signers?: Array<Partial<IPactCommand['signers'][number]>>;
+  verifiers?: Array<Partial<IPactCommand['verifiers'][number]>>;
+  networkId?: string;
+  nonce?: string;
 }
 
 /**

@@ -13,19 +13,38 @@
     "Javad Khalilian <javad@kadena.io>",
     "Ashwin van Dijk <ashwin@kadena.io>"
   ],
+  "type": "module",
   "exports": {
-    ".": "./lib/index.js",
-    "./fp": "./lib/fp.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    },
+    "./fp": {
+      "types": "./dist/fp.d.ts",
+      "development": "./src/fp.ts",
+      "import": "./dist/fp.mjs",
+      "require": "./dist/fp.cjs",
+      "default": "./dist/fp.mjs"
+    }
   },
-  "main": "lib/index.js",
-  "types": "dist/client.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "fp": [
+        "./dist/fp.d.ts"
+      ]
+    }
+  },
   "files": [
-    "dist",
-    "lib",
-    "fp"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc && api-extractor run --verbose",
+    "build": "vite build",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
@@ -53,6 +72,8 @@
     "@kadena-dev/shared-config": "workspace:*",
     "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/debug": "~4.1.12",
     "@types/node": "^20.12.7",
@@ -64,6 +85,7 @@
     "prettier": "~3.2.5",
     "ts-node": "~10.9.2",
     "typescript": "5.4.5",
+    "vite": "8.0.10",
     "vitest": "^1.6.0"
   },
   "publishConfig": {

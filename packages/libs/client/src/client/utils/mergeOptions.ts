@@ -4,7 +4,7 @@ export function mergeOptions<T extends Record<string, unknown> | undefined>(
 ): T {
   if (!first) return second;
   if (!second) return first;
-  const merged: T = { ...second };
+  const merged: Record<string, unknown> = { ...second };
   Object.entries(first).forEach(([key, value]) => {
     if (merged[key] === undefined) {
       merged[key] = value;
@@ -29,5 +29,5 @@ export function mergeOptions<T extends Record<string, unknown> | undefined>(
       return;
     }
   });
-  return merged;
+  return merged as T;
 }

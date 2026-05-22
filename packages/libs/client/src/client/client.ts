@@ -310,8 +310,19 @@ const getHostData = (
  * @public
  */
 export const createClient: ICreateClient = (
-  host = kadenaHostGenerator,
-  defaults = { confirmationDepth: 0 },
+  host:
+    | string
+    | ((options: {
+        chainId: ChainId;
+        networkId: string;
+        type?: 'local' | 'send' | 'poll' | 'listen' | 'spv';
+      }) =>
+        | string
+        | {
+            hostUrl: string;
+            requestInit: ClientRequestInit;
+          }) = kadenaHostGenerator,
+  defaults: { confirmationDepth?: number } = { confirmationDepth: 0 },
 ): IClient => {
   const confirmationDepth = defaults.confirmationDepth;
   const getHost = typeof host === 'string' ? () => host : host;

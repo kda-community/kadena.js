@@ -14,13 +14,13 @@ export { Pact } from './pact';
 export type * from './interfaces/IPactCommand';
 export type * from './interfaces/ISigningRequest';
 
-export {
+export type {
   ClientRequestInit,
   ICommandResult,
   IPollResponse,
   IPreflightResult,
 } from '@kadena/chainweb-node-client';
-export {
+export type {
   ChainId,
   ICap,
   ICommand,

@@ -227,7 +227,7 @@ export interface IBuilder<TCommand> {
    * finalizing the command by adding all default values.
    *
    */
-  getCommand: () => Partial<IPactCommand>;
+  getCommand: () => IPartialPactCommand;
 }
 
 /**
@@ -355,7 +355,7 @@ const getBuilder = <T>(init: IPartialPactCommand): IBuilder<T> => {
       return builder;
     },
     getCommand: () => {
-      return state.finalize({}) as Partial<IPactCommand>;
+      return state.finalize({});
     },
     createTransaction: () => createTransaction(builder.getCommand()),
   };

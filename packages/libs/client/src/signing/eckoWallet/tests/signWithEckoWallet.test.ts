@@ -4,11 +4,13 @@ import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import type {
   IExecutionPayloadObject,
   IPactCommand,
+  IPartialPactCommand,
 } from '../../../interfaces/IPactCommand';
 import { createTransaction } from '../../../utils/createTransaction';
 import { createEckoWalletSign } from '../signWithEckoWallet';
 
-import { TextDecoder, TextEncoder } from 'util';
+import { IUnsignedCommand } from '@kadena/types';
+import { TextDecoder, TextEncoder } from 'node:util';
 
 type Transaction = IPactCommand & { payload: IExecutionPayloadObject };
 
@@ -72,10 +74,9 @@ describe('signWithEckoWallet', () => {
     });
 
     const signWithEckoWallet = createEckoWalletSign();
-    const transaction = getTransaction();
-    const signedTransaction = await signWithEckoWallet(
-      createTransaction(transaction),
-    );
+    const transaction: Transaction = getTransaction();
+    const unsignedTransaction = createTransaction(transaction);
+    const signedTransaction = await signWithEckoWallet(unsignedTransaction);
 
     expect(mockEckoRequest).toHaveBeenCalledWith({
       method: 'kda_requestSign',
@@ -116,11 +117,11 @@ describe('signWithEckoWallet', () => {
     const signWithEckoWallet = createEckoWalletSign();
 
     const transaction = getTransaction();
-    //@ts-expect-error The operand of a 'delete' operator must be optional.
     delete transaction.payload.exec;
+    const unsignedTransaction = createTransaction(transaction);
 
     await expect(() =>
-      signWithEckoWallet(createTransaction(transaction)),
+      signWithEckoWallet(unsignedTransaction),
     ).rejects.toThrowError('`cont` transactions are not supported');
   });
 
@@ -135,7 +136,8 @@ describe('signWithEckoWallet', () => {
     const transaction = getTransaction();
     delete transaction.signers[0].clist;
 
-    await signWithEckoWallet(createTransaction(transaction));
+    const unsignedTransaction = createTransaction(transaction);
+    await signWithEckoWallet(unsignedTransaction);
 
     expect(window.kadena?.request).toHaveBeenCalledWith({
       method: 'kda_requestSign',
@@ -159,9 +161,10 @@ describe('signWithEckoWallet', () => {
   it('throws when signing cont command', async () => {
     const transaction = getTransaction();
     const signWithEckoWallet = createEckoWalletSign();
+    const unsignedTransaction = createTransaction(transaction);
 
     await expect(() =>
-      signWithEckoWallet(createTransaction(transaction)),
+      signWithEckoWallet(unsignedTransaction),
     ).rejects.toThrowError('Error signing transaction');
   });
 });

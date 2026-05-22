@@ -1,11 +1,14 @@
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 /** @vitest-environment jsdom */
 
-import type { IPactCommand } from '../../../interfaces/IPactCommand';
+import type {
+  IPactCommand,
+  IPartialPactCommand,
+} from '../../../interfaces/IPactCommand';
 import { createTransaction } from '../../../utils/createTransaction';
 import { createEckoWalletQuicksign } from '../quicksignWithEckoWallet';
 
-import { TextDecoder, TextEncoder } from 'util';
+import { TextDecoder, TextEncoder } from 'node:util';
 
 Object.assign(global, { TextDecoder, TextEncoder });
 
@@ -177,23 +180,23 @@ describe('quicksignWithEckoWallet', () => {
 
     const quicksignWithEckoWallet = createEckoWalletQuicksign();
     const transaction = getTransaction();
-    const unsignedTransactions = [
-      createTransaction(transaction),
-      createTransaction({
-        ...getTransaction(),
-        signers: [
-          {
-            clist: [
-              {
-                name: 'test-cap-name',
-                args: ['test-cap-arg'],
-              },
-            ],
-            pubKey: 'test-pub-key-2',
-          },
-        ],
-      }),
-    ];
+    const unsignedTransaction1 = createTransaction(transaction);
+    const unsignedTransaction2 = createTransaction({
+      ...getTransaction(),
+      signers: [
+        {
+          clist: [
+            {
+              name: 'test-cap-name',
+              args: ['test-cap-arg'],
+            },
+          ],
+          pubKey: 'test-pub-key-2',
+        },
+      ],
+    });
+
+    const unsignedTransactions = [unsignedTransaction1, unsignedTransaction2];
     unsignedTransactions[0].hash = 'test-hash';
     unsignedTransactions[1].hash = 'test-hash-2';
     const result = await quicksignWithEckoWallet(unsignedTransactions);
