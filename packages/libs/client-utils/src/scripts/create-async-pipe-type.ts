@@ -1,5 +1,5 @@
-import { writeFile } from 'fs/promises';
-import path from 'path';
+import { writeFile } from 'node:fs/promises';
+import path from 'node:path';
 import * as prettier from 'prettier';
 
 function createAsyncPipeOverload(length: number) {

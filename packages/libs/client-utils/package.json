@@ -13,106 +13,105 @@
     "Albert Groothedde <albert@kadena.io>",
     "Nil Amrutlal <nil.amrutlal@deptagency.com>"
   ],
+  "type": "module",
   "exports": {
     ".": {
-      "types": "./lib/types/index.d.ts",
-      "import": "./lib/esm/index.mjs",
-      "require": "./lib/cjs/index.js"
+      "types": "./dist/index.d.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./built-in": {
-      "types": "./lib/types/built-in/index.d.ts",
-      "import": "./lib/esm/built-in/index.mjs",
-      "require": "./lib/cjs/built-in/index.js"
+      "types": "./dist/built-in/index.d.ts",
+      "development": "./src/built-in/index.ts",
+      "import": "./dist/built-in/index.mjs",
+      "require": "./dist/built-in/index.cjs"
     },
     "./coin": {
-      "types": "./lib/types/coin/index.d.ts",
-      "import": "./lib/esm/coin/index.mjs",
-      "require": "./lib/cjs/coin/index.js"
+      "types": "./dist/coin/index.d.ts",
+      "development": "./src/coin/index.ts",
+      "import": "./dist/coin/index.mjs",
+      "require": "./dist/coin/index.cjs"
     },
     "./core": {
-      "types": "./lib/types/core/index.d.ts",
-      "import": "./lib/esm/core/index.mjs",
-      "require": "./lib/cjs/core/index.js"
+      "types": "./dist/core/index.d.ts",
+      "development": "./src/core/index.ts",
+      "import": "./dist/core/index.mjs",
+      "require": "./dist/core/index.cjs"
     },
     "./nodejs": {
-      "types": "./lib/types/nodejs/index.d.ts",
-      "import": "./lib/esm/nodejs/index.mjs",
-      "require": "./lib/cjs/nodejs/index.js"
+      "types": "./dist/nodejs/index.d.ts",
+      "development": "./src/nodejs/index.ts",
+      "import": "./dist/nodejs/index.mjs",
+      "require": "./dist/nodejs/index.cjs"
     },
     "./marmalade": {
-      "types": "./lib/types/marmalade/index.d.ts",
-      "import": "./lib/esm/marmalade/index.mjs",
-      "require": "./lib/cjs/marmalade/index.js"
+      "types": "./dist/marmalade/index.d.ts",
+      "development": "./src/marmalade/index.ts",
+      "import": "./dist/marmalade/index.mjs",
+      "require": "./dist/marmalade/index.cjs"
     },
     "./webauthn": {
-      "types": "./lib/types/webauthn/index.d.ts",
-      "import": "./lib/esm/webauthn/index.mjs",
-      "require": "./lib/cjs/webauthn/index.js"
+      "types": "./dist/webauthn/index.d.ts",
+      "development": "./src/webauthn/index.ts",
+      "import": "./dist/webauthn/index.mjs",
+      "require": "./dist/webauthn/index.cjs"
     },
     "./faucet": {
-      "types": "./lib/types/faucet/index.d.ts",
-      "import": "./lib/esm/faucet/index.mjs",
-      "require": "./lib/cjs/faucet/index.js"
+      "types": "./dist/faucet/index.d.ts",
+      "development": "./src/faucet/index.ts",
+      "import": "./dist/faucet/index.mjs",
+      "require": "./dist/faucet/index.cjs"
     }
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
       ".": [
-        "./lib/types/index.d.ts"
+        "./dist/index.d.ts"
       ],
       "built-in": [
-        "./lib/types/built-in/index.d.ts"
+        "./dist/built-in/index.d.ts"
       ],
       "core": [
-        "./lib/types/core/index.d.ts"
+        "./dist/core/index.d.ts"
       ],
       "coin": [
-        "./lib/types/coin/index.d.ts"
+        "./dist/coin/index.d.ts"
       ],
       "nodejs": [
-        "./lib/types/nodejs/index.d.ts"
+        "./dist/nodejs/index.d.ts"
       ],
       "marmalade": [
-        "./lib/types/marmalade/index.d.ts"
+        "./dist/marmalade/index.d.ts"
       ],
       "webauthn": [
-        "./lib/types/webauthn/index.d.ts"
+        "./dist/webauthn/index.d.ts"
       ],
       "faucet": [
-        "./lib/types/faucet/index.d.ts"
+        "./dist/faucet/index.d.ts"
       ]
     }
   },
   "files": [
-    "dist",
-    "lib",
-    "built-in",
-    "coin",
-    "core",
-    "src"
+    "dist"
   ],
   "scripts": {
-    "ae": "pnpm run ae:core && pnpm run ae:built-in && pnpm run ae:coin",
-    "ae:built-in": "api-extractor run --verbose -c ./config/api-extractor-built-in.json",
-    "ae:coin": "api-extractor run --verbose -c ./config/api-extractor-coin.json",
-    "ae:core": "api-extractor run --verbose -c ./config/api-extractor-core.json",
-    "build": "pnpm run pactjs:generate:contract && pnpm run pactjs:generate:faucet && pnpm run generate-pipe-type && tsc && unbuild && pnpm run ae",
-    "dev:ae": "pnpm run dev:ae:core && pnpm run dev:ae:built-in && pnpm run dev:ae:coin",
-    "dev:ae:built-in": "api-extractor run --local --verbose -c ./config/api-extractor-built-in.json",
-    "dev:ae:coin": "api-extractor run --local --verbose -c ./config/api-extractor-coin.json",
-    "dev:ae:core": "api-extractor run --local --verbose -c ./config/api-extractor-core.json",
+    "build": "pnpm run pactjs:generate:contract && pnpm run pactjs:generate:faucet && pnpm run generate-pipe-type && vite build",
     "dev:postinstall": "pnpm run pactjs:generate:contract && pnpm run pactjs:generate:faucet",
-    "faucet:account-details": "TASK=account-details ts-node src/scripts/deploy-faucet/deploy-faucet.ts",
-    "faucet:balance": "TASK=balance ts-node src/scripts/deploy-faucet/deploy-faucet.ts",
-    "faucet:deploy": "TASK=deploy ts-node src/scripts/deploy-faucet/deploy-faucet.ts",
-    "faucet:fund": "TASK=fund ts-node src/scripts/deploy-faucet/deploy-faucet.ts",
-    "faucet:fund-create": "TASK=fund-create ts-node src/scripts/deploy-faucet/deploy-faucet.ts",
-    "faucet:transfer": "TASK=transfer ts-node src/scripts/deploy-faucet/deploy-faucet.ts",
+    "faucet:account-details": "TASK=account-details tsx src/scripts/deploy-faucet/deploy-faucet.ts",
+    "faucet:balance": "TASK=balance tsx src/scripts/deploy-faucet/deploy-faucet.ts",
+    "faucet:deploy": "TASK=deploy tsx src/scripts/deploy-faucet/deploy-faucet.ts",
+    "faucet:fund": "TASK=fund tsx src/scripts/deploy-faucet/deploy-faucet.ts",
+    "faucet:fund-create": "TASK=fund-create tsx src/scripts/deploy-faucet/deploy-faucet.ts",
+    "faucet:transfer": "TASK=transfer tsx src/scripts/deploy-faucet/deploy-faucet.ts",
     "format": "pnpm run /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
     "format:src": "prettier . --cache --write",
-    "generate-pipe-type": "cache-sh -i \"{src/scripts/create-async-pipe-type.ts,src/interfaces/async-pipe-type.ts}\" \"ts-node src/scripts/create-async-pipe-type.ts 30\"",
+    "generate-pipe-type": "cache-sh -i \"{src/scripts/create-async-pipe-type.ts,src/interfaces/async-pipe-type.ts}\" \"tsx src/scripts/create-async-pipe-type.ts 30\"",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
@@ -122,7 +121,7 @@
     "test": "vitest run",
     "test:integration": "pnpm run test:integration:setup && vitest run -c ./vitest.integration.config.ts",
     "test:integration:local": "vitest run -c ./vitest.integration.config.ts",
-    "test:integration:setup": "pnpm run build && ts-node src/scripts/setup-marmalade-test-env.ts",
+    "test:integration:setup": "pnpm run build && tsx src/scripts/setup-marmalade-test-env.ts",
     "test:watch": "vitest"
   },
   "dependencies": {
@@ -142,6 +141,8 @@
     "@kadena-dev/markdown": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/debug": "~4.1.12",
     "@types/js-yaml": "4.0.9",
@@ -151,9 +152,9 @@
     "cache-sh": "^1.2.1",
     "oxlint": "1.63.0",
     "prettier": "~3.2.5",
-    "ts-node": "~10.9.2",
+    "tsx": "4.22.3",
     "typescript": "5.4.5",
-    "unbuild": "^2.0.0",
+    "vite": "8.0.10",
     "vitest": "^1.6.0"
   }
 }
