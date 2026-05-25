@@ -10,11 +10,12 @@ export function defineLibConfig(): UserConfig {
   );
 
   return defineConfig({
+    publicDir: false,
     plugins: [
       dts({
         include: ['src'],
         outDirs: ['dist'],
-        bundleTypes: true,
+        bundleTypes: false,
       }),
     ],
     resolve: {
@@ -26,8 +27,8 @@ export function defineLibConfig(): UserConfig {
       lib: {
         entry: './src/index.ts',
         name: packageJson.name.replace(/[^a-zA-Z0-9_]/g, ''),
-        fileName: (format): string =>
-          `index.${format === 'es' ? 'mjs' : 'cjs'}`,
+        fileName: (format, entryName): string =>
+          `${entryName}.${format === 'es' ? 'mjs' : 'cjs'}`,
         formats: ['es', 'cjs'],
       },
       emptyOutDir: true,
