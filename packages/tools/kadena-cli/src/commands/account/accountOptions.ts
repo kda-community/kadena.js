@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { CHAIN_ID_RANGE_ERROR_MESSAGE } from '../../constants/account.js';
 import { actionAskForDeployFaucet } from '../../prompts/genericActionPrompts.js';
 import { account } from '../../prompts/index.js';
-import { services } from '../../services/index.js';
+import { services } from '../../services';
 import { createOption } from '../../utils/createOption.js';
 import {
   formatZodError,

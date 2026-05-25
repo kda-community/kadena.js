@@ -269,7 +269,7 @@ export const securityOptions = {
         '--password-file <passwordFile>',
         'Filepath to the password file',
       ),
-      transform: passwordPromptTransform('--password-file', args.useStdin),
+      transform: passwordPromptTransform(args.useStdin),
     })(optionArgs);
   },
   createNewPasswordOption: (
@@ -284,7 +284,7 @@ export const securityOptions = {
         '--new-password-file <newPasswordFile>',
         'Filepath to the new password file',
       ),
-      transform: passwordPromptTransform('--new-password-file', args.useStdin),
+      transform: passwordPromptTransform(args.useStdin),
     })(optionArgs);
   },
 };

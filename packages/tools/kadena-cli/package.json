@@ -26,18 +26,16 @@
     "Bart Huijgen <bart@kadena.io>"
   ],
   "type": "module",
-  "main": "./lib/index.js",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "bin": {
-    "kadena": "./lib/index.js"
+    "kadena": "./dist/index.mjs"
   },
   "files": [
-    "lib/**/*.js",
-    "!lib/**/*.js.map",
-    "!lib/**/*.d.ts",
-    "!lib/**/*.d.ts.map"
+    "dist"
   ],
   "scripts": {
-    "build": "pnpm run generate:all && tsc",
+    "build": "pnpm run generate:all && vite build",
     "bundle": "rollup -c rollup.config.mjs",
     "dev": "swc --config-file .swcrc ./src -d lib --strip-leading-paths -q && NODE_ENV=development KADENA_LOG=debug node lib/index.js",
     "format": "pnpm run /^format:.*/",
@@ -51,16 +49,16 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
-    "watch": "tsc --watch"
+    "watch": "vite --watch"
   },
   "dependencies": {
     "@inquirer/prompts": "3.3.0",
-    "@kadena/client": "workspace:^",
+    "@kadena/client": "workspace:*",
     "@kadena/client-utils": "workspace:*",
     "@kadena/cryptography-utils": "workspace:*",
     "@kadena/hd-wallet": "workspace:*",
     "@kadena/pactjs": "workspace:*",
-    "@kadena/pactjs-cli": "workspace:^",
+    "@kadena/pactjs-cli": "workspace:*",
     "@kadena/pactjs-generator": "workspace:*",
     "@scure/bip39": "1.2.1",
     "chalk": "^5.2.0",
@@ -76,9 +74,10 @@
   },
   "devDependencies": {
     "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
     "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -96,6 +95,7 @@
     "prettier": "~3.2.5",
     "rollup": "^4.17.2",
     "typescript": "5.4.5",
+    "vite": "8.0.10",
     "vitest": "^1.6.0"
   },
   "engines": {
