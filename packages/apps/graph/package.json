@@ -91,7 +91,6 @@
     "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
     "@types/debug": "~4.1.12",
-    "oxlint": "1.63.0",
     "@types/js-yaml": "4.0.9",
     "@types/lodash": "^4.17.13",
     "@types/node": "^20.12.7",
@@ -99,6 +98,7 @@
     "@types/seedrandom": "~3.0.8",
     "@types/ws": "^8.5.10",
     "cache-sh": "^1.2.1",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "ts-node": "~10.9.2",
     "typescript": "5.4.5"

@@ -1,4 +1,8 @@
-import type { ChainId, IUnsignedCommand } from '@kadena/client';
+import type {
+  ChainId,
+  INetworkOptions,
+  IUnsignedCommand,
+} from '@kadena/client';
 import { createClient, createTransaction } from '@kadena/client';
 import { composePactCommand } from '@kadena/client/fp';
 import { hash as hashFunction } from '@kadena/cryptography-utils';
@@ -261,7 +265,7 @@ export const estimateGasLimit = async (
 
   try {
     const result = await createClient(
-      ({ chainId }) =>
+      ({ chainId }: INetworkOptions) =>
         `${dotenv.NETWORK_HOST}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
     ).local(transaction, configuration);
 
