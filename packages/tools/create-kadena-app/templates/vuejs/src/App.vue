@@ -1,7 +1,7 @@
 <script lang="ts">
 import { HalfCircleSpinner } from 'epic-spinners';
-import writeMessage from './utils/writeMessage';
-import readMessage from './utils/readMessage';
+import writeMessage from './common/utils/writeMessage';
+import readMessage from './common/utils/readMessage';
 
 export default {
   data: () => ({

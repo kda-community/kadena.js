@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import readMessage from '../utils/readMessage';
-import writeMessage from '../utils/writeMessage';
+import readMessage from '../common/utils/readMessage';
+import writeMessage from '../common/utils/writeMessage';
 
 @Injectable({ providedIn: 'root' })
 export class AppService {

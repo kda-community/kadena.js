@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: 'Kode Mono';
-  src: url('./assets/fonts/KodeMono-Regular.woff2') format('woff2');
+  src: url('./common/fonts/KodeMono-Regular.woff2') format('woff2');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Kode Mono Bold';
-  src: url('./assets/fonts/KodeMono-Bold.woff2') format('woff2');
+  src: url('./common/fonts/KodeMono-Bold.woff2') format('woff2');
   font-weight: bold;
 }
 

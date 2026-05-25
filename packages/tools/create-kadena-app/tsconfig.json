@@ -1,8 +1,4 @@
 {
-  "extends": "./node_modules/@kadena-dev/shared-config/tsconfig-base.json",
-  "compilerOptions": {
-    "module": "NodeNext",
-    "resolveJsonModule": true,
-    "types": ["heft-jest", "node"]
-  }
+  "extends": "@kda-community-dev/typescript-config/node",
+  "include": ["src/**/*", "vite.config.ts"]
 }

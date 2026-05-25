@@ -19,16 +19,18 @@
     }
   ],
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "bin": {
-    "create-kadena-app": "./bin/index.js"
+    "create-kadena-app": "./dist/index.js"
   },
   "files": [
     "dist",
-    "lib"
+    "templates"
   ],
   "scripts": {
-    "build": "pnpm run cleanup && tsc && pnpm run copy",
-    "cleanup": "rimraf dist lib",
+    "build": "vite build",
+    "cleanup": "rimraf dist",
     "copy": "node ./src/scripts/copy.mjs",
     "format": "prettier config src templates --write",
     "lint": "oxlint .",
@@ -44,8 +46,9 @@
     "yaml": "~2.1.1"
   },
   "devDependencies": {
-    "@kadena-dev/shared-config": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@types/cross-spawn": "~6.0.2",
     "@types/debug": "~4.1.12",
     "@types/heft-jest": "~1.0.6",
@@ -58,6 +61,7 @@
     "recursive-copy": "^2.0.14",
     "rimraf": "~5.0.1",
     "ts-node": "~10.9.2",
-    "typescript": "5.4.5"
+    "typescript": "5.4.5",
+    "vite": "8.0.10"
   }
 }

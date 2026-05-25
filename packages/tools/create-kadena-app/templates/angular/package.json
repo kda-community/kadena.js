@@ -10,10 +10,10 @@
   },
   "license": "ISC",
   "scripts": {
-    "build": "ng build",
+    "build": "pnpm run pactjs:generate:contracts && ng build",
     "format": "prettier --write .",
     "ng": "ng",
-    "pactjs:generate:contracts": "pactjs contract-generate --file ./pact/message-store.pact; pactjs contract-generate --file ./pact/root/coin-v5.pact",
+    "pactjs:generate:contracts": "pactjs contract-generate --file ./pact/message-store.pact && pactjs contract-generate --file ./pact/root/coin-v5.pact",
     "start": "ng serve",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
@@ -55,4 +55,3 @@
     "typescript": "~5.2.2"
   }
 }
-

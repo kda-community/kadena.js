@@ -10,11 +10,11 @@
   },
   "license": "ISC",
   "scripts": {
-    "build": "next build",
+    "build": "pnpm run pactjs:generate:contracts && next build",
     "dev": "next dev",
     "format": "prettier --write .",
     "lint": "oxlint .",
-    "pactjs:generate:contracts": "pactjs contract-generate --file ./pact/message-store.pact; pactjs contract-generate --file ./pact/root/coin-v5.pact",
+    "pactjs:generate:contracts": "pactjs contract-generate --file ./pact/message-store.pact && pactjs contract-generate --file ./pact/root/coin-v5.pact",
     "start": "next start",
     "test": "jest --watch",
     "test:ci": "jest --ci"

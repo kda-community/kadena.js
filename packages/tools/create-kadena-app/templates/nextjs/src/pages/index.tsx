@@ -1,5 +1,5 @@
-import readMessage from '@/utils/readMessage';
-import writeMessage from '@/utils/writeMessage';
+import readMessage from '@/common/utils/readMessage';
+import writeMessage from '@/common/utils/writeMessage';
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react';
