@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     "./base": "./vite.base.config.ts",
-    "./lib": "./vite.lib.config.ts"
+    "./lib": "./vite.lib.config.ts",
+    "./node": "./vite.node.config.ts"
   },
   "devDependencies": {
     "@kda-community-dev/typescript-config": "workspace:*",
