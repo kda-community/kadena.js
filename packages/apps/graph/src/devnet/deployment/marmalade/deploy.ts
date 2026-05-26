@@ -1,9 +1,9 @@
 import type { ChainId } from '@kadena/client';
 import { createTransaction } from '@kadena/client';
 import { createPactCommandFromTemplate } from '@kadena/client-utils/nodejs';
-import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import yaml from 'js-yaml';
-import { join, relative } from 'path';
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { join, relative } from 'node:path';
 
 import { downloadGitFiles } from '@services/git/download-git-files';
 import { flattenFolder } from '@services/git/path';

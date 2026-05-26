@@ -10,7 +10,7 @@
  * - Include it in the array for `adapters`.
  */
 
-import '@kadena/kode-ui/global';
+//import '@kadena/kode-ui/global';
 import { darkThemeClass } from '@kadena/kode-ui/styles';
 import { createChainweaverAdapter } from '@kadena/wallet-adapter-chainweaver';
 import { createChainweaverLegacyAdapter } from '@kadena/wallet-adapter-chainweaver-legacy';

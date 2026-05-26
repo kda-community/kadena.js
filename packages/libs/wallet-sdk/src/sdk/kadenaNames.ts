@@ -32,9 +32,9 @@ export class KadenaNames {
       return result;
     } catch (error) {
       this._sdk.logger.error(
-        `Error in name resolving action: ${error.message}`,
+        `Error in name resolving action: ${(error as Error).message}`,
       );
-      throw new Error(`Error resolving address: ${error.message}`);
+      throw new Error(`Error resolving address: ${(error as Error).message}`);
     }
   }
 
@@ -56,9 +56,9 @@ export class KadenaNames {
       return result;
     } catch (error) {
       this._sdk.logger.error(
-        `Error in name resolving action: ${error.message}`,
+        `Error in name resolving action: ${(error as Error).message}`,
       );
-      throw new Error(`Error resolving address: ${error.message}`);
+      throw new Error(`Error resolving address: ${(error as Error).message}`);
     }
   }
 }

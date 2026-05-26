@@ -13,7 +13,7 @@ import {
   setMeta,
 } from '@kadena/client/fp';
 
-import { submitClient } from '../core/client-helpers';
+import { submitClient } from '../core';
 import type { IClientConfig } from '../core/utils/helpers';
 
 interface ICreateAccountCommandInput {

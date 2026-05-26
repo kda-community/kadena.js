@@ -2,8 +2,8 @@
 packages/*/*/lib
 packages/*/*/lib-commonjs
 packages/*/*/.parcel-cache
-packages/*/*/dist
 packages/*/*/coverage
+**/dist
 
 # lock-files that don't belong here
 package-lock.json

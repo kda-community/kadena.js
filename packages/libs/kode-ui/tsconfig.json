@@ -1,17 +1,15 @@
 {
-  "extends": "./node_modules/@kadena-dev/shared-config/tsconfig-base.json",
+  "extends": "@kda-community-dev/typescript-config/react",
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
     "types": ["node", "vitest-dom/extend-expect"],
     "skipLibCheck": true,
     "module": "ESNext",
     "declarationDir": "types",
-    "outDir": "dist/esm",
+    "outDir": "./dist",
     "allowJs": true,
     "moduleResolution": "Bundler",
     "removeComments": true
   },
   "include": ["src", "*.config.ts", "scripts"],
-  "exclude": ["node_modules"]
+  "exclude": ["dist", "**/__tests__/**", "**/*.test.ts/**"]
 }

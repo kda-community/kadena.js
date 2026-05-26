@@ -1,5 +1,5 @@
 import { MonoCheck, MonoClear } from '@kadena/kode-icons/system';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 import { getVariants } from '../../storyDecorators/getVariants';
 import type { IStepProps } from './Step';

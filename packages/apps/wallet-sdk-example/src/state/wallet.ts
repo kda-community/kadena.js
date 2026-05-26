@@ -10,10 +10,10 @@ import {
   kadenaMnemonicToSeed,
   kadenaSignWithSeed,
 } from '@kadena/hd-wallet';
+import { ICommandPayload } from '@kadena/types';
 import { atom, useAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
 import { useEffect, useMemo } from 'react';
-import { ICommandPayload } from '../../../../libs/types/dist/types';
 
 export type Account = {
   index: number;

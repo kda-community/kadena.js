@@ -3,9 +3,9 @@ import type {
   IExecutionPayloadObject,
   IPactCommand,
 } from '@kadena/client';
-import { readFileSync } from 'fs';
 import yaml from 'js-yaml';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { asyncPipe } from '../core/utils/asyncPipe';
 
 interface ITplHoleTriple {

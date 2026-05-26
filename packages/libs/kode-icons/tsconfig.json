@@ -1,15 +1,14 @@
 {
-  "extends": "@kadena-dev/shared-config/tsconfig-base.json",
+  "extends": "@kda-community-dev/typescript-config/base",
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
-    "types": ["node"],
+    "jsx": "react-jsx",
+    "types": ["node", "vite/client"],
     "skipLibCheck": true,
     "module": "ESNext",
     "noEmit": true,
     "moduleResolution": "Bundler",
     "removeComments": true
   },
-  "include": ["./src", "./scripts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*", "scripts", "vite.config.ts"],
+  "exclude": ["dist"]
 }

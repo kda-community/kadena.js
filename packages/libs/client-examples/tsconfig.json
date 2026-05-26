@@ -3,5 +3,6 @@
   "compilerOptions": {
     "types": [".kadena/pactjs-generated"]
   },
-  "include": ["src/**/*", "vite.config.ts"]
+  "include": ["src/client-utils"],
+  "exclude": ["dist"]
 }

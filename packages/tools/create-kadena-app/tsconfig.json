@@ -1,4 +1,5 @@
 {
   "extends": "@kda-community-dev/typescript-config/node",
-  "include": ["src/**/*", "vite.config.ts"]
+  "include": ["src/**/*", "vite.config.ts"],
+  "exclude": ["templates"]
 }

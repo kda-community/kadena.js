@@ -482,7 +482,7 @@ export class WalletSDK {
       return accountDetailsList;
     } catch (error) {
       throw new Error(
-        `Failed to get account details for "${accountName}": ${error.message}`,
+        `Failed to get account details for "${accountName}": ${(error as Error).message}`,
       );
     }
   }

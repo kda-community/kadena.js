@@ -53,7 +53,7 @@ export async function parseResponse<T>(response: Response): Promise<T> {
       return Promise.reject(new Error(textResponse));
     } catch (error) {
       // return response as unknown as T;
-      throw new Error(error.message);
+      throw new Error((error as Error).message);
     }
   }
 }

@@ -1,5 +1,5 @@
-import { type Preview } from '@storybook/react';
-import { themes } from '@storybook/theming';
+import { type Preview } from '@storybook/react-vite';
+import { themes } from 'storybook/theming';
 import React from 'react';
 import { withCenteredStory } from '../src/storyDecorators';
 import { darkThemeClass } from '../src/styles';

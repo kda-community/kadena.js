@@ -5,9 +5,8 @@
   "exports": {
     "./base": "./tsconfig.base.json",
     "./node": "./tsconfig.node.json",
-    "./lib": "./tsconfig.lib.json"
-  },
-  "peerDependencies": {
-    "typescript": "5.4.5"
+    "./lib": "./tsconfig.lib.json",
+    "./react": "./tsconfig.react.json",
+    "./vite": "./tsconfig.vite.json"
   }
 }

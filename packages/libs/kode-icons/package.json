@@ -12,48 +12,49 @@
   "contributors": [
     "Salama Ashoush <salama@kadena.io>"
   ],
+  "type": "module",
   "exports": {
     "./brand": {
       "types": {
         "import": "./dist/brand/esm/index.d.ts",
         "require": "./dist/brand/cjs/index.d.ts"
       },
-      "import": "./dist/brand/esm/index.mjs",
-      "require": "./dist/brand/cjs/index.js"
+      "import": "./dist/brand/index.mjs",
+      "require": "./dist/brand/index.cjs"
     },
     "./product": {
       "types": {
-        "import": "./dist/product/esm/index.d.ts",
-        "require": "./dist/product/cjs/index.d.ts"
+        "import": "./dist/product/index.d.ts",
+        "require": "./dist/product/index.d.ts"
       },
-      "import": "./dist/product/esm/index.mjs",
-      "require": "./dist/product/cjs/index.js"
+      "import": "./dist/product/index.mjs",
+      "require": "./dist/product/index.cjs"
     },
     "./system": {
       "types": {
-        "import": "./dist/system/esm/index.d.ts",
-        "require": "./dist/system/cjs/index.d.ts"
+        "import": "./dist/system/index.d.ts",
+        "require": "./dist/system/index.d.ts"
       },
-      "import": "./dist/system/esm/index.mjs",
-      "require": "./dist/system/cjs/index.js"
+      "import": "./dist/system/index.mjs",
+      "require": "./dist/system/index.cjs"
     },
     ".": {
       "types": {
-        "import": "./dist/system/esm/index.d.ts",
-        "require": "./dist/system/cjs/index.d.ts"
+        "import": "./dist/system/index.d.ts",
+        "require": "./dist/system/index.d.ts"
       },
-      "import": "./dist/system/esm/index.mjs",
-      "require": "./dist/system/cjs/index.js"
+      "import": "./dist/system/index.mjs",
+      "require": "./dist/system/index.cjs"
     }
   },
-  "main": "./dist/system/cjs/index.js",
-  "module": "./dist/system/esm/index.mjs",
-  "types": "./dist/system/cjs/index.d.ts",
+  "main": "./dist/system/index.cjs",
+  "module": "./dist/system/index.mjs",
+  "types": "./dist/system/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "vite build",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
@@ -62,8 +63,7 @@
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
-    "lint:src": "oxlint .",
-    "verify": "tsc --noEmit"
+    "lint:src": "oxlint ."
   },
   "dependencies": {
     "react": "^19.1.1"
@@ -71,8 +71,9 @@
   "devDependencies": {
     "@kadena-dev/lint-package": "workspace:*",
     "@kadena-dev/markdown": "workspace:*",
-    "@kadena-dev/shared-config": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-prettier": "^8.1.0",
@@ -81,12 +82,12 @@
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.1",
     "giget": "^1.2.1",
-    "oxlint": "1.63.0",
     "jiti": "^1.21.6",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "scule": "^1.3.0",
     "tiny-readdir-glob": "^1.2.1",
     "typescript": "5.4.5",
-    "unbuild": "^2.0.0"
+    "vite": "8.0.10"
   }
 }

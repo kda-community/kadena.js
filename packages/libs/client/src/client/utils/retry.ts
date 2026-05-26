@@ -8,7 +8,7 @@ const rejectAfter = (
   promise: Promise<void>;
 } => {
   let stopTimer = (): void => {};
-  const promise = new Promise<void>((resolve, reject) => {
+  const promise = new Promise<void>((_, reject) => {
     const timer = setTimeout(
       () => reject(new Error('TIME_OUT_REJECT')),
       timeout,
@@ -30,7 +30,7 @@ export const retry = <T extends object | string | void | boolean>(
 
     try {
       const result = await Promise.race([
-        new Promise((resolve, reject) => {
+        new Promise((_, reject) => {
           if (signal?.aborted === true) {
             reject(new Error('ABORTED'));
           }
@@ -49,7 +49,8 @@ export const retry = <T extends object | string | void | boolean>(
     } catch (error) {
       if (
         error !== undefined &&
-        (error.message === 'TIME_OUT_REJECT' || error.message === 'ABORTED')
+        ((error as Error).message === 'TIME_OUT_REJECT' ||
+          (error as Error).message === 'ABORTED')
       ) {
         throw error;
       }

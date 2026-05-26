@@ -1,5 +1,5 @@
 import { MonoChevronLeft, MonoChevronRight } from '@kadena/kode-icons';
-import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 
 import { Link } from '.';

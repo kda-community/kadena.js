@@ -137,16 +137,12 @@ export const groupClass = recipe({
       row: {
         flexDirection: 'row',
         gap: `${token('spacing.n2')} ${token('spacing.n4')}`,
-        vars: {
-          [maxWidth]: '32%',
-        },
+        maxWidth: '32%',
       },
       column: {
         flexDirection: 'column',
         gap: token('spacing.n2'),
-        vars: {
-          [maxWidth]: '100%',
-        },
+        maxWidth: '100%',
       },
     },
   },

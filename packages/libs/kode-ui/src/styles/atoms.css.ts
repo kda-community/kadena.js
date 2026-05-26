@@ -1,16 +1,15 @@
-import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
-import mapValues from 'lodash.mapvalues';
+import { defineProperties } from '@vanilla-extract/sprinkles';
 import { breakpoints, flattenTokens } from './themeUtils';
 import { tokens } from './tokens/contract.css';
 
-export const colorAtoms = flattenTokens({
+const colorAtoms = flattenTokens({
   inherit: 'inherit',
   currentColor: 'currentColor',
   icon: tokens.kda.foundation.color.icon,
   text: tokens.kda.foundation.color.text,
 });
 
-const systemProperties = defineProperties({
+export const systemProperties = defineProperties({
   properties: {
     background: ['none'],
     backgroundColor: {
@@ -68,10 +67,15 @@ const systemProperties = defineProperties({
 
 const spacingWithAuto = { ...tokens.kda.foundation.spacing, auto: 'auto' };
 
-const responsiveProperties = defineProperties({
-  conditions: mapValues(breakpoints, (bp?: string) =>
+const conditions = Object.fromEntries(
+  Object.entries(breakpoints).map(([key, bp]) => [
+    key,
     bp === '' ? {} : { '@media': bp },
-  ),
+  ]),
+);
+
+export const responsiveProperties = defineProperties({
+  conditions,
   defaultCondition: 'xs',
   properties: {
     alignItems: ['flex-start', 'center', 'flex-end', 'stretch'],
@@ -123,7 +127,3 @@ const responsiveProperties = defineProperties({
     paddingBlock: ['paddingBlockStart', 'paddingBlockEnd'],
   },
 });
-
-export const atoms = createSprinkles(systemProperties, responsiveProperties);
-
-export type Atoms = Parameters<typeof atoms>[0];

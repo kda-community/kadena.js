@@ -1,3 +1,3 @@
-import { defineLibConfig } from '@kda-community-dev/vite-config/lib';
+import { defineNodeConfig } from '@kda-community-dev/vite-config/node';
 
-export default defineLibConfig();
+export default defineNodeConfig();

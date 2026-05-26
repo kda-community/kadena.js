@@ -1,7 +1,7 @@
 import * as BrandIcons from '@kadena/kode-icons/brand';
 import * as SystemIcons from '@kadena/kode-icons/system';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React, { useState } from 'react';
 import { useFilter } from 'react-aria';
 import { atoms, tokens } from '../../styles';

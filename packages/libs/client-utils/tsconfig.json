@@ -1,7 +1,8 @@
 {
   "extends": "@kda-community-dev/typescript-config/lib",
   "compilerOptions": {
-    "types": [".kadena/pactjs-generated"]
+    "types": [".kadena/pactjs-generated", "node"]
   },
-  "include": ["src/**/*", "vite.config.ts"]
+  "include": ["src/**/*", "vite.config.ts", "node_modules/.kadena/**/*.d.ts"],
+  "exclude": ["dist"]
 }

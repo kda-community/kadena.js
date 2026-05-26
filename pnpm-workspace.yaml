@@ -1,6 +1,6 @@
 packages:
-  - 'packages/**/*'
+  - 'packages/libs/*'
+  - 'packages/tools/*'
   - 'tooling/**/*'
-  - '!packages/libs/kode-ui'
-  - '!packages/libs/kode-icons'
   - '!packages/apps/**'
+  - '!packages/e2e/**'

@@ -1,3 +1,12 @@
 {
-  "extends": "@kda-community-dev/typescript-config/node"
+  "extends": "@kda-community-dev/typescript-config/node",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "composite": false
+  },
+  "include": ["*.ts"]
 }

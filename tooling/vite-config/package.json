@@ -4,14 +4,33 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./base": "./vite.base.config.ts",
-    "./lib": "./vite.lib.config.ts",
-    "./node": "./vite.node.config.ts"
+    "./base": {
+      "types": "./dist/vite.base.config.d.ts",
+      "import": "./dist/vite.base.config.js"
+    },
+    "./lib": {
+      "types": "./dist/vite.lib.config.d.ts",
+      "import": "./dist/vite.lib.config.js"
+    },
+    "./node": {
+      "types": "./dist/vite.node.config.d.ts",
+      "import": "./dist/vite.node.config.js"
+    },
+    "./react": {
+      "types": "./dist/vite.react.config.d.ts",
+      "import": "./dist/vite.react.config.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
   },
   "devDependencies": {
     "@kda-community-dev/typescript-config": "workspace:*",
+    "@types/node": "^20.12.7",
+    "@vanilla-extract/vite-plugin": "5.2.2",
+    "@vitejs/plugin-react": "6.0.2",
     "esbuild": "0.28.0",
-    "typescript": "5.4.5",
+    "typescript": "5.9.2",
     "vite": "8.0.10",
     "vite-plugin-dts": "5.0.0"
   },

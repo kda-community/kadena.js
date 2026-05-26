@@ -1,5 +1,5 @@
 import { MonoNote } from '@kadena/kode-icons/system';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 import { Box, Button, Stack } from '../../components';
 import type { ICardContentBlockProps } from './CardContentBlock';

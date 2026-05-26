@@ -1,5 +1,5 @@
 import { MonoAdd } from '@kadena/kode-icons/system';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React, { useState } from 'react';
 import {
   getVariants,

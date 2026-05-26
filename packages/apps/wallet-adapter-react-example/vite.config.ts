@@ -1,7 +1,7 @@
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import { defineConfig } from 'vite';
 
 /**
@@ -30,11 +30,12 @@ export default defineConfig({
     global: 'window',
   },
   optimizeDeps: {
-    include: [...monorepoPackages],
+    //include: [...monorepoPackages],
+    //exclude: ['@kadena/kode-ui'],
   },
-  build: {
-    commonjsOptions: {
-      include: [/packages\//, /node_modules\//],
+  resolve: {
+    alias: {
+      'node:buffer': 'buffer',
     },
   },
 });

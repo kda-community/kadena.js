@@ -1,5 +1,5 @@
 import { MonoWarningAmber } from '@kadena/kode-icons/system';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 import { onLayer1 } from '../../storyDecorators';
 import { atoms } from '../../styles/atoms.css';

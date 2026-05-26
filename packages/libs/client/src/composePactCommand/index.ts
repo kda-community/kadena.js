@@ -1,5 +1,5 @@
 export { composePactCommand } from './composePactCommand';
-export { addData } from './utils/addData';
+export { addData, type ValidDataTypes } from './utils/addData';
 export { addKeyset } from './utils/addKeyset';
 export { addSigner } from './utils/addSigner';
 export { continuation, execution } from './utils/payload';

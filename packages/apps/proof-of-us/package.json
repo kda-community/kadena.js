@@ -2,6 +2,7 @@
   "name": "@kadena/proof-of-us",
   "version": "0.5.28",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "pnpm run generate:sdk && next build",
     "create-event": "ts-node -T ./src/scripts/createEvent.ts",

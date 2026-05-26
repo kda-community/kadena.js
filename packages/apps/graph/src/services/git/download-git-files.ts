@@ -1,7 +1,7 @@
 import { dotenv } from '@utils/dotenv';
 import { logger } from '@utils/logger';
-import https from 'https';
-import { join } from 'path';
+import https from 'node:https';
+import { join } from 'node:path';
 import { createDirAndWriteFile } from './path';
 
 export async function downloadGitFiles({

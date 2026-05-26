@@ -6,7 +6,7 @@ import type { Decorator } from '@storybook/react';
 import classNames from 'classnames';
 import type { FC } from 'react';
 import React from 'react';
-import { atoms } from '../styles/atoms.css';
+import { atoms } from '../styles';
 import { minWidth } from './storyDecorators.css';
 
 interface IWithContentWidthProps {

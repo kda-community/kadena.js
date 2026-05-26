@@ -25,13 +25,13 @@ export interface IPact {
 export const getModule = (name: string): any => {
   let code = name;
   const pr: any = new Proxy<any>(function () {} as any, {
-    get(target, path: string) {
+    get(_, path: string) {
       // dont add depact to the code
       if (path === 'defpact') return pr;
       code = `${code}.${path}`;
       return pr;
     },
-    apply(target, thisArg, args) {
+    apply(_, __, args) {
       const exp = unpackLiterals(
         createExp(code, ...args.map(parseAsPactValue)),
       );
@@ -42,11 +42,11 @@ export const getModule = (name: string): any => {
   return pr;
 };
 
-const pactCreator = (): IPact => {
+const pactCreator = (): IPactModules => {
   return new Proxy<any>(
     {},
     {
-      get(target, path: string) {
+      get(_, path: string) {
         return getModule(path);
       },
     },
@@ -61,13 +61,13 @@ export const Pact: IPact = {
   /**
    * Generated modules
    */
-  get modules() {
+  get modules(): IPactModules {
     return pactCreator();
   },
   /**
    * Transaction builder
    */
-  get builder() {
+  get builder(): ITransactionBuilder {
     return createTransactionBuilder();
   },
 };

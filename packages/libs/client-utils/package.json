@@ -16,49 +16,49 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./src/index.ts",
       "development": "./src/index.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
     "./built-in": {
-      "types": "./dist/built-in/index.d.ts",
+      "types": "./src/built-in/index.ts",
       "development": "./src/built-in/index.ts",
       "import": "./dist/built-in/index.mjs",
       "require": "./dist/built-in/index.cjs"
     },
     "./coin": {
-      "types": "./dist/coin/index.d.ts",
+      "types": "./src/coin/index.ts",
       "development": "./src/coin/index.ts",
       "import": "./dist/coin/index.mjs",
       "require": "./dist/coin/index.cjs"
     },
     "./core": {
-      "types": "./dist/core/index.d.ts",
+      "types": "./src/core/index.ts",
       "development": "./src/core/index.ts",
       "import": "./dist/core/index.mjs",
       "require": "./dist/core/index.cjs"
     },
     "./nodejs": {
-      "types": "./dist/nodejs/index.d.ts",
+      "types": "./src/nodejs/index.ts",
       "development": "./src/nodejs/index.ts",
       "import": "./dist/nodejs/index.mjs",
       "require": "./dist/nodejs/index.cjs"
     },
     "./marmalade": {
-      "types": "./dist/marmalade/index.d.ts",
+      "types": "./src/marmalade/index.ts",
       "development": "./src/marmalade/index.ts",
       "import": "./dist/marmalade/index.mjs",
       "require": "./dist/marmalade/index.cjs"
     },
     "./webauthn": {
-      "types": "./dist/webauthn/index.d.ts",
+      "types": "./src/webauthn/index.ts",
       "development": "./src/webauthn/index.ts",
       "import": "./dist/webauthn/index.mjs",
       "require": "./dist/webauthn/index.cjs"
     },
     "./faucet": {
-      "types": "./dist/faucet/index.d.ts",
+      "types": "./src/faucet/index.ts",
       "development": "./src/faucet/index.ts",
       "import": "./dist/faucet/index.mjs",
       "require": "./dist/faucet/index.cjs"
@@ -116,7 +116,7 @@
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
     "lint:src": "oxlint .",
-    "pactjs:generate:contract": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --contract coin --contract marmalade-v2.ledger --contract marmalade-v2.collection-policy-v1 --contract marmalade-v2.policy-manager --contract marmalade-sale.conventional-auction --contract marmalade-sale.dutch-auction --contract n_eef68e581f767dd66c4d4c39ed922be944ede505.webauthn-wallet --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact\"",
+    "pactjs:generate:contract": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --contract coin --contract marmalade-v2.ledger --contract marmalade-v2.collection-policy-v1 --contract marmalade-v2.policy-manager --contract marmalade-sale.conventional-auction --contract marmalade-sale.dutch-auction --contract n_eef68e581f767dd66c4d4c39ed922be944ede505.webauthn-wallet --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact",
     "pactjs:generate:faucet": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --namespace n_d8cbb935f9cd9d2399a5886bb08caed71f9bad49 -f ./src/scripts/deploy-faucet/testnet-faucet.pact\"",
     "test": "vitest run",
     "test:integration": "pnpm run test:integration:setup && vitest run -c ./vitest.integration.config.ts",

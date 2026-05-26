@@ -55,7 +55,7 @@ const type = createAsyncPipeType(
 
 async function run() {
   return writeFile(
-    path.join(__dirname, '..', 'interfaces', 'async-pipe-type.ts'),
+    path.join(import.meta.dirname, '..', 'interfaces', 'async-pipe-type.ts'),
     await prettier.format(type, { parser: 'typescript' }),
     'utf-8',
   );

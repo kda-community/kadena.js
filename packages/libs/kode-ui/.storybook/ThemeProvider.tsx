@@ -1,5 +1,5 @@
 import { DocsContainer } from '@storybook/addon-docs';
-import { themes } from '@storybook/theming';
+import { themes } from 'storybook/theming';
 import React, { FC, useEffect, useState } from 'react';
 
 export const ThemeProvider: FC = (props: any) => {

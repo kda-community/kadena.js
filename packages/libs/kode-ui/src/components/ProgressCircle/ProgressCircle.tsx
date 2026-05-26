@@ -1,10 +1,8 @@
 import { clamp } from '@react-aria/utils';
 import classNames from 'classnames';
-import React from 'react';
 import type { AriaProgressBarProps } from 'react-aria';
 import { useProgressBar } from 'react-aria';
-import type { Atoms } from '../../styles/atoms.css';
-import { atoms } from '../../styles/atoms.css';
+import { type Atoms, atoms } from '../../styles';
 import type { ITestProps } from '../../utils/testId';
 import { testProps } from '../../utils/testId';
 

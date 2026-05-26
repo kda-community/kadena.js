@@ -17,7 +17,7 @@ import type {
 import { BaseWalletAdapter } from '@kadena/wallet-adapter-core';
 import * as v from 'valibot';
 import { CHAINWEAVER_ADAPTER, ERRORS } from './constants';
-import type { IChainweaverProvider } from './provider';
+import { IChainweaverProvider } from './provider';
 import type { IResponseType } from './utils';
 import { safeJsonParse } from './utils';
 
@@ -71,6 +71,7 @@ interface IChainWeaverAdapterOptions extends IBaseWalletAdapterOptions {
 export class ChainweaverAdapter extends BaseWalletAdapter {
   public name: string = CHAINWEAVER_ADAPTER;
   public nonce: number = 0;
+  public provider!: IChainweaverProvider;
   public connectSchema: StandardSchemaV1 = connectSchema;
   public appName: string = 'dApp';
 

@@ -1,5 +1,5 @@
 import { MonoCheck, MonoClose } from '@kadena/kode-icons/system';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 import { getVariants, withContentWidth } from '../../storyDecorators';
 import type { INotificationProps } from '../Notification';

@@ -5,8 +5,8 @@
 import type { Decorator } from '@storybook/react';
 import type { FC } from 'react';
 import React from 'react';
-import { Text } from '../components/Typography';
-import { atoms } from '../styles/atoms.css';
+import { Text } from '../components';
+import { atoms } from '../styles';
 
 interface IWithLayerStoryProps {
   children: React.ReactNode;

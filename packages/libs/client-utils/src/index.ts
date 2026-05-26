@@ -1,3 +1,5 @@
+/// <reference types=".kadena/pactjs-generated" />
+
 export * from './built-in';
 export * from './coin';
 export * from './core';

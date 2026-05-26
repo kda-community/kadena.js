@@ -5,7 +5,7 @@
   "description": "Kadena developer wallet",
   "type": "module",
   "scripts": {
-    "prebuild": "pnpm run generate-coin-type && pnpm run generate:plugins",
+    "prebuild": "pnpm run generate-coin-type",
     "build": "pnpm run prebuild && tsc && VITE_BUILD_TIME=$(date -u) vite build",
     "build-dev": "tsc && vite build --mode development --watch",
     "build:e2e": "NODE_ENV=test pnpm run build",
@@ -13,7 +13,7 @@
     "dev": "VITE_BUILD_TIME=$(date -u) vite --force",
     "dev:chainweaver": "concurrently \"chokidar './src/**' --command './node_modules/.bin/vite build' --initial\" \"pnpm run preview --port 1337\"",
     "generate-coin-type": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --contract \\\"coin\\\" --api \\\"https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/14/pact\\\"\"",
-    "generate:plugins": "rimraf public/internal-registry/* && ./scripts/symlink-plugins.ts && ./scripts/generate-plugins-json.ts",
+    "generate:plugins": "rimraf ./public/internal-registry && npx tsx ./scripts/symlink-plugins.ts && npx tsx ./scripts/generate-plugins-json.ts",
     "lint": "oxlint .",
     "preview": "vite preview",
     "test": "vitest run",

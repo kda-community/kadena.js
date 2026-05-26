@@ -24,6 +24,19 @@
       "name": "Randy"
     }
   ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -51,28 +64,15 @@
     "@kadena-dev/shared-config": "workspace:*",
     "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/node": "^20.12.7",
     "@vitest/coverage-v8": "^1.6.0",
     "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "typescript": "5.4.5",
-    "vitest": "^1.6.0",
-    "@kda-community-dev/typescript-config": "workspace:*",
-    "@kda-community-dev/vite-config": "workspace:*",
-    "vite": "8.0.10"
-  },
-  "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./src/index.ts",
-      "development": "./src/index.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.mjs"
-    }
+    "vite": "8.0.10",
+    "vitest": "^1.6.0"
   }
 }

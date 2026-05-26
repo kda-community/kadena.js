@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 import type { BinaryLike } from './crypto.js';
 import { decrypt, encrypt, randomBytes, toArrayBuffer } from './crypto.js';
 
@@ -124,7 +125,7 @@ export async function kadenaChangePassword<
     decryptedPrivateKey = await kadenaDecrypt(password, encryptedData);
   } catch (error) {
     throw new Error(
-      `Failed to decrypt the private key with the old password: ${error.message}`,
+      `Failed to decrypt the private key with the old password: ${(error as Error).message}`,
     );
   }
 
@@ -132,7 +133,7 @@ export async function kadenaChangePassword<
     return kadenaEncrypt(newPassword, decryptedPrivateKey, encode);
   } catch (error) {
     throw new Error(
-      `Failed to encrypt the private key with the new password: ${error.message}`,
+      `Failed to encrypt the private key with the new password: ${(error as Error).message}`,
     );
   }
 }

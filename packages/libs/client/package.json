@@ -16,14 +16,14 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./src/index.ts",
       "development": "./src/index.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs",
       "default": "./dist/index.mjs"
     },
     "./fp": {
-      "types": "./dist/fp.d.ts",
+      "types": "./src/fp.ts",
       "development": "./src/fp.ts",
       "import": "./dist/fp.mjs",
       "require": "./dist/fp.cjs",

@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 import type { BinaryLike } from '../utils/crypto.js';
 import type { EncryptedString } from '../utils/kadenaEncryption.js';
 import { kadenaDecrypt, kadenaEncrypt } from '../utils/kadenaEncryption.js';

@@ -4,9 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vite build",
+    "prebuild": "pnpm run pactjs:generate:contract",
+    "build": "pnpm run prebuild && tsc -b && vite build",
     "dev": "vite",
     "lint": "oxlint .",
+    "pactjs:generate:contract": "cache-sh -i \"node_modules/.kadena/**\" -- \"pactjs contract-generate --contract coin --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -32,6 +34,9 @@
   },
   "devDependencies": {
     "@kadena-dev/shared-config": "workspace:*",
+    "@kadena/pactjs": "workspace:*",
+    "@kadena/pactjs-cli": "workspace:*",
+    "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
     "@types/markdown-it": "^14.1.2",
     "@types/react": "^19.1.1",
@@ -40,6 +45,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "@vitejs/plugin-react-swc": "^3.2.2",
     "autoprefixer": "^10.4.20",
+    "cache-sh": "^1.2.1",
     "globals": "^15.9.0",
     "oxlint": "1.63.0",
     "postcss": "^8",

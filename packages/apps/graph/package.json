@@ -13,11 +13,12 @@
     "Maarten van den Hoven <maarten.vandenhoven@deptagency.com>",
     "Nil Amrutlal <nil.amrutlal@deptagency.com>"
   ],
+  "type": "module",
   "bin": {
     "kadena-graph": "./dist/index.js"
   },
   "scripts": {
-    "build": "pnpm run pactjs:generate:contracts && pnpm prisma:generate && tsc",
+    "build": "pnpm run pactjs:generate:contracts && pnpm prisma:generate && vite build",
     "build:docker": "cache-sh -i \"{src/**/*,build/*,package.json,Dockerfile}\" \"pnpm run build:bun && docker build -t kadena/graph .\"",
     "deploy:marmalade": "ts-node -T src/devnet/deployment/index.ts deploy:marmalade",
     "devnet": "docker volume create kadena_devnet_crashnet; docker run --rm -it -p 8080:8080 -p 5432:5432 -p 9999:9999 -p 1789:1789 -p 1848:1848 -v kadena_devnet_crashnet:/data -v ./cwd-extra-migrations:/cwd-extra-migrations:ro --name devnet kadena/devnet:crashnet-arm64",
@@ -90,6 +91,8 @@
     "@kadena/pactjs-cli": "workspace:*",
     "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@types/debug": "~4.1.12",
     "@types/js-yaml": "4.0.9",
     "@types/lodash": "^4.17.13",
@@ -101,13 +104,8 @@
     "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "ts-node": "~10.9.2",
-    "typescript": "5.4.5"
+    "typescript": "5.4.5",
+    "vite": "8.0.10"
   },
-  "prisma.schema": "./prisma/schema.prisma",
-  "_moduleAliases": {
-    "@db": "src/db",
-    "@services": "src/services",
-    "@utils": "src/utils",
-    "@devnet": "src/devnet"
-  }
+  "prisma.schema": "./prisma/schema.prisma"
 }

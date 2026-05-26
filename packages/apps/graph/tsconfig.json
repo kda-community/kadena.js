@@ -1,16 +1,15 @@
 {
-  "extends": "./node_modules/@kadena-dev/shared-config/tsconfig-base.json",
+  "extends": "@kda-community-dev/typescript-config/node",
   "compilerOptions": {
+    "moduleResolution": "nodenext",
     "types": [".kadena/pactjs-generated", "node"],
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "target": "ES2020",
-    "outDir": "dist",
     "paths": {
-      "@db/*": ["./src/db/*"],
-      "@services/*": ["./src/services/*"],
+      "@db/*": ["./db/*"],
+      "@services/*": ["./services/*"],
       "@utils/*": ["./src/utils/*"],
       "@devnet/*": ["./src/devnet/*"]
     }
-  }
+  },
+  "include": ["src/**/*", "vite.config.ts"],
+  "exclude": ["dist", "**/tests/**"]
 }

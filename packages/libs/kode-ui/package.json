@@ -22,38 +22,27 @@
     "dist/side-effects/**",
     "src/entries/global.ts"
   ],
+  "type": "module",
   "exports": {
     ".": {
-      "types": {
-        "import": "./dist\\index.d.mts",
-        "require": "./dist\\index.d.ts"
-      },
-      "import": "./dist\\index.mjs",
-      "require": "./dist\\index.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./global": {
-      "types": {
-        "import": "./dist\\global.d.mts",
-        "require": "./dist\\global.d.ts"
-      },
-      "import": "./dist\\global.mjs",
-      "require": "./dist\\global.cjs"
+      "types": "./dist/styles/global.d.ts",
+      "import": "./dist/global.mjs",
+      "require": "./dist/global.cjs"
     },
     "./patterns": {
-      "types": {
-        "import": "./dist\\patterns.d.mts",
-        "require": "./dist\\patterns.d.ts"
-      },
-      "import": "./dist\\patterns.mjs",
-      "require": "./dist\\patterns.cjs"
+      "types": "./dist/patterns/index.d.ts",
+      "import": "./dist/patterns.mjs",
+      "require": "./dist/patterns.cjs"
     },
     "./styles": {
-      "types": {
-        "import": "./dist\\styles.d.mts",
-        "require": "./dist\\styles.d.ts"
-      },
-      "import": "./dist\\styles.mjs",
-      "require": "./dist\\styles.cjs"
+      "types": "./dist/styles/index.d.ts",
+      "import": "./dist/styles.mjs",
+      "require": "./dist/styles.cjs"
     },
     "./package.json": "./package.json"
   },
@@ -67,10 +56,10 @@
     "styles"
   ],
   "scripts": {
-    "build": "crackle fix && crackle package && jiti scripts/fix-build.ts",
+    "build": "vite build",
     "build:storybook": "storybook build",
     "chromatic": "chromatic -b build:storybook",
-    "dev": "crackle dev --shim=none",
+    "dev": "vite dev",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
@@ -120,8 +109,8 @@
     "react-use": "^17.4.0"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3",
-    "@crackle/cli": "^0.15.1",
+    "@babel/preset-react": "7.29.7",
+    "@chromatic-com/storybook": "^5.2.1",
     "@design-sync/cli": "^0.11.3",
     "@design-sync/vanilla-extract-plugin": "^0.7.3",
     "@etchteam/storybook-addon-status": "^5.0.0",
@@ -129,20 +118,21 @@
     "@kadena-dev/markdown": "workspace:*",
     "@kadena-dev/shared-config": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
     "@react-types/shared": "^3.22.0",
-    "@storybook/addon-a11y": "^8.4.4",
-    "@storybook/addon-controls": "^8.4.4",
-    "@storybook/addon-essentials": "^8.4.4",
-    "@storybook/addon-interactions": "^8.4.4",
-    "@storybook/addon-links": "^8.4.4",
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.6",
+    "@storybook/addon-a11y": "10.4.1",
+    "@storybook/addon-docs": "10.4.1",
+    "@storybook/addon-links": "10.4.1",
     "@storybook/csf": "^0.1.11",
     "@storybook/docs-mdx": "3.1.0",
-    "@storybook/manager-api": "^8.4.4",
-    "@storybook/preview-api": "^8.4.4",
-    "@storybook/react": "^8.4.4",
-    "@storybook/react-webpack5": "^8.4.4",
-    "@storybook/theming": "^8.4.4",
+    "@storybook/manager-api": "8.6.14",
+    "@storybook/preview-api": "8.6.14",
+    "@storybook/react": "10.4.1",
+    "@storybook/react-vite": "10.4.1",
+    "@storybook/react-webpack5": "10.4.1",
+    "@storybook/theming": "8.6.18",
+    "@storybook/types": "8.6.14",
     "@testing-library/react": "~16.3.0",
     "@testing-library/user-event": "~14.5.1",
     "@types/lodash.get": "^4.4.9",
@@ -165,11 +155,12 @@
     "prettier": "~3.2.5",
     "prop-types": "^15.8.1",
     "rimraf": "~5.0.1",
-    "storybook": "^8.4.4",
+    "storybook": "10.4.1",
     "storybook-dark-mode": "^4.0.2",
     "tiny-readdir-glob": "^1.2.1",
     "tsc-alias": "~1.8.7",
     "typescript": "5.4.5",
+    "vite": "8.0.10",
     "vitest": "^1.6.0",
     "vitest-dom": "^0.1.1"
   }

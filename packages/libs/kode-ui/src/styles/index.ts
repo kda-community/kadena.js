@@ -1,5 +1,5 @@
-export { atoms } from './atoms.css';
-export type { Atoms } from './atoms.css';
+export { atoms } from './atoms';
+export type { Atoms } from './atoms';
 export * from './themeUtils';
 export { tokens } from './tokens/contract.css';
 export * from './tokens/styles.css';

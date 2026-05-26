@@ -1,4 +1,6 @@
-export type BinaryLike = string | ArrayBuffer | Uint8Array;
+import { Buffer } from 'node:buffer';
+
+export type BinaryLike = string | ArrayBuffer | Uint8Array | Buffer;
 
 /**
  *

@@ -1,5 +1,5 @@
 import { MonoAdd, MonoChevronLeft, MonoMoreVert } from '@kadena/kode-icons';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 
 import { Button, ContextMenu, ContextMenuItem, Link, Stack } from '..';

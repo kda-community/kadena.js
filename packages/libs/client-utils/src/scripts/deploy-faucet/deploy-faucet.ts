@@ -6,8 +6,8 @@ import {
   setMeta,
 } from '@kadena/client/fp';
 import { PactNumber } from '@kadena/pactjs';
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { principalNamespaceCommand } from '../../built-in/create-principal-namespace';
 import {
   fundExistingAccountOnTestnetCommand,

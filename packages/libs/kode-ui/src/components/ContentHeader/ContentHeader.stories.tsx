@@ -1,5 +1,5 @@
 import { MonoCAccount } from '@kadena/kode-icons/system';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 import { withContentWidth } from '../../storyDecorators';
 import type { IContentHeaderProps } from '../ContentHeader';

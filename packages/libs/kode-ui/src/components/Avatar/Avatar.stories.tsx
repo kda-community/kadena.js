@@ -1,5 +1,5 @@
 import { MonoExplore, MonoFiberNew } from '@kadena/kode-icons/system';
-import type { Meta, StoryFn, StoryObj } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import React from 'react';
 import { withCenteredStory, withContentWidth } from '../../storyDecorators';
 import type { IAvatarProps } from './Avatar';

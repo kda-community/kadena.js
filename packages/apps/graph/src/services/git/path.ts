@@ -7,8 +7,8 @@ import {
   statSync,
   unlinkSync,
   writeFileSync,
-} from 'fs';
-import { basename, join } from 'path';
+} from 'node:fs';
+import { basename, join } from 'node:path';
 
 export async function createDirAndWriteFile(
   dir: string,

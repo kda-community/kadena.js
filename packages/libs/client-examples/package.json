@@ -12,8 +12,8 @@
   "main": "lib/index.js",
   "types": "dist/pactjs-generator.d.ts",
   "scripts": {
-    "prebuild": "pnpm run pactjs:generate:contract:coin",
-    "build": "tsc --noEmit",
+    "prebuild": "pnpm run pactjs:generate:contract:types",
+    "build": "pnpm run prebuild",
     "format": "pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",

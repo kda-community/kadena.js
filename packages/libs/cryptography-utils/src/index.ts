@@ -11,7 +11,6 @@ export * from './restoreKeyPairFromSecretKey';
 export * from './sign';
 export * from './signHash';
 export * from './strToUint8Array';
-export * from './tests/mockdata/Pact';
 export * from './toTweetNaclSecretKey';
 export * from './uint8ArrayToStr';
 export * from './unique';

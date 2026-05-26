@@ -1,4 +1,5 @@
 import type { ICap, IExecPayload, IUnsignedCommand } from '@kadena/types';
+import type { ValidDataTypes } from '../composePactCommand';
 import {
   addData,
   addKeyset,
@@ -10,7 +11,6 @@ import {
   setNetworkId,
   setNonce,
 } from '../composePactCommand';
-import type { ValidDataTypes } from '../composePactCommand/utils/addData';
 import type { IVerifier } from '../composePactCommand/utils/addVerifier';
 import { addVerifier } from '../composePactCommand/utils/addVerifier';
 import { patchCommand } from '../composePactCommand/utils/patchCommand';

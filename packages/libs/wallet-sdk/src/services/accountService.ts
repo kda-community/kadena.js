@@ -36,7 +36,7 @@ export async function getAccountDetails(
           accountDetails,
         };
       } catch (error) {
-        if (error.message.includes('row not found') === true) {
+        if ((error as Error).message.includes('row not found') === true) {
           return {
             chainId,
             accountDetails: null,
@@ -44,7 +44,7 @@ export async function getAccountDetails(
         }
         console.log('error:', error);
         console.error(
-          `Error in account details resolving action for chain ${chainId}: ${error.message}`,
+          `Error in account details resolving action for chain ${chainId}: ${(error as Error).message}`,
         );
         return null;
       }

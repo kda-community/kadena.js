@@ -1,6 +1,6 @@
-export { ContextMenu, IContextMenuProps } from './ContextMenu';
+export { ContextMenu, type IContextMenuProps } from './ContextMenu';
 export {
   ContextMenuDivider,
-  IContextMenuDividerProps,
+  type IContextMenuDividerProps,
 } from './ContextMenuDivider';
-export { ContextMenuItem, IContextMenuItemProps } from './ContextMenuItem';
+export { ContextMenuItem, type IContextMenuItemProps } from './ContextMenuItem';

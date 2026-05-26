@@ -1,5 +1,4 @@
 import type { ChainId, ICap, PactValue } from '@kadena/types';
-import type { AllPartial } from './type-utilities';
 
 /**
  * The payload of a Execution transaction
@@ -80,7 +79,7 @@ export interface IPartialPactCommand {
     | { cont: Partial<IContinuationPayloadObject['cont']> };
   meta?: Partial<IPactCommand['meta']>;
   signers?: Array<Partial<IPactCommand['signers'][number]>>;
-  verifiers?: Array<Partial<IPactCommand['verifiers'][number]>>;
+  verifiers?: Array<Partial<NonNullable<IPactCommand['verifiers']>[number]>>;
   networkId?: string;
   nonce?: string;
 }

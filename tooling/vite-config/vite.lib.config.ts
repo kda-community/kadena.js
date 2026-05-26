@@ -9,13 +9,26 @@ export function defineLibConfig(): UserConfig {
     readFileSync(packageJsonPath, 'utf-8'),
   );
 
+  const hasPactCli =
+    packageJson.devDependencies &&
+    Object.keys(packageJson.devDependencies).some((dep) =>
+      dep.startsWith('@kadena/pactjs-cli'),
+    );
+
+  const typeIncludes: string[] = ['src'];
+  if (hasPactCli) {
+    typeIncludes.push(
+      'node_modules/.kadena/**/*.d.ts',
+      '../../node_modules/.kadena/**/*.d.ts',
+    );
+  }
+
   return defineConfig({
     publicDir: false,
     plugins: [
       dts({
-        include: ['src'],
+        include: typeIncludes,
         outDirs: ['dist'],
-        bundleTypes: false,
       }),
     ],
     resolve: {

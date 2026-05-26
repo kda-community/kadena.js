@@ -145,9 +145,9 @@ export {
   ContextMenu,
   ContextMenuDivider,
   ContextMenuItem,
-  IContextMenuDividerProps,
-  IContextMenuItemProps,
-  IContextMenuProps,
+  type IContextMenuDividerProps,
+  type IContextMenuItemProps,
+  type IContextMenuProps,
 } from './ContextMenu';
 
 export { Media, MediaContextProvider, mediaProviderStyles } from './Media';

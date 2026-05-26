@@ -1,7 +1,7 @@
 // NOTE: Refer to https://www.joshwcomeau.com/css/custom-css-reset/ for more detailed explanation
 import { globalFontFace } from '@vanilla-extract/css';
-import { globalStyle } from '../styles';
 import { lightThemeValues } from './tokens/light.css';
+import { globalStyle } from './utils';
 
 export const primaryFont =
   lightThemeValues.kda.foundation.typography.family.primaryFont;

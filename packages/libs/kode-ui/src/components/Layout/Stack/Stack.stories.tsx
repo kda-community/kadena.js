@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import className from 'classnames';
 import React from 'react';
 import { onLayer2 } from '../../../storyDecorators';

@@ -1,6 +1,6 @@
 import { MonoAdd } from '@kadena/kode-icons/system';
 import classNames from 'classnames';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { mergeProps, useFocusRing, useHover } from 'react-aria';
 import type { Node, TreeState } from 'react-stately';
 import { Heading } from '../Typography/Heading/Heading';
