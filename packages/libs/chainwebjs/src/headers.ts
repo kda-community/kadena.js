@@ -145,7 +145,7 @@ export const headerByHeight = async (
 /**
  * @param {headerCallback} callback - function that is called for each update
  * @param {string} [network="mainnet01"] - chainweb network
- * @param {string} [host="https://api.chainweb.com"] - chainweb api host
+ * @param {string} [host="https://api.chainweb-community.org"] - chainweb api host
  */
 const headerUpdates = (
   callback: (header: IBufferHeader) => void,

@@ -43,17 +43,17 @@ describe('chainweb.block', () => {
   it('gets the block by height an validates', async () => {
     server.resetHandlers(
       http.get(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/cut',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
         () => HttpResponse.json(blockByHeightCurrentCutMock),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
         () => HttpResponse.json({ limit: 1, items: [header], next: null }),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
         () => HttpResponse.json(blockByHeightPayloadsMock),
         { once: true },
       ),
@@ -78,12 +78,12 @@ describe('chainweb.block', () => {
   it('gets the block by block hash an validates', async () => {
     server.resetHandlers(
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
         () => HttpResponse.json({ limit: 1, items: [header], next: null }),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
         () => HttpResponse.json(blockByHeightPayloadsMock),
         { once: true },
       ),
@@ -105,12 +105,12 @@ describe('chainweb.block', () => {
   it('throws on fetching Block by blockhash without payload', async () => {
     server.resetHandlers(
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
         () => HttpResponse.json({ limit: 1, items: [header], next: null }),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
         () => HttpResponse.json(blockByHeightPayloadsMock),
         { once: true },
       ),
@@ -153,16 +153,16 @@ describe('chainweb.block', () => {
   it('gets block by range and validates', async () => {
     server.resetHandlers(
       http.get(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/cut',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
         () => HttpResponse.json(blockByHeightCurrentCutMock),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
         () => HttpResponse.json(rangeHeadersMock(20010)),
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
         () => HttpResponse.json(rangePayloadsMock(20010)),
       ),
     );
@@ -200,11 +200,12 @@ describe('chainweb.block', () => {
     'gets recent blocks with limit %p',
     async (n) => {
       server.resetHandlers(
-        http.get('https://api.chainweb.com/chainweb/0.0/mainnet01/cut', () =>
-          HttpResponse.json(blockByHeightCurrentCutMock),
+        http.get(
+          'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
+          () => HttpResponse.json(blockByHeightCurrentCutMock),
         ),
         http.post(
-          'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+          'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
           ({ request }) => {
             let m = n;
             if (n === 730) {
@@ -218,7 +219,7 @@ describe('chainweb.block', () => {
           },
         ),
         http.post(
-          'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
+          'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
           () => HttpResponse.json(blockRecentsPayloadsMock(n)),
           { once: true },
         ),
@@ -251,17 +252,17 @@ describe('chainweb.block', () => {
   it('recgets recent blocks with low dept', async () => {
     server.resetHandlers(
       http.get(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/cut',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
         () => HttpResponse.json(blockByHeightCurrentCutMock),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
         () => HttpResponse.json(blockRecentsRecentHeadersMock(10)),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
         () => HttpResponse.json(blockRecentsPayloadsMock(10)),
         { once: true },
       ),
@@ -282,17 +283,17 @@ describe('chainweb.block', () => {
   it('throws when payload is not in sync with headers', async () => {
     server.resetHandlers(
       http.get(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/cut',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
         () => HttpResponse.json(blockByHeightCurrentCutMock),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
         () => HttpResponse.json(blockRecentsRecentHeadersMock(9)),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/payload/outputs/batch',
         () => HttpResponse.json(blockRecentsPayloadsMock(8)),
         { once: true },
       ),

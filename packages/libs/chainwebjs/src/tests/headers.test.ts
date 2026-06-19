@@ -38,12 +38,12 @@ describe('chainweb.header', () => {
   it('should return the correct header by height', async () => {
     server.resetHandlers(
       http.get(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/cut',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
         () => HttpResponse.json(blockByHeightCurrentCutMock),
         { once: true },
       ),
       http.post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/header/branch',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/header/branch',
         () => HttpResponse.json(blockByHeightBranchPageMock),
         { once: true },
       ),

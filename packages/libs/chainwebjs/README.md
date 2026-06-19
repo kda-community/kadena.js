@@ -276,4 +276,4 @@ Example of an event object:
 ```
 
 [1]: https://kadena.io
-[2]: https://api.chainweb.com
+[2]: https://api.chainweb-community.org
