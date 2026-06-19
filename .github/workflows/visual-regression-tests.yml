@@ -25,12 +25,12 @@ jobs:
     - name: Build
       run: pnpm run build --filter @kadena/kode-ui...
 
-    - name: Publish Storybook
-      uses: chromaui/action@latest
-      with:
-        exitOnceUploaded: true
-        buildScriptName: 'build:storybook'
-        projectToken: ${{ secrets.REACT_UI_CHROMATIC_TOKEN }}
-        workingDir: packages/libs/kode-ui
-        autoAcceptChanges: 'main'
-        onlyChanged: true # Required option to enable TurboSnap
+    #- name: Publish Storybook
+    #  uses: chromaui/action@latest
+    #  with:
+    #    exitOnceUploaded: true
+    #    buildScriptName: 'build:storybook'
+    #    projectToken: ${{ secrets.REACT_UI_CHROMATIC_TOKEN }}
+    #    workingDir: packages/libs/kode-ui
+    #    autoAcceptChanges: 'main'
+    #    onlyChanged: true # Required option to enable TurboSnap
