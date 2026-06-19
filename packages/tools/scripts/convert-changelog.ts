@@ -1,54 +1,89 @@
-import fg from 'fast-glob';
-import { join, dirname } from 'node:path';
+import type { Changeset, Release, VersionType } from '@changesets/types';
+import writeChangesetModule from '@changesets/write';
+import { glob } from 'fast-glob';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import writeChangeset from '@changesets/write';
-import type { Changeset } from '@changesets/types';
 
-// Convert Rush changelog (common/changes/**/*.json) to Changesets (.changesets/*.md) format
-// Script only creates, not deletes files
-// Usage: `npx tsx packages/tools/scripts/convert-changelog.ts`
+const writeChangeset =
+  typeof writeChangesetModule === 'function'
+    ? writeChangesetModule
+    : writeChangesetModule.default;
 
-const types = ['none', 'patch', 'minor', 'major'];
+interface RushChange {
+  packageName: string;
+  comment: string;
+  type: VersionType;
+}
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const baseDir = join(__dirname, '../../..');
+interface RushChangelog {
+  changes: RushChange[];
+}
 
-const main = async () => {
-  const files = await fg('common/changes/**/*.json', { cwd: baseDir });
-  const filePaths = files.map((file) => join(baseDir, file));
-  const changelogs = await Promise.all(filePaths.map((p) => import(p)));
+const BUMP_LEVELS = ['none', 'patch', 'minor', 'major'] as const;
 
-  const changesets = changelogs.reduce((changesets, item) => {
-    item.changes.forEach((change) => {
-      const changeset = changesets.find(
-        (changeset) => changeset.summary === change.comment,
-      );
-      if (changeset) {
-        const release = changeset.releases.find(
-          (release) => release.name === change.packageName,
+const __dirname: string = dirname(fileURLToPath(import.meta.url));
+const baseDir: string = join(__dirname, '../../..');
+
+const main = async (): Promise<void> => {
+  const files: string[] = await glob('common/changes/**/*.json', {
+    cwd: baseDir,
+  });
+  const filePaths: string[] = files.map((file: string): string =>
+    join(baseDir, file),
+  );
+
+  const changelogs: RushChangelog[] = await Promise.all(
+    filePaths.map(async (path: string): Promise<RushChangelog> => {
+      const mod = await import(path);
+      return (mod.default || mod) as RushChangelog;
+    }),
+  );
+
+  const changesets: Changeset[] = changelogs.reduce(
+    (acc: Changeset[], item: RushChangelog) => {
+      item.changes.forEach((change: RushChange) => {
+        let changeset: Changeset | undefined = acc.find(
+          (c: Changeset): boolean => c.summary === change.comment,
         );
+
+        if (!changeset) {
+          changeset = {
+            summary: change.comment,
+            releases: [],
+          };
+          acc.push(changeset);
+        }
+
+        const release: Release | undefined = changeset.releases.find(
+          (r: Release): boolean => r.name === change.packageName,
+        );
+
         if (release) {
-          const type = release?.type ? types.indexOf(release.type) : 0;
-          changeset.releases[changeset.releases.indexOf(release)].type =
-            types[Math.max(types.indexOf(change.type), type)];
+          const currentLevelIndex: number =
+            BUMP_LEVELS.indexOf(release.type) || 0;
+          const newLevelIndex = BUMP_LEVELS.indexOf(change.type);
+
+          release.type = BUMP_LEVELS[
+            Math.max(currentLevelIndex, newLevelIndex)
+          ] as VersionType;
         } else {
           changeset.releases.push({
             name: change.packageName,
-            type: change.type,
+            type: change.type as VersionType,
           });
         }
-      } else {
-        changesets.push({
-          summary: change.comment,
-          releases: [{ name: change.packageName, type: change.type }],
-        });
-      }
-    });
-    return changesets;
-  }, [] as Changeset[]);
+      });
+
+      return acc;
+    },
+    [] as Changeset[],
+  );
 
   await Promise.all(
-    changesets.map((changeset) => writeChangeset(changeset, baseDir)),
+    changesets.map(
+      async (changeset: Changeset): Promise<string> =>
+        await writeChangeset(changeset, baseDir),
+    ),
   );
 };
 

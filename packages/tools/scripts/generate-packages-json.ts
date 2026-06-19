@@ -1,8 +1,8 @@
-import fg from 'fast-glob';
-import fs from 'node:fs/promises';
+import { glob } from 'fast-glob';
+import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import * as prettier from "prettier";
+import * as prettier from 'prettier';
 
 // Generate `packages.json` in root
 // Usage: `npx tsx packages/tools/scripts/generate-packages-json.ts`
@@ -11,11 +11,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const baseDir = join(__dirname, '../../..');
 
 const main = async () => {
-  const files = await fg('packages/*/*/package.json', { cwd: baseDir });
+  const files = await glob('packages/*/*/package.json', { cwd: baseDir });
   const filePaths = ['package.json', ...files].map((file) =>
     join(baseDir, file),
   );
-  const manifests = await Promise.all(filePaths.map((p) => fs.readFile(p)));
+  const manifests = await Promise.all(filePaths.map((p) => readFile(p)));
 
   const packages = manifests
     .map((pkg) => JSON.parse(String(pkg)))
@@ -37,7 +37,7 @@ const main = async () => {
       path: pkg.path,
     }));
 
-  await fs.writeFile(
+  await writeFile(
     join(baseDir, 'packages.json'),
     await prettier.format(JSON.stringify(packages, null, 2), {
       parser: 'json',

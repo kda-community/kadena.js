@@ -1,5 +1,5 @@
 import yaml from 'js-yaml';
-import fs from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -14,9 +14,9 @@ const labelerYmlPath = `${baseDir}/.github/labeler.yml`;
 
 const main = async () => {
   // Read the package.json file
-  const packages = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
+  const packages = JSON.parse(await readFile(packageJsonPath, 'utf8'));
   const existingLabels =
-    yaml.load(await fs.readFile(labelerYmlPath, 'utf8')) || {};
+    yaml.load(await readFile(labelerYmlPath, 'utf8')) || {};
 
   for (const pkg of packages) {
     const packageName = pkg.name;
