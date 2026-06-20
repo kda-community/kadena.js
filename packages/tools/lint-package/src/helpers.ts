@@ -1,7 +1,7 @@
 import JSONC from 'jsonc-parser';
 import fs from 'node:fs/promises';
 import { dirname, extname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import type { Rules } from './types.js';
 
 const DIRNAME = dirname(fileURLToPath(import.meta.url));
@@ -12,7 +12,8 @@ async function importModules(dir: string) {
   const moduleFiles = files.filter((file) => extname(file) === '.js');
   const modules: Rules = [];
   for (const file of moduleFiles) {
-    const module = await import(new URL(join(dir, file), 'file://').toString());
+    const fullPath = join(dir, file);
+    const module = await import(pathToFileURL(fullPath).href);
     modules.push(module.default);
   }
   return modules;
