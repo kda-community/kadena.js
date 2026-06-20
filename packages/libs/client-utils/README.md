@@ -52,9 +52,9 @@ const balance = await getBalance(
     chainId: '0',
   },
   {
-    host: 'https://api.testnet.chainweb.com',
+    host: 'https://api.testnet.chainweb-community.org',
     defaults: {
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     },
     sign: signWithChainweaver,
   },
@@ -99,7 +99,7 @@ estimateGasPrice(parameters: IGasPriceEstimateProperties): Promise<number>
 - `host?` _(string)_: Optional base URL of the Chainweb API (defaults to
   Kadena's mainnet/testnet based on `networkId`).
 - `chainId` _(string)_: Chain ID (e.g., `"0"` through `"19"`).
-- `networkId?` _(string)_: Network ID (e.g., `"mainnet01"`, `"testnet04"` -
+- `networkId?` _(string)_: Network ID (e.g., `"mainnet01"`, `"testnet06"` -
   default `"mainnet01"` ).
 - `height?` _(number)_: Optional block max height ( default the chian height).
 - `items?` _(number)_: Number of blocks to fetch (default: `20`).
@@ -137,7 +137,7 @@ getBlocksGasInformation(parameters: IGasPriceEstimateProperties): Promise<IBlock
 - `host?` _(string)_: Optional base URL of the Chainweb API (defaults to
   Kadena's mainnet/testnet based on `networkId`).
 - `chainId` _(string)_: Chain ID (e.g., `"0"` through `"19"`).
-- `networkId?` _(string)_: Network ID (e.g., `"mainnet01"`, `"testnet04"` -
+- `networkId?` _(string)_: Network ID (e.g., `"mainnet01"`, `"testnet06"` -
   default `"mainnet01"` ).
 - `height?` _(number)_: Optional block max height ( default the chian height).
 - `items?` _(number)_: Number of blocks to fetch (default: `20`).
@@ -174,8 +174,8 @@ Each block's gas info includes:
 
 ### Notes
 
-- Uses `https://api.chainweb.com` for mainnet and
-  `https://api.testnet.chainweb.com` for testnet by default.
+- Uses `https://api.chainweb-community.org` for mainnet and
+  `https://api.testnet.chainweb-community.org` for testnet by default.
 - Block gas capacity is assumed as `150000`.
 - Skips blocks with zero transactions when estimating gas price.
 

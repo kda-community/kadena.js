@@ -121,15 +121,15 @@ export const addDefaultNetworks = execInSequence(async () => {
       ],
     });
   }
-  if (!networks.find((network) => network.networkId === 'testnet04')) {
+  if (!networks.find((network) => network.networkId === 'testnet06')) {
     await networkRepository.addNetwork({
       uuid: crypto.randomUUID(),
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       name: 'Testnet',
       faucetContract: 'n_d8cbb935f9cd9d2399a5886bb08caed71f9bad49.coin-faucet',
       hosts: [
         {
-          url: 'https://api.testnet.chainweb.com',
+          url: 'https://api.testnet.chainweb-community.org',
           submit: true,
           read: true,
           confirm: true,

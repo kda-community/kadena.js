@@ -24,7 +24,7 @@ describe('example test', () => {
       walletSdk.logger.setTransport(console.log);
 
       const chainId = '0' as ChainId;
-      const networkId = 'testnet04';
+      const networkId = 'testnet06';
       const command = walletSdk.createTransferCreateCommand({
         amount: '0.01',
         sender: `k:${publicKey}`,
@@ -58,7 +58,7 @@ describe('example test', () => {
       const transactionDescriptor = {
         requestKey: 'ttXp7xHw5ETUccS0MM4IRhVVb9F5tkTWDXaO2FNHsio',
         chainId: '0' as ChainId,
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       };
 
       console.log(transactionDescriptor);

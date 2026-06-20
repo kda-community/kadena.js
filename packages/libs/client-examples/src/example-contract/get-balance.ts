@@ -2,7 +2,7 @@ import { Pact } from '@kadena/client';
 import { dirtyRead } from './util/client';
 import type { Account } from './util/keyFromAccount';
 
-const NETWORK_ID: string = 'testnet04';
+const NETWORK_ID: string = 'testnet06';
 
 async function getBalance(account: Account): Promise<void> {
   const tr = Pact.builder

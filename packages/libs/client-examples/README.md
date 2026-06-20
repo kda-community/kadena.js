@@ -30,13 +30,13 @@ chain.
 ### Creating a type definition from a contract deployed on the chain
 
 ```sh
-npx pactjs contract-generate --contract="coin" --api https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact
+npx pactjs contract-generate --contract="coin" --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact
 ```
 
 ### Creating a type definition from a pact file
 
 ```sh
-npx pactjs contract-generate --file=./coin.pact --api https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact
+npx pactjs contract-generate --file=./coin.pact --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact
 ```
 
 if your contract has dependency to other modules you should either pass those
@@ -131,8 +131,8 @@ async function transfer(
     // Since Kadena has a multi-chain architecture, we need to set the chainId.
     // We also need to mention who is going to pay the gas fee.
     .setMeta({ chainId: '0', senderAccount: sender.accountName })
-    // We set the networkId to "testnet04"; this could also be "mainnet01" or something else if you use a private network or a fork.
-    .setNetworkId('testnet04')
+    // We set the networkId to "testnet06"; this could also be "mainnet01" or something else if you use a private network or a fork.
+    .setNetworkId('testnet06')
     // Finalize the command and add default values and hash to it. After this step, no one can change the command.
     .createTransaction();
 

@@ -25,7 +25,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-const networkId: 'testnet04' | 'mainnet01' = 'testnet04';
+const networkId: 'testnet06' | 'mainnet01' = 'testnet06';
 
 // List all adapters you want to use here.
 const adapters = [
@@ -41,7 +41,7 @@ const adapters = [
   createMagicAdapter({
     chainId: '1',
     chainwebApiUrl:
-      'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact',
+      'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact',
     magicApiKey: import.meta.env.VITE_MAGIC_API_KEY,
     networkId,
   }),

@@ -42,7 +42,7 @@ export const fundNewAccountOnTestnetCommand = ({
   signerKeys,
   faucetAccount = 'c:Ecwy85aCW3eogZUnIQxknH8tG8uXHM5QiC__jeI0nWA',
   contract = 'n_d8cbb935f9cd9d2399a5886bb08caed71f9bad49.coin-faucet',
-  networkId = 'testnet04',
+  networkId = 'testnet06',
 }: IFundNewAccountOnTestnetCommandInput) =>
   composePactCommand(
     execution(

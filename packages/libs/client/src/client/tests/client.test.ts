@@ -74,7 +74,7 @@ describe('client', () => {
   it('uses kadenaHostGenerator if called without argument', async () => {
     server.resetHandlers(
       post(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact/api/v1/local',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact/api/v1/local',
         { reqKey: 'test-key' },
       ),
     );
@@ -366,7 +366,7 @@ describe('client', () => {
     it('calls /poll endpoint once to get the status of the request', async () => {
       server.resetHandlers(
         post(
-          'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact/api/v1/poll',
+          'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact/api/v1/poll',
           {},
         ),
       );
@@ -376,7 +376,7 @@ describe('client', () => {
       const result = await getStatus({
         requestKey: 'test-key',
         chainId: '0',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
 
       expect(result).toEqual({});
@@ -385,7 +385,7 @@ describe('client', () => {
     it('calls /poll endpoint once to get the status of the list of requests ', async () => {
       server.resetHandlers(
         post(
-          'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact/api/v1/poll',
+          'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact/api/v1/poll',
           { 'test-key-1': 'result1', 'test-key-2': 'result2' },
         ),
       );
@@ -396,9 +396,9 @@ describe('client', () => {
         {
           requestKey: 'test-key-1',
           chainId: '0',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         },
-        { requestKey: 'test-key-2', chainId: '0', networkId: 'testnet04' },
+        { requestKey: 'test-key-2', chainId: '0', networkId: 'testnet06' },
       ]);
 
       expect(result).toEqual({
@@ -412,7 +412,7 @@ describe('client', () => {
     it('calls /listen endpoint get the status of the request', async () => {
       server.resetHandlers(
         post(
-          'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact/api/v1/listen',
+          'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact/api/v1/listen',
           { reqKey: 'test-key' },
         ),
       );
@@ -422,7 +422,7 @@ describe('client', () => {
       const result = await listen({
         requestKey: 'test-key',
         chainId: '0',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
 
       expect(result).toEqual({ reqKey: 'test-key' });
@@ -433,7 +433,7 @@ describe('client', () => {
     it('calls /spv endpoint once to get spv proof', async () => {
       server.resetHandlers(
         post(
-          'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact/spv',
+          'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact/spv',
           'proof',
         ),
       );
@@ -444,7 +444,7 @@ describe('client', () => {
         {
           requestKey: 'test-key',
           chainId: '0',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         },
         '2',
       );
@@ -468,7 +468,7 @@ describe('client', () => {
         {
           requestKey: 'test-key',
           chainId: '0',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         },
         '2',
         { interval: 10 },

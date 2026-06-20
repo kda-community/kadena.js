@@ -22,7 +22,7 @@ Generate client based on a contract
 | -i, --caps-interface | Custom name for the interface of the caps. Can be used to create a type definition with a limited set of capabilities. | No                          |                   |
 | -f, --file           | Generate d.ts from Pact contract file                                                                                  | If --contract is ommitted   |                   |
 | --contract           | Generate d.ts from Pact contract from the blockchain                                                                   | If --file is ommitted       |                   |
-| --api                | The API to use for retrieving the contract (e.g. [https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact][1])    | When --contract is provided |                   |
+| --api                | The API to use for retrieving the contract (e.g. [https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact][1])    | When --contract is provided |                   |
 | --chain              | The chainId to retrieve the contract from                                                                              | When --contract is provided | 0                 |
 | --network            | The networkId to retrieve the contract from (e.g. testnet)                                                             | When --contract is provided | mainnet           |
 
@@ -35,7 +35,7 @@ pactjs contract-generate --file ./myContract.pact
 **Generate from chain**
 
 ```sh
-pactjs contract-generate --contract free.coin --api https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact --chain 1 --network testnet
+pactjs contract-generate --contract free.coin --api https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact --chain 1 --network testnet
 ```
 
 ## retrieve-contract
@@ -46,13 +46,13 @@ Retrieve a contract from an API using a /local call
 | ------------- | ------------------------------------------------------------------------------------------------------- | ------------ | ----------------------------- |
 | -m --module   | The module you want to retrieve (e.g. "coin")                                                           | Yes          |                               |
 | -o, --out     | File to write the contract to (e.g. ./myContract.pact)                                                  | Yes          |                               |
-| -a, --api     | API to fetch the contract from (e.g. [https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact][1]) | Yes          | [https://api.chainweb.com][2] |
+| -a, --api     | API to fetch the contract from (e.g. [https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact][1]) | Yes          | [https://api.chainweb-community.org][2] |
 | -n, --network | Network to retrieve from (e.g. testnet)                                                                 | No           | mainnet                       |
 
 Retrieve a contract from chain
 
 ```sh
-pactjs retrieve-contract --out ./myContract.pact --module coin --api https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact
+pactjs retrieve-contract --out ./myContract.pact --module coin --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact
 ```
 
 ## template-generate
@@ -71,5 +71,5 @@ Generate a client from a template
 pactjs template-generate --file ./contractDir --out ./myContract.pact
 ```
 
-[1]: https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact
-[2]: https://api.chainweb.com
+[1]: https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact
+[2]: https://api.chainweb-community.org

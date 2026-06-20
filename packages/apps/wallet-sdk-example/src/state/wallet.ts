@@ -27,7 +27,7 @@ const seedAtom = atomWithStorage<null | EncryptedString>(
 );
 const debugModeAtom = atomWithStorage('debugMode', true);
 const selectedChainAtom = atomWithStorage<ChainId>('chain_id', '0');
-const selectedNetworkAtom = atomWithStorage('network_id', 'testnet04');
+const selectedNetworkAtom = atomWithStorage('network_id', 'testnet06');
 const selectedFungibleAtom = atomWithStorage('selected_fungible', 'coin');
 const accountsAtom = atomWithStorage<Account[]>('accounts', []);
 const selectedAccountAtom = atomWithStorage<null | number>(

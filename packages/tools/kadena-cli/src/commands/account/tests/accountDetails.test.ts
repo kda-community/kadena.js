@@ -12,7 +12,7 @@ describe('account details', () => {
   beforeEach(() => {
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact/api/v1/local',
         async (): Promise<HttpResponse> => {
           return HttpResponse.json(accountDetailsSuccessData, { status: 200 });
         },
@@ -71,7 +71,7 @@ describe('account details', () => {
   it('should return account not available error message when account not found on chain', async () => {
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/2/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/2/pact/api/v1/local',
         () => {
           return HttpResponse.json(
             { error: 'with-read: row not found: qwerty' },
@@ -85,7 +85,7 @@ describe('account details', () => {
     );
 
     expect(res.stderr).toContain(
-      '\nAccount "account1" is not available on\nfollowing chain(s): 2 on network "testnet04"',
+      '\nAccount "account1" is not available on\nfollowing chain(s): 2 on network "testnet06"',
     );
   });
 
@@ -102,7 +102,7 @@ describe('account details', () => {
     };
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact/api/v1/local',
         async (): Promise<HttpResponse> => {
           return HttpResponse.json(chainIdOneData, { status: 200 });
         },
@@ -130,7 +130,7 @@ describe('account details', () => {
   it('should return account details for one chain id and for two chain ids account not found', async () => {
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact/api/v1/local',
         async (): Promise<HttpResponse> => {
           return HttpResponse.json(
             { error: 'with-read: row not found: qwerty' },
@@ -141,7 +141,7 @@ describe('account details', () => {
     );
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/2/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/2/pact/api/v1/local',
         async (): Promise<HttpResponse> => {
           return HttpResponse.json(
             { error: 'with-read: row not found: qwerty' },
@@ -159,7 +159,7 @@ describe('account details', () => {
   it('should return error message when api fails', async () => {
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/2/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/2/pact/api/v1/local',
         () => {
           return HttpResponse.json('shit hit the fan', { status: 500 });
         },

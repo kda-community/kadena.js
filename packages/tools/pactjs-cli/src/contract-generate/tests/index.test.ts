@@ -20,8 +20,8 @@ describe('extractNetworkAndChain', () => {
   });
 
   it('should parse the chain number correctly when api string contains a different chain', () => {
-    const api = 'http://api.com/chainweb/0.0/testnet04/chain/2/pact';
+    const api = 'http://api.com/chainweb/0.0/testnet06/chain/2/pact';
     const result = extractNetworkAndChain(api);
-    expect(result).toEqual({ network: 'testnet04', chain: 2 });
+    expect(result).toEqual({ network: 'testnet06', chain: 2 });
   });
 });

@@ -6,12 +6,12 @@ import { MAX_CHAIN_VALUE } from './config.js';
 
 export const GAS_STATIONS_MAP: { [key: string]: string } = {
   development: GAS_STATIONS.DEV_NET,
-  testnet04: GAS_STATIONS.TEST_NET,
+  testnet06: GAS_STATIONS.TEST_NET,
 } as const;
 
 export const NAMESPACES_MAP: { [key: string]: string } = {
   development: NAMESPACES.DEV_NET,
-  testnet04: NAMESPACES.TEST_NET,
+  testnet06: NAMESPACES.TEST_NET,
 };
 
 export const NO_ACCOUNTS_FOUND_ERROR_MESSAGE =

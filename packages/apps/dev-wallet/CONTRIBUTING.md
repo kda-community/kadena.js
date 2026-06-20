@@ -15,7 +15,7 @@ We have the following modules:
 - `activity` - for activity management like transfers, draft transfers, signing
   requests
 - `key-source` - for key management
-- `network` - for network management like mainnet01, testnet04, custom networks
+- `network` - for network management like mainnet01, testnet06, custom networks
 - `transaction` - for transaction management
 - `wallet` - for key-derivation management
 

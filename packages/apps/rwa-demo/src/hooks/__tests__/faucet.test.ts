@@ -105,7 +105,7 @@ describe('faucet hook', () => {
       expect(result.current.isAllowed).toBe(true);
     });
 
-    it('should return true, when account is mounted, when gas is NOT payable, when network is testnet04', () => {
+    it('should return true, when account is mounted, when gas is NOT payable, when network is testnet06', () => {
       mocksHook.useAccount.mockImplementation(() => ({
         account: {
           address: 'k:he-man',
@@ -117,7 +117,7 @@ describe('faucet hook', () => {
 
       mocksHook.useNetwork.mockImplementation(() => ({
         ...mocksHook.useNetwork.getMockImplementation(),
-        activeNetwork: { networkId: 'testnet04' },
+        activeNetwork: { networkId: 'testnet06' },
       }));
 
       const { result } = renderHook(() => useFaucet());

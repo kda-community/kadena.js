@@ -59,7 +59,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -132,7 +132,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -219,7 +219,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -307,7 +307,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -380,7 +380,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -453,7 +453,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -519,7 +519,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -591,7 +591,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -678,7 +678,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -766,7 +766,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -852,7 +852,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -924,7 +924,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -996,7 +996,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1073,7 +1073,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1150,7 +1150,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1226,7 +1226,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1303,7 +1303,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1379,7 +1379,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1456,7 +1456,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1540,7 +1540,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -1605,7 +1605,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1693,7 +1693,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1787,7 +1787,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -1852,7 +1852,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -1940,7 +1940,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2026,7 +2026,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2119,7 +2119,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -2175,7 +2175,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2263,7 +2263,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2336,7 +2336,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2409,7 +2409,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2503,7 +2503,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -2568,7 +2568,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2656,7 +2656,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2750,7 +2750,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                     payload: {
                       __typename: 'ContinuationPayload',
@@ -2811,7 +2811,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2899,7 +2899,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -2985,7 +2985,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -3065,7 +3065,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                     payload: {
                       __typename: 'ContinuationPayload',
@@ -3126,7 +3126,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3214,7 +3214,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3301,7 +3301,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3389,7 +3389,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3475,7 +3475,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3551,7 +3551,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3627,7 +3627,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3703,7 +3703,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3779,7 +3779,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3855,7 +3855,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3918,7 +3918,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -3991,7 +3991,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4064,7 +4064,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4137,7 +4137,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4210,7 +4210,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4283,7 +4283,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4356,7 +4356,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4429,7 +4429,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4502,7 +4502,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4575,7 +4575,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4648,7 +4648,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4721,7 +4721,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4794,7 +4794,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4867,7 +4867,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -4940,7 +4940,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5026,7 +5026,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -5115,7 +5115,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                     payload: {
                       __typename: 'ContinuationPayload',
@@ -5167,7 +5167,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5255,7 +5255,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5358,7 +5358,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                     payload: {
                       __typename: 'ContinuationPayload',
@@ -5410,7 +5410,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5498,7 +5498,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5592,7 +5592,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                     payload: {
                       __typename: 'ContinuationPayload',
@@ -5653,7 +5653,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5741,7 +5741,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5814,7 +5814,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -5887,7 +5887,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 0.000001,
                     sender:
@@ -5960,7 +5960,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 0.000001,
                     sender:
@@ -6047,7 +6047,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6131,7 +6131,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -6196,7 +6196,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6284,7 +6284,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6370,7 +6370,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -6442,7 +6442,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6519,7 +6519,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6612,7 +6612,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -6668,7 +6668,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6756,7 +6756,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6842,7 +6842,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -6919,7 +6919,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7012,7 +7012,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -7068,7 +7068,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7156,7 +7156,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7229,7 +7229,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7302,7 +7302,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7388,7 +7388,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -7468,7 +7468,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                     payload: {
                       __typename: 'ContinuationPayload',
@@ -7529,7 +7529,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7617,7 +7617,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7703,7 +7703,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7780,7 +7780,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -7864,7 +7864,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -7929,7 +7929,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -8017,7 +8017,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -8090,7 +8090,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 0.000001,
                     sender:
@@ -8176,7 +8176,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -8253,7 +8253,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -8337,7 +8337,7 @@ export const getTransfers01 = {
                     },
                   },
                   cmd: {
-                    networkId: 'testnet04',
+                    networkId: 'testnet06',
                     meta: {
                       gasPrice: 1e-8,
                       sender:
@@ -8402,7 +8402,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -8490,7 +8490,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:
@@ -8576,7 +8576,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -8648,7 +8648,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -8720,7 +8720,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -8792,7 +8792,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -8864,7 +8864,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: { gasPrice: 1e-8, sender: 'kadena-xchain-gas' },
                   payload: {
                     __typename: 'ContinuationPayload',
@@ -8923,7 +8923,7 @@ export const getTransfers01 = {
                   },
                 },
                 cmd: {
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                   meta: {
                     gasPrice: 1e-8,
                     sender:

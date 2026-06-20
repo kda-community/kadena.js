@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "https://api.chainweb.com/chainweb/{apiVersion}/mainnet01/chain/{chainId}/pact/api/v1",
+      "url": "https://api.chainweb-community.org/chainweb/{apiVersion}/mainnet01/chain/{chainId}/pact/api/v1",
       "description": "Pact API for a chain on the Kadena mainnet.",
       "variables": {
         "apiVersion": {
@@ -23,7 +23,7 @@
       }
     },
     {
-      "url": "https://api.testnet.chainweb.com/chainweb/{apiVersion}/testnet04/chain/{chainId}/pact/api/v1",
+      "url": "https://api.testnet.chainweb-community.org/chainweb/{apiVersion}/testnet06/chain/{chainId}/pact/api/v1",
       "description": "Pact API for a chain on the Kadena testnet.",
       "variables": {
         "apiVersion": {
@@ -274,7 +274,7 @@
     "/spv": {
       "servers": [
         {
-          "url": "https://api.chainweb.com/chainweb/{apiVersion}/mainnet01/chain/{chainId}/pact",
+          "url": "https://api.chainweb-community.org/chainweb/{apiVersion}/mainnet01/chain/{chainId}/pact",
           "description": "Pact API for a chain on the Kadena mainnet.",
           "variables": {
             "apiVersion": {
@@ -286,7 +286,7 @@
           }
         },
         {
-          "url": "https://api.testnet.chainweb.com/chainweb/{apiVersion}/testnet04/chain/{chainId}/pact",
+          "url": "https://api.testnet.chainweb-community.org/chainweb/{apiVersion}/testnet06/chain/{chainId}/pact",
           "description": "Pact API for a chain on the Kadena testnet.",
           "variables": {
             "apiVersion": {
@@ -569,7 +569,7 @@
           "networkId": {
             "description": "Backend-specific identifier of target network.",
             "type": "string",
-            "enum": ["mainnet01", "testnet04"]
+            "enum": ["mainnet01", "testnet06"]
           },
           "nonce": {
             "description": "Arbitrary user-supplied value.",

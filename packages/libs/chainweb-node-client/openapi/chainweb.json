@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "https://api.chainweb.com/chainweb/{apiVersion}/mainnet01",
+      "url": "https://api.chainweb-community.org/chainweb/{apiVersion}/mainnet01",
       "description": "Chainweb mainnet service API. It also serves some endpoints of the P2P API.\n",
       "variables": {
         "apiVersion": {
@@ -20,7 +20,7 @@
       }
     },
     {
-      "url": "https://api.testnet.chainweb.com/chainweb/{apiVersion}/testnet04",
+      "url": "https://api.testnet.chainweb-community.org/chainweb/{apiVersion}/testnet06",
       "description": "Chainweb testnet service API. It also serves some endpoints of the P2P API.\n",
       "variables": {
         "apiVersion": {
@@ -37,14 +37,14 @@
           "enum": ["http", "https"]
         },
         "domain": {
-          "default": "api.chainweb.com"
+          "default": "api.chainweb-community.org"
         },
         "port": {
           "default": "1848"
         },
         "chainwebVersion": {
           "default": "mainnet01",
-          "enum": ["test-singleton", "development", "mainnet01", "testnet04"]
+          "enum": ["test-singleton", "development", "mainnet01", "testnet06"]
         },
         "apiVersion": {
           "default": "0.0"
@@ -78,7 +78,7 @@
       }
     },
     {
-      "url": "https://{location}.testnet.chainweb.com/chainweb/{apiVersion}/testnet04",
+      "url": "https://{location}.testnet.chainweb.com/chainweb/{apiVersion}/testnet06",
       "description": "Chainweb testnet P2P bootstrap node. Only P2P API endpoints are served.",
       "variables": {
         "location": {
@@ -158,7 +158,7 @@
     {
       "name": "binaryHeader",
       "x-displayName": "Block Header Binary Encoding",
-      "description": "## Binary Format For Chain Graphs of Degree Three\n\ndefined in `Chainweb.BlockHeader`\n\n| Size | Bytes   | Value       |\n| ---- | ------- | ----------- |\n| 8    | 0-7     | flags       |\n| 8    | 8-15    | time        |\n| 32   | 16-47   | parent      |\n| 110  | 48-157  | adjacents   |\n| 32   | 158-189 | target      |\n| 32   | 190-221 | payload     |\n| 4    | 222-225 | chain       |\n| 32   | 226-257 | weight      |\n| 8    | 258-265 | height      |\n| 4    | 266-269 | version     |\n| 8    | 270-277 | epoch start |\n| 8    | 278-285 | nonce       |\n| 32   | 286-317 | hash        |\n\ntotal: 318 bytes\n\nAdjacent Parents Record (length 3):\n\n| Bytes | Value     |\n| ----- | --------- |\n| 0-1   | length    |\n| 2-109 | adjacents |\n\ntotal: 110 bytes\n\nAdjacent Parent:\n\n| Bytes | Value |\n| ----- | ----- |\n| 0-3   | chain |\n| 4-35  | hash  |\n\ntotal: 36 bytes\n\n## Fields\n\n**POW related values**:\n\nArithmetic operations and comparisons on `parent`, `target`, `weight`, and `hash`\ninterpret the value as unsigned 256 bit integral numbers in little endian encoding.\nAll operations are performed using rational arithmetic of unlimited precision and the final result is rounded.\nPlease consult the code for details of how the result is rounded.\n\n**Time Stamps**:\n\n`time` and `epoch start` are a little endian twoth complement encoded integral numbers that count SI microseconds since POSIX epoch (leap seconds are ignored). These numbers are always positive (highest bit is 0).\n\n**Numbers**:\n\n* `height` is a little endian encoded unsigned integral 64 bit number.\n* `length` is a little endian encoded unsigned integral 16 bit number.\n\n**Version**:\n\n`version` identifies the chainweb version. It is a 32 bit value in little endian encoding.\nValues up to 0x0000FFFF are reserved for production versions (which includes `development` and testnets).\n\n| value      | version     |\n| ---------- | ----------- |\n| 0x00000005 | mainnet01   |\n| 0x00000001 | development |\n| 0x00000007 | testnet04   |\n\n**Other**:\n\n* `nonce` is any sequence of 8 bytes that is only compared for equality.\n* `chain` is any sequence of 4 bytes that identifies a chain and can be compared for equality.\n* `payload` is any sequence of 32 bytes that is a cryptographic hash of the payload associated with the block and can be compared for equality.\n* `flags` are eight bytes of value 0x0 that are reserved for future use.\n"
+      "description": "## Binary Format For Chain Graphs of Degree Three\n\ndefined in `Chainweb.BlockHeader`\n\n| Size | Bytes   | Value       |\n| ---- | ------- | ----------- |\n| 8    | 0-7     | flags       |\n| 8    | 8-15    | time        |\n| 32   | 16-47   | parent      |\n| 110  | 48-157  | adjacents   |\n| 32   | 158-189 | target      |\n| 32   | 190-221 | payload     |\n| 4    | 222-225 | chain       |\n| 32   | 226-257 | weight      |\n| 8    | 258-265 | height      |\n| 4    | 266-269 | version     |\n| 8    | 270-277 | epoch start |\n| 8    | 278-285 | nonce       |\n| 32   | 286-317 | hash        |\n\ntotal: 318 bytes\n\nAdjacent Parents Record (length 3):\n\n| Bytes | Value     |\n| ----- | --------- |\n| 0-1   | length    |\n| 2-109 | adjacents |\n\ntotal: 110 bytes\n\nAdjacent Parent:\n\n| Bytes | Value |\n| ----- | ----- |\n| 0-3   | chain |\n| 4-35  | hash  |\n\ntotal: 36 bytes\n\n## Fields\n\n**POW related values**:\n\nArithmetic operations and comparisons on `parent`, `target`, `weight`, and `hash`\ninterpret the value as unsigned 256 bit integral numbers in little endian encoding.\nAll operations are performed using rational arithmetic of unlimited precision and the final result is rounded.\nPlease consult the code for details of how the result is rounded.\n\n**Time Stamps**:\n\n`time` and `epoch start` are a little endian twoth complement encoded integral numbers that count SI microseconds since POSIX epoch (leap seconds are ignored). These numbers are always positive (highest bit is 0).\n\n**Numbers**:\n\n* `height` is a little endian encoded unsigned integral 64 bit number.\n* `length` is a little endian encoded unsigned integral 16 bit number.\n\n**Version**:\n\n`version` identifies the chainweb version. It is a 32 bit value in little endian encoding.\nValues up to 0x0000FFFF are reserved for production versions (which includes `development` and testnets).\n\n| value      | version     |\n| ---------- | ----------- |\n| 0x00000005 | mainnet01   |\n| 0x00000001 | development |\n| 0x00000007 | testnet06   |\n\n**Other**:\n\n* `nonce` is any sequence of 8 bytes that is only compared for equality.\n* `chain` is any sequence of 4 bytes that identifies a chain and can be compared for equality.\n* `payload` is any sequence of 32 bytes that is a cryptographic hash of the payload associated with the block and can be compared for equality.\n* `flags` are eight bytes of value 0x0 that are reserved for future use.\n"
     },
     {
       "name": "binaryWorkHeader",
@@ -278,7 +278,7 @@
       "chainwebVersion": {
         "title": "Chainweb Version",
         "description": "The version of the Chainweb network",
-        "enum": ["test-singleton", "development", "mainnet01", "testnet04"]
+        "enum": ["test-singleton", "development", "mainnet01", "testnet06"]
       },
       "chainId": {
         "title": "Chain ID",
@@ -892,7 +892,7 @@
           },
           "nodeVersion": {
             "type": "string",
-            "enum": ["test-singleton", "development", "mainnet01", "testnet04"],
+            "enum": ["test-singleton", "development", "mainnet01", "testnet06"],
             "example": "mainnet01"
           },
           "nodeGraphHistory": {
@@ -3719,7 +3719,7 @@
                 "test-singleton",
                 "development",
                 "mainnet01",
-                "testnet04"
+                "testnet06"
               ]
             },
             "apiVersion": {
@@ -3817,7 +3817,7 @@
                 "test-singleton",
                 "development",
                 "mainnet01",
-                "testnet04"
+                "testnet06"
               ]
             },
             "apiVersion": {
@@ -3883,7 +3883,7 @@
                 "test-singleton",
                 "development",
                 "mainnet01",
-                "testnet04"
+                "testnet06"
               ]
             },
             "apiVersion": {
@@ -4139,11 +4139,11 @@
     "/health-check": {
       "servers": [
         {
-          "url": "https://api.chainweb.com",
+          "url": "https://api.chainweb-community.org",
           "description": "Chainweb service API for mainnet"
         },
         {
-          "url": "https://api.testnet.chainweb.com",
+          "url": "https://api.testnet.chainweb-community.org",
           "description": "Chainweb service API for testnet"
         },
         {
@@ -4155,7 +4155,7 @@
               "enum": ["http", "https"]
             },
             "domain": {
-              "default": "api.chainweb.com"
+              "default": "api.chainweb-community.org"
             },
             "port": {
               "default": "1848"
@@ -4196,11 +4196,11 @@
     "/info": {
       "servers": [
         {
-          "url": "https://api.chainweb.com",
+          "url": "https://api.chainweb-community.org",
           "description": "Chainweb service API for mainnet"
         },
         {
-          "url": "https://api.testnet.chainweb.com",
+          "url": "https://api.testnet.chainweb-community.org",
           "description": "Chainweb service API for testnet"
         },
         {
@@ -4212,7 +4212,7 @@
               "enum": ["http", "https"]
             },
             "domain": {
-              "default": "api.chainweb.com"
+              "default": "api.chainweb-community.org"
             },
             "port": {
               "default": "1848"

@@ -84,7 +84,7 @@ describe('useAccount', () => {
       address: 'k:test123',
       publicKey: 'test-public-key',
       chainId: '1',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     };
 
     // Setup context with account data

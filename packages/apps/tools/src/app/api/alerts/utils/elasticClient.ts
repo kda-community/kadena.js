@@ -5,7 +5,7 @@ import type { IAlert, INETWORK } from './constants';
 const getElasticIndexByEnv = (env: INETWORK): string => {
   if (env.key === 'mainnet01') return 'chainweb-monitor-balances-mainnet01';
   //testnet
-  return 'chainweb-monitor-balances-testnet04';
+  return 'chainweb-monitor-balances-testnet06';
 };
 
 export const getClient = () => {

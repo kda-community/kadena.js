@@ -28,5 +28,5 @@ docs:
     description: The amount of KDA that you want to transfer
     type: PactNumber
   chain: The chain that you want to execute the transaction on
-  network: The network that you want to use ("testnet04", "mainnet")
+  network: The network that you want to use ("testnet06", "mainnet")
   from-key: The key (without k:) that signs the caps

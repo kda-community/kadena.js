@@ -22,7 +22,7 @@ describe('tx local', () => {
   it('Submits a valid transaction and receives success response', async () => {
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact/api/v1/local',
         async (req): Promise<HttpResponse> => {
           const cmd = getCommand(await req.request.text());
           if (

@@ -74,7 +74,7 @@ export const NETWORKS: INETWORK[] = [
 //   {
 //     label: 'Hackachain TESTNET',
 //     url: 'https://api.testnet.kadindexer.io/v0',
-//     key: 'testnet04',
+//     key: 'testnet06',
 //   },
 // ];
 

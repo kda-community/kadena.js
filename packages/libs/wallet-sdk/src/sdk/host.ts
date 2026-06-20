@@ -12,9 +12,9 @@ export type ChainwebHostGenerator = (options: {
 export type GraphqlHostGenerator = (options: { networkId: string }) => string;
 
 const chainwebHostMap: Record<string, string | string[]> = {
-  mainnet01: 'https://api.chainweb.com',
-  testnet04: 'https://api.testnet.chainweb.com',
-  testnet05: 'https://api.testnet.chainweb.com',
+  mainnet01: 'https://api.chainweb-community.org',
+  testnet06: 'https://api.testnet.chainweb-community.org',
+  testnet05: 'https://api.testnet.chainweb-community.org',
 };
 
 export const defaultChainwebHostGenerator: ChainwebHostGenerator = (
@@ -25,7 +25,7 @@ export const defaultChainwebHostGenerator: ChainwebHostGenerator = (
 
 const graphqlHostMap: Record<string, string> = {
   mainnet01: 'https://graph.kadena.network/graphql',
-  testnet04: 'https://graph.testnet.kadena.network/graphql',
+  testnet06: 'https://graph.testnet.kadena.network/graphql',
   testnet05: 'https://graph.testnet.kadena.network/graphql',
 };
 

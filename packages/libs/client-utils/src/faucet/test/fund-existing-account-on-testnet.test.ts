@@ -39,7 +39,7 @@ describe('fundExistingAccountOnTestnetCommand', () => {
         ttl: 900,
         chainId: '1',
       },
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     });
   });
 });

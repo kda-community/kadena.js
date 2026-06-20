@@ -34,7 +34,7 @@ export const useFaucet = () => {
       isGasPayable === undefined ||
       !isMounted ||
       (activeNetwork.networkId !== 'development' &&
-        activeNetwork.networkId !== 'testnet04')
+        activeNetwork.networkId !== 'testnet06')
     )
       return;
 

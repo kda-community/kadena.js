@@ -1,12 +1,12 @@
 interface INetworks {
-  mainnet: { network: 'mainnet01'; api: 'api.chainweb.com' };
+  mainnet: { network: 'mainnet01'; api: 'api.chainweb-community.org' };
   testnet: {
-    network: 'testnet04';
-    api: 'api.testnet.chainweb.com';
+    network: 'testnet06';
+    api: 'api.testnet.chainweb-community.org';
   };
 }
 
 export const networkMap: INetworks = {
-  mainnet: { network: 'mainnet01', api: 'api.chainweb.com' },
-  testnet: { network: 'testnet04', api: 'api.testnet.chainweb.com' },
+  mainnet: { network: 'mainnet01', api: 'api.chainweb-community.org' },
+  testnet: { network: 'testnet06', api: 'api.testnet.chainweb-community.org' },
 } as const;

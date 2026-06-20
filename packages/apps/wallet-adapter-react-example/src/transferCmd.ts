@@ -45,7 +45,7 @@ export const createTransferCmd = async ({
 
     const signedTx = await client.signCommand(walletName, transactionBuilder);
     const kadenaClient = createClient(
-      'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/0/pact',
+      'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/0/pact',
     );
 
     if (isSignedTransaction(signedTx)) {

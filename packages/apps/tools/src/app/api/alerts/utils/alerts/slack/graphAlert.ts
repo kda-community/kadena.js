@@ -40,10 +40,11 @@ interface ICompletedBlockHeightsResponse {
   };
 }
 
-const testnet04Props: INETWORK = {
-  key: 'testnet04',
+const testnet06Props: INETWORK = {
+  key: 'testnet06',
   label: 'Chainweb testnet',
-  chainweb: 'https://ap1.testnet.chainweb-community.org/chainweb/0.0/testnet04/cut',
+  chainweb:
+    'https://ap1.testnet.chainweb-community.org/chainweb/0.0/testnet06/cut',
   url: 'https://graph.testnet.kadena.network/graphql',
   graphqlRef:
     'https://graph.testnet.kadena.network/graphql?query=query+graphBlockHeight+%7B%0A++++++++completedBlockHeights%28heightCount%3A+1%29+%7B%0A++++++++++edges+%7B%0A++++++++++++node+%7B%0A++++++++++++++height%0A++++++++++++%7D%0A++++++++++%7D%0A++++++++%7D%0A++++++%7D',
@@ -58,7 +59,7 @@ const mainnet01Props: INETWORK = {
     'https://graph.kadena.network/graphql?query=query+graphBlockHeight+%7B%0A++++++++completedBlockHeights%28heightCount%3A+1%29+%7B%0A++++++++++edges+%7B%0A++++++++++++node+%7B%0A++++++++++++++height%0A++++++++++++%7D%0A++++++++++%7D%0A++++++++%7D%0A++++++%7D',
 } as const;
 
-const networks = [testnet04Props, mainnet01Props];
+const networks = [testnet06Props, mainnet01Props];
 
 const countHeightOnGraph = async (
   network: INETWORK,

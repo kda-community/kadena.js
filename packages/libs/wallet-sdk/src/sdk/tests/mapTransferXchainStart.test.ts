@@ -55,7 +55,7 @@ const TRANSFER_XCHAIN_SEND = [
         },
       },
       cmd: {
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         meta: {
           gasPrice: 1e-8,
           sender:
@@ -151,7 +151,7 @@ const TRANSFER_XCHAIN_SEND = [
         },
       },
       cmd: {
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         meta: {
           gasPrice: 1e-8,
           sender:
@@ -236,7 +236,7 @@ const TRANSFER_XCHAIN_SEND = [
           },
         },
         cmd: {
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           meta: {
             gasPrice: 1e-8,
             sender:
@@ -279,7 +279,7 @@ describe('getTransfers', () => {
         isCrossChainTransfer: true,
         success: true,
         token: 'coin',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         block: {
           creationTime: new Date('2024-09-12T10:00:58.767Z'),
           blockDepthEstimate: BigInt(-4638181),

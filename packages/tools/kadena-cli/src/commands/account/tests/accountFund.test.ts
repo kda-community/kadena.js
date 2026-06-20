@@ -94,7 +94,7 @@ describe('account fund', () => {
     });
     const res = await runCommand('account fund');
     expect(res.stderr).toContain(
-      'Account "accountName" funded with 20 coin(s) on Chain ID(s) "1" in testnet04 network.',
+      'Account "accountName" funded with 20 coin(s) on Chain ID(s) "1" in testnet06 network.',
     );
     expect(res.stderr).toContain(
       'https://explorer.chainweb.com/testnet/tx/requestKey-1',
@@ -106,7 +106,7 @@ describe('account fund', () => {
       'account fund --account=account-add-test-manual --amount=1 --network=testnet --chain-ids=1 --quiet',
     );
     expect(res.stderr).toContain(
-      'Account "accountName" funded with 1 coin(s) on Chain ID(s) "1" in testnet04 network.',
+      'Account "accountName" funded with 1 coin(s) on Chain ID(s) "1" in testnet06 network.',
     );
     expect(res.stderr).toContain(
       'https://explorer.chainweb.com/testnet/tx/requestKey-1',
@@ -160,7 +160,7 @@ describe('account fund', () => {
       'Account "accountName" does not exist on Chain ID(s) 1. So the account will be created on these Chain ID(s)',
     );
     expect(res.stderr).toContain(
-      'Account "accountName" funded with 5 coin(s) on Chain ID(s) "1" in testnet04 network.',
+      'Account "accountName" funded with 5 coin(s) on Chain ID(s) "1" in testnet06 network.',
     );
   });
 

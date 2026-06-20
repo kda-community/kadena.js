@@ -124,7 +124,7 @@ createSimpleTransfer(transfer: SimpleCreateTransfer & { networkId: string }): IU
   - `amount`: `string` - Amount to transfer (e.g., `'10'`).
   - `chainId`: `ChainId` - The chain ID where the transaction will be executed
     (e.g., `'1'`).
-  - `networkId`: `string` - The network ID (e.g., `'mainnet01'`, `'testnet04'`).
+  - `networkId`: `string` - The network ID (e.g., `'mainnet01'`, `'testnet06'`).
 
 **Returns:**
 
@@ -139,7 +139,7 @@ const unsignedTransaction = walletSdk.createSimpleTransfer({
   receiver: 'k:receiverPublicKey',
   amount: '10',
   chainId: '1',
-  networkId: 'testnet04',
+  networkId: 'testnet06',
 });
 
 // Sign the transaction (implementation depends on your signing method)
@@ -149,7 +149,7 @@ const unsignedTransaction = walletSdk.createSimpleTransfer({
 // Send the signed transaction
 const transactionDescriptor = await walletSdk.sendTransaction(
   signedTransaction,
-  'testnet04',
+  'testnet06',
   '1',
 );
 
@@ -195,7 +195,7 @@ const unsignedTransaction = walletSdk.createTransfer({
   receiver: 'receiverAccount',
   amount: '50',
   chainId: '1',
-  networkId: 'testnet04',
+  networkId: 'testnet06',
   // Optional guards
   // senderGuard: { keys: ['senderPublicKey'], pred: 'keys-all' },
   // receiverGuard: { keys: ['receiverPublicKey'], pred: 'keys-all' },
@@ -207,7 +207,7 @@ const unsignedTransaction = walletSdk.createTransfer({
 // Send the signed transaction
 const transactionDescriptor = await walletSdk.sendTransaction(
   signedTransaction,
-  'testnet04',
+  'testnet06',
   '1',
 );
 
@@ -254,7 +254,7 @@ const unsignedTransaction = walletSdk.createCrossChainTransfer({
   amount: '25',
   fromChainId: '0',
   toChainId: '1',
-  networkId: 'testnet04',
+  networkId: 'testnet06',
   // Optional guards
   // senderGuard: { keys: ['senderPublicKey'], pred: 'keys-all' },
   // receiverGuard: { keys: ['receiverPublicKey'], pred: 'keys-all' },
@@ -266,7 +266,7 @@ const unsignedTransaction = walletSdk.createCrossChainTransfer({
 // Send the signed transaction
 const transactionDescriptor = await walletSdk.sendTransaction(
   signedTransaction,
-  'testnet04',
+  'testnet06',
   '0', // Source chain ID
 );
 
@@ -320,7 +320,7 @@ const unsignedTransaction = await walletSdk.createFinishCrossChainTransfer(
     requestKey: 'initialRequestKey',
     fromChainId: '0',
     toChainId: '1',
-    networkId: 'testnet04',
+    networkId: 'testnet06',
     receiver: 'receiverAccount',
     // Optional receiver guard
     // receiverGuard: { keys: ['receiverPublicKey'], pred: 'keys-all' },
@@ -337,7 +337,7 @@ const unsignedTransaction = await walletSdk.createFinishCrossChainTransfer(
 // Send the signed transaction
 const transactionDescriptor = await walletSdk.sendTransaction(
   signedTransaction,
-  'testnet04',
+  'testnet06',
   '1', // Target chain ID
 );
 
@@ -364,7 +364,7 @@ sendTransaction(
 **Parameters:**
 
 - `transaction`: `ICommand` - The signed transaction command.
-- `networkId`: `string` - The network ID (e.g., `'mainnet01'`, `'testnet04'`).
+- `networkId`: `string` - The network ID (e.g., `'mainnet01'`, `'testnet06'`).
 - `chainId`: `ChainId` - The chain ID where the transaction will be executed.
 
 **Returns:**
@@ -377,7 +377,7 @@ sendTransaction(
 ```typescript
 const transactionDescriptor = await walletSdk.sendTransaction(
   signedTransaction,
-  'testnet04',
+  'testnet06',
   '1',
 );
 
@@ -424,7 +424,7 @@ getTransfers(
 ```typescript
 const transfers = await walletSdk.getTransfers(
   'k:accountPublicKey',
-  'testnet04',
+  'testnet06',
 );
 
 transfers.forEach((transfer) => {
@@ -605,7 +605,7 @@ getAccountDetails(
 ```typescript
 const accountDetails = await walletSdk.getAccountDetails(
   'k:accountPublicKey',
-  'testnet04',
+  'testnet06',
   'coin',
 );
 
@@ -638,7 +638,7 @@ getChains(networkHost: string): Promise<IChain[]>;
 **Parameters:**
 
 - `networkHost`: `string` - The network host URL (e.g.,
-  `'https://api.testnet.chainweb.com'`).
+  `'https://api.testnet.chainweb-community.org'`).
 
 **Returns:**
 
@@ -648,7 +648,7 @@ getChains(networkHost: string): Promise<IChain[]>;
 **Example:**
 
 ```typescript
-const chains = await walletSdk.getChains('https://api.testnet.chainweb.com');
+const chains = await walletSdk.getChains('https://api.testnet.chainweb-community.org');
 
 chains.forEach((chain) => {
   console.log('Available chain ID:', chain.id);
@@ -677,7 +677,7 @@ getNetworkInfo(networkHost: string): Promise<NodeNetworkInfo>;
 
 ```typescript
 const networkInfo = await walletSdk.getNetworkInfo(
-  'https://api.testnet.chainweb.com',
+  'https://api.testnet.chainweb-community.org',
 );
 
 console.log('Network Info:', networkInfo);
@@ -713,7 +713,7 @@ getGasLimitEstimate(
 ```typescript
 const gasLimit = await walletSdk.getGasLimitEstimate(
   unsignedTransaction,
-  'testnet04',
+  'testnet06',
   '1',
 );
 
@@ -788,7 +788,7 @@ nameToAddress(name: string, networkId: string): Promise<string | null>;
 ```typescript
 const address = await walletSdk.kadenaNames.nameToAddress(
   'example.kda',
-  'testnet04',
+  'testnet06',
 );
 
 if (address) {
@@ -824,7 +824,7 @@ addressToName(address: string, networkId: string): Promise<string | null>;
 ```typescript
 const name = await walletSdk.kadenaNames.addressToName(
   'k:accountPublicKey',
-  'testnet04',
+  'testnet06',
 );
 
 if (name) {

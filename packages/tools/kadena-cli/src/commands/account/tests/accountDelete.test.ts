@@ -24,7 +24,7 @@ describe('account delete', () => {
 
     server.use(
       http.post(
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact/api/v1/local',
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact/api/v1/local',
         async (): Promise<HttpResponse> => {
           return HttpResponse.json(accountDetailsSuccessData, { status: 200 });
         },

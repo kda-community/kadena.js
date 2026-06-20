@@ -10,7 +10,7 @@ import { ERRORS } from '../constants';
 import type { IWalletConnectProvider } from '../provider';
 
 // Default fallback network id for tests
-const MOCK_NETWORK_ID = 'testnet04';
+const MOCK_NETWORK_ID = 'testnet06';
 
 // --- Mock Data ---
 
@@ -91,7 +91,7 @@ const mockClient = {
 
 // A sample unsigned command for signing tests.
 const mockCommand = {
-  cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010\\" \\"k:e96357af055f1eafca72e9f3eac355d4f5614bfbe21efd9986e2457eb154a2c0\\" \\"0.1\\")","data":{}}},"nonce":"kjs:nonce:1747051965313","signers":[{"pubKey":"a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010","scheme":"ED25519","clist":[{"name":"coin.GAS","args":[]},{"name":"coin.TRANSFER","args":["k:a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010","k:e96357af055f1eafca72e9f3eac355d4f5614bfbe21efd9986e2457eb154a2c0","0.1"]}]}],"meta":{"gasLimit":1500,"gasPrice":1e-8,"sender":"k:a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010","ttl":28800,"creationTime":1747051965,"chainId":"0"},"networkId":"testnet04"}',
+  cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010\\" \\"k:e96357af055f1eafca72e9f3eac355d4f5614bfbe21efd9986e2457eb154a2c0\\" \\"0.1\\")","data":{}}},"nonce":"kjs:nonce:1747051965313","signers":[{"pubKey":"a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010","scheme":"ED25519","clist":[{"name":"coin.GAS","args":[]},{"name":"coin.TRANSFER","args":["k:a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010","k:e96357af055f1eafca72e9f3eac355d4f5614bfbe21efd9986e2457eb154a2c0","0.1"]}]}],"meta":{"gasLimit":1500,"gasPrice":1e-8,"sender":"k:a138baf5c2e241b2c85f0c69edaecad1514a79de903a491735421844851d5010","ttl":28800,"creationTime":1747051965,"chainId":"0"},"networkId":"testnet06"}',
   hash: 'o3Wgraz0LcR6JFIgpHN5KqDx2lAVU2bG9CaP7ImamuY',
   sigs: [
     {

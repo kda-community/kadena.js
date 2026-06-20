@@ -17,7 +17,7 @@ import { retrieveContract } from '../retrieve-contract';
 
 const httpHandlers = [
   http.post(
-    'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact/api/v1/local',
+    'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact/api/v1/local',
     () =>
       HttpResponse.json({
         result: { status: 'success', data: { code: 'some pactCode' } },
@@ -39,7 +39,7 @@ const createAndRunProgram = async (): Promise<void> => {
   await action({
     out: '/some/path/to/contract.pact',
     module: 'free.crankk01',
-    api: 'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact',
+    api: 'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact',
     chain: 0,
     network: 'mainnet',
   });
@@ -53,7 +53,7 @@ describe('retrieve-contract', () => {
 
     expect(spy).toHaveBeenCalledWith(
       'free.crankk01',
-      'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact',
+      'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact',
       0,
       'mainnet',
     );

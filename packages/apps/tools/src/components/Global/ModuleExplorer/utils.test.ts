@@ -851,7 +851,7 @@ describe('checkModuleEquality', () => {
     const module1 = {
       name: 'module1',
       chainId: '1',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     } as const;
 
     const module2 = {
@@ -867,7 +867,7 @@ describe('checkModuleEquality', () => {
     expect(
       checkModuleEquality(
         { name: 'same-name', chainId: '19', networkId: 'development' },
-        { name: 'same-name', chainId: '19', networkId: 'testnet04' },
+        { name: 'same-name', chainId: '19', networkId: 'testnet06' },
       ),
     ).toBe(false);
     expect(
@@ -1052,7 +1052,7 @@ describe('modulesToMap', () => {
       {
         name: 'module2',
         chainId: '2',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         code: 'some code',
       },
       {
@@ -1084,7 +1084,7 @@ describe('modulesToMap', () => {
       {
         name: 'module2',
         chainId: '2',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         code: 'some code',
       },
     ]);
@@ -1096,24 +1096,24 @@ describe('moduleToTabId', () => {
     const someModule = {
       name: 'module1',
       chainId: '1',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       code: 'some code',
     } as const;
 
     const result = moduleToTabId(someModule);
 
-    expect(result).toBe('testnet04!_&_!module1!_&_!1');
+    expect(result).toBe('testnet06!_&_!module1!_&_!1');
   });
 });
 
 describe('tabIdToModule', () => {
   it('should convert a tab id to a module', () => {
-    const tabId = 'testnet04!_&_!module1!_&_!1';
+    const tabId = 'testnet06!_&_!module1!_&_!1';
 
     const result = tabIdToModule(tabId);
 
     expect(result).toEqual({
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       name: 'module1',
       chainId: '1',
     });
@@ -1135,7 +1135,7 @@ describe('mapToTabs', () => {
           {
             name: 'module1',
             chainId: '2',
-            networkId: 'testnet04',
+            networkId: 'testnet06',
             code: 'some code',
           },
         ],
@@ -1152,7 +1152,7 @@ describe('mapToTabs', () => {
           {
             name: 'module2',
             chainId: '2',
-            networkId: 'testnet04',
+            networkId: 'testnet06',
             code: 'some code',
           },
         ],
@@ -1174,7 +1174,7 @@ describe('mapToTabs', () => {
           {
             name: 'module1',
             chainId: '2',
-            networkId: 'testnet04',
+            networkId: 'testnet06',
             code: 'some code',
           },
         ],
@@ -1191,7 +1191,7 @@ describe('mapToTabs', () => {
           {
             name: 'module2',
             chainId: '2',
-            networkId: 'testnet04',
+            networkId: 'testnet06',
             code: 'some code',
           },
         ],

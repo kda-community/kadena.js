@@ -18,12 +18,12 @@
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
     "format:src": "prettier . --cache --write",
-    "gen-marmalade-v2": "pactjs contract-generate --contract marmalade-v2.ledger --chain 8 --api https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact;",
+    "gen-marmalade-v2": "pactjs contract-generate --contract marmalade-v2.ledger --chain 8 --api https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact;",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
     "lint:pkg": "lint-package",
     "lint:src": "eslint src --ext .js,.ts",
-    "pactjs:generate:contract:types": "pactjs contract-generate --contract free.crowdfund --contract coin --api=https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/0/pact",
+    "pactjs:generate:contract:types": "pactjs contract-generate --contract free.crowdfund --contract coin --api=https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact",
     "test": ""
   },
   "dependencies": {

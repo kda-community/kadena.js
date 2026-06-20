@@ -12,7 +12,7 @@ const senderAccount: string =
 const receiverAccount: string =
   'k:6c63dda2d4b2b6d1d10537484d7279619283371b3ba62957a773676369944b17';
 
-const NETWORK_ID: string = 'testnet04';
+const NETWORK_ID: string = 'testnet06';
 
 type TransferReturnType = PactReturnType<typeof Pact.modules.coin.transfer>;
 

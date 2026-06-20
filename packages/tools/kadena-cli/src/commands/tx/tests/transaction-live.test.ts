@@ -17,7 +17,7 @@ const targetAccount =
   'k:00b34067644479c769b48b4cc9b2c732e48fc9aeb82d06ecd52dc783550de54d';
 
 describe('template to live test', () => {
-  // NOTE: this tests uses live testnet04 meaning it is not isolated!!!
+  // NOTE: this tests uses live testnet06 meaning it is not isolated!!!
   it('creates, signs and tests the transaction', async () => {
     const root = path.join(__dirname, '../../../');
     const kadenaDir = path.join(root, '.kadena');
@@ -29,7 +29,7 @@ describe('template to live test', () => {
       'decimal:amount': '0.01',
       'chain-id': '1',
       'key:from': publicKey,
-      'network:networkId': 'testnet04',
+      'network:networkId': 'testnet06',
     };
 
     await services.filesystem.ensureDirectoryExists(process.cwd());

@@ -81,7 +81,7 @@ export const Header: React.FC = () => {
           <SelectItem key="mainnet01" textValue="Mainnet">
             Mainnet
           </SelectItem>
-          <SelectItem key="testnet04" textValue="Testnet">
+          <SelectItem key="testnet06" textValue="Testnet">
             Testnet
           </SelectItem>
           <SelectItem key="testnet05" textValue="Testnet Pact5">

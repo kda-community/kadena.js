@@ -25,4 +25,4 @@ export interface IWalletConnectAccount {
  * @see Reference {@link https://github.com/kadena-io/KIPs/blob/master/kip-0017.md#pairing-with-walletconnect | KIP-0017 WalletConnect Specification }
  * @public
  */
-export type TWalletConnectChainId = `kadena:${IPactCommand['networkId']}`; //kadena:mainnet01, kadena:testnet04, kadena:development
+export type TWalletConnectChainId = `kadena:${IPactCommand['networkId']}`; //kadena:mainnet01, kadena:testnet06, kadena:development

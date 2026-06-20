@@ -11,18 +11,18 @@ describe('Host Generators', () => {
       const networkId = 'mainnet01';
       const chainId = '2';
       const expectedUrl =
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/2/pact';
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/2/pact';
 
       const result = defaultChainwebHostGenerator({ networkId, chainId });
 
       expect(result).toBe(expectedUrl);
     });
 
-    it('should generate the correct Chainweb URL for testnet04 and chainId 1', () => {
-      const networkId = 'testnet04';
+    it('should generate the correct Chainweb URL for testnet06 and chainId 1', () => {
+      const networkId = 'testnet06';
       const chainId = '1';
       const expectedUrl =
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact';
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact';
 
       const result = defaultChainwebHostGenerator({ networkId, chainId });
 
@@ -33,7 +33,7 @@ describe('Host Generators', () => {
       const networkId = 'testnet05';
       const chainId = '3';
       const expectedUrl =
-        'https://api.testnet.chainweb.com/chainweb/0.0/testnet05/chain/3/pact';
+        'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet05/chain/3/pact';
 
       const result = defaultChainwebHostGenerator({ networkId, chainId });
 
@@ -76,8 +76,8 @@ describe('Host Generators', () => {
       expect(consoleWarnSpy).not.toHaveBeenCalled();
     });
 
-    it('should generate the correct GraphQL URL for testnet04', () => {
-      const networkId = 'testnet04';
+    it('should generate the correct GraphQL URL for testnet06', () => {
+      const networkId = 'testnet06';
       const expectedUrl = 'https://graph.testnet.kadena.network/graphql';
 
       const result = defaultGraphqlHostGenerator({ networkId });

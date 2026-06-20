@@ -7,12 +7,12 @@ import { calculateGasInformation, calculateGasPrice } from './utils';
  * Fetches the current height of the chain from the cut endpoint.
  * @param host - The base URL of the Chainweb API.
  * @param chainId - The chain ID.
- * @param networkId - The network ID (e.g., mainnet01, testnet04).
+ * @param networkId - The network ID (e.g., mainnet01, testnet06).
  * @returns The current height of the chain.
  * @throws An error if the cut height cannot be fetched.
  * @example
  * const height = await getChainHeight({
- *   baseUrl: 'https://api.chainweb.com',
+ *   baseUrl: 'https://api.chainweb-community.org',
  *   chain: '0',
  *   networkId: 'mainnet01',
  * });
@@ -43,14 +43,14 @@ export const getChainHeight = async ({
  * Fetches block information from the Chainweb API.
  * @param host - The base URL of the Chainweb API.
  * @param chainId - The chain ID.
- * @param networkId - The network ID (e.g., mainnet01, testnet04).
+ * @param networkId - The network ID (e.g., mainnet01, testnet06).
  * @param minHeight - The minimum block height to fetch.
  * @param maxHeight - The maximum block height to fetch.
  * @returns An object containing block information.
  * @throws An error if the block information cannot be fetched.
  * @example
  * const blocks = await fetchBlockInformation({
- *   baseUrl: 'https://api.chainweb.com',
+ *   baseUrl: 'https://api.chainweb-community.org',
  *   chain: '0',
  *   networkId: 'mainnet01',
  *   minHeight: 12345678,
@@ -90,8 +90,8 @@ export interface IGasPriceEstimateProperties {
 }
 
 const DEFAULT_HOSTS: Record<string, string> = {
-  mainnet01: 'https://api.chainweb.com',
-  testnet04: 'https://api.testnet.chainweb.com',
+  mainnet01: 'https://api.chainweb-community.org',
+  testnet06: 'https://api.testnet.chainweb-community.org',
 };
 
 /**
@@ -99,7 +99,7 @@ const DEFAULT_HOSTS: Record<string, string> = {
  * @param host - The base URL of the Chainweb API.
  * @param height - The block height to start fetching from (optional).
  * @param chainId - The chain ID.
- * @param networkId - The network ID (e.g., mainnet01, testnet04).
+ * @param networkId - The network ID (e.g., mainnet01, testnet06).
  * @param items - The number of blocks to fetch (default is 20).
  * @returns An array of gas information for each block.
  * @public
@@ -153,7 +153,7 @@ export async function getBlocksGasInformation({
  * @param host - The base URL of the Chainweb API.
  * @param height - The block height to start fetching from (optional).
  * @param chainId - The chain ID.
- * @param networkId - The network ID (e.g., mainnet01, testnet04).
+ * @param networkId - The network ID (e.g., mainnet01, testnet06).
  * @param items - The number of blocks to fetch (default is 20).
  * @returns The estimated gas price. which is the median of the minimum gas prices from the blocks. this discards blocks with no transactions.
  * @public

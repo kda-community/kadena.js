@@ -29,7 +29,7 @@ describe('getTransfers', () => {
     const result = await walletSdk.getTransfers({
       accountName:
         'k:2017fee3fb15cfe840e5ed34bf101cc7d5579ffdd20dea09e32fd77c1757f946',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     });
 
     const transfer = result.transfers.filter(
@@ -48,7 +48,7 @@ describe('getTransfers', () => {
         isCrossChainTransfer: true,
         success: true,
         token: 'coin',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         block: {
           blockDepthEstimate: transfer[0].block.blockDepthEstimate,
           creationTime: new Date('2024-09-30T10:08:39.033Z'),
@@ -82,7 +82,7 @@ describe('getTransfers', () => {
         isCrossChainTransfer: true,
         success: true,
         token: 'coin',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         targetChainId: '1',
         block: {
           blockDepthEstimate: transfer2[0].block.blockDepthEstimate,

@@ -65,7 +65,7 @@ Find more detailed examples under `src/examples`.
 
 | Key               | Required | Description                                                     | Example Values              |
 | ----------------- | :------: | --------------------------------------------------------------- | --------------------------- |
-| network           |   Yes    | Chainweb network                                                | `mainnet01`/`testnet04`/... |
+| network           |   Yes    | Chainweb network                                                | `mainnet01`/`testnet06`/... |
 | type              |   Yes    | Transaction type to stream (event/account)                      | `event`/`account`           |
 | id                |   Yes    | Account ID or module/event name                                 | `k:abcdef01234..`           |
 | host              |   Yes    | Chainweb-stream backend URL                                     | `http://localhost:4000`     |

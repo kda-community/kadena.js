@@ -68,7 +68,7 @@ const App = () => {
             autoSelectPublicKey(activeAccount),
             'k:e96357af055f1eafca72e9f3eac355d4f5614bfbe21efd9986e2457eb154a2c0',
             '0',
-            network?.networkId || 'testnet04',
+            network?.networkId || 'testnet06',
           ),
         ),
       );
@@ -81,7 +81,7 @@ const App = () => {
             autoSelectPublicKey(activeAccount),
             'k:e96357af055f1eafca72e9f3eac355d4f5614bfbe21efd9986e2457eb154a2c0',
             '0',
-            network?.networkId || 'testnet04',
+            network?.networkId || 'testnet06',
           ),
         ),
       );

@@ -277,7 +277,7 @@
 - c638c95: refactor routing to use the network.slug instead of network.networkId
 - 453476a: fix the account tabs links
 - 515830f: improve the network redirect on index
-- 09a692c: fix when the network slug is testnet04 or mainnet01 it does not
+- 09a692c: fix when the network slug is testnet06 or mainnet01 it does not
   redirect to mainnet (we were testing on slug.startsWith, so when the slug was
   mainnet01, it found slug: mainnet) and crashed
 - 1707e63: Improve performance by memoizing networkInfo result in graph every 30

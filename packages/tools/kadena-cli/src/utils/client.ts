@@ -17,16 +17,16 @@ export const apiHostGenerator = ({
 }): string => {
   switch (networkId) {
     case 'mainnet01':
-      return `https://api.chainweb.com/chainweb/0.0/${networkId}/chain/${
+      return `https://api.chainweb-community.org/chainweb/0.0/${networkId}/chain/${
         chainId ?? '1'
       }/pact`;
     case 'development':
       return `http://localhost:8080/chainweb/0.0/${networkId}/chain/${
         chainId ?? '1'
       }/pact`;
-    case 'testnet04':
+    case 'testnet06':
     default:
-      return `https://api.testnet.chainweb.com/chainweb/0.0/${networkId}/chain/${
+      return `https://api.testnet.chainweb-community.org/chainweb/0.0/${networkId}/chain/${
         chainId ?? '1'
       }/pact`;
   }

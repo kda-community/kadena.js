@@ -25,7 +25,7 @@ beforeEach(() => {
   provider = new MockProvider();
   adapter = new MagicAdapter({
     provider,
-    networkId: 'testnet04',
+    networkId: 'testnet06',
     chainId: '0',
     magicApiKey: '123',
     chainwebApiUrl: 'http://example.com',
@@ -49,7 +49,7 @@ describe('MagicAdapter', () => {
             pred: 'keys-all',
           },
           chainIds: [],
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         });
 
       const rpc = (await adapter.request({
@@ -74,7 +74,7 @@ describe('MagicAdapter', () => {
             keys: ['pk1'],
             pred: 'keys-all',
           },
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         },
       });
     });

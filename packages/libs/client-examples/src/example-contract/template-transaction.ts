@@ -61,8 +61,8 @@ async function transfer(
     // Since Kadena has a multi-chain architecture, we need to set the chainId.
     // We also need to mention who is going to pay the gas fee.
     .setMeta({ chainId: '0', senderAccount: sender.accountName })
-    // We set the networkId to "testnet04"; this could also be "mainnet01" or something else if you use a private network or a fork.
-    .setNetworkId('testnet04')
+    // We set the networkId to "testnet06"; this could also be "mainnet01" or something else if you use a private network or a fork.
+    .setNetworkId('testnet06')
     // Finalize the command and add default values and hash to it. After this step, no one can change the command.
     .createTransaction();
 

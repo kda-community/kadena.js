@@ -58,7 +58,7 @@ The complete example of the command is like this
       }
     ]
   }],
-  "networkId":"testnet04",
+  "networkId":"testnet06",
   "nonce":"test-nonce",
   "meta":{
     "chainId":"1",
