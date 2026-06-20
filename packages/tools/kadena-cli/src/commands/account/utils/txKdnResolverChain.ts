@@ -1,9 +1,6 @@
 import type { ChainId, IClient, ICommandResult } from '@kadena/client';
-import { Pact, createClient } from '@kadena/client';
-import {
-  KADENANAMES_NAMESPACE_MAINNET_MODULE,
-  KADENANAMES_NAMESPACE_TESTNET_MODULE,
-} from '../../../constants/kadenanames.js';
+import { createClient, Pact } from '@kadena/client';
+import { KADENANAMES_NAMESPACE_MAINNET_MODULE } from '../../../constants/kadenanames.js';
 
 const chainId: ChainId = '15'; // kadenanames running on chain 15
 
@@ -32,14 +29,15 @@ export async function kdnResolveNameToAddress(
   networkId: string,
   networkHost: string,
 ): Promise<string | undefined> {
+  if (network === 'testnet') {
+    throw new Error('Kadena names are not supported on testnet');
+  }
   try {
-    const module =
-      network === 'testnet'
-        ? KADENANAMES_NAMESPACE_TESTNET_MODULE
-        : KADENANAMES_NAMESPACE_MAINNET_MODULE;
     const transaction = Pact.builder
       .execution(
-        Pact.modules[module]['get-address'](ensureKdaExtension(name.trim())),
+        Pact.modules[KADENANAMES_NAMESPACE_MAINNET_MODULE]['get-address'](
+          ensureKdaExtension(name.trim()),
+        ),
       )
       .setMeta({ chainId })
       .setNetworkId(networkId)
@@ -62,13 +60,16 @@ export async function kdnResolveAddressToName(
   networkId: string,
   networkHost: string,
 ): Promise<string | undefined> {
+  if (network === 'testnet') {
+    throw new Error('Kadena names are not supported on testnet');
+  }
   try {
-    const module =
-      network === 'testnet'
-        ? KADENANAMES_NAMESPACE_TESTNET_MODULE
-        : KADENANAMES_NAMESPACE_MAINNET_MODULE;
     const transaction = Pact.builder
-      .execution(Pact.modules[module]['get-name'](address.trim()))
+      .execution(
+        Pact.modules[KADENANAMES_NAMESPACE_MAINNET_MODULE]['get-name'](
+          address.trim(),
+        ),
+      )
       .setMeta({ chainId })
       .setNetworkId(networkId)
       .createTransaction();
