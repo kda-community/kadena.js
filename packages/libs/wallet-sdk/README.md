@@ -648,7 +648,9 @@ getChains(networkHost: string): Promise<IChain[]>;
 **Example:**
 
 ```typescript
-const chains = await walletSdk.getChains('https://api.testnet.chainweb-community.org');
+const chains = await walletSdk.getChains(
+  'https://api.testnet.chainweb-community.org',
+);
 
 chains.forEach((chain) => {
   console.log('Available chain ID:', chain.id);
