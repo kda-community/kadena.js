@@ -41,14 +41,18 @@ describe('readAccountFromFile', () => {
   });
 
   it('should throw an error when account alias file does not exist', async () => {
+    const expectedPath = path.join(
+      '.kadena',
+      'accounts',
+      'account-add-test2.yaml',
+    );
+
     await expect(
       async () =>
         await services.account.get(
           path.join(accountPath, 'account-add-test2.yaml'),
         ),
-    ).rejects.toThrowError(
-      'Account file ".kadena/accounts/account-add-test2.yaml" not found',
-    );
+    ).rejects.toThrowError(`Account file "${expectedPath}" not found`);
   });
 
   it('should return file is empty error when file contains no content', async () => {

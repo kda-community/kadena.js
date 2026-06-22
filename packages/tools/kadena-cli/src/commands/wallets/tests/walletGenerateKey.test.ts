@@ -5,7 +5,10 @@ import { services } from '../../../services/index.js';
 import { mockPrompts, runCommandJson } from '../../../utils/test.util.js';
 
 describe('wallet generate-key command', () => {
-  const walletPath = path.join(WORKING_DIRECTORY, '.kadena/wallets/test.yaml');
+  const walletPath = path.join(
+    WORKING_DIRECTORY,
+    '.kadena/wallets/generate-key-test.yaml',
+  );
   const password = '12345678';
   const mnemonic =
     'regular scissors hybrid step warfare dinosaur caught option phrase bitter situate yard';
@@ -17,16 +20,16 @@ describe('wallet generate-key command', () => {
     await services.filesystem.writeFile(pwFile, password);
 
     await runCommandJson(
-      `wallet import --quiet -w test --mnemonic-file ${mnemonicFile} --password-file ${pwFile}`,
+      `wallet import --quiet -w generate-key-test --mnemonic-file ${mnemonicFile} --password-file ${pwFile}`,
     );
   });
 
   afterEach(async () => {
-    await services.filesystem.deleteFile(walletPath);
+    await services.filesystem.deleteFile(walletPath).catch(() => {});
   });
 
   it('Should create a new wallet key', async () => {
-    await runCommandJson('wallet generate-key -w test --quiet', {
+    await runCommandJson('wallet generate-key -w generate-key-test --quiet', {
       stdin: password,
     });
     const wallet = await services.wallet.get(walletPath);
@@ -43,7 +46,7 @@ describe('wallet generate-key command', () => {
         'Alias for the generated key': '',
       },
       select: {
-        'Select a wallet': 'test',
+        'Select a wallet': 'generate-key-test',
       },
       password: {
         'Enter the wallet password': password,
@@ -58,9 +61,12 @@ describe('wallet generate-key command', () => {
   });
 
   it('Should create 3 new wallet keys with start index', async () => {
-    await runCommandJson('wallet generate-key -w test -n 3 -i 5 --quiet', {
-      stdin: password,
-    });
+    await runCommandJson(
+      'wallet generate-key -w generate-key-test -n 3 -i 5 --quiet',
+      {
+        stdin: password,
+      },
+    );
     const wallet = await services.wallet.get(walletPath);
 
     expect(wallet?.keys).toEqual([

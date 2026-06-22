@@ -1,3 +1,4 @@
+import { basename } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { useMswHandler } from '../../../mocks/server.js';
 import { assertCommandError } from '../../../utils/command.util.js';
@@ -7,7 +8,7 @@ import { createAndWriteTransaction } from '../commands/txCreateTransaction.js';
 import { signTransactionFileWithKeyPairAction } from '../utils/txSignWithKeypair.js';
 
 function getFileName(filePath: string): string | undefined {
-  return filePath.split('/').pop();
+  return basename(filePath);
 }
 
 function extractData(jsonString: string): Array<{

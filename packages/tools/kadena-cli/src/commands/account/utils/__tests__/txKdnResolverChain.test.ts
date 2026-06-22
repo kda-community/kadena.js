@@ -42,7 +42,7 @@ describe('kdnResolveNameToAddress', () => {
   const networkHost = 'networkHost';
 
   afterEach(() => {
-    vi.resetAllMocks();
+    vi.clearAllMocks();
   });
 
   it('should throw an error for name resolution on testnet', async () => {
