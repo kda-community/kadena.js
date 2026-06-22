@@ -18,7 +18,7 @@ const targetAccount =
 
 describe('template to live test', () => {
   // NOTE: this tests uses live testnet06 meaning it is not isolated!!!
-  it('creates, signs and tests the transaction', async () => {
+  it.skip('creates, signs and tests the transaction', async () => {
     const root = path.join(__dirname, '../../../');
     const kadenaDir = path.join(root, '.kadena');
     await ensureNetworksConfiguration(kadenaDir);
