@@ -6,7 +6,7 @@ const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const config = {
-  output:"standalone",
+  output: 'standalone',
   outputFileTracingRoot: path.join(__dirname, '../../../../'),
   nextTranslate: { basePath: __dirname },
   eslint: {

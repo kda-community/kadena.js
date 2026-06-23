@@ -72,14 +72,26 @@ const Header: FC<IHeaderProps> = () => {
     setOpenModal(true);
   };
 
-  const KadenaLogo = () => <img style={{height:"2em"}} src="https://raw.githubusercontent.com/kda-community/graphic-assets/refs/heads/main/logos/k/K_nobg_400_400.png" />
+  const KadenaLogo = () => (
+    <img
+      style={{ height: '2em' }}
+      src="https://raw.githubusercontent.com/kda-community/graphic-assets/refs/heads/main/logos/k/K_nobg_400_400.png"
+    />
+  );
 
   return (
     <>
       <NavHeader
         logo={
           <Link href={'/'}>
-            {isMediumScreen ? <div style={{display:"flex", flexDirection: "row" }}>  <KadenaLogo /> <Logo /> </div>: <KadenaLogo/>}
+            {isMediumScreen ? (
+              <div style={{ display: 'flex', flexDirection: 'row' }}>
+                {' '}
+                <KadenaLogo /> <Logo />{' '}
+              </div>
+            ) : (
+              <KadenaLogo />
+            )}
           </Link>
         }
         activeHref={pathname}
