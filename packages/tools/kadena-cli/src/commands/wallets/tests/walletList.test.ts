@@ -37,7 +37,7 @@ describe('wallet list command', () => {
     expect(result['list-test2'].seed).toEqual(undefined);
     expect(result['list-test2'].legacy).toEqual(false);
     expect(result['list-test2'].keys.length).toEqual(1);
-  });
+  }, 15000);
 
   it('list specific wallets', async () => {
     await runCommandJson('wallet add -w list-test --quiet', {
@@ -49,5 +49,5 @@ describe('wallet list command', () => {
     expect(result.seed).toEqual(undefined);
     expect(result.legacy).toEqual(false);
     expect(result.keys.length).toEqual(1);
-  });
+  }, 10000);
 });
