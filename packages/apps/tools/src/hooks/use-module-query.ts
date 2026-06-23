@@ -33,7 +33,7 @@ const fetchModule = async (
 
   const parsed = describeModuleSchema.parse(
     describedModule &&
-      describedModule.result.status == 'success' &&
+      describedModule.result.status === 'success' &&
       describedModule.result?.data,
   );
 

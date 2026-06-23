@@ -13,7 +13,6 @@ import {
   MonoPublic,
 } from '@kadena/kode-icons/system';
 import {
-  KadenaLogo,
   NavHeader,
   NavHeaderButton,
   NavHeaderLink,
