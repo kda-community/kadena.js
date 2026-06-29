@@ -74,10 +74,11 @@
     "@kda-community-dev/oxlint-config": "workspace:*",
     "@kda-community-dev/typescript-config": "workspace:*",
     "@kda-community-dev/vite-config": "workspace:*",
+    "@kda-community-dev/vitest-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/debug": "~4.1.12",
     "@types/node": "^20.12.7",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "4.1.9",
     "@walletconnect/types": "~2.8.1",
     "jsdom": "^22.1.0",
     "msw": "^2.2.14",
@@ -86,7 +87,7 @@
     "ts-node": "~10.9.2",
     "typescript": "5.4.5",
     "vite": "8.0.10",
-    "vitest": "^1.6.0"
+    "vitest": "4.1.9"
   },
   "publishConfig": {
     "provenance": true
