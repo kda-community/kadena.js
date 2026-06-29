@@ -66,13 +66,14 @@
     "@kda-community-dev/oxlint-config": "workspace:*",
     "@kda-community-dev/typescript-config": "workspace:*",
     "@kda-community-dev/vite-config": "workspace:*",
+    "@kda-community-dev/vitest-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/node": "^20.12.7",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "4.1.9",
     "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "typescript": "5.4.5",
     "vite": "8.0.10",
-    "vitest": "^1.6.0"
+    "vitest": "4.1.9"
   }
 }
