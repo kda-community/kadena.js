@@ -5,14 +5,6 @@ import { mergeConfig, type UserConfig } from 'vite';
 export default mergeConfig(
   mergeConfig(defineLibConfig(), defineBaseTestConfig()),
   {
-    build: {
-      lib: {
-        entry: {
-          index: './src/index.ts',
-          'chainweaver/index': './src/chainweaver/index.ts',
-        },
-      },
-    },
     test: {
       coverage: {
         thresholds: {
