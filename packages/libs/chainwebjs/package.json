@@ -83,6 +83,7 @@
     "@kda-community-dev/oxlint-config": "workspace:*",
     "@kda-community-dev/typescript-config": "workspace:*",
     "@kda-community-dev/vite-config": "workspace:*",
+    "@kda-community-dev/vitest-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/eventsource": "1.1.11",
     "@types/node": "^20.12.7",

@@ -1,12 +1,12 @@
 import { defineLibConfig } from '@kda-community-dev/vite-config/lib';
-import { defineConfig, mergeConfig } from 'vitest/config';
+import { defineBaseTestConfig } from '@kda-community-dev/vitest-config/base';
+import { mergeConfig, type UserConfig } from 'vite';
 
 export default mergeConfig(
-  defineLibConfig(),
-  defineConfig({
+  mergeConfig(defineLibConfig(), defineBaseTestConfig()),
+  {
     test: {
       coverage: {
-        provider: 'v8',
         thresholds: {
           lines: 86.31,
           functions: 80,
@@ -15,5 +15,5 @@ export default mergeConfig(
         },
       },
     },
-  }),
+  } as UserConfig,
 );
