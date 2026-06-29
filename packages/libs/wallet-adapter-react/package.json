@@ -23,16 +23,17 @@
   },
   "devDependencies": {
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
+    "@kda-community-dev/vitest-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@testing-library/react": "~16.3.0",
     "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.1",
     "oxlint": "1.63.0",
     "typescript": "5.4.5",
-    "vitest": "^1.6.0",
-    "@kda-community-dev/typescript-config": "workspace:*",
-    "@kda-community-dev/vite-config": "workspace:*",
-    "vite": "8.0.10"
+    "vite": "8.0.10",
+    "vitest": "4.1.9"
   },
   "peerDependencies": {
     "react": "^19.1.1",
