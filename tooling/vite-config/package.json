@@ -4,10 +4,6 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./base": {
-      "types": "./dist/vite.base.config.d.ts",
-      "import": "./dist/vite.base.config.js"
-    },
     "./lib": {
       "types": "./dist/vite.lib.config.d.ts",
       "import": "./dist/vite.lib.config.js"
