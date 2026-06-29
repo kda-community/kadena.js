@@ -28,14 +28,15 @@
   },
   "devDependencies": {
     "@kda-community-dev/oxlint-config": "workspace:*",
+    "@kda-community-dev/typescript-config": "workspace:*",
+    "@kda-community-dev/vite-config": "workspace:*",
+    "@kda-community-dev/vitest-config": "workspace:*",
     "@microsoft/api-extractor": "^7.43.1",
     "@types/node": "^20.12.7",
     "oxlint": "1.63.0",
     "typescript": "5.4.5",
-    "vitest": "^1.6.0",
-    "@kda-community-dev/typescript-config": "workspace:*",
-    "@kda-community-dev/vite-config": "workspace:*",
-    "vite": "8.0.10"
+    "vite": "8.0.10",
+    "vitest": "4.1.9"
   },
   "authors": [
     "Francisco Miranda",
