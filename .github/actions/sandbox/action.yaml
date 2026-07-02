@@ -1,18 +1,27 @@
 name: 'Start Kadena Sandbox'
 
-env:
-  GHC_VERSION: "9.10.3"
-  CABAL_VERSION: "3.12"
-  CACHE_VERSION: "1"
-  NODE_GIT_REF: master
-  MINING_CLIENT_GIT_REF: master
-  NODE_REPO_DIR: .repos/chainweb-node
-  MINING_CLIENT_REPO_DIR: .repos/chainweb-mining-client
-  BIN_DIR: .bin
+inputs:
+  ghc_version:
+    default: "9.10.3"
+  cabal_version:
+    default: "3.12"
+  cache_version:
+    default: "1"
+  node_git_ref:
+    default: "master"
+  mining_client_git_ref:
+    default: "master"
 
 runs:
   using: 'composite'
   steps:
+
+    - name: Setup BIN path
+      shell: bash
+      run: |
+        SANDBOX_BIN="$GITHUB_WORKSPACE/.bin"
+        mkdir -p $SANDBOX_BIN
+        echo "SANDBOX_BIN=$SANDBOX_BIN" >> "$GITHUB_ENV"
 
     - name: Setting up MPFR (Ubuntu)
       shell: bash
@@ -22,37 +31,32 @@ runs:
       uses: actions/checkout@v7
       with:
         repository: kda-community/chainweb-node
-        path: ${{ env.NODE_REPO_DIR }}
-        ref: ${{ env.NODE_GIT_REF }}
+        path: .repos/chainweb-node
+        ref: ${{ inputs.node_git_ref }}
 
-    - name: Checkout Miner Source
+    - name: Checkout Mining client Source
       uses: actions/checkout@v7
       with:
         repository: kda-community/chainweb-mining-client
-        path: ${{ env.MINING_CLIENT_REPO_DIR }}
-        ref: ${{ env.MINING_CLIENT_GIT_REF}}
+        path: .repos/chainweb-mining-client
+        ref: ${{ inputs.mining_client_git_ref }}
 
     - name: Compute Cache key
       id: compute-cache-key
       shell: bash
       run: |
-        SHA_A=$(git -C $NODE_REPO_DIR rev-parse HEAD)
-        SHA_B=$(git -C $MINING_CLIENT_REPO_DIR rev-parse HEAD)
+        SHA_A=$(git -C .repos/chainweb-node rev-parse HEAD)
+        SHA_B=$(git -C .repos/chainweb-mining-client  rev-parse HEAD)
 
-        CACHE_KEY=$(printf "%s%s%s%s%s" "$SHA_A" "$SHA_B" "$GHC_VERSION" "$CABAL_VERSION" "$CACHE_VERSION"  | sha256sum | cut -d' ' -f1)
+        CACHE_KEY=$(printf "%s%s%s%s%s" "$SHA_A" "$SHA_B" "{{inputs.ghc_version}}" "{{inputs.cabal_version}}" "{{inputs.cabal_version}}"  | sha256sum | cut -d' ' -f1)
 
         echo "cache_key=$CACHE_KEY" >> "$GITHUB_OUTPUT"
-
-    - name: Create binary directtory
-      shell: bash
-      run: |
-        mkdir -p $BIN_DIR
 
     - name: Restore cache
       id: cache-binaries
       uses: actions/cache/restore@v6
       with:
-        path: ${{ env.BIN_DIR}}
+        path: ${{ env.SANDBOX_BIN}}
         key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
 
     - name: Set permissions for .ghcup (ubuntu)
@@ -64,30 +68,30 @@ runs:
       if: steps.cache-binaries.outputs.cache-hit != 'true'
       uses: haskell-actions/setup@v2
       with:
-         ghc-version: ${{ env.GHC_VERSION }}
-         cabal-version: ${{ env.CABAL_VERSION }}
+         ghc-version: ${{ inputs.ghc_version }}
+         cabal-version: ${{ inputs.cabal_version }}
 
     - name: Compile Chainweb node
       if: steps.cache-binaries.outputs.cache-hit != 'true'
+      working-directory: .repos/chainweb-node
       shell: bash
       run: |
-        cd $NODE_REPO_DIR
         cabal build chainweb-node
-        cp $(cabal list-bin chainweb-node) "$GITHUB_WORKSPACE/$BIN_DIR"
-        strip "$GITHUB_WORKSPACE/$BIN_DIR/chainweb-node"
+        cp $(cabal list-bin chainweb-node) "$SANDBOX_BIN"
+        strip "$SANDBOX_BIN/chainweb-node"
 
     - name: Compile Mining client
       if: steps.cache-binaries.outputs.cache-hit != 'true'
+      working-directory: .repos/chainweb-mining-client
       shell: bash
       run: |
-        cd $MINING_CLIENT_REPO_DIR
         cabal build chainweb-mining-client
-        cp $(cabal list-bin chainweb-mining-client) "$GITHUB_WORKSPACE/$BIN_DIR"
-        strip "$GITHUB_WORKSPACE/$BIN_DIR/chainweb-mining-client"
+        cp $(cabal list-bin chainweb-mining-client) "$SANDBOX_BIN"
+        strip "$SANDBOX_BIN/chainweb-mining-client"
 
     - name: Save cache
       if: steps.cache-binaries.outputs.cache-hit != 'true'
       uses: actions/cache/save@v6
       with:
-        path: ${{ env.BIN_DIR}}
+        path: ${{ env.SANDBOX_BIN}}
         key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
