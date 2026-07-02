@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   build:
-    name: Test Kadena Sandbox
+    name: Test Kadena Sandbox New
     runs-on: ubuntu-latest
 
     steps:
