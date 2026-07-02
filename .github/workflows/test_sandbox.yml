@@ -21,5 +21,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: List
+        run: ls /home/runner/work/kadena.js/kadena.js/.github/actions/sandbox
+
       - name: Setup Kadena sandbox
         uses: ./.github/actions/sandbox
