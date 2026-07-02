@@ -4,7 +4,7 @@ inputs:
   ghc_version:
     default: "9.10.2"
   cabal_version:
-    default: "3.12"
+    default: "latest"
   cache_version:
     default: "1"
   node_git_ref:
