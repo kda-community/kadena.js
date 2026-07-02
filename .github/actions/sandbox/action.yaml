@@ -1,13 +1,93 @@
-name: 'Start Kadena sandbox'
+name: 'Start Kadena Sandbox'
+
+env:
+  GHC_VERSION: "9.10.3"
+  CABAL_VERSION: "3.12"
+  CACHE_VERSION: "1"
+  NODE_GIT_REF: master
+  MINING_CLIENT_GIT_REF: master
+  NODE_REPO_DIR: .repos/chainweb-node
+  MINING_CLIENT_REPO_DIR: .repos/chainweb-mining-client
+  BIN_DIR: .bin
+
 runs:
   using: 'composite'
   steps:
-    - name: Start sandbox
-      shell: bash
-      run: docker compose up -d
-      working-directory: .github/actions/sandbox
 
-    - name: Check sandbox health
+    - name: Setting up MPFR (Ubuntu)
       shell: bash
-      run: ./healthcheck.sh
-      working-directory: .github/actions/sandbox
+      run: sudo apt-get update && sudo apt-get install -y libmpfr-dev
+
+    - name: Checkout Node Source
+      uses: actions/checkout@v7
+      with:
+        repository: kda-community/chainweb-node
+        path: ${{ env.NODE_REPO_DIR }}
+        ref: ${{ env.NODE_GIT_REF }}
+
+    - name: Checkout Miner Source
+      uses: actions/checkout@v7
+      with:
+        repository: kda-community/chainweb-mining-client
+        path: ${{ env.MINING_CLIENT_REPO_DIR }}
+        ref: ${{ env.MINING_CLIENT_GIT_REF}}
+
+    - name: Compute Cache key
+      id: compute-cache-key
+      shell: bash
+      run: |
+        SHA_A=$(git -C $NODE_REPO_DIR rev-parse HEAD)
+        SHA_B=$(git -C $MINING_CLIENT_REPO_DIR rev-parse HEAD)
+
+        CACHE_KEY=$(printf "%s%s%s%s%s" "$SHA_A" "$SHA_B" "$GHC_VERSION" "$CABAL_VERSION" "$CACHE_VERSION"  | sha256sum | cut -d' ' -f1)
+
+        echo "cache_key=$CACHE_KEY" >> "$GITHUB_OUTPUT"
+
+    - name: Create binary directtory
+      shell: bash
+      run: |
+        mkdir -p $BIN_DIR
+
+    - name: Restore cache
+      id: cache-binaries
+      uses: actions/cache/restore@v6
+      with:
+        path: ${{ env.BIN_DIR}}
+        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+
+    - name: Set permissions for .ghcup (ubuntu)
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      shell: bash
+      run: sudo chown -R $USER /usr/local/.ghcup
+
+    - name: Install GHC and Cabal
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      uses: haskell-actions/setup@v2
+      with:
+         ghc-version: ${{ env.GHC_VERSION }}
+         cabal-version: ${{ env.CABAL_VERSION }}
+
+    - name: Compile Chainweb node
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        cd $NODE_REPO_DIR
+        cabal build chainweb-node
+        cp $(cabal list-bin chainweb-node) "$GITHUB_WORKSPACE/$BIN_DIR"
+        strip "$GITHUB_WORKSPACE/$BIN_DIR/chainweb-node"
+
+    - name: Compile Mining client
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        cd $MINING_CLIENT_REPO_DIR
+        cabal build chainweb-mining-client
+        cp $(cabal list-bin chainweb-mining-client) "$GITHUB_WORKSPACE/$BIN_DIR"
+        strip "$GITHUB_WORKSPACE/$BIN_DIR/chainweb-mining-client"
+
+    - name: Save cache
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v6
+      with:
+        path: ${{ env.BIN_DIR}}
+        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}

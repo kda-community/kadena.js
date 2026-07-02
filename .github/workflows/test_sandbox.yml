@@ -1,0 +1,24 @@
+name: Test Sandbox
+# All pull requests, and
+# Workflow dispatch allows you to run this workflow manually from the Actions tab
+on:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  CI: true
+  # comma separated list of allowed authors for docs PRs
+  # ALLOWED_DOCS_AUTHORS: lsgunnlsgunn,
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  build:
+    name: Test Kadena Sandbox
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Setup Kadena sandbox
+      uses: ./.github/actions/sandbox
