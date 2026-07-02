@@ -21,8 +21,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: List
-        run: ls /home/runner/work/kadena.js/kadena.js/.github/actions/sandbox
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          show-progress: false
 
       - name: Setup Kadena sandbox
         uses: ./.github/actions/sandbox
