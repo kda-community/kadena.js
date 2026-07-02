@@ -2,7 +2,7 @@ name: 'Start Kadena Sandbox'
 
 inputs:
   ghc_version:
-    default: "9.10.3"
+    default: "9.10.2"
   cabal_version:
     default: "3.12"
   cache_version:
