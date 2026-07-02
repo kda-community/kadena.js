@@ -19,6 +19,6 @@ jobs:
     name: Test Kadena Sandbox
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Setup Kadena sandbox
-      uses: ./.github/actions/sandbox
+    steps:
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
