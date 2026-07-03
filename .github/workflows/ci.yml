@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 2
           show-progress: false
@@ -89,61 +89,63 @@ jobs:
         run: |
           kill $(cat "$SANDBOX_RUN/pid")
 
-  #end-to-end-tests:
-  #  name: E2E - ${{ matrix.app }}
-  #  needs: [build, prepare_devnet]
-  #  runs-on: ubuntu-latest
-  #  strategy:
-  #    fail-fast: false
-  #    matrix:
-  #      app: ['tools', 'graph', 'dev-wallet']
+      - name: Archive volumes
+        uses: ./.github/actions/archive-volumes
+        if: always()
+        with:
+          test-object: ${{ matrix.package }}
 
-  #  steps:
-  #    - uses: actions/checkout@v4
-  #      with:
-  #        fetch-depth: 2
-  #        show-progress: false
+  end-to-end-tests:
+    name: E2E - ${{ matrix.app }}
+    needs: [build, prepare_devnet]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ['tools', 'graph', 'dev-wallet']
 
-  #    -  name: Runner Setup
-  #       uses: ./.github/actions/runner-setup
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+          show-progress: false
 
-  #    -  name: Setup Kadena sandbox
-  #       uses: ./.github/actions/sandbox
+      -  name: Runner Setup
+         uses: ./.github/actions/runner-setup
 
-  #    - name: Build App with NODE_ENV=test
-  #      uses: ./.github/actions/build-app-e2e
-  #      with:
-  #        app: ${{ matrix.app }}
+      -  name: Setup Kadena sandbox
+         uses: ./.github/actions/sandbox
+         with:
+          node_git_ref: fix_devnet
 
-  #    - name: Run end-to-end tests
-  #      uses: ./.github/actions/end-to-end-tests
-  #      with:
-  #        app: ${{ matrix.app }}
+      - name: Build App with NODE_ENV=test
+        uses: ./.github/actions/build-app-e2e
+        with:
+          app: ${{ matrix.app }}
 
-  #    - name: Archive sandbox logs
-  #      uses: ./.github/actions/archive-logs
-  #      if: always()
-  #      with:
-  #        test-object: ${{ matrix.app }}
+      - name: Run end-to-end tests
+        uses: ./.github/actions/end-to-end-tests
+        with:
+          app: ${{ matrix.app }}
 
-  #    - name: Teardown kadena sandbox
-  #      if: always()
-  #      run: docker compose down
-  #      working-directory: .github/actions/sandbox
+      - name: Kill Kadena Sandbox
+        if: always()
+        run: |
+          kill $(cat "$SANDBOX_RUN/pid")
 
-  #    - name: Archive volumes
-  #      uses: ./.github/actions/archive-volumes
-  #      if: always()
-  #      with:
-  #        test-object: ${{ matrix.app }}
+      - name: Archive volumes
+        uses: ./.github/actions/archive-volumes
+        if: always()
+        with:
+          test-object: ${{ matrix.app }}
 
-  #    - name: Upload Blob Report
-  #      uses: actions/upload-artifact@v4
-  #      if: ${{ !cancelled() }}
-  #      with:
-  #        name: blob-report-${{ matrix.app }}
-  #        path: packages/e2e/e2e-${{ matrix.app }}/blob-report/
-  #        retention-days: 1
+      - name: Upload Blob Report
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: blob-report-${{ matrix.app }}
+          path: packages/e2e/e2e-${{ matrix.app }}/blob-report/
+          retention-days: 1
 
   # merge-publish-reports:
   #  if: ${{ !cancelled() }}
