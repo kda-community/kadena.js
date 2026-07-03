@@ -119,7 +119,7 @@ runs:
     - name: Launch mining client
       shell: bash
       run: |
-        $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml"
+        $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" \
                                             >  $SANDBOX_RUN/mining-client.log 2>&1 &
 
         echo $! >> "$SANDBOX_RUN/pid"
