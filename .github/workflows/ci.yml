@@ -85,11 +85,6 @@ jobs:
       - name: run integration tests
         run: pnpm run test:integration --filter ${{ matrix.package }}
 
-      - name: Kill Kadena Sandbox
-        if: always()
-        run: |
-          kill $(cat "$SANDBOX_RUN/pid")
-
       - name: Archive volumes
         uses: ./.github/actions/archive-volumes
         if: always()
@@ -132,11 +127,6 @@ jobs:
         with:
           app: ${{ matrix.app }}
 
-      - name: Kill Kadena Sandbox
-        if: always()
-        run: |
-          kill $(cat "$SANDBOX_RUN/pid")
-
       - name: Archive volumes
         uses: ./.github/actions/archive-volumes
         if: always()
@@ -144,7 +134,7 @@ jobs:
           test-object: ${{ matrix.app }}
 
       - name: Upload Blob Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
         with:
           name: blob-report-${{ matrix.app }}
