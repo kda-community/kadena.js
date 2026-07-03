@@ -109,7 +109,7 @@ runs:
     - name: Launch node
       shell: bash
       run: |
-        $SANDBOX_BIN/chainweb-node --disable-pow \
+        $SANDBOX_BIN/chainweb-node --disable-pow --block-delay 5000 \
                                    --config-file "$GITHUB_ACTION_PATH/node_config.yaml" \
                                    --database-directory "$SANDBOX_DB" \
                                    > $SANDBOX_RUN/node.log 2>&1 &

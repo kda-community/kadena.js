@@ -1,5 +1,5 @@
 account: k:f89ef46927f506c70b6a58fd322450a936311dc6ac91f4ec3d8ef949608dbf1f
-constantDelayBlockTime: 10
+constantDelayBlockTime: 5
 defaultHTTPTimeout: 1000000
 externalWorkerCommand: echo 'no external worker command configured' && /bin/false
 generateKey: false
