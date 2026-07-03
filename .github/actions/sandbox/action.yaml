@@ -116,6 +116,12 @@ runs:
 
         echo $! >> "$SANDBOX_RUN/pid"
 
+    - name: Verify Chainweb node health
+      shell: bash
+      run: |
+        sleep 30
+        curl -fsS http://localhost:1848/health-check | grep "Health check OK."
+
     - name: Launch mining client
       shell: bash
       run: |
@@ -124,23 +130,8 @@ runs:
 
         echo $! >> "$SANDBOX_RUN/pid"
 
-    - name: Wait
-      shell: bash
-      run: |
-        sleep 60
-
-    - name: Verify Chainweb node health
-      shell: bash
-      run: |
-        curl -fsS http://localhost:1848/health-check | grep "Health check OK."
-
     - name: Check cut
       shell: bash
       run: |
-        curl -v http://localhost:1848/chainweb/0.0/development/cut
-
-    - name: Check logs
-      shell: bash
-      run: |
-        cat $SANDBOX_RUN/mining-client.log
-        cat $SANDBOX_RUN/node.log
+        sleep 30
+        curl http://localhost:1848/chainweb/0.0/development/cut
