@@ -35,6 +35,7 @@ export class FundNewAccountPage {
       console.log(keyPair.publicKey)
       await this._publicKey.fill(keyPair.publicKey);
       await this._addPubKey.click();
+      await this._page.waitForTimeout(1000)
     }
     console.log("--------------------------------")
     //await this._chainId.setValue(account.chains[0]);

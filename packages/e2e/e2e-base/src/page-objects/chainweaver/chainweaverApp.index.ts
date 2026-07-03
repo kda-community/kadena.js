@@ -91,7 +91,7 @@ export class ChainweaverAppIndex extends setupDatabase {
         await this.addNetwork(actor, {
           networkId: 'development',
           title: 'development',
-          host: 'http://localhost:8080',
+          host: 'http://localhost:1848',
         });
 
         await this.selectNetwork(actor, 'Development');
