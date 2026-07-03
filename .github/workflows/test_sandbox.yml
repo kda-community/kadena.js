@@ -82,3 +82,22 @@ jobs:
         if: always()
         with:
           test-object: dev-wallet
+
+
+
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
+
+
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
+
+      - name: run integration tests client
+        run: pnpm run test:integration --filter @kadena/client
+
+      - name: Kill Kadena Sandbox
+        if: always()
+        run: |
+          kill $(cat "$SANDBOX_RUN/pid")
