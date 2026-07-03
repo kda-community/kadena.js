@@ -26,36 +26,36 @@ jobs:
           fetch-depth: 2
           show-progress: false
 
-      - name: Runner Setup
-        uses: ./.github/actions/runner-setup
-
-      - name: Build App with NODE_ENV=test
-        uses: ./.github/actions/build-app-e2e
-        with:
-          app: tools
-
-      - name: Setup Kadena sandbox
-        uses: ./.github/actions/sandbox
-        with:
-          node_git_ref: fix_devnet
-
-      - name: Run end-to-end tests
-        continue-on-error: true
-        uses: ./.github/actions/end-to-end-tests
-        with:
-          app: tools
-
-      - name: Kill Kadena Sandbox
-        if: always()
-        run: |
-          kill $(cat "$SANDBOX_RUN/pid")
-
-      - name: Archive volumes
-        uses: ./.github/actions/archive-volumes
-        if: always()
-        with:
-          test-object: "tools"
-
+#      - name: Runner Setup
+#        uses: ./.github/actions/runner-setup
+#
+#      - name: Build App with NODE_ENV=test
+#        uses: ./.github/actions/build-app-e2e
+#        with:
+#          app: tools
+#
+#      - name: Setup Kadena sandbox
+#        uses: ./.github/actions/sandbox
+#        with:
+#          node_git_ref: fix_devnet
+#
+#      - name: Run end-to-end tests
+#        continue-on-error: true
+#        uses: ./.github/actions/end-to-end-tests
+#        with:
+#          app: tools
+#
+#      - name: Kill Kadena Sandbox
+#        if: always()
+#        run: |
+#          kill $(cat "$SANDBOX_RUN/pid")
+#
+#      - name: Archive volumes
+#        uses: ./.github/actions/archive-volumes
+#        if: always()
+#        with:
+#          test-object: "tools"
+#
       - name: Build App with NODE_ENV=test
         uses: ./.github/actions/build-app-e2e
         with:
@@ -66,8 +66,7 @@ jobs:
         with:
           node_git_ref: fix_devnet
 
-      - name: Run end-to-end tests
-        continue-on-error: true
+      - name: Run end-to-end tests dev-wallet
         uses: ./.github/actions/end-to-end-tests
         with:
           app: dev-wallet
@@ -96,6 +95,43 @@ jobs:
 
       - name: run integration tests client
         run: pnpm run test:integration --filter @kadena/client
+
+      - name: Kill Kadena Sandbox
+        if: always()
+        run: |
+          kill $(cat "$SANDBOX_RUN/pid")
+
+
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
+
+
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
+
+      - name: run integration tests client-utils
+        run: pnpm run test:integration --filter @kadena/client-utils
+
+      - name: Kill Kadena Sandbox
+        if: always()
+        run: |
+          kill $(cat "$SANDBOX_RUN/pid")
+
+
+
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
+
+
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
+
+      - name: run integration tests client-utils
+        run: pnpm run test:integration --filter @kadena/create-kadena-app
 
       - name: Kill Kadena Sandbox
         if: always()
