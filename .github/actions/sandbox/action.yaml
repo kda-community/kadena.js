@@ -1,4 +1,4 @@
-name: 'Start Kadena Sandbox'
+name: 'Start Kadena Devnet Sandbox'
 
 inputs:
   ghc_version:
