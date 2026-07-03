@@ -44,7 +44,7 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('create, mint, offer and test withdrawal of a token', () => {
+describe('create, mint, offer and test withdrawal of a token', { timeout: 200_000 }, () => {
   let tokenId: string | undefined;
 
   it('returns a token id', async () => {

@@ -202,7 +202,7 @@ describe(
     it('creates conventional auction', async () => {
       const blockTime = await getBlockDate({ chainId: chainId as ChainId });
       auctionStartDate = dateToPactInt(
-        addSecondsToDate(new Date(blockTime), 3),
+        addSecondsToDate(new Date(blockTime), 13),
       );
       auctionEndDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 43));
 
