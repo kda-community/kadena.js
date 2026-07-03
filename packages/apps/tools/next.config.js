@@ -4,9 +4,11 @@ const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 
 const withVanillaExtract = createVanillaExtractPlugin();
 
+const isCI = process.env.CI === 'true';
+
 /** @type {import('next').NextConfig} */
 const config = {
-  output: 'standalone',
+  output: isCI ? undefined : 'standalone',
   outputFileTracingRoot: path.join(__dirname, '../../../../'),
   nextTranslate: { basePath: __dirname },
   eslint: {
