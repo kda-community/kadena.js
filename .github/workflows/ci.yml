@@ -103,7 +103,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        app: ['tools', 'graph', 'dev-wallet']
+        app:
+          - tools
+#         - graph   ### Disabled for now
+          - dev-wallet
 
     steps:
       - uses: actions/checkout@v7

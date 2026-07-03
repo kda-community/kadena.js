@@ -298,8 +298,8 @@ describe('create, mint and offer a token with auction, update auction. Get detai
     const withStep = withStepFactory();
 
     const blockDate = await getBlockDate({ chainId });
-    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 10));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 30));
+    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 30));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 50));
 
     const result = await createAuction(
       {

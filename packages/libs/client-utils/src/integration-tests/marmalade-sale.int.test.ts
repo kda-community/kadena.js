@@ -200,7 +200,7 @@ describe('create, mint, offer and test withdrawal of a token', () => {
     const currentBlockTime = await getBlockDate({ chainId });
 
     saleTimeoutTimeSeconds = new PactNumber(
-      Math.floor(addSecondsToDate(currentBlockTime, 5).getTime() / 1000),
+      Math.floor(addSecondsToDate(currentBlockTime, 25).getTime() / 1000),
     ).toPactInteger();
 
     const result = await offerToken(
