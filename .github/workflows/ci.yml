@@ -36,9 +36,20 @@ jobs:
       - name: Build, lint, test all packages
         run: pnpm turbo lint build test
 
+  prepare_devnet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
+          launch_node: false
+
+
   integration-tests:
     name: INT - ${{ matrix.package }}
-    needs: build
+    needs: build, prepare_devnet
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -73,7 +84,7 @@ jobs:
 
   #end-to-end-tests:
   #  name: E2E - ${{ matrix.app }}
-  #  needs: build
+  #  needs: build, prepare_devnet
   #  runs-on: ubuntu-latest
   #  strategy:
   #    fail-fast: false

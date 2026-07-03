@@ -11,6 +11,8 @@ inputs:
     default: "master"
   mining_client_git_ref:
     default: "master"
+  launch_node:
+    default: true
 
 runs:
   using: 'composite'
@@ -106,29 +108,23 @@ runs:
         key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
 
     - name: Launch node
+      if: ${{ inputs.launch_node == 'true' }}
       shell: bash
       run: |
+        set -e
+
         $SANDBOX_BIN/chainweb-node --disable-pow --block-delay 5000 \
                                    --config-file "$GITHUB_ACTION_PATH/node_config.yaml" \
                                    --database-directory "$SANDBOX_DB" \
                                    > $SANDBOX_RUN/node.log 2>&1 &
         echo $! >> "$SANDBOX_RUN/pid"
 
-    - name: Verify Chainweb node health
-      shell: bash
-      run: |
         sleep 30
         curl -fsS http://localhost:1848/health-check | grep "Health check OK."
 
-    - name: Launch mining client
-      shell: bash
-      run: |
+
         $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" \
                                             >  $SANDBOX_RUN/mining-client.log 2>&1 &
-        echo $! >> "$SANDBOX_RUN/pid"
 
-    - name: Check cut
-      shell: bash
-      run: |
         sleep 30
         curl http://localhost:1848/chainweb/0.0/development/cut
