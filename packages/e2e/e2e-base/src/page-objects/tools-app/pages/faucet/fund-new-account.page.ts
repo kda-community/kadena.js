@@ -38,7 +38,7 @@ export class FundNewAccountPage {
       await this._page.waitForTimeout(1000)
     }
     console.log("--------------------------------")
-    //await this._chainId.setValue(account.chains[0]);
+    await this._chainId.setValue(account.chains[0]);
     //Form validation is retriggered after setting the chain. Explicitly wait for the Account Name to be visible before pressing fund.
     await expect(this._accountNameInput).toHaveValue(account.account);
     await this._createAndFundBtn.click();
