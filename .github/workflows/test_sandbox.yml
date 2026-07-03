@@ -28,3 +28,5 @@ jobs:
 
       - name: Setup Kadena sandbox
         uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
