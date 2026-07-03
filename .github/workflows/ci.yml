@@ -4,6 +4,8 @@ name: CI (build, lint, test)
 on:
   pull_request:
   workflow_dispatch:
+  push:
+
 
 env:
   CI: true
@@ -34,34 +36,40 @@ jobs:
       - name: Build, lint, test all packages
         run: pnpm turbo lint build test
 
-  #integration-tests:
-  #  name: INT - ${{ matrix.package }}
-  #  needs: build
-  #  runs-on: ubuntu-latest
-  #  strategy:
-  #    fail-fast: false
-  #    matrix:
-  #      package:
-  #        [
-  #          '@kadena/client',
-  #          '@kadena/client-utils',
-  #          '@kadena/create-kadena-app',
-  #        ]
+  integration-tests:
+    name: INT - ${{ matrix.package }}
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          [
+            '@kadena/client',
+            '@kadena/client-utils',
+            '@kadena/create-kadena-app',
+          ]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+          show-progress: false
 
-  #  steps:
-  #    - uses: actions/checkout@v4
-  #      with:
-  #        fetch-depth: 2
-  #        show-progress: false
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
 
-  #    - name: Runner Setup
-  #      uses: ./.github/actions/runner-setup
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
 
-  #    - name: Setup Kadena sandbox
-  #      uses: ./.github/actions/sandbox
+      - name: run integration tests
+        run: pnpm run test:integration --filter ${{ matrix.package }}
 
-  #    - name: run integration tests
-  #      run: pnpm run test:integration --filter ${{ matrix.package }}
+      - name: Kill Kadena Sandbox
+        if: always()
+        run: |
+          kill $(cat "$SANDBOX_RUN/pid")
 
   #end-to-end-tests:
   #  name: E2E - ${{ matrix.app }}
