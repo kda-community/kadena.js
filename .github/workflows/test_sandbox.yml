@@ -26,7 +26,24 @@ jobs:
           fetch-depth: 2
           show-progress: false
 
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
+
       - name: Setup Kadena sandbox
         uses: ./.github/actions/sandbox
+        node_git_ref: fix_devnet
+
+      - name: Build App with NODE_ENV=test
+        uses: ./.github/actions/build-app-e2e
         with:
-          node_git_ref: fix_devnet
+          app: tools
+
+      - name: Run end-to-end tests
+        uses: ./.github/actions/end-to-end-tests
+        with:
+          app: tools
+
+      - name: Kill Kadena Sandbox
+        run: |
+          kill "$(cat "$SANDBOX_RUN/chainweb-node.pid")"
+          kill "$(cat "$SANDBOX_RUN/chainweb-mining-client.pid")"
