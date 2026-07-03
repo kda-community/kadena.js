@@ -56,6 +56,11 @@ jobs:
 #        with:
 #          test-object: "tools"
 #
+
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
+
+
       - name: Build App with NODE_ENV=test
         uses: ./.github/actions/build-app-e2e
         with:
