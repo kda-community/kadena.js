@@ -16,12 +16,23 @@ runs:
   using: 'composite'
   steps:
 
-    - name: Setup BIN path
+    - name: Clean and prepare directories
       shell: bash
       run: |
+        SANDBOX_RUN="$GITHUB_WORKSPACE/.sandbox"
         SANDBOX_BIN="$GITHUB_WORKSPACE/.bin"
+
+        rm -rf $SANDBOX_RUN
+        mkdir -p $SANDBOX_RUN/db
+        mkdir -p $SANDBOX_RUN/pid
+
         mkdir -p $SANDBOX_BIN
+
+        rm -rf .repos
+        mkdir -p .repos
+
         echo "SANDBOX_BIN=$SANDBOX_BIN" >> "$GITHUB_ENV"
+        echo "SANDBOX_RUN=$SANDBOX_RUN" >> "$GITHUB_ENV"
 
     - name: Setting up MPFR (Ubuntu)
       shell: bash
@@ -48,7 +59,7 @@ runs:
         SHA_A=$(git -C .repos/chainweb-node rev-parse HEAD)
         SHA_B=$(git -C .repos/chainweb-mining-client  rev-parse HEAD)
 
-        CACHE_KEY=$(printf "%s%s%s%s%s" "$SHA_A" "$SHA_B" "{{inputs.ghc_version}}" "{{inputs.cabal_version}}" "{{inputs.cabal_version}}"  | sha256sum | cut -d' ' -f1)
+        CACHE_KEY=$(printf "%s%s%s%s%s" "$SHA_A" "$SHA_B" "${{inputs.ghc_version}}" "${{inputs.cabal_version}}" "${{inputs.cache_version}}"  | sha256sum | cut -d' ' -f1)
 
         echo "cache_key=$CACHE_KEY" >> "$GITHUB_OUTPUT"
 
@@ -78,7 +89,6 @@ runs:
       run: |
         cabal build chainweb-node
         cp $(cabal list-bin chainweb-node) "$SANDBOX_BIN"
-        strip "$SANDBOX_BIN/chainweb-node"
 
     - name: Compile Mining client
       if: steps.cache-binaries.outputs.cache-hit != 'true'
@@ -87,7 +97,6 @@ runs:
       run: |
         cabal build chainweb-mining-client
         cp $(cabal list-bin chainweb-mining-client) "$SANDBOX_BIN"
-        strip "$SANDBOX_BIN/chainweb-mining-client"
 
     - name: Save cache
       if: steps.cache-binaries.outputs.cache-hit != 'true'
@@ -95,3 +104,27 @@ runs:
       with:
         path: ${{ env.SANDBOX_BIN}}
         key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+
+    - name: Launch node
+      shell: bash
+      run: |
+        $SANDBOX_BIN/chainweb-node --no-pow \
+                                   --config-file "$GITHUB_ACTION_PATH/node_config.yaml"
+                                   --database-directory "$SANDBOX_RUN/db" > /dev/null 2>&1 &
+        echo $! > "$SANDBOX_RUN/pid/chainweb-node.pid"
+
+    - name: Launch mining client
+      shell: bash
+      run: |
+        $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" > /dev/null 2>&1 &
+        echo $! > "$SANDBOX_RUN/pid/chainweb-mining-client.pid"
+
+    - name: Wait
+      shell: bash
+      run: |
+        sleep 60
+
+    - name: Verify Chainweb node health
+      shell: bash
+      run: |
+        curl -fsS http://localhost:1848/health-check | grep "Health check OK."

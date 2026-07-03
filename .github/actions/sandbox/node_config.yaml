@@ -1,0 +1,85 @@
+databaseDirectory: ~
+resetChainDatabases: false
+chainweb:
+  throttling:
+    local: 100.0
+    mining: 100.0
+    global: 200.0
+    putPeer: 21
+  chainwebVersion: development
+
+  serviceApi:
+    interface: '*'
+    payloadBatchLimit: 1000
+    port: 1848
+    validateSpec: false
+
+  mining:
+    coordination:
+      enabled: true
+      limit: 1200
+      miners:
+        - account: k:f89ef46927f506c70b6a58fd322450a936311dc6ac91f4ec3d8ef949608dbf1f
+          predicate: keys-all
+          public-keys:
+            - f89ef46927f506c70b6a58fd322450a936311dc6ac91f4ec3d8ef949608dbf1f
+
+    nodeMining:
+      enabled: false
+  p2p:
+    peer:
+      certificateChainFile: null
+      key: null
+      interface: '*'
+      certificateChain: null
+      hostaddress:
+        hostname: localhost
+        port: 4443
+      keyFile: null
+    maxPeerCount: 100
+    private: false
+    ignoreBootstrapNodes: true
+    maxSessionCount: 6
+    sessionTimeout: 300
+    peers: []
+  transactionIndex:
+    enabled: true
+    configuration: {}
+  headerStream: false
+  mempoolP2p:
+    enabled: true
+    configuration:
+      pollInterval: 30
+      maxSessionCount: 5
+      sessionTimeout: 300
+  reintroTxs: true
+  cuts:
+    pruneChainDatabase: true
+    fetchTimeout: 3000000
+    initialCutHeightLimit: null
+  rosetta: true
+logging:
+  telemetryBackend:
+    enabled: true
+    configuration:
+      handle: stderr
+      color: auto
+      format: text
+  backend:
+    handle: stderr
+    color: auto
+    format: text
+  logger:
+    log_level: warn
+    queue_size: 1000
+    exception_wait: 1000
+    exit_timeout: 1000000
+    scope: []
+    exception_limit: 10
+    policy: discard
+  clusterId: docker-node
+  amberdataBackend:
+    enabled: false
+  filter:
+    rules: []
+    default: debug
