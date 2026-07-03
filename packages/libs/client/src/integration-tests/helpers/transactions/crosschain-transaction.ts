@@ -13,36 +13,34 @@ function startCrossChainTransfer(
   to: IAccount,
   amount: string,
 ): IUnsignedCommand {
-  return (
-    Pact.builder
-      .execution(
-        (Pact.modules as any).coin.defpact['transfer-crosschain'](
-          from.account,
-          to.account,
-          readKeyset('receiver-guard'),
-          to.chainId,
-          {
-            decimal: amount.toString(),
-          },
-        ),
-      )
-      .addSigner(from.publicKey, (withCapability: any) => [
-        withCapability('coin.GAS'),
-        withCapability(
-          'coin.TRANSFER_XCHAIN',
-          from.account,
-          to.account,
-          {
-            decimal: amount,
-          },
-          to.chainId,
-        ),
-      ])
-      .addKeyset('receiver-guard', 'keys-all', to.publicKey)
-      .setMeta({ chainId: from.chainId, senderAccount: from.account })
-      .setNetworkId(NetworkId.fast_development)
-      .createTransaction()
-  );
+  return Pact.builder
+    .execution(
+      (Pact.modules as any).coin.defpact['transfer-crosschain'](
+        from.account,
+        to.account,
+        readKeyset('receiver-guard'),
+        to.chainId,
+        {
+          decimal: amount.toString(),
+        },
+      ),
+    )
+    .addSigner(from.publicKey, (withCapability: any) => [
+      withCapability('coin.GAS'),
+      withCapability(
+        'coin.TRANSFER_XCHAIN',
+        from.account,
+        to.account,
+        {
+          decimal: amount,
+        },
+        to.chainId,
+      ),
+    ])
+    .addKeyset('receiver-guard', 'keys-all', to.publicKey)
+    .setMeta({ chainId: from.chainId, senderAccount: from.account })
+    .setNetworkId(NetworkId.fast_development)
+    .createTransaction();
 }
 
 function finishInTheTargetChain(

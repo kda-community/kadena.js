@@ -1,10 +1,10 @@
 import { generateDts, pactParser } from '@kadena/pactjs-generator';
 import type { Command } from 'commander';
-import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import mkdirp from 'mkdirp';
-import { EOL } from 'os';
-import { dirname, join } from 'path';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { EOL } from 'node:os';
+import { dirname, join } from 'node:path';
 import * as prettier from 'prettier';
 import { sync } from 'rimraf';
 

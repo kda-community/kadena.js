@@ -27,7 +27,7 @@
     "@kadena/types": "workspace:*",
     "@kda-community-dev/oxlint-config": "workspace:*",
     "@types/node": "^20.12.7",
-    "eslint-plugin-playwright": "1.6.2",
+    "eslint-plugin-playwright": "2.10.3",
     "oxlint": "1.63.0",
     "playwright-i18next-fixture": "^1.0.0",
     "prettier": "~3.2.5"

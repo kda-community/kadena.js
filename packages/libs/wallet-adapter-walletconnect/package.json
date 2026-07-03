@@ -23,7 +23,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && api-extractor run",
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
     "format": "prettier . --cache --write",
     "lint": "oxlint .",
     "test": "vitest run",

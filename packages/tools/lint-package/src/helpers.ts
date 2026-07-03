@@ -1,7 +1,7 @@
 import { parse } from 'jsonc-parser';
 import fs from 'node:fs/promises';
 import { dirname, extname, join } from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import type { Rules } from './types.js';
 
 const DIRNAME = dirname(fileURLToPath(import.meta.url));

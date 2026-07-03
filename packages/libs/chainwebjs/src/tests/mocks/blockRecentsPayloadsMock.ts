@@ -1,4 +1,3 @@
-
 interface mockBlocks {
   [key: number]: [];
 }

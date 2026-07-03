@@ -32,7 +32,7 @@
     "@playwright/test": "^1.45.3",
     "@types/node": "^20.12.7",
     "directory-tree": "3.5.1",
-    "eslint-plugin-playwright": "1.6.2",
+    "eslint-plugin-playwright": "2.10.3",
     "graphql-ws": "^5.16.0",
     "oxlint": "1.63.0",
     "parse-md": "2.0.5",

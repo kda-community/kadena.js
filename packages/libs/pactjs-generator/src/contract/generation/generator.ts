@@ -1,4 +1,4 @@
-import { EOL } from 'os';
+import { EOL } from 'node:os';
 import type { IFunction, IModule, IType } from '../parsing/pactParser';
 import { getModuleFullName, trim } from '../parsing/utils/utils';
 
@@ -127,9 +127,6 @@ const getFunctionType = (func: IFunction): string => {
   )}} `;
 };
 
-/**
- * @alpha
- */
 export function generateDts(module: IModule): string {
   if (module === undefined) {
     throw new Error(`Module is undefined`);

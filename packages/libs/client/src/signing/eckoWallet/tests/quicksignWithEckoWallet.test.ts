@@ -5,7 +5,7 @@ import type { IPactCommand } from '../../../interfaces/IPactCommand';
 import { createTransaction } from '../../../utils/createTransaction';
 import { createEckoWalletQuicksign } from '../quicksignWithEckoWallet';
 
-import { TextDecoder, TextEncoder } from 'util';
+import { TextDecoder, TextEncoder } from 'node:util';
 
 Object.assign(global, { TextDecoder, TextEncoder });
 

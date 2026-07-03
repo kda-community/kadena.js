@@ -34,7 +34,7 @@ afterAll(() => server.close());
 
 const createAndRunProgram = async (): Promise<void> => {
   const program = new Command('retrieve-contract');
-  const action = retrieveContract(program, '0.0.0');
+  const action = retrieveContract();
 
   await action({
     out: '/some/path/to/contract.pact',

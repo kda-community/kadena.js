@@ -1,7 +1,3 @@
-:root {
-  --interation-count: 1;
-}
-
 .greenTop { fill: var(--face-green-cube-top); }
 .greenLeft { fill: var(--face-green-cube-left); }
 .greenRight { fill: var(--face-green-cube-right); }

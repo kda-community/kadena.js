@@ -18,9 +18,6 @@ function fixArrayFormatting(arrAsString: string): string {
     .replace(closingBracketAtEndOfStringRegex, '\n    ]');
 }
 
-/**
- * @alpha
- */
 export function generateTemplates(
   templates: { name: string; template: ITemplate }[],
   version: string,

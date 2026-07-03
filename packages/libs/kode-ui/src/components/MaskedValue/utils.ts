@@ -1,4 +1,3 @@
-
 const defaultOptions = {
   character: '*',
   maskLength: 4,

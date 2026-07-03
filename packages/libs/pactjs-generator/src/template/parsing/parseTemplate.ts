@@ -1,22 +1,12 @@
-/**
- * @alpha
- */
 export interface ITemplate {
   parts: TemplateParts;
   holes: TemplateHoles;
 }
-/**
- * @alpha
- */
+
 export type TemplateHoles = string[];
-/**
- * @alpha
- */
+
 export type TemplateParts = string[];
 
-/**
- * @alpha
- */
 export function parseTemplate(template: string): ITemplate {
   const [parts, holes] = splitTemplate(template);
 

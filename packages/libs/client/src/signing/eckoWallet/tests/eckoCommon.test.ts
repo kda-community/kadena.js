@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { checkStatus, connect, isConnected, isInstalled } from '../eckoCommon';
 
-import { TextDecoder, TextEncoder } from 'util';
+import { TextDecoder, TextEncoder } from 'node:util';
 
 Object.assign(global, { TextDecoder, TextEncoder });
 

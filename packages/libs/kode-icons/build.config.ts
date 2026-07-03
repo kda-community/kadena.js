@@ -1,4 +1,4 @@
-import { readdirSync } from 'fs';
+import { readdirSync } from 'node:fs';
 import { BuildEntry, defineBuildConfig } from 'unbuild';
 const iconsGroups = readdirSync('./src');
 const entries: BuildEntry[] = iconsGroups.flatMap((group) => [

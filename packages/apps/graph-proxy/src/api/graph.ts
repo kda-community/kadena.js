@@ -25,7 +25,7 @@ export default async function handler(request: Request): Promise<Response> {
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
       },
     });
-  } catch (error) {
+  } catch {
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
       status: 500,
       headers: {

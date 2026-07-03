@@ -1,6 +1,5 @@
 {
   "extends": [
     "./node_modules/@kda-community-dev/oxlint-config/oxlint.base.config.json"
-  ],
-  "plugins": ["react", "vue", "nextjs"]
+  ]
 }

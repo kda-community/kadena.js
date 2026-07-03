@@ -27,8 +27,7 @@ export function base64UrlDecode(str: IBase64Url): string {
     // and if not first of each 4 characters,
     // convert the first 8 bits to one ascii character
     bc++ % 4)
-      ?
-        (output += String.fromCharCode(255 & (bs >> ((-2 * bc) & 6))))
+      ? (output += String.fromCharCode(255 & (bs >> ((-2 * bc) & 6))))
       : 0
   ) {
     // try to find character in table (0-63, not found => -1)

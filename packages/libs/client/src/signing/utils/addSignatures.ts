@@ -29,7 +29,7 @@ export const addSignatures: (
     return {
       cmd,
       hash,
-      sigs: pubKeyOrder.map((pubKey, i) => {
+      sigs: pubKeyOrder.map((pubKey) => {
         const existed = sigs.find((sig) => sig?.pubKey === pubKey);
         if (existed && existed.sig) {
           return existed;

@@ -5,10 +5,10 @@
   "description": "Kadena Chainweb EVM Dashboard",
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "oxlint ."
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "oxlint .",
+    "start": "next start"
   },
   "dependencies": {
     "@kadena/kode-icons": "workspace:*",

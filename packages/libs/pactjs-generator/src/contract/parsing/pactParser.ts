@@ -178,9 +178,6 @@ const reduceModules = (acc: Required<IModuleLike>[], module: IModuleLike) => {
   return acc;
 };
 
-/**
- * @alpha
- */
 export function contractParser(
   contract: string,
   namespace: string = '',
@@ -398,9 +395,6 @@ function addFunctionCapabilities(
   });
 }
 
-/**
- * @alpha
- */
 export async function pactParser({
   contractNames,
   files,

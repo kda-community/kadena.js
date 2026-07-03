@@ -1,5 +1,5 @@
 import type { ChainId } from '@kadena/types';
-import { readdirSync } from 'fs';
+import { readdirSync } from 'node:fs';
 
 import type { IAccount, IClientConfig } from '../../../core/utils/helpers';
 import { deployFromDirectory } from '../../deploy-from-directory';

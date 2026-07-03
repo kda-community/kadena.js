@@ -83,7 +83,7 @@ function buildIconsArray(group: Record<string, object>, name = '') {
   const icons: IconToken[] = [];
   for (const [key, value] of Object.entries(group)) {
     if (isIconToken(value)) {
-      value.$name = `${name}_${key}` || value.$name;
+      value.$name = name ? `${name}_${key}` : value.$name;
       icons.push(value as IconToken);
     } else {
       icons.push(

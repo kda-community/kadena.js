@@ -136,7 +136,7 @@ describe('client utils', () => {
     it('sets fullfiled to true resolve is called', () => {
       const pr = getPromise();
       pr.promise
-        .then((result) => {
+        .then(() => {
           expect(pr.fulfilled).toBe(true);
         })
         .catch(() => {
@@ -150,7 +150,7 @@ describe('client utils', () => {
       const pr = getPromise();
       pr.promise
         .then(() => {})
-        .catch((result) => {
+        .catch(() => {
           expect(pr.fulfilled).toBe(true);
         });
       pr.reject('rejected');

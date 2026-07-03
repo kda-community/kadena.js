@@ -136,9 +136,7 @@ describe('lexer', () => {
       }`, () => {
         // only log last one
         const logger =
-          false && index === testsAndExpected.length - 1
-            ? console.log
-            : () => {};
+          index === testsAndExpected.length - 1 ? console.log : () => {};
 
         const output = getLexerOutput(test, logger);
         const outputWithoutLogger = getLexerOutput(test);

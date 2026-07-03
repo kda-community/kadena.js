@@ -75,6 +75,6 @@ export function retrieveContractCommand(
             `\n${program.helpInformation(e)}`,
         );
       }
-      await retrieveContract(program, version)(args).catch(console.error);
+      await retrieveContract()(args).catch(console.error);
     });
 }

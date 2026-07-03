@@ -3,9 +3,6 @@ import { functionCallParser } from './utils/functionCallParser';
 import { getPointer } from './utils/getPointer';
 import { FAILED } from './utils/parser-utilities';
 
-/**
- * @alpha
- */
 export interface IParsedCode {
   function: {
     module?: string;
@@ -49,7 +46,6 @@ export interface IParsedCode {
  * //     ],
  * //   \},
  * // ];
- * @alpha
  */
 export function execCodeParser(code: string): undefined | IParsedCode[] {
   const pointer = getPointer(code);

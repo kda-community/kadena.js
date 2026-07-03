@@ -8,7 +8,7 @@ import type {
 import { createTransaction } from '../../../utils/createTransaction';
 import { createEckoWalletSign } from '../signWithEckoWallet';
 
-import { TextDecoder, TextEncoder } from 'util';
+import { TextDecoder, TextEncoder } from 'node:util';
 
 type Transaction = IPactCommand & { payload: IExecutionPayloadObject };
 

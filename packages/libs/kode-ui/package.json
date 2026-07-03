@@ -25,41 +25,41 @@
   "exports": {
     ".": {
       "types": {
-        "import": "./dist\\index.d.mts",
-        "require": "./dist\\index.d.ts"
+        "import": "./dist/index.d.mts",
+        "require": "./dist/index.d.ts"
       },
-      "import": "./dist\\index.mjs",
-      "require": "./dist\\index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./global": {
       "types": {
-        "import": "./dist\\global.d.mts",
-        "require": "./dist\\global.d.ts"
+        "import": "./dist/global.d.mts",
+        "require": "./dist/global.d.ts"
       },
-      "import": "./dist\\global.mjs",
-      "require": "./dist\\global.cjs"
+      "import": "./dist/global.mjs",
+      "require": "./dist/global.cjs"
     },
     "./patterns": {
       "types": {
-        "import": "./dist\\patterns.d.mts",
-        "require": "./dist\\patterns.d.ts"
+        "import": "./dist/patterns.d.mts",
+        "require": "./dist/patterns.d.ts"
       },
-      "import": "./dist\\patterns.mjs",
-      "require": "./dist\\patterns.cjs"
+      "import": "./dist/patterns.mjs",
+      "require": "./dist/patterns.cjs"
     },
     "./styles": {
       "types": {
-        "import": "./dist\\styles.d.mts",
-        "require": "./dist\\styles.d.ts"
+        "import": "./dist/styles.d.mts",
+        "require": "./dist/styles.d.ts"
       },
-      "import": "./dist\\styles.mjs",
-      "require": "./dist\\styles.cjs"
+      "import": "./dist/styles.mjs",
+      "require": "./dist/styles.cjs"
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist\\index.cjs",
-  "module": "./dist\\index.mjs",
-  "types": "./dist\\index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "global",
@@ -144,7 +144,7 @@
     "@storybook/react-webpack5": "^8.4.4",
     "@storybook/theming": "^8.4.4",
     "@testing-library/react": "~16.3.0",
-    "@testing-library/user-event": "~14.5.1",
+    "@testing-library/user-event": "^14.5.1",
     "@types/lodash.get": "^4.4.9",
     "@types/lodash.mapvalues": "^4.6.7",
     "@types/lodash.omit": "^4.5.7",
@@ -160,8 +160,8 @@
     "copyfiles": "2.4.1",
     "csstype": "^3.1.2",
     "jiti": "^1.21.6",
-    "oxlint": "1.63.0",
     "mini-css-extract-plugin": "2.7.6",
+    "oxlint": "1.63.0",
     "prettier": "~3.2.5",
     "prop-types": "^15.8.1",
     "rimraf": "~5.0.1",

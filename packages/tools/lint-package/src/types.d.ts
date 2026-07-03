@@ -10,7 +10,6 @@ export interface RuleArg {
   dir: string;
   pkg: PackageJson;
   tsConfig: TSConfig;
-  eslintConfig: string;
 }
 
 export type Severity = 'warn' | 'error';
