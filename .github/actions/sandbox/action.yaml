@@ -129,3 +129,8 @@ runs:
       shell: bash
       run: |
         curl -fsS http://localhost:1848/health-check | grep "Health check OK."
+
+    - name: Check cut
+      shell: bash
+      run: |
+        curl -v http://localhost:1848/chainweb/0.0/development/cut
