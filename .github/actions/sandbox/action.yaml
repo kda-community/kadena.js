@@ -20,11 +20,11 @@ runs:
       shell: bash
       run: |
         SANDBOX_RUN="$GITHUB_WORKSPACE/.sandbox"
+        SANDBOX_DB="$SANDBOX_RUN/db"
         SANDBOX_BIN="$GITHUB_WORKSPACE/.bin"
 
         rm -rf $SANDBOX_RUN
-        mkdir -p $SANDBOX_RUN/db
-        mkdir -p $SANDBOX_RUN/pid
+        mkdir -p $SANDBOX_DB
 
         mkdir -p $SANDBOX_BIN
 
@@ -33,6 +33,7 @@ runs:
 
         echo "SANDBOX_BIN=$SANDBOX_BIN" >> "$GITHUB_ENV"
         echo "SANDBOX_RUN=$SANDBOX_RUN" >> "$GITHUB_ENV"
+        echo "SANDBOX_DB=$SANDBOX_DB" >> "$GITHUB_ENV"
 
     - name: Setting up MPFR (Ubuntu)
       shell: bash
@@ -109,15 +110,15 @@ runs:
       shell: bash
       run: |
         $SANDBOX_BIN/chainweb-node --no-pow \
-                                   --config-file "$GITHUB_ACTION_PATH/node_config.yaml"
-                                   --database-directory "$SANDBOX_RUN/db" > /dev/null 2>&1 &
-        echo $! > "$SANDBOX_RUN/pid/chainweb-node.pid"
+                                   --config-file "$GITHUB_ACTION_PATH/node_config.yaml" \
+                                   --database-directory "$SANDBOX_DB" > /dev/null 2>&1 &
+        echo $! >> "$SANDBOX_RUN/pid"
 
     - name: Launch mining client
       shell: bash
       run: |
         $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" > /dev/null 2>&1 &
-        echo $! > "$SANDBOX_RUN/pid/chainweb-mining-client.pid"
+        echo $! >> "$SANDBOX_RUN/pid"
 
     - name: Wait
       shell: bash

@@ -31,7 +31,8 @@ jobs:
 
       - name: Setup Kadena sandbox
         uses: ./.github/actions/sandbox
-        node_git_ref: fix_devnet
+        with:
+          node_git_ref: fix_devnet
 
       - name: Build App with NODE_ENV=test
         uses: ./.github/actions/build-app-e2e
@@ -45,5 +46,4 @@ jobs:
 
       - name: Kill Kadena Sandbox
         run: |
-          kill "$(cat "$SANDBOX_RUN/chainweb-node.pid")"
-          kill "$(cat "$SANDBOX_RUN/chainweb-mining-client.pid")"
+          kill $(cat "$SANDBOX_RUN/pid")
