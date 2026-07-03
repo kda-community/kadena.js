@@ -52,7 +52,7 @@ jobs:
         uses: ./.github/actions/sandbox
         with:
           node_git_ref: fix_devnet
-          launch_node: false
+          start_node: false
 
 
   integration-tests:
