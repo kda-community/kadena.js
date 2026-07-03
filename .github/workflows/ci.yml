@@ -37,6 +37,7 @@ jobs:
         run: pnpm turbo lint build test
 
   prepare_devnet:
+    name: Precompile a Devnet node
     runs-on: ubuntu-latest
 
     steps:
@@ -56,7 +57,7 @@ jobs:
 
   integration-tests:
     name: INT - ${{ matrix.package }}
-    needs: [build, prepare_devnet]
+    needs: [prepare_devnet]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -97,7 +98,7 @@ jobs:
 
   end-to-end-tests:
     name: E2E - ${{ matrix.app }}
-    needs: [build, prepare_devnet]
+    needs: [prepare_devnet]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
