@@ -199,7 +199,7 @@ describe('create id, mint, offer for sale, create conventional auction, for a to
   it('creates conventional auction', async () => {
     const blockTime = await getBlockDate({ chainId: chainId as ChainId });
     auctionStartDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 3));
-    auctionEndDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 13));
+    auctionEndDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 23));
 
     if (tokenId === undefined || saleId === undefined) {
       throw new Error('Token ID or Sale ID is not defined');

@@ -116,14 +116,13 @@ jobs:
         with:
           node_git_ref: fix_devnet
 
-      - name: run integration tests client-utils
-        run: pnpm run test:integration --filter @kadena/client-utils
+      - name: run integration tests create-kadena-app
+        run: pnpm run test:integration --filter @kadena/create-kadena-app
 
       - name: Kill Kadena Sandbox
         if: always()
         run: |
           kill $(cat "$SANDBOX_RUN/pid")
-
 
 
       - name: Runner Setup
@@ -136,7 +135,7 @@ jobs:
           node_git_ref: fix_devnet
 
       - name: run integration tests client-utils
-        run: pnpm run test:integration --filter @kadena/create-kadena-app
+        run: pnpm run test:integration --filter @kadena/client-utils
 
       - name: Kill Kadena Sandbox
         if: always()

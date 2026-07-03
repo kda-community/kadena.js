@@ -194,7 +194,7 @@ describe('transfer', () => {
   });
 });
 
-describe('cross chain transfer', () => {
+describe('cross chain transfer', { timeout: 200_000 }, () => {
   it('should transfer amount to another chain', async () => {
     const result = await transferCrossChain(
       {

@@ -6,7 +6,7 @@ import { deployGasStation } from '@kadena-dev/e2e-base/src/smart-contracts/kaden
 import { expect, test as setup } from '@playwright/test';
 
 setup('Deploy kadena-xchain-gas-station', async () => {
-  setup.slow()
+  setup.slow();
   await setup.step(
     'Deploy Guards Contracts & Gas Station on chain 0',
     async () => {
@@ -26,7 +26,7 @@ setup('Deploy kadena-xchain-gas-station', async () => {
 });
 
 setup('Deploy Faucet', async () => {
-  setup.slow()
+  setup.slow();
   await setup.step('Deploy Faucet Contract on chain 0', async () => {
     const deploymentStatus = await deployFaucetContract('0');
     expect(deploymentStatus).toEqual('success');
