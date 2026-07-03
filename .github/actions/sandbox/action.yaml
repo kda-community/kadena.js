@@ -109,7 +109,7 @@ runs:
     - name: Launch node
       shell: bash
       run: |
-        $SANDBOX_BIN/chainweb-node --no-pow \
+        $SANDBOX_BIN/chainweb-node --disable-pow \
                                    --config-file "$GITHUB_ACTION_PATH/node_config.yaml" \
                                    --database-directory "$SANDBOX_DB" > /dev/null 2>&1 &
         echo $! >> "$SANDBOX_RUN/pid"
