@@ -49,14 +49,16 @@ jobs:
         run: |
           kill $(cat "$SANDBOX_RUN/pid")
 
-      - name: Archive sandbox logs
-        uses: ./.github/actions/archive-logs
-        if: always()
-        with:
-          test-object: "app"
-
       - name: Archive volumes
         uses: ./.github/actions/archive-volumes
         if: always()
         with:
-          test-object: "app"
+          test-object: "tools"
+
+      - name: Upload Blob Report
+        uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: blob-report-${{ matrix.app }}
+          path: packages/e2e/e2e-tools/blob-report/
+          retention-days: 1

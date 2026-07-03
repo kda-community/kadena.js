@@ -6,17 +6,12 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Save sandbox logs
-      uses: jwalton/gh-docker-logs@v2
-      with:
-        dest: './logs-${{ inputs.test-object }}'
-    
     - name: Compress logs
       shell: bash
       run: tar cvzf ./logs-${{ inputs.test-object }}.tgz ./logs-${{ inputs.test-object }}
 
     - name: Upload logs
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: logs-${{ inputs.test-object }}.tgz
         path: ./logs-${{ inputs.test-object }}.tgz

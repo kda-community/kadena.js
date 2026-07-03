@@ -6,8 +6,14 @@ inputs:
 runs:
   using: 'composite'
   steps:
+      - name: Compress Sandbox
+        shell: bash
+        run: |
+          tar czf devnet_sandbox_${{ inputs.test-object }}.tar.gz ${{ env.SANDBOX_RUN }}
+
       - name: Upload Volume
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: sandbox_volume_${{ inputs.test-object }}
-          path: ${{ env.SANDBOX_RUN }}
+          archive: false
+          path: devnet_sandbox_${{ inputs.test-object }}.tar.gz
