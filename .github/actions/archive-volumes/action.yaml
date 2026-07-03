@@ -6,14 +6,25 @@ inputs:
 runs:
   using: 'composite'
   steps:
-      - name: Compress Sandbox
-        shell: bash
-        run: |
-          tar czf devnet_sandbox_${{ inputs.test-object }}.tar.gz -C ${{ env.SANDBOX_RUN }} .
 
-      - name: Upload Volume
-        uses: actions/upload-artifact@v7
-        with:
-          name: sandbox_volume_${{ inputs.test-object }}
-          archive: false
-          path: devnet_sandbox_${{ inputs.test-object }}.tar.gz
+
+    - name: Compute file name
+      shell: bash
+      id: file_name
+      run: |
+        FILE_NAME=$(echo "${{ inputs.test-object }}" | cut -d '/' -f 2)
+        echo "file_name=$FILE_NAME" >> "$GITHUB_OUTPUT"
+
+    - name: Compress Sandbox
+      shell: bash
+      run: |
+        tar czf devnet_sandbox_${{ steps.file_name.outputs.file_name }}.tar.gz \
+          -C "${{ env.SANDBOX_RUN }}" .
+
+
+    - name: Upload Volume
+      uses: actions/upload-artifact@v7
+      with:
+        name: sandbox_volume_${{ steps.file_name.outputs.file_name }}
+        archive: false
+        path: devnet_sandbox_${{ steps.file_name.outputs.file_name }}.tar.gz
