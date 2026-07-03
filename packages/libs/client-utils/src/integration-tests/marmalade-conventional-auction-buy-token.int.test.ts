@@ -26,7 +26,7 @@ import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
 
 describe('create id, mint, offer for sale, create conventional auction, for a token and places a bid and buy the token', () => {
   const config = {
-    host: 'http://127.0.0.1:8080',
+    host: 'http://127.0.0.1:1848',
     defaults: {
       networkId: 'development',
     },
@@ -236,7 +236,7 @@ describe('create id, mint, offer for sale, create conventional auction, for a to
     const withStep = withStepFactory();
 
     const config = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -326,7 +326,7 @@ describe('create id, mint, offer for sale, create conventional auction, for a to
     const withStep = withStepFactory();
 
     const config = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },

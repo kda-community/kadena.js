@@ -53,7 +53,7 @@ const inputs = {
 };
 
 const config = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
   },
@@ -200,7 +200,7 @@ describe('create, mint and offer a token with auction, update auction. Get detai
     const withStep = withStepFactory();
 
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -701,7 +701,7 @@ describe('buyToken', () => {
     const withStep = withStepFactory();
 
     const config = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -819,7 +819,7 @@ describe('buyToken', () => {
 describe('non-existent auction details', () => {
   it('throws error when non-existent token offered', async () => {
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },

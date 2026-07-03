@@ -40,7 +40,7 @@ describe('estimateGas', () => {
         transferCreateCommand(inputs),
         setNetworkId('development'),
       ),
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
 
     expect(gasEstimation).toEqual({ gasLimit: 209, gasPrice: 1e-8 });
@@ -51,7 +51,7 @@ describe('estimateGas', () => {
         networkId: 'development',
         meta: { ...gasEstimation } as IPactCommand['meta'],
       },
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       sign: createSignWithKeypair([sender00Account]),
     }).execute();
 

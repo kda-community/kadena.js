@@ -16,7 +16,7 @@ const main = async () => {
   console.log('Setting up marmalade test environment');
 
   const config: IClientConfig = {
-    host: 'http://127.0.0.1:8080',
+    host: 'http://127.0.0.1:1848',
     defaults: {
       networkId: 'development',
       meta: {

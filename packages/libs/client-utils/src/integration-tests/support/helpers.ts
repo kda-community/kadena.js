@@ -34,7 +34,7 @@ export const getBlockDate = async (props?: { chainId?: ChainId }) => {
   const { chainId } = props || { chainId: '0' };
 
   const config = {
-    host: 'http://127.0.0.1:8080',
+    host: 'http://127.0.0.1:1848',
     defaults: {
       networkId: 'development',
     },
@@ -101,7 +101,7 @@ export const dateToPactInt = (date: Date): IPactInt => ({
 
 export const deployGasStation = async ({ chainId }: { chainId: ChainId }) => {
   const config = {
-    host: 'http://127.0.0.1:8080',
+    host: 'http://127.0.0.1:1848',
     defaults: {
       networkId: 'development',
     },

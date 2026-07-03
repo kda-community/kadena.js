@@ -22,7 +22,7 @@ export const defaultAccount: IAccountWithSecretKey = {
 
 export const defaultChainId: ChainId = '0';
 export const defaultNetworkId = 'development';
-export const defaultNetworkHost = 'http://localhost:8080';
+export const defaultNetworkHost = 'http://localhost:1848';
 
 /**
  * Defines the arguments for the marmalade contracts: these values are going
@@ -81,7 +81,7 @@ export const defaultRemoteConfig: IRemoteConfig = {
 };
 
 /**
- * By default the client configuration will point to localhost:8080 and use sender00
+ * By default the client configuration will point to localhost:1848 and use sender00
  * as the default account
  */
 

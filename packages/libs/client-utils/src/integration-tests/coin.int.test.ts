@@ -49,7 +49,7 @@ describe('transferCreate', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -107,7 +107,7 @@ describe('getBalance', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     expect(balance).toBe('100');
   });
@@ -119,7 +119,7 @@ describe('getDetails', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     expect(data).toEqual({
       account: accountOne.account,
@@ -148,7 +148,7 @@ describe('createAccount', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -173,7 +173,7 @@ describe('transfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -187,7 +187,7 @@ describe('transfer', () => {
       accountTwo.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
 
     expect(balance).toBe('10');
@@ -214,7 +214,7 @@ describe('cross chain transfer', () => {
         targetChainId: '1',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -228,7 +228,7 @@ describe('cross chain transfer', () => {
       accountOne.account,
       'development',
       '1',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
 
     expect(balance).toBe('10');
@@ -241,7 +241,7 @@ describe('safeTransfer', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     const result = await safeTransfer(
       {
@@ -257,7 +257,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -277,7 +277,7 @@ describe('safeTransfer', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     if (
       typeof balanceAfterTransfer === 'string' &&
@@ -304,7 +304,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -332,7 +332,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -348,7 +348,7 @@ describe('safeTransfer', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     const result = await safeTransfer(
       {
@@ -368,7 +368,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -390,7 +390,7 @@ describe('safeTransfer', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     if (
       typeof balanceAfterTransfer === 'string' &&
