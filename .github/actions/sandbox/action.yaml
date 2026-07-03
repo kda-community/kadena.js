@@ -61,7 +61,6 @@ runs:
         SHA_B=$(git -C .repos/chainweb-mining-client  rev-parse HEAD)
 
         CACHE_KEY=$(printf "%s%s%s%s%s" "$SHA_A" "$SHA_B" "${{inputs.ghc_version}}" "${{inputs.cabal_version}}" "${{inputs.cache_version}}"  | sha256sum | cut -d' ' -f1)
-
         echo "cache_key=$CACHE_KEY" >> "$GITHUB_OUTPUT"
 
     - name: Restore cache
@@ -113,7 +112,6 @@ runs:
                                    --config-file "$GITHUB_ACTION_PATH/node_config.yaml" \
                                    --database-directory "$SANDBOX_DB" \
                                    > $SANDBOX_RUN/node.log 2>&1 &
-
         echo $! >> "$SANDBOX_RUN/pid"
 
     - name: Verify Chainweb node health
@@ -127,7 +125,6 @@ runs:
       run: |
         $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" \
                                             >  $SANDBOX_RUN/mining-client.log 2>&1 &
-
         echo $! >> "$SANDBOX_RUN/pid"
 
     - name: Check cut

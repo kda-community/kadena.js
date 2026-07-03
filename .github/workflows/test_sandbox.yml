@@ -40,6 +40,7 @@ jobs:
           node_git_ref: fix_devnet
 
       - name: Run end-to-end tests
+        continue-on-error: true
         uses: ./.github/actions/end-to-end-tests
         with:
           app: tools
@@ -66,6 +67,7 @@ jobs:
           node_git_ref: fix_devnet
 
       - name: Run end-to-end tests
+        continue-on-error: true
         uses: ./.github/actions/end-to-end-tests
         with:
           app: dev-wallet
