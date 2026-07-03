@@ -45,7 +45,7 @@ export const walletOptions = {
       '-m, --mnemonic-file <mnemonicFile>',
       'Filepath to your 12-word mnemonic phrase file to generate keys from (can be passed via stdin)',
     ),
-    transform: mnemonicPromptTransform('--mnemonic-file'),
+    transform: mnemonicPromptTransform(),
   }),
   createAccount: createOption({
     key: 'createAccount' as const,
