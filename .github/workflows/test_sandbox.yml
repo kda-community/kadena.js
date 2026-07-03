@@ -55,10 +55,28 @@ jobs:
         with:
           test-object: "tools"
 
-      - name: Upload Blob Report
-        uses: actions/upload-artifact@v7
-        if: ${{ !cancelled() }}
+      - name: Build App with NODE_ENV=test
+        uses: ./.github/actions/build-app-e2e
         with:
-          name: blob-report-tools
-          path: packages/e2e/e2e-tools/blob-report/
-          retention-days: 1
+          app: dev-wallet
+
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
+
+      - name: Run end-to-end tests
+        uses: ./.github/actions/end-to-end-tests
+        with:
+          app: dev-wallet
+
+      - name: Kill Kadena Sandbox
+        if: always()
+        run: |
+          kill $(cat "$SANDBOX_RUN/pid")
+
+      - name: Archive volumes
+        uses: ./.github/actions/archive-volumes
+        if: always()
+        with:
+          test-object: dev-wallet
