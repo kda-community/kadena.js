@@ -30,13 +30,14 @@ export class FundNewAccountPage {
   }
 
   public async CreateFundAccount(account: IAccount): Promise<void> {
+    console.log(account)
     for (const keyPair of account.keys) {
       console.log(keyPair.publicKey)
       await this._publicKey.fill(keyPair.publicKey);
       await this._addPubKey.click();
     }
     console.log("--------------------------------")
-    await this._chainId.setValue(account.chains[0]);
+    //await this._chainId.setValue(account.chains[0]);
     //Form validation is retriggered after setting the chain. Explicitly wait for the Account Name to be visible before pressing fund.
     await expect(this._accountNameInput).toHaveValue(account.account);
     await this._createAndFundBtn.click();
