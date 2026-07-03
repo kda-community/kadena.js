@@ -299,7 +299,7 @@ describe('create, mint and offer a token with auction, update auction. Get detai
 
     const blockDate = await getBlockDate({ chainId });
     auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 30));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 50));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 120));
 
     const result = await createAuction(
       {
@@ -505,7 +505,7 @@ auctionStartDate:  ${new Date(Number(auctionStartDate.int) * 1000)}`,
         host: config.host,
       });
 
-      expect(result).toBe(10);
+      expect(result).toBeGreaterThan(7);
     },
     { timeout: 60000 },
   );

@@ -400,10 +400,10 @@ describe('creates, mints, offers for sale, creates and updates auction for, gets
     const currentBlockTime = await getBlockDate({ chainId });
 
     auctionStartDate = dateToPactInt(
-      addSecondsToDate(new Date(currentBlockTime), 2),
+      addSecondsToDate(new Date(currentBlockTime), 12),
     );
     auctionEndDate = dateToPactInt(
-      addSecondsToDate(new Date(currentBlockTime), 8),
+      addSecondsToDate(new Date(currentBlockTime), 28),
     );
 
     const result = await updateAuction(
