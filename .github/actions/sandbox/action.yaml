@@ -111,13 +111,17 @@ runs:
       run: |
         $SANDBOX_BIN/chainweb-node --disable-pow \
                                    --config-file "$GITHUB_ACTION_PATH/node_config.yaml" \
-                                   --database-directory "$SANDBOX_DB" > /dev/null 2>&1 &
+                                   --database-directory "$SANDBOX_DB" \
+                                   > $SANDBOX_RUN/node.log 2>&1 &
+
         echo $! >> "$SANDBOX_RUN/pid"
 
     - name: Launch mining client
       shell: bash
       run: |
-        $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" > /dev/null 2>&1 &
+        $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml"
+                                            >  $SANDBOX_RUN/mining-client.log 2>&1 &
+
         echo $! >> "$SANDBOX_RUN/pid"
 
     - name: Wait
@@ -134,3 +138,9 @@ runs:
       shell: bash
       run: |
         curl -v http://localhost:1848/chainweb/0.0/development/cut
+
+    - name: Check logs
+      shell: bash
+      run: |
+        cat $SANDBOX_RUN/mining-client.log
+        cat $SANDBOX_RUN/node.log
