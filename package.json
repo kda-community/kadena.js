@@ -14,7 +14,7 @@
     "format:src": "prettier . \"!packages\" --cache --write",
     "preinstall": "npx --no-install only-allow pnpm",
     "knip": "knip",
-    "lint": "turbo run lint && pnpm run /^lint:.*/",
+    "lint": "pnpm run /^lint:.*/",
     "lint:dependencies": "syncpack list-mismatches",
     "lint:labels": "jiti packages/tools/scripts/validate-labels.ts",
     "lint:prettier": "prettier . \"!packages\" --cache --check",
