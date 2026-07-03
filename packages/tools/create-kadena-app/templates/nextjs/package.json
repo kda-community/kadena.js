@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@kadena/pactjs-cli": "~1.5.0",
-    "@kda-community-dev/oxlint-config": "workspace:*",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "~16.3.0",
     "@testing-library/user-event": "^14.5.1",

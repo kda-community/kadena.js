@@ -1,6 +1,29 @@
 {
-  "extends": [
-    "./node_modules/@kda-community-dev/oxlint-config/oxlint.base.config.json"
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "oxc",
+    "unicorn",
+    "import",
+    "eslint",
+    "promise",
+    "jsdoc",
+    "nextjs"
   ],
-  "plugins": ["nextjs"]
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "import/namespace": [
+      "error",
+      {
+        "allowComputed": true
+      }
+    ],
+    "import/named": "error"
+  }
 }

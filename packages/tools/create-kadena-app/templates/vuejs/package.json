@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@kadena/pactjs-cli": "^1.6.1",
-    "@kda-community-dev/oxlint-config": "workspace:*",
     "@testing-library/vue": "^8.0.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/jsdom": "^21.1.5",
