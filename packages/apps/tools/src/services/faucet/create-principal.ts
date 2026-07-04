@@ -1,5 +1,5 @@
 import { kadenaDefaultNetworks } from '@/constants/kadena';
-import { INetworkData } from '@/utils/network';
+import { INetworkData, prefixApi } from '@/utils/network';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,
@@ -30,7 +30,7 @@ export const createPrincipal = async (
       },
     },
     {
-      host: `https://${networkData?.API || kadenaDefaultNetworks.testnet06.API}`,
+      host: prefixApi(networkData?.API || kadenaDefaultNetworks.testnet06.API),
       defaults: {
         networkId: networkData?.networkId || NETWORK_ID,
         meta: { chainId },

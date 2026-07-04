@@ -51,7 +51,7 @@ jobs:
 
       - name: Stop the node
         shell: bash
-        run:  kill $(cat "$SANDBOX_RUN/pid")
+        run:  kill $(cat "$SANDBOX_RUN/pids")
 
 
   integration-tests:
