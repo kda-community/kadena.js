@@ -23,6 +23,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
@@ -31,7 +32,7 @@ let tokenId: string | undefined;
 let saleId: string | undefined;
 
 const timeout = dateToPactInt(addDaysToDate(new Date(), 1));
-const PRICE_INTERVAL_IN_SECONDS: IPactInt = { int: '5' };
+const PRICE_INTERVAL_IN_SECONDS: IPactInt = { int: '40' };
 
 let auctionStartDate: IPactInt | undefined;
 let auctionEndDate: IPactInt | undefined;
@@ -666,7 +667,7 @@ describe('buyToken', { timeout: 200_000 }, () => {
   it('creates dutch auction', async () => {
     const blockDate = await getBlockDate({ chainId });
     auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 10));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 40));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 300.0));
 
     const result = await createAuction(
       {
@@ -720,6 +721,11 @@ describe('buyToken', { timeout: 200_000 }, () => {
 
     expect(escrowAccount).toBeDefined();
 
+    /* Wait for a 3 new blocks being mined */
+
+
+    await waitForNewBlock().then(waitForNewBlock).then(waitForNewBlock)
+
     const latestPrice = await getCurrentPrice({
       saleId: saleId as string,
       chainId,
@@ -728,13 +734,15 @@ describe('buyToken', { timeout: 200_000 }, () => {
     });
 
     expect(latestPrice).toBeDefined();
+    console.log("-----------------------------")
+    console.log(latestPrice)
 
     const result = await buyToken(
       {
         auctionConfig: {
           dutch: true,
         },
-        updatedPrice: { decimal: "5.0" },
+        updatedPrice: { decimal: String(latestPrice)  },
         escrow: {
           account: (escrowAccount as any).account,
         },

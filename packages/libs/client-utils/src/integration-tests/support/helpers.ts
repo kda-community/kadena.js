@@ -11,6 +11,7 @@ import { expect } from 'vitest';
 import { dirtyReadClient, submitClient } from '../../core';
 import type { Any } from '../../core/utils/types';
 import { sourceAccount } from '../test-data/accounts';
+import { printer } from 'prettier/doc';
 
 export const withStepFactory = () => {
   let step = 0;
@@ -29,6 +30,17 @@ export const withStepFactory = () => {
 
 export const waitFor = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
+
+export const waitForNewBlock = async () => {
+  const initBlockTime = await getBlockDate();
+  while(true) {
+    const newBlockTime = await getBlockDate()
+    if(newBlockTime.getTime() != initBlockTime.getTime())
+      return
+  }
+
+}
+
 
 export const getBlockDate = async (props?: { chainId?: ChainId }) => {
   const { chainId } = props || { chainId: '0' };
