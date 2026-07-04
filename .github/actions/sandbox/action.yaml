@@ -37,7 +37,7 @@ runs:
         echo "SANDBOX_RUN=$SANDBOX_RUN" >> "$GITHUB_ENV"
         echo "SANDBOX_DB=$SANDBOX_DB" >> "$GITHUB_ENV"
 
-    - name: Setting up MPFR (Ubuntu)
+    - name: Install required packages
       shell: bash
       run: sudo apt-get update && sudo apt-get install -y libgflags-dev liblz4-dev libzstd-dev libsnappy-dev libbz2-dev libmpfr-dev
 

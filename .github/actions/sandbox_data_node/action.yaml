@@ -23,7 +23,11 @@ runs:
         mkdir -p $SANDBOX_CHAINWEB_DATA_BIN
         echo "SANDBOX_CHAINWEB_DATA_BIN=$SANDBOX_CHAINWEB_DATA_BIN" >> "$GITHUB_ENV"
 
-    - name: Checkout Node Source
+    - name: Install required packages
+      shell: bash
+      run: sudo apt-get update && sudo apt-get install -y liblzma-dev libmpfr-dev
+
+    - name: Checkout Data Node Source
       uses: actions/checkout@v7
       with:
         repository: kda-community/chainweb-data
@@ -76,9 +80,8 @@ runs:
     - name: Install Postgresql
       uses: ikalnytskyi/action-setup-postgres@v8
       with:
-        username: postgres
-        password: hello_kadena
-        database: kadena_data
+        username: devnet
+        database: devnet
         port: 5432
         postgres-version: "14"
         ssl: true
