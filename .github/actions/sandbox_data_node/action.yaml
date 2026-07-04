@@ -89,4 +89,4 @@ runs:
     - name: Start Data node
       shell: bash
       run: |
-        chainweb-data server -m --service-host=localhost:1848 --dbuser=devnet --dbname=devnet
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data server" -m --service-host=localhost:1848 --dbuser=devnet --dbname=devnet
