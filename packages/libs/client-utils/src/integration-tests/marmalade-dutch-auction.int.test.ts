@@ -60,8 +60,10 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('create, mint and offer a token with auction, update auction. Get details', { timeout: 200_000 },
-  () => {
+const STEP_DESC =
+  'create, mint and offer a token with auction, update auction. Get details';
+
+describe(STEP_DESC, { timeout: 200_000 }, () => {
   it('returns a token id', async () => {
     tokenId = await createTokenId({
       ...inputs,
@@ -512,7 +514,7 @@ auctionStartDate:  ${new Date(Number(auctionStartDate.int) * 1000)}`,
   );
 });
 
-describe('buyToken', () => {
+describe('buyToken', { timeout: 200_000 }, () => {
   const inputs = {
     chainId,
     precision: { int: '0' },

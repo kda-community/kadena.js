@@ -206,7 +206,8 @@ export const SignFormReceiver = ({
       network,
       networksData,
     ],
-    queryFn: () => createPrincipal(pubKeys, networkDto, watchReceiverChainId, pred),
+    queryFn: () =>
+      createPrincipal(pubKeys, networkDto, watchReceiverChainId, pred),
     enabled: pubKeys.length > 0,
     placeholderData: keepPreviousData,
   });

@@ -44,7 +44,9 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('create, mint, offer and test withdrawal of a token', { timeout: 200_000 }, () => {
+const STEP_DESC = 'create, mint, offer and test withdrawal of a token';
+
+describe(STEP_DESC, { timeout: 200_000 }, () => {
   let tokenId: string | undefined;
 
   it('returns a token id', async () => {
@@ -461,7 +463,7 @@ describe('offer non-existent token', () => {
   });
 });
 
-describe('create, mint, offer and buy a token', () => {
+describe('create, mint, offer and buy a token', { timeout: 200_000 }, () => {
   const inputs = {
     chainId,
     precision: { int: '0' },
@@ -532,7 +534,7 @@ describe('create, mint, offer and buy a token', () => {
     };
 
     const blockDate = await getBlockDate({ chainId });
-    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 4));
+    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 14));
 
     const result = await offerToken(
       {

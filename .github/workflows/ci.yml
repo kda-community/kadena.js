@@ -81,7 +81,7 @@ jobs:
         with:
           node_git_ref: fix_devnet
 
-      - name: run integration tests
+      - name: Run integration tests
         run: pnpm run test:integration --filter ${{ matrix.package }}
 
       - name: Archive volumes

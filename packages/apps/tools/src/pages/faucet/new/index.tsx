@@ -117,7 +117,9 @@ const NewAccountFaucetPage: FC = () => {
   const [requestKey, setRequestKey] = useState<string>('');
   const drawerPanelRef = useRef<HTMLElement | null>(null);
 
-  const networkDto = networksData.find((item) => item.networkId === selectedNetwork);
+  const networkDto = networksData.find(
+    (item) => item.networkId === selectedNetwork,
+  );
   const { data: accountName } = useQuery({
     queryKey: [
       'accountName',
