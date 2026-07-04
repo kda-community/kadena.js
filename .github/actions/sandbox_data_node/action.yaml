@@ -85,3 +85,8 @@ runs:
         port: 5432
         postgres-version: "14"
         ssl: true
+
+    - name: Start Data node
+      shell: bash
+      run: |
+        chainweb-data server -m --service-host=localhost:1848 --dbuser=devnet --dbname=devnet
