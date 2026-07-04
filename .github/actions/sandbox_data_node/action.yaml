@@ -90,4 +90,4 @@ runs:
       shell: bash
       run: |
         ls $SANDBOX_CHAINWEB_DATA_BIN
-        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data server" -m --service-host=localhost:1848 --dbuser=devnet --dbname=devnet
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server -m --service-host=localhost:1848 --dbuser=devnet --dbname=devnet

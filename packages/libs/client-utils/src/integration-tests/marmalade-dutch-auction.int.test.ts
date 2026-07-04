@@ -723,8 +723,7 @@ describe('buyToken', { timeout: 200_000 }, () => {
 
     /* Wait for a 3 new blocks being mined */
 
-
-    await waitForNewBlock().then(waitForNewBlock).then(waitForNewBlock)
+    await waitForNewBlock().then(waitForNewBlock).then(waitForNewBlock);
 
     const latestPrice = await getCurrentPrice({
       saleId: saleId as string,
@@ -734,15 +733,15 @@ describe('buyToken', { timeout: 200_000 }, () => {
     });
 
     expect(latestPrice).toBeDefined();
-    console.log("-----------------------------")
-    console.log(latestPrice)
+    console.log('-----------------------------');
+    console.log(latestPrice);
 
     const result = await buyToken(
       {
         auctionConfig: {
           dutch: true,
         },
-        updatedPrice: { decimal: String(latestPrice)  },
+        updatedPrice: { decimal: String(latestPrice) },
         escrow: {
           account: (escrowAccount as any).account,
         },
