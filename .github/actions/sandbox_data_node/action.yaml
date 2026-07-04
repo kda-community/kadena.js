@@ -48,7 +48,7 @@ runs:
       uses: actions/cache/restore@v6
       with:
         path: ${{ env.SANDBOX_CHAINWEB_DATA_BIN}}
-        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+        key: data-node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
 
     - name: Set permissions for .ghcup (ubuntu)
       if: steps.cache-binaries.outputs.cache-hit != 'true'
@@ -75,7 +75,7 @@ runs:
       uses: actions/cache/save@v6
       with:
         path: ${{ env.SANDBOX_CHAINWEB_DATA_BIN}}
-        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+        key: data-node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
 
     - name: Install Postgresql
       uses: ikalnytskyi/action-setup-postgres@v8
