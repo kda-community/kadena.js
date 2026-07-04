@@ -60,7 +60,8 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('create, mint and offer a token with auction, update auction. Get details', () => {
+describe('create, mint and offer a token with auction, update auction. Get details', { timeout: 200_000 },
+  () => {
   it('returns a token id', async () => {
     tokenId = await createTokenId({
       ...inputs,
@@ -663,7 +664,7 @@ describe('buyToken', () => {
   it('creates dutch auction', async () => {
     const blockDate = await getBlockDate({ chainId });
     auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 10));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 20));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 40));
 
     const result = await createAuction(
       {

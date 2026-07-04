@@ -109,6 +109,7 @@ runs:
 
     - name: Start node
       if: ${{ inputs.start_node == 'true' }}
+      timeout-minutes: 2
       shell: bash
       run: |
         set -e
@@ -119,12 +120,15 @@ runs:
                                    > $SANDBOX_RUN/node.log 2>&1 &
         echo $! >> "$SANDBOX_RUN/pid"
 
-        sleep 30
-        curl -fsS http://localhost:1848/health-check | grep "Health check OK."
-
+        until curl -fsS http://localhost:1848/health-check 2>/dev/null | grep -q "Health check OK."
+        do sleep 1
+        done
 
         $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" \
                                             >  $SANDBOX_RUN/mining-client.log 2>&1 &
 
-        sleep 30
-        curl http://localhost:1848/chainweb/0.0/development/cut
+        until HEIGHT=$(curl -fsS http://localhost:1848/chainweb/0.0/development/cut | jq -r '.height')
+              echo "Current height: $HEIGHT"
+              [ "$HEIGHT" -ge 40 ]
+        do sleep 1
+        done

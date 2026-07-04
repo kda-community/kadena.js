@@ -37,22 +37,21 @@ jobs:
         run: pnpm turbo lint build test
 
   prepare_devnet:
-    name: Precompile a Devnet node
+    name: Precompile a working Devnet node
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repos
         uses: actions/checkout@v7
-        with:
-          fetch-depth: 2
-          show-progress: false
 
-
-      - name: Prepare Kadena sandbox
+      - name: Prepare a Test Kadena sandbox
         uses: ./.github/actions/sandbox
         with:
           node_git_ref: fix_devnet
-          start_node: false
+
+      - name: Stop the node
+        shell: bash
+        run:  kill $(cat "$SANDBOX_RUN/pid")
 
 
   integration-tests:
