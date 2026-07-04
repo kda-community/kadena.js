@@ -734,7 +734,7 @@ describe('buyToken', { timeout: 200_000 }, () => {
         auctionConfig: {
           dutch: true,
         },
-        updatedPrice: { decimal: String(latestPrice) },
+        updatedPrice: { decimal: "5.0" },
         escrow: {
           account: (escrowAccount as any).account,
         },

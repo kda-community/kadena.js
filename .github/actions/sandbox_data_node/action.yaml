@@ -1,0 +1,84 @@
+name: 'Setup a Postgresql data node'
+
+inputs:
+  ghc_version:
+    default: "9.10.2"
+  cabal_version:
+    default: "latest"
+  cache_version:
+    default: "1"
+  git_ref:
+    default: "master"
+
+
+runs:
+  using: 'composite'
+  steps:
+
+    - name: Clean and prepare directories
+      shell: bash
+      run: |
+        SANDBOX_CHAINWEB_DATA_BIN="$GITHUB_WORKSPACE/.chainweb_data_bin"
+
+        mkdir -p $SANDBOX_CHAINWEB_DATA_BIN
+        echo "SANDBOX_CHAINWEB_DATA_BIN=$SANDBOX_CHAINWEB_DATA_BIN" >> "$GITHUB_ENV"
+
+    - name: Checkout Node Source
+      uses: actions/checkout@v7
+      with:
+        repository: kda-community/chainweb-data
+        path: .repos/chainweb-data
+        ref: ${{ inputs.git_ref }}
+
+    - name: Compute Cache key
+      id: compute-cache-key
+      shell: bash
+      run: |
+        SHA_A=$(git -C .repos/chainweb-node rev-parse HEAD)
+
+        CACHE_KEY=$(printf "%s%s%s%s" "$SHA_A"  "${{inputs.ghc_version}}" "${{inputs.cabal_version}}" "${{inputs.cache_version}}"  | sha256sum | cut -d' ' -f1)
+        echo "cache_key=$CACHE_KEY" >> "$GITHUB_OUTPUT"
+
+    - name: Restore cache
+      id: cache-binaries
+      uses: actions/cache/restore@v6
+      with:
+        path: ${{ env.SANDBOX_CHAINWEB_DATA_BIN}}
+        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+
+    - name: Set permissions for .ghcup (ubuntu)
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      shell: bash
+      run: sudo chown -R $USER /usr/local/.ghcup
+
+    - name: Install GHC and Cabal
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      uses: haskell-actions/setup@v2
+      with:
+         ghc-version: ${{ inputs.ghc_version }}
+         cabal-version: ${{ inputs.cabal_version }}
+
+    - name: Compile Chainweb Data node
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      working-directory: .repos/chainweb-data
+      shell: bash
+      run: |
+        cabal build chainweb-data
+        cp $(cabal list-bin chainweb-data) "${SANDBOX_CHAINWEB_DATA_BIN}/"
+
+    - name: Save cache
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v6
+      with:
+        path: ${{ env.SANDBOX_CHAINWEB_DATA_BIN}}
+        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+
+    - name: Install Postgresql
+      uses: ikalnytskyi/action-setup-postgres@v8
+      with:
+        username: postgres
+        password: hello_kadena
+        database: kadena_data
+        port: 5432
+        postgres-version: "14"
+        ssl: true

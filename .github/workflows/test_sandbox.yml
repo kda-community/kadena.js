@@ -60,84 +60,10 @@ jobs:
       - name: Runner Setup
         uses: ./.github/actions/runner-setup
 
-
-      - name: Build App with NODE_ENV=test
-        uses: ./.github/actions/build-app-e2e
-        with:
-          app: dev-wallet
-
       - name: Setup Kadena sandbox
         uses: ./.github/actions/sandbox
         with:
           node_git_ref: fix_devnet
 
-      - name: Run end-to-end tests dev-wallet
-        uses: ./.github/actions/end-to-end-tests
-        with:
-          app: dev-wallet
-
-      - name: Kill Kadena Sandbox
-        if: always()
-        run: |
-          kill $(cat "$SANDBOX_RUN/pid")
-
-      - name: Archive volumes
-        uses: ./.github/actions/archive-volumes
-        if: always()
-        with:
-          test-object: dev-wallet
-
-
-
-      - name: Runner Setup
-        uses: ./.github/actions/runner-setup
-
-
-      - name: Setup Kadena sandbox
-        uses: ./.github/actions/sandbox
-        with:
-          node_git_ref: fix_devnet
-
-      - name: run integration tests client
-        run: pnpm run test:integration --filter @kadena/client
-
-      - name: Kill Kadena Sandbox
-        if: always()
-        run: |
-          kill $(cat "$SANDBOX_RUN/pid")
-
-
-      - name: Runner Setup
-        uses: ./.github/actions/runner-setup
-
-
-      - name: Setup Kadena sandbox
-        uses: ./.github/actions/sandbox
-        with:
-          node_git_ref: fix_devnet
-
-      - name: run integration tests create-kadena-app
-        run: pnpm run test:integration --filter @kadena/create-kadena-app
-
-      - name: Kill Kadena Sandbox
-        if: always()
-        run: |
-          kill $(cat "$SANDBOX_RUN/pid")
-
-
-      - name: Runner Setup
-        uses: ./.github/actions/runner-setup
-
-
-      - name: Setup Kadena sandbox
-        uses: ./.github/actions/sandbox
-        with:
-          node_git_ref: fix_devnet
-
-      - name: run integration tests client-utils
-        run: pnpm run test:integration --filter @kadena/client-utils
-
-      - name: Kill Kadena Sandbox
-        if: always()
-        run: |
-          kill $(cat "$SANDBOX_RUN/pid")
+      - name: Setup Chainweb data sandbox
+        uses: ./.github/actions/sandbox_data_node
