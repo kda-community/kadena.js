@@ -303,7 +303,7 @@ describe(STEP_DESC, { timeout: 200_000 }, () => {
 
     const blockDate = await getBlockDate({ chainId });
     auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 30));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 120));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 1200));
 
     const result = await createAuction(
       {
@@ -490,7 +490,7 @@ describe(STEP_DESC, { timeout: 200_000 }, () => {
   });
 
   it(
-    'returns start price after the auction have started',
+    'returns close to start price after the auction have started',
     async () => {
       if (auctionStartDate === undefined) {
         throw new Error('auctionStartDate is undefined');

@@ -84,6 +84,7 @@ runs:
       with:
         username: devnet
         database: devnet
+        password: HawkTuah
         port: 5432
         postgres-version: "14"
         ssl: true
@@ -92,6 +93,7 @@ runs:
       shell: bash
       env:
         EXTRA_ENV: ${{ inputs.extra_migration_dir }}
+        DB_STRING: ${{ steps.postgres.outputs.connection-uri }}
       run: |
         EXTRA_OPTION=${EXTRA_ENV:+"--extra-migrations-folder $EXTRA_ENV"}
-        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" migrate $EXTRA_OPTION --dbuser=devnet --dbname=devnet
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" migrate $EXTRA_OPTION --dbstring=$DB_STRING

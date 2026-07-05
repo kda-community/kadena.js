@@ -1,5 +1,6 @@
 import { kadenaDefaultNetworks } from '@/constants/kadena';
-import { INetworkData, prefixApi } from '@/utils/network';
+import type { INetworkData } from '@/utils/network';
+import { prefixApi } from '@/utils/network';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,

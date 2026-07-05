@@ -121,14 +121,7 @@ const NewAccountFaucetPage: FC = () => {
     (item) => item.networkId === selectedNetwork,
   );
   const { data: accountName } = useQuery({
-    queryKey: [
-      'accountName',
-      pubKeys,
-      chainID,
-      pred,
-      selectedNetwork,
-      networksData,
-    ],
+    queryKey: ['accountName', pubKeys, chainID, pred, networkDto],
 
     queryFn: () => createPrincipal(pubKeys, networkDto, chainID, pred),
     enabled: pubKeys.length > 0,
