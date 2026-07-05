@@ -87,8 +87,8 @@ runs:
       uses: ikalnytskyi/action-setup-postgres@v8
       id: postgres_setup
       with:
-        username: devnet
-        database: devnet
+        username: devnet-user
+        database: devnet-db
         password: HawkTuah
         port: 5432
         postgres-version: "14"
