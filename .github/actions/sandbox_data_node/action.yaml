@@ -81,6 +81,7 @@ runs:
 
     - name: Install Postgresql
       uses: ikalnytskyi/action-setup-postgres@v8
+      id: postgres_setup
       with:
         username: devnet
         database: devnet
@@ -93,7 +94,7 @@ runs:
       shell: bash
       env:
         EXTRA_ENV: ${{ inputs.extra_migration_dir }}
-        DB_STRING: ${{ steps.postgres.outputs.connection-uri }}
+        DB_STRING: ${{ steps.postgres_setup.outputs.connection-uri }}
       run: |
         EXTRA_OPTION=${EXTRA_ENV:+"--extra-migrations-folder $EXTRA_ENV"}
         "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" migrate $EXTRA_OPTION --dbstring=$DB_STRING
