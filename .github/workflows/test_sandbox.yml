@@ -67,3 +67,5 @@ jobs:
 
       - name: Setup Chainweb data sandbox
         uses: ./.github/actions/sandbox_data_node
+        with:
+          extra_migration_dir: packages/apps/graph/cwd-extra-migrations
