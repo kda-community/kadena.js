@@ -12,7 +12,6 @@ inputs:
   extra_migration_dir:
     default: ""
 
-
 runs:
   using: 'composite'
   steps:
@@ -20,9 +19,14 @@ runs:
     - name: Clean and prepare directories
       shell: bash
       run: |
+        SANDBOX_RUN="$GITHUB_WORKSPACE/.sandbox"
         SANDBOX_CHAINWEB_DATA_BIN="$GITHUB_WORKSPACE/.chainweb_data_bin"
 
+        mkdir -p $SANDBOX_RUN
+
+
         mkdir -p $SANDBOX_CHAINWEB_DATA_BIN
+        echo "SANDBOX_RUN=$SANDBOX_RUN" >> "$GITHUB_ENV"
         echo "SANDBOX_CHAINWEB_DATA_BIN=$SANDBOX_CHAINWEB_DATA_BIN" >> "$GITHUB_ENV"
 
     - name: Install required packages
@@ -98,3 +102,15 @@ runs:
       run: |
         EXTRA_OPTION=${EXTRA_ENV:+"--extra-migrations-folder $EXTRA_ENV"}
         "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" migrate $EXTRA_OPTION --dbstring=$DB_STRING
+
+    - name: Start Data Node
+      shell: bash
+      env:
+        DB_STRING: ${{ steps.postgres_setup.outputs.connection-uri }}
+      run: |
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --dbstring=$DB_STRING \
+        > $SANDBOX_RUN/node.log 2>&1 &
+        echo $! > "$SANDBOX_RUN/data.pid"
+
+        # Keep the URI in a ENV, will be used by the graph then
+        echo "DATABASE_URL=$DB_STRING" >> "$GITHUB_ENV"

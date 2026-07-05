@@ -99,7 +99,7 @@ jobs:
       matrix:
         app:
           - tools
-#         - graph   ### Disabled for now
+          - graph
           - dev-wallet
 
     steps:
@@ -115,6 +115,13 @@ jobs:
          uses: ./.github/actions/sandbox
          with:
           node_git_ref: fix_devnet
+
+      - name: Setup Kadena Data Node Sandbox only for graph
+        id: setup_data_node
+        if: matrix.app == 'graph'
+        uses: ./.github/actions/sandbox_data_node
+        with:
+          extra_migration_dir: packages/apps/graph/cwd-extra-migrations
 
       - name: Build App with NODE_ENV=test
         uses: ./.github/actions/build-app-e2e
