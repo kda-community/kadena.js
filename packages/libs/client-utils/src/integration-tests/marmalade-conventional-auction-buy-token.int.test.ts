@@ -19,6 +19,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { NetworkIds } from './support/NetworkIds';
@@ -110,6 +111,7 @@ describe(STEP_DESC, { timeout: 200_000 }, () => {
       throw new Error('Token ID is not defined');
     }
     const withStep = withStepFactory();
+    await waitForNewBlock();
     const blockTime = await getBlockDate({ chainId: chainId as ChainId });
 
     const result = await offerToken(
@@ -200,8 +202,10 @@ describe(STEP_DESC, { timeout: 200_000 }, () => {
   });
 
   it('creates conventional auction', async () => {
+    await waitForNewBlock();
     const blockTime = await getBlockDate({ chainId: chainId as ChainId });
-    auctionStartDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 13));
+
+    auctionStartDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 23));
     auctionEndDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 43));
 
     if (tokenId === undefined || saleId === undefined) {

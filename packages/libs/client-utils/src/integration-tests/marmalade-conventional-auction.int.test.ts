@@ -25,6 +25,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
@@ -399,14 +400,14 @@ describe(STEP_DESC, { timeout: 200_000 }, () => {
 
   it('is able to update conventional auction', async () => {
     const withStep = withStepFactory();
-
+    await waitForNewBlock();
     const currentBlockTime = await getBlockDate({ chainId });
 
     auctionStartDate = dateToPactInt(
-      addSecondsToDate(new Date(currentBlockTime), 12),
+      addSecondsToDate(new Date(currentBlockTime), 23),
     );
     auctionEndDate = dateToPactInt(
-      addSecondsToDate(new Date(currentBlockTime), 28),
+      addSecondsToDate(new Date(currentBlockTime), 43),
     );
 
     const result = await updateAuction(

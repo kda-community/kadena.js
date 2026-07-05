@@ -301,8 +301,9 @@ describe(STEP_DESC, { timeout: 200_000 }, () => {
   it('is able to create dutch auction', async () => {
     const withStep = withStepFactory();
 
+    await waitForNewBlock();
     const blockDate = await getBlockDate({ chainId });
-    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 30));
+    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 23));
     auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 1200));
 
     const result = await createAuction(
@@ -665,9 +666,10 @@ describe('buyToken', { timeout: 200_000 }, () => {
   });
 
   it('creates dutch auction', async () => {
+    await waitForNewBlock();
     const blockDate = await getBlockDate({ chainId });
-    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 10));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 300.0));
+    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 23));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 300));
 
     const result = await createAuction(
       {

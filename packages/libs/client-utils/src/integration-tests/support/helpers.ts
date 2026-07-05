@@ -12,6 +12,8 @@ import { dirtyReadClient, submitClient } from '../../core';
 import type { Any } from '../../core/utils/types';
 import { sourceAccount } from '../test-data/accounts';
 
+const REF_BLOCK_TIME = 5_000;
+
 export const withStepFactory = () => {
   let step = 0;
   return <
@@ -78,19 +80,11 @@ export const waitForBlockTime = async (timeSeconds: IPactInt) => {
   while (true) {
     const time = await getBlockDate();
 
-    let diffTime = 0;
+    const diffTime = Number(timeSeconds.int) * 1000 - time.getTime();
 
-    if (time.getTime() > Number(timeSeconds.int) * 1000) {
-      break;
-    } else {
-      diffTime = Number(timeSeconds.int) * 1000 - time.getTime() + 50;
-    }
-
-    if (diffTime === 0) {
-      break;
-    }
-
-    await waitFor(diffTime);
+    if (diffTime < 0) break;
+    else if (diffTime > 2 * REF_BLOCK_TIME) await waitFor(REF_BLOCK_TIME);
+    else await waitFor(10);
   }
 };
 

@@ -18,6 +18,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
@@ -199,10 +200,11 @@ describe(STEP_DESC, { timeout: 200_000 }, () => {
       sign: createSignWithKeypair([sourceAccount]),
     };
 
+    await waitForNewBlock();
     const currentBlockTime = await getBlockDate({ chainId });
 
     saleTimeoutTimeSeconds = new PactNumber(
-      Math.floor(addSecondsToDate(currentBlockTime, 25).getTime() / 1000),
+      Math.floor(addSecondsToDate(currentBlockTime, 23).getTime() / 1000),
     ).toPactInteger();
 
     const result = await offerToken(
@@ -533,8 +535,9 @@ describe('create, mint, offer and buy a token', { timeout: 200_000 }, () => {
       sign: createSignWithKeypair([sourceAccount]),
     };
 
+    await waitForNewBlock();
     const blockDate = await getBlockDate({ chainId });
-    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 14));
+    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 23));
 
     const result = await offerToken(
       {

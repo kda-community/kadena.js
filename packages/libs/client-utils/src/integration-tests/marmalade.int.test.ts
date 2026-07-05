@@ -1,6 +1,7 @@
 import type { ChainId, PactErrorCode } from '@kadena/client';
 import { createSignWithKeypair, getPactErrorCode } from '@kadena/client';
 import { PactNumber } from '@kadena/pactjs';
+import { log } from 'console';
 import { describe, expect, it } from 'vitest';
 import {
   burnToken,
@@ -480,6 +481,7 @@ describe('transferCreateToken', () => {
         'preflight',
         withStep((step, prResult) => {
           expect(step).toBe(2);
+          console.log('Prefiligh OK');
           if (prResult.result.status === 'failure') {
             expect(prResult.result.status).toBe('success');
           } else {
@@ -491,6 +493,7 @@ describe('transferCreateToken', () => {
         'submit',
         withStep((step, trDesc) => {
           expect(step).toBe(3);
+          console.log('Submit OK');
           expect(trDesc.networkId).toBe(NetworkIds.development);
           expect(trDesc.chainId).toBe(chainId);
           expect(trDesc.requestKey).toBeTruthy();
@@ -500,6 +503,7 @@ describe('transferCreateToken', () => {
         'listen',
         withStep((step, sbResult) => {
           expect(step).toBe(4);
+          console.log('Listen OK');
           if (sbResult.result.status === 'failure') {
             expect(sbResult.result.status).toBe('success');
           } else {
@@ -510,6 +514,8 @@ describe('transferCreateToken', () => {
       .execute();
 
     expect(result).toBe(true);
+    console;
+    log('End transfer');
 
     const balance = await getTokenBalance({
       accountName: secondaryTargetAccount.account,

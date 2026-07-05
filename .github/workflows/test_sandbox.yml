@@ -70,6 +70,10 @@ jobs:
         with:
           extra_migration_dir: packages/apps/graph/cwd-extra-migrations
 
+      - name: Check stats
+        shell: bash
+        run: curl http://localhost:1849/stats
+
       - name: Build App with NODE_ENV=test
         uses: ./.github/actions/build-app-e2e
         with:
@@ -84,5 +88,3 @@ jobs:
           pnpm install --filter @kadena/graph
           pnpm turbo build --filter @kadena/graph
           pnpm run start
-
-
