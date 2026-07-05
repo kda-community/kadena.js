@@ -109,10 +109,15 @@ runs:
         DB_STRING: ${{ steps.postgres_setup.outputs.connection-uri }}
       run: |
         "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --port 1849 --dbstring=$DB_STRING \
-                                                          --service-host --service-port 1748
-
-        #> $SANDBOX_RUN/node.log 2>&1 &
+                                                          --service-host 127.0.0.1 --service-port 1849 \
+        > $SANDBOX_RUN/data_node.log 2>&1 &
         echo $! > "$SANDBOX_RUN/data.pid"
 
         # Keep the URI in a ENV, will be used by the graph then
         echo "DATABASE_URL=$DB_STRING" >> "$GITHUB_ENV"
+
+    - name: Display start logs
+      shell: bash
+      run: |
+        sleep 5
+        cat $SANDBOX_RUN/data_node.log
