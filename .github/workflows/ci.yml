@@ -45,7 +45,7 @@ jobs:
       - name: Runner setup
         uses: ./.github/actions/runner-setup
 
-      - name: Build, lint, test all packages
+      - name: Build all packages
         run: pnpm turbo build
 
   unit_test:
@@ -60,11 +60,11 @@ jobs:
       - name: Runner setup
         uses: ./.github/actions/runner-setup
 
-      - name: Build, lint, test all packages
+      - name: Build and test all packages
         run: pnpm turbo build test
 
   prepare_devnet:
-    name: Precompile a working Devnet node
+    name: Cache a working Devnet node
     runs-on: ubuntu-latest
 
     steps:
