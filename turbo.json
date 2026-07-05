@@ -23,6 +23,7 @@
     },
     "test:e2e": {
       "inputs": ["tests/**/*.ts", "tests/**/*.tsx"],
+      "env": ["NETWORK_HOST", "MEMPOOL_HOST","DATABASE_URL"],
       "outputs": ["blob-report/**"],
       "outputLogs": "new-only"
     },

@@ -76,8 +76,13 @@ jobs:
           app: graph
 
       - name: Start graph
+        env:
+          NETWORK_HOST: http://localhost:1848
+          MEMPOOL_HOST: localhost:4443
         working-directory: packages/apps/graph
         run: |
           pnpm install --filter @kadena/graph
           pnpm turbo build --filter @kadena/graph
           pnpm run start
+
+

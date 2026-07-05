@@ -129,6 +129,9 @@ jobs:
           app: ${{ matrix.app }}
 
       - name: Run end-to-end tests
+        env:
+          NETWORK_HOST: http://localhost:1848
+          MEMPOOL_HOST: localhost:4443
         uses: ./.github/actions/end-to-end-tests
         with:
           app: ${{ matrix.app }}
