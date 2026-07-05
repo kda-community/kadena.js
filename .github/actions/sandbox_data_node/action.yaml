@@ -108,7 +108,9 @@ runs:
       env:
         DB_STRING: ${{ steps.postgres_setup.outputs.connection-uri }}
       run: |
-        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --port 1849 --dbstring=$DB_STRING
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --port 1849 --dbstring=$DB_STRING \
+                                                          --service-host --service-port 1748
+
         #> $SANDBOX_RUN/node.log 2>&1 &
         echo $! > "$SANDBOX_RUN/data.pid"
 
