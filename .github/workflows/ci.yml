@@ -17,15 +17,15 @@ permissions:
   contents: write
 
 jobs:
-  build:
-    name: Build & unit test
+
+  lint:
+    name: Linting
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 2
-          show-progress: false
 
       - name: Runner setup
         uses: ./.github/actions/runner-setup
@@ -33,8 +33,35 @@ jobs:
       - name: Lint monorepo root
         run: pnpm run lint
 
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+
+      - name: Runner setup
+        uses: ./.github/actions/runner-setup
+
       - name: Build, lint, test all packages
-        run: pnpm turbo lint build test
+        run: pnpm turbo build
+
+  unit_test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+
+      - name: Runner setup
+        uses: ./.github/actions/runner-setup
+
+      - name: Build, lint, test all packages
+        run: pnpm turbo build test
 
   prepare_devnet:
     name: Precompile a working Devnet node
@@ -56,7 +83,7 @@ jobs:
 
   integration-tests:
     name: INT - ${{ matrix.package }}
-    needs: [prepare_devnet]
+    needs: [prepare_devnet, build]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -92,7 +119,7 @@ jobs:
 
   end-to-end-tests:
     name: E2E - ${{ matrix.app }}
-    needs: [prepare_devnet]
+    needs: [prepare_devnet, build]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

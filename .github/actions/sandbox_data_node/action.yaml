@@ -106,9 +106,13 @@ runs:
     - name: Start Data Node
       shell: bash
       env:
+        EXTRA_ENV: ${{ inputs.extra_migration_dir }}
+
         DB_STRING: ${{ steps.postgres_setup.outputs.connection-uri }}
       run: |
-        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --port 1849 --dbstring=$DB_STRING \
+        EXTRA_OPTION=${EXTRA_ENV:+"--extra-migrations-folder $EXTRA_ENV"}
+
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --port 1849 $EXTRA_OPTION --dbstring=$DB_STRING \
                                                           --service-host 127.0.0.1 --service-port 1849 \
         > $SANDBOX_RUN/data_node.log 2>&1 &
         echo $! > "$SANDBOX_RUN/data.pid"
