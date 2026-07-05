@@ -108,8 +108,8 @@ runs:
       env:
         DB_STRING: ${{ steps.postgres_setup.outputs.connection-uri }}
       run: |
-        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --port 1849 --dbstring=$DB_STRING  \
-        > $SANDBOX_RUN/node.log 2>&1 &
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server --port 1849 --dbstring=$DB_STRING
+        #> $SANDBOX_RUN/node.log 2>&1 &
         echo $! > "$SANDBOX_RUN/data.pid"
 
         # Keep the URI in a ENV, will be used by the graph then
