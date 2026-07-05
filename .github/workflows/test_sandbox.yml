@@ -69,3 +69,15 @@ jobs:
         uses: ./.github/actions/sandbox_data_node
         with:
           extra_migration_dir: packages/apps/graph/cwd-extra-migrations
+
+      - name: Build App with NODE_ENV=test
+        uses: ./.github/actions/build-app-e2e
+        with:
+          app: graph
+
+      - name: Start graph
+        working-directory: packages/apps/graph
+        run: |
+          pnpm install --filter @kadena/graph
+          pnpm turbo build --filter @kadena/graph
+          pnpm run start
