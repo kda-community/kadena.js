@@ -7,7 +7,6 @@ import {
   setMeta,
 } from '@kadena/client/fp';
 import type { ChainId, IPactInt } from '@kadena/types';
-import { printer } from 'prettier/doc';
 import { expect } from 'vitest';
 import { dirtyReadClient, submitClient } from '../../core';
 import type { Any } from '../../core/utils/types';
@@ -30,14 +29,6 @@ export const withStepFactory = () => {
 
 export const waitFor = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
-
-export const waitForNewBlock = async () => {
-  const initBlockTime = await getBlockDate();
-  while (true) {
-    const newBlockTime = await getBlockDate();
-    if (newBlockTime.getTime() != initBlockTime.getTime()) return;
-  }
-};
 
 export const getBlockDate = async (props?: { chainId?: ChainId }) => {
   const { chainId } = props || { chainId: '0' };
@@ -63,6 +54,14 @@ export const getBlockDate = async (props?: { chainId?: ChainId }) => {
   ).execute();
 
   return new Date(Number(parseAsPactValue(time)) * 1000);
+};
+
+export const waitForNewBlock = async () => {
+  const initBlockTime = await getBlockDate();
+  while (true) {
+    const newBlockTime = await getBlockDate();
+    if (newBlockTime.getTime() !== initBlockTime.getTime()) return;
+  }
 };
 
 /**

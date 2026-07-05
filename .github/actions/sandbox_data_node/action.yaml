@@ -10,7 +10,7 @@ inputs:
   git_ref:
     default: "master"
   extra_migration_dir:
-    deafult: ""
+    default: ""
 
 
 runs:
@@ -40,9 +40,9 @@ runs:
       id: compute-cache-key
       shell: bash
       run: |
-        SHA_A=$(git -C .repos/chainweb-node rev-parse HEAD)
+        SHA=$(git -C .repos/chainweb-data rev-parse HEAD)
 
-        CACHE_KEY=$(printf "%s%s%s%s" "$SHA_A"  "${{inputs.ghc_version}}" "${{inputs.cabal_version}}" "${{inputs.cache_version}}"  | sha256sum | cut -d' ' -f1)
+        CACHE_KEY=$(printf "%s%s%s%s" "$SHA"  "${{inputs.ghc_version}}" "${{inputs.cabal_version}}" "${{inputs.cache_version}}"  | sha256sum | cut -d' ' -f1)
         echo "cache_key=$CACHE_KEY" >> "$GITHUB_OUTPUT"
 
     - name: Restore cache
@@ -94,4 +94,4 @@ runs:
         EXTRA_ENV: ${{ inputs.extra_migration_dir }}
       run: |
         EXTRA_OPTION=${EXTRA_ENV:+"--extra-migrations-folder $EXTRA_ENV"}
-        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" migrate "$EXTRA_OPTION" --dbuser=devnet --dbname=devnet
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" migrate $EXTRA_OPTION --dbuser=devnet --dbname=devnet
