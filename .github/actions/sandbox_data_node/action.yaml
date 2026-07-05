@@ -9,6 +9,8 @@ inputs:
     default: "1"
   git_ref:
     default: "master"
+  extra_migration_dir:
+    deafult: ""
 
 
 runs:
@@ -86,8 +88,10 @@ runs:
         postgres-version: "14"
         ssl: true
 
-    - name: Start Data node
+    - name: Initialize DB
       shell: bash
+      env:
+        EXTRA_ENV: ${{ inputs.extra_migration_dir }}
       run: |
-        ls $SANDBOX_CHAINWEB_DATA_BIN
-        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" server -m --service-host=localhost:1848 --dbuser=devnet --dbname=devnet
+        EXTRA_OPTION=${EXTRA_ENV:+"--extra-migrations-folder $EXTRA_ENV"}
+        "$SANDBOX_CHAINWEB_DATA_BIN/chainweb-data" migrate "$EXTRA_OPTION" --dbuser=devnet --dbname=devnet
