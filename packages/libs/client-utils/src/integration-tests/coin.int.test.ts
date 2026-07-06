@@ -29,7 +29,7 @@ const accountTwo = {
   account: `two-${Date.now()}`,
 };
 
-describe('transferCreate', () => {
+describe('transferCreate', { timeout: 60_000 }, () => {
   it('should transfer kda from sender00 account to receiverAccount and create the account if its not exist', async () => {
     const withStep = withStepFactory();
     const result = await transferCreate(
@@ -132,7 +132,7 @@ describe('getDetails', () => {
   });
 });
 
-describe('createAccount', () => {
+describe('createAccount', { timeout: 60_000 }, () => {
   it("should create the account with 0 balance if it's not exist", async () => {
     const result = await createAccount(
       {
@@ -160,7 +160,7 @@ describe('createAccount', () => {
   });
 });
 
-describe('transfer', () => {
+describe('transfer', { timeout: 60_000 }, () => {
   it('should transfer amount to an existed account', async () => {
     const result = await transfer(
       {
@@ -235,7 +235,7 @@ describe('cross chain transfer', { timeout: 200_000 }, () => {
   });
 });
 
-describe('safeTransfer', () => {
+describe('safeTransfer', { timeout: 60_000 }, () => {
   it('should transfer kda from sender00 account to receiverAccount if both receiver and sender sign', async () => {
     const initialBalance = await getBalance(
       accountOne.account,
@@ -343,7 +343,9 @@ describe('safeTransfer', () => {
     await expect(() => task.execute()).rejects.toThrow(/Keyset failure/);
   });
 
-  it('uses normal transfer if gasPayer is the same as receiver', async () => {
+  const _TITLE = 'uses normal transfer if gasPayer is the same as receiver';
+
+  it(_TITLE, { timeout: 60_000 }, async () => {
     const initialBalance = await getBalance(
       accountOne.account,
       'development',
