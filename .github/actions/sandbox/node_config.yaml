@@ -45,7 +45,7 @@ chainweb:
   transactionIndex:
     enabled: true
     configuration: {}
-  headerStream: false
+  headerStream: true
   mempoolP2p:
     enabled: true
     configuration:
