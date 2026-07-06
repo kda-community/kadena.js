@@ -125,3 +125,9 @@ runs:
       run: |
         sleep 5
         cat $SANDBOX_RUN/data_node.log
+
+    - name: Check that /stats is OK
+      shell: bash
+      run: |
+        sleep 25
+        curl -fsS http://localhost:1849/stats | jq -e 'has("transactionCount") and has("coinsInCirculation")' > /dev/null
