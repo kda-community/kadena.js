@@ -72,7 +72,9 @@ jobs:
 
       - name: Check stats
         shell: bash
-        run: curl http://localhost:1849/stats
+        run: |
+          sleep 30
+          curl http://localhost:1849/stats
 
       - name: Build App with NODE_ENV=test
         uses: ./.github/actions/build-app-e2e
