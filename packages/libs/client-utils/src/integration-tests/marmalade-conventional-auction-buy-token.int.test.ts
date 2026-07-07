@@ -25,10 +25,8 @@ import {
 import { NetworkIds } from './support/NetworkIds';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
 
-const STEP_DESC =
-  'create id, mint, offer for sale, create conventional auction, for a token and places a bid and buy the token';
-
-describe(STEP_DESC, { timeout: 200_000 }, () => {
+// prettier-ignore
+describe('create id, mint, offer for sale, create conventional auction, for a token and places a bid and buy the token', { timeout: 200_000 }, () => {
   const config = {
     host: 'http://127.0.0.1:1848',
     defaults: {

@@ -45,9 +45,8 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-const STEP_DESC = 'create, mint, offer and test withdrawal of a token';
-
-describe(STEP_DESC, { timeout: 200_000 }, () => {
+// prettier-ignore
+describe('create, mint, offer and test withdrawal of a token', { timeout: 200_000 }, () => {
   let tokenId: string | undefined;
 
   it('returns a token id', async () => {

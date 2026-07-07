@@ -38,10 +38,8 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-const STEP_DESC =
-  'creates, mints, offers for sale, creates and updates auction for, gets details of, bids on, a token';
-
-describe(STEP_DESC, { timeout: 200_000 }, () => {
+// prettier-ignore
+describe('creates, mints, offers for sale, creates and updates auction for, gets details of, bids on, a token', { timeout: 200_000 }, () => {
   let tokenId: string | undefined;
   let saleId: string | undefined;
   let bidId: string | undefined;

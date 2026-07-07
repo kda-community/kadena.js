@@ -61,10 +61,8 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-const STEP_DESC =
-  'create, mint and offer a token with auction, update auction. Get details';
-
-describe(STEP_DESC, { timeout: 200_000 }, () => {
+// prettier-ignore
+describe('create, mint and offer a token with auction, update auction. Get details', { timeout: 200_000 }, () => {
   it('returns a token id', async () => {
     tokenId = await createTokenId({
       ...inputs,
