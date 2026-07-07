@@ -735,8 +735,6 @@ describe('buyToken', { timeout: 200_000 }, () => {
     });
 
     expect(latestPrice).toBeDefined();
-    console.log('-----------------------------');
-    console.log(latestPrice);
 
     const result = await buyToken(
       {

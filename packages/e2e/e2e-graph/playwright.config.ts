@@ -16,7 +16,6 @@ const config: PlaywrightTestConfig = {
     stderr: 'pipe',
     env: {
       ...process.env,
-      HEELO: "abcd",
       PORT: '4000',
     },
   },
