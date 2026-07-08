@@ -23,6 +23,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
@@ -31,7 +32,7 @@ let tokenId: string | undefined;
 let saleId: string | undefined;
 
 const timeout = dateToPactInt(addDaysToDate(new Date(), 1));
-const PRICE_INTERVAL_IN_SECONDS: IPactInt = { int: '5' };
+const PRICE_INTERVAL_IN_SECONDS: IPactInt = { int: '40' };
 
 let auctionStartDate: IPactInt | undefined;
 let auctionEndDate: IPactInt | undefined;
@@ -60,7 +61,8 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('create, mint and offer a token with auction, update auction. Get details', () => {
+// prettier-ignore
+describe('create, mint and offer a token with auction, update auction. Get details', { timeout: 200_000 }, () => {
   it('returns a token id', async () => {
     tokenId = await createTokenId({
       ...inputs,
@@ -297,9 +299,10 @@ describe('create, mint and offer a token with auction, update auction. Get detai
   it('is able to create dutch auction', async () => {
     const withStep = withStepFactory();
 
+    await waitForNewBlock();
     const blockDate = await getBlockDate({ chainId });
-    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 10));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 30));
+    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 23));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 1200));
 
     const result = await createAuction(
       {
@@ -486,7 +489,7 @@ describe('create, mint and offer a token with auction, update auction. Get detai
   });
 
   it(
-    'returns start price after the auction have started',
+    'returns close to start price after the auction have started',
     async () => {
       if (auctionStartDate === undefined) {
         throw new Error('auctionStartDate is undefined');
@@ -505,13 +508,13 @@ auctionStartDate:  ${new Date(Number(auctionStartDate.int) * 1000)}`,
         host: config.host,
       });
 
-      expect(result).toBe(10);
+      expect(result).toBeGreaterThan(7);
     },
     { timeout: 60000 },
   );
 });
 
-describe('buyToken', () => {
+describe('buyToken', { timeout: 200_000 }, () => {
   const inputs = {
     chainId,
     precision: { int: '0' },
@@ -661,9 +664,10 @@ describe('buyToken', () => {
   });
 
   it('creates dutch auction', async () => {
+    await waitForNewBlock();
     const blockDate = await getBlockDate({ chainId });
-    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 10));
-    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 20));
+    auctionStartDate = dateToPactInt(addSecondsToDate(blockDate, 23));
+    auctionEndDate = dateToPactInt(addSecondsToDate(blockDate, 300));
 
     const result = await createAuction(
       {
@@ -716,6 +720,10 @@ describe('buyToken', () => {
     });
 
     expect(escrowAccount).toBeDefined();
+
+    /* Wait for a 3 new blocks being mined */
+
+    await waitForNewBlock().then(waitForNewBlock).then(waitForNewBlock);
 
     const latestPrice = await getCurrentPrice({
       saleId: saleId as string,

@@ -18,6 +18,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
@@ -44,7 +45,8 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('create, mint, offer and test withdrawal of a token', () => {
+// prettier-ignore
+describe('create, mint, offer and test withdrawal of a token', { timeout: 200_000 }, () => {
   let tokenId: string | undefined;
 
   it('returns a token id', async () => {
@@ -197,10 +199,11 @@ describe('create, mint, offer and test withdrawal of a token', () => {
       sign: createSignWithKeypair([sourceAccount]),
     };
 
+    await waitForNewBlock();
     const currentBlockTime = await getBlockDate({ chainId });
 
     saleTimeoutTimeSeconds = new PactNumber(
-      Math.floor(addSecondsToDate(currentBlockTime, 5).getTime() / 1000),
+      Math.floor(addSecondsToDate(currentBlockTime, 23).getTime() / 1000),
     ).toPactInteger();
 
     const result = await offerToken(
@@ -461,7 +464,7 @@ describe('offer non-existent token', () => {
   });
 });
 
-describe('create, mint, offer and buy a token', () => {
+describe('create, mint, offer and buy a token', { timeout: 200_000 }, () => {
   const inputs = {
     chainId,
     precision: { int: '0' },
@@ -531,8 +534,9 @@ describe('create, mint, offer and buy a token', () => {
       sign: createSignWithKeypair([sourceAccount]),
     };
 
+    await waitForNewBlock();
     const blockDate = await getBlockDate({ chainId });
-    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 4));
+    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 23));
 
     const result = await offerToken(
       {

@@ -27,7 +27,6 @@ import { createClient } from 'graphql-ws';
 import WebSocket from 'ws';
 import { getBlockHash } from '../helpers/block.helper';
 import { base64Encode } from '../helpers/cryptography.helper';
-import { triggerMining } from '../helpers/miner.helper';
 import { sendQuery } from '../helpers/request.helper';
 import {
   getTransactionsByRequestKeySubscription,
@@ -36,6 +35,7 @@ import {
 
 test.describe('Query: getTransactions', () => {
   test('Query: getTransactions - Same Chain Transfer', async ({ request }) => {
+    test.setTimeout(60_000);
     // declare testcase scoped variables.
     let query: any;
     let sourceAccount: IAccount;
@@ -191,6 +191,7 @@ test.describe('Query: getTransactions', () => {
     });
   });
   test('Query: getTransactions - Cross Chain Transfer', async ({ request }) => {
+    test.setTimeout(300_000);
     // declare testcase scoped variables.
     let sourceAccount: IAccount;
     let targetAccount: IAccount;
@@ -601,7 +602,6 @@ test.describe('Subscription: getTransactions', () => {
         },
       });
 
-      await triggerMining(request, account.chains[0], 2);
       const listenResult = await txTask.executeTo('listen');
       expect(listenResult.result).toEqual({
         status: 'success',

@@ -19,12 +19,14 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { NetworkIds } from './support/NetworkIds';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
 
-describe('create id, mint, offer for sale, create conventional auction, for a token and places a bid and buy the token', () => {
+// prettier-ignore
+describe('create id, mint, offer for sale, create conventional auction, for a token and places a bid and buy the token', { timeout: 200_000 }, () => {
   const config = {
     host: 'http://127.0.0.1:1848',
     defaults: {
@@ -107,6 +109,7 @@ describe('create id, mint, offer for sale, create conventional auction, for a to
       throw new Error('Token ID is not defined');
     }
     const withStep = withStepFactory();
+    await waitForNewBlock();
     const blockTime = await getBlockDate({ chainId: chainId as ChainId });
 
     const result = await offerToken(
@@ -147,7 +150,7 @@ describe('create id, mint, offer for sale, create conventional auction, for a to
           },
         },
         amount: new PactNumber(1).toPactDecimal(),
-        timeout: dateToPactInt(addSecondsToDate(new Date(blockTime), 3)),
+        timeout: dateToPactInt(addSecondsToDate(new Date(blockTime), 23)),
       },
       config,
     )
@@ -197,9 +200,11 @@ describe('create id, mint, offer for sale, create conventional auction, for a to
   });
 
   it('creates conventional auction', async () => {
+    await waitForNewBlock();
     const blockTime = await getBlockDate({ chainId: chainId as ChainId });
-    auctionStartDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 3));
-    auctionEndDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 13));
+
+    auctionStartDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 23));
+    auctionEndDate = dateToPactInt(addSecondsToDate(new Date(blockTime), 43));
 
     if (tokenId === undefined || saleId === undefined) {
       throw new Error('Token ID or Sale ID is not defined');

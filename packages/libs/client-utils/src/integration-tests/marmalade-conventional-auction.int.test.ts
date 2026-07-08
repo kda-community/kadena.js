@@ -25,6 +25,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
@@ -37,7 +38,8 @@ const config = {
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('creates, mints, offers for sale, creates and updates auction for, gets details of, bids on, a token', () => {
+// prettier-ignore
+describe('creates, mints, offers for sale, creates and updates auction for, gets details of, bids on, a token', { timeout: 200_000 }, () => {
   let tokenId: string | undefined;
   let saleId: string | undefined;
   let bidId: string | undefined;
@@ -396,14 +398,14 @@ describe('creates, mints, offers for sale, creates and updates auction for, gets
 
   it('is able to update conventional auction', async () => {
     const withStep = withStepFactory();
-
+    await waitForNewBlock();
     const currentBlockTime = await getBlockDate({ chainId });
 
     auctionStartDate = dateToPactInt(
-      addSecondsToDate(new Date(currentBlockTime), 2),
+      addSecondsToDate(new Date(currentBlockTime), 23),
     );
     auctionEndDate = dateToPactInt(
-      addSecondsToDate(new Date(currentBlockTime), 8),
+      addSecondsToDate(new Date(currentBlockTime), 43),
     );
 
     const result = await updateAuction(

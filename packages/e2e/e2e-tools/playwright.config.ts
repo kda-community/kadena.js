@@ -3,6 +3,12 @@ import type { PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
   ...baseConfig,
+  timeout: 150_000,
+
+  expect: {
+    timeout: 60_000,
+  },
+
   reporter:
     process.env.CI !== undefined
       ? [['list'], ['blob', { outoutputFile: './blob-report/blob-tools.zip' }]]
