@@ -34,7 +34,7 @@ const inputs = {
   },
 };
 const config = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
   },
@@ -556,7 +556,7 @@ describe('burnToken', () => {
     const withStep = withStepFactory();
 
     const burnConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -634,7 +634,7 @@ describe('burnToken', () => {
   });
   it('should throw error when non-existent token is burned', async () => {
     const burnConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },

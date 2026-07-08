@@ -37,7 +37,7 @@ const inputs = {
   },
 };
 const config = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
   },
@@ -190,7 +190,7 @@ describe('create, mint, offer and test withdrawal of a token', () => {
     const withStep = withStepFactory();
 
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -426,7 +426,7 @@ describe('create, mint, offer and test withdrawal of a token', () => {
 describe('offer non-existent token', () => {
   it('throws an error because token does not exist', async () => {
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -524,7 +524,7 @@ describe('create, mint, offer and buy a token', () => {
     const withStep = withStepFactory();
 
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -575,7 +575,7 @@ describe('create, mint, offer and buy a token', () => {
     const withStep = withStepFactory();
 
     const config = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },

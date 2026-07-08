@@ -7,7 +7,7 @@ import { deployTemplate } from '../deploy-template';
 import * as yamlConverter from '../yaml-converter';
 
 const clientConfig = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
   },

@@ -30,7 +30,7 @@ import {
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
 
 const config = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
   },
@@ -199,7 +199,7 @@ describe('creates, mints, offers for sale, creates and updates auction for, gets
     const withStep = withStepFactory();
 
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -296,7 +296,7 @@ describe('creates, mints, offers for sale, creates and updates auction for, gets
 
   it('throws error when non-existent token offered', async () => {
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },

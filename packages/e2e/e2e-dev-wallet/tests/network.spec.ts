@@ -17,7 +17,7 @@ test('Network creation', async ({ initiator, chainweaverApp }) => {
     await chainweaverApp.addNetwork(initiator, {
       networkId: 'development',
       title: 'development',
-      host: 'http://localhost:8080',
+      host: 'http://localhost:1848',
     });
 
     await expect(
