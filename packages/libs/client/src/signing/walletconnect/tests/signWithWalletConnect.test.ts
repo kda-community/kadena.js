@@ -46,7 +46,7 @@ describe('signWithWalletConnect', () => {
   });
 
   const session = { topic: 'test-topic' } as unknown as SessionTypes.Struct;
-  const walletConnectChainId: TWalletConnectChainId = 'kadena:testnet04';
+  const walletConnectChainId: TWalletConnectChainId = 'kadena:testnet06';
 
   it('signs a transaction', async () => {
     const client = {

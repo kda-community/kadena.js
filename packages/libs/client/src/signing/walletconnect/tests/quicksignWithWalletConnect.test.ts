@@ -13,7 +13,7 @@ vi.spyOn(console, 'log').mockImplementation(() => {});
 describe('quicksignWithWalletConnect', () => {
   let transaction: IPactCommand;
   const session = { topic: 'test-topic' } as unknown as SessionTypes.Struct;
-  const walletConnectChainId: TWalletConnectChainId = 'kadena:testnet04';
+  const walletConnectChainId: TWalletConnectChainId = 'kadena:testnet06';
   let quicksignWithWalletConnect: ISignFunction;
 
   beforeEach(() => {

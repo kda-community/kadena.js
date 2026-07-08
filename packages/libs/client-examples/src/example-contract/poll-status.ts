@@ -5,7 +5,7 @@ export async function pollRequestsAndWaitForEachPromiseExample(): Promise<void> 
   const someRequestKeys = ['key1', 'key2'];
   const transactionDescriptors = someRequestKeys.map((requestKey) => ({
     requestKey,
-    networkId: 'testnet04',
+    networkId: 'testnet06',
     chainId: '1' as ChainId,
   }));
   // You can await this promise, but you can also await the result of each individual request

@@ -55,7 +55,7 @@ describe('chainweb.cut', () => {
   it('gets current cut from chainweb node', async () => {
     server.resetHandlers(
       http.get(
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/cut',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/cut',
         () => HttpResponse.json(blockByHeightCurrentCutMock),
         { once: true },
       ),
@@ -63,7 +63,7 @@ describe('chainweb.cut', () => {
 
     const r = await chainweb.cut.current(
       'mainnet01',
-      'https://api.chainweb.com',
+      'https://api.chainweb-community.org',
     );
     logg('Current Cut:', r);
     expect(r).toBeTruthy();

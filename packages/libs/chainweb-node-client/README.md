@@ -20,8 +20,8 @@ chainweb-node API endpoints. These endpoints are broken down into three
 categories:
 
 1. blockchain - wrapper around chainweb-node p2p api endpoints
-2. pact - [https://api.chainweb.com/openapi/pact.html][2]
-3. rosetta - [https://api.chainweb.com/openapi/#tag/rosetta][3]
+2. pact - [https://api.chainweb-community.org/openapi/pact.html][2]
+3. rosetta - [https://api.chainweb-community.org/openapi/#tag/rosetta][3]
 
 The Pact API will contain the following functions:
 
@@ -149,5 +149,5 @@ stringifyAndMakePOSTRequest(body);
 
 [1]:
   https://github.com/kadena-community/kadena.js/tree/main/packages/libs/chainweb-node-client/etc/chainweb-node-client.api.md
-[2]: https://api.chainweb.com/openapi/pact.html
-[3]: https://api.chainweb.com/openapi/#tag/rosetta
+[2]: https://api.chainweb-community.org/openapi/pact.html
+[3]: https://api.chainweb-community.org/openapi/#tag/rosetta

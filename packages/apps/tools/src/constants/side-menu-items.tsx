@@ -13,7 +13,6 @@ const menuData: ISidebarToolbarItem[] = [
     icon: <MonoQrCodeScanner style={{ maxWidth: '100%' }} />,
     href: 'faucet',
     items: [
-
       {
         title: 'Fund New Account',
         href: Routes.FAUCET_NEW,

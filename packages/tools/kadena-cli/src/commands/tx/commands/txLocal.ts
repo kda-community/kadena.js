@@ -24,7 +24,7 @@ async function getNetworkConfig(flagConfig: INetworkCreateOptions | null) {
       : undefined;
   if (defaultNetwork) return defaultNetwork;
   const mainNetwork = networks.find(
-    (network) => network.networkId === 'testnet04',
+    (network) => network.networkId === 'testnet06',
   );
   if (mainNetwork) return mainNetwork;
   return null;

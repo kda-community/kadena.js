@@ -11,7 +11,7 @@ describe('magicAdapter factory', () => {
   beforeEach(() => {
     adapter = new MagicAdapter({
       provider: new MockProvider(),
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       chainId: '0',
       magicApiKey: '123',
       chainwebApiUrl: 'http://example.com',

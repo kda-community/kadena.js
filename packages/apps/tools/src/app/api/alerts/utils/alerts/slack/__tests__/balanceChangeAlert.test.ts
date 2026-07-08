@@ -156,7 +156,7 @@ describe('balance change alert Utils', () => {
 
     const result = await alert.messageType.slack!(alert);
     expect(result).toEqual([
-      `◻️ no need for a message KINESISBRIDGEBALANCECHANGE (testnet04) chainId:1`,
+      `◻️ no need for a message KINESISBRIDGEBALANCECHANGE (testnet06) chainId:1`,
     ]);
 
     expect(mocks.getLastRecord).toBeCalledTimes(1);

@@ -11,7 +11,7 @@ describe('add network command', () => {
       input: {
         'Enter a network name (e.g. "mainnet")': 'test-network',
         'Enter a network id (e.g. "mainnet01")': 'testnet',
-        'Enter Kadena network host (e.g. "https://api.chainweb.com")':
+        'Enter Kadena network host (e.g. "https://api.chainweb-community.org")':
           'http://localhost:30000',
         'Enter Kadena network explorer URL (e.g. "https://explorer.chainweb.com/mainnet/tx/")':
           'http://localhost:30000/explorer',
@@ -31,7 +31,7 @@ describe('add network command', () => {
       input: {
         'Enter a network name (e.g. "mainnet")': 'no-save-network',
         'Enter a network id (e.g. "mainnet01")': 'testnet',
-        'Enter Kadena network host (e.g. "https://api.chainweb.com")':
+        'Enter Kadena network host (e.g. "https://api.chainweb-community.org")':
           'http://localhost:30000',
         'Enter Kadena network explorer URL (e.g. "https://explorer.chainweb.com/mainnet/tx/")':
           'http://localhost:30000/explorer',

@@ -327,7 +327,7 @@ export const syncAllAccounts = async (profileId: string, networkUUID: UUID) => {
   return result;
 };
 
-// TODO: update this to work with both testnet04 and testnet05
+// TODO: update this to work with both testnet06 and testnet05
 export async function fundAccount({
   address,
   guard,

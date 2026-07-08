@@ -21,7 +21,7 @@ import { signWithWallet } from '../utils/txSignWithWallet.js';
 
 describe('tx sign', () => {
   const sampleTransaction = {
-    cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:from\\" \\"k:to\\" 0.01)","data":{}}},"nonce":"","networkId":"testnet04","meta":{"sender":"k:from","chainId":"1","creationTime":1717069253,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[]}',
+    cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:from\\" \\"k:to\\" 0.01)","data":{}}},"nonce":"","networkId":"testnet06","meta":{"sender":"k:from","chainId":"1","creationTime":1717069253,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[]}',
   };
 
   beforeEach(() => {
@@ -89,7 +89,7 @@ describe('template to legacy live test', () => {
         chainId: '0',
         senderAccount: `k:${publicKey}`,
       })
-      .setNetworkId('testnet04')
+      .setNetworkId('testnet06')
       .createTransaction();
 
     const sigUint8Array = await legacyKadenaSign(
@@ -102,7 +102,7 @@ describe('template to legacy live test', () => {
 
     const signed = addSignatures(transaction, { sig, pubKey: publicKey });
 
-    const networkHost = 'https://api.testnet.chainweb.com';
+    const networkHost = 'https://api.testnet.chainweb-community.org';
     const client = createClient(
       ({ networkId, chainId }) =>
         `${networkHost}/chainweb/0.0/${networkId}/chain/${chainId}/pact`,
@@ -117,7 +117,7 @@ describe('template to legacy live test', () => {
 
   it('signs a transaction when it is coming from chainweaver', async () => {
     vi.resetAllMocks();
-    const chainweaverTx = `{"cmd":"{\"signers\":[{\"pubKey\":\"554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\",\"clist\":[{\"name\":\"coin.TRANSFER\",\"args\":[\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\",\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\",1.000000000001]},{\"name\":\"coin.GAS\",\"args\":[]}]},{\"pubKey\":\"ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\",\"clist\":[{\"name\":\"coin.TRANSFER\",\"args\":[\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\",\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\",1.0e-12]}]}],\"meta\":{\"creationTime\":1720002679,\"ttl\":19128,\"chainId\":\"0\",\"gasPrice\":1.0e-8,\"gasLimit\":4720,\"sender\":\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\"},\"nonce\":\"chainweaver\",\"networkId\":\"testnet04\",\"payload\":{\"exec\":{\"code\":\"(coin.transfer-create \\\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\\\" \\\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\\\" (read-keyset \\\"ks\\\") (+ 1.0 0.000000000001))\\n(coin.transfer \\\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\\\" \\\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\\\" 0.000000000001)\",\"data\":{\"ks\":{\"keys\":[\"ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\"],\"pred\":\"keys-all\"}}}}}","hash":"OgrErbv9r4VhL1-jIhbneTzCsPp8JnkR78UGeiWCxHU","sigs":{"ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd":null,"554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94":"0144fcb6c550fcb1d5c1e6d712a2168e93f3081d624cdf20aa8983a372046f2eba7121b53f2a9d8837de0908c3dc16b976ad85cdf92c5eb5856c6a814611dd03"}}`;
+    const chainweaverTx = `{"cmd":"{\"signers\":[{\"pubKey\":\"554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\",\"clist\":[{\"name\":\"coin.TRANSFER\",\"args\":[\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\",\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\",1.000000000001]},{\"name\":\"coin.GAS\",\"args\":[]}]},{\"pubKey\":\"ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\",\"clist\":[{\"name\":\"coin.TRANSFER\",\"args\":[\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\",\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\",1.0e-12]}]}],\"meta\":{\"creationTime\":1720002679,\"ttl\":19128,\"chainId\":\"0\",\"gasPrice\":1.0e-8,\"gasLimit\":4720,\"sender\":\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\"},\"nonce\":\"chainweaver\",\"networkId\":\"testnet06\",\"payload\":{\"exec\":{\"code\":\"(coin.transfer-create \\\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\\\" \\\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\\\" (read-keyset \\\"ks\\\") (+ 1.0 0.000000000001))\\n(coin.transfer \\\"k:ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\\\" \\\"k:554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94\\\" 0.000000000001)\",\"data\":{\"ks\":{\"keys\":[\"ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd\"],\"pred\":\"keys-all\"}}}}}","hash":"OgrErbv9r4VhL1-jIhbneTzCsPp8JnkR78UGeiWCxHU","sigs":{"ff9b64a61902024870a59775624ca594ab14054c97eb6fae97105b88674b5edd":null,"554754f48b16df24b552f6832dda090642ed9658559fef9f3ee1bb4637ea7c94":"0144fcb6c550fcb1d5c1e6d712a2168e93f3081d624cdf20aa8983a372046f2eba7121b53f2a9d8837de0908c3dc16b976ad85cdf92c5eb5856c6a814611dd03"}}`;
 
     mockPrompts({
       select: {

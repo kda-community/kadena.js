@@ -1,10 +1,10 @@
 import type { INetworkCreateOptions } from '../../commands/networks/utils/networkHelpers.js';
 
 export interface INetworks {
-  mainnet: { network: 'mainnet01'; api: 'api.chainweb.com' };
+  mainnet: { network: 'mainnet01'; api: 'api.chainweb-community.org' };
   testnet: {
-    network: 'testnet04';
-    api: 'api.testnet.chainweb.com';
+    network: 'testnet06';
+    api: 'api.testnet.chainweb-community.org';
   };
 }
 

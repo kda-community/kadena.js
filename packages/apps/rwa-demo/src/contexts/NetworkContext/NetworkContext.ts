@@ -32,9 +32,9 @@ export const defaultNetworkContext: INetworkContext = {
       graphUrl: 'https://graph.testnet05.kadena.network/graphql',
     },
     {
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       name: 'Testnet',
-      host: 'https://api.testnet.chainweb.com',
+      host: 'https://api.testnet.chainweb-community.org',
       graphUrl: 'https://graph.testnet.kadena.network/graphql',
       chainId: '0',
     },

@@ -30,11 +30,11 @@ export const env = {
   WALLET_URL,
   URL,
   CHAINID: (CHAINID ?? '1') as ChainId,
-  NETWORKID: NETWORKID ?? 'testnet04',
+  NETWORKID: NETWORKID ?? 'testnet06',
   NAMESPACE,
   NETWORKNAME,
   GRAHQLURL: GRAHQLURL ?? 'https://graph.testnet.kadena.network/graphql',
   CHAINWEBAPIURL:
     CHAINWEBAPIURL ??
-    `https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact`,
+    `https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact`,
 };

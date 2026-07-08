@@ -55,7 +55,7 @@ execute commands.
 - **Purpose:** Fetches the sale state of a specific Kadena Name.
 - **Inputs:**
   - `name` - The name being queried.
-  - `networkId` - The network ID (e.g., `testnet04`, `mainnet01`).
+  - `networkId` - The network ID (e.g., `testnet06`, `mainnet01`).
 - **Outputs:**
   - `SaleState` - Indicates whether the name is sellable and the associated
     price.
@@ -69,7 +69,7 @@ execute commands.
 - **Purpose:** Retrieves detailed information about a Kadena Name.
 - **Inputs:**
   - `name` - The name being queried.
-  - `networkId` - The network ID (e.g., `testnet04`, `mainnet01`).
+  - `networkId` - The network ID (e.g., `testnet06`, `mainnet01`).
   - `owner` - The owner's Kadena account.
 - **Outputs:**
   - `NameInfo` - Includes availability, sale status, price, market price, and

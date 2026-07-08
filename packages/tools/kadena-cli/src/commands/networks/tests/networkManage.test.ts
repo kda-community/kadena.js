@@ -28,7 +28,8 @@ describe('network update command', () => {
       input: {
         'Enter a network name': 'devnet',
         'Enter a network id': 'fast-development',
-        'Enter Kadena network host (e.g. "https://api.chainweb.com"):': '',
+        'Enter Kadena network host (e.g. "https://api.chainweb-community.org"):':
+          '',
         'Enter Kadena network explorer URL (e.g. "https://explorer.chainweb.com/mainnet/tx/"):':
           '',
       },
@@ -77,7 +78,8 @@ describe('network update command', () => {
       input: {
         'Enter a network name': 'fast-devnet',
         'Enter a network id': 'fast-development',
-        'Enter Kadena network host (e.g. "https://api.chainweb.com"):': '',
+        'Enter Kadena network host (e.g. "https://api.chainweb-community.org"):':
+          '',
         'Enter Kadena network explorer URL (e.g. "https://explorer.chainweb.com/mainnet/tx/"):':
           '',
       },

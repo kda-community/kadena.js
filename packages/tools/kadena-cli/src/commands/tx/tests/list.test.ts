@@ -9,7 +9,7 @@ const setupTestEnvironment = async (): Promise<void> => {
   await services.filesystem.writeFile(
     `${txDirectory}/transaction-tx1.json`,
     JSON.stringify({
-      cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" 0.1)","data":{}}},"nonce":"","networkId":"testnet04","meta":{"sender":"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","chainId":"1","creationTime":1716889663,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[{"pubKey":"60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","clist":[{"name":"coin.TRANSFER","args":["k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57",0.1]},{"name":"coin.GAS","args":[]}]}]}',
+      cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" 0.1)","data":{}}},"nonce":"","networkId":"testnet06","meta":{"sender":"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","chainId":"1","creationTime":1716889663,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[{"pubKey":"60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","clist":[{"name":"coin.TRANSFER","args":["k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57",0.1]},{"name":"coin.GAS","args":[]}]}]}',
       hash: 'A8rwWNVaOVhSp64xOrOO3mqY8ODfVLejUIQl0uN0rgA',
       sigs: [null],
     }),
@@ -17,7 +17,7 @@ const setupTestEnvironment = async (): Promise<void> => {
   await services.filesystem.writeFile(
     `${txDirectory}/transaction-tx2.json`,
     JSON.stringify({
-      cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" 3.0)","data":{}}},"nonce":"","networkId":"testnet04","meta":{"sender":"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","chainId":"19","creationTime":1716889752,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[{"pubKey":"60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","clist":[{"name":"coin.TRANSFER","args":["k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57",3]},{"name":"coin.GAS","args":[]}]}]}',
+      cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" 3.0)","data":{}}},"nonce":"","networkId":"testnet06","meta":{"sender":"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","chainId":"19","creationTime":1716889752,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[{"pubKey":"60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","clist":[{"name":"coin.TRANSFER","args":["k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57",3]},{"name":"coin.GAS","args":[]}]}]}',
       hash: 'YNnPA3CxYYje3zl9ODE1rlQPBhsSRWf_NyNR9qzhIN8',
       sigs: [null],
     }),
@@ -25,7 +25,7 @@ const setupTestEnvironment = async (): Promise<void> => {
   await services.filesystem.writeFile(
     `${txDirectory}/transaction-tx3-signed.json`,
     JSON.stringify({
-      cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" 0.1)","data":{}}},"nonce":"","networkId":"testnet04","meta":{"sender":"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","chainId":"1","creationTime":1716889663,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[{"pubKey":"60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","clist":[{"name":"coin.TRANSFER","args":["k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57",0.1]},{"name":"coin.GAS","args":[]}]}]}',
+      cmd: '{"payload":{"exec":{"code":"(coin.transfer \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" \\"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57\\" 0.1)","data":{}}},"nonce":"","networkId":"testnet06","meta":{"sender":"k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","chainId":"1","creationTime":1716889663,"gasLimit":2300,"gasPrice":0.000001,"ttl":600},"signers":[{"pubKey":"60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","clist":[{"name":"coin.TRANSFER","args":["k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57","k:60313e401754007e3525a7474a62500305b8b864b6b616ba933a58c0f89e8d57",0.1]},{"name":"coin.GAS","args":[]}]}]}',
       hash: 'A8rwWNVaOVhSp64xOrOO3mqY8ODfVLejUIQl0uN0rgA',
       sigs: [
         {

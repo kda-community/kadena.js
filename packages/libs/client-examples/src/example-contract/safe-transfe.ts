@@ -4,7 +4,7 @@ import { PactNumber } from '@kadena/pactjs';
 import { listen, submit } from './util/client';
 import { keyFromAccount } from './util/keyFromAccount';
 
-const NETWORK_ID: string = 'testnet04';
+const NETWORK_ID: string = 'testnet06';
 
 async function doSafeTransfer(
   from: { account: string; publicKey: string },

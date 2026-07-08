@@ -5,7 +5,7 @@ import { MINIMUM_GAS_PRICE } from '../core/estimateGasPrice/utils';
 describe('estimateGasPrice', () => {
   it('fetch and returns gas price for specific height', async () => {
     const gasPrice = await estimateGasPrice({
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       chainId: '0',
       height: 5000000,
     });
@@ -15,7 +15,7 @@ describe('estimateGasPrice', () => {
 
   it('fetch and returns gas price for latest height', async () => {
     const gasPrice = await estimateGasPrice({
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       chainId: '0',
     });
 
@@ -26,7 +26,7 @@ describe('estimateGasPrice', () => {
 describe('getBlocksGasInformation', async () => {
   it('fetch and returns gas information for specific height', async () => {
     const gasInformation = await getBlocksGasInformation({
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       chainId: '0',
       height: 5300000,
     });
@@ -47,7 +47,7 @@ describe('getBlocksGasInformation', async () => {
   });
   it('fetch and returns gas information for latest height', async () => {
     const gasInformation = await getBlocksGasInformation({
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       chainId: '0',
     });
 

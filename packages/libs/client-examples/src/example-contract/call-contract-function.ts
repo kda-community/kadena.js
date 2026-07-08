@@ -9,7 +9,7 @@ const command = async (functionName: string) => {
       chainId: '1',
       gasLimit: 2500,
     })
-    .setNetworkId('testnet04')
+    .setNetworkId('testnet06')
     .createTransaction();
 
   try {

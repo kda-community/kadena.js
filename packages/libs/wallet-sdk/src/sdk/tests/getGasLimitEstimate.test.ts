@@ -39,7 +39,7 @@ function getLocalUrl(networkId: string, chainId: string): string {
 }
 
 describe('WalletSDK - getGasLimitEstimate', () => {
-  const networkId = 'testnet04';
+  const networkId = 'testnet06';
   const chainId = '1';
 
   const url = getLocalUrl(networkId, chainId);

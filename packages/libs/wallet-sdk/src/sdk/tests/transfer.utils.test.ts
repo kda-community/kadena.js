@@ -22,7 +22,7 @@ const EXAMPLE_TRANSFER = {
     hash: 'hash',
     height: BigInt(1),
   },
-  networkId: 'testnet04',
+  networkId: 'testnet06',
   token: 'coin',
 } as const;
 

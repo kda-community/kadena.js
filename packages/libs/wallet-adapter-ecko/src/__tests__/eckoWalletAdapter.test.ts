@@ -32,7 +32,7 @@ let adapter: EckoAdapter;
 
 beforeEach(() => {
   provider = new MockProvider();
-  adapter = new EckoAdapter({ provider, networkId: 'testnet04' });
+  adapter = new EckoAdapter({ provider, networkId: 'testnet06' });
   vi.clearAllMocks();
 });
 
@@ -63,19 +63,19 @@ describe('EckoAdapter', () => {
 
       expect(provider.request).toHaveBeenNthCalledWith(1, {
         method: 'kda_checkStatus',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
       expect(provider.request).toHaveBeenNthCalledWith(2, {
         method: 'kda_connect',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
       expect(provider.request).toHaveBeenNthCalledWith(3, {
         method: 'kda_checkStatus',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
       expect(provider.request).toHaveBeenNthCalledWith(4, {
         method: 'kda_requestAccount',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
 
       expect(rpc).toEqual({
@@ -83,7 +83,7 @@ describe('EckoAdapter', () => {
         jsonrpc: '2.0',
         result: {
           accountName: 'alice',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           contract: 'coin',
           guard: { keys: ['pk1'], pred: 'keys-all' },
           keyset: { keys: ['pk1'], pred: 'keys-all' },
@@ -122,7 +122,7 @@ describe('EckoAdapter', () => {
 
       expect(provider.request).toHaveBeenCalledWith({
         method: 'kda_disconnect',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
       expect(rpc).toEqual({ id: 3, jsonrpc: '2.0', result: undefined });
     });
@@ -165,7 +165,7 @@ describe('EckoAdapter', () => {
       expect(rpc.result).toEqual([
         {
           accountName: 'carol',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           contract: 'coin',
           guard: { keys: ['pk3'], pred: 'keys-all' },
           keyset: { keys: ['pk3'], pred: 'keys-all' },
@@ -200,7 +200,7 @@ describe('EckoAdapter', () => {
     it('maps kda_getNetwork → array of networks', async () => {
       const net: IRawNetworkResponse = {
         name: 'testnet',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         url: 'https://testnet.chainweb.com',
       };
       (provider.request as ReturnType<typeof vi.fn>).mockResolvedValueOnce(net);
@@ -214,7 +214,7 @@ describe('EckoAdapter', () => {
       expect(rpc.result).toEqual([
         {
           networkName: 'testnet',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           url: ['https://testnet.chainweb.com'],
         },
       ]);

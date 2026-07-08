@@ -1,3 +1,4 @@
+import { basename } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { useMswHandler } from '../../../mocks/server.js';
 import { assertCommandError } from '../../../utils/command.util.js';
@@ -7,7 +8,7 @@ import { createAndWriteTransaction } from '../commands/txCreateTransaction.js';
 import { signTransactionFileWithKeyPairAction } from '../utils/txSignWithKeypair.js';
 
 function getFileName(filePath: string): string | undefined {
-  return filePath.split('/').pop();
+  return basename(filePath);
 }
 
 function extractData(jsonString: string): Array<{
@@ -49,7 +50,7 @@ describe('tx send', () => {
         'decimal:amount': '0.01',
         'chain-id': '1',
         'key:from': publicKey,
-        'network:networkId': 'testnet04',
+        'network:networkId': 'testnet06',
       },
       null,
       defaultTemplates.transfer,
@@ -102,7 +103,7 @@ describe('tx send', () => {
         'decimal:amount': '0.01',
         'chain-id': '1',
         'key:from': publicKey,
-        'network:networkId': 'testnet04',
+        'network:networkId': 'testnet06',
       },
       null,
       defaultTemplates.transfer,
@@ -157,7 +158,7 @@ describe('tx send', () => {
         'decimal:amount': '0.01',
         'chain-id': '1',
         'key:from': publicKey,
-        'network:networkId': 'testnet04',
+        'network:networkId': 'testnet06',
       },
       null,
       defaultTemplates.transfer,
@@ -203,7 +204,7 @@ describe('tx send', () => {
         'decimal:amount': '0.01',
         'chain-id': '1',
         'key:from': publicKey,
-        'network:networkId': 'testnet04',
+        'network:networkId': 'testnet06',
       },
       null,
       defaultTemplates.transfer,

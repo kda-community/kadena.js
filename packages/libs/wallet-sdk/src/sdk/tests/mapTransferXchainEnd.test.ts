@@ -62,7 +62,7 @@ const GQL_TRANSFER_XCHAIN_FINISH = [
         },
       },
       cmd: {
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         meta: {
           gasPrice: 1e-8,
           sender: 'kadena-xchain-gas',
@@ -134,7 +134,7 @@ const GQL_TRANSFER_XCHAIN_FINISH = [
         },
       },
       cmd: {
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         meta: {
           gasPrice: 1e-8,
           sender: 'kadena-xchain-gas',
@@ -206,7 +206,7 @@ const GQL_TRANSFER_XCHAIN_FINISH = [
           },
         },
         cmd: {
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           meta: {
             gasPrice: 1e-8,
             sender:
@@ -257,7 +257,7 @@ describe('getTransfers', () => {
         isCrossChainTransfer: true,
         success: true,
         token: 'coin',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         block: {
           creationTime: new Date('2024-09-12T10:09:18.577Z'),
           blockDepthEstimate: BigInt(-4638197),

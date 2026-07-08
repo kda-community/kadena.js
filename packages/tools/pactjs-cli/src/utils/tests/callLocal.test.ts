@@ -4,13 +4,13 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';
 import { fetchModule } from '../callLocal';
 
 const httpHandlers = [
-  http.post('https://json-api.chainweb.com/api/v1/local', () =>
+  http.post('https://json-api.chainweb-community.org/api/v1/local', () =>
     HttpResponse.json({
       result: { status: 'success', data: { code: 'module-code' } },
     }),
   ),
   http.post(
-    'https://text-api.chainweb.com/api/v1/local',
+    'https://text-api.chainweb-community.org/api/v1/local',
     () => new HttpResponse('Error-in-fetching'),
   ),
   http.post('https://json-error.chainweb.com/api/v1/local', () =>
@@ -43,12 +43,15 @@ afterAll(() => server.close());
 
 describe('callLocal', () => {
   it('returns the correct jsonResponse on success', async () => {
-    const { code } = await fetchModule('https://json-api.chainweb.com', 'body');
+    const { code } = await fetchModule(
+      'https://json-api.chainweb-community.org',
+      'body',
+    );
     expect(code).toEqual('module-code');
   });
   it('returns the correct error message from text', async () => {
     const { error } = await fetchModule(
-      'https://text-api.chainweb.com',
+      'https://text-api.chainweb-community.org',
       'body',
     );
     expect(error).toBe('Error-in-fetching');

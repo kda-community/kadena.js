@@ -20,7 +20,7 @@ describe('template mapper', () => {
         'chain-id': '0',
         'key:from':
           '2619fafe33b3128f38a4e4aefe6a5559371b18b6c25ac897aff165ce14b241b3',
-        'network:networkId': 'testnet04',
+        'network:networkId': 'testnet06',
       },
     );
 
@@ -51,7 +51,7 @@ describe('template mapper', () => {
         },
       ],
       nonce: '',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       meta: {
         chainId: '0',
         creationTime: 1698278400,

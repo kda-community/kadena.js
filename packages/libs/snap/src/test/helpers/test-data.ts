@@ -9,7 +9,7 @@ export const MOCK_MAINNET = {
   isTestnet: false,
   name: 'Kadena Mainnet',
   networkId: 'mainnet01',
-  nodeUrl: 'https://api.chainweb.com/chainweb/0.0',
+  nodeUrl: 'https://api.chainweb-community.org/chainweb/0.0',
   transactionListTtl: 30000,
   transactionListUrl: 'https://graph.kadena.network/graphql',
 };
@@ -23,8 +23,8 @@ export const MOCK_TESTNET = {
   buyPageUrl: 'https://faucet.testnet.chainweb.com',
   isTestnet: true,
   name: 'Kadena Testnet',
-  networkId: 'testnet04',
-  nodeUrl: 'https://api.testnet.chainweb.com/chainweb/0.0',
+  networkId: 'testnet06',
+  nodeUrl: 'https://api.testnet.chainweb-community.org/chainweb/0.0',
   transactionListTtl: 30000,
   transactionListUrl: 'https://graph.testnet.kadena.network/graphql',
 };

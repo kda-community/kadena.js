@@ -52,7 +52,10 @@ function processData(data: StoreFrontendData): StoreFrontendTuple {
     [['StoreFrontend_Network_PublicMeta', []], {} as IPactCommand['meta']],
     [
       ['StoreFrontend_Network_Networks', []],
-      { Mainnet: ['api.chainweb.com'], Testnet: ['api.testnet.chainweb.com'] },
+      {
+        Mainnet: ['api.chainweb-community.org'],
+        Testnet: ['api.testnet.chainweb-community.org'],
+      },
     ],
     [['StoreFrontend_Network_SelectedNetwork', []], 'Mainnet'],
     [['StoreFrontend_ModuleExplorer_SessionFile', []], ''],

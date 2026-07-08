@@ -16,7 +16,7 @@ beforeEach(() => {
     on: vi.fn(),
     off: vi.fn(),
   };
-  adapter = new SnapAdapter({ provider, networkId: 'testnet04' });
+  adapter = new SnapAdapter({ provider, networkId: 'testnet06' });
   vi.clearAllMocks();
 });
 
@@ -25,7 +25,7 @@ describe('SnapAdapter', () => {
     it('returns account on successful connect', async () => {
       const account: IAccountInfo = {
         accountName: 'alice',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
         contract: 'coin',
         guard: { keys: ['pk1'], pred: 'keys-all' },
         keyset: { keys: ['pk1'], pred: 'keys-all' },
@@ -65,7 +65,7 @@ describe('SnapAdapter', () => {
       const accounts: IAccountInfo[] = [
         {
           accountName: 'bob',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           contract: 'coin',
           guard: { keys: ['pk2'], pred: 'keys-all' },
           keyset: { keys: ['pk2'], pred: 'keys-all' },
@@ -84,7 +84,7 @@ describe('SnapAdapter', () => {
       const accounts: IAccountInfo[] = [
         {
           accountName: 'carol',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           contract: 'coin',
           guard: { keys: ['pk3'], pred: 'keys-all' },
           keyset: { keys: ['pk3'], pred: 'keys-all' },
@@ -105,7 +105,7 @@ describe('SnapAdapter', () => {
       const network: INetworkInfo = {
         networkName: 'mainnet',
         networkId: 'mainnet01',
-        urls: ['https://api.chainweb.com'],
+        urls: ['https://api.chainweb-community.org'],
       };
       vi.spyOn(adapter as any, '_getActiveNetwork').mockResolvedValueOnce(
         network,
@@ -121,8 +121,8 @@ describe('SnapAdapter', () => {
       const networks: INetworkInfo[] = [
         {
           networkName: 'testnet',
-          networkId: 'testnet04',
-          urls: ['https://api.testnet.chainweb.com'],
+          networkId: 'testnet06',
+          urls: ['https://api.testnet.chainweb-community.org'],
         },
       ];
       vi.spyOn(adapter as any, '_getNetworks').mockResolvedValueOnce(networks);

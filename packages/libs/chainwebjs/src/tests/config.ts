@@ -5,5 +5,5 @@ export interface IConfig {
 
 export const config: IConfig = {
   network: 'mainnet01',
-  host: 'https://api.chainweb.com',
+  host: 'https://api.chainweb-community.org',
 };

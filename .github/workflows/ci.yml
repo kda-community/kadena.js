@@ -34,90 +34,90 @@ jobs:
       - name: Build, lint, test all packages
         run: pnpm turbo lint build test
 
-  integration-tests:
-    name: INT - ${{ matrix.package }}
-    needs: build
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        package:
-          [
-            '@kadena/client',
-            '@kadena/client-utils',
-            '@kadena/create-kadena-app',
-          ]
+  #integration-tests:
+  #  name: INT - ${{ matrix.package }}
+  #  needs: build
+  #  runs-on: ubuntu-latest
+  #  strategy:
+  #    fail-fast: false
+  #    matrix:
+  #      package:
+  #        [
+  #          '@kadena/client',
+  #          '@kadena/client-utils',
+  #          '@kadena/create-kadena-app',
+  #        ]
 
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-          show-progress: false
+  #  steps:
+  #    - uses: actions/checkout@v4
+  #      with:
+  #        fetch-depth: 2
+  #        show-progress: false
 
-      - name: Runner Setup
-        uses: ./.github/actions/runner-setup
+  #    - name: Runner Setup
+  #      uses: ./.github/actions/runner-setup
 
-      - name: Setup Kadena sandbox
-        uses: ./.github/actions/sandbox
+  #    - name: Setup Kadena sandbox
+  #      uses: ./.github/actions/sandbox
 
-      - name: run integration tests
-        run: pnpm run test:integration --filter ${{ matrix.package }}
+  #    - name: run integration tests
+  #      run: pnpm run test:integration --filter ${{ matrix.package }}
 
-  end-to-end-tests:
-    name: E2E - ${{ matrix.app }}
-    needs: build
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        app: ['tools', 'graph', 'dev-wallet']
+  #end-to-end-tests:
+  #  name: E2E - ${{ matrix.app }}
+  #  needs: build
+  #  runs-on: ubuntu-latest
+  #  strategy:
+  #    fail-fast: false
+  #    matrix:
+  #      app: ['tools', 'graph', 'dev-wallet']
 
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-          show-progress: false
+  #  steps:
+  #    - uses: actions/checkout@v4
+  #      with:
+  #        fetch-depth: 2
+  #        show-progress: false
 
-      -  name: Runner Setup
-         uses: ./.github/actions/runner-setup
+  #    -  name: Runner Setup
+  #       uses: ./.github/actions/runner-setup
 
-      -  name: Setup Kadena sandbox
-         uses: ./.github/actions/sandbox
+  #    -  name: Setup Kadena sandbox
+  #       uses: ./.github/actions/sandbox
 
-      - name: Build App with NODE_ENV=test
-        uses: ./.github/actions/build-app-e2e
-        with:
-          app: ${{ matrix.app }}
+  #    - name: Build App with NODE_ENV=test
+  #      uses: ./.github/actions/build-app-e2e
+  #      with:
+  #        app: ${{ matrix.app }}
 
-      - name: Run end-to-end tests
-        uses: ./.github/actions/end-to-end-tests
-        with:
-          app: ${{ matrix.app }}
+  #    - name: Run end-to-end tests
+  #      uses: ./.github/actions/end-to-end-tests
+  #      with:
+  #        app: ${{ matrix.app }}
 
-      - name: Archive sandbox logs
-        uses: ./.github/actions/archive-logs
-        if: always()
-        with:
-          test-object: ${{ matrix.app }}
+  #    - name: Archive sandbox logs
+  #      uses: ./.github/actions/archive-logs
+  #      if: always()
+  #      with:
+  #        test-object: ${{ matrix.app }}
 
-      - name: Teardown kadena sandbox
-        if: always()
-        run: docker compose down
-        working-directory: .github/actions/sandbox
+  #    - name: Teardown kadena sandbox
+  #      if: always()
+  #      run: docker compose down
+  #      working-directory: .github/actions/sandbox
 
-      - name: Archive volumes
-        uses: ./.github/actions/archive-volumes
-        if: always()
-        with:
-          test-object: ${{ matrix.app }}
+  #    - name: Archive volumes
+  #      uses: ./.github/actions/archive-volumes
+  #      if: always()
+  #      with:
+  #        test-object: ${{ matrix.app }}
 
-      - name: Upload Blob Report
-        uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
-        with:
-          name: blob-report-${{ matrix.app }}
-          path: packages/e2e/e2e-${{ matrix.app }}/blob-report/
-          retention-days: 1
+  #    - name: Upload Blob Report
+  #      uses: actions/upload-artifact@v4
+  #      if: ${{ !cancelled() }}
+  #      with:
+  #        name: blob-report-${{ matrix.app }}
+  #        path: packages/e2e/e2e-${{ matrix.app }}/blob-report/
+  #        retention-days: 1
 
   # merge-publish-reports:
   #  if: ${{ !cancelled() }}

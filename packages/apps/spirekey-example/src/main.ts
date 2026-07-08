@@ -36,10 +36,10 @@ function setupEventListeners({
 
 async function main({ spireKey }: { spireKey: KadenaSpireKey }) {
   const { local, submitOne } = createClient(({ chainId, networkId }) => {
-    if (networkId === 'testnet04') {
-      return `https://api.testnet.chainweb.com/chainweb/0.0/${networkId}/chain/${chainId}/pact`;
+    if (networkId === 'testnet06') {
+      return `https://api.testnet.chainweb-community.org/chainweb/0.0/${networkId}/chain/${chainId}/pact`;
     } else {
-      return `https://api.chainweb.com/chainweb/0.0/${networkId}/chain/${chainId}/pact`;
+      return `https://api.chainweb-community.org/chainweb/0.0/${networkId}/chain/${chainId}/pact`;
     }
   });
 
@@ -125,7 +125,7 @@ function createHelloTransaction(message: string, spireKey: KadenaSpireKey) {
         ]),
       ],
     )
-    .setNetworkId('testnet04')
+    .setNetworkId('testnet06')
     .setMeta({
       chainId: '0',
       senderAccount: 'hw-gas-payer',

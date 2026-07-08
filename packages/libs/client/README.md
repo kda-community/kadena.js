@@ -98,7 +98,7 @@ templates that can be used.
 Generate types directly from a contract on the blockchain:
 
 ```sh
-pactjs contract-generate --contract "coin" --api "https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact"
+pactjs contract-generate --contract "coin" --api "https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact"
 ```
 
 The log shows what has happened. Inside the `node_modules` directory, a new
@@ -154,7 +154,7 @@ Retrieve contract from a chainweb-api in a /local call (see also: https://github
 Options:
   -m, --module <module>    The module you want to retrieve (e.g. "coin")
   -o, --out <file>         File to write the contract to
-  --api <url>              API to retrieve from (e.g. "https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact")
+  --api <url>              API to retrieve from (e.g. "https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact")
   -n, --network <network>  Network to retrieve from (default "mainnet") (default: "mainnet")
   -c, --chain <number>     Chain to retrieve from (default 1) (default: 1)
   -h, --help               display help for command
@@ -293,7 +293,7 @@ command and submit the transaction yourself:
 import { Pact } from '@kadena/client';
 
 const client = createClient(
-  'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/8/pact',
+  'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/8/pact',
 );
 
 const unsignedTransaction = Pact.builder
@@ -347,12 +347,12 @@ url based on that.
 
 ```ts
 // we only want to send request to the chain 1 one the mainnet
-const hostUrl = 'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact';
+const hostUrl = 'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact';
 const client = createClient(hostUrl);
 // we need more flexibility to call different chains or even networks, then functions
 // extract networkId and chainId from the cmd part of the transaction and use the hostUrlGenerator to generate the url
 const hostUrlGenerator = ({ networkId, chainId }) =>
-  `https://api.chainweb.com/chainweb/0.0/${networkId}/chain/${chainId}/pact`;
+  `https://api.chainweb-community.org/chainweb/0.0/${networkId}/chain/${chainId}/pact`;
 const { local, submit, getStatus, pollStatus, getSpv, pollSpv } =
   createClient(hostUrlGenerator);
 ```
@@ -405,7 +405,7 @@ async function transaction(
     .transfer(sender, receiver, amount)
     .addCap('coin.GAS', senderPublicKey)
     .addCap('coin.TRANSFER', senderPublicKey, sender, receiver, amount)
-    .setMeta({ senderAccount: sender }, 'testnet04');
+    .setMeta({ senderAccount: sender }, 'testnet06');
 
   const res = await signWithChainweaver(unsignedTransaction);
 
@@ -430,7 +430,7 @@ async function pollMain(...requestKeys: string[]): Promise<void> {
 New implementation
 
 ```ts
-const NETWORK_ID: string = 'testnet04';
+const NETWORK_ID: string = 'testnet06';
 
 async function transfer(
   sender: string,
@@ -581,7 +581,7 @@ We are available via Discord and Github issues:
   https://github.com/kadena-community/kadena.js/blob/main/packages/libs/client-examples/src/example-contract/functional/transfer-fp.ts
 [35]:
   https://github.com/kadena-community/kadena.js/blob/main/packages/libs/client-examples/src/example-contract/functional/compose-commands.ts
-[36]: https://api.chainweb.com/openapi/pact.html
+[36]: https://api.chainweb-community.org/openapi/pact.html
 [37]:
   https://github.com/kadena-community/kadena.js/blob/main/packages/libs/client-examples/src/example-contract/get-balance.ts
 [38]:

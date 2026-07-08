@@ -5,7 +5,7 @@ export const environment: {
   kadenaChainId: ChainId;
   kadenaHost: string;
 } = {
-  kadenaNetworkId: 'testnet04',
+  kadenaNetworkId: 'testnet06',
   kadenaChainId: '0',
-  kadenaHost: 'api.testnet.chainweb.com',
+  kadenaHost: 'api.testnet.chainweb-community.org',
 };

@@ -43,7 +43,7 @@ describe('useGetFrozenTokens', () => {
     address: 'k:myaddress123',
     publicKey: 'publicKey123',
     name: 'Test Wallet',
-    networkId: 'testnet04',
+    networkId: 'testnet06',
   };
 
   const mockAsset: IAsset = {

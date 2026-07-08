@@ -71,7 +71,7 @@ describe('createAndTransferFunds', () => {
 
     expect(result).toStrictEqual({
       chainId: '1',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
       requestKey: 'requestKey-1',
     });
   });

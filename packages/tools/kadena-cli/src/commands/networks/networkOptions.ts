@@ -41,7 +41,7 @@ export const networkOptions = {
     validation: z.string(),
     option: new Option(
       '-s, --network-host <networkHost>',
-      'Kadena network host (e.g. "https://api.chainweb.com")',
+      'Kadena network host (e.g. "https://api.chainweb-community.org")',
     ),
     transform: (value: string) => {
       // when it's optional and it's empty string and we don't want to validate it

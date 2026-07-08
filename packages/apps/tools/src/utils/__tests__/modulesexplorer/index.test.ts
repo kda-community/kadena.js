@@ -17,7 +17,7 @@ import {
 const exampleCookies: NextApiRequestCookies = {
   '_persist%3AdevOption': '%22BASIC%22',
   '_persist%3AchainID': '%221%22',
-  '_persist%3Anetwork': '%22testnet04%22',
+  '_persist%3Anetwork': '%22testnet06%22',
 };
 
 const exampleQuery: ParsedUrlQuery = {
@@ -65,7 +65,7 @@ describe('getCookieValue', () => {
     expect(getCookieValue('chainID', exampleCookies)).not.toBe('%221%22');
     expect(getCookieValue('chainID', exampleCookies)).toBe('1');
 
-    expect(getCookieValue('network', exampleCookies)).toBe('testnet04');
+    expect(getCookieValue('network', exampleCookies)).toBe('testnet06');
   });
 });
 
@@ -81,12 +81,12 @@ describe('modelsToTreeMap', () => {
       {
         name: 'namespace1.module1',
         chainId: '1',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
       {
         name: 'namespace2.module2',
         chainId: '2',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
       {
         name: 'coin',
@@ -108,7 +108,7 @@ describe('modelsToTreeMap', () => {
             {
               name: 'namespace1.module1',
               chainId: '1',
-              networkId: 'testnet04',
+              networkId: 'testnet06',
             },
           ],
         }),
@@ -121,7 +121,7 @@ describe('modelsToTreeMap', () => {
             {
               name: 'namespace2.module2',
               chainId: '2',
-              networkId: 'testnet04',
+              networkId: 'testnet06',
             },
           ],
         }),
@@ -148,22 +148,22 @@ describe('modelsToTreeMap', () => {
       {
         name: 'namespace1.module1',
         chainId: '1',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
       {
         name: 'namespace1.module2',
         chainId: '2',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
       {
         name: 'namespace2.module1',
         chainId: '3',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
       {
         name: 'coin',
         chainId: '0',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
     ];
     const result = modelsToTreeMap(models);
@@ -181,14 +181,14 @@ describe('modelsToTreeMap', () => {
       {
         name: 'namespace1.module1',
         chainId: '1',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
     ]);
     expect(namespace1Map.get('module2')).toEqual([
       {
         name: 'namespace1.module2',
         chainId: '2',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
     ]);
 
@@ -201,7 +201,7 @@ describe('modelsToTreeMap', () => {
       {
         name: 'namespace2.module1',
         chainId: '3',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       },
     ]);
 
@@ -210,7 +210,7 @@ describe('modelsToTreeMap', () => {
     expect(coinArray[0]).toEqual({
       name: 'coin',
       chainId: '0',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     });
   });
 });
@@ -230,7 +230,7 @@ describe('mapToTreeItems', () => {
           {
             name: 'coin',
             chainId: '1' as ChainwebChainId,
-            networkId: 'testnet04' as ChainwebNetworkId,
+            networkId: 'testnet06' as ChainwebNetworkId,
           },
         ],
       ],
@@ -242,7 +242,7 @@ describe('mapToTreeItems', () => {
         data: {
           name: 'coin',
           chainId: '1',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         },
         key: 'coin',
         title: 'coin',
@@ -251,7 +251,7 @@ describe('mapToTreeItems', () => {
             data: {
               name: 'coin',
               chainId: '1' as ChainwebChainId,
-              networkId: 'testnet04' as ChainwebNetworkId,
+              networkId: 'testnet06' as ChainwebNetworkId,
             },
             key: 'coin.1',
             title: '1',
@@ -275,7 +275,7 @@ describe('mapToTreeItems', () => {
               {
                 name: 'namespace1.module1',
                 chainId: '1' as ChainwebChainId,
-                networkId: 'testnet04' as ChainwebNetworkId,
+                networkId: 'testnet06' as ChainwebNetworkId,
               },
             ],
           ],
@@ -289,7 +289,7 @@ describe('mapToTreeItems', () => {
         data: {
           name: 'namespace1.module1',
           chainId: '1',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         },
         key: 'namespace1',
         title: 'namespace1',
@@ -298,7 +298,7 @@ describe('mapToTreeItems', () => {
             data: {
               name: 'namespace1.module1',
               chainId: '1',
-              networkId: 'testnet04',
+              networkId: 'testnet06',
             },
             key: 'namespace1.module1',
             title: 'module1',
@@ -307,7 +307,7 @@ describe('mapToTreeItems', () => {
                 data: {
                   name: 'namespace1.module1',
                   chainId: '1',
-                  networkId: 'testnet04',
+                  networkId: 'testnet06',
                 },
                 key: 'namespace1.module1.1',
                 title: '1',
@@ -330,7 +330,7 @@ describe('mapToTreeItems', () => {
           {
             name: 'coin',
             chainId: '1' as ChainwebChainId,
-            networkId: 'testnet04' as ChainwebNetworkId,
+            networkId: 'testnet06' as ChainwebNetworkId,
           },
         ],
       ],
@@ -342,7 +342,7 @@ describe('mapToTreeItems', () => {
         data: {
           name: 'coin',
           chainId: '1',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
         },
         key: 'some-parent-key.coin',
         title: 'coin',
@@ -351,7 +351,7 @@ describe('mapToTreeItems', () => {
             data: {
               name: 'coin',
               chainId: '1' as ChainwebChainId,
-              networkId: 'testnet04' as ChainwebNetworkId,
+              networkId: 'testnet06' as ChainwebNetworkId,
             },
             isActive: false,
             key: 'some-parent-key.coin.1',

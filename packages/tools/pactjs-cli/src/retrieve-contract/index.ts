@@ -52,7 +52,7 @@ export function retrieveContractCommand(
     .option('-o, --out <file>', 'File to write the contract to')
     .option(
       '--api <url>',
-      'API to retrieve from (e.g. "https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact")',
+      'API to retrieve from (e.g. "https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact")',
     )
     .option(
       '-n, --network <network>',

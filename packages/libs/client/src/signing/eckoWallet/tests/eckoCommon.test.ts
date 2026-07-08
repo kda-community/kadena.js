@@ -43,7 +43,7 @@ describe('eckoCommon', () => {
     it('returns false when Ecko Wallet is not installed', async () => {
       if (window.kadena) window.kadena.isKadena = false;
 
-      const result = await isConnected('testnet04');
+      const result = await isConnected('testnet06');
 
       expect(result).toBeFalsy();
     });
@@ -54,7 +54,7 @@ describe('eckoCommon', () => {
         status: 'success',
       });
 
-      const result = await isConnected('testnet04');
+      const result = await isConnected('testnet06');
 
       expect(result).toBeTruthy();
     });
@@ -65,7 +65,7 @@ describe('eckoCommon', () => {
       if (window.kadena) window.kadena.isKadena = false;
 
       try {
-        await connect('testnet04');
+        await connect('testnet06');
       } catch (e) {
         expect(e.message).toContain('Ecko Wallet is not installed');
       }
@@ -77,7 +77,7 @@ describe('eckoCommon', () => {
         status: 'success',
       });
 
-      const result = await connect('testnet04');
+      const result = await connect('testnet06');
 
       expect(result).toBeTruthy();
     });
@@ -93,16 +93,16 @@ describe('eckoCommon', () => {
         status: 'success',
       });
 
-      const result = await connect('testnet04');
+      const result = await connect('testnet06');
 
       expect(mockEckoRequest).toHaveBeenCalledWith({
         method: 'kda_checkStatus',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
 
       expect(mockEckoRequest).toHaveBeenCalledWith({
         method: 'kda_connect',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
 
       expect(result).toBeTruthy();
@@ -120,7 +120,7 @@ describe('eckoCommon', () => {
       });
 
       try {
-        await connect('testnet04');
+        await connect('testnet06');
       } catch (e) {
         expect(e.message).toContain('User declined connection');
       }
@@ -132,7 +132,7 @@ describe('eckoCommon', () => {
       if (window.kadena) window.kadena.isKadena = false;
 
       try {
-        await checkStatus('testnet04');
+        await checkStatus('testnet06');
       } catch (e) {
         expect(e.message).toContain('Ecko Wallet is not installed');
       }
@@ -154,7 +154,7 @@ describe('eckoCommon', () => {
         },
       });
 
-      const result = await checkStatus('testnet04');
+      const result = await checkStatus('testnet06');
 
       expect(result).toEqual({
         status: 'success',
@@ -188,11 +188,11 @@ describe('eckoCommon', () => {
         publicKey: 'abcd',
       });
 
-      const result = await checkStatus('testnet04');
+      const result = await checkStatus('testnet06');
 
       expect(mockEckoRequest).toHaveBeenCalledWith({
         method: 'kda_checkStatus',
-        networkId: 'testnet04',
+        networkId: 'testnet06',
       });
 
       expect(result).toEqual({
@@ -218,7 +218,7 @@ describe('eckoCommon', () => {
       });
 
       try {
-        await connect('testnet04');
+        await connect('testnet06');
       } catch (e) {
         expect(e.message).toContain('User declined connection');
       }

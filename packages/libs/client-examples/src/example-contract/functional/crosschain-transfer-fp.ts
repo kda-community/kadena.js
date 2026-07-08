@@ -38,7 +38,7 @@ const senderAccount: string =
 const receiverAccount: string =
   'k:2f48080efe54e6eb670487f664bcaac7684b4ebfcfc8a3330ef080c9c97f7e11';
 
-const NETWORK_ID: string = 'testnet04';
+const NETWORK_ID: string = 'testnet06';
 
 function startInTheFirstChain(from: IAccount, to: IAccount, amount: string) {
   return composePactCommand(

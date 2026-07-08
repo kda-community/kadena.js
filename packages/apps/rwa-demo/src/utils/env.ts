@@ -38,7 +38,7 @@ export const env = {
   WALLET_URL,
   URL,
   CHAINID: (CHAINID ?? '1') as ChainId,
-  NETWORKID: NETWORKID ?? 'testnet04',
+  NETWORKID: NETWORKID ?? 'testnet06',
   NETWORKNAME: NETWORKNAME ?? '',
   NETWORKHOST: NETWORKHOST ?? '',
   CHAINWEBAPIURL: CHAINWEBAPIURL ?? '',

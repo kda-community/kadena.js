@@ -48,7 +48,7 @@ let adapter: MockAdapter;
 
 beforeEach(() => {
   vi.clearAllMocks();
-  adapter = new MockAdapter({ provider: mockProvider, networkId: 'testnet04' });
+  adapter = new MockAdapter({ provider: mockProvider, networkId: 'testnet06' });
 });
 
 describe('BaseWalletAdapter', () => {
@@ -125,7 +125,7 @@ describe('BaseWalletAdapter', () => {
 
     expect(mockProvider.request).toHaveBeenCalledWith({
       method: 'kadena_connect',
-      params: { networkId: 'testnet04' },
+      params: { networkId: 'testnet06' },
     });
     expect(account).toEqual({ accountName: 'alice' });
   });
@@ -142,7 +142,7 @@ describe('BaseWalletAdapter', () => {
 
     expect(mockProvider.request).toHaveBeenCalledWith({
       method: 'kadena_disconnect',
-      params: { networkId: 'testnet04' },
+      params: { networkId: 'testnet06' },
     });
   });
 
@@ -174,12 +174,12 @@ describe('BaseWalletAdapter', () => {
     const resp = {
       id: 6,
       jsonrpc: '2.0',
-      result: { networkName: 'n', networkId: 'testnet04' },
+      result: { networkName: 'n', networkId: 'testnet06' },
     } as IKdaMethodMap['kadena_getNetwork_v1']['response'];
     mockProvider.request.mockResolvedValueOnce(resp);
 
     const net = await adapter.getActiveNetwork();
-    expect(net.networkId).toBe('testnet04');
+    expect(net.networkId).toBe('testnet06');
   });
 
   it('getNetworks returns a list of network info', async () => {

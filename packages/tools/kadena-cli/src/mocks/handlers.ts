@@ -70,7 +70,7 @@ export const handlers: any = [
   ),
 
   http.post(
-    'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact/api/v1/local',
+    'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact/api/v1/local',
     async ({ request }): Promise<HttpResponse> => {
       const data = (await request.json()) as unknown as IPayloadData;
       if (data === undefined)
@@ -164,7 +164,7 @@ export const handlers: any = [
   ),
 
   http.post(
-    'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact/api/v1/send',
+    'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact/api/v1/send',
     () => {
       return HttpResponse.json(
         {
@@ -176,7 +176,7 @@ export const handlers: any = [
   ),
 
   http.post(
-    'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact/api/v1/listen',
+    'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact/api/v1/listen',
     () => {
       return HttpResponse.json(
         {
@@ -194,7 +194,7 @@ export const handlers: any = [
   ),
 
   http.post(
-    'https://api.testnet.chainweb.com/chainweb/0.0/testnet04/chain/1/pact/api/v1/poll',
+    'https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/1/pact/api/v1/poll',
     () => {
       return HttpResponse.json(pollTxResponseMock, { status: 200 });
     },
@@ -202,7 +202,7 @@ export const handlers: any = [
 
   // Mainnet
   http.post(
-    'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact/api/v1/local',
+    'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact/api/v1/local',
     async ({ request }): Promise<HttpResponse> => {
       const data = (await request.json()) as unknown as IPayloadData;
       if (data === undefined)
@@ -242,7 +242,7 @@ export const handlers: any = [
   ),
 
   http.post(
-    'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact/api/v1/send',
+    'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact/api/v1/send',
     () => {
       return HttpResponse.json(
         {
@@ -254,7 +254,7 @@ export const handlers: any = [
   ),
 
   http.post(
-    'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact/api/v1/listen',
+    'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact/api/v1/listen',
     () => {
       return HttpResponse.json(
         {

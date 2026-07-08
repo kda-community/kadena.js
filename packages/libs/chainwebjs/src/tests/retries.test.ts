@@ -16,7 +16,7 @@ describe('retry', () => {
     });
     await expect(r).rejects.toThrow(chainweb.ResponseError);
     await expect(r).rejects.toThrow(
-      'Request https://api.chainweb.com/chainweb/0.0/invalid/cut failed with 404, Not Found',
+      'Request https://api.chainweb-community.org/chainweb/0.0/invalid/cut failed with 404, Not Found',
     );
     expect(c).toBe(2);
   });
@@ -26,7 +26,7 @@ describe('retry', () => {
     const r = chainweb.cut.current('invalid', config.host, opts);
     await expect(r).rejects.toThrow(chainweb.ResponseError);
     await expect(r).rejects.toThrow(
-      'Request https://api.chainweb.com/chainweb/0.0/invalid/cut failed with 404, Not Found',
+      'Request https://api.chainweb-community.org/chainweb/0.0/invalid/cut failed with 404, Not Found',
     );
     expect(c).toBe(0);
   });
@@ -35,7 +35,7 @@ describe('retry', () => {
     const r = chainweb.cut.current('invalid', config.host, opts);
     await expect(r).rejects.toThrow(chainweb.ResponseError);
     await expect(r).rejects.toThrow(
-      'Request https://api.chainweb.com/chainweb/0.0/invalid/cut failed with 404, Not Found',
+      'Request https://api.chainweb-community.org/chainweb/0.0/invalid/cut failed with 404, Not Found',
     );
   });
 });
@@ -66,7 +66,7 @@ describe('request', () => {
   it('should create a correct URL', async () => {
     const url = chainUrl(1, 'header/payload', config.network, config.host);
     expect(url.href).toMatch(
-      'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/header/payload',
+      'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/header/payload',
     );
   });
   it('should throw when chain is missing', async () => {

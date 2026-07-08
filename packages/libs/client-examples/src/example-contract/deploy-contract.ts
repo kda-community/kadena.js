@@ -20,7 +20,7 @@ async function deployContract(
       gasPrice: 0.0000001,
       senderAccount: deployerAccount,
     })
-    .setNetworkId('testnet04')
+    .setNetworkId('testnet06')
     .createTransaction();
 
   try {

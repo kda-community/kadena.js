@@ -33,7 +33,7 @@ describe('useGetPrincipalNamespace', () => {
     walletName: 'CHAINWEAVER' as const,
     walletType: 'default' as const,
     chainId: '1' as ChainId,
-    networkId: 'testnet04',
+    networkId: 'testnet06',
   };
 
   // Create a complete mock of AccountContext

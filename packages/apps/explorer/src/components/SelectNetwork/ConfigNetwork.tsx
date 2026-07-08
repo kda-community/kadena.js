@@ -357,9 +357,9 @@ export const ConfigNetwork: FC<IProps> = ({ handleOpen }) => {
                 You can pass <code>networkId</code> as querystring parameter.
                 This allows Wallets or dApps to choose a specific network. For
                 example, if you want to navigate to the account with the
-                networkId <code>testnet04</code>, you can use the following URL:{' '}
+                networkId <code>testnet06</code>, you can use the following URL:{' '}
                 <code style={{ marginBlock: token('spacing.sm') }}>
-                  https://explorer.kadena.io/account/k:2da46f2cc21e219c68a2f18d1a454c10606d52b18d8574913aacb2ea6b6b7251?networkId=testnet04#Transactions
+                  https://explorer.kadena.io/account/k:2da46f2cc21e219c68a2f18d1a454c10606d52b18d8574913aacb2ea6b6b7251?networkId=testnet06#Transactions
                 </code>
               </div>
             </Notification>

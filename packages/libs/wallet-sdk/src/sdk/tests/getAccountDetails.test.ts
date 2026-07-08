@@ -43,7 +43,7 @@ function getLocalUrl(networkId: string, chainId: string): string {
 
 describe('WalletSDK - getAccountDetails', () => {
   const accountName = 'test-account';
-  const networkId = 'testnet04';
+  const networkId = 'testnet06';
   const fungible = 'coin';
   const chainIds: ChainId[] = ['0', '1'];
 

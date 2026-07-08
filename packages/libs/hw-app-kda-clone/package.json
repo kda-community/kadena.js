@@ -21,7 +21,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.cjs.json && tsc && cp ./package.cjs.json ./lib/cjs/package.json #&& api-extractor run",
+    "build": "tsc -p tsconfig.cjs.json && tsc && cp ./package.cjs.json ./lib/cjs/package.json",
     "format": "echo 'no formatting' # pnpm run --sequential /^format:.*/",
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",

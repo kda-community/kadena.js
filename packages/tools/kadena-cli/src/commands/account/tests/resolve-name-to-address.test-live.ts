@@ -8,7 +8,7 @@ describe('resolveAddressToName functionality', () => {
   it('resolves a address name from a .kda name', async () => {
     const network = 'mainnet';
     const networkId = 'mainnet01';
-    const networkHost = 'https://api.chainweb.com';
+    const networkHost = 'https://api.chainweb-community.org';
     const testName = 'randy.kda';
 
     const result = await resolveNameToAddress(

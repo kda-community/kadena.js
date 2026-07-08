@@ -1,4 +1,4 @@
-import { env } from "./env";
+import { env } from './env';
 
 export const getExplorerLink = (
   requestKey: string,
@@ -6,7 +6,7 @@ export const getExplorerLink = (
   networksData: any[],
 ): string => {
   if (network === 'testnet06' || network === 'mainnet01') {
-    return `https://${env("KADENA_EXPLORER", '')}/${network.slice(
+    return `https://${env('KADENA_EXPLORER', '')}/${network.slice(
       0,
       -2,
     )}/tx/${requestKey}`;

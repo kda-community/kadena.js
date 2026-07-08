@@ -26,7 +26,13 @@ export function PactConsole({
   target: Window;
 }) {
   const message = useMemo(
-    () => communicate(window, target, '@kadena/chainweaver-pact-console-plugin', sessionId),
+    () =>
+      communicate(
+        window,
+        target,
+        '@kadena/chainweaver-pact-console-plugin',
+        sessionId,
+      ),
     [sessionId, target],
   );
   const [networks, setNetworks] = useState<INetwork[]>([]);
@@ -34,7 +40,7 @@ export function PactConsole({
   const [command, setCommand] = useState<string>('');
   const [chainId, setChainId] = useState<ChainId>('0');
   const [networkId, setNetwork] = useState<string>(
-    networks.length ? networks[0].networkId : 'testnet04',
+    networks.length ? networks[0].networkId : 'testnet06',
   );
   const [commandHistory, setCommandHistory] = useState<{
     list: string[];

@@ -30,13 +30,13 @@ describe('fund', () => {
     (transferFund as Mock).mockResolvedValue({
       requestKey: 'requestKey-1',
       chainId: '1',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     });
 
     (createAndTransferFund as Mock).mockResolvedValue({
       requestKey: 'requestKey-1',
       chainId: '1',
-      networkId: 'testnet04',
+      networkId: 'testnet06',
     });
   });
 
@@ -57,7 +57,7 @@ describe('fund', () => {
       data: [
         {
           chainId: '1',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           requestKey: 'requestKey-1',
         },
       ],
@@ -85,7 +85,7 @@ describe('fund', () => {
       data: [
         {
           chainId: '1',
-          networkId: 'testnet04',
+          networkId: 'testnet06',
           requestKey: 'requestKey-1',
         },
       ],

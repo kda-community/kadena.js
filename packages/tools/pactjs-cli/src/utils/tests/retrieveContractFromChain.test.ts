@@ -5,14 +5,14 @@ import { retrieveContractFromChain } from '../retrieveContractFromChain';
 
 const httpHandlers = [
   http.post(
-    'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact/api/v1/local',
+    'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact/api/v1/local',
     () =>
       HttpResponse.json({
         result: { status: 'success', data: { code: 'some pactCode' } },
       }),
   ),
   http.post(
-    'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact/api/v1/local',
+    'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact/api/v1/local',
     () => HttpResponse.text('Error'),
   ),
 ];
@@ -26,7 +26,7 @@ describe('retrieveContractFromChain', () => {
   it('returns the pactCode on success', async () => {
     const result = await retrieveContractFromChain(
       'free.crankk01',
-      'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact',
+      'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact',
       0,
       'mainnet',
     );
@@ -37,7 +37,7 @@ describe('retrieveContractFromChain', () => {
     await expect(() =>
       retrieveContractFromChain(
         'free.crankk01',
-        'https://api.chainweb.com/chainweb/0.0/mainnet01/chain/1/pact',
+        'https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact',
         0,
         'mainnet',
       ),

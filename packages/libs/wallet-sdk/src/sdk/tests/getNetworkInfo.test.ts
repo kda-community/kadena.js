@@ -30,7 +30,7 @@ function setupServerResponse(
 }
 
 describe('WalletSDK - Info Functions', () => {
-  const networkHost = 'https://api.testnet.chainweb.com';
+  const networkHost = 'https://api.testnet.chainweb-community.org';
 
   describe('getChains', () => {
     it('should return a list of chains when nodeChains is present', async () => {

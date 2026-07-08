@@ -14,7 +14,7 @@ export const readHistory = (
   account: string,
   chainId: ChainId,
   faucetContract: string = 'n_d8cbb935f9cd9d2399a5886bb08caed71f9bad49.coin-faucet',
-  networkId: string = 'testnet04',
+  networkId: string = 'testnet06',
   host?: IClientConfig['host'],
 ) => {
   const getDetails = pipe(

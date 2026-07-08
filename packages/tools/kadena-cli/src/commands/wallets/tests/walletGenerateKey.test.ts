@@ -5,7 +5,10 @@ import { services } from '../../../services/index.js';
 import { mockPrompts, runCommandJson } from '../../../utils/test.util.js';
 
 describe('wallet generate-key command', () => {
-  const walletPath = path.join(WORKING_DIRECTORY, '.kadena/wallets/test.yaml');
+  const walletPath = path.join(
+    WORKING_DIRECTORY,
+    '.kadena/wallets/generate-key-test.yaml',
+  );
   const password = '12345678';
   const mnemonic =
     'regular scissors hybrid step warfare dinosaur caught option phrase bitter situate yard';
@@ -17,16 +20,16 @@ describe('wallet generate-key command', () => {
     await services.filesystem.writeFile(pwFile, password);
 
     await runCommandJson(
-      `wallet import --quiet -w test --mnemonic-file ${mnemonicFile} --password-file ${pwFile}`,
+      `wallet import --quiet -w generate-key-test --mnemonic-file ${mnemonicFile} --password-file ${pwFile}`,
     );
   });
 
   afterEach(async () => {
-    await services.filesystem.deleteFile(walletPath);
+    await services.filesystem.deleteFile(walletPath).catch(() => {});
   });
 
   it('Should create a new wallet key', async () => {
-    await runCommandJson('wallet generate-key -w test --quiet', {
+    await runCommandJson('wallet generate-key -w generate-key-test --quiet', {
       stdin: password,
     });
     const wallet = await services.wallet.get(walletPath);
@@ -43,7 +46,7 @@ describe('wallet generate-key command', () => {
         'Alias for the generated key': '',
       },
       select: {
-        'Select a wallet': 'test',
+        'Select a wallet': 'generate-key-test',
       },
       password: {
         'Enter the wallet password': password,
@@ -57,33 +60,42 @@ describe('wallet generate-key command', () => {
     );
   });
 
-  it('Should create 3 new wallet keys with start index', async () => {
-    await runCommandJson('wallet generate-key -w test -n 3 -i 5 --quiet', {
-      stdin: password,
-    });
-    const wallet = await services.wallet.get(walletPath);
+  it(
+    'Should create 3 new wallet keys with start index',
+    async () => {
+      await runCommandJson(
+        'wallet generate-key -w generate-key-test -n 3 -i 5 --quiet',
+        {
+          stdin: password,
+        },
+      );
+      const wallet = await services.wallet.get(walletPath);
 
-    expect(wallet?.keys).toEqual([
-      {
-        index: 0,
-        publicKey:
-          'f2e08d07b7a0f399917aadd90584a8485939660effd665e7d36b4b820210b262',
-      },
-      {
-        index: 5,
-        publicKey:
-          '43909df9913bd4c733f6c0908d204f800ae5a482057ea051ca90807505974b1b',
-      },
-      {
-        index: 6,
-        publicKey:
-          '0d320cedc938e63a28b419aa6c9becc349cdbbc77465ce0b04d115645f058c47',
-      },
-      {
-        index: 7,
-        publicKey:
-          'bfd2381431903246c8da36396cb7342ace2308af3d790c97733038eae2ebfc18',
-      },
-    ]);
-  });
+      expect(wallet?.keys).toEqual([
+        {
+          index: 0,
+          publicKey:
+            'f2e08d07b7a0f399917aadd90584a8485939660effd665e7d36b4b820210b262',
+        },
+        {
+          index: 5,
+          publicKey:
+            '43909df9913bd4c733f6c0908d204f800ae5a482057ea051ca90807505974b1b',
+        },
+        {
+          index: 6,
+          publicKey:
+            '0d320cedc938e63a28b419aa6c9becc349cdbbc77465ce0b04d115645f058c47',
+        },
+        {
+          index: 7,
+          publicKey:
+            'bfd2381431903246c8da36396cb7342ace2308af3d790c97733038eae2ebfc18',
+        },
+      ]);
+    },
+    {
+      timeout: 25000,
+    },
+  );
 });

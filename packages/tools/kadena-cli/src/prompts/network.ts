@@ -101,7 +101,7 @@ export const networkHostPrompt: IPrompt<string> = async (
   };
 
   return await getInputPrompt(
-    'Enter Kadena network host (e.g. "https://api.chainweb.com"):',
+    'Enter Kadena network host (e.g. "https://api.chainweb-community.org"):',
     defaultValue,
     validate,
   );

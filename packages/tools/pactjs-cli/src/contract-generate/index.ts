@@ -81,7 +81,7 @@ export function contractGenerateCommand(
     )
     .option(
       '--api <api>',
-      'The API to use for retrieving the contract, e.g. "https://api.chainweb.com/chainweb/0.0/mainnet01/chain/8/pact"',
+      'The API to use for retrieving the contract, e.g. "https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/8/pact"',
     )
     .addOption(
       new Option(
