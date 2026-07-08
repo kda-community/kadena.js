@@ -1,0 +1,19 @@
+account: k:f89ef46927f506c70b6a58fd322450a936311dc6ac91f4ec3d8ef949608dbf1f
+constantDelayBlockTime: 5
+defaultHTTPTimeout: 1000000
+externalWorkerCommand: echo 'no external worker command configured' && /bin/false
+generateKey: false
+hashRate: 1000000.0
+insecure: false
+logLevel: info
+node: localhost:1848
+onDemandInterface: '*'
+onDemandPort: 1917
+publicKey: f89ef46927f506c70b6a58fd322450a936311dc6ac91f4ec3d8ef949608dbf1f
+stratumDifficulty: block
+stratumInterface: '*'
+stratumPort: 1917
+stratumRate: 1000
+threadCount: 1
+useTls: false
+worker: constant-delay
