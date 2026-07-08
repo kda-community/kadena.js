@@ -1,4 +1,6 @@
 import { kadenaDefaultNetworks } from '@/constants/kadena';
+import type { INetworkData } from '@/utils/network';
+import { prefixApi } from '@/utils/network';
 import type {
   ChainwebChainId,
   ChainwebNetworkId,
@@ -13,6 +15,7 @@ const debug = Debug('kadena-transfer:services:faucet');
 
 export const createPrincipal = async (
   keys: string[],
+  networkData: INetworkData | undefined,
   chainId: ChainwebChainId,
   pred = 'keys-all',
 ): Promise<string | Error> => {
@@ -28,9 +31,9 @@ export const createPrincipal = async (
       },
     },
     {
-      host: `https://${kadenaDefaultNetworks.testnet06.API}`,
+      host: prefixApi(networkData?.API || kadenaDefaultNetworks.testnet06.API),
       defaults: {
-        networkId: NETWORK_ID,
+        networkId: networkData?.networkId || NETWORK_ID,
         meta: { chainId },
       },
     },
