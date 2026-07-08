@@ -240,7 +240,7 @@ test.describe('Query: getTransactions', () => {
         expect(finalResponse.transactions.edges[0].node).toEqual({
           result: {
             continuation: `{"step":1,"yield":null,"pactId":"${transfer.continuation?.pactId}","executed":null,"stepCount":2,"continuation":{"def":"coin.transfer-crosschain","args":["${sourceAccount.account}","${targetAccount.account}",{"keys":["${targetAccount.keys[0].publicKey}"],"pred":"keys-all"},"1",20]},"stepHasRollback":false}`,
-            gas: 210,
+            gas: 262,
             eventCount: 4,
             events: {
               edges: [
@@ -274,7 +274,7 @@ test.describe('Query: getTransactions', () => {
                 {
                   node: {
                     requestKey: transfer.reqKey,
-                    parameterText: `["${sourceAccount.account}","${devnetMiner.account}",2.1e-6]`,
+                    parameterText: `["${sourceAccount.account}","${devnetMiner.account}",2.62e-6]`,
                     id: base64Encode(
                       `Event:["${transfer.metaData?.blockHash}","3","${transfer.reqKey}"]`,
                     ),
@@ -322,7 +322,7 @@ test.describe('Query: getTransactions', () => {
                 },
                 {
                   node: {
-                    amount: 0.0000021,
+                    amount: 0.00000262,
                     transaction: {
                       result: {
                         block: {
