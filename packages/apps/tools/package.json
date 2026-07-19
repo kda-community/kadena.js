@@ -46,7 +46,7 @@
     "classnames": "^2.3.1",
     "date-fns": "~2.30.0",
     "fuse.js": "^7.0.0",
-    "http-proxy-middleware": "^2.0.6",
+    "http-proxy-middleware": "^2.0.10",
     "hw-app-kda-clone": "workspace:*",
     "js-cookie": "~3.0.5",
     "next": "~15.4.6",
