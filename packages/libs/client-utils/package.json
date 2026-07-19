@@ -134,7 +134,7 @@
     "@kadena/types": "workspace:*",
     "debug": "4.3.4",
     "dotenv": "~16.4.5",
-    "js-yaml": "~4.1.0",
+    "js-yaml": "~4.2.0",
     "ramda": "^0.29.0"
   },
   "devDependencies": {
