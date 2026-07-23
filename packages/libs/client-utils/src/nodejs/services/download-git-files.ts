@@ -11,7 +11,6 @@ export async function downloadGitFiles({
   fileExtension,
   drillDown = false,
   excludeFolder = [],
-  githubToken,
 }: {
   owner: string;
   name: string;
@@ -21,13 +20,12 @@ export async function downloadGitFiles({
   fileExtension: string;
   drillDown?: boolean;
   excludeFolder?: string[];
-  githubToken?: string;
 }): Promise<void> {
   const folderUrl = buildGitApiUrl(owner, name, path, branch);
 
   console.log(`Downloading file: ${folderUrl}`);
 
-  const gitData = await getGitData(folderUrl, false, githubToken);
+  const gitData = await getGitData(folderUrl, false);
 
   if (gitData instanceof Array) {
     // if gitData is an array, it means that it is a folder and we can download the files
@@ -47,8 +45,7 @@ export async function downloadGitFiles({
             localPath: join(localPath, file.name),
             fileExtension,
             drillDown,
-            excludeFolder,
-            githubToken,
+            excludeFolder
           });
         } else if (
           !file.name.endsWith(fileExtension) ||
@@ -60,8 +57,7 @@ export async function downloadGitFiles({
           await donwloadGitFile(
             file.download_url,
             file.name,
-            localPath,
-            githubToken,
+            localPath
           );
         }
       }),
@@ -78,8 +74,7 @@ export async function downloadGitFiles({
     await donwloadGitFile(
       gitData.download_url,
       gitData.name,
-      localPath,
-      githubToken,
+      localPath
     );
   } else {
     throw new Error('Provided path is not a valid');
@@ -97,8 +92,8 @@ export async function getGitData(
     },
   };
 
-  if (githubToken && options.headers) {
-    options.headers.Authorization = `token ${githubToken}`;
+  if (process.env.GITHUB_TOKEN && options.headers) {
+    options.headers.Authorization = `token ${process.env.GITHUB_TOKEN}`;
   }
 
   const data = await new Promise((resolve, reject) => {

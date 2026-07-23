@@ -9,6 +9,8 @@ on:
 
 env:
   CI: true
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   # comma separated list of allowed authors for docs PRs
   # ALLOWED_DOCS_AUTHORS: lsgunnlsgunn,
 
