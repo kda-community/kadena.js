@@ -27,7 +27,6 @@ import { createClient } from 'graphql-ws';
 import WebSocket from 'ws';
 import { getBlockHash } from '../helpers/block.helper';
 import { base64Encode } from '../helpers/cryptography.helper';
-import { triggerMining } from '../helpers/miner.helper';
 import { sendQuery } from '../helpers/request.helper';
 import {
   getTransactionsByRequestKeySubscription,
@@ -36,6 +35,7 @@ import {
 
 test.describe('Query: getTransactions', () => {
   test('Query: getTransactions - Same Chain Transfer', async ({ request }) => {
+    test.setTimeout(60_000);
     // declare testcase scoped variables.
     let query: any;
     let sourceAccount: IAccount;
@@ -191,6 +191,7 @@ test.describe('Query: getTransactions', () => {
     });
   });
   test('Query: getTransactions - Cross Chain Transfer', async ({ request }) => {
+    test.setTimeout(300_000);
     // declare testcase scoped variables.
     let sourceAccount: IAccount;
     let targetAccount: IAccount;
@@ -240,7 +241,7 @@ test.describe('Query: getTransactions', () => {
         expect(finalResponse.transactions.edges[0].node).toEqual({
           result: {
             continuation: `{"step":1,"yield":null,"pactId":"${transfer.continuation?.pactId}","executed":null,"stepCount":2,"continuation":{"def":"coin.transfer-crosschain","args":["${sourceAccount.account}","${targetAccount.account}",{"keys":["${targetAccount.keys[0].publicKey}"],"pred":"keys-all"},"1",20]},"stepHasRollback":false}`,
-            gas: 210,
+            gas: 262,
             eventCount: 4,
             events: {
               edges: [
@@ -274,7 +275,7 @@ test.describe('Query: getTransactions', () => {
                 {
                   node: {
                     requestKey: transfer.reqKey,
-                    parameterText: `["${sourceAccount.account}","${devnetMiner.account}",2.1e-6]`,
+                    parameterText: `["${sourceAccount.account}","${devnetMiner.account}",2.62e-6]`,
                     id: base64Encode(
                       `Event:["${transfer.metaData?.blockHash}","3","${transfer.reqKey}"]`,
                     ),
@@ -322,7 +323,7 @@ test.describe('Query: getTransactions', () => {
                 },
                 {
                   node: {
-                    amount: 0.0000021,
+                    amount: 0.00000262,
                     transaction: {
                       result: {
                         block: {
@@ -601,7 +602,6 @@ test.describe('Subscription: getTransactions', () => {
         },
       });
 
-      await triggerMining(request, account.chains[0], 2);
       const listenResult = await txTask.executeTo('listen');
       expect(listenResult.result).toEqual({
         status: 'success',

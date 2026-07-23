@@ -31,7 +31,7 @@ const inputs = {
   },
 };
 const config = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
   },
@@ -40,7 +40,7 @@ const config = {
 
 beforeAll(async () => {
   const config: IClientConfig = {
-    host: 'http://127.0.0.1:8080',
+    host: 'http://127.0.0.1:1848',
     defaults: {
       networkId: 'development',
       meta: {

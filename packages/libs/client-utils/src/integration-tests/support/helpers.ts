@@ -12,6 +12,8 @@ import { dirtyReadClient, submitClient } from '../../core';
 import type { Any } from '../../core/utils/types';
 import { sourceAccount } from '../test-data/accounts';
 
+const REF_BLOCK_TIME = 5_000;
+
 export const withStepFactory = () => {
   let step = 0;
   return <
@@ -34,7 +36,7 @@ export const getBlockDate = async (props?: { chainId?: ChainId }) => {
   const { chainId } = props || { chainId: '0' };
 
   const config = {
-    host: 'http://127.0.0.1:8080',
+    host: 'http://127.0.0.1:1848',
     defaults: {
       networkId: 'development',
     },
@@ -56,6 +58,14 @@ export const getBlockDate = async (props?: { chainId?: ChainId }) => {
   return new Date(Number(parseAsPactValue(time)) * 1000);
 };
 
+export const waitForNewBlock = async () => {
+  const initBlockTime = await getBlockDate();
+  while (true) {
+    const newBlockTime = await getBlockDate();
+    if (newBlockTime.getTime() !== initBlockTime.getTime()) return;
+  }
+};
+
 /**
  * Wait for a certain blockTime to have passed
  */
@@ -70,19 +80,11 @@ export const waitForBlockTime = async (timeSeconds: IPactInt) => {
   while (true) {
     const time = await getBlockDate();
 
-    let diffTime = 0;
+    const diffTime = Number(timeSeconds.int) * 1000 - time.getTime();
 
-    if (time.getTime() > Number(timeSeconds.int) * 1000) {
-      break;
-    } else {
-      diffTime = Number(timeSeconds.int) * 1000 - time.getTime() + 50;
-    }
-
-    if (diffTime === 0) {
-      break;
-    }
-
-    await waitFor(diffTime);
+    if (diffTime < 0) break;
+    else if (diffTime > 2 * REF_BLOCK_TIME) await waitFor(REF_BLOCK_TIME);
+    else await waitFor(10);
   }
 };
 
@@ -101,7 +103,7 @@ export const dateToPactInt = (date: Date): IPactInt => ({
 
 export const deployGasStation = async ({ chainId }: { chainId: ChainId }) => {
   const config = {
-    host: 'http://127.0.0.1:8080',
+    host: 'http://127.0.0.1:1848',
     defaults: {
       networkId: 'development',
     },

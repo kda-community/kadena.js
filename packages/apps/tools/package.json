@@ -10,7 +10,7 @@
     "format:lint": "pnpm run lint:src --fix",
     "format:md": "remark README.md -o --use @kadena-dev/markdown",
     "format:src": "prettier . --cache --write",
-    "generate:coin:contract": "pactjs contract-generate --contract coin --api https://api.chainweb-community.org/chainweb/0.0/mainnet01/chain/1/pact --chain 1 --network testnet",
+    "generate:coin:contract": "pactjs contract-generate -f ../../../pact_ref_modules/fungible-xchain-v1.pact  -f ../../../pact_ref_modules/fungible-v2.pact -f ../../../pact_ref_modules/coin-v5.pact",
     "generate:contracts": "pnpm run /^generate:.*:contract/",
     "generate:faucet:contract": "pactjs contract-generate --namespace n_d8cbb935f9cd9d2399a5886bb08caed71f9bad49 -f ../../libs/client-utils/src/scripts/deploy-faucet/testnet-faucet.pact",
     "lint": "pnpm run /^lint:.*/",

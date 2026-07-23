@@ -10,11 +10,11 @@ export const apiHostGenerator = ({
 }): string => {
   switch (networkId) {
     case 'development':
-      return `http://127.0.0.1:8080/chainweb/0.0/${networkId}/chain/${
+      return `http://127.0.0.1:1848/chainweb/0.0/${networkId}/chain/${
         chainId ?? '1'
       }/pact`;
     default:
-      return `http://127.0.0.1:8080/chainweb/0.0/${networkId}/chain/${
+      return `http://127.0.0.1:1848/chainweb/0.0/${networkId}/chain/${
         chainId ?? '1'
       }/pact`;
   }

@@ -18,6 +18,7 @@ import {
   dateToPactInt,
   getBlockDate,
   waitForBlockTime,
+  waitForNewBlock,
   withStepFactory,
 } from './support/helpers';
 import { secondaryTargetAccount, sourceAccount } from './test-data/accounts';
@@ -37,14 +38,15 @@ const inputs = {
   },
 };
 const config = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
   },
   sign: createSignWithKeypair([sourceAccount]),
 };
 
-describe('create, mint, offer and test withdrawal of a token', () => {
+// prettier-ignore
+describe('create, mint, offer and test withdrawal of a token', { timeout: 200_000 }, () => {
   let tokenId: string | undefined;
 
   it('returns a token id', async () => {
@@ -190,17 +192,18 @@ describe('create, mint, offer and test withdrawal of a token', () => {
     const withStep = withStepFactory();
 
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
       sign: createSignWithKeypair([sourceAccount]),
     };
 
+    await waitForNewBlock();
     const currentBlockTime = await getBlockDate({ chainId });
 
     saleTimeoutTimeSeconds = new PactNumber(
-      Math.floor(addSecondsToDate(currentBlockTime, 5).getTime() / 1000),
+      Math.floor(addSecondsToDate(currentBlockTime, 23).getTime() / 1000),
     ).toPactInteger();
 
     const result = await offerToken(
@@ -426,7 +429,7 @@ describe('create, mint, offer and test withdrawal of a token', () => {
 describe('offer non-existent token', () => {
   it('throws an error because token does not exist', async () => {
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
@@ -461,7 +464,7 @@ describe('offer non-existent token', () => {
   });
 });
 
-describe('create, mint, offer and buy a token', () => {
+describe('create, mint, offer and buy a token', { timeout: 200_000 }, () => {
   const inputs = {
     chainId,
     precision: { int: '0' },
@@ -524,15 +527,16 @@ describe('create, mint, offer and buy a token', () => {
     const withStep = withStepFactory();
 
     const saleConfig = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },
       sign: createSignWithKeypair([sourceAccount]),
     };
 
+    await waitForNewBlock();
     const blockDate = await getBlockDate({ chainId });
-    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 4));
+    saleTimeoutTimeSeconds = dateToPactInt(addSecondsToDate(blockDate, 23));
 
     const result = await offerToken(
       {
@@ -575,7 +579,7 @@ describe('create, mint, offer and buy a token', () => {
     const withStep = withStepFactory();
 
     const config = {
-      host: 'http://127.0.0.1:8080',
+      host: 'http://127.0.0.1:1848',
       defaults: {
         networkId: 'development',
       },

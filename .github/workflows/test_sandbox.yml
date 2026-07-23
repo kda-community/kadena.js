@@ -1,0 +1,92 @@
+name: Test Sandbox
+# All pull requests, and
+# Workflow dispatch allows you to run this workflow manually from the Actions tab
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+  # comma separated list of allowed authors for docs PRs
+  # ALLOWED_DOCS_AUTHORS: lsgunnlsgunn,
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  build:
+    name: Test Kadena Sandbox New
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          show-progress: false
+
+#      - name: Runner Setup
+#        uses: ./.github/actions/runner-setup
+#
+#      - name: Build App with NODE_ENV=test
+#        uses: ./.github/actions/build-app-e2e
+#        with:
+#          app: tools
+#
+#      - name: Setup Kadena sandbox
+#        uses: ./.github/actions/sandbox
+#        with:
+#          node_git_ref: fix_devnet
+#
+#      - name: Run end-to-end tests
+#        continue-on-error: true
+#        uses: ./.github/actions/end-to-end-tests
+#        with:
+#          app: tools
+#
+#      - name: Kill Kadena Sandbox
+#        if: always()
+#        run: |
+#          kill $(cat "$SANDBOX_RUN/pid")
+#
+#      - name: Archive volumes
+#        uses: ./.github/actions/archive-volumes
+#        if: always()
+#        with:
+#          test-object: "tools"
+#
+
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
+
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
+
+      - name: Setup Chainweb data sandbox
+        uses: ./.github/actions/sandbox_data_node
+        with:
+          extra_migration_dir: packages/apps/graph/cwd-extra-migrations
+          git_ref: js_tests
+          ghc_version: "9.10.2"
+
+      - name: Check stats
+        shell: bash
+        run: |
+          sleep 30
+          curl http://localhost:1849/stats
+
+      - name: Build App with NODE_ENV=test
+        uses: ./.github/actions/build-app-e2e
+        with:
+          app: graph
+
+      - name: Start graph
+        env:
+          NETWORK_HOST: http://localhost:1848
+          MEMPOOL_HOST: localhost:4443
+        working-directory: packages/apps/graph
+        run: |
+          pnpm install --filter @kadena/graph
+          pnpm turbo build --filter @kadena/graph
+          pnpm run start

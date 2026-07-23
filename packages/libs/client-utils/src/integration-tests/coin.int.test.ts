@@ -29,7 +29,7 @@ const accountTwo = {
   account: `two-${Date.now()}`,
 };
 
-describe('transferCreate', () => {
+describe('transferCreate', { timeout: 60_000 }, () => {
   it('should transfer kda from sender00 account to receiverAccount and create the account if its not exist', async () => {
     const withStep = withStepFactory();
     const result = await transferCreate(
@@ -49,7 +49,7 @@ describe('transferCreate', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -107,7 +107,7 @@ describe('getBalance', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     expect(balance).toBe('100');
   });
@@ -119,7 +119,7 @@ describe('getDetails', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     expect(data).toEqual({
       account: accountOne.account,
@@ -132,7 +132,7 @@ describe('getDetails', () => {
   });
 });
 
-describe('createAccount', () => {
+describe('createAccount', { timeout: 60_000 }, () => {
   it("should create the account with 0 balance if it's not exist", async () => {
     const result = await createAccount(
       {
@@ -148,7 +148,7 @@ describe('createAccount', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -160,7 +160,7 @@ describe('createAccount', () => {
   });
 });
 
-describe('transfer', () => {
+describe('transfer', { timeout: 60_000 }, () => {
   it('should transfer amount to an existed account', async () => {
     const result = await transfer(
       {
@@ -173,7 +173,7 @@ describe('transfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -187,14 +187,14 @@ describe('transfer', () => {
       accountTwo.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
 
     expect(balance).toBe('10');
   });
 });
 
-describe('cross chain transfer', () => {
+describe('cross chain transfer', { timeout: 200_000 }, () => {
   it('should transfer amount to another chain', async () => {
     const result = await transferCrossChain(
       {
@@ -214,7 +214,7 @@ describe('cross chain transfer', () => {
         targetChainId: '1',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -228,20 +228,20 @@ describe('cross chain transfer', () => {
       accountOne.account,
       'development',
       '1',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
 
     expect(balance).toBe('10');
   });
 });
 
-describe('safeTransfer', () => {
+describe('safeTransfer', { timeout: 60_000 }, () => {
   it('should transfer kda from sender00 account to receiverAccount if both receiver and sender sign', async () => {
     const initialBalance = await getBalance(
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     const result = await safeTransfer(
       {
@@ -257,7 +257,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -277,7 +277,7 @@ describe('safeTransfer', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     if (
       typeof balanceAfterTransfer === 'string' &&
@@ -304,7 +304,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -332,7 +332,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -343,12 +343,13 @@ describe('safeTransfer', () => {
     await expect(() => task.execute()).rejects.toThrow(/Keyset failure/);
   });
 
-  it('uses normal transfer if gasPayer is the same as receiver', async () => {
+  // prettier-ignore
+  it('uses normal transfer if gasPayer is the same as receiver', { timeout: 60_000 }, async () => {
     const initialBalance = await getBalance(
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     const result = await safeTransfer(
       {
@@ -368,7 +369,7 @@ describe('safeTransfer', () => {
         chainId: '0',
       },
       {
-        host: 'http://127.0.0.1:8080',
+        host: 'http://127.0.0.1:1848',
         defaults: {
           networkId: 'development',
         },
@@ -390,7 +391,7 @@ describe('safeTransfer', () => {
       accountOne.account,
       'development',
       '0',
-      'http://127.0.0.1:8080',
+      'http://127.0.0.1:1848',
     );
     if (
       typeof balanceAfterTransfer === 'string' &&

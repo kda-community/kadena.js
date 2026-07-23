@@ -4,9 +4,13 @@ name: CI (build, lint, test)
 on:
   pull_request:
   workflow_dispatch:
+  push:
+
 
 env:
   CI: true
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   # comma separated list of allowed authors for docs PRs
   # ALLOWED_DOCS_AUTHORS: lsgunnlsgunn,
 
@@ -15,15 +19,15 @@ permissions:
   contents: write
 
 jobs:
-  build:
-    name: Build & unit test
+
+  lint:
+    name: Linting
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 2
-          show-progress: false
 
       - name: Runner setup
         uses: ./.github/actions/runner-setup
@@ -31,93 +35,150 @@ jobs:
       - name: Lint monorepo root
         run: pnpm run lint
 
-      - name: Build, lint, test all packages
-        run: pnpm turbo lint build test
+  build:
+    name: Build
+    runs-on: ubuntu-latest
 
-  #integration-tests:
-  #  name: INT - ${{ matrix.package }}
-  #  needs: build
-  #  runs-on: ubuntu-latest
-  #  strategy:
-  #    fail-fast: false
-  #    matrix:
-  #      package:
-  #        [
-  #          '@kadena/client',
-  #          '@kadena/client-utils',
-  #          '@kadena/create-kadena-app',
-  #        ]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
 
-  #  steps:
-  #    - uses: actions/checkout@v4
-  #      with:
-  #        fetch-depth: 2
-  #        show-progress: false
+      - name: Runner setup
+        uses: ./.github/actions/runner-setup
 
-  #    - name: Runner Setup
-  #      uses: ./.github/actions/runner-setup
+      - name: Build all packages
+        run: pnpm turbo build
 
-  #    - name: Setup Kadena sandbox
-  #      uses: ./.github/actions/sandbox
+  unit_test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
 
-  #    - name: run integration tests
-  #      run: pnpm run test:integration --filter ${{ matrix.package }}
+      - name: Runner setup
+        uses: ./.github/actions/runner-setup
 
-  #end-to-end-tests:
-  #  name: E2E - ${{ matrix.app }}
-  #  needs: build
-  #  runs-on: ubuntu-latest
-  #  strategy:
-  #    fail-fast: false
-  #    matrix:
-  #      app: ['tools', 'graph', 'dev-wallet']
+      - name: Build and test all packages
+        run: pnpm turbo build test
 
-  #  steps:
-  #    - uses: actions/checkout@v4
-  #      with:
-  #        fetch-depth: 2
-  #        show-progress: false
+  prepare_devnet:
+    name: Cache a working Devnet node
+    runs-on: ubuntu-latest
 
-  #    -  name: Runner Setup
-  #       uses: ./.github/actions/runner-setup
+    steps:
+      - name: Checkout repos
+        uses: actions/checkout@v7
 
-  #    -  name: Setup Kadena sandbox
-  #       uses: ./.github/actions/sandbox
+      - name: Prepare a Test Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
 
-  #    - name: Build App with NODE_ENV=test
-  #      uses: ./.github/actions/build-app-e2e
-  #      with:
-  #        app: ${{ matrix.app }}
+      - name: Stop the node
+        shell: bash
+        run:  kill $(cat "$SANDBOX_RUN/pids")
 
-  #    - name: Run end-to-end tests
-  #      uses: ./.github/actions/end-to-end-tests
-  #      with:
-  #        app: ${{ matrix.app }}
 
-  #    - name: Archive sandbox logs
-  #      uses: ./.github/actions/archive-logs
-  #      if: always()
-  #      with:
-  #        test-object: ${{ matrix.app }}
+  integration-tests:
+    name: INT - ${{ matrix.package }}
+    needs: [prepare_devnet, build]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          [
+            '@kadena/client',
+            '@kadena/client-utils',
+            '@kadena/create-kadena-app',
+          ]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+          show-progress: false
 
-  #    - name: Teardown kadena sandbox
-  #      if: always()
-  #      run: docker compose down
-  #      working-directory: .github/actions/sandbox
+      - name: Runner Setup
+        uses: ./.github/actions/runner-setup
 
-  #    - name: Archive volumes
-  #      uses: ./.github/actions/archive-volumes
-  #      if: always()
-  #      with:
-  #        test-object: ${{ matrix.app }}
+      - name: Setup Kadena sandbox
+        uses: ./.github/actions/sandbox
+        with:
+          node_git_ref: fix_devnet
 
-  #    - name: Upload Blob Report
-  #      uses: actions/upload-artifact@v4
-  #      if: ${{ !cancelled() }}
-  #      with:
-  #        name: blob-report-${{ matrix.app }}
-  #        path: packages/e2e/e2e-${{ matrix.app }}/blob-report/
-  #        retention-days: 1
+      - name: Run integration tests
+        run: pnpm run test:integration --filter ${{ matrix.package }}
+
+      - name: Archive volumes
+        uses: ./.github/actions/archive-volumes
+        if: always()
+        with:
+          test-object: ${{ matrix.package }}
+
+  end-to-end-tests:
+    name: E2E - ${{ matrix.app }}
+    needs: [prepare_devnet, build]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app:
+          - tools
+          - graph
+          - dev-wallet
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+          show-progress: false
+
+      -  name: Runner Setup
+         uses: ./.github/actions/runner-setup
+
+      -  name: Setup Kadena sandbox
+         uses: ./.github/actions/sandbox
+         with:
+          node_git_ref: fix_devnet
+
+      - name: Setup Kadena Data Node Sandbox only for graph
+        id: setup_data_node
+        if: matrix.app == 'graph'
+        uses: ./.github/actions/sandbox_data_node
+        with:
+          extra_migration_dir: packages/apps/graph/cwd-extra-migrations
+
+      - name: Build App with NODE_ENV=test
+        uses: ./.github/actions/build-app-e2e
+        with:
+          app: ${{ matrix.app }}
+
+      - name: Run end-to-end tests
+        env:
+          NETWORK_HOST: http://localhost:1848
+          MEMPOOL_HOST: localhost:4443
+          NETWORK_STATISTICS_URL: http://localhost:1849/stats
+        uses: ./.github/actions/end-to-end-tests
+        with:
+          app: ${{ matrix.app }}
+
+      - name: Archive volumes
+        uses: ./.github/actions/archive-volumes
+        if: always()
+        with:
+          test-object: ${{ matrix.app }}
+
+      - name: Upload Blob Report
+        uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: blob-report-${{ matrix.app }}
+          path: packages/e2e/e2e-${{ matrix.app }}/blob-report/
+          retention-days: 1
 
   # merge-publish-reports:
   #  if: ${{ !cancelled() }}

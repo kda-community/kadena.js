@@ -4,7 +4,7 @@ import { createPrincipal } from '../built-in/create-principal';
 import { describeModule } from '../built-in/describe-module';
 
 const config = {
-  host: 'http://127.0.0.1:8080',
+  host: 'http://127.0.0.1:1848',
   defaults: {
     networkId: 'development',
     meta: { chainId: '0' },

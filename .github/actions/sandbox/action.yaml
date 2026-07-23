@@ -1,13 +1,136 @@
-name: 'Start Kadena sandbox'
+name: 'Start Kadena Devnet Sandbox'
+
+inputs:
+  ghc_version:
+    default: "9.10.2"
+  cabal_version:
+    default: "latest"
+  cache_version:
+    default: "1"
+  node_git_ref:
+    default: "master"
+  mining_client_git_ref:
+    default: "master"
+  start_node:
+    default: true
+
 runs:
   using: 'composite'
   steps:
-    - name: Start sandbox
-      shell: bash
-      run: docker compose up -d
-      working-directory: .github/actions/sandbox
 
-    - name: Check sandbox health
+    - name: Clean and prepare directories
       shell: bash
-      run: ./healthcheck.sh
-      working-directory: .github/actions/sandbox
+      run: |
+        SANDBOX_RUN="$GITHUB_WORKSPACE/.sandbox"
+        SANDBOX_DB="$SANDBOX_RUN/db"
+        SANDBOX_BIN="$GITHUB_WORKSPACE/.bin"
+
+        rm -rf $SANDBOX_RUN
+        mkdir -p $SANDBOX_DB
+
+        mkdir -p $SANDBOX_BIN
+
+        rm -rf .repos
+        mkdir -p .repos
+
+        echo "SANDBOX_BIN=$SANDBOX_BIN" >> "$GITHUB_ENV"
+        echo "SANDBOX_RUN=$SANDBOX_RUN" >> "$GITHUB_ENV"
+        echo "SANDBOX_DB=$SANDBOX_DB" >> "$GITHUB_ENV"
+
+    - name: Install required packages
+      shell: bash
+      run: sudo apt-get update && sudo apt-get install -y libgflags-dev liblz4-dev libzstd-dev libsnappy-dev libbz2-dev libmpfr-dev
+
+    - name: Checkout Node Source
+      uses: actions/checkout@v7
+      with:
+        repository: kda-community/chainweb-node
+        path: .repos/chainweb-node
+        ref: ${{ inputs.node_git_ref }}
+
+    - name: Checkout Mining client Source
+      uses: actions/checkout@v7
+      with:
+        repository: kda-community/chainweb-mining-client
+        path: .repos/chainweb-mining-client
+        ref: ${{ inputs.mining_client_git_ref }}
+
+    - name: Compute Cache key
+      id: compute-cache-key
+      shell: bash
+      run: |
+        SHA_A=$(git -C .repos/chainweb-node rev-parse HEAD)
+        SHA_B=$(git -C .repos/chainweb-mining-client  rev-parse HEAD)
+
+        CACHE_KEY=$(printf "%s%s%s%s%s" "$SHA_A" "$SHA_B" "${{inputs.ghc_version}}" "${{inputs.cabal_version}}" "${{inputs.cache_version}}"  | sha256sum | cut -d' ' -f1)
+        echo "cache_key=$CACHE_KEY" >> "$GITHUB_OUTPUT"
+
+    - name: Restore cache
+      id: cache-binaries
+      uses: actions/cache/restore@v6
+      with:
+        path: ${{ env.SANDBOX_BIN}}
+        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+
+    - name: Set permissions for .ghcup (ubuntu)
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      shell: bash
+      run: sudo chown -R $USER /usr/local/.ghcup
+
+    - name: Install GHC and Cabal
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      uses: haskell-actions/setup@v2
+      with:
+         ghc-version: ${{ inputs.ghc_version }}
+         cabal-version: ${{ inputs.cabal_version }}
+
+    - name: Compile Chainweb node
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      working-directory: .repos/chainweb-node
+      shell: bash
+      run: |
+        cabal build chainweb-node
+        cp $(cabal list-bin chainweb-node) "$SANDBOX_BIN"
+
+    - name: Compile Mining client
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      working-directory: .repos/chainweb-mining-client
+      shell: bash
+      run: |
+        cabal build chainweb-mining-client
+        cp $(cabal list-bin chainweb-mining-client) "$SANDBOX_BIN"
+
+    - name: Save cache
+      if: steps.cache-binaries.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v6
+      with:
+        path: ${{ env.SANDBOX_BIN}}
+        key: node-binaries-${{ runner.os }}-${{ steps.compute-cache-key.outputs.cache_key }}
+
+    - name: Start node
+      if: ${{ inputs.start_node == 'true' }}
+      shell: bash
+      run: |
+        set -e
+
+        $SANDBOX_BIN/chainweb-node --disable-pow --block-delay 5000 \
+                                   --config-file "$GITHUB_ACTION_PATH/node_config.yaml" \
+                                   --database-directory "$SANDBOX_DB" \
+                                   > $SANDBOX_RUN/node.log 2>&1 &
+        echo $! >> "$SANDBOX_RUN/pids"
+
+        timeout 60 bash -c 'until curl -fsS http://localhost:1848/health-check 2>/dev/null | grep -q "Health check OK."
+                            do sleep 1
+                            done'
+
+        $SANDBOX_BIN/chainweb-mining-client --config-file "$GITHUB_ACTION_PATH/mining_client_config.yaml" \
+                                            >  $SANDBOX_RUN/mining-client.log 2>&1 &
+        echo $! >> "$SANDBOX_RUN/pids"
+
+        timeout 60 bash -c 'until HEIGHT=$(curl -fsS http://localhost:1848/chainweb/0.0/development/cut | jq -r '.height')
+                            echo "Current height: $HEIGHT"
+                            [ "$HEIGHT" -ge 40 ]
+                            do sleep 1
+                            done'
+
+        cat "$SANDBOX_RUN/pids"

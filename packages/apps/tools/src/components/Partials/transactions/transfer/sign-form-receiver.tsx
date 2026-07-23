@@ -196,16 +196,11 @@ export const SignFormReceiver = ({
 
   const watchReceiverChainId = watch('receiverChainId');
 
+  const networkDto = networksData.find((item) => item.networkId === network);
   const { data: receiverName } = useQuery({
-    queryKey: [
-      'receiverName',
-      pubKeys,
-      watchReceiverChainId,
-      pred,
-      network,
-      networksData,
-    ],
-    queryFn: () => createPrincipal(pubKeys, watchReceiverChainId, pred),
+    queryKey: ['receiverName', pubKeys, watchReceiverChainId, pred, networkDto],
+    queryFn: () =>
+      createPrincipal(pubKeys, networkDto, watchReceiverChainId, pred),
     enabled: pubKeys.length > 0,
     placeholderData: keepPreviousData,
   });
