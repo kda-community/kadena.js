@@ -6,7 +6,7 @@
     "build": "NODE_OPTIONS=--max-old-space-size=8192 next build",
     "build:e2e": "NODE_ENV=test pnpm run build",
     "dev": "next dev",
-    "generate": "pactjs contract-generate --contract \"coin\" --api \"https://api.testnet.chainweb-community.org/chainweb/0.0/testnet06/chain/0/pact\"",
+    "generate": "pactjs contract-generate -f ../../../pact_ref_modules/fungible-xchain-v1.pact  -f ../../../pact_ref_modules/fungible-v2.pact -f ../../../pact_ref_modules/coin-v5.pact",
     "generate:sdk": "cache-sh -i \"{codegen-sdk.yml,./node_modules/@kadena/graph/generated-schema.graphql,src/**/*.graph.ts,src/__generated__/**}\" -- graphql-codegen --config codegen-sdk.yml",
     "lint": "pnpm run /^lint:.*/",
     "lint:fmt": "prettier . --cache --check",
