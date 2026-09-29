@@ -52,6 +52,7 @@ export type AppKdaLike = AppKda | IKadenaLedgerAppLike;
 
 export interface IKadenaLedgerAppLike {
   getPublicKey: AppKda['getPublicKey'];
+  verifyAddress: AppKda['verifyAddress'];
   signTransferCrossChainTx: AppKda['signTransferCrossChainTx'];
   signTransferTx: AppKda['signTransferTx'];
   signTransferCreateTx: AppKda['signTransferCreateTx'];
@@ -66,6 +67,10 @@ class KadenaLedgerAppLike implements IKadenaLedgerAppLike {
       ),
       address: null,
     };
+  }
+
+  public async verifyAddress(path: string) {
+    return this.getPublicKey(path);
   }
 
   public async signTransferTx(params: TransferTxParams) {

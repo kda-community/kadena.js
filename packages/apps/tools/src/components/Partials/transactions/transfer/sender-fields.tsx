@@ -41,6 +41,13 @@ export const SenderFields: FC<ISenderFieldsProps> = ({
     [clearErrors, setValue],
   );
 
+  // The key on the device differs from the key this page loaded: treat the
+  // Ledger as not connected, so the transfer cannot be signed with that key
+  const onLedgerKeyMismatch = useCallback(() => {
+    setIsConnected(false);
+    setValue('isConnected', false);
+  }, [setValue]);
+
   return (
     <Stack
       flexDirection="column"
@@ -51,6 +58,7 @@ export const SenderFields: FC<ISenderFieldsProps> = ({
       {isLedger && (
         <LedgerDetails
           onLedgerKeyUpdate={onLedgerKeyUpdate}
+          onLedgerKeyMismatch={onLedgerKeyMismatch}
           onKeyIdUpdate={onKeyIdUpdate}
           onDerivationUpdate={onDerivationUpdate}
         />
